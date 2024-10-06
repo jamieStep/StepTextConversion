@@ -3,7 +3,7 @@ package org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous
 
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.util.*
 
 
@@ -134,7 +134,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object StepStringFormatter
+object StepStringFormatter: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -271,7 +271,7 @@ object StepStringFormatter
 
     fun process (mr: MatchResult): String
     {
-      return ConfigData[mr.groups["name"]!!.value] ?: throw StepExceptionBase("StepStringFormatter couldn't find config attribute " + mr.groups["name"]!!.value)
+      return ConfigData[mr.groups["name"]!!.value] ?: throw StepExceptionWithStackTraceAbandonRun("StepStringFormatter couldn't find config attribute " + mr.groups["name"]!!.value)
     }
 
 
@@ -438,7 +438,7 @@ object StepStringFormatter
     fmt = fmt.replace("%".toRegex()) { "%${++n}\$" }
     if (n > 0)
     {
-      if (hadIdentifiers) throw StepExceptionBase("Mixed forms of identifier in format string: $formatString")
+      if (hadIdentifiers) throw StepExceptionWithStackTraceAbandonRun("Mixed forms of identifier in format string: $formatString")
       rawArgs.keys.map { it.toInt() }.sorted().forEach { orderedArgs.add(rawArgs[it.toString()]!!)}
     }
 

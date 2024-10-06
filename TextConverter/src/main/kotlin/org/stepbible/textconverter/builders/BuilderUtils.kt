@@ -6,8 +6,10 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
-import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
+import org.stepbible.textconverter.applicationspecificutils.X_FileProtocol
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Document
 import java.nio.file.Paths
 
@@ -19,7 +21,7 @@ import java.nio.file.Paths
  * @author ARA "Jamie" Jamieson
  */
 
-object BuilderUtils
+object BuilderUtils: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -59,8 +61,8 @@ object BuilderUtils
   fun getInputFiles (folderPath: String, fileExtension: String, numberExpected: Int): List<String>
   {
     val res = StepFileUtils.getMatchingFilesFromFolder(folderPath, ".*\\.$fileExtension".toRegex()).map { it.toString() }
-    if (res.isEmpty()) throw StepExceptionBase("No suitable input files available.")
-    if (1 == numberExpected && 1 != res.size) throw StepExceptionBase("Expecting precisely one input file, but ${res.size} files available.")
+    if (res.isEmpty()) throw StepExceptionWithStackTraceAbandonRun("No suitable input files available.")
+    if (1 == numberExpected && 1 != res.size) throw StepExceptionWithStackTraceAbandonRun("Expecting precisely one input file, but ${res.size} files available.")
     return res
   }
 
@@ -101,11 +103,8 @@ object BuilderUtils
   {
     val stylesheetContent = ConfigData.getPreprocessingXslt() ?: return doc
     lateinit var res: Document
-    Dbg.withReportProgressSub("Applying XSLT preprocessing.") {
-      res = applyXslt(doc, stylesheetContent)
-    }
-
-    return res
+    Rpt.report(1, "Applying XSLT preprocessing.")
+    return applyXslt(doc, stylesheetContent)
   }
 
 
@@ -113,21 +112,17 @@ object BuilderUtils
   /**
   * Applies any XSLT manipulation to each file, and sets up UsxDataCollection
   * to hold the details.  To state the obvious, this can be called only after
-  * the USX text has been read and converted to DOM format.
+  * the text has been read and converted to DOM format.
   *
-  * @param dataCollection All the documents we may need to process.
+  * @param doc Document to be processed.
+  * @param fileProtocol Handles OSIS or USX as appropriate.
+  * @return Revised document, or original if no XSLT transformation is defined.
   */
 
-  fun processXslt (dataCollection: X_DataCollection)
+  fun processXslt (doc: Document, fileProtocol: X_FileProtocol): Document
   {
-    val stylesheetContent = ConfigData.getPreprocessingXslt() ?: return
-
-    dataCollection.getDocuments().forEach {
-      val bookName = dataCollection.getFileProtocol().getBookAbbreviation(dataCollection.getFileProtocol().getBookNode(it)!!)
-      Dbg.reportProgress("Applying XSLT preprocessing to $bookName.")
-      val newDoc = applyXslt(it, stylesheetContent)
-      dataCollection.replaceDocumentStructure(newDoc)
-    }
+    val stylesheetContent = ConfigData.getPreprocessingXslt() ?: return doc
+    return applyXslt(doc, stylesheetContent)
   }
 
 

@@ -2,6 +2,7 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.stepexception
 
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import kotlin.RuntimeException
 
 
@@ -52,10 +53,13 @@ open class StepExceptionBase: RuntimeException
   /****************************************************************************/
   /**
    * Constructor.
+   *
+   * @param wantStackTrace True if we want a stack trace when baling out.
    */
 
-  constructor (): super()
+  constructor (wantStackTrace: Boolean = true): super()
   {
+    m_WantStackTrace = wantStackTrace
   }
 
   
@@ -64,10 +68,12 @@ open class StepExceptionBase: RuntimeException
    * Constructor.
    *
    * @param e An exception upon which this one is based.
+   * @param wantStackTrace True if we want a stack trace when baling out.
    */
 
-  constructor (e: Exception): super(e.toString())
+  constructor (e: Exception, wantStackTrace: Boolean = true): super(e.toString())
   {
+    m_WantStackTrace = wantStackTrace
     stackTrace = e.stackTrace
   }
 
@@ -77,13 +83,14 @@ open class StepExceptionBase: RuntimeException
    * Constructor.
    *
    * @param e Another exception -- we take the stack trace from this.
-   * 
-   * @param overrideReason Augments the description of e. 
+   * @param overrideReason Augments the description of e.
+   * @param wantStackTrace True if we want a stack trace when baling out.
    */
 
-  constructor (e: Exception, overrideReason: String): super("$overrideReason: $e")
+  constructor (e: Exception, overrideReason: String, wantStackTrace: Boolean = true): super("$overrideReason: $e")
   {
-     stackTrace = e.stackTrace
+    m_WantStackTrace = wantStackTrace
+    stackTrace = e.stackTrace
   }
 
   
@@ -92,9 +99,13 @@ open class StepExceptionBase: RuntimeException
    * Constructor.
    *
    * @param msg Message to appear in exception.
+   * @param wantStackTrace True if we want a stack trace when baling out.
    */
 
-  constructor (msg: String): super(msg)
+  constructor (msg: String, wantStackTrace: Boolean = true): super(msg)
+  {
+    m_WantStackTrace = wantStackTrace
+  }
 
 
   /****************************************************************************/
@@ -106,8 +117,10 @@ open class StepExceptionBase: RuntimeException
   {
     Dbg.endOfRun()
     if (null != message) println(message)
-    printStackTrace()
-    System.err.println("Fatal error: " + Dbg.getActiveProcessingId() + ": " + this.toString())
+    if (m_WantStackTrace) printStackTrace()
+    var reportStack = Rpt.getStack()
+    if (reportStack.isNotEmpty()) reportStack += ": "
+    System.err.println("Fatal error: $reportStack$this")
     System.err.flush()
   }
       
@@ -127,6 +140,10 @@ open class StepExceptionBase: RuntimeException
   {
     return (this as Throwable).message as String
   }
+
+
+  /****************************************************************************/
+  private var m_WantStackTrace = true
 }
 
 
@@ -137,10 +154,10 @@ open class StepExceptionBase: RuntimeException
 
 open class StepExceptionSilentBase: StepExceptionBase
 {
-  constructor()
-  constructor (e: Exception): super(e)
-  constructor (e: Exception, overrideReason: String): super(e, overrideReason)
-  constructor (msg: String): super(msg)
+  constructor(): super(wantStackTrace = false)
+  constructor (e: Exception): super(e, wantStackTrace = false)
+  constructor (e: Exception, overrideReason: String): super(e, overrideReason, wantStackTrace = false)
+  constructor (msg: String): super(msg, wantStackTrace = false)
 
 
 
@@ -163,10 +180,10 @@ open class StepExceptionSilentBase: StepExceptionBase
 
 open class StepExceptionWithStackTraceBase: StepExceptionBase
 {
-  constructor()
-  constructor (e: Exception): super(e)
-  constructor (e: Exception, overrideReason: String): super(e, overrideReason)
-  constructor (msg: String): super(msg)
+  constructor(): super(wantStackTrace = true)
+  constructor (e: Exception): super(e, wantStackTrace = true)
+  constructor (e: Exception, overrideReason: String): super(e, overrideReason, wantStackTrace = true)
+  constructor (msg: String): super(msg, wantStackTrace = true)
 }
 
 
@@ -178,13 +195,11 @@ open class StepExceptionWithStackTraceBase: StepExceptionBase
 
 open class StepExceptionWithoutStackTraceBase: StepExceptionBase
 {
-  constructor()
-  constructor (e: Exception): super(e)
-  constructor (e: Exception, overrideReason: String): super(e, overrideReason)
-  constructor (msg: String): super(msg)
+  constructor(): super(wantStackTrace = false)
+  constructor (e: Exception): super(e, wantStackTrace = false)
+  constructor (e: Exception, overrideReason: String): super(e, overrideReason, wantStackTrace = false)
+  constructor (msg: String): super(msg, wantStackTrace = false)
 }
-
-
 
 
 
@@ -197,6 +212,16 @@ open class StepExceptionWithoutStackTraceBase: StepExceptionBase
 /**                                                                          **/
 /******************************************************************************/
 /******************************************************************************/
+
+/******************************************************************************/
+class StepExceptionNotReallyAnException: StepExceptionWithStackTraceBase
+{
+  constructor()
+  constructor (e: Exception): super(e)
+  constructor (e: Exception, overrideReason: String): super(e, overrideReason)
+  constructor (msg: String): super(msg)
+}
+
 
 /******************************************************************************/
 class StepExceptionWithStackTraceShouldHaveBeenOverridden: StepExceptionWithStackTraceBase

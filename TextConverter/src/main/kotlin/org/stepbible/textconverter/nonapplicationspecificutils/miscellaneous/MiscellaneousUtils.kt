@@ -5,9 +5,15 @@ import org.apache.commons.codec.digest.MessageDigestAlgorithms.SHA_256
 import org.jasypt.util.text.BasicTextEncryptor
 import org.reflections.Reflections
 import org.reflections.scanners.Scanners
+import org.reflections.util.ClasspathHelper
+import org.reflections.util.ConfigurationBuilder
+import org.stepbible.textconverter.MainProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotify
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotifyIfContainsSpaces
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionNotReallyAnException
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
 import java.io.ByteArrayOutputStream
@@ -17,6 +23,7 @@ import java.io.PrintStream
 import java.net.URL
 import java.net.URLDecoder
 import java.util.jar.Manifest
+import java.util.stream.Collectors
 import kotlin.reflect.KClass
 import kotlin.reflect.full.createInstance
 
@@ -28,7 +35,7 @@ import kotlin.reflect.full.createInstance
  * @author ARA "Jamie" Jamieson
  */
 
-object MiscellaneousUtils
+object MiscellaneousUtils: ObjectInterface
  {
   /****************************************************************************/
   /****************************************************************************/
@@ -136,7 +143,7 @@ object MiscellaneousUtils
     var res = 0
     text.forEach {
         val n = it.code - lowerBoundCode + 1
-        if (n < 1 || n > range) throw StepExceptionBase("convertRepeatingStringToNumber: Bad text: $text")
+        if (n < 1 || n > range) throw StepExceptionWithStackTraceAbandonRun("convertRepeatingStringToNumber: Bad text: $text")
         res = range * res + n
     }
 
@@ -172,7 +179,7 @@ object MiscellaneousUtils
    * nothing, but want to make it clear that this was a deliberate choice.
    */
 
-  inline fun doNothing (@Suppress("UNUSED_PARAMETER") vararg x: Any) {}
+  fun doNothing (@Suppress("UNUSED_PARAMETER") vararg x: Any) {}
 
 
   /****************************************************************************/
@@ -209,8 +216,8 @@ object MiscellaneousUtils
   private val C_generateRandomString_Chars : List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9') + listOf('!', '$', '%', '_', '#', '@')
 
 
-  /***************************************************************************/
-  /**
+/***************************************************************************/
+/**
   * Somewhat implausible code which returns the name of the current JAR file.
   *
   * @return JAR file name.
@@ -222,7 +229,7 @@ object MiscellaneousUtils
       val jarFileUrl = this::class.java.protectionDomain?.codeSource?.location ?: return ""
       val decodedPath = URLDecoder.decode(jarFileUrl.path, "UTF-8")
       val res = File(decodedPath).name
-      if ("main" == res) throw StepExceptionBase("")
+      if ("main" == res) throw StepExceptionNotReallyAnException("")
       res
     }
     catch (_: Exception)
@@ -246,7 +253,7 @@ object MiscellaneousUtils
 
   /***************************************************************************/
   /**
-  * Returns the name of the package containing a give class.
+  * Returns the name of the package containing a given class.
   *
   * @return Class whose package is required.  Pass as eg MyClass::class.
   */
@@ -270,13 +277,91 @@ object MiscellaneousUtils
   * Gets all of the subtypes of a given class or interface.
   *
   * @param baseClass Base class or interface.
+  *
+  * @param forcePackageName By default, subtypes are located from the package
+  *   in which the base class resides.  You can give forcePackageName to use
+  *   a different package name.  Experience suggests that if you give this as
+  *   the root package, then all subpackages are searched.
+  *
   * @return List of subtypes.
   */
 
-  fun getSubtypes (baseClass: Class<*>): List<Class<*>>
+  fun getSubtypes (baseClass: Class<*>, forcePackageName: String? = null): List<Class<*>>
   {
-    val reflections = getReflections(baseClass.getPackage().name, Scanners.SubTypes)
+    val reflections = getReflections(forcePackageName ?: baseClass.getPackage().name, Scanners.SubTypes)
     return reflections!!.getSubTypesOf(baseClass).toList()
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Initialises all objects.  Or more accurately, initialises all objects which
+  * have been defined as implementing ObjectInterface, so it behoves me to
+  * remember to do this.
+  *
+  * The rationale for this method is that when using parallel processing, I'm
+  * not quite sure what happens if two different threads both try to access an
+  * object with extensive initialisation processing at the same time.  init
+  * blocks are definitely not thread-safe, so you could certainly imagine there
+  * being problems.
+  *
+  * The processing here assumes that the order in which things are initialised
+  * is irrelevant.
+  */
+
+  fun initialiseAllObjectsBasedOnObjectInterfaceInheritance ()
+  {
+    val packageName = getPackageName(MainProcessor::class)
+    val objects = getSubtypes(ObjectInterface::class.java, packageName)
+    objects.forEach {
+      //Rpt.report(1, "Initialising ${it.name}.")
+      it.getField("INSTANCE").get(null)
+    }
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Initialises all objects, using Reflection to identify them, but, unlike
+  * [initialiseAllObjectsBasedOnObjectInterfaceInheritance], not relying upon
+  * me remembering to make the ones of interest inherit from ObjectInterface.
+  * The processing here assumes that the order in which things are initialised
+  * is irrelevant.
+  *
+  * <span class='important'>This works when called from the IDE.  However, it
+  * does not work when run direct from the command line.  There was nothing
+  * obviously relevant on the internet to help, so I have given up using this
+  * method.  However, it is definitely superior to other objects, and so I have
+  * retained it in case I ever want to go back to it, and have the oomph to be
+  * bothered trying to fix things.</span>
+  */
+
+  fun initialiseAllObjectsBasedOnReflection ()
+  {
+    val packageName = getPackageName(MainProcessor::class)
+    val r = Reflections(ConfigurationBuilder().setUrls(ClasspathHelper.forPackage(packageName)).setScanners(Scanners.SubTypes.filterResultsBy {c -> true}))
+    val x = r.getSubTypesOf(Object::class.java).stream().collect(Collectors.toSet())
+//    val reflections = Reflections(getPackageName(MainProcessor::class), SubTypesScanner(false))
+//    val x = reflections.getSubTypesOf(Object::class.java).stream().collect(Collectors.toSet())
+    x.forEach {
+      try
+      {
+        if ("$" !in it.name)
+        {
+          val isObject = "INSTANCE" in it.getFields().toSet().map { it.name }
+          if (isObject && "$" !in it.name)
+          {
+            it.getField("INSTANCE").get(null)
+            //println("Initialised ${it.name}.")
+          }
+        }
+      }
+      catch (e: Exception)
+      {
+        System.err.println("Failed to initialise ${it.name}.")
+        throw StepExceptionWithStackTraceAbandonRun(e)
+      }
+    }
   }
 
 
@@ -298,17 +383,16 @@ object MiscellaneousUtils
     * @param workingDirectory Directory to move to before running command.
     * @param errorFilePath If non-null, output is redirected to here
     * @return Return code from process which is being run.
-    * @throws StepExceptionBase Any exception noticed while attempting to rub the commands.
     */
 
   fun runCommand (prompt: String?, command: List<String>, errorFilePath: String? = null, workingDirectory: String? = null): Int
   {
-    if (null != prompt) Dbg.reportProgress(prompt + command.joinToString(" "){ quotify(it) })
+    if (null != prompt) Rpt.report(level = 1, prompt + command.map { quotifyIfContainsSpaces(it) }. joinToString(" "))
     val pb = ProcessBuilder(command)
     if (null != errorFilePath) pb.redirectError(File(errorFilePath))
     if (null != workingDirectory) pb.directory(File(workingDirectory))
     val res = pb.start().waitFor()
-    Dbg.reportProgress("- External command completed")
+    Rpt.report(level = 1, "External command completed")
     return res
   }
 
@@ -362,12 +446,12 @@ object MiscellaneousUtils
       val clazz: Class<*> = this::class.java
       val className = clazz.simpleName + ".class"
       val classPath = clazz.getResource(className)?.toString() ?: ""
-      if (!classPath.startsWith("jar")) throw StepExceptionBase("")
+      if (!classPath.startsWith("jar")) throw StepExceptionNotReallyAnException("")
 
       val manifestPath = classPath.substring(0, classPath.lastIndexOf("!") + 1) + "/META-INF/MANIFEST.MF"
       val manifest = Manifest(URL(manifestPath).openStream())
       val attr = manifest.mainAttributes
-      val value: String = attr.getValue("Implementation-Version")
+      val value: String = attr.getValue("Implementation-Version") + " (" + attr.getValue("Latest-Update-Reason") + ")"
       value
     }
     catch (_: Exception)

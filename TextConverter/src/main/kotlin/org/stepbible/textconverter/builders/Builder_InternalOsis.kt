@@ -4,12 +4,12 @@ import org.stepbible.textconverter.osisonly.*
 import org.stepbible.textconverter.protocolagnosticutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.applicationspecificutils.*
-import org.w3c.dom.Node
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+
 
 /******************************************************************************/
 /**
@@ -30,7 +30,7 @@ object Builder_InternalOsis: Builder()
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner () = "Converting Internal OSIS to version required for Sword module."
+  override fun banner () = "Converting OSIS to version required for Sword module."
   override fun commandLineOptions () = null
 
 
@@ -53,17 +53,15 @@ object Builder_InternalOsis: Builder()
   /****************************************************************************/
   override fun doIt ()
   {
+    /***************************************************************************/
     Builder_InitialOsisRepresentationOfInputs.process()
-    Dbg.withReportProgressMain(banner(), ::doIt1)
-  }
+    Rpt.report(0, banner())
 
 
-  /****************************************************************************/
-  private fun doIt1 ()
-  {
+
     /***************************************************************************/
     fun x () = Logger.announceAllAndTerminateImmediatelyIfErrors() // A little shorthand.
-    val archiver = PA_ElementArchiver()
+    val notesArchiver = PA_ElementArchiver()
 
 
 
@@ -82,43 +80,53 @@ object Builder_InternalOsis: Builder()
        kinds of changes reduce the number of nodes to be processed, so
        probably better to make them as early as possible. */
 
-    Dbg.reportProgress("Loading and initialising OSIS.")
-    InternalOsisDataCollection.loadFromDocs(listOf(ExternalOsisDoc)); x()
-    archiver.archiveElements(InternalOsisDataCollection, InternalOsisDataCollection.getFileProtocol()::isNoteNode); x()  // Hive off footnotes to separate document to speed up main processing.
-    PA_StrongsHandler.process(InternalOsisDataCollection); x()                           // Canonicalise Strong's markup.
-    Osis_BasicTweaker.process(InternalOsisDataCollection.getDocument()); x()             // Minor changes to make processing easier.
+    InternalOsisDataCollection.loadFromDoc(ExternalOsisDoc); x()
+    notesArchiver.archiveElements(InternalOsisDataCollection, InternalOsisDataCollection.getFileProtocol()::isNoteNode); x()
+                                                                                         // Hive off footnotes to separate document to speed up main processing.
     Osis_ChapterAndVerseStructurePreprocessor.process(InternalOsisDataCollection); x()   // Sort out chapter structure, insert missing chapters, etc.
+    PA_VerseEndRemover.process(InternalOsisDataCollection); x()                          // Some inputs may have eids already, some not.  Reduce everything to a common state.
+    PA_DummyVerseHandler.insertDummyVerses(InternalOsisDataCollection)
+
 
 
 
 
     /***************************************************************************/
-    Dbg.reportProgress("\nLoading and evaluating data.  (I need two copies -- one to work on and one against which to validate.)")
-    RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x()
-
+    val doThisBitInParallel = true
+    val warningAboutInterleaving = if (ParallelRunning.isPermitted() && doThisBitInParallel) " (Reporting between now and 'Finished loading and evaluating data' may be interleaved and may therefore look confusing.)" else ""
+    Rpt.report(level = 0, "Loading and evaluating data.$warningAboutInterleaving")
     m_OriginalOsisDataCollection = Osis_DataCollection()
-    m_OriginalOsisDataCollection.loadFromDocs(listOf(InternalOsisDataCollection.getDocument())); x()
-    RefBase.setBibleStructure(m_OriginalOsisDataCollection.getBibleStructure()); x()
+    m_OriginalOsisDataCollection.loadFromRootNodes(InternalOsisDataCollection); x() // Make sure this happens _before_ the parallel processing.
+
+    with(ParallelRunning(doThisBitInParallel)) {
+      run {
+        asyncable { RefBase.setBibleStructure(InternalOsisDataCollection.getBibleStructure()); x() }
+
+        asyncable {
+          PA_BasicVerseEndInserter.process(m_OriginalOsisDataCollection)
+          PA_DummyVerseHandler.removeDummyVerses(m_OriginalOsisDataCollection)
+        }
+      }
+    }
+
+    if (warningAboutInterleaving.isNotEmpty())
+      Rpt.report(level = 1, "Finished loading and evaluating data.")
 
 
 
     /**************************************************************************/
-    /* We can't necessarily rely upon verse eids being in the best positions.
-       I begin here by deleting them, before reinstating them later.  There are
-       then a few things which have to be run while the eids are absent. */
-
-    Dbg.reportProgress("\nRemoving eids; sorting out tables and elisions.")
-    val dummyVerses = insertDummyVerses(InternalOsisDataCollection); x() // Insert dummy verses at the ends of chapters so we can always insert _before_ something.
-    PA_VerseEndRemover.process(InternalOsisDataCollection); x()          // Removes verse-ends.
-    PA_TableHandler.process(InternalOsisDataCollection); x()             // Collapses tables which span verses into a single elided verse.
-    PA_ElisionHandler.process(InternalOsisDataCollection); x()           // Expands elisions out into individual verses.
+    Rpt.report(level = 0, "Handling Strongs, tables and elisions.")
+    PA_StrongsHandler.process(InternalOsisDataCollection); x()   // Canonicalise Strong's markup.
+    Osis_BasicTweaker.process(InternalOsisDataCollection); x()   // Minor changes to make processing easier.
+    PA_TableHandler.process(InternalOsisDataCollection); x()     // Collapses tables which span verses into a single elided verse.
+    PA_ElisionHandler.process(InternalOsisDataCollection); x()   // Expands elisions out into individual verses.
 
     
     
     /**************************************************************************/
     /* Time to put the eids back again, but hopefully in a better location. */
     
-    Dbg.reportProgress("\nReinserting eids.")
+    Rpt.report(level = 0, "Reinserting eids.")
     PA_EnhancedVerseEndInsertionPreparer.process(InternalOsisDataCollection); x() // Relatively simple and hopefully uncontentious tweaks to make it easier to insert verse ends.
     PA_EnhancedVerseEndInserter.process(InternalOsisDataCollection); x()          // Positions verse ends so as to reduce the chances of cross-boundary markup.
     
@@ -127,6 +135,7 @@ object Builder_InternalOsis: Builder()
     /**************************************************************************/
     /* Standardise canonical heading details. */
 
+    Rpt.report(level = 0, "Handling canonical headings and lists.")
     PA_CanonicalHeadingsHandler.process(InternalOsisDataCollection); x()  // Canonicalises canonical headings, as it were.
     PA_ListEncapsulator.process(InternalOsisDataCollection); x()          // Might encapsulate lists (but in fact does not do so currently).
 
@@ -140,21 +149,21 @@ object Builder_InternalOsis: Builder()
 
 
     /**************************************************************************/
-    Dbg.reportProgress("\nPerforming initial validation.")
+    Rpt.report(level = 0, "Performing initial validation.")
     Osis_BasicValidator.structuralValidation(InternalOsisDataCollection); x()            // Checks for basic things like all verses being under chapters.
 
 
 
     /**************************************************************************/
-    Dbg.reportProgress("\nPerforming reversification if necessary.")
+    Rpt.report(level = 0, "Performing reversification if necessary.")
     Osis_DetermineReversificationTypeEtc.process()
     PA_ReversificationHandler.instance().process(InternalOsisDataCollection); x()
 
 
 
     /**************************************************************************/
-    Dbg.reportProgress("\nPerforming final structural validation.")
-    Osis_BasicValidator.finalValidationAndCorrection(InternalOsisDataCollection); x()    // Final checks.  May create empty verses if necessary.
+    Rpt.report(level = 0, "Performing validation.")
+    Osis_BasicValidator.structuralValidationAndCorrection(InternalOsisDataCollection); x() // Structural checks.  May create empty verses if necessary.
 
 
 
@@ -165,31 +174,30 @@ object Builder_InternalOsis: Builder()
        we don't want to tread upon its toes.  And it also has to come after
        final validation in case the change in structure confuses things. */
 
-    PA_SubverseCollapser.process(InternalOsisDataCollection); x()      // Collapses subverses into the owning verses.
-    removeDummyVerses(dummyVerses); x()                                // Earlier processing will have introduced dummy verses at the ends of chapters.  Get rid of them.
+    PA_DummyVerseHandler.removeDummyVerses(InternalOsisDataCollection); x() // Earlier processing will have introduced dummy verses at the ends of chapters.  Get rid of them.
+    PA_SubverseCollapser.process(InternalOsisDataCollection); x()           // Collapses subverses into the owning verses.
 
 
 
     /**************************************************************************/
-    Dbg.reportProgress("\nValidating against original text.")
     PA_ContentValidator.process(InternalOsisDataCollection, m_OriginalOsisDataCollection); x()  // Checks current canonical content against original.
-    m_OriginalOsisDataCollection.clearAll()                                                     // Free up memory.
+    m_OriginalOsisDataCollection.clearAll()                                                     // Frees up memory and prevent inadvertent further use.
 
 
 
-   /**************************************************************************/
-   Dbg.reportProgress("\nYet more tidying.")
-    PA_EmptyVerseHandler.preventSuppressionOfEmptyVerses(InternalOsisDataCollection); x() // Unless we take steps, empty verses tend to be suppressed when rendered.
-
-    PA_EmptyVerseHandler(InternalOsisDataCollection.getFileProtocol())                     // What it says on the tin.
-      .markVersesWhichWereEmptyInTheRawText(InternalOsisDataCollection); x()
-
-    PA_TextAnalyser.process(InternalOsisDataCollection)  ; x()                             // Gather up information which might be useful to someone administering texts.
-    Osis_FinalInternalOsisTidier().process(InternalOsisDataCollection, archiver); x()      // Ad hoc last minute tidying.
+    /**************************************************************************/
+    Rpt.report(level = 0, "Yet more tidying.")
+    PA_EmptyVerseHandler(InternalOsisDataCollection.getFileProtocol()).markVersesWhichWereEmptyInTheRawText(InternalOsisDataCollection); x() // What it says on the tin.
+    PA_EmptyVerseHandler.preventSuppressionOfEmptyVerses(InternalOsisDataCollection); x()  // Unless we take steps, empty verses tend to be suppressed when rendered.
+    PA_TextAnalyser.process(InternalOsisDataCollection)  ; x()                             // Gathers up information which might be useful to someone administering texts.
+    Osis_FinalInternalOsisTidier.process(InternalOsisDataCollection, notesArchiver); x()   // Ad hoc last minute tidying.
+    PA_CalloutStandardiser.process(InternalOsisDataCollection); x()                        // Forces callouts to be in house style, assuming that's what we want.
+    Osis_CrossReferenceChecker.process(InternalOsisDataCollection)                         // Does what it says on the tin.
     Osis_BasicTweaker.unprocess(InternalOsisDataCollection); x()                           // Undoes any temporary tweaks which were applied to make the overall processing easier.
     PA_FinalValidator.process(InternalOsisDataCollection); x()                             // Final health checks.
-    Osis_FinalInternalOsisTidier().removeTemporaryCanonicityMarkers(InternalOsisDataCollection); x()
-                                                                                           // Remove any temporary markers which were introduced specifically to help validation work.
+    Osis_InternalTagReplacer.process(InternalOsisDataCollection); x()                      // Replaces any _X_ tags which I introduced with pukka OSIS ones.
+    PA_TemporaryAttributeRemover.process(InternalOsisDataCollection); x()                  // Removes all temporary attributes.
+
 
 
     /**************************************************************************/
@@ -241,16 +249,13 @@ object Builder_InternalOsis: Builder()
 
     if ("asoutput" == ConfigData["stepUseExistingOsis"]?.lowercase())
     {
-      Dbg.reportProgress("\nWriting version of OSIS needed for use with osis2mod.")
+      Rpt.report(level = 1, "Writing version of OSIS needed for use with osis2mod.")
       StepFileUtils.copyFile(FileLocations.getInternalOsisFilePath(), FileLocations.getInputOsisFilePath()!!)
     }
     else
     {
-      // Note that PA_CalloutStandardiser and Osis_CrossReferenceChecker can't be used earlier, because we archived all of the notes nodes and removed then from the document.
-      Dbg.reportProgress("\nWriting version of OSIS needed for use with osis2mod.")
-      PA_CalloutStandardiser.process(InternalOsisDataCollection); x() // Force callouts to be in house style, assuming that's what we want.
-      Osis_CrossReferenceChecker.process(InternalOsisDataCollection)
-      Dom.outputDomAsXml(InternalOsisDataCollection.getDocument(),
+      Rpt.report(level = 1, "Writing version of OSIS needed for use with osis2mod.")
+      Dom.outputDomAsXml(InternalOsisDataCollection.convertToDoc(),
                          FileLocations.getInternalOsisFilePath(),
               null)
                          { x -> x.replace("^lt;", "&lt;")
@@ -270,55 +275,6 @@ object Builder_InternalOsis: Builder()
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
-
-  /****************************************************************************/
-  /* Inserts dummy verse sids at the ends of chapters so we always have
-     something we can insert stuff _before_. */
-
-  private fun insertDummyVerses (dataCollection: X_DataCollection): List<Node>
-  {
-    /**************************************************************************/
-    val res: MutableList<Node> = mutableListOf()
-
-
-
-    /**************************************************************************/
-    fun addDummyVerseToChapter (chapterNode: Node)
-    {
-      val dummySidRef = dataCollection.getFileProtocol().readRef(chapterNode[dataCollection.getFileProtocol().attrName_chapterSid()]!!)
-      dummySidRef.setV(RefBase.C_BackstopVerseNumber)
-      val dummySidRefAsString = dataCollection.getFileProtocol().refToString(dummySidRef.toRefKey())
-      val dummySid = chapterNode.ownerDocument.createNode("<verse ${dataCollection.getFileProtocol().attrName_verseSid()}='$dummySidRefAsString'/>")
-      NodeMarker.setDummy(dummySid)
-      chapterNode.appendChild(dummySid)
-      res.add(dummySid)
-    }
-
-
-
-    /**************************************************************************/
-    dataCollection.getRootNodes().forEach { bookNode ->
-      bookNode.findNodesByName(dataCollection.getFileProtocol().tagName_chapter()).forEach(::addDummyVerseToChapter)
-    }
-
-
-
-    /**************************************************************************/
-    return res
-  }
-
-
-   /****************************************************************************/
-  /* Earlier processing -- here or in things it relies upon -- may have
-     introduced dummy verses.  We now remove them. */
-
-  private fun removeDummyVerses (dummyVerses: List<Node>)
-  {
-    Dbg.withReportProgressSub("Removing any dummy verses.") {
-      dummyVerses.forEach(Dom::deleteNode)
-    }
-  }
-
 
   /****************************************************************************/
   private lateinit var m_OriginalOsisDataCollection: Osis_DataCollection

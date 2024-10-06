@@ -2,7 +2,7 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous
 
 import org.apache.commons.io.FilenameUtils
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.io.File
 import java.nio.file.*
 import java.nio.file.attribute.BasicFileAttributes
@@ -17,7 +17,7 @@ import kotlin.io.path.notExists
  * @author ARA "Jamie" Jamieson
  */
 
-object StepFileUtils
+object StepFileUtils: ObjectInterface
 {
   /******************************************************************************/
   /**
@@ -168,7 +168,7 @@ object StepFileUtils
     }
     catch (x: Exception)
     {
-      throw StepExceptionBase("Failed to delete folder $path")
+      throw StepExceptionWithStackTraceAbandonRun("Failed to delete folder $path")
     }
   }
 
@@ -498,7 +498,7 @@ object StepFileUtils
     }
     catch (e: Exception)
     {
-      throw StepExceptionBase(e)
+      throw StepExceptionWithStackTraceAbandonRun(e)
     }
   }
 
@@ -618,7 +618,7 @@ object StepFileUtils
     }
     catch (e: Exception)
     {
-      throw StepExceptionBase(e)
+      throw StepExceptionWithStackTraceAbandonRun(e)
     }
 
 

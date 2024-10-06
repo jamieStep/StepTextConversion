@@ -1,15 +1,14 @@
 package org.stepbible.textconverter.osisonly
 
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.getAllNodesBelow
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.set
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefFormatHandlerReaderVernacular
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.w3c.dom.Node
 
 /****************************************************************************/
@@ -20,8 +19,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-/******************************************************************************/
-object Osis_CrossReferenceChecker
+object Osis_CrossReferenceChecker: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -40,27 +38,34 @@ object Osis_CrossReferenceChecker
   
   fun process (dataCollection: X_DataCollection)
   {
-    m_DataCollection = dataCollection
-    m_FileProtocol = dataCollection.getFileProtocol()
-    Dbg.withReportProgressSub("Checking for dangling cross-references etc.") {
-      dataCollection.getRootNodes().forEach {
-        val xrefNodes = it.getAllNodesBelow().filter { node -> m_FileProtocol.isXrefNode(node) }
-        process(xrefNodes)
-      }
-    }
+    Rpt.report(level = 1, "Checking for dangling cross-references etc ...")
+    with(ParallelRunning(true)) {
+      run {
+        dataCollection.getRootNodes().forEach { rootNode ->
+          asyncable {
+            Rpt.reportBookAsContinuation(dataCollection.getFileProtocol().getBookAbbreviation(rootNode))
+            Osis_CrossReferenceCheckerForBook(dataCollection.getFileProtocol()).processRootNode(rootNode)
+          } // asyncable
+        } // forEach
+      } // run
+    } // report
+  } // fun
+}
+
+
+
+
+
+/******************************************************************************/
+private class Osis_CrossReferenceCheckerForBook (val m_FileProtocol: X_FileProtocol)
+{
+  /****************************************************************************/
+  fun processRootNode (rootNode: Node)
+  {
+    val xrefNodes = rootNode.getAllNodesBelow().filter { node -> m_FileProtocol.isXrefNode(node) }
+    process(xrefNodes)
   }
 
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                 Private                                **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
 
   /****************************************************************************/
   /* Checks ref targets exist.  The return value is a list of refs which are
@@ -202,5 +207,4 @@ object Osis_CrossReferenceChecker
   /****************************************************************************/
   private var m_CanReadAndWriteVernacular =  ConfigData.getAsBoolean("stepUseVernacularFormats")
   private lateinit var m_DataCollection: X_DataCollection
-  private lateinit var m_FileProtocol: X_FileProtocol
 }

@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.applicationspecificutils
 
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
@@ -11,6 +10,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceShouldHaveBeenOverridden
 import org.stepbible.textconverter.protocolagnosticutils.PA_EmptyVerseHandler
 import org.w3c.dom.Document
@@ -66,7 +66,7 @@ open class X_FileProtocol
   open fun attrName_verseSid (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun attrName_strong (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
 
-  open fun tagName_book (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  // No tagName_book, because in OSIS it is a div with a type attribute, and therefore it doesn't fit with search-by-tagName.
   open fun tagName_chapter (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun tagName_note (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun tagName_strong (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
@@ -96,7 +96,7 @@ open class X_FileProtocol
   open fun isBookNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun isCanonicalTitleNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun isCrossReferenceFootnoteNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
-  open fun isDummySid (sidVerse: Node): Boolean = RefBase.isDummyValue(Ref.getV(getSidAsRefKey(sidVerse)))
+  open fun isDummySid (sidVerse: Node): Boolean = attrName_verseSid() in sidVerse && RefBase.C_BackstopVerseNumber == Ref.getV(getSidAsRefKey(sidVerse))
   open fun isExplanatoryFootnoteNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun isIntroductionNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun isNoteNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
@@ -221,7 +221,7 @@ Dbg.dCont(key + " : " + Dom.getNodeName(node), "speaker")
       when (res)
       {
         'Y', 'N' -> return Pair(res, n)
-        'X' -> throw StepExceptionBase("Encountered node for which we have no canonicity details: ${Dom.toString(n)}.")
+        'X' -> throw StepExceptionWithStackTraceAbandonRun("Encountered node for which we have no canonicity details: ${Dom.toString(n)}.")
       }
 
       n = n.parentNode
@@ -301,7 +301,10 @@ Dbg.dCont(key + " : " + Dom.getNodeName(node), "speaker")
    * @return True if node is inherently non-canonical.
    */
 
-  fun isInherentlyNonCanonicalTag (node: Node) = 'N' == (m_TagDetails[getExtendedNodeName(node)]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity)
+  fun isInherentlyNonCanonicalTag (node: Node): Boolean
+  {
+    return 'N' == (m_TagDetails[getExtendedNodeName(node)]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity)
+  }
 
 
 
@@ -367,7 +370,7 @@ Dbg.dCont(key + " : " + Dom.getNodeName(node), "speaker")
 * I haven't bothered to implement correctly (or at all).
 */
 
-object Osis_FileProtocol: X_FileProtocol()
+object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 {
   /****************************************************************************/
   override fun getEmptyVerseHandler () = PA_EmptyVerseHandler(this)
@@ -378,6 +381,7 @@ object Osis_FileProtocol: X_FileProtocol()
   override fun attrName_verseEid () = "eID"
   override fun attrName_verseSid () = "sID"
 
+  // No tagName_book, because in OSIS it is a div with a type attribute, and therefore it doesn't fit with search-by-tagName.
   override fun tagName_chapter () = "chapter"
   override fun tagName_note () = "note"
   override fun tagName_strong () = "w"
@@ -388,7 +392,7 @@ object Osis_FileProtocol: X_FileProtocol()
   override fun getBookAbbreviation (node: Node) = node["osisID"]!!
   override fun getBookNumber (doc: Document) = BibleBookNamesOsis.nameToNumber(getBookAbbreviation(doc))
   override fun getBookNumber (rootNode: Node) = BibleBookNamesOsis.nameToNumber(getBookAbbreviation(rootNode))
-  override fun getBookNode (doc: Document) = Dom.findNodeByName(doc, "book") ?: Dom.findNodeByAttributeValue(doc, "div", "type", "book")!!
+  override fun getBookNode (doc: Document) = Dom.findNodeByAttributeValue(doc, "div", "type", "book")!!
   override fun getBookNodes (doc: Document) = doc.findNodesByAttributeValue("div", "type", "book")
   override fun getUsxBookAbbreviation (doc: Document): String = BibleBookNamesUsx.numberToAbbreviatedName(BibleBookNamesOsis.abbreviatedNameToNumber(getBookAbbreviation(doc)))
   override fun getUsxBookAbbreviation (node: Node): String = BibleBookNamesUsx.numberToAbbreviatedName(BibleBookNamesOsis.abbreviatedNameToNumber(getBookAbbreviation(node)))
@@ -868,7 +872,10 @@ object Osis_FileProtocol: X_FileProtocol()
 
 
   /****************************************************************************/
-  init {
+  init { doInit() }
+
+  @Synchronized private fun doInit ()
+  {
     Type = ProtocolType.OSIS
 
     //*** Replace any code below with the *** OSIS *** code generated by protocolDetails.xlsm. ***
@@ -879,6 +886,8 @@ object Osis_FileProtocol: X_FileProtocol()
     m_TagDetails["_X_nonCanonical"] = TagDescriptor('N', 'N') // Temporary used to force content to be seen as non-canonical.
     m_TagDetails["_X_reversificationCalloutData"] = TagDescriptor('N', 'N') // Used to mark data used as callouts.
     m_TagDetails["_X_reversificationCalloutSourceRefCollection"] = TagDescriptor('N', 'N') // Callout data.
+    m_TagDetails["_X_subverseSeparatorFixed"] = TagDescriptor('N', 'N') // Used within verses to mark subverse boundaries.
+    m_TagDetails["_X_subverseSeparatorVariable"] = TagDescriptor('N', 'N') // Used within verses to mark subverse boundaries.
 
     m_TagDetails["_X_verseBoundaryWithinElidedTable"] = TagDescriptor('N', 'N') // Used to mark verse boundaries where we have elided verses so that a table lies entirely within a single verse.
     m_TagDetails["a"] = TagDescriptor('X', 'N') // Similar to an HTML link. The "http://..." is recorded in the href attribute of this element. The
@@ -1036,7 +1045,7 @@ object Osis_FileProtocol: X_FileProtocol()
 * which is not being used in the present implementation.
 */
 
-object Usx_FileProtocol: X_FileProtocol()
+object Usx_FileProtocol: X_FileProtocol(), ObjectInterface
 {
   /****************************************************************************/
   override fun getEmptyVerseHandler () = PA_EmptyVerseHandler(this)
@@ -1055,8 +1064,8 @@ object Usx_FileProtocol: X_FileProtocol()
 
   override fun getBookAbbreviation (doc: Document) = getBookAbbreviation(Dom.findNodeByName(doc,"book", false)!!)
   override fun getBookAbbreviation (node: Node) = node["code"]!!
-  override fun getBookNumber (doc: Document) = BibleBookNamesUsx.nameToNumber(Osis_FileProtocol.getBookAbbreviation(doc))
-  override fun getBookNumber (rootNode: Node) = BibleBookNamesUsx.nameToNumber(Osis_FileProtocol.getBookAbbreviation(rootNode))
+  override fun getBookNumber (doc: Document) = BibleBookNamesUsx.nameToNumber(Usx_FileProtocol.getBookAbbreviation(doc))
+  override fun getBookNumber (rootNode: Node) = BibleBookNamesUsx.nameToNumber(Usx_FileProtocol.getBookAbbreviation(rootNode))
   override fun getUsxBookAbbreviation (doc: Document): String = getBookAbbreviation(doc)
   override fun getUsxBookAbbreviation (node: Node): String = getBookAbbreviation(node)
   override fun bookNameToNumber (name: String) = BibleBookNamesUsx.nameToNumber(name)
@@ -1542,8 +1551,8 @@ object Usx_FileProtocol: X_FileProtocol()
     m_TagDetails["_X_bracketStart:ili"] = TagDescriptor('N', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
     m_TagDetails["_X_bracketEnd:ili"] = TagDescriptor('N', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
     m_TagDetails["_X_bracketStart:io"] = TagDescriptor('N', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
-    m_TagDetails["_X_bracketEnd:io"] = TagDescriptor('N', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
 
+    m_TagDetails["_X_bracketEnd:io"] = TagDescriptor('N', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
     m_TagDetails["_X_bracketStart:li"] = TagDescriptor('?', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
     m_TagDetails["_X_bracketEnd:li"] = TagDescriptor('?', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
     m_TagDetails["_X_bracketStart:q"] = TagDescriptor('?', 'N') // Brackets the type of subpara indicated by the name.  Use is configurable, and STEP does not use it.
@@ -1560,188 +1569,189 @@ object Usx_FileProtocol: X_FileProtocol()
     m_TagDetails["_X_reversificationMoveOriginalText"] = TagDescriptor('N', 'N') // Optionally on cross-chapter Moves we leave the original source in place (but changed, roughly speaking, to subverses of the preceding non-moved verse).  This enables us to ignore this text when carrying out validation.
     m_TagDetails["_X_reversificationSourceVerse"] = TagDescriptor('N', 'N') // A char-level marker which encloses an indicator of the source verse for a reversification action.
     m_TagDetails["_X_strong"] = TagDescriptor('Y', 'N') // My own Strongs markup.
-    m_TagDetails["_X_subverseSeparator"] = TagDescriptor('N', 'N') // Used within verses to mark subverse boundaries.
 
+    m_TagDetails["_X_subverseSeparatorFixed"] = TagDescriptor('N', 'N') // Used within verses to mark subverse boundaries.
+    m_TagDetails["_X_subverseSeparatorVariable"] = TagDescriptor('N', 'N') // Used within verses to mark subverse boundaries.
     m_TagDetails["_X_tableWithNoContainedVerseTags"] = TagDescriptor('Y', 'N') // A table which is easy to process (it's vanishingly unlikely we'll ever hit one of these).
     m_TagDetails["_X_usx"] = TagDescriptor('N', 'N') // Overall header.
     m_TagDetails["_X_verseBoundaryWithinElidedTable"] = TagDescriptor('N', 'N') // Used to mark verse boundaries where we have elided verses so that a table lies entirely within a single verse.
+
     m_TagDetails["book"] = TagDescriptor('N', 'N') // Book.  See book:id.  We have this alternative just in case a text does not include the style attribute.
     m_TagDetails["book:id"] = TagDescriptor('N', 'N') // Book:Need to have this because it's in USX.  However, it is replaced pretty sharpish during processing by the _X_ equivalent.
-
     m_TagDetails["cell"] = TagDescriptor('?', 'N') // Cell within row.
     m_TagDetails["cell:tc#"] = TagDescriptor('?', 'N') // Cell within row.
     m_TagDetails["cell:tcc#"] = TagDescriptor('?', 'N') // Cell within row.
+
     m_TagDetails["cell:tcr#"] = TagDescriptor('?', 'N') // Cell within row.
     m_TagDetails["cell:th#"] = TagDescriptor('?', 'N') // Cell within row.
-
     m_TagDetails["cell:thr#"] = TagDescriptor('?', 'N') // Cell within row.
     m_TagDetails["chapter"] = TagDescriptor('Y', 'N') // Chapter.  See chapter:c.  We have this alternative just in case a text does not include the style attribute.
     m_TagDetails["chapter:c"] = TagDescriptor('?', 'N') // Chapter.  Need to have this because it's in USX.  However, it is replaced pretty sharpish during processing by the _X_ equivalent.
+
     m_TagDetails["char:add"] = TagDescriptor('N', 'Y') // Translator’s addition.  Needs to be AsParent because it may crop up in canonical psalm titles, which are placed outside canonical text. 03-Dec-22: Made this canonical, so it appears to be part of verse.
     m_TagDetails["char:bd"] = TagDescriptor('?', 'Y') // Bold text.
-
     m_TagDetails["char:bdit"] = TagDescriptor('?', 'Y') // Bold + italic text.
     m_TagDetails["char:bk"] = TagDescriptor('N', 'Y') // Quoted book title.
     m_TagDetails["char:dc"] = TagDescriptor('?', 'Y') // Deuterocanonical/LXX additions or insertions in the Protocanonical text.
+
     m_TagDetails["char:em"] = TagDescriptor('?', 'Y') // Emphasis text.
     m_TagDetails["char:fdc"] = TagDescriptor('N', 'Y') // Footnote material to be included only in publications that contain the Deuterocanonical/Apocrypha books.
-
     m_TagDetails["char:fk"] = TagDescriptor('N', 'Y') // A specific keyword/term from the text for which the footnote is being provided.
     m_TagDetails["char:fl"] = TagDescriptor('N', 'Y') // Footnote 'label' text.
     m_TagDetails["char:fm"] = TagDescriptor('N', 'Y') // Reference to caller of previous footnote.
+
     m_TagDetails["char:fp"] = TagDescriptor('N', 'Y') // Footnote additional paragraph.
     m_TagDetails["char:fq"] = TagDescriptor('N', 'Y') // Footnote translation quotation.
-
     m_TagDetails["char:fqa"] = TagDescriptor('N', 'Y') // Footnote alternate translation.
     m_TagDetails["char:fr"] = TagDescriptor('N', 'Y') // Footnote reference.
     m_TagDetails["char:ft"] = TagDescriptor('N', 'Y') // Footnote text.
+
     m_TagDetails["char:fv"] = TagDescriptor('N', 'Y') // Footnote verse number.
     m_TagDetails["char:fw"] = TagDescriptor('N', 'Y') // Footnote witness list.
-
     m_TagDetails["char:ior"] = TagDescriptor('N', 'Y') // Introduction outline reference range.
     m_TagDetails["char:iqt"] = TagDescriptor('N', 'Y') // Introduction quoted text.
     m_TagDetails["char:it"] = TagDescriptor('?', 'Y') // Italic text.
+
     m_TagDetails["char:jmp"] = TagDescriptor('N', 'Y') // Available for associating linking attributes to a span of text.
     m_TagDetails["char:k"] = TagDescriptor('N', 'Y') // Keyword / keyterm.
-
     m_TagDetails["char:lik"] = TagDescriptor('N', 'Y') // List entry “key” content.
     m_TagDetails["char:litl"] = TagDescriptor('N', 'Y') // List entry total.
     m_TagDetails["char:liv#"] = TagDescriptor('N', 'Y') // List entry “value” content.
+
     m_TagDetails["char:nd"] = TagDescriptor('?', 'Y') // Name of God.
     m_TagDetails["char:no"] = TagDescriptor('?', 'Y') // Normal text.
-
     m_TagDetails["char:ord"] = TagDescriptor('N', 'Y') // Ordinal number ending (i.e. in 1st — 1<char style="ord">st</char>).
     m_TagDetails["char:pn"] = TagDescriptor('N', 'Y') // Proper name.
     m_TagDetails["char:png"] = TagDescriptor('N', 'Y') // Geographic proper name (see doc -- particularly of use in China).
+
     m_TagDetails["char:pro"] = TagDescriptor('N', 'Y') // Pronunciation information – deprecated; use char:rb instead.
     m_TagDetails["char:qac"] = TagDescriptor('N', 'Y') // Used to indicate the acrostic letter within a poetic line.
-
     m_TagDetails["char:qs"] = TagDescriptor('N', 'Y') // Selah.
     m_TagDetails["char:qt"] = TagDescriptor('Y', 'Y') // Old Testament quotations in the New Testament, or other quotations.
     m_TagDetails["char:rb"] = TagDescriptor('N', 'Y') // Ruby glossing.
+
     m_TagDetails["char:rq"] = TagDescriptor('N', 'Y') // Inline quotation reference(s).
     m_TagDetails["char:sc"] = TagDescriptor('?', 'Y') // Small cap text.
-
     m_TagDetails["char:sig"] = TagDescriptor('Y', 'Y') // Signature of the author of an epistle.
     m_TagDetails["char:sls"] = TagDescriptor('?', 'Y') // Passage of text based on a secondary language or alternate text source.  (Used eg to highlight where the underlying text moves from Hebrew to Aramaic.)  Strictly this should be canonical, but I've seen some texts where it appears in Psalm titles, and since for processing reasons I've chosen to represent these as being non-canonical, I've had to mark this AsParent.
     m_TagDetails["char:sup"] = TagDescriptor('?', 'Y') // Superscript text.
+
     m_TagDetails["char:tl"] = TagDescriptor('Y', 'Y') // Transliterated (or foreign) word(s).  Eg Eli, Eli, lema sabachtani?
     m_TagDetails["char:va"] = TagDescriptor('N', 'Y') // Second (alternate) verse number.  Note that this is in the schema definition but is not mentioned in the documentation.
-
     m_TagDetails["char:vp"] = TagDescriptor('N', 'Y') // Published verse number -- a verse marking which would be used in the published text.  Note that this is in the schema definition but is not mentioned in the documentation.
     m_TagDetails["char:w"] = TagDescriptor('Y', 'Y') // Wordlist/glossary/dictionary entry.
     m_TagDetails["char:wa"] = TagDescriptor('N', 'Y') // Aramaic word list entry.
+
     m_TagDetails["char:wg"] = TagDescriptor('N', 'Y') // Greek word list entry.
     m_TagDetails["char:wh"] = TagDescriptor('N', 'Y') // Hebrew word list entry.
-
     m_TagDetails["char:wj"] = TagDescriptor('Y', 'Y') // Words of Jesus.
     m_TagDetails["char:xdc"] = TagDescriptor('N', 'Y') // For reference notes: References (or other material) to be included only in publications that contain the Deuterocanonical/Apocrypha books.  Deprecated.
     m_TagDetails["char:xk"] = TagDescriptor('N', 'Y') // For reference notes: A keyword from the scripture translation text which the target reference(s) also refer to.
+
     m_TagDetails["char:xnt"] = TagDescriptor('N', 'Y') // For reference notes: References (or other text) which is only to be included in publications that contain the New Testament books.
     m_TagDetails["char:xo"] = TagDescriptor('N', 'Y') // For reference notes: Cross-reference origin.
-
     m_TagDetails["char:xop"] = TagDescriptor('N', 'Y') // For reference notes: Published cross-reference origin text.
     m_TagDetails["char:xot"] = TagDescriptor('N', 'Y') // For reference notes: References (or other text) which is only to be included in publications that contain the Old Testament books.
     m_TagDetails["char:xq"] = TagDescriptor('N', 'Y') // For reference notes: A quotation from the scripture text.
+
     m_TagDetails["char:xq"] = TagDescriptor('N', 'Y') // For reference notes: A quotation from the scripture text.
     m_TagDetails["char:xt"] = TagDescriptor('N', 'Y') // For reference notes: Cross reference target reference(s).
-
     m_TagDetails["char:xta"] = TagDescriptor('N', 'Y') // For reference notes: Target reference(s) extra / added text.
     m_TagDetails["figure"] = TagDescriptor('N', 'N') // Figure.
     m_TagDetails["note:ef"] = TagDescriptor('N', 'N') // Study note.
+
     m_TagDetails["note:ex"] = TagDescriptor('N', 'N') // Extended cross-reference.
     m_TagDetails["note:f"] = TagDescriptor('N', 'N') // Footnote.
-
     m_TagDetails["note:fe"] = TagDescriptor('N', 'N') // Endnote.
     m_TagDetails["note:x"] = TagDescriptor('N', 'N') // Cross-reference.
     m_TagDetails["optbreak"] = TagDescriptor('N', 'N') // Optional line break.
+
     m_TagDetails["para:b"] = TagDescriptor('N', 'N') // Blank line.
     m_TagDetails["para:cd"] = TagDescriptor('N', 'N') // Chapter description.
-
     m_TagDetails["para:cl"] = TagDescriptor('N', 'N') // The chapter “label” to be used when the chosen publishing presentation will render chapter divisions as headings (not drop cap numerals).
     m_TagDetails["para:cls"] = TagDescriptor('Y', 'N') // Closure of epistle.
     m_TagDetails["para:cp"] = TagDescriptor('N', 'N') // Published chapter number. Probably really non-canonical, but AsParent makes it less likely to mess things up.  Contents are suppressed anyway.
+
     m_TagDetails["para:d"] = TagDescriptor('Y', 'N') // Chapter description (canonical psalm title).
     m_TagDetails["para:h"] = TagDescriptor('N', 'N') // Running header.
-
     m_TagDetails["para:ib"] = TagDescriptor('N', 'N') // Introduction blank line.
     m_TagDetails["para:ide"] = TagDescriptor('N', 'N') // Some kind of identification -- not exactly sure what.
     m_TagDetails["para:ie"] = TagDescriptor('N', 'N') // Introduction end.
+
     m_TagDetails["para:iex"] = TagDescriptor('N', 'N') // Introduction explanatory or bridge text (e.g. explanation of missing book in a short Old Testament).  Although this is marked as 'introductory', it looks as though it can turn up elsewhere.
     m_TagDetails["para:ili#"] = TagDescriptor('N', 'N') // Introduction list item.
-
     m_TagDetails["para:im"] = TagDescriptor('N', 'N') // Introduction flush left (margin) paragraph.
     m_TagDetails["para:imi"] = TagDescriptor('N', 'N') // Indented introduction flush left (margin) paragraph.
     m_TagDetails["para:imq"] = TagDescriptor('N', 'N') // Introduction flush left (margin) quote from scripture text paragraph.
+
     m_TagDetails["para:imt#"] = TagDescriptor('N', 'N') // Introduction major title.
     m_TagDetails["para:imt#"] = TagDescriptor('N', 'N') // Introduction major title ending.
-
     m_TagDetails["para:io#"] = TagDescriptor('N', 'N') // Introduction outline entry.
     m_TagDetails["para:iot"] = TagDescriptor('N', 'N') // Introduction outline title.
     m_TagDetails["para:ip"] = TagDescriptor('N', 'N') // Introduction paragraph.
+
     m_TagDetails["para:ipi"] = TagDescriptor('N', 'N') // Introduction indented paragraph.
     m_TagDetails["para:ipq"] = TagDescriptor('N', 'N') // Introduction quote from scripture text paragraph.
-
     m_TagDetails["para:ipr"] = TagDescriptor('N', 'N') // Introduction right-aligned paragraph.
     m_TagDetails["para:iq#"] = TagDescriptor('N', 'N') // Introduction poetic line.
     m_TagDetails["para:is#"] = TagDescriptor('N', 'N') // Introduction section heading.
+
     m_TagDetails["para:lf"] = TagDescriptor('?', 'N') // List footer.
     m_TagDetails["para:lh"] = TagDescriptor('?', 'N') // List header.
-
     m_TagDetails["para:li#"] = TagDescriptor('?', 'N') // List entry.
     m_TagDetails["para:lim#"] = TagDescriptor('?', 'N') // Indented list entry.
     m_TagDetails["para:lit"] = TagDescriptor('N', 'N') // Liturgical note.
+
     m_TagDetails["para:litl"] = TagDescriptor('N', 'N') // List entry total.
     m_TagDetails["para:m"] = TagDescriptor('?', 'N') // Margin paragraph.
-
     m_TagDetails["para:mi"] = TagDescriptor('?', 'N') // Indented flush left paragraph.
     m_TagDetails["para:mr"] = TagDescriptor('N', 'N') // Major section reference range.
     m_TagDetails["para:ms#"] = TagDescriptor('N', 'N') // Major section heading.
+
     m_TagDetails["para:mt#"] = TagDescriptor('N', 'N') // Main title.
     m_TagDetails["para:mte"] = TagDescriptor('N', 'N') // Main title at introduction ending.
-
     m_TagDetails["para:nb"] = TagDescriptor('?', 'N') // Paragraph text, with no break from previous paragraph text (at chapter boundary).
     m_TagDetails["para:p"] = TagDescriptor('?', 'N') // Paragraph.
     m_TagDetails["para:pc"] = TagDescriptor('?', 'N') // Centered paragraph.
+
     m_TagDetails["para:ph#"] = TagDescriptor('?', 'N') // Indented paragraph with hanging indent.
     m_TagDetails["para:pi#"] = TagDescriptor('?', 'N') // Embedded text paragraph.
-
     m_TagDetails["para:pm"] = TagDescriptor('?', 'N') // Embedded text paragraph.
     m_TagDetails["para:pmc"] = TagDescriptor('?', 'N') // Embedded text closing.
     m_TagDetails["para:pmo"] = TagDescriptor('?', 'N') // Embedded text opening.
+
     m_TagDetails["para:pmr"] = TagDescriptor('?', 'N') // Embedded text refrain.
     m_TagDetails["para:po"] = TagDescriptor('?', 'N') // Opening of epistle.
-
     m_TagDetails["para:pr"] = TagDescriptor('?', 'N') // Embedded text refrain.
     m_TagDetails["para:pr"] = TagDescriptor('?', 'N') // Right-aligned paragraph.
     m_TagDetails["para:q#"] = TagDescriptor('Y', 'N') // Poetry.
+
     m_TagDetails["para:qa"] = TagDescriptor('N', 'N') // Acrostic heading.  Moot point as to whether this should be canonical or not, but it appears I _need_ it to be non-canonical.
     m_TagDetails["para:qc"] = TagDescriptor('Y', 'N') // Centered poetic line.
-
     m_TagDetails["para:qd"] = TagDescriptor('N', 'N') // Hebrew note.
     m_TagDetails["para:qm#"] = TagDescriptor('Y', 'N') // Embedded text poetic line.
     m_TagDetails["para:qr"] = TagDescriptor('Y', 'N') // Right-aligned poetic line.
+
     m_TagDetails["para:qs"] = TagDescriptor('Y', 'N') // Selah.
     m_TagDetails["para:r"] = TagDescriptor('N', 'N') // Parallel passage reference(s).
-
     m_TagDetails["para:rem"] = TagDescriptor('N', 'N') // Remark.  I _think_ I've seen this somewhere or other, although it doesn't appear to be valid USX.  Strictly should be NonCanonical, but usually needs to remain with adjacent items, and Canonical helps achieve that.
     m_TagDetails["para:s#"] = TagDescriptor('N', 'N') // Section heading.  At one point I was giving this as 'AsParent', so that headings within a verse were seen as canonical and therefore remained with the verse.  Now kind of think that may be wrong.
     m_TagDetails["para:sd#"] = TagDescriptor('N', 'N') // Semantic division (vertical whitespace).
+
     m_TagDetails["para:sp"] = TagDescriptor('N', 'N') // Speaker identification.
     m_TagDetails["para:sr"] = TagDescriptor('N', 'N') // Section reference range.  Strictly speaking, these aren't canonical.  However if a heading appears within a verse, I want it to be seen as a part of that verse.
-
     m_TagDetails["para:toc#"] = TagDescriptor('N', 'N') // Table of contents.
     m_TagDetails["para:toca#"] = TagDescriptor('N', 'N') // Alternate language long table of comments.
     m_TagDetails["periph"] = TagDescriptor('N', 'N') // Peripheral material.  The USX spec has a whole section on this, which I have not read.
+
     m_TagDetails["ref"] = TagDescriptor('N', 'N') // Reference.
     m_TagDetails["row"] = TagDescriptor('?', 'N') // Row within table.
-
     m_TagDetails["row:tr"] = TagDescriptor('?', 'N') // Row within table.
     m_TagDetails["sidebar"] = TagDescriptor('N', 'N') // Note.  I assume this is much the same as note.
     m_TagDetails["table"] = TagDescriptor('?', 'N') // Table.
+
     m_TagDetails["usx"] = TagDescriptor('N', 'N') // Root node.  Assume direct children are non-canonical.
     m_TagDetails["verse"] = TagDescriptor('N', 'N') // Verse.  See verse:v.  We have this alternative just in case a text does not include the style attribute.
-
     m_TagDetails["verse:v"] = TagDescriptor('N', 'N') // Verse.  Need to have this because it's in USX.  However, it is replaced pretty sharpish during processing by the _X_ equivalent.
 
     // *** End of replacement code. ***

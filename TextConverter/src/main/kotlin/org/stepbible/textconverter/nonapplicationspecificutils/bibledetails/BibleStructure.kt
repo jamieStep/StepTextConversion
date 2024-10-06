@@ -4,13 +4,15 @@ import org.stepbible.textconverter.applicationspecificutils.NodeMarker
 import org.stepbible.textconverter.applicationspecificutils.X_FileProtocol
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
 import java.util.*
+import java.util.concurrent.ConcurrentHashMap
 import kotlin.collections.LinkedHashMap
 import kotlin.math.abs
 
@@ -33,7 +35,7 @@ import kotlin.math.abs
  * reversification processing.  (The length indicator has changed from time
  * to time between being the length of the canonical text in characters, and
  * the number of words.  At the time of writing, it is the former of these.)
- * 
+ *
  * It also contains details of 'unusual' circumstances, like verses having
  * been supplied out of order or OT+NT books not being in Protestant Bible
  * order; of points of interest (like the locations of elided verses), and
@@ -126,14 +128,14 @@ import kotlin.math.abs
  * this doesn't necessarily occur prior to the point where the present
  * processing is called upon to read the text, though, so I need to be able
  * to cope with non-expanded elisions.
- * 
- * 
- * 
- * 
+ *
+ *
+ *
+ *
  * ## When to obtain derived instances
- * 
+ *
  * osis2mod details can be obtained at any point.
- * 
+ *
  * OSIS details should be obtained *after* the OSIS has been converted to
  * canonical form (eg after div:chapter has been converted to <chapter>,
  * but *before* any restructuring has been applied (such as expanding out
@@ -147,7 +149,68 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                               Populate                                 **/
+  /**                        Implementation notes                            **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* Originally, this class was implemented on the assumption that processing
+     would be single-threaded.  However, if _any_ class would benefit from
+     multi-thread processing, it is this one: the most common use to date
+     entails processing each book separately, which holds out the hope of
+     handling the different books in parallel; and it is the one class which is
+     used multiple times during processing.  Moreover, it would be nice if using
+     it was relatively cheap.  The cost of repeatedly re-running it encourages
+     workarounds to build up secondary data structures, when it would be much
+     less complex simply to keep this one up to date.
+
+     The changes I have made in converting this to parallel running are as
+     follows:
+
+     - I have converted CanonicalTitleDetails, ElisionDetails,
+       MissingVerseDetails and SubverseDetails to separate container classes.
+       This I have done partly for the sake of neatness -- it makes it easier
+       to package up associated functionality.  But I have also done it so as to
+       break any previous processing which made use of them, thus forcing me to
+       make the changes needed to work in a parallel processing environment.
+
+     - Originally these used LinkedHashMaps to hold their content.  I have
+       changed them to use ConcurrentHashMap.  Unfortunately this does have
+       the downside that where the former (I believe) retained ordering, the
+       latter (I believe) makes no such guarantees.  So in the few cases where
+       I need to return a summary of the entire content of the structure, I
+       sort the data myself.  This means I can simulate the original
+       behaviour of the structures.
+
+     - Actually, that last bullet point isn't quite true.  MissingVerseDetails
+       was originally a list, not a map.  However, it was convenient to convert
+       it to a ConcurrentHashMap for the sake of consistency with the others.
+
+     - There is an overall structure -- TextDescriptor.m_Content, under which
+       we hold details of all books, chapters, verses and subverses.  In the
+       sequential version of the code, I created book-entries here only if the
+       text actually contained that particular book.  Now that I support
+       parallel processing, it is convenient to create entries for all possible
+       books (as nulls) at the outset of processing.  That way, when we process
+       individual books in parallel, each is working on its own pre-existing
+       structure, and clashes therefore are not an issue.  However, I need to
+       remove any entries which remain null at the end of this processing, in
+       order to simulate the original behaviour.
+
+     - Sadly, I have also discovered that DOM accesses -- even read accesses --
+       are not necessarily thread safe, so I have had to introduce some locking.
+       See getAllNodesBelowWithLocking for more details.
+   */
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                              Companion                                 **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -271,25 +334,51 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
   /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                               Populate                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
   /**
   * Adds the data from a given file to the current data structures.  The method
   * is marked 'open' mainly so that inheriting classes (and in particular,
   * BibleStructureOsis2ModScheme) can ensure that it doesn't get called.
   *
   * @param prompt Output to screen as part of progress indicator.
-  * @param rootNode
+  * @param rootNodes List of root nodes to be processed.
   * @param wantCanonicalTextSize True if we need to accumulate the text size.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
 
-  open fun addFromBookRootNode (prompt: String, rootNode: Node, wantCanonicalTextSize: Boolean, filePath: String? = null, bookName: String? = null)
+  open fun addFromRootNodes (prompt: String, rootNodes: List<Node>, wantCanonicalTextSize: Boolean, filePath: String? = null, bookName: String? = null)
   {
-    m_Populated = true
+    // Note that this deliberately does not follow the common pattern elsewhere,
+    // where I create a PerBook subclass and then use an instance of that for
+    // each book I process.  I normally do that because there may be data
+    // structures which themselves need to be per-book.  Here this is
+    // specifically not the case -- I am building up shared structures, so there
+    // is no point in splitting things out.  Instead, I use thread-safe
+    // structures.
+
     m_CollectingCanonicalTextSize = wantCanonicalTextSize
-    if (null != bookName && null != filePath) m_BookAbbreviationToFilePathMappings[bookName.lowercase()] = filePath
-    addFromRootNode(rootNode, wantCanonicalTextSize)
-  }
+
+    with(ParallelRunning(true)) {
+      run {
+        rootNodes.forEach { rootNode ->
+          asyncable {
+            Rpt.reportBookAsContinuation(m_FileProtocol!!.getBookAbbreviation(rootNode))
+            addFromRootNode(rootNode, wantCanonicalTextSize = wantCanonicalTextSize)
+          } // asyncable
+        } // forEach
+      } // run
+    } // with(Parallel ...)
+
+    removeNullBookEntries()
+  } // fun
 
 
   /****************************************************************************/
@@ -309,21 +398,11 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   {
     m_Populated = true
     val wantDescription = if (wantCanonicalTextSize) " (with canonical text length)" else ""
-    if (null != bookName) Dbg.reportProgress("- Determining Bible structure for $bookName$wantDescription.")
+    if (null != bookName) Rpt.report(level = 1, "- Determining Bible structure for $bookName$wantDescription.")
     m_CollectingCanonicalTextSize = wantCanonicalTextSize
     if (null != bookName && null != filePath) m_BookAbbreviationToFilePathMappings[bookName.lowercase()] = filePath
     addFromDoc(doc, wantCanonicalTextSize)
   }
-
-
-  /****************************************************************************/
-  /**
-  * Returns an indication of whether or not the instance has been populated.
-  *
-  * @return True if populated.
-  */
-
-  fun isPopulated () = m_Populated
 
 
   /****************************************************************************/
@@ -473,7 +552,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
 
-  fun getAllRefKeys () = m_Text.m_Content.m_ContentMap.map { (bookNo, bd) -> getAllAsRefKeys(bookNo, bd) }.flatten()
+  fun getAllRefKeys () = m_Text.m_Content.m_ContentMap.map { (bookNo, bd) -> getAllAsRefKeys(bookNo, bd!!) }.flatten()
 
   fun getAllRefKeysForBook (bookRef: Ref)                               = commonGetAllRefKeysForBook(makeElts(bookRef))
   fun getAllRefKeysForBook (bookRefKey: RefKey)                         = commonGetAllRefKeysForBook(makeElts(bookRefKey))
@@ -500,7 +579,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
   fun hasSubverses () = m_Text.m_SubverseDetails.isNotEmpty()
-  fun getAllSubverses () = m_Text.m_SubverseDetails.keys
+  fun getAllSubverseRefKeys () = m_Text.m_SubverseDetails.getAllRefKeys()
 
 
 
@@ -517,7 +596,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /****************************************************************************/
   /* Errors, issues and oddities. */
 
-  open fun getDuplicateVersesForText () = m_Text.m_DuplicateVerses
+  open fun getDuplicateVersesForText () = m_Text.m_DuplicateVerses.getAllRefKeys()
 
 
 
@@ -624,7 +703,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   * Returns the verse nodes which were marked as elisions.
   */
 
-  fun getElisionVerseNodes () = m_Text.m_ElisionDetails.map { it.value }
+  fun getElisionVerseNodes () = m_Text.m_ElisionDetails.getAllNodes()
 
 
   /****************************************************************************/
@@ -758,7 +837,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
        which come after it. */
 
     if (-1 == ixLow)
-      throw StepExceptionBase("Bad case in getReferencesInRange: $refKeyLow : $refKeyHigh") // I think in fact we should never hit this situation.
+      throw StepExceptionWithStackTraceAbandonRun("Bad case in getReferencesInRange: $refKeyLow : $refKeyHigh") // I think in fact we should never hit this situation.
 
 
 
@@ -1095,7 +1174,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   {
     /**************************************************************************/
     if (!m_CollectingCanonicalTextSize)
-      throw StepExceptionBase("Canonical text size for verse requested, but never asked to accumulate this information.")
+      throw StepExceptionWithStackTraceAbandonRun("Canonical text size for verse requested, but never asked to accumulate this information.")
 
 
 
@@ -1279,14 +1358,9 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   protected open fun addFromDoc (doc: Document, wantCanonicalTextSize: Boolean)
   {
-    Dbg.withProcessingBooks("Determining Bible structure ...") {
-      doc.getAllNodesBelow()
-        .filter { m_FileProtocol!!.isBookNode(it) }
-        .forEach {
-          Dbg.withProcessingBook(m_FileProtocol!!.getBookAbbreviation(it)) {
-            addFromRootNode(it, wantCanonicalTextSize)
-          }
-        }
+    Rpt.reportWithContinuation(level = 1, "Determining Bible structure ...") {
+      val rootNodes = doc.getAllNodesBelow().filter { m_FileProtocol!!.isBookNode(it) }
+      addFromRootNodes("", rootNodes, wantCanonicalTextSize)
     }
   }
 
@@ -1376,7 +1450,9 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
     /**************************************************************************/
     //Dbg.d(rootNode.ownerDocument)
-    rootNode.getAllNodesBelow().forEach {
+    //val allNodes = rootNode.getAllNodesBelow()
+    val allNodes = getAllNodesBelowWithLocking(rootNode)
+    allNodes.forEach {
       //Dbg.dCont(Dom.toString(it), "Num.10.34")
       //Dbg.d(Dom.toString(it))
       var processNode = true
@@ -1484,7 +1560,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     /**************************************************************************/
     var nodesOfInterest: MutableList<Node> = mutableListOf()
     var canonicalTextSize = 0
-    val allNodes = chapterNode.getAllNodesBelow()
+    //val allNodes = chapterNode.getAllNodesBelow()
+    val allNodes = getAllNodesBelowWithLocking(chapterNode)
 
 
 
@@ -1532,6 +1609,29 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
   /****************************************************************************/
+  /* The original implementation of BibleStructure did not support parallel
+     processing.  One consequence of this is that I was able to create book-
+     entries on the fly as needed -- and this meant that if we did not have a
+     particular book in the text, I never created an entry for it; and the
+     processing relied upon unused books being absent.
+
+     Now that I've changed things to support parallel processing, it's
+     convenient to create book entries for all possible books before I start
+     processing.  I do this, but create them as null.
+
+     To avoid the need to investigate whether this change has any knock-on
+     effects, it is convenient to remove null entries at the end of
+     processing, thus restoring the situation as it would have been without
+     parallel processing. */
+
+  private fun removeNullBookEntries ()
+  {
+    val delenda = m_Text.m_Content.m_ContentMap.keys.filter { null == m_Text.m_Content.m_ContentMap[it] }
+    delenda.forEach { m_Text.m_Content.m_ContentMap.remove(it) }
+  }
+
+
+  /****************************************************************************/
   /**
   * Assesses whether a node is of relevance to the processing here.
   * Relevance is determined purely in terms of whether the node impacts the
@@ -1552,6 +1652,26 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  /* Sadly, it looks as though even when simply reading the DOM, things are not
+     thread safe -- at least when it comes to traversing it looking for things.
+     Fortunately there are few places here where I do that kind of access, so
+     at least it's easy to trap them all.  The downside, though, is that
+     traversing the DOM is going to be a relatively expensive operation -- the
+     sort which really I'd have liked to be able to run in parallel. */
+
+  private val m_getAllNodesBelow_Lock = Any()
+  private fun getAllNodesBelowWithLocking (node: Node): List<Node>
+  {
+    var res: List<Node>
+    //synchronized(m_getAllNodesBelow_Lock) {
+      res = node.getAllNodesBelow()
+    //}
+
+    return res
+  }
+
 
   /****************************************************************************/
   /* This takes a string containing canonical content (possibly a number of
@@ -1660,7 +1780,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
-    val m_ContentMap = LinkedHashMap<Int, CONTENT_TYPE>()
+    val m_ContentMap = LinkedHashMap<Int, CONTENT_TYPE?>()
     val m_Limits = Limits()
   }
 
@@ -1670,14 +1790,67 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
   /****************************************************************************/
+  private class CanonicalTitleDetailsContainer
+  {
+    val m_Data = ConcurrentHashMap<RefKey, CanonicalTitleDetails>()
+  }
+
+  private operator fun CanonicalTitleDetailsContainer.get (refKey: RefKey) = this.m_Data[refKey]
+  private operator fun CanonicalTitleDetailsContainer.set (refKey: RefKey, canonicalTitleDetails: CanonicalTitleDetails) { this.m_Data[refKey] = canonicalTitleDetails }
+  private operator fun CanonicalTitleDetailsContainer.contains (refKey: RefKey) = this.m_Data.containsKey(refKey)
+
+
+  /****************************************************************************/
+  private class DuplicateVerseDetailsContainer
+  {
+    fun add (refKey: RefKey) { m_Data[refKey] = 0 }
+    fun getAllRefKeys () = m_Data.keys.sorted()
+    val m_Data = ConcurrentHashMap<RefKey, Byte>()
+  }
+
+
+  /****************************************************************************/
+  private class ElisionDetailsContainer
+  {
+    fun getAllRefKeys () = m_Data.keys.sorted()
+    fun getAllNodes () = getAllRefKeys().map { m_Data[it] }
+    val m_Data = ConcurrentHashMap<RefKey, Node>() // Maps the refKey of any verse in an elision to the pair comprising the first and last refKey.
+  }
+
+  private operator fun ElisionDetailsContainer.set (refKey: RefKey, node: Node) { this.m_Data[refKey] = node }
+  private operator fun ElisionDetailsContainer.contains (refKey: RefKey) = this.m_Data.containsKey(refKey)
+
+
+  /****************************************************************************/
+  private class SubverseDetailsContainer
+  {
+    fun add (refKey: RefKey, limits: Limits) { m_Data[refKey] = limits }
+    fun getAllRefKeys () = m_Data.keys.sorted()
+    fun isNotEmpty () = m_Data.isNotEmpty()
+    val m_Data = ConcurrentHashMap<RefKey, Limits>() // Maps the refKey of the master verse for a subverse to the low and high subverse numbers making it up.
+  }
+
+  private operator fun SubverseDetailsContainer.get (refKey: RefKey) = this.m_Data[refKey]
+  private operator fun SubverseDetailsContainer.set (refKey: RefKey, limits: Limits) { this.m_Data[refKey] = limits }
+  private operator fun SubverseDetailsContainer.contains (refKey: RefKey) = this.m_Data.containsKey(refKey)
+
+
+  /****************************************************************************/
   private class TextDescriptor
   {
     val m_Content = ContentHolder<BookDescriptor>() // The text is made up of books.
-    val m_CanonicalTitleDetails: MutableMap<RefKey, CanonicalTitleDetails> = mutableMapOf()
-    val m_DuplicateVerses: MutableList<RefKey> = mutableListOf() // Just a list of refkeys.
-    val m_ElisionDetails = LinkedHashMap<RefKey, Node>() // Maps the refKey of any verse in an elision to the pair comprising the first and last refKey.
-    val m_SubverseDetails: MutableMap<RefKey, Limits> = mutableMapOf() // Maps the refKey of the master verse for a subverse to the low and high subverse numbers making it up.
+    val m_CanonicalTitleDetails = CanonicalTitleDetailsContainer()
+    val m_DuplicateVerses = DuplicateVerseDetailsContainer()
+    val m_ElisionDetails = ElisionDetailsContainer() // Maps the refKey of any verse in an elision to the pair comprising the first and last refKey.
+    val m_SubverseDetails = SubverseDetailsContainer() // Maps the refKey of the master verse for a subverse to the low and high subverse numbers making it up.
+
+    init {
+      BibleBookNamesUsx.getAbbreviatedNameList().map { BibleBookNamesUsx.abbreviatedNameToNumber(it) }. forEach {
+        m_Content.m_ContentMap[it] = null
+      }
+    }
   }
+
 
 
   /****************************************************************************/
@@ -1749,7 +1922,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /****************************************************************************/
   private fun getAllAsRefKeys (bookNo: Int, bd: BookDescriptor): List<RefKey>
   {
-    return bd.m_Content.m_ContentMap.map { (chapterNo, cd) -> getAllAsRefKeys(bookNo, chapterNo, cd) }.flatten()
+    return bd.m_Content.m_ContentMap.map { (chapterNo, cd) -> getAllAsRefKeys(bookNo, chapterNo, cd!!) }.flatten()
   }
 
 
@@ -1826,7 +1999,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     val subverseNo = Ref.getS(refKeys[0])
     if (RefBase.C_DummyElement != subverseNo)
     {
-      if (refKeys.size > 1) throw StepExceptionBase("Can't handle subverse range: $idAsRef")
+      if (refKeys.size > 1) throw StepExceptionWithStackTraceAbandonRun("Can't handle subverse range: $idAsRef")
       val verseRefKey = Ref.clearS(refKeys[0])
       var thunk = m_Text.m_SubverseDetails[verseRefKey]
       if (null == thunk)
@@ -1863,7 +2036,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
         var verseDetails = ""
         m_Text.m_Content.m_ContentMap[book]!!.m_Content.m_ContentMap[chapter]!!.m_Content.m_ContentMap.keys.forEach { verse ->
           val refKey = Ref.rd(book, chapter, (verse / RefBase.C_Multiplier).toInt(), (verse % RefBase.C_Multiplier).toInt()).toRefKey()
-          val elisionMarker = if (refKey in m_Text.m_ElisionDetails.keys) "*" else ""
+          val elisionMarker = if (refKey in m_Text.m_ElisionDetails.getAllRefKeys()) "*" else ""
           val descriptor = m_Text.m_Content.m_ContentMap[book]!!.m_Content.m_ContentMap[chapter]!!.m_Content.m_ContentMap[verse]
           val wc = if (elisionMarker.isNotEmpty() || 0 == descriptor!!.m_CanonicalTextSize) "" else "(${descriptor.m_CanonicalTextSize})"
           verseDetails += "${Ref.rd(verse + 0L).toString("vs")}$elisionMarker$wc, "
@@ -1928,11 +2101,11 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
 
 
   /****************************************************************************/
-  override fun addFromDoc (prompt: String, doc: Document, wantCanonicalTextSize: Boolean, filePath: String?, bookName: String?) { throw StepExceptionBase("Can't populate osis2mod scheme from Document.") }
-  override fun commonGetCanonicalTextSize (elts: IntArray): Int { throw StepExceptionBase("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
-  override fun commonGetCanonicalTextSizeForCanonicalTitle (elts: IntArray): Int { throw StepExceptionBase("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
-  override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepExceptionBase("getRelevanceOfNode should not be being called on an osis2mod scheme.") }
-  override fun addFromDoc (doc: Document, wantCanonicalTextSize: Boolean) { throw StepExceptionBase("load should not be being called on an osis2mod scheme.") }
+  override fun addFromDoc (prompt: String, doc: Document, wantCanonicalTextSize: Boolean, filePath: String?, bookName: String?) { throw StepExceptionWithStackTraceAbandonRun("Can't populate osis2mod scheme from Document.") }
+  override fun commonGetCanonicalTextSize (elts: IntArray): Int { throw StepExceptionWithStackTraceAbandonRun("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
+  override fun commonGetCanonicalTextSizeForCanonicalTitle (elts: IntArray): Int { throw StepExceptionWithStackTraceAbandonRun("Can't ask for word count on an osis2mod scheme, because the schemes are abstract and have no text.") }
+  override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepExceptionWithStackTraceAbandonRun("getRelevanceOfNode should not be being called on an osis2mod scheme.") }
+  override fun addFromDoc (doc: Document, wantCanonicalTextSize: Boolean) { throw StepExceptionWithStackTraceAbandonRun("load should not be being called on an osis2mod scheme.") }
 
 
   /****************************************************************************/
@@ -1983,11 +2156,11 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
 open class BibleStructureImp (filePath: String): BibleStructure(null)
 {
   /****************************************************************************/
-  override fun addFromDoc (prompt: String, doc: Document, wantCanonicalTextSize: Boolean, filePath: String?, bookName: String?) { throw StepExceptionBase("Can't populate osis2mod scheme from Document.") }
-  override fun commonGetCanonicalTextSize (elts: IntArray): Int { throw StepExceptionBase("Not yet set up to provide word counts on an IMP file.") }
-  override fun commonGetCanonicalTextSizeForCanonicalTitle (elts: IntArray): Int { throw StepExceptionBase("Not yet set up to provide word counts on an IMP file.") }
-  override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepExceptionBase("getRelevanceOfNode should not be being called on an IMP file.") }
-  override fun addFromDoc (doc: Document, wantCanonicalTextSize: Boolean) { throw StepExceptionBase("load should not be being called on an IMP file.") }
+  override fun addFromDoc (prompt: String, doc: Document, wantCanonicalTextSize: Boolean, filePath: String?, bookName: String?) { throw StepExceptionWithStackTraceAbandonRun("Can't populate osis2mod scheme from Document.") }
+  override fun commonGetCanonicalTextSize (elts: IntArray): Int { throw StepExceptionWithStackTraceAbandonRun("Not yet set up to provide word counts on an IMP file.") }
+  override fun commonGetCanonicalTextSizeForCanonicalTitle (elts: IntArray): Int { throw StepExceptionWithStackTraceAbandonRun("Not yet set up to provide word counts on an IMP file.") }
+  override fun getRelevanceOfNode (node: Node): NodeRelevance { throw StepExceptionWithStackTraceAbandonRun("getRelevanceOfNode should not be being called on an IMP file.") }
+  override fun addFromDoc (doc: Document, wantCanonicalTextSize: Boolean) { throw StepExceptionWithStackTraceAbandonRun("load should not be being called on an IMP file.") }
 
 
   /****************************************************************************/

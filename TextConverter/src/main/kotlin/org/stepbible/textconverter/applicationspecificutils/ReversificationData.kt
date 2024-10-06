@@ -9,7 +9,7 @@
 //import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.convertNumberToRepeatingString
 //import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
 //import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
-//import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+//import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 //import org.stepbible.textconverter.protocolagnosticutils.PROBABLY_NOT_WORKING_PA_ConversionTimeReversification
 //import java.io.File
 //import java.net.URL
@@ -346,7 +346,7 @@
 //
 //      "RB" -> C_FootnoteLevelNec == row.footnoteLevel
 //      "RA" -> true
-//      else -> throw StepExceptionBase("outputFootnote: Invalid parameter.")
+//      else -> throw StepExceptionWithStackTraceAbandonRun("outputFootnote: Invalid parameter.")
 //    }
 //  }
 //
@@ -555,7 +555,7 @@
 //    val ixLow = findLine(rawData, "#DataStart(Expanded)", 0)
 //    val ixHigh = findLine(rawData, "#DataEnd", ixLow)
 //    val filteredData = rawData.subList(ixLow + 1, ixHigh).map { it.trim() }.filterNot { it.startsWith('#') || it.isBlank() || it.startsWith('=') || it.startsWith('\'')  }
-//    Dbg.withProcessingBooks("Parsing reversification data (total of ${filteredData.size} rows) ...") { // Report progress in the same way as when processing books.
+//    Rpt.reportWithContinuation(level = 1, "Parsing reversification data (total of ${filteredData.size} rows) ...") { // Report progress in the same way as when processing books.
 //      var rowNumber = 0
 //      filteredData.forEach { loadRow(it, ++rowNumber) }
 //      //$$$Dbg.displayReversificationRows(getAllAcceptedRows())
@@ -579,7 +579,7 @@
 //    for (i in startAt..< data.size)
 //      if (data[i].lowercase().startsWith(lookForLower)) return i
 //
-//    throw StepExceptionBase("Guard row $lookFor missing from reversification data")
+//    throw StepExceptionWithStackTraceAbandonRun("Guard row $lookFor missing from reversification data")
 //  }
 //
 //
@@ -608,7 +608,7 @@
 //
 //    /**************************************************************************/
 //    if (rowNumber == 1000 * (rowNumber / 1000))
-//      Dbg.withProcessingBook(rowNumber.toString()) {} // Want the progress output, but don't want to run anything under control of withProcessingBook.
+//      Rpt.reportAsContinuation(rowNumber.toString()) // Want the progress output, but don't want to run anything under control of withProcessingBook.
 //
 //
 //
@@ -1510,7 +1510,7 @@
 //        {
 //          "/" -> TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsAlternativeRefsSeparator")
 //          "+" -> TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsJointRefsSeparator")
-//          else -> throw StepExceptionBase("AncientVersions delimiter not handled: $delim")
+//          else -> throw StepExceptionWithStackTraceAbandonRun("AncientVersions delimiter not handled: $delim")
 //        }
 //      }
 //

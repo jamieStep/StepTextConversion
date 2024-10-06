@@ -1,7 +1,7 @@
 /****************************************************************************/
 package org.stepbible.textconverter.nonapplicationspecificutils.ref
 
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 
 
 
@@ -147,7 +147,7 @@ class RefCollection: RefBase
 
   override fun formatMeAsOsis (format: String): String
   {
-    throw StepExceptionBase("Not expecting to format collections as OSIS")
+    throw StepExceptionWithStackTraceAbandonRun("Not expecting to format collections as OSIS")
   }
 
 
@@ -545,7 +545,7 @@ class RefCollection: RefBase
     {
       val x = RefFormatHandlerReaderVernacular.readEmbedded(text, context, resolveAmbiguitiesAs)
       if (x.size != 1 || x[0] !is RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection)
-        throw StepExceptionBase("Invalid vernacular reference: $text.")
+        throw StepExceptionWithStackTraceAbandonRun("Invalid vernacular reference: $text.")
       else
         return (x[0] as RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection).rc
     }

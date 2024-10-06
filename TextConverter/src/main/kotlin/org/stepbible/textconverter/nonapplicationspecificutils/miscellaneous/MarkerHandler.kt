@@ -16,7 +16,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Mis
  * @author ARA "Jamie" Jamieson
  */
 
-object MarkerHandlerFactory
+object MarkerHandlerFactory: ObjectInterface
 {
   /****************************************************************************/
   enum class Type { FixedCharacter, RepeatingCharacterRange, NumericVernacular, NumericEnglish }

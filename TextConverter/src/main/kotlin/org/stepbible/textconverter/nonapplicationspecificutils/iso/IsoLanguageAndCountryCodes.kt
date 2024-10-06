@@ -1,6 +1,7 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.iso
 
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 
 
 /******************************************************************************/
@@ -119,7 +120,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLo
  * @author ARA "Jamie" Jamieson
  */
 
-object IsoLanguageAndCountryCodes {
+object IsoLanguageAndCountryCodes: ObjectInterface
+{
     /****************************************************************************/
     /****************************************************************************/
     /**                                                                        **/

@@ -1,6 +1,8 @@
 /******************************************************************************/
 package org.stepbible.textconverter.nonapplicationspecificutils.bibledetails
 
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+
 
 
 /******************************************************************************/
@@ -11,7 +13,7 @@ package org.stepbible.textconverter.nonapplicationspecificutils.bibledetails
  * @author ARA "Jamie" Jamieson
 */
 
-object BibleBookNamesOsis: BibleBookNames()
+object BibleBookNamesOsis: BibleBookNames(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -44,7 +46,9 @@ object BibleBookNamesOsis: BibleBookNames()
   /****************************************************************************/
 
   /****************************************************************************/
-  init
+  init { doInit() }
+
+  @Synchronized private fun doInit ()
   {
     m_BookCollectionName = "OSIS"
     addBookDescriptor(  0, "", "", "") // Not assigned in the UBS numbering scheme.

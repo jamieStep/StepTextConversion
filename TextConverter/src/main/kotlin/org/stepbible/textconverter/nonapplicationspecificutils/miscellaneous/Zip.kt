@@ -1,7 +1,7 @@
 /******************************************************************************/
 package org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous
 
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.io.*
 import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
@@ -16,7 +16,7 @@ import java.util.zip.*
  *  @author ARA "Jamie" Jamieson
  */
 
-object Zip
+object Zip: ObjectInterface
  {
   /****************************************************************************/
   /****************************************************************************/
@@ -270,7 +270,7 @@ object Zip
          if (canonicalPath.startsWith(relativeTo))
            Triple(relativeTo, canonicalPath.substring(relativeTo.length + 1), compressionType)  // The thing is in the path starting relativeTo, so we can give it as relative.
          else
-           throw StepExceptionBase("File to be zipped not in relativeTo path: $asSupplied.") // Triple(null, canonicalPath, compressionType) // Not in the relativeTo path.  I have a feeling perhaps this should be an exception.
+           throw StepExceptionWithStackTraceAbandonRun("File to be zipped not in relativeTo path: $asSupplied.") // Triple(null, canonicalPath, compressionType) // Not in the relativeTo path.  I have a feeling perhaps this should be an exception.
        }
     }
 
@@ -290,7 +290,7 @@ object Zip
     }
     catch (e: Exception)
     {
-      throw StepExceptionBase("Zip failed: ${e}.")
+      throw StepExceptionWithStackTraceAbandonRun("Zip failed: ${e}.")
     }
   }
 

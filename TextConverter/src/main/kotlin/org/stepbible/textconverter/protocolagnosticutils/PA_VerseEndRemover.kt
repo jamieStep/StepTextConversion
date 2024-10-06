@@ -3,6 +3,7 @@ package org.stepbible.textconverter.protocolagnosticutils
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.w3c.dom.Node
 
 
@@ -44,37 +45,38 @@ object PA_VerseEndRemover: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    Dbg.withProcessingBooks("Preparing verse tags ...") {
-      dataCollection.getRootNodes().forEach(::processRootNode)
-    }
-  }
+    Rpt.reportWithContinuation(level = 1, "Preparing verse tags ...") {
+      with(ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            asyncable { PA_VerseEndRemoverPerBook(m_FileProtocol).processRootNode(rootNode) }
+          } // forEach
+        } // run
+      } // with
+    } // reportWithContinuation
+  } // fun
+}
 
 
 
 
 
+/******************************************************************************/
+private class PA_VerseEndRemoverPerBook (val m_FileProtocol: X_FileProtocol)
+{
   /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Private                                  **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private fun processRootNode (rootNode: Node)
+  fun processRootNode (rootNode: Node)
   {
-    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
-      val allVerseTags = rootNode.findNodesByName(m_FileProtocol.tagName_verse(), false)
+    Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+    val allVerseTags = rootNode.findNodesByName(m_FileProtocol.tagName_verse(), false)
 
-      allVerseTags.filter { it.hasChildNodes() } .forEach(Dom::promoteChildren) // Replace enclosing sids by a non-enclosing sid, followed by the children of the original.
+    allVerseTags.filter { it.hasChildNodes() } .forEach(Dom::promoteChildren) // Replace enclosing sids by a non-enclosing sid, followed by the children of the original.
 
-      allVerseTags.forEach { // Delete eids, and ensure that any remaining verse tags are marked with a sid (the latter will simply be ignored when processing USX).
-        if (m_FileProtocol.attrName_verseEid() in it)
-          Dom.deleteNode(it)
-        else if ("osisID" in it && "sID" !in it)
-         it["sID"] = it["osisID"]!!
-      }
+    allVerseTags.forEach { // Delete eids, and ensure that any remaining verse tags are marked with a sid (the latter will simply be ignored when processing USX).
+      if (m_FileProtocol.attrName_verseEid() in it)
+        Dom.deleteNode(it)
+      else if ("osisID" in it && "sID" !in it)
+       it["sID"] = it["osisID"]!!
     }
   }
 }

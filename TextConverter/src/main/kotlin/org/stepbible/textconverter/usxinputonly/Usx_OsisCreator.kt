@@ -10,10 +10,10 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
 import org.stepbible.textconverter.applicationspecificutils.*
-import org.w3c.dom.Document
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.w3c.dom.Node
-import java.io.BufferedWriter
 import java.io.File
+import java.util.concurrent.ConcurrentHashMap
 import java.util.regex.Pattern
 
 
@@ -39,16 +39,20 @@ object Usx_OsisCreator
   /****************************************************************************/
 
   /****************************************************************************/
+  /* Note that this class _is_ parallelisable, but does not follow my common
+     pattern of one main class and then a subclass which is instantiated for
+     each book.
+   */
+  /****************************************************************************/
   /**
    * Converts a collection of USX documents to OSIS.
    */
 
   fun process (usxDataCollection: X_DataCollection)
   {
-    Dbg.withReportProgressMain("Converting to OSIS") {
-      Dbg.withProcessingBooks("Processing ...") {
-        process1(usxDataCollection)
-      }
+    Rpt.report(0, "Converting USX to OSIS")
+    Rpt.reportWithContinuation(level = 1, "Processing ...") {
+      process1(usxDataCollection)
     }
   }
 
@@ -57,32 +61,104 @@ object Usx_OsisCreator
   private fun process1 (usxDataCollection: X_DataCollection)
   {
     val outputFilePath = BuilderUtils.createExternalOsisFolderStructure()
-    m_Writer = File(outputFilePath).bufferedWriter()
+    val writer = File(outputFilePath).bufferedWriter()
 
 
 
     /**************************************************************************/
-    m_Writer.write(Osis_Utils.fileHeader(usxDataCollection.getBookNumbers()))
+    val contents = getContents(usxDataCollection)
 
-    if (1 == usxDataCollection.getNumberOfDocuments()) // All books in a single file.
-    {
-      m_Document = usxDataCollection.getRootNodes().firstOrNull()!!.ownerDocument
-      usxDataCollection.getRootNodes().forEach { processRootNode(it) }
-    }
-    else // The normal case -- a file per book.
-      usxDataCollection.getRootNodes().forEach {
-        m_Document = it.ownerDocument
-        processRootNode(it)
-    }
 
-    m_Writer.write(Osis_Utils.fileTrailer())
-    m_Writer.close()
+
+    /**************************************************************************/
+    writer.write(Osis_Utils.fileHeader(usxDataCollection.getBookNumbers()))
+    writer.write(contents)
+    writer.write(Osis_Utils.fileTrailer())
+    writer.close()
 
 
 
     /**************************************************************************/
     ExternalOsisDoc = Dom.getDocument(outputFilePath, retainComments = true)
-    NodeMarker.deleteAllMarkers()  // Make sure we didn't leave any temporary markers lying around.
+    NodeMarker.deleteAllMarkers(ExternalOsisDoc)  // Make sure we didn't leave any temporary markers lying around.
+  }
+
+
+  /****************************************************************************/
+  private class SingleBookThunk
+  {
+    fun getContent () = m_String.toString()
+    fun write (s: String) { m_String.append(s) }
+    var m_String = StringBuffer(20_000_000)
+
+
+    /**************************************************************************/
+    /* Current location details. */
+
+    var m_ChapterNo = 0
+    lateinit var m_CurrentReferenceCollection: RefCollection
+    lateinit var m_CurrentVerseLow: Ref
+    lateinit var m_CurrentVerseHigh: Ref
+    var m_UsxBookNumber = 0
+
+
+    /**************************************************************************/
+    /* Not really desperately useful -- simply used to avoid outputting loads of
+       blank lines in the OSIS output, to make it look slightly better when
+       viewed in a text editor. */
+
+    var m_JustOutputNewLine = false
+
+
+    /**************************************************************************/
+    /* There are certain tags which might in theory generate output, but where
+       we wish to suppress all output from and including the starting tag up to
+       and including the ending tag.  The following variable suppresses output
+       when non-zero.  The idea is that you should increment it on the opening
+       tag and decrement it on the closing tag where suppression is an issue. */
+
+    var m_SuppressOutput = 0
+
+
+    /****************************************************************************/
+    /* Used to ensure that all references within a single verse can be assigned
+       unique ids. */
+
+    var m_PerVerseReferenceCounter = 0
+  }
+
+
+  /****************************************************************************/
+  private fun getContents (usxDataCollection: X_DataCollection): String
+  {
+    /*************************************************************************/
+    val chunks = ConcurrentHashMap<Int, String>()
+
+
+
+    /*************************************************************************/
+    /* Note that this does not follow my common pattern of having a separate
+       instance of some subclass to handle each book.  Instead, I create
+       storage separately for each book (SingleBookThunk), write to that,
+       and then pass the result to a thread-safe ConcurrentHashMap. */
+
+    with(ParallelRunning(true)) {
+      run {
+        usxDataCollection.getRootNodes().forEach { rootNode ->
+          asyncable {
+            val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(rootNode["code"]!!)
+            val res = SingleBookThunk()
+            processRootNode(res, rootNode)
+            chunks[bookNo] = res.getContent()
+          }
+        } // forEach
+      } // run
+    } // with
+
+
+
+    /*************************************************************************/
+    return chunks.keys().toList().sorted().map { chunks[it] }.joinToString("")
   }
 
 
@@ -98,20 +174,18 @@ object Usx_OsisCreator
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun processRootNode (rootNode: Node)
+  private fun processRootNode (thunk: SingleBookThunk, rootNode: Node)
   {
     val bookName = rootNode["code"]!!
-    //Logger.setPrefix("Converting to OSIS $bookName")
-    Dbg.withProcessingBook(bookName) {
-      processNode(m_Document.documentElement)
-    }
+    Rpt.reportBookAsContinuation(bookName)
+    processNode(thunk, rootNode)
   }
 
 
   /****************************************************************************/
   /* Called to handle any "@" variables in the tag translation details. */
 
-  private fun fillInAttributes (theTags: String, node: Node): String
+  private fun fillInAttributes (thunk: SingleBookThunk, theTags: String, node: Node): String
   {
     /**************************************************************************/
     fun getRefBasedAttributeValue (attribName: String): String
@@ -166,7 +240,7 @@ object Usx_OsisCreator
 
         "currentChapter" ->
          {
-          val ref: Ref = Ref.rd(m_CurrentVerseLow)
+          val ref: Ref = Ref.rd(thunk.m_CurrentVerseLow)
           if (!ref.hasC()) ref.setC(0)
           ref.clearV()
           ref.clearS()
@@ -177,7 +251,7 @@ object Usx_OsisCreator
 
         "currentChapterVerseZero" ->
         {
-          val ref = Ref.rd(m_CurrentVerseLow)
+          val ref = Ref.rd(thunk.m_CurrentVerseLow)
           if (!ref.hasC()) ref.setC(0)
           ref.setV(0)
           ref.clearS()
@@ -187,32 +261,32 @@ object Usx_OsisCreator
 
         "currentRefLow" ->
         {
-          attributeValue = m_CurrentVerseLow.toStringOsis()
+          attributeValue = thunk.m_CurrentVerseLow.toStringOsis()
         }
 
 
         "currentRefLow_b" ->
         {
-          attributeValue = m_CurrentVerseLow.toStringOsis("b")
+          attributeValue = thunk.m_CurrentVerseLow.toStringOsis("b")
         }
 
 
         "currentRefLow_bc" ->
         {
-          attributeValue = m_CurrentVerseLow.toStringOsis("bc")
+          attributeValue = thunk.m_CurrentVerseLow.toStringOsis("bc")
         }
 
 
         "currentRefAsRange" ->
         {
-          val refs = RefRange(m_CurrentVerseLow, m_CurrentVerseHigh)
-          attributeValue = if (1 == refs.getAllAsRefs().size) m_CurrentVerseLow.toStringOsis() else refs.toStringOsis()
+          val refs = RefRange(thunk.m_CurrentVerseLow, thunk.m_CurrentVerseHigh)
+          attributeValue = if (1 == refs.getAllAsRefs().size) thunk.m_CurrentVerseLow.toStringOsis() else refs.toStringOsis()
         }
 
 
         "currentRefAsRefs" ->
         {
-          val refs = RefRange(m_CurrentVerseLow, m_CurrentVerseHigh)
+          val refs = RefRange(thunk.m_CurrentVerseLow, thunk.m_CurrentVerseHigh)
           attributeValue = ""; for (ref in refs.getAllAsRefs()) attributeValue += " " + ref.toStringOsis()
           attributeValue = attributeValue!!.substring(1)
         }
@@ -220,7 +294,7 @@ object Usx_OsisCreator
 
         "refCounter" ->
         {
-          attributeValue = (++m_PerVerseReferenceCounter).toString()
+          attributeValue = (++thunk.m_PerVerseReferenceCounter).toString()
         }
 
         else ->
@@ -252,12 +326,12 @@ object Usx_OsisCreator
   /* At most one tag at a time should be passed to this method, and this tag
      should be preceded by nothing other than (optional) whitespace. */
 
-  private fun output (text: String)
+  private fun output (thunk: SingleBookThunk, text: String)
   {
     var s = text
-    if (m_SuppressOutput > 0) return
+    if (thunk.m_SuppressOutput > 0) return
     val ss = s.trim().lowercase()
-    if (m_JustOutputNewLine) while (s.startsWith("\n")) s = s.substring(1)
+    if (thunk.m_JustOutputNewLine) while (s.startsWith("\n")) s = s.substring(1)
     s = s.replace("\n".toRegex(), "@NL@")
     s = s.replace("\\s+".toRegex(), " ")
     s = s.replace("@NL@".toRegex(), "\n")
@@ -272,22 +346,22 @@ object Usx_OsisCreator
       s = s.replace("‘\\s+".toRegex(), "‘").replace("\\s+’".toRegex(), "’")
     }
 
-    m_Writer.write(s)
-    m_JustOutputNewLine = s.endsWith("\n")
+    thunk.write(s)
+    thunk.m_JustOutputNewLine = s.endsWith("\n")
   }
 
 
   /****************************************************************************/
-  private fun processNode (node: Node)
+  private fun processNode (thunk: SingleBookThunk, node: Node)
   {
-    processNode(node, "")
-    Dom.getChildren(node).forEach { processNode(it) }
-    if ("#text" != Dom.getNodeName(node)) processNode(node, "/")
+    processNode(thunk, node, "")
+    Dom.getChildren(node).forEach { processNode(thunk, it) }
+    if ("#text" != Dom.getNodeName(node)) processNode(thunk, node, "/")
   }
 
 
   /****************************************************************************/
-  private fun processNode (node: Node, closeMarker: String)
+  private fun processNode (thunk: SingleBookThunk, node: Node, closeMarker: String)
   {
     /**************************************************************************/
     val extendedName = Usx_FileProtocol.getExtendedNodeName(node)
@@ -325,7 +399,7 @@ object Usx_OsisCreator
     {
       var s = node.nodeValue
       s = s.replace("&(?!amp;)".toRegex(), "&amp;")
-      output(s)
+      output(thunk, s)
       return
     }
 
@@ -335,19 +409,19 @@ object Usx_OsisCreator
 
       "book" ->
       {
-        m_ChapterNo = RefBase.C_DummyElement
+        thunk.m_ChapterNo = RefBase.C_DummyElement
         val usxBookAbbreviation: String = Dom.getAttribute(node, "code")!!
-        m_UsxBookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(usxBookAbbreviation)
-        m_CurrentVerseLow = Ref.rd(m_UsxBookNumber, RefBase.C_DummyElement, RefBase.C_DummyElement, RefBase.C_DummyElement)
-        m_CurrentVerseHigh = Ref.rd(m_UsxBookNumber, RefBase.C_DummyElement, RefBase.C_DummyElement, RefBase.C_DummyElement)
+        thunk.m_UsxBookNumber = BibleBookNamesUsx.abbreviatedNameToNumber(usxBookAbbreviation)
+        thunk.m_CurrentVerseLow = Ref.rd(thunk.m_UsxBookNumber, RefBase.C_DummyElement, RefBase.C_DummyElement, RefBase.C_DummyElement)
+        thunk.m_CurrentVerseHigh = Ref.rd(thunk.m_UsxBookNumber, RefBase.C_DummyElement, RefBase.C_DummyElement, RefBase.C_DummyElement)
       }
 
 
       "chapter" ->
       {
-        m_ChapterNo = Ref.rdUsx(Dom.getAttribute(node, "sid")!!).getC()
-        m_CurrentVerseLow = Ref.rd(m_UsxBookNumber, m_ChapterNo, RefBase.C_DummyElement, RefBase.C_DummyElement)
-        m_CurrentVerseHigh = Ref.rd(m_UsxBookNumber, m_ChapterNo, RefBase.C_DummyElement, RefBase.C_DummyElement)
+        thunk.m_ChapterNo = Ref.rdUsx(Dom.getAttribute(node, "sid")!!).getC()
+        thunk.m_CurrentVerseLow = Ref.rd(thunk.m_UsxBookNumber, thunk.m_ChapterNo, RefBase.C_DummyElement, RefBase.C_DummyElement)
+        thunk.m_CurrentVerseHigh = Ref.rd(thunk.m_UsxBookNumber, thunk.m_ChapterNo, RefBase.C_DummyElement, RefBase.C_DummyElement)
       }
 
 
@@ -380,12 +454,12 @@ object Usx_OsisCreator
 
       "verse", "verse:sid" ->
       {
-        m_CurrentReferenceCollection = RefCollection.rdUsx(node["sid"]!!)
-        m_CurrentVerseLow = Ref.rd(m_CurrentReferenceCollection.getLowAsRef())
-        m_CurrentVerseHigh = Ref.rd(m_CurrentReferenceCollection.getHighAsRef())
-        if (0 == m_CurrentVerseLow.getS()) m_CurrentVerseLow.setS(RefBase.C_DummyElement)
-        if (0 == m_CurrentVerseHigh.getS()) m_CurrentVerseHigh.setS(RefBase.C_DummyElement)
-        m_PerVerseReferenceCounter = 0
+        thunk.m_CurrentReferenceCollection = RefCollection.rdUsx(node["sid"]!!)
+        thunk.m_CurrentVerseLow = Ref.rd(thunk.m_CurrentReferenceCollection.getLowAsRef())
+        thunk.m_CurrentVerseHigh = Ref.rd(thunk.m_CurrentReferenceCollection.getHighAsRef())
+        if (0 == thunk.m_CurrentVerseLow.getS()) thunk.m_CurrentVerseLow.setS(RefBase.C_DummyElement)
+        if (0 == thunk.m_CurrentVerseHigh.getS()) thunk.m_CurrentVerseHigh.setS(RefBase.C_DummyElement)
+        thunk.m_PerVerseReferenceCounter = 0
       }
 
       "cell" ->
@@ -406,7 +480,7 @@ object Usx_OsisCreator
 
 
     /**************************************************************************/
-    tags = fillInAttributes(tags, node)
+    tags = fillInAttributes(thunk, tags, node)
 
 
 
@@ -421,16 +495,16 @@ object Usx_OsisCreator
        to put certain checks into the output routine, and those were made
        simpler with this kind of split. */
 
-    if (!isClosing && null != tagProcessDetails && ConfigData.TagAction.SuppressContent == tagProcessDetails.second) ++m_SuppressOutput
+    if (!isClosing && null != tagProcessDetails && ConfigData.TagAction.SuppressContent == tagProcessDetails.second) ++thunk.m_SuppressOutput
 
     if (tags.isNotEmpty())
     {
       val splitTags = tags.split("<".toRegex())
-      output(splitTags[0]) // May have leading non-tag text.
-      for (i in 1..< splitTags.size) output("<" + splitTags[i]) // This assumes no inter-tag text, but does permit text at the end.
+      output(thunk, splitTags[0]) // May have leading non-tag text.
+      for (i in 1..< splitTags.size) output(thunk, "<" + splitTags[i]) // This assumes no inter-tag text, but does permit text at the end.
     }
 
-    if (isClosing && null != tagProcessDetails && ConfigData.TagAction.SuppressContent == tagProcessDetails.second) --m_SuppressOutput
+    if (isClosing && null != tagProcessDetails && ConfigData.TagAction.SuppressContent == tagProcessDetails.second) --thunk.m_SuppressOutput
   }
 
 
@@ -458,11 +532,11 @@ object Usx_OsisCreator
 //  {
 //      return try
 //      {
-//        Dbg.reportProgress("\nReading XSD")
+//        Rpt.report(level = 1, "\nReading XSD")
 //        val factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
 //        val schema = factory.newSchema(URL(ConfigData["stepExternalDataPath_OsisXsd"]!!)) // Version with Crosswire tweaks.
 //        val validator = schema.newValidator()
-//        Dbg.reportProgress("  Validating OSIS")
+//        Rpt.report(level = 1, "  Validating OSIS")
 //        validator.validate(StreamSource(File(xmlPath)))
 //        null
 //      }
@@ -483,52 +557,6 @@ object Usx_OsisCreator
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
-
-  /****************************************************************************/
-  private lateinit var m_Document: Document
-
-
-  /****************************************************************************/
-  /* Current location details. */
-
-  private var m_ChapterNo = 0
-  private lateinit var m_CurrentReferenceCollection: RefCollection
-  private lateinit var m_CurrentVerseLow: Ref
-  private lateinit var m_CurrentVerseHigh: Ref
-  private var m_UsxBookNumber = 0
-
-
-  /****************************************************************************/
-  /* Not really desperately useful -- simply used to avoid outputting loads of
-     blank lines in the OSIS output, to make it look slightly better when viewed
-     in a text editor. */
-
-  private var m_JustOutputNewLine = false
-
-
-  /****************************************************************************/
-  /* Fairly obvious, I guess. */
-
-  private lateinit var m_Writer: BufferedWriter
-
-
-  /****************************************************************************/
-  /* There are certain tags which might in theory generate output, but where we
-     wish to suppress all output from and including the starting tag up to and
-     including the ending tag.  The following variable suppresses output when
-     non-zero.  The idea is that you should increment it on the opening tag and
-     decrement it on the closing tag where suppression is an issue. */
-
-  private var m_SuppressOutput = 0
-
-
-  /****************************************************************************/
-  /* Used to ensure that all references within a single verse can be assigned
-     unique ids. */
-
-  private var m_PerVerseReferenceCounter = 0
-
-
 
   /****************************************************************************/
   /* Lets you identify attribute names appearing in the configuration data

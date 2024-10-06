@@ -1,6 +1,7 @@
 package org.stepbible.textconverter.applicationspecificutils
 
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 
 
 /******************************************************************************/
@@ -31,7 +32,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Config
  * @author ARA "Jamie" Jamieson
  */
 
-object Permissions
+object Permissions: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

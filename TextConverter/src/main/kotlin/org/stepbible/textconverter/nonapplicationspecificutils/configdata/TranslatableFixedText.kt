@@ -4,8 +4,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringFormatter
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringFormatter.convertNameAndValueListToMap
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.applicationspecificutils.IssueAndInformationRecorder
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 
 /******************************************************************************/
@@ -59,7 +59,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.Ste
  * @author ARA "Jamie" Jamieson
  */
 
-object TranslatableFixedText
+object TranslatableFixedText: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -225,7 +225,7 @@ object TranslatableFixedText
   * if the key does not have any associated text.
   */
 
-  private fun getEnglish (key: String) = m_English[key] ?: throw StepExceptionBase("Failed to find English message associated with $key.")
+  private fun getEnglish (key: String) = m_English[key] ?: throw StepExceptionWithStackTraceAbandonRun("Failed to find English message associated with $key.")
 
 
   /****************************************************************************/

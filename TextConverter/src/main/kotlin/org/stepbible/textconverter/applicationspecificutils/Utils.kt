@@ -1,5 +1,7 @@
 package org.stepbible.textconverter.applicationspecificutils
 
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.w3c.dom.Document
@@ -16,7 +18,7 @@ import java.io.StringWriter
  * @author ARA "Jamie" Jamieson
  */
 
-object Utils
+object Utils: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -101,12 +103,22 @@ object Utils
    * @return Prettified abbreviation.
    */
 
-  fun prettifyBookAbbreviation (abbreviation: String): String
+  fun prettifyBookAbbreviation (abbreviation: String): String?
   {
     val number = if (abbreviation[0].isDigit()) abbreviation[0].toString() else ""
     var rest = abbreviation.substring(number.length)
     rest = rest[0].uppercase() + rest.substring(1).lowercase()
-    return number + rest
+    val res = number + rest
+
+    if (BibleBookNamesUsx.abbreviatedNameExists(res))
+      return res
+    else if (BibleBookNamesOsis.abbreviatedNameExists(res))
+    {
+      val bookNo = BibleBookNamesOsis.abbreviatedNameToNumber(res)
+      return BibleBookNamesUsx.numberToAbbreviatedName(bookNo)
+    }
+    else
+      return null
   }
 
 

@@ -1,8 +1,9 @@
 /******************************************************************************/
 package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.io.File
 import java.io.FileInputStream
 import java.nio.file.Paths
@@ -115,7 +116,7 @@ import kotlin.io.path.Path
  * @author ARA "Jamie" Jamieson
  */
 
-object FileLocations
+object FileLocations: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -182,7 +183,7 @@ object FileLocations
           return file.toString()
       }
 
-      throw StepExceptionBase("Can't locate file $canonicalFilePath.")
+      throw StepExceptionWithStackTraceAbandonRun("Can't locate file $canonicalFilePath.")
     }
 
 
@@ -296,7 +297,7 @@ object FileLocations
     if (!StepFileUtils.fileOrFolderExists(getInputOsisFolderPath())) return null
     val res = StepFileUtils.getMatchingFilesFromFolder(getInputOsisFolderPath(), ".*\\.${getFileExtensionForOsis()}".toRegex())
     if (res.isEmpty()) return null
-    if (1 != res.size) throw StepExceptionBase("More than one OSIS file exists.")
+    if (1 != res.size) throw StepExceptionWithStackTraceAbandonRun("More than one OSIS file exists.")
     return res[0].toString()
   }
 

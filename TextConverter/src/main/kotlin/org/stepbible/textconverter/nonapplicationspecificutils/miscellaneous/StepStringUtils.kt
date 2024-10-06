@@ -9,7 +9,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object StepStringUtils
+object StepStringUtils: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -134,6 +134,19 @@ object StepStringUtils
   */
 
   fun quotify (s: String, quote: String = "\"") = quote + s + quote
+
+
+  /****************************************************************************/
+  /**
+  * Surrounds a string with quote marks, but only if it contains spaces.
+  * Useful, for instance, on a command-line.
+  *
+  * @param s: String to be handled.
+  * @param quote: Quote mark.
+  * @return Quoted string.
+  */
+
+  fun quotifyIfContainsSpaces (s: String, quote: String = "\"") = if (" " in s) quotify(s, quote) else s
 
 
   /****************************************************************************/

@@ -9,13 +9,13 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Config
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.convertNumberToRepeatingString
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.capitaliseWords
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodesByAttributeName
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler.CalloutDetails
 import org.w3c.dom.Document
@@ -242,7 +242,6 @@ open class PA_ReversificationHandler protected constructor (): PA()
     private const val CheckSourceRefExists               = 0x00000001
     private const val CheckStandardRefNonExistent        = 0x00000002
     private const val CheckStandardRefEmptyOrNonExistent = 0x00000004
-
   } // companion object
 
 
@@ -290,6 +289,39 @@ open class PA_ReversificationHandler protected constructor (): PA()
   */
 
   fun getSelectedRows () = m_SelectedRows
+
+
+   /****************************************************************************/
+   /**
+   * Returns a map of lists -- keyed on book number, with each entry being the
+   * full list of ReversificationDataRow's for that book.
+   *
+   * @return Mapped reversification details.
+   */
+
+   fun getSelectedRowsByBook (actionFlag: Int): Map<Int, List<ReversificationDataRow>>
+   {
+     return getSelectedRows()
+       .filter { 0 != (it.action.actions and actionFlag) }
+       .groupBy { it.sourceRef.getB() }
+   }
+
+
+   /****************************************************************************/
+   /**
+   * Returns a list of ReversificationDataRow's associated with the book
+   * represented by rootNode.
+   *
+   * @param rootNode Node representing the book of interest.
+   * @return ReversificationDataRow's.
+   */
+
+   fun getSelectedRowsForBook (rootNode: Node): List<ReversificationDataRow>
+   {
+     val bookNo = m_FileProtocol.getBookNumber(rootNode)
+     return getSelectedRows()
+       .filter { bookNo == it.sourceRef.getB() }
+   }
 
 
   /****************************************************************************/
@@ -384,9 +416,8 @@ open class PA_ReversificationHandler protected constructor (): PA()
 
   private fun load (dataCollection: X_DataCollection)
   {
-    Dbg.withReportProgressSub("Reading reversification data and checking applicability.") {
-      load_1(dataCollection)
-    }
+    Rpt.report(1, "Reading reversification data and checking applicability.  Data is normally taken from the online repository, so this may take a moment.")
+    load_1(dataCollection)
 
     if (m_SelectedRows.isNotEmpty())
       IssueAndInformationRecorder.setRuntimeReversification()
@@ -403,7 +434,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
     /* Make commonly-used items readily available. */
 
     m_DataCollection = dataCollection
-    m_BibleStructure = dataCollection.getBibleStructure()
+    m_BibleStructure = dataCollection.getBibleStructure(wantCanonicalTextSize = true)
     m_FileProtocol = dataCollection.getFileProtocol()
     m_RuleEvaluator = ReversificationRuleEvaluator(dataCollection)
 
@@ -432,7 +463,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
       for (i in startAt..< data.size)
         if (data[i].lowercase().startsWith(lookForLower)) return i
 
-      throw StepExceptionBase("Guard row $lookFor missing from reversification data")
+      throw StepExceptionWithStackTraceAbandonRun("Guard row $lookFor missing from reversification data")
     }
 
 
@@ -454,7 +485,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
     val ixLow = findLine(rawData, "#DataStart(Expanded)", 0)
     val ixHigh = findLine(rawData, "#DataEnd", ixLow)
     val filteredData = rawData.subList(ixLow + 1, ixHigh).map { it.trim() }.filterNot { it.startsWith('#') || it.isBlank() || it.startsWith('=') || it.startsWith('\'')  }
-    Dbg.withProcessingBooks("Parsing reversification data (total of ${filteredData.size} rows) ...") { // Report progress in the same way as when processing books.
+    Rpt.reportWithContinuation(level = 1, "Parsing reversification data (total of ${filteredData.size} rows) ...") { // Report progress in the same way as when processing books.
       var rowNumber = 0
       filteredData.forEach { loadRow(it, ++rowNumber) }
       Logger.announceAllAndTerminateImmediatelyIfErrors()
@@ -479,7 +510,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
 
     /**************************************************************************/
     if (rowNumber == 1000 * (rowNumber / 1000))
-      Dbg.withProcessingBook(rowNumber.toString()) {} // This implausible-looking call presses into service something not really intended for this, but which lets us report multiple progress items on a single line.
+      Rpt.reportAsContinuation(rowNumber.toString())
 
 
 
@@ -984,41 +1015,26 @@ open class PA_ReversificationHandler protected constructor (): PA()
   /****************************************************************************/
   /****************************************************************************/
 
-  private var m_ReversificationType = '?'
-  private lateinit var m_CalloutGenerator: (ReversificationDataRow) -> String
-  private lateinit var m_NotesColumnName: String
+  /****************************************************************************/
+  protected lateinit var m_CalloutGenerator: (ReversificationDataRow) -> String
+  protected lateinit var m_NotesColumnName: String
+
 
 
   /****************************************************************************/
   /**
   * Runs over all verses affected by the reversification data, and applies any
   * footnotes which may be required.
+  *
+  * @param rootNode Root node for the book which we are processing.
   */
 
-  protected fun addFootnotes (notesColumnName: String, calloutGenerator: (ReversificationDataRow) -> String)
+  fun addFootnotes (rootNode: Node)
   {
-    /**************************************************************************/
-    if (getSelectedRows().isEmpty() || !ConfigData.getAsBoolean("stepOkToGenerateFootnotes"))
+    val selectedRows = getSelectedRowsForBook(rootNode)
+    if (selectedRows.isEmpty() || !ConfigData.getAsBoolean("stepOkToGenerateFootnotes"))
       return
-
-
-
-    /**************************************************************************/
-    m_ReversificationType = if (PA_ReversificationHandler_RunTime === instance()) 'R' else 'C'
-    m_NotesColumnName = notesColumnName
-    m_CalloutGenerator = calloutGenerator
-
-
-    /**************************************************************************/
-    val selectedRowsGroupsByBook = getSelectedRows().groupBy { it.sourceRef.getB() }
-    Dbg.withProcessingBooks("Applying reversification footnotes ...") {
-      selectedRowsGroupsByBook.forEach { bookNoAndRows ->
-        val bookNode = m_DataCollection.getRootNode(bookNoAndRows.key)!!
-        Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(bookNode)) {
-          addFootnotes(bookNode, bookNoAndRows.value)
-        }
-      }
-    }
+    addFootnotes(rootNode, selectedRows)
   }
 
 
@@ -1404,7 +1420,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
         {
           "/" -> TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsAlternativeRefsSeparator")
           "+" -> TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsJointRefsSeparator")
-          else -> throw StepExceptionBase("AncientVersions delimiter not handled: $delim")
+          else -> throw StepExceptionWithStackTraceAbandonRun("AncientVersions delimiter not handled: $delim")
         }
       }
 

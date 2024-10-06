@@ -3,6 +3,7 @@ package org.stepbible.textconverter.protocolagnosticutils
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.w3c.dom.Node
 import java.io.File
 import java.util.*
@@ -68,15 +69,44 @@ object PA_EnhancedVerseEndInserter: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    Dbg.withProcessingBooks("Handling cross-boundary markup ...") {
-      dataCollection.getRootNodes().forEach(::processRootNode)
-    }
+    Rpt.reportWithContinuation(level = 1, "Handling cross-boundary markup ...") {
+      with(ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach {
+            asyncable { PA_EnhancedVerseEndInserterPerBook(m_FileProtocol).processRootNode(it) }
+          } // forEach
+        } // run
+      } // Parallel
+    } // reportWithContinuation
+  } // fun
+}
+  
+  
+  
+  
+/******************************************************************************/
+private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProtocol)
+{
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                               Public                                   **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  fun processRootNode (rootNode: Node)
+  {
+    Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+    val chapterNodes = rootNode.findNodesByName(m_FileProtocol.tagName_chapter(), false)
+    insertVerseEnds(rootNode, chapterNodes) // Initial positioning.
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -84,16 +114,6 @@ object PA_EnhancedVerseEndInserter: PA()
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
-
-  /****************************************************************************/
-  private fun processRootNode (rootNode: Node)
-  {
-    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
-      val chapterNodes = rootNode.findNodesByName(m_FileProtocol.tagName_chapter(), false)
-      insertVerseEnds(rootNode, chapterNodes) // Initial positioning.
-    }
-  }
-
 
   /****************************************************************************/
   /* Adds verse ends for each sid.  We treat each chapter separately.  Within

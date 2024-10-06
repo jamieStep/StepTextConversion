@@ -4,14 +4,14 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodeByName
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.usxinputonly.Usx_OsisCreator
 import org.stepbible.textconverter.usxinputonly.Usx_Tidier
 import org.stepbible.textconverter.applicationspecificutils.*
-import org.stepbible.textconverter.protocolagnosticutils.PA_BasicVerseEndInserter
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
+import org.stepbible.textconverter.protocolagnosticutils.PA_Utils.convertToEnclosingTags
+import org.w3c.dom.Document
 import java.io.File
 
 
@@ -73,22 +73,16 @@ object Builder_InitialOsisRepresentationFromUsx: Builder()
   /****************************************************************************/
   override fun doIt ()
   {
-    Dbg.withReportProgressMain(banner(), ::doIt1)
-  }
+    Rpt.report(0, banner())
+    Rpt.reportWithContinuation(level = 1, "Loading data ...") {
+      loadFiles(BuilderUtils.getInputFiles(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx(), -1))
+    }
 
-
-  /****************************************************************************/
-  private fun doIt1 ()
-  {
-    BuilderUtils.getInputFiles(FileLocations.getInputUsxFolderPath(), FileLocations.getFileExtensionForUsx(), -1).forEach(::loadFile)
-    BuilderUtils.processXslt(UsxDataCollection)
     Usx_Tidier.process(UsxDataCollection)
     RefBase.setBibleStructure(UsxDataCollection.getBibleStructure())
     ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(UsxDataCollection.getBookNumbers())
     Usx_OsisCreator.process(UsxDataCollection)
-    PA_BasicVerseEndInserter.process(ExternalOsisDoc, Osis_FileProtocol)
     RefBase.setBibleStructure(null)
-    //Dbg.d(ExternalOsisDoc)
   }
 
 
@@ -104,12 +98,75 @@ object Builder_InitialOsisRepresentationFromUsx: Builder()
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun loadFile (filePath: String)
+  private fun loadFiles (filePaths: List<String>)
   {
-    val text = Builder_Master.processRegexes(File(filePath).bufferedReader().readText(), ConfigData.getPreprocessingRegexes())
-    val doc = Dom.getDocumentFromText(text, true)
-    val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(doc.findNodeByName("book")!!["code"]!!)
-    if (Dbg.wantToProcessBook(bookNo))
-      UsxDataCollection.addFromDoc(doc)
+    // I deliberately do not use the common pattern elsewhere, where I create
+    // a separate class instance to handle the processing for each book.  There
+    // is no need for this here, because there is no local storage to worry
+    // about.
+
+    with(ParallelRunning(true)) {
+      run {
+        filePaths.forEach { filePath ->
+          asyncable {
+            val text = Builder_Master.processRegexes(File(filePath).bufferedReader().readText(), ConfigData.getPreprocessingRegexes())
+            var doc = Dom.getDocumentFromText(text, true)
+            doc = BuilderUtils.processXslt(doc, Usx_FileProtocol)
+            val bookNode = doc.findNodeByName("book")!!
+            val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(bookNode["code"]!!)
+            if (Dbg.wantToProcessBook(bookNo))
+            {
+              Dom.deleteChildren(bookNode) // USX book nodes contain a rather meaningless string, but otherwise are not enclosing nodes.
+              convertToEnclosingTags(doc.documentElement, "book")
+              sortOutSidsEtc(doc)
+              UsxDataCollection.addFromDoc(doc)
+            } // if
+          } // asyncable
+        } // forEach
+      } // run
+    } // with
+  } // fun
+
+
+  /****************************************************************************/
+  private fun sortOutSidsEtc (doc: Document)
+  {
+    var book = ""
+    var chapter = ""
+
+    doc.getAllNodesBelow().forEach { node ->
+      when (Dom.getNodeName(node))
+      {
+        "book" ->
+        {
+          book = node["code"]!!
+          node["sid"] = book
+          node -= "style"
+        }
+
+
+        "chapter" ->
+        {
+          if ("number" in node)
+          {
+            chapter = node["number"]!!
+            node["sid"] = "$book $chapter"
+          }
+
+          node -= "style"
+          node -= "number"
+        }
+
+
+        "verse" ->
+        {
+          if ("number" in node)
+            node["sid"] = "$book $chapter:${node["number"]}"
+
+          node -= "style"
+          node -= "number"
+        }
+      }
+    }
   }
 }

@@ -2,6 +2,7 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.shared
 
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.doNothing
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import java.io.FileInputStream
 import javax.xml.stream.XMLInputFactory
 import javax.xml.stream.XMLStreamConstants
@@ -17,7 +18,7 @@ import javax.xml.stream.XMLStreamReader
  * @author ARA "Jamie" Jamieson
  */
 
-object FeatureIdentifier
+object FeatureIdentifier: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -159,14 +160,6 @@ object FeatureIdentifier
 
   /****************************************************************************/
   /**
-   * Flags that we have multi verse paragraphs.
-   */
-   
-  fun setHasMultiVerseParagraphs () { m_HasMultiVerseParagraphs = true; }
-  
-  
-  /****************************************************************************/
-  /**
    * Returns the value indicated by the name of the method.
    *
    * @return Value indicated by the name of the method.
@@ -197,9 +190,18 @@ object FeatureIdentifier
   }
 
 
+  /****************************************************************************/
+  /**
+   * Flags that we have multi verse paragraphs.
+   */
+
+  @Synchronized fun setHasMultiVerseParagraphs () { m_HasMultiVerseParagraphs = true; }
 
 
-  
+
+
+
+
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/

@@ -7,6 +7,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -100,23 +101,38 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
     fun preventSuppressionOfEmptyVerses (dataCollection: X_DataCollection)
     {
-      Dbg.withReportProgressSub("Preventing suppression of empty verses.") {
-        var toggle = true
-        dataCollection.getRootNodes().forEach { rootNode ->
-          rootNode.getAllNodesBelow().filter { NodeMarker.hasEmptyVerseType(it) }.forEach { verse ->
-            toggle = !toggle
-            if (toggle)
-            {
-              val content = verse.nextSibling
-              Dom.deleteNode(content)
-              val wrapper = dataCollection.getFileProtocol().makeDoNothingMarkup(verse.ownerDocument)
-              wrapper.appendChild(content)
-              Dom.insertNodeAfter(verse, wrapper)
-            } // if
-          } // forEach verse
-        } // forEach rootNote
-      } // Dbg.withReportProgressSub
+      Rpt.report(level = 1, "Preventing suppression of empty verses.")
+      with(ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            asyncable {
+              Rpt.reportBookAsContinuation(dataCollection.getFileProtocol().getBookAbbreviation(rootNode))
+              processRootNode(rootNode, dataCollection.getFileProtocol())
+            } // asyncable
+          } // forEach rootNote
+        } // run
+      } // parallel
     } // fun
+
+
+    /**************************************************************************/
+    private fun processRootNode (rootNode: Node, fileProtocol: X_FileProtocol): Boolean
+    {
+      var toggle = true
+      rootNode.getAllNodesBelow().filter { NodeMarker.hasEmptyVerseType(it) }.forEach { verse ->
+        toggle = !toggle
+        if (toggle)
+        {
+          val content = verse.nextSibling
+          Dom.deleteNode(content)
+          val wrapper = fileProtocol.makeDoNothingMarkup(verse.ownerDocument)
+          wrapper.appendChild(content)
+          Dom.insertNodeAfter(verse, wrapper)
+        } // if
+      } // forEach verse
+
+      return toggle
+    }
   } // companion
 
 
@@ -222,6 +238,7 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
     NodeMarker.setEmptyVerseType(start, "reversification")
 
     Dom.insertNodeBefore(insertBefore, start)
+    Dom.insertNodeBefore(insertBefore, createEmptyContent(insertBefore.ownerDocument, m_Content_EmptyVerse))
     Dom.insertNodeBefore(insertBefore, end)
 
     IssueAndInformationRecorder.addEmptyVerseGeneratedForReversification(Ref.rd(sidRefKey).toString())
@@ -240,13 +257,19 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
   fun markVersesWhichWereEmptyInTheRawText (dataCollection: X_DataCollection)
   {
-    Dbg.withReportProgressSub("Marking verses which were empty in the raw text.") {
-      dataCollection.getRootNodes().forEach { rootNode ->
-        val emptyVerses = getEmptyVerses(rootNode)
-        emptyVerses.forEach { annotateVerseWhichWasEmptyInRawText(it) }
-      }
-    }
-  }
+    Rpt.report(level = 1, "Marking verses which were empty in the raw text ...")
+    with(ParallelRunning(true)) {
+      run {
+        dataCollection.getRootNodes().forEach { rootNode ->
+          asyncable {
+            Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+            val emptyVerses = getEmptyVerses(rootNode)
+            emptyVerses.forEach { annotateVerseWhichWasEmptyInRawText(it) }
+          } // asyncable
+        } // forEach
+      } // run
+    } // parallel
+  } //
 
 
 

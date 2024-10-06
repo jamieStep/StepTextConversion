@@ -6,7 +6,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.convertRepeatingStringToNumber
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.convertNumberToRepeatingString
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionNotReallyAnException
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 
 
 /****************************************************************************/
@@ -623,14 +624,14 @@ class Ref : RefCollectionPart
       return try
       {
         val x = reader.readEmbedded(text, context, resolveAmbiguitiesAs)
-        if (1 != x.size || x[0] !is RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection) throw StepExceptionBase("")
+        if (1 != x.size || x[0] !is RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection) throw StepExceptionNotReallyAnException("")
         val rc = (x[0] as RefFormatHandlerReaderVernacular.EmbeddedReferenceElementRefCollection).rc
-        if (!rc.isSingleReference()) throw StepExceptionBase("")
+        if (!rc.isSingleReference()) throw StepExceptionNotReallyAnException("")
         rc.getLowAsRef()
       }
       catch (e: Exception)
       {
-        throw StepExceptionBase("Cannot parse as single ref: $text")
+        throw StepExceptionWithStackTraceAbandonRun("Cannot parse as single ref: $text")
       }
     }
 
@@ -798,7 +799,7 @@ class Ref : RefCollectionPart
       /************************************************************************/
       if (ambiguous)
       {
-        if (null == resolveAmbiguitiesAs) throw StepExceptionBase("Ambiguous reference: $theText")
+        if (null == resolveAmbiguitiesAs) throw StepExceptionWithStackTraceAbandonRun("Ambiguous reference: $theText")
         if ("v".equals(resolveAmbiguitiesAs!!, ignoreCase = true)) { v = c; c = null }
       }
 
@@ -831,7 +832,7 @@ class Ref : RefCollectionPart
       }
       catch (_: Exception)
       {
-        throw StepExceptionBase("\nCould not read as USX ref: $theText")
+        throw StepExceptionWithStackTraceAbandonRun("Could not read as USX ref: $theText")
       }
     }
 

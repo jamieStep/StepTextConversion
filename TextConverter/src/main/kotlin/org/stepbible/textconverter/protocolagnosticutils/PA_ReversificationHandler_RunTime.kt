@@ -2,12 +2,16 @@
 package org.stepbible.textconverter.protocolagnosticutils
 
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
+import org.stepbible.textconverter.applicationspecificutils.X_FileProtocol
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MarkerHandlerFactory
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodesByAttributeName
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
+import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler_RunTime.addFootnotes
 import org.w3c.dom.Node
 import java.util.*
 
@@ -81,12 +85,27 @@ object PA_ReversificationHandler_RunTime: PA_ReversificationHandler()
   /****************************************************************************/
   override fun process (dataCollection: X_DataCollection)
   {
-    super.process(dataCollection)
-    flagActions()
-    fillInMissingVerses()
-    markFootnoteTargets()
+    /**************************************************************************/
+    super.process(dataCollection) // Loads the relevant reversification data.
+
+
+
+    /**************************************************************************/
+    flagActions() // Records details of which actions do what.
     val callout = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!).get()
-    addFootnotes("Versification Note" ){ _ -> callout }
+    val selectedRowsForFillInMissingVerses = getSelectedRowsByBook(MayCreateEmptyVerse)
+    markFootnoteTargets() // This just updates the footnote data to indicate which verse (source or standard) we attach the footnote to.
+    m_CalloutGenerator = { _ -> callout }
+    m_NotesColumnName = "Versification Note"
+
+    with(ParallelRunning(true)) {
+      run {
+        dataCollection.getRootNodes().forEach { rootNode ->
+          asyncable { PA_ReversificationHandler_RunTimePerBook(m_FileProtocol, m_EmptyVerseHandler, selectedRowsForFillInMissingVerses).processRootNode(rootNode) }
+        } // forEach
+      } // run
+    } // parallel
+
     m_DataCollection.reloadBibleStructureFromRootNodes(false) // We've almost certainly invalidated the structure information by now.
   }
 
@@ -117,76 +136,6 @@ object PA_ReversificationHandler_RunTime: PA_ReversificationHandler()
       .sortedBy { it.first }
   }
 
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                         Missing verse processing                       **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /**
-  * Creates any verses which we identify as missing.  Note that it is always
-  * possible that holes remain even after this, because there's no guarantee
-  * that translators will not have missed out a verse which reversification
-  * does not anticipate.  To cater for this, there is some backstop processing
-  * which fills in any holes which have been left after all of the other
-  * processing is complete.
-  */
-
-  private fun fillInMissingVerses ()
-  {
-    val selectedRowsGroupsByBook = getSelectedRows()
-      .filter { 0 != (it.action.actions and MayCreateEmptyVerse) }
-      .groupBy { it.sourceRef.getB() }
-
-    if (selectedRowsGroupsByBook.isEmpty())
-      return
-
-    Dbg.withProcessingBooks("Filling in any missing verses associated with runtime reversification ...") {
-      selectedRowsGroupsByBook.forEach { bookNoAndRows ->
-        val bookNode = m_DataCollection.getRootNode(bookNoAndRows.key)!!
-        val sidMap: NavigableMap<RefKey, Node> = TreeMap()
-        bookNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid()).forEach { sidMap[m_FileProtocol.getSidAsRefKey(it)] = it }
-        Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(bookNode)) {
-          fillInMissingVerses(bookNode, bookNoAndRows.value, sidMap)
-        }
-      }
-    }
-  }
-
-
-  /****************************************************************************/
-  private fun fillInMissingVerses (rootNode: Node, reversificationRows: List<ReversificationDataRow>, sidMap: NavigableMap<RefKey, Node>)
-  {
-    reversificationRows.forEach { dataRow ->
-      val refKeyForNewVerse = dataRow.standardRefAsRefKey
-      if (refKeyForNewVerse in m_FilledInVerses) return@forEach
-      // $$$ m_FilledInVerses.add(refKeyForNewVerse)
-      if (refKeyForNewVerse in sidMap) return@forEach // Verse already exists.
-      m_EmptyVerseHandler.createEmptyVerseForReversification(sidMap.ceilingEntry(refKeyForNewVerse)!!.value, refKeyForNewVerse)
-    }
-  }
-
-  private val m_FilledInVerses: MutableSet<RefKey> = mutableSetOf()
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                Private                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
 
   /****************************************************************************/
   /* Indicates whether footnotes should be attached to source or standard ref.
@@ -224,6 +173,87 @@ object PA_ReversificationHandler_RunTime: PA_ReversificationHandler()
     Action.PsalmTitle   .actions = NoAction
     Action.RenumberTitle.actions = ReportMapping
     Action.RenumberVerse.actions = ReportMapping
+
+    Action.IfAbsent     .actions = NoAction // No action because these two actions are renamed elsewhere, so we never actually have to process them.
+    Action.IfEmpty      .actions = NoAction
     Action.entries.forEach { if (0 == it.actions) Logger.error("Action " + it.toString() + "has not been assigned an action.")}
   }
+}
+
+
+
+
+
+/******************************************************************************/
+private class PA_ReversificationHandler_RunTimePerBook (val m_FileProtocol: X_FileProtocol,
+                                                        val m_EmptyVerseHandler: PA_EmptyVerseHandler,
+                                                        val selectedRowsForFillInMissingVerses: Map<Int, List<ReversificationDataRow>>)
+{
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                         Missing verse processing                       **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  fun processRootNode (rootNode: Node)
+  {
+    val bookName = m_FileProtocol.getBookAbbreviation(rootNode)
+    Rpt.reportBookAsContinuation(bookName)
+    fillInMissingVerses(rootNode, selectedRowsForFillInMissingVerses)
+    addFootnotes(rootNode)
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Creates any verses which we identify as missing.  Note that it is always
+  * possible that holes remain even after this, because there's no guarantee
+  * that translators will not have missed out a verse which reversification
+  * does not anticipate.  To cater for this, there is some backstop processing
+  * which fills in any holes which have been left after all of the other
+  * processing is complete.
+  */
+
+  private fun fillInMissingVerses (rootNode: Node, selectedRows: Map<Int, List<ReversificationDataRow>>)
+  {
+    val bookNo = m_FileProtocol.getBookNumber(rootNode)
+    val selectedRowsForThisBook = selectedRows[bookNo]
+    if (selectedRowsForThisBook.isNullOrEmpty())
+      return
+
+    val sidMap: NavigableMap<RefKey, Node> = TreeMap()
+    rootNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid()).forEach { sidMap[m_FileProtocol.getSidAsRefKey(it)] = it }
+    fillInMissingVerses(selectedRowsForThisBook, sidMap)
+  }
+
+
+  /****************************************************************************/
+  private fun fillInMissingVerses (reversificationRows: List<ReversificationDataRow>, sidMap: NavigableMap<RefKey, Node>)
+  {
+    reversificationRows.forEach { dataRow ->
+      val refKeyForNewVerse = dataRow.standardRefAsRefKey
+      if (refKeyForNewVerse in m_FilledInVerses) return@forEach
+      m_FilledInVerses.add(refKeyForNewVerse)
+      if (refKeyForNewVerse in sidMap) return@forEach // Verse already exists.
+      m_EmptyVerseHandler.createEmptyVerseForReversification(sidMap.ceilingEntry(refKeyForNewVerse)!!.value, refKeyForNewVerse)
+    }
+  }
+
+  private val m_FilledInVerses: MutableSet<RefKey> = mutableSetOf()
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Private                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
 }

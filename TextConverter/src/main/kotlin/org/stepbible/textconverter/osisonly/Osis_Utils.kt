@@ -3,7 +3,8 @@ package org.stepbible.textconverter.osisonly
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.HashMap
@@ -15,7 +16,7 @@ import kotlin.collections.HashMap
  * @author ARA "Jamie" Jamieson
  */
 
-object Osis_Utils
+object Osis_Utils: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -140,7 +141,7 @@ var header =
 
     /**************************************************************************/
     for (key in vals.keys) header = header.replace("\u0001" + key, vals[key]!!)
-    if (header.contains("\u0001")) throw StepExceptionBase("OSIS header: incomplete substitution.")
+    if (header.contains("\u0001")) throw StepExceptionWithStackTraceAbandonRun("OSIS header: incomplete substitution.")
     header = header.replace("(?m)^[ \\t]*\\r?\\n".toRegex(), "").replace("\n\n", "\n")
     return header
   }

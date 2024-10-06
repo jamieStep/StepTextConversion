@@ -1,9 +1,7 @@
 package org.stepbible.textconverter.applicationspecificutils
 
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.minusAssign
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.set
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
+import org.w3c.dom.Document
 import org.w3c.dom.Node
 
 /******************************************************************************/
@@ -40,7 +38,7 @@ import org.w3c.dom.Node
 * @author ARA "Jamie" Jamieson
 */
 
-object NodeMarker
+object NodeMarker: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -56,9 +54,24 @@ object NodeMarker
   *
   */
 
-  fun deleteAllMarkers ()
+  fun deleteAllMarkers (rootNode: Node)
   {
-    m_MarkedNodes.forEach { node ->
+    rootNode.getAllNodesBelow().forEach { node ->
+      try { Dom.getAttributes(node).keys.filter { it.startsWith("_") }.forEach { Dom.deleteAttribute(node, it) } } catch (_: Exception) {}
+    }
+  }
+
+
+
+  /****************************************************************************/
+  /**
+  * Deletes all the temporary markers.
+  *
+  */
+
+  fun deleteAllMarkers (doc: Document)
+  {
+    doc.getAllNodesBelow().forEach { node ->
       try { Dom.getAttributes(node).keys.filter { it.startsWith("_") }.forEach { Dom.deleteAttribute(node, it) } } catch (_: Exception) {}
     }
   }
@@ -121,14 +134,6 @@ object NodeMarker
   private const val C_MasterForElisionOfLength = "_MasterForElisionOfLength"
 
 
-  /****************************************************************************/
-  fun deleteExcludeFromValidation (node: Node) = deleteTemporaryAttribute(node, C_ExcludeFromValidation)
-  fun getExcludeFromValidation (node: Node) = node[C_ExcludeFromValidation]
-  fun hasExcludeFromValidation (node: Node) = null != getExcludeFromValidation(node)
-  fun setExcludeFromValidation (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_ExcludeFromValidation, value); return this }
-  private const val C_ExcludeFromValidation = "_ExcludeFromValidation"
-
-
  /****************************************************************************/
   fun deleteMoveNoteToStartOfVerse (node: Node) = deleteTemporaryAttribute(node, C_MoveNoteToStartOfVerse)
   fun getMoveNoteToStartOfVerse (node: Node) = node[C_MoveNoteToStartOfVerse]
@@ -146,27 +151,19 @@ object NodeMarker
 
 
   /****************************************************************************/
-  fun deleteStandardRefKey (node: Node) = deleteTemporaryAttribute(node, C_StandardRefKey)
-  fun getStandardRefKey (node: Node) = node[C_StandardRefKey]
-  fun hasStandardRefKey (node: Node) = null != getStandardRefKey(node)
-  fun setStandardRefKey (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_StandardRefKey, value); return this }
-  private const val C_StandardRefKey = "_StandardRefKey"
-
-
-  /****************************************************************************/
-  fun deleteSubverseCoverage (node: Node) = deleteTemporaryAttribute(node, C_SubverseCoverage)
-  fun getSubverseCoverage (node: Node) = node[C_SubverseCoverage]
-  fun hasSubverseCoverage (node: Node) = null != getSubverseCoverage(node)
-  fun setSubverseCoverage (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_SubverseCoverage, value); return this }
-  private const val C_SubverseCoverage = "_SubverseCoverage"
-
-
-  /****************************************************************************/
-  fun deleteTableOwnerType (node: Node) = deleteTemporaryAttribute(node, C_CrossBoundaryMarkup)
+  fun deleteTableOwnerType (node: Node) = deleteTemporaryAttribute(node, C_TableOwnerType)
   fun getTableOwnerType (node: Node) = node[C_TableOwnerType]
   fun hasTableOwnerType (node: Node) = null != getTableOwnerType(node)
   fun setTableOwnerType (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_TableOwnerType, value); return this }
   private const val C_TableOwnerType = "_TableOwnerType"
+
+
+  /****************************************************************************/
+  fun deleteTableRefKeys (node: Node) = deleteTemporaryAttribute(node, C_TableRefKeys)
+  fun getTableRefKeys (node: Node) = node[C_TableRefKeys]
+  fun hasTableRefKeys (node: Node) = null != getTableOwnerType(node)
+  fun setTableRefKeys (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_TableRefKeys, value); return this }
+  private const val C_TableRefKeys = "_TableRefKeys"
 
 
   /****************************************************************************/
@@ -217,7 +214,6 @@ object NodeMarker
   {
     node[attributeName] = attributeValue
     node["_t"] = "y"
-    m_MarkedNodes.add(node)
   }
 
 
@@ -228,8 +224,4 @@ object NodeMarker
     if (!Dom.getAttributes(node).any { it.key.startsWith("_") })
       node -= "_t"
   }
-
-
-  /****************************************************************************/
-  private val m_MarkedNodes: MutableList<Node> = mutableListOf()
 }

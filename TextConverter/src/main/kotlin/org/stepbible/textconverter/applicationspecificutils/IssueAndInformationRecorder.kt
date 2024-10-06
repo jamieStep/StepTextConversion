@@ -10,11 +10,14 @@ import java.util.*
 import kotlin.collections.HashSet
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.contains
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler
 import org.w3c.dom.Node
 
@@ -24,10 +27,15 @@ import org.w3c.dom.Node
  * Handles all kinds of information which we might want to log and / or
  * report immediately and / or accumulate for use in summaries etc.
  *
+ * Parallel running: This rather comes in two parts.  The first part allows
+ * callers to report issues with the text, and needs to be capable of running
+ * multithreaded.  The second part uses this information, and is always
+ * called in a sequential environment.
+ *
  * @author ARA "Jamie" Jamieson
  */
 
-object IssueAndInformationRecorder
+object IssueAndInformationRecorder: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -38,7 +46,7 @@ object IssueAndInformationRecorder
   /****************************************************************************/
 
   /****************************************************************************/
-  fun addChapterWhichWasMissingInTheRawText (text: String)
+  @Synchronized fun addChapterWhichWasMissingInTheRawText (text: String)
   {
      if (null == m_BibleTextStructure.ChaptersMissingFromRawTextLocations) m_BibleTextStructure.ChaptersMissingFromRawTextLocations = mutableListOf()
      m_BibleTextStructure.HasChaptersMissingFromRawText = true
@@ -47,7 +55,7 @@ object IssueAndInformationRecorder
 
 
   /****************************************************************************/
-  fun addEmptyVerseGeneratedForReversification (text: String)
+  @Synchronized fun addEmptyVerseGeneratedForReversification (text: String)
   {
     if (null == m_RunFeatures.GeneratedEmptyVerseLocations) m_RunFeatures.GeneratedEmptyVerseLocations = mutableListOf()
     m_RunFeatures.HasGeneratedEmptyVerses = true
@@ -56,7 +64,7 @@ object IssueAndInformationRecorder
 
 
   /****************************************************************************/
-  fun addGeneratedFootnote (text: String)
+  @Synchronized fun addGeneratedFootnote (text: String)
   {
      if (null == m_RunFeatures.GeneratedFootnoteLocations) m_RunFeatures.GeneratedFootnoteLocations = mutableListOf()
      m_RunFeatures.HasGeneratedFootnotes = true
@@ -81,7 +89,7 @@ object IssueAndInformationRecorder
   *   no automated way of determining whether we need a translation.
   */
 
-  fun addTranslatableTextWhichWasInEnglishWhenVernacularWouldBeBetter (key: String, text: String)
+  @Synchronized fun addTranslatableTextWhichWasInEnglishWhenVernacularWouldBeBetter (key: String, text: String)
   {
     if (ConfigData.isEnglishTranslatableText(key) && "eng" != ConfigData["stepLanguageCode3Char"])
       m_RunFeatures.FootnoteTextWhichWasOutputInEnglishWhenPerhapsATranslationWouldBeBetter[key] = text
@@ -89,16 +97,16 @@ object IssueAndInformationRecorder
 
 
   /****************************************************************************/
-   fun addVerseWhichWasEmptyInTheRawText (text: String)
-   {
-     if (null == m_BibleTextStructure.VersesEmptyInRawTextLocations) m_BibleTextStructure.VersesEmptyInRawTextLocations = mutableListOf()
-     m_BibleTextStructure.HasEmptyVersesInRawText = true
-     m_BibleTextStructure.VersesEmptyInRawTextLocations!!.add(text)
-   }
+  @Synchronized fun addVerseWhichWasEmptyInTheRawText (text: String)
+  {
+    if (null == m_BibleTextStructure.VersesEmptyInRawTextLocations) m_BibleTextStructure.VersesEmptyInRawTextLocations = mutableListOf()
+    m_BibleTextStructure.HasEmptyVersesInRawText = true
+    m_BibleTextStructure.VersesEmptyInRawTextLocations!!.add(text)
+  }
 
 
   /****************************************************************************/
-  fun addVerseWhichWasMissingInTheRawText (text: String)
+  @Synchronized fun addVerseWhichWasMissingInTheRawText (text: String)
   {
      if (null == m_BibleTextStructure.VersesMissingFromRawTextLocations) m_BibleTextStructure.VersesMissingFromRawTextLocations = mutableListOf()
      m_BibleTextStructure.HasVersesMissingFromRawText = true
@@ -110,7 +118,7 @@ object IssueAndInformationRecorder
   /* Definite issues which may usefully be reported and / or stored within the
      TextFeatures information, but which don't turn up in config files etc. */
 
-  fun crossVerseBoundaryMarkup (location: RefKey, forceError: Boolean = false, reassurance: String? = null)
+  @Synchronized fun crossVerseBoundaryMarkup (location: RefKey, forceError: Boolean = false, reassurance: String? = null)
   {
     val locationAsString = Ref.rd(location).toString()
     report("Cross-verse-boundary markup at ${locationAsString}.", forceError, "LogWarning,Report", location, null, reassurance)
@@ -139,7 +147,7 @@ object IssueAndInformationRecorder
   /* Information which may be reported and which also turns up in the
      features information, but is not of interest for the config file. */
 
-  fun elidedVerse (locations: List<RefKey>, text: String)
+  @Synchronized fun elidedVerse (locations: List<RefKey>, text: String)
   {
     report("Elided verse: $text", false, "LogInfo", locations.first(), m_ElidedVerses, null)
     m_BibleTextStructure.HasElisions = true
@@ -163,18 +171,18 @@ object IssueAndInformationRecorder
 
 
   /****************************************************************************/
-  fun setHasAcrosticDivTags ()                                     { m_BibleTextStructure.HasAcrosticDivTags = true}
-  fun setHasAcrosticSpanTags ()                                    { m_BibleTextStructure.HasAcrosticSpanTags = true}
-  fun setChangedFootnoteCalloutsToHouseStyle ()                    { m_RunFeatures.ChangedFootnoteCalloutsToHouseStyle = true }
-  fun setConversionTimeReversification ()                          { m_RunFeatures.ReversificationType = "Conversion time" }
-  fun setRuntimeReversification ()                                 { m_RunFeatures.ReversificationType = "Run time" }
-  fun setConvertedCrossReferencesToCanonicalForm ()                { m_RunFeatures.ConvertedCrossReferencesToCanonicalForm = true }
-  fun setForcedSelfClosingParas ()                                 { m_RunFeatures.ForcedSelfClosingParas = true }
-  fun setReformattedTrailingCanonicalTitles ()                     { m_RunFeatures.ReformattedTrailingCanonicalTitles = true }
-  fun setSplitCrossVerseBoundarySpanTypeTags ()                    { m_RunFeatures.SplitCrossVerseBoundarySpanTypeTags = true }
-  fun setStrongs ()                                                { m_RunFeatures.ModifiedStrongsReferences = true }
+  @Synchronized fun setHasAcrosticDivTags ()                                     { m_BibleTextStructure.HasAcrosticDivTags = true}
+  @Synchronized fun setHasAcrosticSpanTags ()                                    { m_BibleTextStructure.HasAcrosticSpanTags = true}
+  @Synchronized fun setChangedFootnoteCalloutsToHouseStyle ()                    { m_RunFeatures.ChangedFootnoteCalloutsToHouseStyle = true }
+  @Synchronized fun setConversionTimeReversification ()                          { m_RunFeatures.ReversificationType = "Conversion time" }
+  @Synchronized fun setRuntimeReversification ()                                 { m_RunFeatures.ReversificationType = "Run time" }
+  @Synchronized fun setConvertedCrossReferencesToCanonicalForm ()                { m_RunFeatures.ConvertedCrossReferencesToCanonicalForm = true }
+  @Synchronized fun setForcedSelfClosingParas ()                                 { m_RunFeatures.ForcedSelfClosingParas = true }
+  @Synchronized fun setReformattedTrailingCanonicalTitles ()                     { m_RunFeatures.ReformattedTrailingCanonicalTitles = true }
+  @Synchronized fun setSplitCrossVerseBoundarySpanTypeTags ()                    { m_RunFeatures.SplitCrossVerseBoundarySpanTypeTags = true }
+  @Synchronized fun setStrongs ()                                                { m_RunFeatures.ModifiedStrongsReferences = true }
 
-  fun setHasMultiVerseParagraphs () { TODO() } // Needs to turn up in Sword config.
+  @Synchronized fun setHasMultiVerseParagraphs () { TODO() } // Needs to turn up in Sword config.
 
 
 
@@ -200,7 +208,7 @@ object IssueAndInformationRecorder
          "LogInfo"    -> Logger.info   (location, text)
          "LogWarning" -> Logger.warning(location, text)
          "LogError"   -> Logger.error  (location, text)
-         "Report"     -> Dbg.reportProgress(Ref.rd(location).toString() + ": " + text)
+         "Report"     -> Rpt.warning(Ref.rd(location).toString() + ": " + text)
       }
 
       store?.add(Ref.rd(location).toString() +":" + text)
@@ -340,6 +348,8 @@ object IssueAndInformationRecorder
 
 
   private var m_CurrentVerseSid = ""
+
+
 
 
 
@@ -700,7 +710,7 @@ object IssueAndInformationRecorder
       }
       catch (e:Exception)
       {
-        throw StepExceptionBase(e)
+        throw StepExceptionWithStackTraceAbandonRun(e)
       }
     }
 

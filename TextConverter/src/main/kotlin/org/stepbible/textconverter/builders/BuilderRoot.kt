@@ -123,16 +123,7 @@ abstract class BuilderRoot
   * derived class name.
   */
 
-  fun process ()
-  {
-    try {
-      Dbg.pushActiveProcessingIds(banner()) // Save name of processor for use in error and progress messages.
-      doIt()
-    }
-    finally {
-      Dbg.popActiveProcessingIds()
-    }
-  }
+  fun process () = doIt()
 
 
 

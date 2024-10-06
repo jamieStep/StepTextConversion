@@ -4,13 +4,11 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Config
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.contains
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodesByName
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.w3c.dom.Node
 
 
@@ -37,36 +35,55 @@ object PA_FinalValidator: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    Dbg.withProcessingBooks("Final health check ...") {
-      dataCollection.getRootNodes().forEach { rootNode ->
-        Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
-          checkForCrossBoundaryMarkup(rootNode)
-          checkForSubversesAndMissingVerses(rootNode)
-          checkForNotesOutsideOfVerses(rootNode)
-        }
-      }
-    }
+    Rpt.reportWithContinuation(level = 1, "Final health check ...") {
+      with(ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            asyncable { PA_FinalValidatorPerBook(m_FileProtocol).processRootNode(rootNode) }
+          } // forEach
+        } // run
+      } // parallel
+    } // report
+  } // fun
+} // object
+
+
+
+
+/******************************************************************************/
+private class PA_FinalValidatorPerBook (val m_FileProtocol: X_FileProtocol)
+{
+  /****************************************************************************/
+  fun processRootNode (rootNode: Node)
+  {
+    /**************************************************************************/
+    Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+    checkForCrossBoundaryMarkup(rootNode)
+    checkForSubversesAndMissingVerses(rootNode)
+    checkForNotesOutsideOfVerses(rootNode)
+
+
+
+    /**************************************************************************/
+    fun outOfOrderError  (refKey: RefKey, text: String) = Logger.error   (refKey, text)
+    fun outOfOrderWarning (refKey: RefKey, text: String) = Logger.warning(refKey, text)
+    val outOfOrderReporter = if (ConfigData.getAsBoolean("stepValidationReportOutOfOrderAsError", "y")) ::outOfOrderError else ::outOfOrderWarning
+
+
+
+    /**************************************************************************/
+    m_Subverses.forEach { Logger.error( it.toRefKey(), "Subverse.") }
+    m_MismatchedEidsAndSids.forEach { Logger.error( it.getFirstAsRefKey(),"Mismatched sid/eid near here.") }
+    m_MissingVerses.forEach { outOfOrderReporter(it.toRefKey(), "Missing / out of order verse.") }
+    m_MissingSubverses.forEach { outOfOrderReporter(it.toRefKey(), "Missing / out of order subverse.") }
   }
 
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Private                                  **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
 
   /****************************************************************************/
   private fun checkForCrossBoundaryMarkup (rootNode: Node)
   {
     fun checkChapter (chapter: Node)
     {
-//      if (Dbg.d(Dom.toString(chapter), "<chapter osisID='Ps.72'>"))
-//        Dbg.d(rootNode.ownerDocument)
       val verses = chapter.findNodesByName("verse")
       for (i in verses.indices step 2)
         if (!Dom.isSiblingOf(verses[i], verses[i + 1]))
@@ -121,20 +138,19 @@ object PA_FinalValidator: PA()
       }
     }
 
-    //problems.forEach { Logger.error(it, "Notes outside of verse at this location or nearby.")} $$$$$$$$$$$$$$$$$$$$
+    //problems.forEach { Logger.error(it, "Notes outside of verse at this location or nearby.")}
   }
 
 
   /****************************************************************************/
   private fun checkForSubversesAndMissingVerses (rootNode: Node)
   {
-    val outOfOrderReporter = if (ConfigData.getAsBoolean("stepValidationReportOutOfOrderAsError", "y")) PA_FinalValidator::outOfOrderError else PA_FinalValidator::outOfOrderWarning
-    Dom.findNodesByName(rootNode, m_FileProtocol.tagName_chapter(), false).forEach { checkForSubversesAndMissingVerses_1(it, outOfOrderReporter) }
+    Dom.findNodesByName(rootNode, m_FileProtocol.tagName_chapter(), false).forEach { checkForSubversesAndMissingVerses_1(it) }
   }
 
 
   /****************************************************************************/
-  private fun checkForSubversesAndMissingVerses_1 (chapterNode: Node, outOfOrderReporter: (RefKey, String) -> Unit)
+  private fun checkForSubversesAndMissingVerses_1 (chapterNode: Node)
   {
     /**************************************************************************/
     //Dbg.d(chapterNode.ownerDocument)
@@ -215,20 +231,7 @@ object PA_FinalValidator: PA()
             expectedSubverse = 1
         } // forEach ref
     } // forEach verse tag
-
-
-
-    /**************************************************************************/
-    m_Subverses.forEach { Logger.error( it.toRefKey(), "Subverse.") }
-    m_MismatchedEidsAndSids.forEach { Logger.error( it.getFirstAsRefKey(),"Mismatched sid/eid near here.") }
-    m_MissingVerses.forEach { outOfOrderReporter(it.toRefKey(), "Missing / out of order verse.") }
-    m_MissingSubverses.forEach { outOfOrderReporter(it.toRefKey(), "Missing / out of order subverse.") }
   }
-
-
-  /****************************************************************************/
-  private fun outOfOrderError  (refKey: RefKey, text: String) = Logger.error   (refKey, text)
-  private fun outOfOrderWarning (refKey: RefKey, text: String) = Logger.warning(refKey, text)
 
 
   /****************************************************************************/

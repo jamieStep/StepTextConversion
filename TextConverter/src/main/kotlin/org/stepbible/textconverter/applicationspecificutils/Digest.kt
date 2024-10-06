@@ -3,7 +3,9 @@ package org.stepbible.textconverter.applicationspecificutils
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import java.io.File
 import java.nio.file.Paths
@@ -21,7 +23,7 @@ import java.nio.file.Paths
  * @author ARA "Jamie" Jamieson
  */
 
-object Digest
+object Digest: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -42,7 +44,7 @@ object Digest
     /**************************************************************************/
     if (!StepFileUtils.fileOrFolderExists(FileLocations.getSwordConfigFilePath()))
     {
-      Dbg.reportProgress("Previous Sword configuration file does not exist, so not able to verify these are the same inputs as before.")
+      Rpt.report(level = 1, "Previous Sword configuration file does not exist, so not able to verify these are the same inputs as before.")
       return
     }
 
@@ -52,7 +54,7 @@ object Digest
     val parsedData = parseSwordConfigFile()
     if (null == parsedData)
     {
-      Dbg.reportProgress("*** Previous Sword configuration does not contain digests etc for input files.")
+      Rpt.report(level = 1, "*** Previous Sword configuration does not contain digests etc for input files.")
       return
     }
 
@@ -62,7 +64,7 @@ object Digest
     val digests = getDigests()
     if (m_Input != parsedData.first.uppercase())
     {
-      Dbg.reportProgress("*** Input source has changed -- was ${parsedData.first}, is now $m_Input.")
+      Rpt.report(level = 1, "*** Input source has changed -- was ${parsedData.first}, is now $m_Input.")
       return
     }
 
@@ -91,9 +93,9 @@ object Digest
 
     /**************************************************************************/
     if (msgBits.isEmpty())
-      Dbg.reportProgress("The present inputs were indeed used to generate the existing version of the module.")
+      Rpt.report(level = 1, "The present inputs were indeed used to generate the existing version of the module.")
     else
-      Dbg.reportProgress(msgBits.joinToString("\n"))
+      Rpt.report(level = 1, msgBits.joinToString("\n"))
   }
 
 

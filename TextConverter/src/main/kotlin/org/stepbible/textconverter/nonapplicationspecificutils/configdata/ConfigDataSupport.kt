@@ -3,6 +3,8 @@ package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import kotlin.system.exitProcess
@@ -15,7 +17,7 @@ import kotlin.system.exitProcess
  * @author ARA "Jamie" Jamieson
  */
 
-object ConfigDataSupport
+object ConfigDataSupport: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -53,7 +55,7 @@ object ConfigDataSupport
       .forEach { hadError = true; val text = "Parameter ${it.key} must be defined."; Logger.error(text); Dbg.d(text) }
 
     if (hadError)
-      throw StepExceptionBase("Undefined or empty mandatory configuration parameters.")
+      throw StepExceptionWithStackTraceAbandonRun("Undefined or empty mandatory configuration parameters.")
   }
 
 
@@ -288,7 +290,7 @@ object ConfigDataSupport
   private enum class ChangeWhen (val commonlyUsed: Boolean) { PerRunIfNecessary(true), PerRunForDebugging(false), PerTextAlways(true), PerTextIfAvailable(true), PerTextIfNecessary(true), PerTextIfWarranted(true), PerTextIfDesired(true), IfYouOptToUseThis(false), PerhapsPerLanguage(false), IfComputingEnvironmentChanges(false), IfCrosswireInternalsChange(false), IfOutsideWorldChanges(false), ProbablyNever(false), Calculated(false), NA(false),  }
   private enum class HowSet { Calculated, UserSpecified, UserSpecifiedOrCalculated, NA }
   private enum class Required { Calculated, MandatoryAlways, MandatoryAlwaysMayBeEmpty, MandatorySometimes, Optional, OptionalOrCalculated, NotUsed, NA }
-  private enum class WhereSet { CommandLine, EnvironmentVariable, File, FileOrCalculated, Calculated, NA }
+  private enum class WhereSet { CommandLine, EnvironmentVariable, File, FileOrCalculated, Calculated, Anywhere, NA }
 
 
   /****************************************************************************/

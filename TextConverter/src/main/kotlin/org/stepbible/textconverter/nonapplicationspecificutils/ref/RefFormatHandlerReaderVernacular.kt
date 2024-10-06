@@ -5,9 +5,10 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.LocaleHandler
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.convertRepeatingStringToNumber
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.replaceRegexOccurrences
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.splitAndRetainDelimiters
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.text.NumberFormat
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
@@ -76,7 +77,7 @@ import kotlin.collections.HashSet
  * @author ARA "Jamie" Jamieson
  */
 
-object RefFormatHandlerReaderVernacular
+object RefFormatHandlerReaderVernacular: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -911,7 +912,7 @@ object RefFormatHandlerReaderVernacular
     if (elts[ixFirstRef].isAmbiguous())
     {
       if (null == preferenceForFirstRef)
-        throw StepExceptionBase("First reference in $text is ambiguous and no disambiguating parameter has been supplied.")
+        throw StepExceptionWithStackTraceAbandonRun("First reference in $text is ambiguous and no disambiguating parameter has been supplied.")
 
       val options = preferenceForFirstRef.split(".")
       run findRefType@ {
@@ -925,7 +926,7 @@ object RefFormatHandlerReaderVernacular
       }
 
       if (elts[ixFirstRef].isAmbiguous()) // Failed to resolve matters.
-        throw StepExceptionBase("First reference in $text is ambiguous and no disambiguating parameter $preferenceForFirstRef doesn't help resolve things.")
+        throw StepExceptionWithStackTraceAbandonRun("First reference in $text is ambiguous and no disambiguating parameter $preferenceForFirstRef doesn't help resolve things.")
     }
 
 
@@ -963,7 +964,7 @@ object RefFormatHandlerReaderVernacular
           {
             val ix = it.possibleRefTypes.indexOfFirst { it.first().lowercase() == prevRef.possibleRefTypes[0].last().lowercase() }
             if (-1 == ix)
-              throw StepExceptionBase("!!!")
+              throw StepExceptionWithStackTraceAbandonRun("!!!")
             else
             {
               it.possibleRefTypes = mutableListOf(it.possibleRefTypes[ix])
@@ -1028,9 +1029,9 @@ object RefFormatHandlerReaderVernacular
       val eltLow  = elts[ix]     as EmbeddedReferenceElementRefCollectionPart
       val eltHigh = elts[ix + 2] as EmbeddedReferenceElementRefCollectionPart
       if (peckingOrder(eltHigh.possibleRefTypes[0].first()) < peckingOrder(eltLow.possibleRefTypes[0].first()))
-        throw StepExceptionBase("Bad vernacular reference range (high end is overspecified): $text.")
+        throw StepExceptionWithStackTraceAbandonRun("Bad vernacular reference range (high end is overspecified): $text.")
       if (eltHigh.possibleRefTypes[0].contains("b", ignoreCase = true))
-        throw StepExceptionBase("Bad vernacular reference range (high end contains book): $text.")
+        throw StepExceptionWithStackTraceAbandonRun("Bad vernacular reference range (high end contains book): $text.")
 
 
 

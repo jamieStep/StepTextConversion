@@ -5,10 +5,10 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
-import org.stepbible.textconverter.usxinputonly.Usx_BookAndChapterConverter
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
@@ -118,6 +118,58 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
+  * Combines the place-holder document with the root nodes to create a new
+  * document.
+  *
+  * @return New document.
+  */
+
+  fun convertToDoc (): Document
+  {
+    val doc = Dom.cloneDocument(m_PlaceHolderDocument)
+    m_FileProtocol.getBookNodes(doc).forEach { targetBookNode ->
+      val bookNo = m_FileProtocol.getBookNumber(targetBookNode)
+      val rootNode = m_BookNumberToRootNode[bookNo]
+      val replacementTargetBookNode = doc.importNode(rootNode, true)
+      Dom.insertNodeBefore(targetBookNode, replacementTargetBookNode)
+      Dom.deleteChildren(targetBookNode)
+    }
+
+    return doc
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Populates the structure taking a single document as input.
+  *
+  * @param doc
+  */
+
+  fun loadFromDoc (doc: Document)
+  {
+    loadFromDocs(listOf(doc))
+    createPlaceHolderDocument(doc)
+  }
+
+
+  /****************************************************************************/
+  /* This creates a copy of the original document.  The book nodes in this
+     document are actually meaningless -- I merely want them to _exist_ because
+     they mark the places within the overall document where the books are
+     situated.  I will replace them later by the revised versions which the
+     processing creates. */
+
+  private fun createPlaceHolderDocument (docIn: Document)
+  {
+    m_PlaceHolderDocument = Dom.cloneDocument(docIn)
+  }
+
+  private lateinit var m_PlaceHolderDocument: Document
+
+
+  /****************************************************************************/
+  /**
    * Loads details from a collection of one or more documents.
    *
    * @param docs
@@ -134,15 +186,33 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
+  * Populates the root nodes collection as a copy of the data in another
+  * collection.
+  *
+  * @param otherCollection
+  */
+
+  fun loadFromRootNodes (otherCollection: X_DataCollection)
+  {
+    otherCollection.getRootNodes().forEach {
+      m_BookNumberToRootNode[otherCollection.m_FileProtocol.getBookNumber(it)] = it.cloneNode(true)
+    }
+
+    m_PlaceHolderDocument = Dom.cloneDocument(otherCollection.m_PlaceHolderDocument)
+  }
+
+
+  /****************************************************************************/
+  /**
   * Returns the BibleStructure data, first loading it if necessary.
   *
   * @return BibleStructure
   */
 
-  fun getBibleStructure (): BibleStructure
+  fun getBibleStructure (wantCanonicalTextSize: Boolean = false): BibleStructure
   {
-    if (!m_BibleStructureIsValid)
-      reloadBibleStructureFromRootNodes(false)
+    if (!m_BibleStructureIsValid || (wantCanonicalTextSize && !m_BibleStructure.hasCanonicalTextSize()))
+      reloadBibleStructureFromRootNodes(wantCanonicalTextSize)
    return m_BibleStructure
   }
 
@@ -159,7 +229,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   fun loadFromText (text: String, preprocessor: ((String) -> String))
   {
-    Dbg.reportProgress("Loading data from XML text.")
+    Rpt.report(level = 1, "Loading data from XML text.")
 
     withThisBibleStructure { // Don't clear the text here, in case it's actually coming from the present class.
       restoreBookNumberToRootNodeMappings()
@@ -227,7 +297,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   fun findPredecessorBook (bookNo: Int): Int
   {
     val res = m_BookNumberToRootNode.keys.reversed().find { it < bookNo && null != getRootNode(it) }
-    return res ?: throw StepExceptionBase("findPredecessorBook failed.")
+    return res ?: throw StepExceptionWithStackTraceAbandonRun("findPredecessorBook failed.")
   }
 
 
@@ -253,9 +323,9 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   {
     when (getNumberOfDocuments())
     {
-       0    -> throw StepExceptionBase("getDocument called where no document is available.")
+       0    -> throw StepExceptionWithStackTraceAbandonRun("getDocument called where no document is available.")
        1    -> return m_BookNumberToRootNode.values.first { null != it }!!.ownerDocument
-       else -> throw StepExceptionBase("getDocument called where more than one document is available.")
+       else -> throw StepExceptionWithStackTraceAbandonRun("getDocument called where more than one document is available.")
     }
   }
 
@@ -284,7 +354,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
     val nBooks = m_BookNumberToRootNode.values.filterNotNull().count()
     val docs = IdentityHashMap<Any, Int>(); m_BookNumberToRootNode.values.filterNotNull().forEach { docs[it.ownerDocument] = 0 }
     val nDocs = docs.count()
-    if (nBooks != nDocs && 1 != nDocs) throw StepExceptionBase("USX input has neither all books in a single file nor a separate file per book.")
+    if (nBooks != nDocs && 1 != nDocs) throw StepExceptionWithStackTraceAbandonRun("USX input has neither all books in a single file nor a separate file per book.")
     return nDocs
   }
 
@@ -358,16 +428,17 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
     clearBibleStructure()
     withThisBibleStructure {
       RefBase.setBibleStructure(m_BibleStructure)
-      Dbg.withProcessingBooks("Determining Bible structure ...") {
-        m_BookNumberToRootNode.filter { null != it.value }.forEach {
-          Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(it.value!!)) {
-            m_BibleStructure.addFromBookRootNode("", it.value!!, wantCanonicalTextSize = wantCanonicalTextSize)
-          }
-        }
-      }
+      Rpt.reportWithContinuation(level = 1, "Determining Bible structure ...") {
+        val rootNodes = m_BookNumberToRootNode.values.filterNotNull()
+        m_BibleStructure.addFromRootNodes("", rootNodes, wantCanonicalTextSize)
+      } // reportWithContinuation
+
       m_BibleStructureIsValid = true
-    }
-  }
+    } // withThisBibleStructure
+
+
+    //BibleBookNamesUsx.getAbbreviatedNameList().forEach { println(it + m_BibleStructure.bookExists(BibleBookNamesUsx.abbreviatedNameToNumber(it)))}
+  } // fun
 
 
   /****************************************************************************/
@@ -438,25 +509,45 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
    */
 
   protected open fun filterOutUnwantedBooksAndPopulateRootNodesStructure (docIn: Document): List<Int>
-   {
-     val docOut = Dom.createDocument()
-     val importedNode = docOut.importNode(docIn.documentElement, true)
-     docOut.appendChild(importedNode)
+  {
+    /**************************************************************************/
+    val bookNodes = m_FileProtocol.getBookNodes(docIn)
+    val res = mutableListOf<Int>()
 
-     val res: MutableList<Int> = mutableListOf()
-     val nodeList = m_FileProtocol.getBookNodes(docOut)
-     Dbg.withProcessingBooks("Loading data ...") {
-       nodeList.forEach {
-         Dbg.withProcessingBook(it["osisID"]!!) {
-           val bookNo = BibleBookNamesOsis.abbreviatedNameToNumber(it["osisID"]!!)
-           res.add(bookNo)
-           setRootNode(bookNo, it)
-         }
-       }
-     }
 
-     return res
-   }
+
+    /**************************************************************************/
+    fun load ()
+    {
+      bookNodes.forEach { bookNode ->
+        Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(bookNode))
+        val docOut = Dom.createDocument()
+        val importedNode = docOut.importNode(bookNode, true)
+        val rootNode = docOut.appendChild(importedNode)
+        val bookNo = m_FileProtocol.getBookNumber(rootNode)
+        res.add(bookNo)
+        synchronized(m_BookNumberToRootNode_Lock) { m_BookNumberToRootNode[bookNo] = rootNode }
+      } // forEach
+    } // fun
+
+
+
+    /**************************************************************************/
+    /* This excessively fiddly bit has no real functional purpose -- it just
+       makes the progress reports look better.  If we're being called with a
+       file containing a single book node, chances are we're going to be called
+       with loads of other files, and ideally I'd avoid having the individual
+       progress indicators for each book coming out on a separate line. */
+
+    if (1 == bookNodes.size)
+      load()
+    else
+      Rpt.reportWithContinuation(level = 1, "Loading data ...") {
+        load()
+      } // reportWithContinuation
+
+    return res
+  }
 
 
 
@@ -549,6 +640,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
 
   /****************************************************************************/
+  val m_BookNumberToRootNode_Lock = Any()
   protected var m_BookNumberToRootNode: SortedMap<Int, Node?> = TreeMap()
   protected val m_FileProtocol = fileProtocol
 
@@ -569,72 +661,6 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
 /******************************************************************************/
 class Osis_DataCollection: X_DataCollection(Osis_FileProtocol)
-{
-  /****************************************************************************/
-  override fun filterOutUnwantedBooksAndPopulateRootNodesStructure (docIn: Document): List<Int>
-  {
-    //Dbg.d(docIn)
-    val docOut = Dom.createDocument()
-    val importedNode = docOut.importNode(docIn.documentElement, true)
-    docOut.appendChild(importedNode)
-
-    //--------------------------------------------------
-    //val nodeList = Dom.findNodesByName(docIn, "div").filter { "book" == it["type"] }.toSet() union Dom.findNodesByName(docOut, "book")
-    //Dbg.d(docIn, "in.xml")
-    //Dbg.d(docOut, "out.xml")
-    //val nodeListIn = Dom.findNodesByAttributeValue(docIn, "div", "type", "book")
-    //val nodeListOut = Dom.findNodesByAttributeValue(docOut, "div", "type", "book")
-    //--------------------------------------------------
-
-
-    val res: MutableList<Int> = mutableListOf()
-    val nodeList = Dom.findNodesByAttributeValue(docOut, "div", "type", "book").toSet() union Dom.findNodesByName(docOut, "book") // Worryingly, not sure why I need the above instead.
-    nodeList.forEach {
-      if (Dbg.wantToProcessBookByAbbreviatedName(it["osisID"]!!))
-      {
-        val bookNo = BibleBookNamesOsis.abbreviatedNameToNumber(it["osisID"]!!)
-        res.add(bookNo)
-        setRootNode(bookNo, it)
-      }
-      else
-        Dom.deleteNode(it)
-    }
-
-    return res
-  }
-}
-
-
-
-
-
-/******************************************************************************/
 class Usx_DataCollection: X_DataCollection(Usx_FileProtocol)
-{
-  /****************************************************************************/
-  override fun filterOutUnwantedBooksAndPopulateRootNodesStructure (docIn: Document): List<Int>
-  {
-    val docOut = Dom.createDocument()
-    val importedNode = docOut.importNode(docIn.documentElement, true)
-    docOut.appendChild(importedNode)
-//    Dbg.d(docIn)
-//    Dbg.d(docOut)
 
-    val res: MutableList<Int> = mutableListOf()
-
-    Usx_BookAndChapterConverter.process(docOut) // The material may need restructuring so that books and chapters are enclosing nodes.
-    docOut.findNodesByName("book").forEach {
-      if (Dbg.wantToProcessBookByAbbreviatedName(it["code"]!!))
-      {
-        val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(it["code"]!!)
-        res.add(bookNo)
-        m_BookNumberToRootNode[bookNo] = it
-      }
-      else
-        Dom.deleteNode(it)
-    }
-
-    return res
-  }
-}
 

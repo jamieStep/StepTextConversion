@@ -4,7 +4,8 @@ import org.apache.commons.cli.*
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.getJarFileName
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.util.*
 import kotlin.system.exitProcess
 
@@ -15,7 +16,7 @@ import kotlin.system.exitProcess
  * @author ARA "Jamie" Jamieson
  */
 
-object CommandLineProcessor
+object CommandLineProcessor: ObjectInterface
 {
     /****************************************************************************/
     /****************************************************************************/
@@ -155,7 +156,7 @@ object CommandLineProcessor
         {
             val found = options.any { res.equals(it, ignoreCase = true) }
             if (!found)
-              throw StepExceptionBase("Invalid value for command-line parameter $optionName: $res")
+              throw StepExceptionWithStackTraceAbandonRun("Invalid value for command-line parameter $optionName: $res")
             else
             {
               return if (true == m_CommandLineOptions[optionName]?.forceLc)

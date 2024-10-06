@@ -2,7 +2,7 @@ package org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous
 
 import net.sf.saxon.lib.NamespaceConstant
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.*
 import java.io.*
 import java.nio.file.Files
@@ -37,7 +37,7 @@ import kotlin.collections.HashSet
  * @author ARA "Jamie" Jamieson
  */
 
-object Dom
+object Dom: ObjectInterface
 {
     /****************************************************************************/
     /****************************************************************************/
@@ -258,7 +258,7 @@ object Dom
     }
     catch (e:Exception)
     {
-      throw StepExceptionBase(e.message + "\n\n" + stylesheet)
+      throw StepExceptionWithStackTraceAbandonRun(e.message + "\n\n" + stylesheet)
     }
   }
 
@@ -295,58 +295,26 @@ object Dom
     }
     catch (e:Exception)
     {
-      throw StepExceptionBase(e.message + "\n\n" + stylesheet)
+      throw StepExceptionWithStackTraceAbandonRun(e.message + "\n\n" + stylesheet)
     }
   }
 
 
   /****************************************************************************/
   /**
-  * Creates and returns an empty document.
+  * Clones an enture DOM.
   *
-  * @return Document.
+  * @param doc DOM to be cloned.
+  * @return Cloned doc.
   */
 
-  fun createDocument (): Document
+  fun cloneDocument (doc: Document): Document
   {
-    System.setProperty("javax.xml.xpath.XPathFactory:" + NamespaceConstant.OBJECT_MODEL_SAXON, "net.sf.saxon.xpath.XPathFactoryImpl")
-    val factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
-    factory.isNamespaceAware = true // See comments above.
-    factory.isIgnoringComments = false
-    factory.isIgnoringElementContentWhitespace = false
-    val builder: DocumentBuilder = factory.newDocumentBuilder()
-    return builder.newDocument()
+    val res = createDocument()
+    val n = res.importNode(doc.documentElement, true)
+    res.appendChild(n)
+    return res
   }
-
-
-    /****************************************************************************/
-    /**
-     * Generates a collection of all the nodes below a given node, depth first.
-     *
-     * @param startNode Starting node.
-     * @return List of nodes.
-     */
-
-    fun getAllNodesBelow (startNode: Node): List<Node>
-    {
-        val res: MutableList<Node> = ArrayList()
-        //if ("#document" != getNodeName(startNode)) res.add(startNode)
-        getAllNodesBelow(res, startNode)
-        return res
-    }
-
-
-    /****************************************************************************/
-    /**
-     * Does what it says on the tin.
-     *
-     * @param node Node.
-     */
-
-    fun convertToSelfClosingNode (node: Node)
-    {
-        promoteChildren(node)
-    }
 
 
     /****************************************************************************/
@@ -399,6 +367,19 @@ object Dom
 
     /****************************************************************************/
     /**
+     * Does what it says on the tin.
+     *
+     * @param node Node.
+     */
+
+    fun convertToSelfClosingNode (node: Node)
+    {
+        promoteChildren(node)
+    }
+
+
+    /****************************************************************************/
+    /**
      * Copies attributes from one node to another.
      *
      * @param target Target node.
@@ -426,6 +407,25 @@ object Dom
     {
         return doc.createComment(content)
     }
+
+
+  /****************************************************************************/
+  /**
+  * Creates and returns an empty document.
+  *
+  * @return Document.
+  */
+
+  fun createDocument (): Document
+  {
+    System.setProperty("javax.xml.xpath.XPathFactory:" + NamespaceConstant.OBJECT_MODEL_SAXON, "net.sf.saxon.xpath.XPathFactoryImpl")
+    val factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()
+    factory.isNamespaceAware = true // See comments above.
+    factory.isIgnoringComments = false
+    factory.isIgnoringElementContentWhitespace = false
+    val builder: DocumentBuilder = factory.newDocumentBuilder()
+    return builder.newDocument()
+  }
 
 
     /****************************************************************************/
@@ -493,7 +493,7 @@ object Dom
      * @param doc Owning document.
      * @param xml XML.
      * @return Node.
-     * @throws StepExceptionBase For example if the XML is invalid.
+     * @throws StepExceptionWithStackTraceAbandonRun For example if the XML is invalid.
      */
 
     fun createNode (doc: Document, xml: String): Node
@@ -509,7 +509,7 @@ object Dom
         }
         catch (e: Exception)
         {
-            throw StepExceptionBase(e)
+            throw StepExceptionWithStackTraceAbandonRun(e)
         }
     }
 
@@ -788,7 +788,7 @@ object Dom
         }
         catch (e: Exception)
         {
-            throw StepExceptionBase(e)
+            throw StepExceptionWithStackTraceAbandonRun(e)
         }
     }
 
@@ -1027,7 +1027,7 @@ object Dom
         }
         catch (e: Exception)
         {
-          throw StepExceptionBase(e)
+          throw StepExceptionWithStackTraceAbandonRun(e)
         }
 
         return res
@@ -1074,13 +1074,13 @@ object Dom
     {
         return try
         {
-            val xpath = m_xPathFactory.newXPath()
+            val xpath = makeXPathFactory().newXPath()
             val expr = xpath.compile(".//*[matches(name(), '$nodeNameRegex') and matches(@$attributeName, '$attributeValueRegex')]")
             toListOfNodes(expr.evaluate(parent, XPathConstants.NODESET) as NodeList)
         }
         catch (e: Exception)
         {
-            throw StepExceptionBase(e)
+            throw StepExceptionWithStackTraceAbandonRun(e)
         }
     }
 
@@ -1124,6 +1124,23 @@ object Dom
         if ("#text" == getNodeName(node)) return ArrayList()
         val res = toListOfNodes((node as Element).getElementsByTagName(nodeName)).toMutableList()
         if (includeParent && nodeName == getNodeName(node)) res.add(0, node)
+        return res
+    }
+
+
+    /****************************************************************************/
+    /**
+     * Generates a collection of all the nodes below a given node, depth first.
+     *
+     * @param startNode Starting node.
+     * @return List of nodes.
+     */
+
+    fun getAllNodesBelow (startNode: Node): List<Node>
+    {
+        val res: MutableList<Node> = ArrayList()
+        //if ("#document" != getNodeName(startNode)) res.add(startNode)
+        getAllNodesBelow(res, startNode)
         return res
     }
 
@@ -1379,7 +1396,7 @@ object Dom
             if (parents.contains(p)) return p
         }
 
-        throw StepExceptionBase("Nodes did not have common ancestor")
+        throw StepExceptionWithStackTraceAbandonRun("Nodes did not have common ancestor")
     }
 
 
@@ -1580,7 +1597,7 @@ object Dom
       val  sw = StringWriter()
       val  result = StreamResult(sw)
       val  source = DOMSource(node)
-      m_Transformer.transform(source, result)
+      makeTransformer().transform(source, result)
       var res = sw.toString()
 
       if (!includeOwningTag)
@@ -2311,7 +2328,7 @@ object Dom
         }
       } // for
 
-      throw StepExceptionBase("nodesAreAdjacent: Unexpected case.")
+      throw StepExceptionWithStackTraceAbandonRun("nodesAreAdjacent: Unexpected case.")
     }
 
 
@@ -2392,7 +2409,7 @@ object Dom
         }
         catch (e: Exception)
         {
-            throw StepExceptionBase(e)
+            throw StepExceptionWithStackTraceAbandonRun(e)
         }
     }
 
@@ -2649,17 +2666,17 @@ object Dom
     /****************************************************************************/
     private fun findNodeByAttributeValueInternal (parent: Node, nodeName: String, attributeName: String, value: String): Node?
     {
-      if ('*' in value || '+' in value) throw StepExceptionBase("Calling findNodeByAttributeValue with string which contains wildcards.")
+      if ('*' in value || '+' in value) throw StepExceptionWithStackTraceAbandonRun("Calling findNodeByAttributeValue with string which contains wildcards.")
       return try
       {
         val lcValue = value.lowercase()
-        val xpath = m_xPathFactory.newXPath()
+        val xpath = makeXPathFactory().newXPath()
         val expr = xpath.compile(".//*[local-name()='$nodeName' and lower-case(@$attributeName) = '$lcValue']") //*[local-name()='$nodeName'][@$attributeName and matches(@$attributeName, '$value', 'i')]")
         expr.evaluate(parent, XPathConstants.NODE) as Node
       }
       catch (e: Exception)
       {
-        throw StepExceptionBase(e)
+        throw StepExceptionWithStackTraceAbandonRun(e)
       }
     }
 
@@ -2669,13 +2686,13 @@ object Dom
     {
       return try
       {
-        val xpath = m_xPathFactory.newXPath()
+        val xpath = makeXPathFactory().newXPath()
         val expr = xpath.compile(".//*[local-name()='$nodeName'][@$attributeName and matches(@$attributeName, '$value', 'i')]")
         expr.evaluate(parent, XPathConstants.NODE) as Node
       }
       catch (e: Exception)
       {
-        throw StepExceptionBase(e)
+        throw StepExceptionWithStackTraceAbandonRun(e)
       }
     }
 
@@ -2683,17 +2700,17 @@ object Dom
     /****************************************************************************/
     private fun findNodesByAttributeValueInternal (parent: Node, nodeName: String, attributeName: String, value: String): List<Node>
     {
-      if ('*' in value || '+' in value) throw StepExceptionBase("Calling findNodesByAttributeValue with string which contains wildcards.")
+      if ('*' in value || '+' in value) throw StepExceptionWithStackTraceAbandonRun("Calling findNodesByAttributeValue with string which contains wildcards.")
       return try
       {
         val lcValue = value.lowercase()
-        val xpath = m_xPathFactory.newXPath()
+        val xpath = makeXPathFactory().newXPath()
         val expr = xpath.compile(".//*[local-name()='$nodeName' and lower-case(@$attributeName) = '$lcValue']")
         toListOfNodes(expr.evaluate(parent, XPathConstants.NODESET) as NodeList)
       }
       catch (e: Exception)
       {
-        throw StepExceptionBase(e)
+        throw StepExceptionWithStackTraceAbandonRun(e)
       }
     }
 
@@ -2703,13 +2720,13 @@ object Dom
     {
       return try
       {
-        val xpath = m_xPathFactory.newXPath()
+        val xpath = makeXPathFactory().newXPath()
         val expr = xpath.compile(".//*[local-name()='$nodeName'][@$attributeName and matches(@$attributeName, '$value', 'i')]")
         toListOfNodes(expr.evaluate(parent, XPathConstants.NODESET) as NodeList)
       }
       catch (e: Exception)
       {
-        throw StepExceptionBase(e)
+        throw StepExceptionWithStackTraceAbandonRun(e)
       }
     }
 
@@ -2784,8 +2801,8 @@ object Dom
     @Throws(IOException::class)
     fun printTree (filePath: String?, root: Node, attributeName: String? = null, attributeValue: String? = null)
     {
-        if (null != filePath) m_fOut = Files.newBufferedWriter(Paths.get(filePath))
-        printTree(root, attributeName, attributeValue)
+        val fOut = if (null == filePath) null else Files.newBufferedWriter(Paths.get(filePath))
+        printTree(root, attributeName, attributeValue, fOut)
     }
 
 
@@ -2802,31 +2819,9 @@ object Dom
      */
 
     @Throws(IOException::class)
-    fun printTree (root: Node, attributeName: String?, attributeValue: String?)
+    private fun printTree (root: Node, attributeName: String?, attributeValue: String?, fOut: BufferedWriter?)
     {
-        if (null != m_PrintParseTreeContextString)
-        {
-            output("================================================================================")
-            output(m_PrintParseTreeContextString!!)
-            output("================================================================================")
-        }
-
-        printParseTreeInternalWrapper(root, attributeName, attributeValue)
-    }
-
-
-    /****************************************************************************/
-    /**
-     * Records a context string which is output at the start of the parse tree to
-     * indicate what was going on at the time the tree was output.
-     *
-     * @param contextString String to be output at the start when printing a parse
-     * tree.
-     */
-
-    fun setPrintParseTreeContextString(contextString: String)
-    {
-        m_PrintParseTreeContextString = contextString
+      printParseTreeInternalWrapper(root, attributeName, attributeValue, fOut)
     }
 
 
@@ -2843,7 +2838,7 @@ object Dom
         /****************************************************************************/
         val allNodes = getAllNodesBelow(a.ownerDocument)
         val ixA = IntStream.range(0, allNodes.size - 1).filter { ix: Int -> allNodes[ix] === a }.findFirst()
-        if (!ixA.isPresent) throw StepExceptionBase("getNodesBetween couldn't find node " + toString(a)) // For some reason, isEmpty gives a syntax error.
+        if (!ixA.isPresent) throw StepExceptionWithStackTraceAbandonRun("getNodesBetween couldn't find node " + toString(a)) // For some reason, isEmpty gives a syntax error.
 
 
 
@@ -2860,7 +2855,7 @@ object Dom
             var addToList = !myExclude.apply(node)
             if (addToList) addToList = !isEndingNode || includeEnd
             if (addToList) res.add(node)
-            if (isEndingNode) throw StepExceptionBase("")
+            if (isEndingNode) throw StepExceptionWithStackTraceAbandonRun("")
         }
 
         try
@@ -2879,49 +2874,43 @@ object Dom
 
     /****************************************************************************/
     @Throws(IOException::class)
-    private fun output (s: String)
+    private fun output (s: String, fOut: BufferedWriter?)
     {
-        if (null == m_fOut)
+        if (null == fOut)
             Dbg.d(s)
         else
         {
-            m_fOut!!.write(s)
-            m_fOut!!.write("")
+            fOut.write(s)
+            fOut.write("")
         }
     }
 
     /****************************************************************************/
     @Throws(IOException::class)
-    private fun printParseTreeInternalWrapper(node: Node, attributeName: String?, attributeValue: String?)
+    private fun printParseTreeInternalWrapper (node: Node, attributeName: String?, attributeValue: String?, fOut: BufferedWriter?)
     {
         try
         {
-            printParseTreeInternal("", 0, node, attributeName, attributeValue)
+          printParseTreeInternal("", 0, node, attributeName, attributeValue, fOut)
         }
         catch(_: Finished)
         {
-        }
-        finally
-        {
-            if (null != m_fOut) m_fOut!!.close()
-            m_fOut = null
-            m_PrintParseTreeContextString = null
         }
     }
 
 
     /****************************************************************************/
-    private fun printParseTreeInternal (prefix: String, ordinalNumber: Int, node: Node, attributeName: String?, attributeValue: String?)
+    private fun printParseTreeInternal (prefix: String, ordinalNumber: Int, node: Node, attributeName: String?, attributeValue: String?, fOut: BufferedWriter?)
     {
         var s = prefix
         s = if (0 == ordinalNumber /* Root */) "*" else s.substring(0, prefix.length - 1) + "*"
 
         if (0 != ordinalNumber) s += String.format("%4d. ", ordinalNumber)
         s += toString(node)
-        output(s)
+        output(s, fOut)
         val myPrefix = "$prefix    "
         val nl = node.childNodes
-        for (i in 0..< nl.length) printParseTreeInternal(myPrefix, i + 1, nl.item(i), attributeName, attributeValue)
+        for (i in 0..< nl.length) printParseTreeInternal(myPrefix, i + 1, nl.item(i), attributeName, attributeValue, fOut)
         if (null != attributeName)
         {
             val attrValue = getAttribute(node, attributeName)
@@ -2931,33 +2920,31 @@ object Dom
 
 
     /****************************************************************************/
-    private var m_fOut: BufferedWriter? = null
-    private var m_PrintParseTreeContextString: String? = null
-    private var m_Transformer: Transformer
-    private var m_xPathFactory: XPathFactory
     private class Finished : Exception()
 
+    //private var m_Transformer: Transformer
+    private fun makeTransformer (): Transformer
+    {
+       val res = TransformerFactory.newInstance().newTransformer()!!
+       res.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes")
+       res.setOutputProperty(OutputKeys.INDENT, "no")
+       return res
+    }
 
-    init
-     {
-       /**************************************************************************/
-       /* For handling XPaths. */
-
-       System.setProperty("javax.xml.xpath.XPathFactory:" + NamespaceConstant.OBJECT_MODEL_SAXON, "net.sf.saxon.xpath.XPathFactoryImpl")
+    //private var m_xPathFactory: XPathFactory
+    private fun makeXPathFactory (): XPathFactory
+    {
        //m_xPathFactory = new net.sf.saxon.xpath.XPathFactoryImpl()
        //m_xPathFactory = XPathFactory.newInstance()
        //m_xPathFactory = XPathFactory.newInstance("http://java.sun.com/jaxp/xpath/dom")
        //m_xPathFactory = net.sf.saxon.xpath.XPathFactoryImpl.newInstance()
-       m_xPathFactory = XPathFactory.newInstance(NamespaceConstant.OBJECT_MODEL_SAXON)
+       return XPathFactory.newInstance(NamespaceConstant.OBJECT_MODEL_SAXON)
+    }
 
 
-
-       /**************************************************************************/
-       /* For extracting the content of nodes.. */
-
-       m_Transformer = TransformerFactory.newInstance().newTransformer()!!
-       m_Transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes")
-       m_Transformer.setOutputProperty(OutputKeys.INDENT, "no")
+    init
+    {
+       System.setProperty("javax.xml.xpath.XPathFactory:" + NamespaceConstant.OBJECT_MODEL_SAXON, "net.sf.saxon.xpath.XPathFactoryImpl")
     }
 }
 

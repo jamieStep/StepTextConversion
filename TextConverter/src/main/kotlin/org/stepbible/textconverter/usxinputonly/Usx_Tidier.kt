@@ -4,6 +4,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Config
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
@@ -46,15 +47,24 @@ object Usx_Tidier
 
   fun process (dataCollection: X_DataCollection)
   {
-    Dbg.withProcessingBooks("Tidying ...") {
-      dataCollection.getDocuments().forEach(::doIt)
+    Rpt.reportWithContinuation(level = 1, "Tidying ...") {
+      with(ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            asyncable { Usx_TidierPerBook().processRootNode(rootNode) }
+          }
+        }
+      }
     }
   }
+}
 
 
 
 
-
+/******************************************************************************/
+private class Usx_TidierPerBook
+{
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -73,18 +83,17 @@ object Usx_Tidier
      X_DataCollection, and book nodes have been converted into enclosing
      nodes. */
 
-  private fun doIt (doc: Document)
+  fun processRootNode (rootNode: Node)
   {
-    /**************************************************************************/
-    m_BookName = Dom.findNodeByName(doc, "book")!!["code"]!!
-    Dbg.withProcessingBook(Utils.prettifyBookAbbreviation(m_BookName)) {
-      deleteIgnorableTags(doc)                           // Anything of no interest to our processing.
-      correctCommonUsxIssues(doc)                        // Correct common errors.
-      simplePreprocessTagModifications(doc)              // Sort out things we don't think we like.
-      convertTagsToLevelOneWhereAppropriate(doc)         // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
-      Usx_CrossReferenceCanonicaliser.process(doc)       // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
-      tidyUpMain(doc)
-    }
+    val doc = rootNode.ownerDocument
+    m_BookName = rootNode["code"]!!
+    Rpt.reportBookAsContinuation(m_BookName)
+    deleteIgnorableTags(doc)                           // Anything of no interest to our processing.
+    correctCommonUsxIssues(doc)                        // Correct common errors.
+    simplePreprocessTagModifications(doc)              // Sort out things we don't think we like.
+    convertTagsToLevelOneWhereAppropriate(doc)         // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
+    Usx_CrossReferenceCanonicaliser.process(doc)       // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
+    tidyUpMain(doc)
   }
 
 

@@ -4,7 +4,7 @@ package org.stepbible.textconverter.nonapplicationspecificutils.bibledetails
 import java.util.TreeMap
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.*
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 
 
 /******************************************************************************/
@@ -30,7 +30,7 @@ open class BibleBookNames
     /**************************************************************************/
     /**
     * Gets the UBS book number corresponding to a given name, by hook or by
-    * croook.  Caters for the possibility that the name may be abbreviated,
+    * crook.  Caters for the possibility that the name may be abbreviated,
     * short or long, and that it may be in USX form, OSIS form or vernacular
     * form.
     *
@@ -78,6 +78,10 @@ open class BibleBookNames
   fun abbreviatedNameToNumber (name: String): Int { return getNumber(m_AbbreviatedNameToIndex, name) }
   fun shortNameToNumber       (name: String): Int { return getNumber(m_ShortNameToIndex,       name) }
   fun longNameToNumber        (name: String): Int { return getNumber(m_LongNameToIndex,        name) }
+
+
+  /****************************************************************************/
+  fun abbreviatedNameExists (abbreviatedName: String) = m_AbbreviatedNameToIndex.containsKey(abbreviatedName)
 
 
   /****************************************************************************/
@@ -206,8 +210,6 @@ open class BibleBookNames
 
 
 
-
-
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -251,7 +253,7 @@ open class BibleBookNames
   {
     if (index.containsKey(name))
       return index[name]!!
-    throw StepExceptionBase("Unknown $m_BookCollectionName name: $name")
+    throw StepExceptionWithStackTraceAbandonRun("Unknown $m_BookCollectionName name: $name")
   }
   
   

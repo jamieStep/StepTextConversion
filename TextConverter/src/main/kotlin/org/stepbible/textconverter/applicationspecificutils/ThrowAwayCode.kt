@@ -1,13 +1,21 @@
 package org.stepbible.textconverter.applicationspecificutils
 
+import org.reflections.Reflections
+import org.reflections.scanners.Scanners
+import org.reflections.scanners.SubTypesScanner
+import org.reflections.util.ClasspathHelper
+import org.reflections.util.ConfigurationBuilder
 import org.stepbible.textconverter.builders.SpecialBuilder
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import java.io.File
 import java.net.URL
 import java.util.jar.Manifest
+import java.util.stream.Collectors
 import javax.xml.parsers.DocumentBuilderFactory
 import kotlin.system.exitProcess
+
+
 
 /****************************************************************************/
 /**
@@ -17,8 +25,48 @@ import kotlin.system.exitProcess
  * @author ARA "Jamie" Jamieson
  */
 
-object ThrowAwayCode
+class ThrowAwayCode
 {
+  /****************************************************************************/
+   fun testCollectObjects ()
+   {
+    val res = MiscellaneousUtils.getSubtypes(ObjectInterface::class.java, "org.stepbible.textconverter")
+    res[0].getField("INSTANCE").get(null)
+    exitProcess(0)
+  }
+
+
+  /****************************************************************************/
+  fun testCollectObjects1 ()
+  {
+    //val reflections = Reflections("org.stepbible.textconverter", SubTypesScanner(false))
+    val r = Reflections(ConfigurationBuilder().setUrls(ClasspathHelper.forPackage("org.stepbible.textconverter")).setScanners(Scanners.SubTypes.filterResultsBy {c -> true}))
+    val xx = r.getSubTypesOf(Object::class.java).stream().collect(Collectors.toSet())
+
+    val reflections = Reflections("org.stepbible.textconverter", SubTypesScanner(false))
+    val x = reflections.getSubTypesOf(Object::class.java).stream().collect(Collectors.toSet())
+    xx.forEach {
+      try
+      {
+        if ("$" !in it.name)
+        {
+          val isObject = "INSTANCE" in it.getFields().toSet().map { it.name }
+          if (isObject && "$" !in it.name)
+          {
+            println("Attempting ${it.name}.")
+            it.getField("INSTANCE").get(null)
+          }
+        }
+      }
+      catch (_: Exception)
+      {
+        System.err.println("Failed to initialise ${it.name}.")
+      }
+    }
+    exitProcess(0)
+  }
+
+
   /****************************************************************************/
   fun testCharacterEntitySize ()
   {

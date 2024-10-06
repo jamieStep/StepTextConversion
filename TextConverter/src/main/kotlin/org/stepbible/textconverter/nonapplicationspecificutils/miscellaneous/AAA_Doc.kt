@@ -5,7 +5,7 @@ package org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous
 * This package contains miscellaneous utilities.
 *
 * - **[Dom]** contains utilities for accessing and manipulating a document
-*   object model.  **[DomExtensionFunctions]** lets you access some of this
+*   object model.  **DomExtensionFunctions** lets you access some of this
 *   functionality more easily from
 *
 * - **[LocaleHandler]** is intended mainly to assist when dealing with string
@@ -25,6 +25,9 @@ package org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous
 * - **[MiscellaneousUtils]**, **[StepFileUtils]** and **[StepStringUtils]** all
 *   do what it says on the tin (or in the case of MiscellaneousUtils, what it
 *   *doesn't* say on the tin).
+*
+* - [ParallelRunning] is an experimental facility to permit portions of the code
+*   to be run in parallel where the nature of the processing permits.
 *
 * - **[StepStringFormatter]** builds on top of the standard Java / Kotlin
 *   string formatting utilities, to give additional flexibility and to

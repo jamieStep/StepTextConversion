@@ -7,6 +7,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefFormatHandlerReaderVernacular.readEmbedded
 import org.stepbible.textconverter.applicationspecificutils.Usx_FileProtocol
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.util.*
@@ -155,17 +156,7 @@ import java.util.*
   * @param doc Document to be processed.
   */
 
-  fun process (doc: Document) = doc.findNodesByName("book").forEach(::process)
-
-
-  /****************************************************************************/
-  /**
-  * Documents a single book.
-  *
-  * @param rootNode Root node for book.
-  */
-
-  fun process (rootNode: Node) = doIt(rootNode)
+  fun process (doc: Document) = doc.findNodesByName("book").forEach(::doIt)
 
 
 

@@ -3,6 +3,7 @@ package org.stepbible.textconverter.protocolagnosticutils
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
@@ -43,20 +44,23 @@ object PA_BasicVerseEndInserter: PA()
 
   fun process (dataCollection: X_DataCollection)
   {
+    //Dbg.d(dataCollection)
     extractCommonInformation(dataCollection)
     val rootNodes = dataCollection.getRootNodes()
 
     if (null != rootNodes[0].findNodeByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid()))
       return // Already have eids.
 
-    Dbg.withProcessingBooks("Handling initial placement of verse-ends ...") {
-      rootNodes.forEach {
-        Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(it)) {
-          it.findNodesByName(m_FileProtocol.tagName_chapter()).forEach(::insertVerseEnds)
-        }
-      }
-    }
-  }
+    Rpt.reportWithContinuation(level = 1, "Handling approximate placement of verse-ends ...") {
+      with(ParallelRunning(true)) {
+        run {
+          rootNodes.forEach { rootNode ->
+            asyncable { PA_BasicVerseEndInserterPerBook(m_FileProtocol).processRootNode(rootNode) }
+          } // rootNodes.forEach
+        } // run
+      } // with
+    } // reportWithContinuation
+  } // fun
 
 
   /****************************************************************************/
@@ -76,26 +80,26 @@ object PA_BasicVerseEndInserter: PA()
     if (null != rootNodes[0].findNodeByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid()))
       return // Already have eids.
 
-    Dbg.withProcessingBooks("Handling initial placement of verse-ends ... ") {
-      rootNodes.forEach {
-        Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(it)) {
-          it.findNodesByName(m_FileProtocol.tagName_chapter()).forEach(::insertVerseEnds)
-        }
-      }
-    }
+    // DON'T ATTEMPT PARALLEL PROCESSING HERE -- we're being called with all root nodes in a single document, so we have to process the document in its entirety.
+    Rpt.reportWithContinuation(level = 1, "Handling initial placement of verse-ends ... ") {
+      rootNodes.forEach { PA_BasicVerseEndInserterPerBook(m_FileProtocol).processRootNode(it) }
+    } // reportWithContinuation
+  } // fun
+}
+
+
+
+
+/******************************************************************************/
+private class PA_BasicVerseEndInserterPerBook (val m_FileProtocol: X_FileProtocol)
+{
+  /****************************************************************************/
+  fun processRootNode (rootNode : Node)
+  {
+    Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+    rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach(::insertVerseEnds)
   }
 
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Private                                  **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
 
   /****************************************************************************/
   private fun insertVerseEnds (chapterNode: Node)
@@ -103,6 +107,7 @@ object PA_BasicVerseEndInserter: PA()
     val verseNodes = chapterNode.findNodesByName(m_FileProtocol.tagName_verse())
     for (ix in 1 ..< verseNodes.size)
     {
+      //Dbg.d(verseNodes[ix - 1])
       val eidNode = m_FileProtocol.makeVerseEidNode(chapterNode.ownerDocument, verseNodes[ix - 1][m_FileProtocol.attrName_verseSid()]!!)
       Dom.insertNodeBefore(verseNodes[ix], eidNode)
     }

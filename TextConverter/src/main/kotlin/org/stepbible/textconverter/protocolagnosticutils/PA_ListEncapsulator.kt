@@ -2,6 +2,8 @@ package org.stepbible.textconverter.protocolagnosticutils
 
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.w3c.dom.Node
 
 /****************************************************************************/
@@ -38,10 +40,16 @@ object PA_ListEncapsulator: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    Dbg.withProcessingBooks("Possibly encapsulating lists (but probably not) ...") {
-      dataCollection.getRootNodes().forEach(::processRootNode)
-    }
-  }
+    Rpt.reportWithContinuation(level = 1, "Possibly encapsulating lists (but probably not) ...") {
+      with (ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach {
+            asyncable { (processRootNode(it)) }
+          } // forEach
+        } // run
+      } // Parallel
+    } // reportWithContinuation
+  } // fun
 
 
 
@@ -58,9 +66,8 @@ object PA_ListEncapsulator: PA()
   /****************************************************************************/
   private fun processRootNode (rootNode: Node)
   {
-    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
-      encapsulateLists(rootNode)
-    }
+    Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+    encapsulateLists(rootNode)
   }
 
 

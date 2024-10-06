@@ -4,9 +4,10 @@ import org.stepbible.textconverter.nonapplicationspecificutils.commandlineproces
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Zip
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.nio.file.Paths
 
 /******************************************************************************/
@@ -40,15 +41,9 @@ object Builder_RepositoryPackage: Builder()
   /****************************************************************************/
   override fun doIt ()
   {
-    Builder_Module.process()
-    Dbg.withReportProgressMain(banner(), ::doIt1)
-  }
-
-
-  /****************************************************************************/
-  private fun doIt1 ()
-  {
     /**************************************************************************/
+    Builder_Module.process()
+    Rpt.report(level = 0, banner())
     StepFileUtils.deleteTemporaryFiles(FileLocations.getRootFolderPath())
 
 
@@ -59,7 +54,7 @@ object Builder_RepositoryPackage: Builder()
     val inputUsx  = if (FileLocations.getInputUsxFilesExist())  FileLocations.getInputUsxFolderPath()  else null
     val inputVl   = if (FileLocations.getInputVlFilesExist())   FileLocations.getInputVlFolderPath()   else null
 
-    if (null == inputOsis) throw StepExceptionBase("No OSIS available to store in repository package.")
+    if (null == inputOsis) throw StepExceptionWithStackTraceAbandonRun("No OSIS available to store in repository package.")
 
 
 

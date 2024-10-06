@@ -293,13 +293,13 @@
 //    fun dontWantTarget (from: String, to: String, message: String)
 //    {
 //      if (!crossBookMappings.contains("$from.$to")) return
-//      if (m_BibleStructure!!.bookExists(to)) throw StepExceptionBase(message)
+//      if (m_BibleStructure!!.bookExists(to)) throw StepExceptionWithStackTraceAbandonRun(message)
 //    }
 //
 //    fun doWantTarget (from: String, to: String, message: String)
 //    {
 //      if (!crossBookMappings.contains("$from.$to")) return
-//      if (!m_BibleStructure!!.bookExists(to)) throw StepExceptionBase(message)
+//      if (!m_BibleStructure!!.bookExists(to)) throw StepExceptionWithStackTraceAbandonRun(message)
 //    }
 //
 //    dontWantTarget("dan", "bel", "Need to move text from Dan to Bel, but Bel already exists")
@@ -1654,7 +1654,7 @@
 //    extractCommonInformation(dataCollection)
 //    m_EmptyVerseHandler = PA_EmptyVerseHandler(dataCollection.getFileProtocol())
 //    m_FootnoteHandler = PA_ReversificationFootnoteHandler(m_FileProtocol)
-//    Dbg.withProcessingBooks("Applying reversification footnotes for runtime reversification ...") {
+//    Rpt.reportWithContinuation(level = 1, "Applying reversification footnotes for runtime reversification ...") {
 //      dataCollection.getRootNodes().forEach(::processRootNode)
 //    }
 //  }
@@ -1682,10 +1682,9 @@
 //    if (!ConfigData.getAsBoolean("stepOkToGenerateFootnotes"))
 //      return
 //
-//    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
-//      IssueAndInformationRecorder.setRuntimeReversification()
-//      addFootnotes(rootNode)
-//    }
+//    Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+//    IssueAndInformationRecorder.setRuntimeReversification()
+//    addFootnotes(rootNode)
 //  }
 //
 //

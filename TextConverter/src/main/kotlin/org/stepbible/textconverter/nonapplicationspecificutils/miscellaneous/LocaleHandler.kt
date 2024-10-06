@@ -11,7 +11,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object LocaleHandler
+object LocaleHandler: ObjectInterface
 {
   /****************************************************************************/
   /**

@@ -6,7 +6,7 @@ import org.jetbrains.dokka.base.DokkaBaseConfiguration
 /******************************************************************************/
 // DON'T FORGET TO CHANGE ME !!!
 
-version = "3.0.0"
+version = "4.0.0"
 
 
 /******************************************************************************/
@@ -55,6 +55,7 @@ dependencies {
     implementation("org.reflections:reflections:0.10.2") // Note 1.
     implementation("org.javassist:javassist:3.30.2-GA")  // Note 2.
     implementation(kotlin("reflect"))                    // Note 3.
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
 }
 
 
@@ -89,7 +90,8 @@ tasks.jar {
         manifest {
             attributes(
                 "Main-Class" to "org.stepbible.textconverter.MainKt",
-                "Implementation-Version" to project.version
+                "Implementation-Version" to project.version,
+                "Latest-Update-Reason" to "Add support for parallel processing."
             )
         }
 

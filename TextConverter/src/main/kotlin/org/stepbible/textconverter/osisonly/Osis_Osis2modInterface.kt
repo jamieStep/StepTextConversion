@@ -6,8 +6,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler
 import java.io.File
 import java.io.PrintWriter
@@ -457,7 +457,7 @@ object Osis2ModInterfaceStep: Osis_Osis2modInterface()
     }
     catch (e:Exception)
     {
-        throw StepExceptionBase(e)
+        throw StepExceptionWithStackTraceAbandonRun(e)
     }
   }
 

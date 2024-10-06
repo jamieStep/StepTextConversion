@@ -5,8 +5,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.getAllNodesBelow
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.FeatureIdentifier
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionNotReallyAnException
 import org.w3c.dom.Node
 
 
@@ -38,13 +39,12 @@ object PA_TextAnalyser: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    Dbg.withProcessingBooks("Collecting feature details for ...") {
+    Rpt.reportWithContinuation(level = 1, "Collecting feature details for ...") {
       dataCollection.getRootNodes().forEach {
-        Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(it)) {
-          countVersesInParas(it)
-          getSampleTextForConfigData(it)
-        }
-      }
+        Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(it))
+        countVersesInParas(it)
+        getSampleTextForConfigData(it)
+      } // forEach
     }
   }
 
@@ -92,7 +92,7 @@ object PA_TextAnalyser: PA()
         m_AlreadyKnowResultForCountVersesInParas = true
         IssueAndInformationRecorder.setHasMultiVerseParagraphs()
         FeatureIdentifier.setHasMultiVerseParagraphs()
-        throw StepExceptionBase("") // No need for further processing -- we now know all that's needed.
+        throw StepExceptionNotReallyAnException("") // No need for further processing -- we now know all that's needed.
       }
     }
 
@@ -103,7 +103,7 @@ object PA_TextAnalyser: PA()
     {
       Dom.findNodesByName(rootNode, "para", false).forEach { countVerses(it) }
     }
-    catch (_: StepExceptionBase)
+    catch (_: StepExceptionNotReallyAnException)
     {
       // Here simply so countVerses can exit prematurely.
     }

@@ -2,7 +2,8 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.bibledetails
 
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.util.*
 
 /******************************************************************************/
@@ -12,7 +13,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
 **/
 
-object VersificationSchemesSupportedByOsis2mod
+object VersificationSchemesSupportedByOsis2mod: ObjectInterface
 {
   /****************************************************************************/
   /**
@@ -26,7 +27,7 @@ object VersificationSchemesSupportedByOsis2mod
 
   fun canonicaliseSchemeName (schemeName: String): String
   {
-    return if ("tbd" == schemeName) schemeName else m_CanonicalSchemeNameMappings[schemeName] ?: throw StepExceptionBase("Invalid versification scheme: $schemeName")
+    return if ("tbd" == schemeName) schemeName else m_CanonicalSchemeNameMappings[schemeName] ?: throw StepExceptionWithStackTraceAbandonRun("Invalid versification scheme: $schemeName")
   }
 
 
@@ -52,7 +53,9 @@ object VersificationSchemesSupportedByOsis2mod
   /****************************************************************************/
   /* A line in the data looks like    Calvin/Rut/22, 23, 18, 22   */
 
-  init
+  init { doInit() }
+
+  @Synchronized private fun doInit ()
   {
     val C_UnwantedSchemes = ".calvin.darbyfr."
     FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath())!!.bufferedReader().use { it.readText() } .lines()
@@ -62,4 +65,4 @@ object VersificationSchemesSupportedByOsis2mod
       .filter { it !in C_UnwantedSchemes }                    // Exclude unwanted schemes.
       .forEach { m_CanonicalSchemeNameMappings[it] = it }
   }
- }
+}

@@ -1,6 +1,8 @@
 package org.stepbible.textconverter.applicationspecificutils
 
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.w3c.dom.Document
+import java.util.concurrent.atomic.AtomicInteger
 
 /****************************************************************************/
 /**
@@ -9,7 +11,7 @@ import org.w3c.dom.Document
  * @author ARA "Jamie" Jamieson
  */
 
-object Globals
+object Globals: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -30,7 +32,7 @@ object Globals
   * @return Counter
   */
 
-  fun getUniqueExternal () = ++m_UniqueExternalId
+  fun getUniqueExternal () = m_UniqueExternalId.incrementAndGet()
 
 
   /****************************************************************************/
@@ -43,7 +45,7 @@ object Globals
   * @return Counter
   */
 
-  fun getUniqueInternalId () = ++m_UniqueInternalId
+  fun getUniqueInternalId () = m_UniqueInternalId.incrementAndGet()
 
 
 
@@ -58,8 +60,8 @@ object Globals
   /****************************************************************************/
 
   /**************************************************************************/
-  private var m_UniqueExternalId = 0
-  private var m_UniqueInternalId = 0
+  private var m_UniqueExternalId = AtomicInteger(0)
+  private var m_UniqueInternalId = AtomicInteger(0)
 }
 
 

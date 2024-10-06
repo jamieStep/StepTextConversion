@@ -13,7 +13,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Ste
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Zip
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.FeatureIdentifier
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotify
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotifyIfContainsSpaces
 import java.io.File
 import java.nio.file.Paths
 import java.util.ArrayList
@@ -51,15 +53,12 @@ object Builder_Module: Builder()
   /****************************************************************************/
   override fun doIt ()
   {
+    /**************************************************************************/
     Builder_InternalOsis.process()
-    Dbg.withReportProgressMain(banner(), ::doIt1)
-  }
+    Rpt.report(0, banner())
 
 
 
-  /****************************************************************************/
-  private fun doIt1 ()
-  {
     /**************************************************************************/
     if (!ConfigData.getAsBoolean("stepEncrypted", "no")) Logger.warning("********** NOT ENCRYPTED **********")
     StepFileUtils.createFolderStructure(FileLocations.getInternalSwordFolderPath())
@@ -205,7 +204,7 @@ object Builder_Module: Builder()
 
     if (ConfigData.getAsBoolean("stepManualOsis2mod") && "step" != ConfigData["stepTargetAudience"])
     {
-      val commandAsString = swordExternalConversionCommand.joinToString(" "){ quotify(it) } + " > ${quotify(FileLocations.getOsisToModLogFilePath())} 2>&1"
+      val commandAsString = swordExternalConversionCommand.joinToString(" "){ quotifyIfContainsSpaces(it) } + " > ${quotify(FileLocations.getOsisToModLogFilePath())} 2>&1"
       MiscellaneousUtils.copyTextToClipboard(commandAsString)
       println("")
       println("The command to run osis2mod has been copied to the clipboard.  Open a plain vanilla command window and run it from there.")
@@ -214,9 +213,9 @@ object Builder_Module: Builder()
     }
     else
     {
-      val rc = runCommand("- Running external postprocessing command for Sword: ", swordExternalConversionCommand, errorFilePath = FileLocations.getOsisToModLogFilePath())
+      val rc = runCommand("Running external command to generate Sword data: ", swordExternalConversionCommand, errorFilePath = FileLocations.getOsisToModLogFilePath())
       ConfigData["stepOsis2modReturnCode"] = rc.toString()
-      Dbg.reportProgress("- osis2mod completed")
+      Rpt.report(level = 1, "osis2mod completed")
     }
   }
 
@@ -235,7 +234,6 @@ object Builder_Module: Builder()
     var hadSuccess = false
     var info = 0
     var warnings = 0
-    Logger.setPrefix("osis2mod")
 
     FileLocations.getInputStream(file.toString())!!.bufferedReader().readLines().forEach {
       if (it.startsWith("You are running osis2mod"))
@@ -246,32 +244,30 @@ object Builder_Module: Builder()
 
       else if (it.startsWith("SUCCESS"))
       {
-        Logger.info(it)
+        Logger.info("osis2mod reports '$it'.")
         hadSuccess = true
       }
       else if (it.contains("FATAL"))
       {
         ++fatals
-        Logger.error(it)
+        Logger.error("osis2mod reports '$it'.")
       }
       else if (it.contains("ERROR"))
       {
         ++errors
-        Logger.warning("Treated as a warning because osis2mod often overreacts: $it")
+        Logger.warning("Treated as a warning because osis2mod often overreacts: osis2mod reports '$it'.")
       }
       else if (it.contains("WARNING"))
       {
         ++warnings
-        Logger.warning(it)
+        Logger.warning("osis2mod reports '$it.'")
       }
       else if (it.contains("INFO("))
       {
         ++info
-        Logger.info(it)
+        Logger.info("osis2mod reports '$it.'")
       }
     } // forEach
-
-    Logger.setPrefix(null)
 
     if (fatals > 0)
       System.err.println("CAUTION: osis2mod.exe reports $fatals fatal error(s).  Please check the OSIS log file to see if the conversion to Sword format has worked.")
@@ -628,7 +624,7 @@ XXX_AddedValue_XXX
     if (FeatureIdentifier.hasEnumeratedWords()) res += "GlobalOptionFilter=OSISEnum\n"
     if (FeatureIdentifier.hasGlossaryLinks()) res += "GlobalOptionFilter=OSISReferenceLinks\n"
     if (FeatureIdentifier.hasStrongs()) res += "Feature=StrongsNumbers\n"
-    if (!FeatureIdentifier.hasMultiVerseParagraphs()) res += "Feature=NoParagraphs\n"
+    //??? if (!FeatureIdentifier.hasMultiVerseParagraphs()) res += "Feature=NoParagraphs\n"
     ConfigData.put("stepOptions", res, true)
 
 

@@ -1,8 +1,11 @@
 /******************************************************************************/
 package org.stepbible.textconverter.nonapplicationspecificutils.bibledetails
 
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.BiblePart
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
+import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType
 
 
 /******************************************************************************/
@@ -12,9 +15,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
  * <p>
  *
  * @author ARA "Jamie" Jamieson
-*/
+ */
 
-object BibleAnatomy
+object BibleAnatomy: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -27,17 +30,17 @@ object BibleAnatomy
   /****************************************************************************/
   /** All books which may contain chapters with canonical headers. */
 
-  val C_BookNumberForPsa = BibleBookNamesUsx.abbreviatedNameToNumber("Psa")
-  val C_BookNumberForHab = BibleBookNamesUsx.abbreviatedNameToNumber("Hab")
-  val C_BookNumberForMal = BibleBookNamesUsx.abbreviatedNameToNumber("Mal")
-  val C_BookNumbersOfBooksWhichMayHaveCanonicalHeaders = listOf(C_BookNumberForPsa, C_BookNumberForHab, C_BookNumberForMal)
+  var C_BookNumberForPsa = -1
+  var C_BookNumberForHab = -1
+  var C_BookNumberForMal = -1
+  var C_BookNumbersOfBooksWhichMayHaveCanonicalHeaders = listOf(-1)
 
 
 
   /****************************************************************************/
   /** All Psalms which have canonical headers. */
 
-  val C_PsalmsWithCanonicalHeaders = setOf(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 97, 98, 99, 100, 101, 102, 103, 107, 108, 109, 110, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 137, 138, 139, 140, 141, 142, 143, 144, 145)
+  var C_PsalmsWithCanonicalHeaders = setOf(-1)
 
 
 
@@ -47,7 +50,7 @@ object BibleAnatomy
   *   which versification scheme we are dealing with -- things may already be
   *   set up correctly in some (most) texts. */
 
-  val C_PsalmsWhereVersesTurnsIntoCanonicalHeader = setOf(3, 4, 5, 6, 7, 8, 9, 10, 12, 11, 13, 18, 17, 19, 20, 21, 22, 30, 29, 31, 34, 33, 36, 35, 38, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 50, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 67, 66, 68, 69, 70, 75, 74, 76, 77, 80, 79, 81, 83, 82, 84, 85, 88, 87, 89, 92, 91, 102, 101, 108, 107, 127, 140, 139, 142, 141)
+  var C_PsalmsWhereVersesTurnsIntoCanonicalHeader = setOf(-1)
 
 
 
@@ -60,7 +63,7 @@ object BibleAnatomy
   *   moved.  But in some verses 1 and 2 may need to be moved.  This list is a
   *   subset of C_PsalmsWhereVersesTurnsIntoCanonicalHeader. */
   
-  val C_PsalmsWhereMoreThanOneVerseMayTurnIntoCanonicalHeader = setOf(50, 51, 52, 53, 54, 59, 60)
+  var C_PsalmsWhereMoreThanOneVerseMayTurnIntoCanonicalHeader = setOf(-1)
 
   
   /****************************************************************************/
@@ -184,9 +187,7 @@ object BibleAnatomy
   /****************************************************************************/
 
   /****************************************************************************/
-  private val m_CommonlyMissingVerses =
-      "MAT 17:21¬MAT 18:11¬MAT 23:14¬MRK 7:16¬MRK 9:44¬MRK 9:46¬MRK 11:26¬MRK 15:28¬LUK 17:36¬JHN 5:4¬ACT 8:37¬ACT 15:34¬ACT 24:7¬ACT 28:29¬ROM 16:24".split("¬")
-          .map { Ref.rdUsx(it).toRefKey() }
+  private var m_CommonlyMissingVerses: List<RefKey> = listOf(-1)
 
   private var m_OtStart = 0
   private var m_OtEnd = 0
@@ -201,8 +202,26 @@ object BibleAnatomy
     
     
   /****************************************************************************/
-  init
+  init { doInit() }
+
+  @Synchronized private fun doInit ()
   {
+    C_BookNumberForPsa = BibleBookNamesUsx.abbreviatedNameToNumber("Psa")
+    C_BookNumberForHab = BibleBookNamesUsx.abbreviatedNameToNumber("Hab")
+    C_BookNumberForMal = BibleBookNamesUsx.abbreviatedNameToNumber("Mal")
+    C_BookNumbersOfBooksWhichMayHaveCanonicalHeaders = listOf(C_BookNumberForPsa, C_BookNumberForHab, C_BookNumberForMal)
+
+    C_PsalmsWithCanonicalHeaders = setOf(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 97, 98, 99, 100, 101, 102, 103, 107, 108, 109, 110, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 137, 138, 139, 140, 141, 142, 143, 144, 145)
+
+    C_PsalmsWhereVersesTurnsIntoCanonicalHeader = setOf(3, 4, 5, 6, 7, 8, 9, 10, 12, 11, 13, 18, 17, 19, 20, 21, 22, 30, 29, 31, 34, 33, 36, 35, 38, 37, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 50, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 67, 66, 68, 69, 70, 75, 74, 76, 77, 80, 79, 81, 83, 82, 84, 85, 88, 87, 89, 92, 91, 102, 101, 108, 107, 127, 140, 139, 142, 141)
+
+    C_PsalmsWhereMoreThanOneVerseMayTurnIntoCanonicalHeader = setOf(50, 51, 52, 53, 54, 59, 60)
+
+    m_CommonlyMissingVerses =
+      "MAT 17:21¬MAT 18:11¬MAT 23:14¬MRK 7:16¬MRK 9:44¬MRK 9:46¬MRK 11:26¬MRK 15:28¬LUK 17:36¬JHN 5:4¬ACT 8:37¬ACT 15:34¬ACT 24:7¬ACT 28:29¬ROM 16:24"
+        .split("¬")
+        .map { Ref.rdUsx(it).toRefKey() }
+
     m_OtStart        = BibleBookNamesUsx.abbreviatedNameToNumber("Gen")
     m_OtEnd          = BibleBookNamesUsx.abbreviatedNameToNumber("Mal")
     m_NtStart        = BibleBookNamesUsx.abbreviatedNameToNumber("Mat")

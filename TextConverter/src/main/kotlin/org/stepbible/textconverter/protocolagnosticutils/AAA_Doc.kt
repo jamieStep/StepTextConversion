@@ -12,8 +12,7 @@ package org.stepbible.textconverter.protocolagnosticutils
 * <span class='important>
 * Having said this, at the time of writing all of the processing here is being
 * applied only to OSIS, and I haven't tested it to see if it genuinely *can*
-* cope with USX.
-* </span
+* cope with USX.</span
 *
 * Most of the classes here inherit from [PA], which defines certain minimal
 * common processing.  A few need to have their own unique API, and therefore do

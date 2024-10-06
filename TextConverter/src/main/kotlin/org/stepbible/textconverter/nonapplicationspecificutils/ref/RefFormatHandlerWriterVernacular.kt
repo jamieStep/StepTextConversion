@@ -4,6 +4,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.LocaleHandler
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.BookNameLength
 import java.text.NumberFormat
 
@@ -20,7 +21,7 @@ import java.text.NumberFormat
  * @author ARA "Jamie" Jamieson
  */
 
-object RefFormatHandlerWriterVernacular: RefFormatHandlerWriterBase()
+object RefFormatHandlerWriterVernacular: RefFormatHandlerWriterBase(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

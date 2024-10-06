@@ -4,8 +4,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Config
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 
 
 /******************************************************************************/
@@ -46,10 +47,9 @@ object Builder_InitialOsisRepresentationOfInputs: Builder()
   /****************************************************************************/
   override fun doIt ()
   {
-    Dbg.withReportProgressMain(banner()) {
-      StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
-      determineInput().second.process()
-    }
+    //Rpt.report(level = 0, banner())
+    StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
+    determineInput().second.process()
   }
 
 
@@ -75,7 +75,7 @@ object Builder_InitialOsisRepresentationOfInputs: Builder()
     val res =
       if (null != ConfigData["stepUseExistingOsis"])
       {
-        if (!haveOsis) throw StepExceptionBase("Requested to start from OSIS, but no OSIS exists.")
+        if (!haveOsis) throw StepExceptionWithStackTraceAbandonRun("Requested to start from OSIS, but no OSIS exists.")
         Pair("osis", Builder_InitialOsisRepresentationFromOsis)
       }
       else if (haveUsx)

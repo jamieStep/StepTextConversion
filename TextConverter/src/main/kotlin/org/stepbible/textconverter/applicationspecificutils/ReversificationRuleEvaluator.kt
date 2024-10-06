@@ -4,7 +4,9 @@ package org.stepbible.textconverter.applicationspecificutils
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler
 
 
@@ -198,7 +200,13 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
           {
             BibleStructure.C_ElementInElision   ->
             {
-              lengthWarning("$ref forms part of an elision, and we cannot therefore carry out length tests upon it.")
+              val refKey = ref.toRefKey()
+              if (refKey !in m_AlreadyReportedElisionIssues)
+              {
+                m_AlreadyReportedElisionIssues.add(refKey)
+                lengthWarning("$ref forms part of an elision, and we cannot therefore carry out length tests upon it.")
+              }
+
               return false
             }
 
@@ -317,11 +325,12 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 
 
     /**************************************************************************/
-    throw StepExceptionBase("Unknown reversification rule: $text")
+    throw StepExceptionWithStackTraceAbandonRun("Unknown reversification rule: $text")
   }
 
 
   /****************************************************************************/
+  private val m_AlreadyReportedElisionIssues = mutableSetOf<RefKey>()
   private val m_BibleStructure = dataCollection.getBibleStructure()
   private val m_BackstopDefaultRef = Ref.rd(999, 999, 999, 0)
   private val m_DataCollection = dataCollection

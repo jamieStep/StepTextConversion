@@ -2,7 +2,6 @@ package org.stepbible.textconverter.osisonly
 
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.contains
@@ -14,7 +13,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.protocolagnosticutils.PA_EmptyVerseHandler
 import org.stepbible.textconverter.applicationspecificutils.Osis_FileProtocol
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
-import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.w3c.dom.Node
 
 /*******************************************************************************/
@@ -43,20 +43,18 @@ object Osis_BasicValidator
      some of these we may be able to remedy; others we may simply have to
      report, and abandon further processing. */
 
-  fun finalValidationAndCorrection (dataCollection: X_DataCollection)
+  fun structuralValidationAndCorrection (dataCollection: X_DataCollection)
   {
-    Dbg.withReportProgressSub("Performing final validation and correction.") {
-      finalValidationAndCorrection1(dataCollection)
-    }
+    Rpt.report(1, "Performing structural validation and correction (no separate per-book reporting for this step).")
+    structuralValidationAndCorrection1(dataCollection)
 
-    Dbg.withReportProgressSub("Checking for missing verses.") {
-      validationForOrderingAndHoles1(dataCollection)
-    }
+    Rpt.report(1,"Checking for missing verses (no separate per-book reporting for this step).")
+    validationForOrderingAndHoles1(dataCollection)
   }
 
 
   /****************************************************************************/
-  private fun finalValidationAndCorrection1 (dataCollection: X_DataCollection)
+  private fun structuralValidationAndCorrection1 (dataCollection: X_DataCollection)
   {
     /**************************************************************************/
     val bibleStructure = dataCollection.getBibleStructure()
@@ -71,7 +69,7 @@ object Osis_BasicValidator
     {
       if (bibleStructure.hasSubverses())
       {
-        Logger.error("Text contains subverses, but that would require us to use our own version of osis2mod: " + bibleStructure.getAllSubverses().joinToString(", "){ Ref.rd(it).toString() } )
+        Logger.error("Text contains subverses, but that would require us to use our own version of osis2mod: " + bibleStructure.getAllSubverseRefKeys().joinToString(", "){ Ref.rd(it).toString() } )
         return
       }
     }
@@ -149,117 +147,6 @@ object Osis_BasicValidator
   }
 
 
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                           Structural checks                            **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /**
-   *  Checks the basis structure -- are all chapters within books, all verses
-   *  within chapters, etc.
-   *
-   *  @param dataCollection: Data to be processed.
-   */
-
-  fun structuralValidation (dataCollection: X_DataCollection)
-  {
-    Dbg.withProcessingBooks("Performing structural validation for ...") {
-      dataCollection.getRootNodes().forEach { structuralValidationForBook(it) }
-    }
-
-    if (m_ChaptersWithBadIds.isNotEmpty())
-      Logger.error("Chapters with bad ids: " + m_ChaptersWithBadIds.joinToString(", "))
-
-    if (m_VersesWithBadIds.isNotEmpty())
-      Logger.error("Chapters with bad ids: " + m_VersesWithBadIds.joinToString(", "))
-
-    if (m_ChaptersWithBadBookAncestor.isNotEmpty())
-      Logger.error("Chapters which are not under a book, or are under the wrong book: " + m_ChaptersWithBadBookAncestor.joinToString(", "){ Ref.rd(it).toString() })
-
-    if (m_VersesWithBadChapterAncestor.isNotEmpty())
-      Logger.error("Verses which are under the wrong chapter: " + m_VersesWithBadChapterAncestor.toSet().joinToString(", "){ Ref.rd(it).toString() })
-
-    if (m_VersesWithNoChapterAncestor.isNotEmpty())
-      Logger.error("Verses which are not under a chapter: " + m_VersesWithNoChapterAncestor.joinToString(", "){ Ref.rd(it).toString() })
-
-    if (m_VersesWhereSidAndEidDoNotAlternate.isNotEmpty())
-      Logger.error("Locations where verse sids and eids do not alternate: " + m_VersesWhereSidAndEidDoNotAlternate.joinToString(", "){ Ref.rd(it).toString() })
-
-    if (m_VersesWhereSidAndEidDoNotMatch.isNotEmpty())
-      Logger.error("Locations where verse sids and eids do not match: " + m_VersesWhereSidAndEidDoNotMatch.joinToString(", "){ Ref.rd(it).toString() })
-
-    if (m_ElidedSubverses.isNotEmpty())
-      Logger.warning("Elided subverses: " + m_ElidedSubverses.joinToString(", "){ RefRange.rdUsx(it).toString() })
-  }
-
-
-  /****************************************************************************/
-  private fun structuralValidationForBook (bookNode: Node)
-  {
-    Dbg.withProcessingBook(Osis_FileProtocol.getBookAbbreviation(bookNode)) {
-      structuralValidationForBook1(bookNode)
-    }
-  }
-
-
-  /****************************************************************************/
-  private fun structuralValidationForBook1 (bookNode: Node)
-  {
-    val bookNo = Osis_FileProtocol.readRef(Osis_FileProtocol.getBookAbbreviation(bookNode)).getB()
-    Dom.findNodesByName(bookNode, Osis_FileProtocol.tagName_chapter(), false).forEach { chapterNode ->
-      if (!Dom.hasAsAncestor(chapterNode, bookNode))
-        m_ChaptersWithBadBookAncestor.add(Osis_FileProtocol.readRef(chapterNode[Osis_FileProtocol.attrName_chapterSid()]!!).toRefKey())
-      else
-      {
-        val chapterRefKey = getRefKey(chapterNode[Osis_FileProtocol.attrName_chapterSid()]!!)
-        if (0L == chapterRefKey)
-          m_ChaptersWithBadIds.add(chapterNode[Osis_FileProtocol.attrName_chapterSid()]!!)
-        else
-        {
-          if (Ref.getB(chapterRefKey) != bookNo)
-            m_ChaptersWithBadBookAncestor.add(chapterRefKey)
-          structuralValidationForChapter(chapterNode)
-        }
-      }
-    }
-  }
-
-
-  /****************************************************************************/
-  private fun structuralValidationForChapter (chapterNode: Node)
-  {
-    val chapterRefKey = Osis_FileProtocol.readRef(chapterNode[Osis_FileProtocol.attrName_chapterSid()]!!).toRefKey()
-    val verseNodes = Dom.findNodesByName(chapterNode, Osis_FileProtocol.tagName_verse(), false)
-    verseNodes.forEach { verseNode ->
-      if (!Dom.hasAsAncestor(verseNode, chapterNode))
-        m_VersesWithNoChapterAncestor.add(Osis_FileProtocol.readRef(verseNode[Osis_FileProtocol.attrName_verseSid()]!!).toRefKey())
-      else
-      {
-        val id = if (Osis_FileProtocol.attrName_verseSid() in verseNode) Osis_FileProtocol.attrName_verseSid() else Osis_FileProtocol.attrName_verseEid()
-        val verseRefKey = getRefKey(verseNode[id]!!)
-        if (0L == verseRefKey)
-          m_VersesWithBadIds.add(chapterNode[Osis_FileProtocol.attrName_verseSid()]!!)
-        else
-        {
-          checkForElidedSubverses(verseNode)
-
-          if (Ref.rd(verseRefKey).toRefKey_bc() != chapterRefKey)
-            m_VersesWithBadChapterAncestor.add(verseRefKey)
-        }
-      }
-    }
-
-    checkVerseSidsAndEidsAlternate(verseNodes)
-  }
-
-
   /****************************************************************************/
   private fun validationForOrderingAndHoles1 (dataCollection: X_DataCollection)
   {
@@ -286,9 +173,135 @@ object Osis_BasicValidator
     val duplicateVerses = dataCollection.getBibleStructure().getDuplicateVersesForText()
     if (duplicateVerses.isNotEmpty())
     {
-      Dbg.d(dataCollection.getDocument())
       Logger.error("Locations where we have duplicate verses: " + duplicateVerses.joinToString(", "){ Ref.rd(it).toString() })
     }
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                           Structural checks                            **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+   *  Checks the basis structure -- are all chapters within books, all verses
+   *  within chapters, etc.
+   *
+   *  @param dataCollection: Data to be processed.
+   */
+
+  fun structuralValidation (dataCollection: X_DataCollection)
+  {
+    val issuesThunk = IssuesThunk()
+    Rpt.reportWithContinuation(level = 1, "Performing structural validation for ...") {
+      with(ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            asyncable {
+              val issues = Osis_BasicValidator_PerBook().processRootNode(rootNode)
+              issuesThunk.merge(issues)
+            }
+          } // forEach
+        } // run
+      } // Parallel
+    } // reportWithContinuation
+
+    if (issuesThunk.m_ChaptersWithBadIds.isNotEmpty())
+      Logger.error("Chapters with bad ids: " + issuesThunk.m_ChaptersWithBadIds.joinToString(", "))
+
+    if (issuesThunk.m_VersesWithBadIds.isNotEmpty())
+      Logger.error("Chapters with bad ids: " + issuesThunk.m_VersesWithBadIds.joinToString(", "))
+
+    if (issuesThunk.m_ChaptersWithBadBookAncestor.isNotEmpty())
+      Logger.error("Chapters which are not under a book, or are under the wrong book: " + issuesThunk.m_ChaptersWithBadBookAncestor.joinToString(", "){ Ref.rd(it).toString() })
+
+    if (issuesThunk.m_VersesWithBadChapterAncestor.isNotEmpty())
+      Logger.error("Verses which are under the wrong chapter: " + issuesThunk.m_VersesWithBadChapterAncestor.toSet().joinToString(", "){ Ref.rd(it).toString() })
+
+    if (issuesThunk.m_VersesWithNoChapterAncestor.isNotEmpty())
+      Logger.error("Verses which are not under a chapter: " + issuesThunk.m_VersesWithNoChapterAncestor.joinToString(", "){ Ref.rd(it).toString() })
+
+    if (issuesThunk.m_VersesWhereSidAndEidDoNotAlternate.isNotEmpty())
+      Logger.error("Locations where verse sids and eids do not alternate: " + issuesThunk.m_VersesWhereSidAndEidDoNotAlternate.joinToString(", "){ Ref.rd(it).toString() })
+
+    if (issuesThunk.m_VersesWhereSidAndEidDoNotMatch.isNotEmpty())
+      Logger.error("Locations where verse sids and eids do not match: " + issuesThunk.m_VersesWhereSidAndEidDoNotMatch.joinToString(", "){ Ref.rd(it).toString() })
+
+    if (issuesThunk.m_ElidedSubverses.isNotEmpty())
+      Logger.warning("Elided subverses: " + issuesThunk.m_ElidedSubverses.joinToString(", "){ RefRange.rdUsx(it).toString() })
+  }
+}
+
+
+
+
+/*******************************************************************************/
+private class Osis_BasicValidator_PerBook
+{
+  /****************************************************************************/
+  fun processRootNode (bookNode: Node): IssuesThunk
+  {
+    Rpt.reportBookAsContinuation(Osis_FileProtocol.getBookAbbreviation(bookNode))
+    structuralValidationForBook1(bookNode)
+    return m_IssuesThunk
+  }
+
+
+  /****************************************************************************/
+  private fun structuralValidationForBook1 (bookNode: Node)
+  {
+    val bookNo = Osis_FileProtocol.readRef(Osis_FileProtocol.getBookAbbreviation(bookNode)).getB()
+    Dom.findNodesByName(bookNode, Osis_FileProtocol.tagName_chapter(), false).forEach { chapterNode ->
+      if (!Dom.hasAsAncestor(chapterNode, bookNode))
+        m_IssuesThunk.m_ChaptersWithBadBookAncestor.add(Osis_FileProtocol.readRef(chapterNode[Osis_FileProtocol.attrName_chapterSid()]!!).toRefKey())
+      else
+      {
+        val chapterRefKey = getRefKey(chapterNode[Osis_FileProtocol.attrName_chapterSid()]!!)
+        if (0L == chapterRefKey)
+          m_IssuesThunk.m_ChaptersWithBadIds.add(chapterNode[Osis_FileProtocol.attrName_chapterSid()]!!)
+        else
+        {
+          if (Ref.getB(chapterRefKey) != bookNo)
+            m_IssuesThunk.m_ChaptersWithBadBookAncestor.add(chapterRefKey)
+          structuralValidationForChapter(chapterNode)
+        }
+      }
+    }
+  }
+
+
+  /****************************************************************************/
+  private fun structuralValidationForChapter (chapterNode: Node)
+  {
+    val chapterRefKey = Osis_FileProtocol.readRef(chapterNode[Osis_FileProtocol.attrName_chapterSid()]!!).toRefKey()
+    val verseNodes = Dom.findNodesByName(chapterNode, Osis_FileProtocol.tagName_verse(), false)
+    verseNodes.forEach { verseNode ->
+      if (!Dom.hasAsAncestor(verseNode, chapterNode))
+        m_IssuesThunk.m_VersesWithNoChapterAncestor.add(Osis_FileProtocol.readRef(verseNode[Osis_FileProtocol.attrName_verseSid()]!!).toRefKey())
+      else
+      {
+        val id = if (Osis_FileProtocol.attrName_verseSid() in verseNode) Osis_FileProtocol.attrName_verseSid() else Osis_FileProtocol.attrName_verseEid()
+        val verseRefKey = getRefKey(verseNode[id]!!)
+        if (0L == verseRefKey)
+          m_IssuesThunk.m_VersesWithBadIds.add(chapterNode[Osis_FileProtocol.attrName_verseSid()]!!)
+        else
+        {
+          checkForElidedSubverses(verseNode)
+
+          if (Ref.rd(verseRefKey).toRefKey_bc() != chapterRefKey)
+            m_IssuesThunk.m_VersesWithBadChapterAncestor.add(verseRefKey)
+        }
+      }
+    }
+
+    checkVerseSidsAndEidsAlternate(verseNodes)
   }
 
 
@@ -299,7 +312,7 @@ object Osis_BasicValidator
     if ('-' !in sid) return
     val rc = Osis_FileProtocol.readRefCollection(sid)
     if (rc.getLowAsRef().hasS() || rc.getHighAsRef().hasS())
-      m_ElidedSubverses.add(rc.toString())
+      m_IssuesThunk.m_ElidedSubverses.add(rc.toString())
   }
 
 
@@ -312,7 +325,7 @@ object Osis_BasicValidator
       {
         if (null != expectedId)
         {
-          m_VersesWhereSidAndEidDoNotAlternate.add(Osis_FileProtocol.readRef(verseNode[Osis_FileProtocol.attrName_verseSid()]!!).toRefKey())
+          m_IssuesThunk.m_VersesWhereSidAndEidDoNotAlternate.add(Osis_FileProtocol.readRef(verseNode[Osis_FileProtocol.attrName_verseSid()]!!).toRefKey())
           return@forEach // Equivalent of continue.
         }
 
@@ -323,40 +336,18 @@ object Osis_BasicValidator
       {
         if (null == expectedId)
         {
-          m_VersesWhereSidAndEidDoNotAlternate.add(Osis_FileProtocol.readRef(verseNode[Osis_FileProtocol.attrName_verseEid()]!!).toRefKey())
+          m_IssuesThunk.m_VersesWhereSidAndEidDoNotAlternate.add(Osis_FileProtocol.readRef(verseNode[Osis_FileProtocol.attrName_verseEid()]!!).toRefKey())
           return@forEach // Equivalent of continue.
         }
 
         if (expectedId != Osis_FileProtocol.readRefCollection(verseNode[Osis_FileProtocol.attrName_verseEid()]!!).toString())
-          m_VersesWhereSidAndEidDoNotMatch.add(Osis_FileProtocol.readRef(verseNode[Osis_FileProtocol.attrName_verseEid()]!!).toRefKey())
+          m_IssuesThunk.m_VersesWhereSidAndEidDoNotMatch.add(Osis_FileProtocol.readRef(verseNode[Osis_FileProtocol.attrName_verseEid()]!!).toRefKey())
 
         expectedId = null
       } // eid
     }
   }
 
-
-  /****************************************************************************/
-  private val m_ChaptersWithBadBookAncestor: MutableList<RefKey> = mutableListOf()
-  private val m_ChaptersWithBadIds: MutableList<String> = mutableListOf()
-  private val m_ElidedSubverses: MutableList<String> = mutableListOf()
-  private val m_VersesWhereSidAndEidDoNotAlternate: MutableList<RefKey> = mutableListOf()
-  private val m_VersesWhereSidAndEidDoNotMatch: MutableList<RefKey> = mutableListOf()
-  private val m_VersesWithBadChapterAncestor: MutableList<RefKey> = mutableListOf()
-  private val m_VersesWithBadIds: MutableList<String> = mutableListOf()
-  private val m_VersesWithNoChapterAncestor: MutableList<RefKey> = mutableListOf()
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                Private                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
 
   /****************************************************************************/
   /* Attempts to read an id (sid / eid) and returns either the resulting refkey
@@ -372,5 +363,37 @@ object Osis_BasicValidator
     {
       0
     }
+  }
+
+
+  private val m_IssuesThunk = IssuesThunk()
+}
+
+
+
+
+
+/******************************************************************************/
+private class IssuesThunk
+{
+  val m_ChaptersWithBadBookAncestor: MutableList<RefKey> = mutableListOf()
+  val m_ChaptersWithBadIds: MutableList<String> = mutableListOf()
+  val m_ElidedSubverses: MutableList<String> = mutableListOf()
+  val m_VersesWhereSidAndEidDoNotAlternate: MutableList<RefKey> = mutableListOf()
+  val m_VersesWhereSidAndEidDoNotMatch: MutableList<RefKey> = mutableListOf()
+  val m_VersesWithBadChapterAncestor: MutableList<RefKey> = mutableListOf()
+  val m_VersesWithBadIds: MutableList<String> = mutableListOf()
+  val m_VersesWithNoChapterAncestor: MutableList<RefKey> = mutableListOf()
+
+  @Synchronized fun merge (otherIssues: IssuesThunk)
+  {
+    m_ChaptersWithBadBookAncestor.addAll(otherIssues.m_ChaptersWithBadBookAncestor)
+    m_ChaptersWithBadIds.addAll(otherIssues.m_ChaptersWithBadIds)
+    m_ElidedSubverses.addAll(otherIssues.m_ElidedSubverses)
+    m_VersesWhereSidAndEidDoNotAlternate.addAll(otherIssues.m_VersesWhereSidAndEidDoNotAlternate)
+    m_VersesWhereSidAndEidDoNotMatch.addAll(otherIssues.m_VersesWhereSidAndEidDoNotMatch)
+    m_VersesWithBadChapterAncestor.addAll(otherIssues.m_VersesWithBadChapterAncestor)
+    m_VersesWithBadIds.addAll(otherIssues.m_VersesWithBadIds)
+    m_VersesWithNoChapterAncestor.addAll(otherIssues.m_VersesWithNoChapterAncestor)
   }
 }

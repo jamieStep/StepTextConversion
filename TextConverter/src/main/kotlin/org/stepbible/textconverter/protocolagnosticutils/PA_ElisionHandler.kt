@@ -9,6 +9,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefRange
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.w3c.dom.Node
 
 /****************************************************************************/
@@ -74,49 +75,32 @@ object PA_ElisionHandler: PA()
 
     extractCommonInformation(dataCollection)
     m_EmptyVerseHandler = PA_EmptyVerseHandler(dataCollection.getFileProtocol())
-    Dbg.withProcessingBooks("Expanding elisions ...") {
-      dataCollection.getRootNodes().forEach(::doIt)
-    }
-  }
+    Rpt.reportWithContinuation(level = 1, "Expanding elisions ...") {
+      with(ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach {
+            asyncable { PA_ElisonHandlerPerBook(m_FileProtocol, m_EmptyVerseHandler).processRootNode(it) }
+          } // forEach
+        } // run
+      } // Parallel
+    } // reportWithContinuation
+  } // fun
+}
 
 
 
 
-
+private class PA_ElisonHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m_EmptyVerseHandler: PA_EmptyVerseHandler)
+{
   /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                               Private                                  **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private fun doIt (rootNode: Node)
+  fun processRootNode (rootNode: Node)
   {
-    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
-
-//    rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach { chapterNode ->
-//      val verses = chapterNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())
-//      for (ix in verses.indices)
-//        if (m_FileProtocol.readRefCollection(verses[ix], m_FileProtocol.attrName_verseSid()).isRange())
-//        if ('-' in verses[ix][m_FileProtocol.attrName_verseSid()]!!)
-//          processElision(verses[ix], if (ix + 1 >= verses.size) null else verses[ix + 1], chapterNode)
-
-//      val attrNameSid = m_FileProtocol.attrName_verseSid()
-//      val chapters = rootNode.findNodesByName(m_FileProtocol.tagName_chapter())
-//      chapters.forEach { chapter ->
-//        val verses = chapter.findNodesByAttributeName(m_FileProtocol.tagName_verse(), attrNameSid)
-//        for (ix in verses.indices)
-//          if ('-' in verses[ix][attrNameSid]!!)
-//            processElision(verses[ix], if (ix + 1 >= verses.size) null else verses[ix + 1], Dom.findAncestorByNodeName(verses[ix], m_FileProtocol.tagName_chapter())!!)
-
+    Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
     val attrNameSid = m_FileProtocol.attrName_verseSid()
     val verses = rootNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), attrNameSid)
     for (ix in verses.indices)
       if ('-' in verses[ix][attrNameSid]!!)
         processElision(verses[ix], if (ix + 1 >= verses.size) null else verses[ix + 1], Dom.findAncestorByNodeName(verses[ix], m_FileProtocol.tagName_chapter())!!)
-    }
   }
 
 
@@ -148,7 +132,7 @@ object PA_ElisionHandler: PA()
      cope with a subverse range which runs across boundaries.  However, there
      are some special cases which we _can_ cope with. */
 
-   private fun getRefKeysForRefRange (sid: String): List<RefKey>
+  private fun getRefKeysForRefRange (sid: String): List<RefKey>
   {
     /**************************************************************************/
     val rc = m_FileProtocol.readRefCollection(sid)

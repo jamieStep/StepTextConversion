@@ -4,6 +4,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodesByName
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.w3c.dom.Node
 import java.util.IdentityHashMap
 
@@ -46,13 +48,19 @@ object PA_EnhancedVerseEndInsertionPreparer: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    Dbg.withReportProgressSub("Restructuring text to make reversification easier.") {
-      dataCollection.getRootNodes().forEach {
-        changeParaPToMilestone(it)                        // Possibly change para:p to milestone, to make cross-boundary markup less of an issue.
-        splitEnclosingSpanTypeNodes(it)                   // If a sid happens to be directly within a char node, split the char node so that the verse can be moved out of it.
-      }
-    }
-  }
+    Rpt.report(level = 1, "Restructuring text to make reversification easier ...")
+    with(ParallelRunning(true)) {
+      run {
+        dataCollection.getRootNodes().forEach { rootNode ->
+          asyncable {
+            Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+            changeParaPToMilestone(rootNode)      // Possibly change para:p to milestone, to make cross-boundary markup less of an issue.
+            splitEnclosingSpanTypeNodes(rootNode) // If a sid happens to be directly within a char node, split the char node so that the verse can be moved out of it.
+          } // asyncable
+        } // forEach
+      } // run
+    } // Parallel
+  } // fun
 
 
 

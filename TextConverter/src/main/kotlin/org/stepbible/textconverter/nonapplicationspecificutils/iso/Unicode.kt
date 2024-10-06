@@ -1,5 +1,7 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.iso
 
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+
 /******************************************************************************/
 /**
  * Supplies information about Unicode characters.
@@ -7,7 +9,7 @@ package org.stepbible.textconverter.nonapplicationspecificutils.iso
  * @author ARA "Jamie" Jamieson
  */
 
-object Unicode
+object Unicode: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

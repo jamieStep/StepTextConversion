@@ -2,6 +2,7 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.bibledetails
 
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 
 
 /******************************************************************************/
@@ -15,7 +16,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Config
  * @author ARA "Jamie" Jamieson
 */
 
-object BibleBookNamesTextAsSupplied: BibleBookNames()
+object BibleBookNamesTextAsSupplied: BibleBookNames(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -48,7 +49,9 @@ object BibleBookNamesTextAsSupplied: BibleBookNames()
   /****************************************************************************/
 
   /****************************************************************************/
-  init
+  init { doInit() }
+
+  @Synchronized private fun doInit ()
   {
     var bookDescriptors = ConfigData.getBookDescriptors()
     if (bookDescriptors.isEmpty()) bookDescriptors = BibleBookNamesUsx.getBookDescriptors().toMutableList()

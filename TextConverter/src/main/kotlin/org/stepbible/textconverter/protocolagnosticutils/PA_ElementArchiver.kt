@@ -3,8 +3,10 @@ package org.stepbible.textconverter.protocolagnosticutils
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.w3c.dom.Document
 import org.w3c.dom.Node
+import java.util.concurrent.ConcurrentHashMap
 
 
 /******************************************************************************/
@@ -53,8 +55,23 @@ class PA_ElementArchiver
   * @param filter Selects nodes to be archived.
   */
 
-  fun archiveElements (dataCollection: X_DataCollection, filter: (Node) -> Boolean) =
-    archiveElements(dataCollection.getDocument(), filter)
+  fun archiveElements (dataCollection: X_DataCollection, filter: (Node) -> Boolean)
+  {
+    val me = this
+
+    with(ParallelRunning(true)) {
+      run {
+        Rpt.reportWithContinuation(level = 1, "Temporarily archiving selected nodes ...") {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            asyncable {
+              Rpt.reportBookAsContinuation(dataCollection.getFileProtocol().getBookAbbreviation(rootNode))
+              PA_ElementArchiverArchivePerBook(me).processRootNode(rootNode, filter)
+            } // asyncable
+          } // forEach
+        } // reportWithContinuation
+      } // run
+    } // with
+  } // fun
 
 
   /****************************************************************************/
@@ -65,12 +82,47 @@ class PA_ElementArchiver
   * @return List of restored elements in the target document.
   */
 
-  fun restoreElements (dataCollection: X_DataCollection) = restoreElements(dataCollection.getDocument())
+  fun restoreElements (dataCollection: X_DataCollection)
+  {
+    val me = this
+
+    with(ParallelRunning(true)) {
+      run {
+        Rpt.reportWithContinuation(1, "Reinstating archived nodes if any ...") {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            asyncable {
+              Rpt.reportBookAsContinuation(dataCollection.getFileProtocol().getBookAbbreviation(rootNode))
+              PA_ElementArchiverRestorePerBook(me).processRootNode(rootNode) }
+          } // forEach
+        } // report
+      } // run
+    } // with
+  }  // fun
+
+
+
+  /****************************************************************************/
+  fun getArchives () = m_Archives
+  @Synchronized fun getNewIndex () = ++m_Index
+
+
+
+  /****************************************************************************/
+  private var m_Archives = ConcurrentHashMap<Node, Document>()
+
+
+  /****************************************************************************/
+  private companion object {
+    var m_Index = 0
+  }
+}
 
 
 
 
-
+/******************************************************************************/
+private class PA_ElementArchiverArchivePerBook (val owningArchiver: PA_ElementArchiver)
+{
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -80,61 +132,63 @@ class PA_ElementArchiver
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun archiveElements (doc: Document, filter: (Node) -> Boolean)
-  {
-    Dbg.withReportProgressSub("Temporarily archiving selected nodes.") {
-      archiveElements1(doc, filter)
-    }
-  }
-
-
-  /****************************************************************************/
   /* This is called once for each type of node to be archived.  I archive nodes
      by copying them to a temporary document, rather than simply by creating a
      list.  This is necessary because I don't just need to save nodes -- I need
      to save the structure beneath each node as well.
    */
 
-  private fun archiveElements1 (doc: Document, filter: (Node) -> Boolean)
+  fun processRootNode (rootNode: Node, filter: (Node) -> Boolean)
   {
     /**************************************************************************/
     /* Create a document to hold the archived data, and give it a root node. */
 
-    val rootNodeForArchive = Dom.createNode(m_Archive, "<jamie/>")
-    m_Archive.appendChild(rootNodeForArchive)
-
+    val doc = Dom.createDocument()
+    val rootNodeForArchive = Dom.createNode(doc, "<jamie/>")
+    doc.appendChild(rootNodeForArchive)
+    owningArchiver.getArchives()[rootNode] = doc
 
 
 
     /**************************************************************************/
-    doc.getAllNodesBelow().filter(filter).forEach {
-      val ix = (m_Index++).toString()                             // Unique index.
-      val clonedNode = Dom.cloneNode(m_Archive, it, deep = true)  // Clone the node to be archived into the temporary document.
-      removeTemporaryAttributes(clonedNode)                       // When we reinstate this later, I don't _think_ we want any temporary attributes.
-      clonedNode["_X_index"] = ix                                  // Give the clone a unique index which ties it back to the original document.
-      rootNodeForArchive.appendChild(clonedNode)                  // Store the cloned node in the temporary document.
+    rootNode.getAllNodesBelow().filter(filter).forEach { originalNode ->
+      val ix = (owningArchiver.getNewIndex()).toString()              // Unique index.
 
-      it["_X_index"] = ix                                          // Give the original node the same index we've just added to the clone.
-      Dom.deleteChildren(it)                                      // And remove the substructure.  This is the main thing which speeds up other processing.
+      val clonedNode = Dom.cloneNode(doc, originalNode, deep = true)  // Clone the node to be archived into the temporary document.
+      removeTemporaryAttributes(clonedNode)                           // When we reinstate this later, I don't _think_ we want any temporary attributes.
+      clonedNode["_X_index"] = ix                                     // Give the clone a unique index which ties it back to the original document.
+      rootNodeForArchive.appendChild(clonedNode)                      // Store the cloned node in the temporary document.
+
+      originalNode["_X_index"] = ix                                   // Give the original node the same index we've just added to the clone.
+      Dom.deleteChildren(originalNode)                                // And remove the substructure.  This is the main thing which speeds up other processing.
     }
   }
 
 
   /****************************************************************************/
-  private fun restoreElements (targetDoc: Document): List<Node>
+  private fun removeTemporaryAttributes (node: Node)
   {
-    var res: List<Node> = listOf()
-    val placeHolders = targetDoc.getAllNodesBelow().filter { "_X_index" in it } // List of all placeholders in the document into which we are reinstating things.
-    Dbg.withReportProgressSub("Reinstating archived nodes if any.") {
-      res = restoreElements(targetDoc, placeHolders)
-    }
+    fun deleteTemporaries (node: Node) = Dom.getAttributes(node).filter { it.key.startsWith("_") }. forEach { attr -> Dom.deleteAttribute(node, attr.key) }
+    node.getAllNodesBelow().filter { "_t" in it }.forEach(::deleteTemporaries)
+    deleteTemporaries(node)
+  }
+}
 
-    return res
+
+
+/******************************************************************************/
+private class PA_ElementArchiverRestorePerBook (val owningArchiver: PA_ElementArchiver)
+{
+  /****************************************************************************/
+  fun processRootNode (rootNode: Node): List<Node>
+  {
+    val placeHolders = rootNode.getAllNodesBelow().filter { "_X_index" in it } // List of all placeholders in the document into which we are reinstating things.
+    return restoreElements(rootNode, placeHolders)
   }
 
 
   /****************************************************************************/
-  private fun restoreElements (targetDoc: Document, placeHolders: List<Node>): List<Node>
+  private fun restoreElements (rootNode: Node, placeHolders: List<Node>): List<Node>
   {
     /**************************************************************************/
     if (placeHolders.isEmpty())
@@ -146,9 +200,10 @@ class PA_ElementArchiver
     /* Map index attribute of nodes in the saved document to the nodes
        themselves. */
 
+    val targetDoc = rootNode.ownerDocument
     val res: MutableList<Node> = mutableListOf()
     val map: MutableMap<Int, Node> = mutableMapOf()
-    Dom.getChildren(m_Archive.documentElement). forEach { map[it["_X_index"]!!.toInt()] = it }
+    Dom.getChildren(owningArchiver.getArchives()[rootNode]!!.documentElement). forEach { map[it["_X_index"]!!.toInt()] = it }
 
 
 
@@ -174,22 +229,5 @@ class PA_ElementArchiver
     }
 
     return res
-  }
-
-
-  /****************************************************************************/
-  private fun removeTemporaryAttributes (node: Node)
-  {
-    fun deleteTemporaries (node: Node) = Dom.getAttributes(node).filter { it.key.startsWith("_") }. forEach { attr -> Dom.deleteAttribute(node, attr.key) }
-    node.getAllNodesBelow().filter { "_t" in it }.forEach(::deleteTemporaries)
-    deleteTemporaries(node)
-  }
-
-
-  /****************************************************************************/
-  private var m_Archive = Dom.createDocument()
-
-  private companion object {
-    var m_Index = 0
   }
 }

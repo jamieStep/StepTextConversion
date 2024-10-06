@@ -105,8 +105,8 @@ stepPreprocessingRegexWhenNotStartingFromOsis	May occur multiple times.  Lines s
 stepSimplePreprocessTagModifications	A string of the form 'mapping | mapping | …' where each mapping looks like 'para:li4 -> para:li1' or  note -> specialNote to change a given _USX_ tag or tag and style attribute.  You can also specify eg tag:attr -> tag, to remove the attribute altogether.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
 stepVlCommentMarker	Used when processing VL to indicate how comments (if any) are marked in the VL text.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
 stepVlLineFormat	Regular expression which defines how lines in VL format should be parsed.   Needs to hold named capturing groups called bookAbbrev, chapter, verse and text.	UserSpecified	Optional		Regex.	File	PerTextIfNecessary
-stepPreprocessingXsltStylesheetWhenStartingFromOsis	An XSLT stylesheet used to pre-process the OSIS file where we are starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
-stepPreprocessingXsltStylesheetWhenNotStartingFromOsis	An XSLT stylesheet used to pre-process theinput data where where we are not starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
+stepPreprocessingXsltStylesheeWhenStartingFromOsis	An XSLT stylesheet used to pre-process the OSIS file where we are starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
+stepPreprocessingXsltStylesheeWhenNotStartingFromOsis	An XSLT stylesheet used to pre-process theinput data where where we are not starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
 
 
 # Process control.
@@ -114,6 +114,7 @@ stepConversionTimeReversification	If Yes, restructures the text to conform to NR
 stepManualOsis2mod	Occasionally it is impossible to get osis2mod to run under control of the program in the IDE.  This lets you pause at the point where osis2mod is required in order to run it manually.	UserSpecified	Optional	No	Yes / No.	File	PerTextIfNecessary
 stepForceUpIssue	By default, if the reason for generating a new module is the same as that used last time, the module is not up-issued.  Give this as 'yes' if you want to force the issue.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunIfNecessary
 stepOkToGenerateFootnotes	Says whether it is ok to generate footnotes (depending upon licence conditions, it may not be).	UserSpecifiedOrCalculated	Calculated	No if copyright text, otherwise yes.		File	PerTextIfNecessary	You can force the matter by overtly specifying a value.
+stepPermitParallelRunning	Says whether to permit parallel running where the processing can use it.  May, for instance, be useful to turn it off when debugging.	UserSpecified	Optional	Yes	Yes / No.	Anywhere	PerRunForDebugging
 stepReversificationFootnoteLevel	Indicates the type of footnotes to be generated on verses affected by reversification.	UserSpecified	MandatorySometimes	Basic	Basic / Academic / <Empty>.	File	PerTextIfNecessary	Needed when performing conversion time or runtime reversification.
 stepUseVernacularFormats	Used to force the processing to use vernacular formats for any references which it generates.  You will seldom want this to be Yes, because obtaining details of how references are formatted is onerous.	UserSpecified	MandatoryAlways	No	Yes / No.	File	PerTextIfNecessary
 stepValidationReportOutOfOrderAsError	Determines whether out-of-order verses are reported as an error.	UserSpecified	MandatoryAlways	Yes	Yes / No.	File	PerTextIfNecessary	Sometimes translators may deliberately put verses out of order, and we may need to accept this.  However, this works only for STEP-internal modules.

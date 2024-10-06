@@ -2,8 +2,11 @@ package org.stepbible.textconverter.protocolagnosticutils
 
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
+import org.stepbible.textconverter.protocolagnosticutils.PA_Utils.deleteLeadingAndTrailingWhitespace
+import org.stepbible.textconverter.protocolagnosticutils.PA_Utils.isExtendedWhitespace
 import org.w3c.dom.Node
 
 
@@ -49,26 +52,35 @@ object PA_CanonicalHeadingsHandler: PA()
 
   fun process (dataCollection: X_DataCollection)
   {
-    Dbg.withReportProgressSub("Handling canonical headings.") {
-      extractCommonInformation(dataCollection)
-      dataCollection.getRootNodes().forEach { it.findNodesByName("chapter").forEach(::doIt) }
-    }
+    extractCommonInformation(dataCollection)
+    Rpt.reportWithContinuation(level = 1, "Handling canonical headings ...") {
+      with(ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+            asyncable { PA_CanonicalHeadingsHandlerPerBook(m_FileProtocol).processRootNode(rootNode) }
+          } // forEach
+        } // run
+      } // Parallel
+    } // report
+  } // fun
+}
+
+
+
+
+/******************************************************************************/
+private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
+{
+  /****************************************************************************/
+  fun processRootNode (rootNode: Node)
+  {
+    rootNode.findNodesByName("chapter").forEach(::processChapter)
   }
 
 
-
-
-
   /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                                Private                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private fun doIt (chapterNode: Node)
+  private fun processChapter (chapterNode: Node)
   {
     /**************************************************************************/
     /* This gives a Pair containing two lists, the first containing all of the
@@ -86,34 +98,6 @@ object PA_CanonicalHeadingsHandler: PA()
 
     if (titleNodes.second.isNotEmpty())
       processTitlesAtEndOfChapter(titleNodes.second)
-  }
-
-
-  /****************************************************************************/
-  /* Delete contained whitespace at front or end of title. */
-
-  private fun deleteLeadingAndTrailingWhitespace (titleNode: Node)
-  {
-    /**************************************************************************/
-    val allNodes = titleNode.getAllNodesBelow()
-
-
-
-    /**************************************************************************/
-    for (n in allNodes) // Delete leading whitespace within the title.
-      if (isExtendedWhitespace(n))
-        Dom.deleteNode(n)
-      else
-        break
-
-
-
-    /**************************************************************************/
-    for (n in allNodes.reversed()) // Delete trailing whitespace within the title.
-      if (isExtendedWhitespace(n))
-        Dom.deleteNode(n)
-      else
-        break
   }
 
 
@@ -153,14 +137,6 @@ object PA_CanonicalHeadingsHandler: PA()
   }
 
 
-   /****************************************************************************/
-   /* Whitespace is represented by a number of different things by the time we
-      get here. */
-
-   private fun isExtendedWhitespace (node: Node): Boolean = Dom.isWhitespace(node) || "lb" == Dom.getNodeName(node) || ("l" == Dom.getNodeName(node) && !node.hasChildNodes())
-
-
-
   /****************************************************************************/
   /* At the end of the chapter I hope for the best, and simply turn the
      title node into hi:italic. */
@@ -190,7 +166,7 @@ object PA_CanonicalHeadingsHandler: PA()
         Dom.insertNodeAfter(titleNode, verseTags[1])
       }
 
-      else -> throw StepExceptionBase("processTitlesAtEndOfChapter: Invalid number of contained verse tags: ${verseTags.size}.")
+      else -> throw StepExceptionWithStackTraceAbandonRun("processTitlesAtEndOfChapter: Invalid number of contained verse tags: ${verseTags.size}.")
     }
   }
 
@@ -300,7 +276,7 @@ object PA_CanonicalHeadingsHandler: PA()
 
 
     /**************************************************************************/
-    titleNodesInChapter.forEach(PA_CanonicalHeadingsHandler::deleteLeadingAndTrailingWhitespace)
+    titleNodesInChapter.forEach(::deleteLeadingAndTrailingWhitespace)
 
 
 
@@ -448,7 +424,7 @@ object PA_CanonicalHeadingsHandler: PA()
         else ->
         {
           Dbg.d(titleNodesInChapter[0].ownerDocument)
-          throw StepExceptionBase("processCanonicalHeaders: Bad verse tag count: ${verseTagsInTitleNode.size} at ${Dom.getAncestorNamed(titleNodesInChapter[0], "chapter")!!}.")
+          throw StepExceptionWithStackTraceAbandonRun("processCanonicalHeaders: Bad verse tag count: ${verseTagsInTitleNode.size} at ${Dom.getAncestorNamed(titleNodesInChapter[0], "chapter")!!}.")
         }
       }
     }

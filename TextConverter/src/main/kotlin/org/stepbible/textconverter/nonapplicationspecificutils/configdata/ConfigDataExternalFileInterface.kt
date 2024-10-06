@@ -2,10 +2,11 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.forceToSingleLine
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
@@ -74,7 +75,7 @@ abstract class ConfigDataExternalFileInterfaceBase
 /****************************************************************************/
 
 /****************************************************************************/
-object ConfigDataExternalFileInterface
+object ConfigDataExternalFileInterface: ObjectInterface
 {
   /**************************************************************************/
   enum class Status { NotTried, Ok, Failed, FailedButButDontWorry }
@@ -96,7 +97,7 @@ object ConfigDataExternalFileInterface
     /**************************************************************************/
     /* We're accessing a logical name which hasn't been defined. */
 
-    val processor = m_ConfigDataExternalProcessors[selector] ?: throw StepExceptionBase("External data processor not defined: $selector")
+    val processor = m_ConfigDataExternalProcessors[selector] ?: throw StepExceptionWithStackTraceAbandonRun("External data processor not defined: $selector")
 
 
 
@@ -113,7 +114,7 @@ object ConfigDataExternalFileInterface
       catch (_: Exception)
       {
         processor.m_Status = if (processor.m_OkIfNotExists) Status.FailedButButDontWorry else Status.Failed
-        if (Status.FailedButButDontWorry != processor.m_Status) throw StepExceptionBase("Failed to open external data source: $selector / ${processor.m_Path}")
+        if (Status.FailedButButDontWorry != processor.m_Status) throw StepExceptionWithStackTraceAbandonRun("Failed to open external data source: $selector / ${processor.m_Path}")
       }
     }
 
@@ -188,7 +189,7 @@ object ConfigDataExternalFileInterface
     return when (type.lowercase())
     {
       "dbl" -> return ConfigDataExternalFileInterfaceDbl()
-      else  -> throw StepExceptionBase("Unknown external data type: $type")
+      else  -> throw StepExceptionWithStackTraceAbandonRun("Unknown external data type: $type")
     }
   }
 

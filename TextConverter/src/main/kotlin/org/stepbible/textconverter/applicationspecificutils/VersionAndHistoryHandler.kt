@@ -2,6 +2,7 @@ package org.stepbible.textconverter.applicationspecificutils
 
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import java.io.File
 import java.time.LocalDate
 
@@ -140,7 +141,7 @@ import java.time.LocalDate
  * @author ARA Jamieson
  */
 
-object VersionAndHistoryHandler
+object VersionAndHistoryHandler: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

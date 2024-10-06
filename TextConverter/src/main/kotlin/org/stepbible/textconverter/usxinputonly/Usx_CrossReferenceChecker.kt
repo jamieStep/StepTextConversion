@@ -9,7 +9,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefFormatHand
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.w3c.dom.Node
+import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType
 
 /****************************************************************************/
 /**
@@ -21,7 +23,7 @@ import org.w3c.dom.Node
  */
 
 /******************************************************************************/
-object Usx_CrossReferenceChecker: CrossReferenceChecker
+object Usx_CrossReferenceChecker: CrossReferenceChecker, ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

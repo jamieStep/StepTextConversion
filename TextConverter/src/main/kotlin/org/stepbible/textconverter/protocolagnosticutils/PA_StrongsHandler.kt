@@ -5,6 +5,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.w3c.dom.Node
 import java.util.*
 
@@ -60,23 +61,24 @@ object PA_StrongsHandler: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    Dbg.withProcessingBooks("Handling Strongs ...") {
-      dataCollection.getRootNodes().forEach(::processRootNode)
-    }
-  }
+    with(ParallelRunning(true)) {
+      run {
+        Rpt.reportWithContinuation(level = 1, "Handling Strongs ...") {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            asyncable { PA_StrongsHandlerPerBook(m_FileProtocol).processRootNode(rootNode) }
+          } // forEach
+        } //withProcessingBooks
+      } // run
+    } // with
+  } // fun
+}
 
 
 
 
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                              Private                                   **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
+/******************************************************************************/
+private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
+{
   /****************************************************************************/
   /**
   * Canonicalises Strong's markup.
@@ -85,11 +87,10 @@ object PA_StrongsHandler: PA()
   *   processed.
   */
 
-  private fun processRootNode (rootNode: Node)
+  fun processRootNode (rootNode: Node)
   {
-    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
-      processRootNode1(rootNode)
-    }
+    Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+    processRootNode1(rootNode)
   }
 
 

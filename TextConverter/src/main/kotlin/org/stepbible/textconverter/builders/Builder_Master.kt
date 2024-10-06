@@ -1,16 +1,19 @@
 package org.stepbible.textconverter.builders
 
+import org.stepbible.textconverter.applicationspecificutils.Osis_FileProtocol
+import org.stepbible.textconverter.applicationspecificutils.Usx_FileProtocol
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigDataSupport
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
-import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.io.File
 import java.nio.file.Paths
 
@@ -50,6 +53,7 @@ object Builder_Master: Builder()
 
       //CommandLineProcessor.CommandLineOption("conversionTimeReversification", 0, "Use to force conversion time restructuring (you will seldom want this).", null, null, false),
       CommandLineProcessor.CommandLineOption("forceUpIssue", 0, "Normally up-issue is suppressed if the update reason has not changed.  This lets you override this.", null, null, false),
+      CommandLineProcessor.CommandLineOption("permitParallelRunning", 1, "Permits parallel running where the processing supports it (you may want to turn it off while debugging).", listOf("yes", "no"), "yes", false),
       CommandLineProcessor.CommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true),
       CommandLineProcessor.CommandLineOption("releaseType", 1, "Type of release.", listOf("Major", "Minor"), null, true, forceLc = true),
       CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false),
@@ -68,7 +72,7 @@ object Builder_Master: Builder()
       /***********************************************************************/
       /* Debug. */
 
-      CommandLineProcessor.CommandLineOption("dbgAddDebugAttributesToNodes", 0, "Add debug attributes to nodes.", null, "no", false),
+      CommandLineProcessor.CommandLineOption("dbgAddDebugAttributesToNodes", 0, "Add debug attributes to nodes.", listOf("yes", "no"), "no", false),
       CommandLineProcessor.CommandLineOption("dbgDisplayReversificationRows", 0, "Display selected reversification rows$commonText", null, "no", false),
       CommandLineProcessor.CommandLineOption("dbgSelectBooks", 1, "Limits processing to selected books.  Either <, <=, -, >=, > followed by the USX abbreviation for a book, or else a comma-separated list of books.",null, null, false )
     )
@@ -174,10 +178,17 @@ object Builder_Master: Builder()
   /****************************************************************************/
   private fun runProcess ()
   {
-    Dbg.reportProgress(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-    Dbg.reportProgress(">>>>>>>>>> Start of processing for ${ConfigData["stepModuleName"]} (${ConfigData["stepTargetAudience"]} use).")
-
     getSpecialBuilders().forEach { it.process() } // These aren't supposed to generate a repository package, and will exit after processing if they are invoked.
+
+    Rpt.report(level = 0, ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
+    Rpt.report(level = -1, ">>>>>>>>>> Start of processing for ${ConfigData["stepModuleName"]} (${ConfigData["stepTargetAudience"]} use).")
+
+    if (ParallelRunning.isPermitted())
+    {
+      Rpt.report(level = -1, "\nParallel running: Books may legitimately be reported out of order.  Some screen output may be interleaved.")
+      //MiscellaneousUtils.initialiseAllObjectsBasedOnReflection() // Early initialisation is needed only on parallel runs.  On sequential runs, everything should just work (!)
+      MiscellaneousUtils.initialiseAllObjectsBasedOnObjectInterfaceInheritance()
+    }
 
     deleteLogFilesEtc()
     StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
@@ -194,7 +205,7 @@ object Builder_Master: Builder()
   {
     if (null == ConfigData["dbgSelectBooks"]) return
     val regex = "(?<comparison>\\W*?)(?<books>.*)".toRegex()
-    val mr = regex.matchEntire(ConfigData["dbgSelectBooks"]!!) ?: throw StepExceptionBase("Invalid 'dbgSelectBooks' parameter")
+    val mr = regex.matchEntire(ConfigData["dbgSelectBooks"]!!) ?: throw StepExceptionWithStackTraceAbandonRun("Invalid 'dbgSelectBooks' parameter")
     val books = mr.groups["books"]!!.value.replace("\\s+".toRegex(), "")
     val comparison = mr.groups["comparison"]!!.value.replace("\\s+".toRegex(), "")
     Dbg.setBooksToBeProcessed(books, comparison.ifEmpty { "=" })

@@ -10,6 +10,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.applicationspecificutils.X_FileProtocol
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.protocolagnosticutils.PA_Utils.convertToEnclosingTags
 import org.w3c.dom.Node
 
 
@@ -40,21 +42,26 @@ object Osis_ChapterAndVerseStructurePreprocessor
   
   fun process (dataCollection: X_DataCollection)
   {
-    m_FileProtocol = dataCollection.getFileProtocol()
-    Dbg.withProcessingBooks("Tidying chapters and creating missing ones if necessary ...") {
-      dataCollection.getRootNodes().forEach {
-        Dbg.withProcessingBook(it["osisID"]!!) {
-          insertMissingChapters(it)
-          tidyChapters(it)
-        }
-      }
-    }
-  }
-  
+    Rpt.reportWithContinuation(level = 1, "Tidying chapters and creating missing ones if necessary ...") {
+      with(ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            Rpt.reportBookAsContinuation(rootNode["osisID"]!!)
+            asyncable { Osis_ChapterAndVerseStructurePreprocessorPerBook(dataCollection.getFileProtocol()).processRootNode(rootNode) }
+          } // forEach
+        } // run
+      } // with
+    } // withProcessingBook
+  } // fun
+}
 
 
 
 
+
+/******************************************************************************/
+private class Osis_ChapterAndVerseStructurePreprocessorPerBook (val m_FileProtocol: X_FileProtocol)
+{
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -62,6 +69,14 @@ object Osis_ChapterAndVerseStructurePreprocessor
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  fun processRootNode (rootNode: Node)
+  {
+    insertMissingChapters(rootNode)
+    tidyChapters(rootNode)
+  }
+
 
   /****************************************************************************/
   /* Just occasionally we may have books which lack chapters -- particularly
@@ -129,53 +144,6 @@ object Osis_ChapterAndVerseStructurePreprocessor
 
 
   /****************************************************************************/
-  private fun makeEnclosingTags (parentNode: Node, tagNameToBeProcessed: String)
-  {
-    /***************************************************************************/
-    /* Create a dummy node to make processing more uniform. */
-
-    val dummyNode = Dom.createNode(parentNode.ownerDocument, "<$tagNameToBeProcessed _dummy_='y'/>")
-    parentNode.appendChild(dummyNode)
-
-
-
-    /***************************************************************************/
-    /* Locate the nodes to be processed within the overall collection. */
-
-    val allNodes = Dom.getAllNodesBelow(parentNode)
-    val indexes: MutableList<Int> = mutableListOf()
-    allNodes.indices
-      .filter { tagNameToBeProcessed == Dom.getNodeName(allNodes[it]) }
-      .forEach { indexes.add(it) }
-
-
-
-    /***************************************************************************/
-    /* Turn things into enclosing nodes. */
-
-    for (i in 0..< indexes.size - 1)
-    {
-      val targetNode = allNodes[indexes[i]]
-      val targetNodeParent = Dom.getParent(targetNode)!!
-      for (j in indexes[i] + 1 ..< indexes[i + 1])
-      {
-        val thisNode = allNodes[j]
-        if (targetNodeParent == Dom.getParent(thisNode))
-        {
-          Dom.deleteNode(thisNode)
-          targetNode.appendChild(thisNode)
-        }
-      }
-    }
-
-
-
-    /***************************************************************************/
-    Dom.deleteNode(dummyNode)
-  }
-
-
-  /****************************************************************************/
   /* Turns div:chapter into chapter.  Turns milestone chapters into enclosing
      chapters.  Makes osisID and sID the same. */
 
@@ -200,7 +168,7 @@ object Osis_ChapterAndVerseStructurePreprocessor
 
 
     /**************************************************************************/
-    makeEnclosingTags(rootNode, "chapter")
+    convertToEnclosingTags(rootNode, "chapter")
     Dom.findNodesByAttributeName(doc, "chapter","eID"). forEach(Dom::deleteNode)
 
 
@@ -208,8 +176,4 @@ object Osis_ChapterAndVerseStructurePreprocessor
     /**************************************************************************/
     //Dbg.d(doc)
   }
-
-
-  /****************************************************************************/
-  private lateinit var m_FileProtocol: X_FileProtocol
 }

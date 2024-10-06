@@ -10,10 +10,13 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.iso.IsoLanguageAndCountryCodes
 import org.stepbible.textconverter.nonapplicationspecificutils.iso.Unicode
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionNotReallyAnException
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionSilentCommandLineIssue
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.io.*
 import java.nio.file.Paths
 import java.text.SimpleDateFormat
@@ -590,21 +593,21 @@ object ConfigData
     {
       targetAudience = "step"
       if (null != optionFromCommandLine && "step" != optionFromCommandLine)
-        throw StepExceptionBase("Folder name implies this is a STEP-only build, but targetAudience on the command line says otherwise.")
+        throw StepExceptionWithStackTraceAbandonRun("Folder name implies this is a STEP-only build, but targetAudience on the command line says otherwise.")
     }
 
     else if (mayBePublic)
     {
       targetAudience = "public"
        if (null != optionFromCommandLine && "public" != optionFromCommandLine)
-         throw StepExceptionBase("Folder name implies this is a public build, but targetAudience on the command line says otherwise.")
+         throw StepExceptionWithStackTraceAbandonRun("Folder name implies this is a public build, but targetAudience on the command line says otherwise.")
     }
 
     else
     {
       targetAudience = "step"
       if ("step" != optionFromCommandLine)
-        throw StepExceptionBase("Folder name implies this is a STEP-only build, but targetAudience on the command line says otherwise.")
+        throw StepExceptionWithStackTraceAbandonRun("Folder name implies this is a STEP-only build, but targetAudience on the command line says otherwise.")
     }
 
     deleteAndPut("stepTargetAudience", targetAudience, true)
@@ -657,210 +660,218 @@ object ConfigData
   }
 
 
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                               Data-load                                **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /* Data-load _must_ occur right at the start of processing, before any thought
+     of running things in parallel, so there is no need for this portion to be
+     thread-safe. */
+
+  /****************************************************************************/
+  private val m_AlreadyLoaded: MutableSet<String> = mutableSetOf()
+  private var m_SampleText = ""
+
+
+  /****************************************************************************/
+  /**
+   * We need some sample text in order to be able to assess text direction when
+   * it is not supplied overtly.  This enables the text to be set.
+   *
+   * @param text
+   */
+
+  fun setSampleText (text: String)
+  {
+    m_SampleText = text
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Loads metadata
+   *
+   * @param rootConfigFilePath The configuration file.  If the name starts
+   *   '$jarResources/', it is assumed that it names a file within the resources
+   *   section of the present JAR file.  Otherwise, it is taken as being an
+   *   actual path name.
+   */
+
+  fun load (rootConfigFilePath: String)
+  {
+    if (m_Initialised) return // Guard against multiple initialisation.
+    m_Initialised = true
+    val configFilePath = if (File(rootConfigFilePath).isAbsolute) rootConfigFilePath else Paths.get(FileLocations.getMetadataFolderPath(), rootConfigFilePath).toString()
+    legacyPreprocessRootFile(configFilePath)
+    load(configFilePath, false) // User overrides.
+    loadDone()
+  }
+
+
+  /****************************************************************************/
+  /* Rather late in the day, I realised that we might be using this one
+     step.conf file for building both STEPBible and Public versions -- and that
+     there is no absolute guarantee that the two are going to follow the same
+     history path: the two are subject to different processing, and therefore
+     may be updated at different times and for different reasons.
+
+     I toyed with the idea of setting up separate history files for STEPBible
+     and Public history, but the more separate files we have, the more likely
+     it is that sooner or later something will be lost.  So in the end I
+     decided the best course was to continue storing all history lines in
+     step.conf, but to have one set for STEPBible and one for Public -- and
+     to simplify processing, to have both sets even in texts which, at
+     present, are generating only a single flavour of output.  That way we
+     have the necessary history should we decide to add a new flavour in future.
+
+     However, there is one further complication, in that we have to cope with
+     legacy modules, where all we have are history lines not flagged as being
+     for STEPBible or Public.  This is the purpose of the present method: it
+     pre-processes the config file, removing such lines and replacing them by
+     STEPBible and Public copies. */
+
+  private fun legacyPreprocessRootFile (rootConfigFilePath: String)
+  {
     /**************************************************************************/
+    val revised: MutableList<String> = mutableListOf()
+    val publicHistoryLines: MutableList<String> = mutableListOf()
+    val stepHistoryLines: MutableList<String> = mutableListOf()
+    var madeChanges = false
+
+
+
     /**************************************************************************/
-    /**                                                                      **/
-    /**                              Data-load                               **/
-    /**                                                                      **/
-    /**************************************************************************/
-    /**************************************************************************/
-
-    /****************************************************************************/
-    private val m_AlreadyLoaded: MutableSet<String> = mutableSetOf()
-    private var m_SampleText = ""
-
-
-    /****************************************************************************/
-    /**
-    * We need some sample text in order to be able to assess text direction when
-    * it is not supplied overtly.  This enables the text to be set.
-    *
-    * @param text
-    */
-
-    fun setSampleText (text: String)
-    {
-      m_SampleText = text
-    }
-
-
-    /****************************************************************************/
-    /**
-     * Loads metadata
-     *
-     * @param rootConfigFilePath The configuration file.  If the name starts
-     *   '$jarResources/', it is assumed that it names a file within the resources
-     *   section of the present JAR file.  Otherwise, it is taken as being an
-     *   actual path name.
-     */
-
-    fun load (rootConfigFilePath: String)
-    {
-        if (m_Initialised) return // Guard against multiple initialisation.
-        m_Initialised = true
-        val configFilePath = if (File(rootConfigFilePath).isAbsolute) rootConfigFilePath else Paths.get(FileLocations.getMetadataFolderPath(), rootConfigFilePath).toString()
-        legacyPreprocessRootFile(configFilePath)
-        load(configFilePath, false) // User overrides.
-        loadDone()
-    }
-
-
-    /****************************************************************************/
-    /* Rather late in the day, I realised that we might be using this one
-       step.conf file for building both STEPBible and Public versions -- and that
-       there is no absolute guarantee that the two are going to follow the same
-       history path: the two are subject to different processing, and therefore
-       may be updated at different times and for different reasons.
-
-       I toyed with the idea of setting up separate history files for STEPBible
-       and Public history, but the more separate files we have, the more likely
-       it is that sooner or later something will be lost.  So in the end I
-       decided the best course was to continue storing all history lines in
-       step.conf, but to have one set for STEPBible and one for Public -- and
-       to simplify processing, to have both sets even in texts which, at
-       present, are generating only a single flavour of output.  That way we
-       have the necessary history should we decide to add a new flavour in future.
-
-       However, there is one further complication, in that we have to cope with
-       legacy modules, where all we have are history lines not flagged as being
-       for STEPBible or Public.  This is the purpose of the present method: it
-       pre-processes the config file, removing such lines and replacing them by
-       STEPBible and Public copies. */
-
-    private fun legacyPreprocessRootFile (rootConfigFilePath: String)
-    {
-      /**************************************************************************/
-      val revised: MutableList<String> = mutableListOf()
-      val publicHistoryLines: MutableList<String> = mutableListOf()
-      val stepHistoryLines: MutableList<String> = mutableListOf()
-      var madeChanges = false
-
-
-
-      /**************************************************************************/
-      File(rootConfigFilePath).bufferedReader().lines().forEach {
-        if (!it.startsWith("History"))
-        {
-          revised.add(it)
-          return@forEach
-        }
-
-        if ("History_step_" in it)
-          stepHistoryLines.add(it)
-        else if ("History_public_" in it)
-          publicHistoryLines.add(it)
-        else
-        {
-          madeChanges = true
-          stepHistoryLines.add(it.replace("History_", "History_step_"))
-          publicHistoryLines.add(it.replace("History_", "History_public_"))
-        }
-      } // forEach
-
-
-
-      /**************************************************************************/
-      if (!madeChanges) return
-
-      revised.add("")
-      revised.add("")
-      revised.add("")
-      revised.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-      revised.add("#!")
-      revised.add("#! History lines.  Even if the module is currently only for one target (STEPBible")
-      revised.add("#! or Public), I store lines for both here, in case we ever change our minds.")
-      revised.add("#!")
-      revised.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-      revised.add("")
-
-      revised.addAll(stepHistoryLines)
-      revised.addAll(publicHistoryLines)
-
-      val writer = File(rootConfigFilePath).bufferedWriter()
-      revised.forEach { writer.appendLine(it) }
-      writer.close()
-    }
-
-
-    /****************************************************************************/
-    /* Need this as a separate function because $include's involve recursive
-       calls. */
-
-    private fun load (configFilePath: String, okIfNotExists: Boolean)
-    {
-        /**************************************************************************/
-        // Dbg.d("Loading config file: " + configFilePath)
-
-
-
-        /**************************************************************************/
-        /* Originally I would have regarded any attempt to load the same file twice
-           as probably indicating an error.  However, it is convenient to accept
-           this and simply not load the file a second time.  */
-
-        val inputPath = FileLocations.getInputPath(configFilePath)
-        if (m_AlreadyLoaded.contains(inputPath)) return
-        m_AlreadyLoaded.add(inputPath)
-
-
-
-        /**************************************************************************/
-        val modifiedConfigFilePath = FileLocations.getInputPath(configFilePath)
-        val sharedConfigFolderPath = FileLocations.getSharedConfigFolderPath()
-        if (Path(modifiedConfigFilePath).startsWith(Path(sharedConfigFolderPath)))
-        {
-          val x = Path(modifiedConfigFilePath.substring(sharedConfigFolderPath.length))
-          m_SharedConfigFolderPathAccesses.add(Paths.get(sharedConfigFolderPath, x.getName(0).toString()).toString())
-        }
-
-        ConfigFilesStack.push(modifiedConfigFilePath)
-
-        for (x in getConfigLines(modifiedConfigFilePath, okIfNotExists))
-        {
-          //Dbg.d("$configFilePath: $x")
-          val line = x.trim().replace("@home", System.getProperty("user.home"))
-          if (processConfigLine(line, modifiedConfigFilePath)) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
-          throw StepExceptionBase("Couldn't process config line: $line")
-        } // for
-
-        ConfigFilesStack.pop()
-
-
-        /**************************************************************************/
-        // Dbg.d("Finished loading config file: " + configFilePath)
-    }
-
-
-    /****************************************************************************/
-    /**
-    * I make provision for parameters to be stored in an environment variable
-    * named StepTextConverterParameters.  The format is:
-    *
-    *   setting;setting;setting; ...
-    *
-    * where individual settings look as they would in a config file -- key=val.
-    * If you need a semicolon within a setting, escape it using \;.  If you need
-    * a backslash, escape it as \\.
-    *
-    * Clearly you're not going to want to store too many settings this way, but
-    * there may be things -- such as the location of osis2mod -- which is more
-    * easily handled like this, rather than storing it in config files.
-    */
-
-    fun loadFromEnvironmentVariable ()
-    {
-      ConfigFilesStack.push("StepTextConverterParameters environment variable")
-
-      var parmList = System.getenv("StepTextConverterParameters") ?: return
-      parmList = parmList.replace("\\\\", "\u0001").replace("\\;", "\u0002")
-      val settings = parmList.split(";").map { it.trim().replace("\u0001", "\\").replace("\u0002", ";") }
-      settings.forEach {
-        if (!processConfigLine(it, ""))
-          throw StepExceptionBase("Couldn't parse setting from environment variable: $it")
+    File(rootConfigFilePath).bufferedReader().lines().forEach {
+      if (!it.startsWith("History"))
+      {
+        revised.add(it)
+        return@forEach
       }
 
-      ConfigFilesStack.pop()
+      if ("History_step_" in it)
+        stepHistoryLines.add(it)
+      else if ("History_public_" in it)
+        publicHistoryLines.add(it)
+      else
+      {
+        madeChanges = true
+        stepHistoryLines.add(it.replace("History_", "History_step_"))
+        publicHistoryLines.add(it.replace("History_", "History_public_"))
+      }
+    } // forEach
+
+
+
+    /**************************************************************************/
+    if (!madeChanges) return
+
+    revised.add("")
+    revised.add("")
+    revised.add("")
+    revised.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    revised.add("#!")
+    revised.add("#! History lines.  Even if the module is currently only for one target (STEPBible")
+    revised.add("#! or Public), I store lines for both here, in case we ever change our minds.")
+    revised.add("#!")
+    revised.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    revised.add("")
+
+    revised.addAll(stepHistoryLines)
+    revised.addAll(publicHistoryLines)
+
+    val writer = File(rootConfigFilePath).bufferedWriter()
+    revised.forEach { writer.appendLine(it) }
+    writer.close()
+  }
+
+
+  /****************************************************************************/
+  /* Need this as a separate function because $include's involve recursive
+     calls. */
+
+  private fun load (configFilePath: String, okIfNotExists: Boolean)
+  {
+    /**************************************************************************/
+    // Dbg.d("Loading config file: " + configFilePath)
+
+
+
+    /**************************************************************************/
+    /* Originally I would have regarded any attempt to load the same file twice
+       as probably indicating an error.  However, it is convenient to accept
+       this and simply not load the file a second time.  */
+
+    val inputPath = FileLocations.getInputPath(configFilePath)
+    if (m_AlreadyLoaded.contains(inputPath)) return
+    m_AlreadyLoaded.add(inputPath)
+
+
+
+    /**************************************************************************/
+    val modifiedConfigFilePath = FileLocations.getInputPath(configFilePath)
+    val sharedConfigFolderPath = FileLocations.getSharedConfigFolderPath()
+    if (Path(modifiedConfigFilePath).startsWith(Path(sharedConfigFolderPath)))
+    {
+      val x = Path(modifiedConfigFilePath.substring(sharedConfigFolderPath.length))
+      m_SharedConfigFolderPathAccesses.add(Paths.get(sharedConfigFolderPath, x.getName(0).toString()).toString())
     }
+
+    ConfigFilesStack.push(modifiedConfigFilePath)
+
+    for (x in getConfigLines(modifiedConfigFilePath, okIfNotExists))
+    {
+      //Dbg.d("$configFilePath: $x")
+      val line = x.trim().replace("@home", System.getProperty("user.home"))
+      if (processConfigLine(line, modifiedConfigFilePath)) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
+      throw StepExceptionWithStackTraceAbandonRun("Couldn't process config line: $line")
+    } // for
+
+    ConfigFilesStack.pop()
+
+
+    /**************************************************************************/
+    // Dbg.d("Finished loading config file: " + configFilePath)
+  }
+
+
+  /****************************************************************************/
+  /**
+   * I make provision for parameters to be stored in an environment variable
+   * named StepTextConverterParameters.  The format is:
+   *
+   *   setting;setting;setting; ...
+   *
+   * where individual settings look as they would in a config file -- key=val.
+   * If you need a semicolon within a setting, escape it using \;.  If you need
+   * a backslash, escape it as \\.
+   *
+   * Clearly you're not going to want to store too many settings this way, but
+   * there may be things -- such as the location of osis2mod -- which is more
+   * easily handled like this, rather than storing it in config files.
+   */
+
+  fun loadFromEnvironmentVariable ()
+  {
+    ConfigFilesStack.push("StepTextConverterParameters environment variable")
+
+    var parmList = System.getenv("StepTextConverterParameters") ?: return
+    parmList = parmList.replace("\\\\", "\u0001").replace("\\;", "\u0002")
+    val settings = parmList.split(";").map { it.trim().replace("\u0001", "\\").replace("\u0002", ";") }
+    settings.forEach {
+      if (!processConfigLine(it, ""))
+        throw StepExceptionWithStackTraceAbandonRun("Couldn't parse setting from environment variable: $it")
+    }
+
+    ConfigFilesStack.pop()
+  }
 
 
   /****************************************************************************/
@@ -873,711 +884,708 @@ object ConfigData
   }
 
 
-    /****************************************************************************/
-    /* Obtains the configuration lines from a given file, which may be specified
-       as being relative to the root folder, relative to the calling file (if
-       supplied) or within the JAR.
+  /****************************************************************************/
+  /* Obtains the configuration lines from a given file, which may be specified
+     as being relative to the root folder, relative to the calling file (if
+     supplied) or within the JAR.
 
-       The returned list will have had comments and blank lines removed and
-       continuation lines combined into a single line. */
+     The returned list will have had comments and blank lines removed and
+     continuation lines combined into a single line. */
 
-    private fun getConfigLines (configFilePath: String, okIfNotExists: Boolean): List<String>
+  private fun getConfigLines (configFilePath: String, okIfNotExists: Boolean): List<String>
+  {
+    /************************************************************************/
+    try
     {
-        /************************************************************************/
-        try
-        {
-            val rawLines = FileLocations.getInputStream(configFilePath)!!.bufferedReader().use { it.readText() } .lines()
-            val lines: MutableList<String> = rawLines.map{ it.split("#!")[0].trim() }.filter{ it.isNotEmpty() }.toMutableList() // Ditch comments and remove blank lines.
-            for (i in lines.size - 2 downTo 0) // Join continuation lines.
-                if (lines[i].endsWith("\\"))
-                {
-                    lines[i] = lines[i].substring(0, lines[i].length - 1) + lines[i + 1].replace(Regex("^\\s+"), "")
-                    lines[i + 1] = ""
-                }
+      val rawLines = FileLocations.getInputStream(configFilePath)!!.bufferedReader().use { it.readText() } .lines()
+      val lines: MutableList<String> = rawLines.map{ it.split("#!")[0].trim() }.filter{ it.isNotEmpty() }.toMutableList() // Ditch comments and remove blank lines.
+      for (i in lines.size - 2 downTo 0) // Join continuation lines.
+          if (lines[i].endsWith("\\"))
+          {
+            lines[i] = lines[i].substring(0, lines[i].length - 1) + lines[i + 1].replace(Regex("^\\s+"), "")
+            lines[i + 1] = ""
+          }
 
-            return lines.filter { it.isNotEmpty() }
-        }
-        catch (_: Exception)
-        {
-            if (!okIfNotExists) throw StepExceptionBase("Could not find config file $configFilePath")
-            return listOf()
-        }
+          return lines.filter { it.isNotEmpty() }
     }
-
-
-    /****************************************************************************/
-    /**
-     * Called when all defaults and metadata have been handled.
-     * <p>
-     *
-     * The method also checks that mandatory parameters have been supplied, and
-     * sets to an empty string any optional parameters which have not been
-     * supplied.
-     */
-
-    private fun loadDone()
+    catch (_: Exception)
     {
-        /**************************************************************************/
-        /* Convert any saved tag translation details to usable form. */
-
-        generateTagTranslationDetails()
+        if (!okIfNotExists) throw StepExceptionWithStackTraceAbandonRun("Could not find config file $configFilePath")
+        return listOf()
     }
+  }
 
 
-    /****************************************************************************/
-    /* Parses a line so as to determine the key and value, and stores them. */
+  /****************************************************************************/
+  /**
+   * Called when all defaults and metadata have been handled.
+   *
+   * The method also checks that mandatory parameters have been supplied, and
+   * sets to an empty string any optional parameters which have not been
+   * supplied.
+   */
 
-    private fun loadParameterSetting (line: String)
+  private fun loadDone()
+  {
+    generateTagTranslationDetails() // Convert any saved tag translation details to usable form.
+  }
+
+
+  /****************************************************************************/
+  /* Parses a line so as to determine the key and value, and stores them. */
+
+  private fun loadParameterSetting (line: String)
+  {
+    val force = line.contains("#=")
+    val parts = line.split(Regex(if (force) "\\#\\=" else "\\="), 2)
+    put(parts[0].trim(), parts[1].trim(), force)
+  }
+
+
+  /****************************************************************************/
+  /* This caters for that subset of configuration lines which can reasonably
+     turn up both in config files and in the converter's environment
+     variable. */
+
+  private fun processConfigLine (directive: String, callerFilePath: String): Boolean
+  {
+    /**************************************************************************/
+    if (directive.isEmpty())
+      return true
+
+    val lineLowerCase = directive.lowercase()
+
+
+
+    /**************************************************************************/
+    if (lineLowerCase.startsWith("\$include"))
     {
-        val force = line.contains("#=")
-        val parts = line.split(Regex(if (force) "\\#\\=" else "\\="), 2)
-        put(parts[0].trim(), parts[1].trim(), force)
-    }
-
-
-    /****************************************************************************/
-    /* This caters for that subset of configuration lines which can reasonably
-       turn up both in config files and in the converter's environment
-       variable. */
-
-    private fun processConfigLine (directive: String, callerFilePath: String): Boolean
-    {
-      /**************************************************************************/
-      if (directive.isEmpty())
-        return true
-
-      val lineLowerCase = directive.lowercase()
-
-
-
-      /**************************************************************************/
-      if (lineLowerCase.startsWith("\$include"))
-      {
-        var newFilePath = directive.replace("${'$'}includeIfExists", "")
-        newFilePath = newFilePath.replace("${'$'}include", "").trim()
-        newFilePath = expandReferences(newFilePath, false)!!
-        if (!newFilePath.startsWith("$") && !File(newFilePath).isAbsolute)
-          newFilePath = Paths.get(File(callerFilePath).parent, newFilePath).toString()
-        load(newFilePath, lineLowerCase.contains("exist"))
-        return true
-      }
-
-
-
-      /**************************************************************************/
-      if (lineLowerCase.startsWith("#vernacularbookdetails"))
-      {
-        processVernacularBibleDetails(directive)
-        return true
-      }
-
-
-
-      /**************************************************************************/
-      if (directive.matches(Regex("(?i)stepUsxToOsisTagTranslation.*")))
-      {
-        saveUsxToOsisTagTranslation(directive)
-        return true
-      }
-
-
-
-      /**************************************************************************/
-      if (directive.matches(Regex("(?i)stepExternalDataSource.*")))
-      {
-        ConfigDataExternalFileInterface.recordDataSourceMapping(directive, callerFilePath)
-        return true
-      }
-
-
-
-      /**************************************************************************/
-      if (directive.matches(Regex("(?i)copyAsIs.*")))
-      {
-        m_CopyAsIsLines.add(directive.substring(directive.indexOf("=") + 1))
-        return true
-      }
-
-
-
-      /**************************************************************************/
-      /* Retained for backward compatibility. */
-
-      if (directive.matches(Regex("(?i)stepRegex.*")))
-      {
-        processRegexLine(m_RegexesForGeneralInputPreprocessing, directive)
-        return true
-      }
-
-
-
-      /**************************************************************************/
-      if (directive.matches(Regex("(?i)stepPreprocessingRegexWhenNotStartingFromOsis.*")))
-      {
-        processRegexLine(m_RegexesForGeneralInputPreprocessing, directive)
-        return true
-      }
-
-
-
-      /**************************************************************************/
-      if (directive.matches(Regex("(?i)stepPreprocessingRegexWhenStartingFromOsis.*")))
-      {
-        processRegexLine(m_RegexesForForcedOsisPreprocessing, directive)
-        return true
-      }
-
-
-
-      /**************************************************************************/
-      if (directive.contains("=")) // I think this should account for all remaining lines.
-      {
-        var x = directive.replace("(?i)\\.totextdirection\\s*\\(\\s*\\)".toRegex(), ".#toTextDirection")
-        x = x.replace("(?i)\\.todate\\s*\\(\\s*\\)".toRegex(), ".#toDate")
-        loadParameterSetting(x)
-        return true
-      }
-
-
-
-      /**************************************************************************/
-      return false // In other words, we haven't managed to process it.
-    }
-
-
-    /****************************************************************************/
-    /* Takes a regex definition, splits it into its two elements (pattern and
-       replacement) and adds it to the regex collection.  Regexes represent
-       pattern match and replacements which are applied to incoming USX before
-       processing. */
-
-    private fun processRegexLine (collection: MutableList<Pair<Regex, String>>, line: String)
-    {
-      val x = line.substring(line.indexOf("=") + 1)
-      val (pattern, replacement) = x.split("=>")
-      collection.add(Pair(tidyVal(pattern).toRegex(), tidyVal(replacement)))
+      var newFilePath = directive.replace("${'$'}includeIfExists", "")
+      newFilePath = newFilePath.replace("${'$'}include", "").trim()
+      newFilePath = expandReferences(newFilePath, false)!!
+      if (!newFilePath.startsWith("$") && !File(newFilePath).isAbsolute)
+        newFilePath = Paths.get(File(callerFilePath).parent, newFilePath).toString()
+      load(newFilePath, lineLowerCase.contains("exist"))
+      return true
     }
 
 
 
-
-
-    /****************************************************************************/
-    /****************************************************************************/
-    /**                                                                        **/
-    /**                              Get and put                               **/
-    /**                                                                        **/
-    /****************************************************************************/
-    /****************************************************************************/
-
-    /****************************************************************************/
-    /**
-    * For use only by ConfigDataSupport.  We need to know if something is the
-    * name of an existing configuration parameter or not, but we don't want to
-    * look the thing up 'properly' and risk it being calculated and assigned a
-    * value at this point.
-    *
-    * @param purportedKey
-    * @return Value associated with key, or null if not a key.
-    */
-
-    fun checkIfIsParameterKey (purportedKey: String) = m_Metadata[purportedKey]
-
-
-    /****************************************************************************/
-    /**
-     * Deletes a given key/value pair.  Intended mainly for use during command
-     * line processing, where I need to be able to force things to their default
-     * values, but then override these forced values with new forced values for
-     * things which are not being defaulted.
-     *
-     * @param key
-     */
-
-    fun delete (key: String)
+    /**************************************************************************/
+    if (lineLowerCase.startsWith("#vernacularbookdetails"))
     {
-      if (key in m_Metadata) m_Metadata.remove(key)
-    }
-
-
-    /****************************************************************************/
-    /* Deletes any existing setting for a parameter and then applies a new
-     * setting.
-     *
-     * A little care my be required here in order to understand the 'force'
-     * setting.  The effect of deleteAndPut is to forcibly replace any existing
-     * setting with a new value.  The 'force' parameter says whether that new
-     * setting is to be regarded as a forcible one, in the sense that no attempt
-     * to revise it (other than another call to deleteAndPut) will replace it.
-     *
-     * @param key Key.
-     * @param theValue Associated value.
-     * @param force If true, later calls for this same key are ignored.
-     *
-     */
-
-    fun deleteAndPut (key: String, theValue: String, force: Boolean)
-    {
-      delete(key)
-      put(key, theValue, force)
-    }
-
-
-    /****************************************************************************/
-    /**
-    * Gets the value associated with a given key, or returns null if the key
-    * has no associated value.
-    *
-    * @param key
-    * @return Associated value or null.
-    */
-
-    operator fun get (key: String): String?
-    {
-      //Dbg.d(key, "stepAboutAsSupplied")
-      //Dbg.d(key)
-      return getInternal(key, true)
-    }
-
-
-    /****************************************************************************/
-    /**
-    * Gets the value associated with a given key, or returns the default if the
-    * key has no associated value.
-    *
-    * @param key
-    * @para dflt
-    * @return Associated value or null.
-    */
-
-    fun get (key: String, dflt: String): String
-    {
-      return getInternal(key, true) ?: dflt
-    }
-
-
-    /****************************************************************************/
-    /**
-    * The configuration data may include lines which are simply to be copied
-    * as-is to the Sword configuration file.  This returns that list.
-    *
-    * @return As-is lines.
-    */
-
-    fun getCopyAsIsLines (): List<String> = m_CopyAsIsLines
-
-
-
-    /****************************************************************************/
-    /**
-    * Gets the value associated with a given key, or throws an exception if the
-    * key has no associated value.
-    *
-    * @param key
-    * @return Associated value if any.
-    */
-
-    fun getOrError (key: String): String
-    {
-      return get(key) ?: throw StepExceptionBase("No metadata found for $key ${ConfigDataSupport.getDescriptorAsString(key)}.")
+      processVernacularBibleDetails(directive)
+      return true
     }
 
 
 
-    /****************************************************************************/
-    /**
-    * Obtains the value associated with a given key, or throws an exception if
-    * the key has no associated value.  The value is assumed to be a string
-    * representation of a Boolean -- Y(es) or T(rue) or anything else.  Returns
-    * true if the value starts with Y or T (not case-sensitive).
-    *
-    * @param key
-    * @return True or false.
-    */
-
-    fun getAsBoolean (key: String): Boolean
+    /**************************************************************************/
+    if (directive.matches(Regex("(?i)stepUsxToOsisTagTranslation.*")))
     {
-      var s = getOrError(key)
-      if (s.isEmpty()) return false
-      s = s.substring(0, 1).uppercase()
-      return s == "Y" || s == "T"
+      saveUsxToOsisTagTranslation(directive)
+      return true
     }
 
 
-    /****************************************************************************/
-    /**
-    * Obtains the value associated with a given key, or uses a default if
-    * the key has no associated value.  The value is assumed to be a string
-    * representation of a Boolean -- Y(es) or T(rue) or anything else.  Returns
-    * true if the value starts with Y or T (not case-sensitive).
-    *
-    * @param key
-    * @param dflt Default value if key has no associated value.
-    * @return True or false.
-    */
 
-    fun getAsBoolean (key: String, dflt: String): Boolean
+    /**************************************************************************/
+    if (directive.matches(Regex("(?i)stepExternalDataSource.*")))
     {
-      val s = (get(key) ?: dflt).substring(0, 1).uppercase()
-      return s == "Y" || s == "T"
+      ConfigDataExternalFileInterface.recordDataSourceMapping(directive, callerFilePath)
+      return true
     }
 
 
-    /****************************************************************************/
-    /**
-    *  Returns all of the keys from the metadata.
-    *
-    *  @return Keys.
-    */
 
-    fun getKeys () : Set<String> = m_Metadata.keys
-
-
-    /****************************************************************************/
-    /**
-    *  Returns all of the keys from the metadata which are matched by a given
-    *  function.
-    *
-    *  @param matcher
-    *  @return Keys.
-    */
-
-    fun getMatchingKeys (matcher: (String) -> Boolean) = m_Metadata.keys.filter{ matcher(it) }.toSet()
-
-
-    /****************************************************************************/
-    /**
-    *  Returns all of the keys from the metadata related to regex preprocessing
-    *  for this particular flavour of run.
-    *
-    *  @return Keys.
-    */
-
-    fun getPreprocessingRegexes () =
-      if ("osis" == ConfigData["stepOriginData"])
-        m_RegexesForForcedOsisPreprocessing
-      else
-        m_RegexesForGeneralInputPreprocessing
-
-
-    /****************************************************************************/
-    /**
-    *  Returns all of the keys from the metadata related to XSLT preprocessing
-    *  for this particular flavour of run.
-    *
-    *  @return Keys.
-    */
-
-    fun getPreprocessingXslt () =
-      if ("osis" == ConfigData["stepOriginData"])
-        get("stepPreprocessingXsltStylesheetWhenStartingFromOsis")
-      else
-        get("stepPreprocessingXsltStylesheetWhenNotStartingFromOsis")
-
-
-    /****************************************************************************/
-    /**
-     *  Checks if a given key corresponds to translatable text which has no
-     *  vernacular override, and is therefore in English.
-     *
-     *  @return True if this is the English version of a piece of translatable
-     *    text.
-     */
-
-    fun isEnglishTranslatableText (key: String) = m_EnglishDefinitions.contains(key)
-
-
-    /****************************************************************************/
-    /**
-     * Stores a given key / value pair, or overwrites an existing one.
-     *
-     * @param key Key.
-     * @param theValue Associated value.
-     * @param force If true, later calls for this same key are ignored.
-     *
-     */
-
-    fun put (key: String, theValue: String, force: Boolean)
+    /**************************************************************************/
+    if (directive.matches(Regex("(?i)copyAsIs.*")))
     {
-      /************************************************************************/
-      //Dbg.dCont(key, "stepTargetAudience")
+      m_CopyAsIsLines.add(directive.substring(directive.indexOf("=") + 1))
+      return true
+    }
 
 
 
-      /************************************************************************/
-      /* Dummy placeholder -- parameters may be included in files for reference
-         purposes, but given the value '%%%UNDEFINED', in which case it is as
-         though they had not been mentioned at all. */
+    /**************************************************************************/
+    /* Retained for backward compatibility. */
+
+    if (directive.matches(Regex("(?i)stepRegex.*")))
+    {
+      processRegexLine(m_RegexesForGeneralInputPreprocessing, directive)
+      return true
+    }
+
+
+
+    /**************************************************************************/
+    if (directive.matches(Regex("(?i)stepPreprocessingRegexWhenNotStartingFromOsis.*")))
+    {
+      processRegexLine(m_RegexesForGeneralInputPreprocessing, directive)
+      return true
+    }
+
+
+
+    /**************************************************************************/
+    if (directive.matches(Regex("(?i)stepPreprocessingRegexWhenStartingFromOsis.*")))
+    {
+      processRegexLine(m_RegexesForForcedOsisPreprocessing, directive)
+      return true
+    }
+
+
+
+    /**************************************************************************/
+    if (directive.contains("=")) // I think this should account for all remaining lines.
+    {
+      var x = directive.replace("(?i)\\.totextdirection\\s*\\(\\s*\\)".toRegex(), ".#toTextDirection")
+      x = x.replace("(?i)\\.todate\\s*\\(\\s*\\)".toRegex(), ".#toDate")
+      loadParameterSetting(x)
+      return true
+    }
+
+
+
+    /**************************************************************************/
+    return false // In other words, we haven't managed to process it.
+  }
+
+
+  /****************************************************************************/
+  /* Takes a regex definition, splits it into its two elements (pattern and
+     replacement) and adds it to the regex collection.  Regexes represent
+     pattern match and replacements which are applied to incoming USX before
+     processing. */
+
+  private fun processRegexLine (collection: MutableList<Pair<Regex, String>>, line: String)
+  {
+    val x = line.substring(line.indexOf("=") + 1)
+    val (pattern, replacement) = x.split("=>")
+    collection.add(Pair(tidyVal(pattern).toRegex(), tidyVal(replacement)))
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                              Get and put                               **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+  * For use only by ConfigDataSupport.  We need to know if something is the
+  * name of an existing configuration parameter or not, but we don't want to
+  * look the thing up 'properly' and risk it being calculated and assigned a
+  * value at this point.
+  *
+  * @param purportedKey
+  * @return Value associated with key, or null if not a key.
+  */
+
+  @Synchronized fun checkIfIsParameterKey (purportedKey: String) = m_Metadata[purportedKey]
+
+
+  /****************************************************************************/
+  /**
+   * Deletes a given key/value pair.  Intended mainly for use during command
+   * line processing, where I need to be able to force things to their default
+   * values, but then override these forced values with new forced values for
+   * things which are not being defaulted.
+   *
+   * @param key
+   */
+
+  @Synchronized fun delete (key: String)
+  {
+    if (key in m_Metadata) m_Metadata.remove(key)
+  }
+
+
+  /****************************************************************************/
+  /* Deletes any existing setting for a parameter and then applies a new
+   * setting.
+   *
+   * A little care my be required here in order to understand the 'force'
+   * setting.  The effect of deleteAndPut is to forcibly replace any existing
+   * setting with a new value.  The 'force' parameter says whether that new
+   * setting is to be regarded as a forcible one, in the sense that no attempt
+   * to revise it (other than another call to deleteAndPut) will replace it.
+   *
+   * @param key Key.
+   * @param theValue Associated value.
+   * @param force If true, later calls for this same key are ignored.
+   *
+   */
+
+  @Synchronized fun deleteAndPut (key: String, theValue: String, force: Boolean)
+  {
+    delete(key)
+    put(key, theValue, force)
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Gets the value associated with a given key, or returns null if the key
+   * has no associated value.
+   *
+   * @param key
+   * @return Associated value or null.
+   */
+
+  operator fun get (key: String): String?
+  {
+    //Dbg.d(key, "stepAboutAsSupplied")
+    //Dbg.d(key)
+    return getInternal(key, true)
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Gets the value associated with a given key, or returns the default if the
+   * key has no associated value.
+   *
+   * @param key
+   * @para dflt
+   * @return Associated value or null.
+   */
+
+  fun get (key: String, dflt: String): String
+  {
+    return getInternal(key, true) ?: dflt
+  }
+
+
+  /****************************************************************************/
+  /**
+   * The configuration data may include lines which are simply to be copied
+   * as-is to the Sword configuration file.  This returns that list.
+   *
+   * @return As-is lines.
+   */
+
+   @Synchronized fun getCopyAsIsLines (): List<String> = m_CopyAsIsLines
+
+
+
+  /****************************************************************************/
+  /**
+   * Gets the value associated with a given key, or throws an exception if the
+   * key has no associated value.
+   *
+   * @param key
+   * @return Associated value if any.
+   */
+
+  fun getOrError (key: String): String
+  {
+    return get(key) ?: throw StepExceptionWithStackTraceAbandonRun("No metadata found for $key ${ConfigDataSupport.getDescriptorAsString(key)}.")
+  }
+
+
+
+  /****************************************************************************/
+  /**
+   * Obtains the value associated with a given key, or throws an exception if
+   * the key has no associated value.  The value is assumed to be a string
+   * representation of a Boolean -- Y(es) or T(rue) or anything else.  Returns
+   * true if the value starts with Y or T (not case-sensitive).
+   *
+   * @param key
+   * @return True or false.
+   */
+
+  fun getAsBoolean (key: String): Boolean
+  {
+    var s = getOrError(key)
+    if (s.isEmpty()) return false
+    s = s.substring(0, 1).uppercase()
+    return s == "Y" || s == "T"
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Obtains the value associated with a given key, or uses a default if
+   * the key has no associated value.  The value is assumed to be a string
+   * representation of a Boolean -- Y(es) or T(rue) or anything else.  Returns
+   * true if the value starts with Y or T (not case-sensitive).
+   *
+   * @param key
+   * @param dflt Default value if key has no associated value.
+   * @return True or false.
+   */
+
+  fun getAsBoolean (key: String, dflt: String): Boolean
+  {
+    val s = (get(key) ?: dflt).substring(0, 1).uppercase()
+    return s == "Y" || s == "T"
+  }
+
+
+  /****************************************************************************/
+  /**
+   *  Returns all of the keys from the metadata.
+   *
+   *  @return Keys.
+   */
+
+  @Synchronized fun getKeys () : Set<String> = m_Metadata.keys
+
+
+  /****************************************************************************/
+  /**
+   *  Returns all of the keys from the metadata which are matched by a given
+   *  function.
+   *
+   *  @param matcher
+   *  @return Keys.
+   */
+
+  @Synchronized fun getMatchingKeys (matcher: (String) -> Boolean) = m_Metadata.keys.filter{ matcher(it) }.toSet()
+
+
+  /****************************************************************************/
+  /**
+   *  Returns all of the keys from the metadata related to regex preprocessing
+   *  for this particular flavour of run.
+   *
+   *  @return Keys.
+   */
+
+  fun getPreprocessingRegexes () =
+    if ("osis" == ConfigData["stepOriginData"])
+      m_RegexesForForcedOsisPreprocessing
+    else
+      m_RegexesForGeneralInputPreprocessing
+
+
+  /****************************************************************************/
+  /**
+   *  Returns all of the keys from the metadata related to XSLT preprocessing
+   *  for this particular flavour of run.
+   *
+   *  @return Keys.
+   */
+
+  fun getPreprocessingXslt () =
+    if ("osis" == ConfigData["stepOriginData"])
+      get("stepPreprocessingXsltStylesheetWhenStartingFromOsis")
+    else
+      get("stepPreprocessingXsltStylesheetWhenNotStartingFromOsis")
+
+
+  /****************************************************************************/
+  /**
+   *  Checks if a given key corresponds to translatable text which has no
+   *  vernacular override, and is therefore in English.
+   *
+   *  @return True if this is the English version of a piece of translatable
+   *    text.
+   */
+
+  fun isEnglishTranslatableText (key: String) = m_EnglishDefinitions.contains(key)
+
+
+  /****************************************************************************/
+  /**
+   * Stores a given key / value pair, or overwrites an existing one.
+   *
+   * @param key Key.
+   * @param theValue Associated value.
+   * @param force If true, later calls for this same key are ignored.
+   *
+   */
+
+  @Synchronized fun put (key: String, theValue: String, force: Boolean)
+  {
+    /************************************************************************/
+    //Dbg.dCont(key, "stepTargetAudience")
+
+
+
+    /************************************************************************/
+    /* Dummy placeholder -- parameters may be included in files for reference
+       purposes, but given the value '%%%UNDEFINED', in which case it is as
+       though they had not been mentioned at all. */
          
-      if ("%%%UNDEFINED" == theValue)
+    if ("%%%UNDEFINED" == theValue)
+      return
+
+
+
+    /************************************************************************/
+    ConfigDataSupport.reportIfMissingDebugInfo(key, "Put")
+
+
+
+    /************************************************************************/
+    /* If this is a 'force' setting and we already have a force setting, we
+       retain the existing one. */
+
+    if (force && key in m_Metadata && m_Metadata[key]!!.m_Force)
+    {
+      ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), "Skipped because forced value already in effect")
+      return
+    }
+
+
+
+    /************************************************************************/
+    /* If we're forcing, then it's always ok to write to the store because
+       force overrides any existing non-force value.  If we're _not_ forcing,
+       then it's ok to write only if an entry does not already exist, or if
+       any existing entry was not forced.  In other words, in general,
+       later wins. */
+
+    if (!force)
+    {
+      val tmp = m_Metadata[key]  // If we're not forcing, it's ok to store the new data if either there's no existing entry, or the existing one is not marked force.
+      if (null != tmp && tmp.m_Force)
+      {
+        ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), "Skipped because forced value already in effect")
         return
-
-
-
-      /************************************************************************/
-      ConfigDataSupport.reportIfMissingDebugInfo(key, "Put")
-
-
-
-      /************************************************************************/
-      /* If this is a 'force' setting and we already have a force setting, we
-         retain the existing one. */
-
-      if (force && key in m_Metadata && m_Metadata[key]!!.m_Force)
-      {
-         ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), "Skipped because forced value already in effect")
-         return
       }
-
-
-
-      /************************************************************************/
-      /* If we're forcing, then it's always ok to write to the store because
-         force overrides any existing non-force value.  If we're _not_ forcing,
-         then it's ok to write only if an entry does not already exist, or if
-         any existing entry was not forced.  In other words, in general,
-         later wins. */
-
-      if (!force)
-      {
-        val tmp = m_Metadata[key]  // If we're not forcing, it's ok to store the new data if either there's no existing entry, or the existing one is not marked force.
-        if (null != tmp && tmp.m_Force)
-        {
-          ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), "Skipped because forced value already in effect")
-          return
-        }
-      }
-
-
-
-      /************************************************************************/
-      /* Sort out special markers. */
-
-      val value = tidyVal(theValue)
-
-
-
-      /************************************************************************/
-      ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), null)
-      m_Metadata[key] = ParameterSetting(value, force)
     }
 
 
-    /****************************************************************************/
-    /* This should be called only directly from the external-facing methods or
-       when expanding @-references and we have a new value which needs to be
-       looked up. */
 
-    private fun getInternal (key: String, nullsOk: Boolean): String?
+    /************************************************************************/
+    /* Sort out special markers. */
+
+    val value = tidyVal(theValue)
+
+
+
+    /************************************************************************/
+    ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), null)
+    m_Metadata[key] = ParameterSetting(value, force)
+  }
+
+
+  /****************************************************************************/
+  /* This should be called only directly from the external-facing methods or
+     when expanding @-references and we have a new value which needs to be
+     looked up. */
+
+  @Synchronized private fun getInternal (key: String, nullsOk: Boolean): String?
+  {
+    /************************************************************************/
+    /* CAUTION: With something like @(stepVersificationScheme, NRSV), "NRSV"
+       is received here as though it were the key for an item of config data,
+       when in fact, of course, it's simply a default value for the @(...).
+       reportIfMissingDebugInfo therefore needs to be able to cater for this
+       possibility, and not treat it as a key. */
+
+    ConfigDataSupport.reportIfMissingDebugInfo(key, "Get")
+
+
+
+    /************************************************************************/
+    val calculated = getCalculatedValue(key)
+    if (null != calculated && "@get" !in calculated) return calculated
+
+
+
+    /************************************************************************/
+    val parmDetails = m_Metadata[key] ?: return null
+    if (null != parmDetails.m_Value && parmDetails.m_Value!!.startsWith("%%%"))
+      throw StepExceptionWithStackTraceAbandonRun("ConfigData.get for $key: value was recorded as ${parmDetails.m_Value} and no value has been supplied.")
+
+    return expandReferences(parmDetails.m_Value, nullsOk)
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Replaces any existing value.
+   *
+   * @param key Key.
+   * @param value Associated value.
+   * @param force If true, later calls for this same key are ignored.
+   */
+
+  @Synchronized fun replace (key: String, value: String, force: Boolean = false)
+  {
+    delete(key)
+    put(key, value, force)
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Sets a value, without forcing.
+   *
+   * @param key
+   * @param value
+   */
+
+  operator fun set (key: String, value: String)
+  {
+    Dbg.dCont(key, "isCopyrightText")
+    put(key, value, false)
+  }
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                   Expansion of embedded references                     **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /**************************************************************************/
+  /**
+   * Takes a string possibly containing @(...) and / or @getExternal(...) and
+   * returns the expanded form.
+   *
+   * nullsOk is relevant only where we are obtaining a single value.  If
+   * we have multiple top level values being concatenated, a null is always
+   * an error.
+   *
+   * @param theLine Line to be processed.
+   * @param nullsOk True if a null value is ok.  (Throws an exception otherwise.)
+   * @return Resulting value.
+   */
+
+  fun expandReferences (theLine: String?, nullsOk: Boolean): String?
+  {
+    val errorStack: Stack<String> = Stack()
+
+    try
     {
-      /************************************************************************/
-      /* CAUTION: With something like @(stepVersificationScheme, NRSV), "NRSV"
-         is received here as though it were the key for an item of config data,
-         when in fact, of course, it's simply a default value for the @(...).
-         reportIfMissingDebugInfo therefore needs to be able to cater for this
-         possibility, and not treat it as a key. */
-
-      ConfigDataSupport.reportIfMissingDebugInfo(key, "Get")
-
-
-
-      /************************************************************************/
-      val calculated = getCalculatedValue(key)
-      if (null != calculated && "@get" !in calculated) return calculated
-
-
-
-      /************************************************************************/
-      val parmDetails = m_Metadata[key] ?: return null
-      if (null != parmDetails.m_Value && parmDetails.m_Value!!.startsWith("%%%"))
-        throw StepExceptionBase("ConfigData.get for $key: value was recorded as ${parmDetails.m_Value} and no value has been supplied.")
-
-      return expandReferences(parmDetails.m_Value, nullsOk)
+      //Dbg.d(theLine ?: "")
+      return expandReferencesTopLevel(theLine, nullsOk, errorStack)
     }
+    catch (_: StepExceptionBase)
+    {
+      throw StepExceptionWithStackTraceAbandonRun("ConfigData error parsing: " + errorStack.joinToString(" -> "))
+    }
+  }
 
 
-    /****************************************************************************/
-    /**
-    * Replaces any existing value.
-    *
-    * @param key Key.
-    * @param value Associated value.
-    * @param force If true, later calls for this same key are ignored.
+  /**************************************************************************/
+  private val C_Pat_ExpandReferences = "(?i)(?<at>(@|@getExternal|@choose|@getTranslation))\\(\\.(\\d\\d\\d)\\.(?<content>.*?)\\.\\3\\.\\)(?<additionalProcessing>(\\.#\\w+))?".toRegex()
+  private val C_Pat_ExpandReferences_AdditionalProcessing = "(?<additionalProcessing>(\\.#\\w+))".toRegex()
+
+
+
+  /**************************************************************************/
+  /* Processes a single @-thing.  These are characterised by the fact that
+     they contain one or more elements, comma-separated, and we run across the
+     list until we find one that returns non-null.  In addition, they may
+     optionally contain a fixed string by way of default.  If present, this
+     will be preceded by '='.  Note that the default value is _not_ expanded
+     out -- it is taken as a fixed string. */
+
+  private fun expandReferenceAtThing (at: String, theLine: String, additionalProcessing: String?, errorStack: Stack<String>): String?
+  {
+    /************************************************************************/
+    val C_Evaluate = 1
+    val C_Choose = 2
+    val C_GetExternal = 3
+    val C_GetTranslation = 4
+    val atType =
+      when (at.lowercase())
+      {
+        "@" -> C_Evaluate
+        "@choose" -> C_Choose
+        "@gettranslation" -> C_GetTranslation
+        else -> C_GetExternal
+      }
+    //Dbg.d(C_Choose == atType)
+
+
+
+    /************************************************************************/
+    errorStack.push("[expandReferenceAlternative: $theLine]")
+
+
+
+    /************************************************************************/
+    /* Split off the default, if any. */
+
+    val (line, dflt) = if ("=" in theLine) theLine.split("=").map { it.trim() } else listOf(theLine, null)
+    var args = splitStringAtCommasOutsideOfParens(line!!)
+
+
+
+    /************************************************************************/
+    /* Deal with getTranslation, which is of the form
+
+         @getTranslation(key)   OR
+         @getTranslation(key, eng)
+
+       I don't really do any checking here: if there is more than one
+       argument, I simply assume that it is the second form above.
     */
 
-    fun replace (key: String, value: String, force: Boolean = false)
+    if (C_GetTranslation == atType)
+      return TranslatableFixedText.lookupText(if (1 == args.size) Language.Vernacular else Language.English, args[0])
+
+
+
+    /************************************************************************/
+    /* If this is a getExternal, the first element is the file selector. */
+
+    var fileSelector: String? = null
+    if (C_GetExternal == atType)
     {
-      delete(key)
-      put(key, value, force)
-    }
-
-
-    /****************************************************************************/
-    /**
-    * Sets a value, without forcing.
-    *
-    * @param key
-    * @param value
-    */
-
-    operator fun set (key: String, value: String)
-    {
-      put(key, value, false)
+      fileSelector = args[0]
+      args = args.subList(1, args.size)
     }
 
 
 
+    /************************************************************************/
+    /* This takes a single argument to the @-thing, and expands this one
+       argument -- not to evaluate any value associated with it, but to see
+       if it, itself, involves @-things, in which case these @-things are
+       expanded out.  This leaves us with the actual value which can be
+       used to evaluate the @-thing.  Note that this will never return a
+       null -- the caller is guaranteed to have _something_ which can be
+       evaluated. */
 
-
-    /**************************************************************************/
-    /**************************************************************************/
-    /**                                                                      **/
-    /**                  Expansion of embedded references                    **/
-    /**                                                                      **/
-    /**************************************************************************/
-    /**************************************************************************/
-
-    /**************************************************************************/
-    /**
-     * Takes a string possibly containing @(...) and / or @getExternal(...) and
-     * returns the expanded form.
-     *
-     * nullsOk is relevant only where we are obtaining a single value.  If
-     * we have multiple top level values being concatenated, a null is always
-     * an error.
-     *
-     * @param theLine Line to be processed.
-     * @param nullsOk True if a null value is ok.  (Throws an exception otherwise.)
-     * @return Resulting value.
-     */
-
-    fun expandReferences (theLine: String?, nullsOk: Boolean): String?
+    fun expandArgument (arg: String): String?
     {
-      val errorStack: Stack<String> = Stack()
+      val res = expandReferencesTopLevel(arg, false, errorStack) ?: return null // Expand out the argument itself.
+      return if (C_Choose == atType) res else expandReferenceIndividualElement(fileSelector, res, errorStack)
+    }
 
-      try
+
+
+    /**************************************************************************/
+    /* Run over the individual elements until we find a non-null. */
+
+    var res: String? = null
+    for (arg in args)
+    {
+      res = expandArgument(arg) // See if the argument contains any @-things to be expanded.  res will always be non-null.
+
+      if (null != res) // If we've found a value. there's no need to evaluate further, but we do need to see if the value needs to be post-processed.
       {
-        //Dbg.d(theLine ?: "")
-        return expandReferencesTopLevel(theLine, nullsOk, errorStack)
-      }
-      catch (_: StepExceptionBase)
-      {
-        throw StepExceptionBase("ConfigData error parsing: " + errorStack.joinToString(" -> "))
+        if (null != additionalProcessing)
+          res = specialistProcessing(res, additionalProcessing.replace(".#", ""))
+        break
       }
     }
 
 
-    /**************************************************************************/
-    private val C_Pat_ExpandReferences = "(?i)(?<at>(@|@getExternal|@choose|@getTranslation))\\(\\.(\\d\\d\\d)\\.(?<content>.*?)\\.\\3\\.\\)(?<additionalProcessing>(\\.#\\w+))?".toRegex()
-    private val C_Pat_ExpandReferences_AdditionalProcessing = "(?<additionalProcessing>(\\.#\\w+))".toRegex()
-
-
 
     /**************************************************************************/
-    /* Processes a single @-thing.  These are characterised by the fact that
-       they contain one or more elements, comma-separated, and we run across the
-       list until we find one that returns non-null.  In addition, they may
-       optionally contain a fixed string by way of default.  If present, this
-       will be preceded by '='.  Note that the default value is _not_ expanded
-       out -- it is taken as a fixed string. */
-
-    private fun expandReferenceAtThing (at: String, theLine: String, additionalProcessing: String?, errorStack: Stack<String>): String?
-    {
-      /************************************************************************/
-      val C_Evaluate = 1
-      val C_Choose = 2
-      val C_GetExternal = 3
-      val C_GetTranslation = 4
-      val atType =
-        when (at.lowercase())
-        {
-          "@" -> C_Evaluate
-          "@choose" -> C_Choose
-          "@gettranslation" -> C_GetTranslation
-          else -> C_GetExternal
-        }
-      //Dbg.d(C_Choose == atType)
-
-
-
-      /************************************************************************/
-      errorStack.push("[expandReferenceAlternative: $theLine]")
-
-
-
-      /************************************************************************/
-      /* Split off the default, if any. */
-
-      val (line, dflt) = if ("=" in theLine) theLine.split("=").map { it.trim() } else listOf(theLine, null)
-      var args = splitStringAtCommasOutsideOfParens(line!!)
-
-
-
-      /************************************************************************/
-      /* Deal with getTranslation, which is of the form
-
-           @getTranslation(key)   OR
-           @getTranslation(key, eng)
-
-         I don't really do any checking here: if there is more than one
-         argument, I simply assume that it is the second form above.
-      */
-
-      if (C_GetTranslation == atType)
-        return TranslatableFixedText.lookupText(if (1 == args.size) Language.Vernacular else Language.English, args[0])
-
-
-
-      /************************************************************************/
-      /* If this is a getExternal, the first element is the file selector. */
-
-      var fileSelector: String? = null
-      if (C_GetExternal == atType)
-      {
-        fileSelector = args[0]
-        args = args.subList(1, args.size)
-      }
-
-
-
-      /************************************************************************/
-      /* This takes a single argument to the @-thing, and expands this one
-         argument -- not to evaluate any value associated with it, but to see
-         if it, itself, involves @-things, in which case these @-things are
-         expanded out.  This leaves us with the actual value which can be
-         used to evaluate the @-thing.  Note that this will never return a
-         null -- the caller is guaranteed to have _something_ which can be
-         evaluated. */
-
-      fun expandArgument (arg: String): String?
-      {
-        val res = expandReferencesTopLevel(arg, false, errorStack) ?: return null // Expand out the argument itself.
-        return if (C_Choose == atType) res else expandReferenceIndividualElement(fileSelector, res, errorStack)
-      }
-
-
-
-      /************************************************************************/
-      /* Run over the individual elements until we find a non-null. */
-
-      var res: String? = null
-      for (arg in args)
-      {
-        res = expandArgument(arg) // See if the argument contains any @-things to be expanded.  res will always be non-null.
-
-        if (null != res) // If we've found a value. there's no need to evaluate further, but we do need to see if the value needs to be post-processed.
-        {
-          if (null != additionalProcessing)
-            res = specialistProcessing(res, additionalProcessing.replace(".#", ""))
-          break
-        }
-      }
-
-
-
-      /************************************************************************/
-      errorStack.pop()
-      return res ?: dflt
+    errorStack.pop()
+    return res ?: dflt
   }
 
 
@@ -1718,12 +1726,12 @@ object ConfigData
      if (null == res)
      {
        if (!nullsOk)
-         throw StepExceptionBase("")
+         throw StepExceptionWithStackTraceAbandonRun("")
      }
      else
      {
        if ("\b" in res)
-         throw StepExceptionBase("")
+         throw StepExceptionWithStackTraceAbandonRun("")
      }
 
 
@@ -1788,7 +1796,7 @@ object ConfigData
     /****************************************************************************/
 
     /****************************************************************************/
-    fun clearVernacularBibleDetails () = m_BookDescriptors.clear()
+    @Synchronized fun clearVernacularBibleDetails () = m_BookDescriptors.clear()
 
 
     /****************************************************************************/
@@ -1801,7 +1809,7 @@ object ConfigData
     * @return Book descriptors.
     */
 
-    fun getBookDescriptors (): List<VernacularBookDescriptor>
+    @Synchronized fun getBookDescriptors (): List<VernacularBookDescriptor>
     {
       if (m_BookDescriptors.isNotEmpty()) return m_BookDescriptors
 
@@ -1881,7 +1889,7 @@ object ConfigData
     * @param prefix The prefix for configuration parameters.
     */
 
-    fun getValuesHavingPrefix (prefix: String): Map<String, String?>
+    @Synchronized fun getValuesHavingPrefix (prefix: String): Map<String, String?>
     {
         val res: MutableMap<String, String?> = HashMap()
         m_Metadata.filterKeys { it.startsWith(prefix) }. forEach { res[it.key] = m_Metadata[it.key]!!.m_Value }
@@ -2537,7 +2545,7 @@ object ConfigData
       /************************************************************************/
       try
       {
-        File(filePath).forEachLine { if (processLine(it)) throw StepExceptionBase("")  }
+        File(filePath).forEachLine { if (processLine(it)) throw StepExceptionNotReallyAnException("")  }
       }
       catch (_: Exception)
       {

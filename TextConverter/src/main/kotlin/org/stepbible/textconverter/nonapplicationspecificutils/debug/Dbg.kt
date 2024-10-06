@@ -1,11 +1,12 @@
 /******************************************************************************/
 package org.stepbible.textconverter.nonapplicationspecificutils.debug
 
+import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNames
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.protocolagnosticutils.ReversificationDataRow
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -13,7 +14,6 @@ import java.io.File
 import java.nio.file.Paths
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
-import java.util.*
 import kotlin.system.measureTimeMillis
 
 
@@ -60,55 +60,10 @@ import kotlin.system.measureTimeMillis
  * [outputText] to output the content of a DOM, or of a text string
  * respectively.
  *
- *
- *
- *
- *
- * ## Progress reporting
- *
- * At the time of writing I'm not entirely sure I've got this nailed.  I
- * intended to use indentation to indicate when one piece of processing was
- * dependent upon another, and to have the indentation worked out automatically
- * from the arguments to the various methods.  I'm not presently sure this
- * really works.
- *
- * Anyway ...
- *
- * - You can use [reportProgress] simply to output a progress message, and
- *   one form of this method lets you indicate an indentation level.
- *   reportProgress simply outputs a message but retains no record of the
- *   fact that it has done so.
- *
- * - [withReportProgressMain] outputs a top level message, and then runs
- *   processing for which that message is relevant.  This does retain
- *   a record of the message (on a stack) which is therefore available for
- *   error reporting if the processing under its control fails.
- *
- * - [reportProgressSub] outputs a next level message, and then runs
- *   processing for which that message is relevant.  This also retains
- *   a record of the message (on a stack) which is therefore available for
- *   error reporting if the processing under its control fails.
- *
- * - [withProcessingBooks] / [withProcessingBook] handles low-level
- *   reporting where you want the new details simply to be appended to the
- *   current line on the output.  This is useful, for instance, where you
- *   are applying a given piece of processing to each of a number of books,
- *   and rather than have an output line for each book (which might give
- *   rise to an awful lot of lines) would rather have the name of the
- *   book appended to the current line.  withProcessingBook can be used
- *   only within the context of withProcessingBooks, the latter being
- *   responsible for setting things up so that withProcessingBook does the
- *   right thing, and then clearing things down again.  Both of these are
- *   wrappers around contained processing, and so details of the book being
- *   processed are available for error reporting if required.  You must make
- *   sure that no other progress reporting occurs while these are active,
- *   because other output will get muddled with the line currently being
- *   output.
- *
  * @author ARA "Jamie" Jamieson
 */
 
-object Dbg
+object Dbg: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -399,6 +354,14 @@ object Dbg
 
 
   /****************************************************************************/
+  @Synchronized fun d (dataCollection: X_DataCollection, fileName: String = "a.xml"): X_DataCollection
+  {
+    outputDom(dataCollection.convertToDoc(), fileName)
+    return dataCollection
+  }
+
+
+  /****************************************************************************/
   @Synchronized fun d (n : Node): Node
   {
     doPrint(Dom.toString(n))
@@ -414,285 +377,15 @@ object Dbg
   }
 
 
-
-
-
   /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                         Progress reporting                             **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /**
-  * Returns details of the latest message stored by [withReportProgressMain] or
-  * [withReportProgressSub].  Intended mainly for error reporting.
-  *
-  * @return Latest message.
-  */
-
-  fun getActiveProcessingId (): String = if (m_ActiveProcessingIds.isEmpty()) "" else m_ActiveProcessingIds.peek()
-
-
-  /****************************************************************************/
-  /**
-  * Pops the current message off the stack and returns it.
-  *
-  * @return What, until now, was the message at the top of the stack.
-  */
-
-  fun popActiveProcessingIds (): String = m_ActiveProcessingIds.pop()
-
-
-  /****************************************************************************/
-  /**
-   *  Pushes a new message on to the stack.
-   *
-   *  @param text Message.
-   */
-
-  fun pushActiveProcessingIds (text: String) = m_ActiveProcessingIds.push(text)
-
-
-  /****************************************************************************/
-  /**
-   * Outputs the top level of the active id stack.
-   */
-
-  @Synchronized fun reportProgress ()
+  @Synchronized fun dDomTree (n: Node, fileName: String = "a.xml"): Node
   {
-    println(getActiveProcessingId())
-  }
-
-
-  /****************************************************************************/
-  /**
-   * Outputs a string to stdout.
-   *
-   * @param s String to be written out.
-   * @param level Enables you to indent stuff consistently.  Each increment in
-   *   level gives a little bit more indentation.
-   */
-
-  @Synchronized fun reportProgress (s: String, level: Int = 0)
-  {
-    print("                    ".substring(0, 2 * level))
-    print(if (m_ReportProgressPrefix.isEmpty() || s.isEmpty()) "" else "$m_ReportProgressPrefix: ")
-    println(s)
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Sets a prefix to be used on all reportProgress outputs.
-  */
-
-  fun setReportProgressPrefix (prefix: String)
-  {
-    m_ReportProgressPrefix = prefix
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Outputs a top-level progress message, and then runs code to which that
-  * message is relevant.  The message continues to be available while the
-  * code is running, and can therefore be used in error processing.
-  *
-  * @param text Text describing the processing which is being applied.
-  * @param fn Functionality to which this message applies.
-  */
-
-  fun withReportProgressMain (text: String, fn: () -> Unit)
-  {
-    try
-    {
-      reportProgressMain(text)
-      fn()
-    }
-    finally
-    {
-      unreportProgressMain()
-    }
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Outputs a next-level progress message, and then runs code to which that
-  * message is relevant.  The message continues to be available while the
-  * code is running, and can therefore be used in error processing.
-  *
-  * @param text Text describing the processing which is being applied.
-  * @param fn Functionality to which this message applies.
-  */
-
-  fun withReportProgressSub (text: String, fn: () -> Unit)
-  {
-    try
-    {
-      reportProgressSub(text)
-      fn()
-    }
-    catch (e: Exception)
-    {
-      throw StepExceptionWithStackTraceAbandonRun(e)
-    }
-    finally
-    {
-      unreportProgressSub()
-    }
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Announces that the given 'main' object is active.
-  *
-  * @param text Text to be announced.
-  */
-
-  private fun reportProgressMain (text: String)
-  {
-    pushActiveProcessingIds(text)
-    if (text.isNotEmpty() && !text.startsWith("@")) reportProgress("\n*** $text")
-  }
-
-
-
-  /****************************************************************************/
-  /**
-  * Announces that the given subprocessing is active.
-  *
-  * @param text String to be added to string at top of stack and used as output.
-  */
-
-  private fun reportProgressSub (text: String)
-  {
-    val s = "- $text"
-    pushActiveProcessingIds(s)
-    if (text.isNotEmpty() && !text.startsWith("@")) reportProgress(s)
-  }
-
-  private fun unreportProgressMain () = popActiveProcessingIds()
-  private fun unreportProgressSub  () = popActiveProcessingIds()
-
-
-
-
-  /****************************************************************************/
-  private val m_ActiveProcessingIds: Stack<String> = Stack()
-
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**     Progress reporting of multiple low-level associated outputs        **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /*
-     The functionality in this section is intended for use where we want to
-     give very low-level progress reports -- typically when applying the same
-     processing to all books in turn, when we want the individual books to be
-     listed all on the same line.
-
-     Note that this cannot be used if you anticipate having additional progress
-     output within the processing for each book, because that will become
-     muddled up with the single-line output being generated here.
-
-     Strictly referring to this as processing for books is misleading, because
-     it could be used for other things (and at present I am also using it to
-     report processing of reversification data lines).  However, its main use
-     is likely to be for books.
-  */
-  /****************************************************************************/
-
-  /****************************************************************************/
-  /**
-  * Arranges for a block of code to be run in a context where the processing of
-  * individual books can be reported on a single line.
-  *
-  * <span class='important'>Don't use this if you anticipate the processing of
-  * the individual book outputting additional progress information of its own --
-  * the aim here is to list all of the books on a single line, and if additional
-  * output is being generated, that output will become muddled up with the
-  * output generated here.</span>
-  *
-  * @param text Text which appears at the start of the output line to indicate
-  *   what processing is being applied.
-  * @param fn Processing to be run under control of the present method.
-  */
-
-  fun withProcessingBooks (text: String, fn: () -> Unit)
-  {
-    withReportProgressSub("@$text") {
-      withProcessingBooksStart("- $text")
-      fn()
-      withProcessingBooksEnd()
-    }
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Announces that a given book is being processed (or typically that a given
-  * book is being processed -- there's nothing to stop you using for other
-  * things too.  The supplied text is appended to the end of the output line
-  * on the screen, suitably spaced.
-  *
-  * @text Text to be output.
-  * @fn Processing to be run under control of the present method.
-  */
-
-  fun withProcessingBook (text: String, fn: () -> Unit)
-  {
-    try {
-      m_BookBeingProcessedStack.push(text)
-      print(m_WithProcessingBookPrefix)
-      print(" $text")
-      m_WithProcessingBookPrefix = ""
-      fn()
-    }
-    catch (e: Exception)
-    {
-      println(); println(); println()
-      System.err.println("Error occurred while processing ${m_BookBeingProcessedStack.peek()}.")
-      throw(e)
-    }
-    finally {
-      m_BookBeingProcessedStack.pop()
-    }
-  }
-
-
-  /****************************************************************************/
-  val m_BookBeingProcessedStack: Stack<String> = Stack()
-  var m_WithProcessingBookPrefix: String = ""
-
-
-  /****************************************************************************/
-  /* At the end of the run of books or whatever, we need to force the output
-     on to a new line.*/
-
-  private fun withProcessingBooksEnd () = println()
-
-
-  /****************************************************************************/
-  /* At the start of processing we merely record details of the prefix which
-     is to be written at the start of the input line to record what processing
-     is being applied. */
-
-  private fun withProcessingBooksStart (prefix: String)
-  {
-    m_WithProcessingBookPrefix = prefix
+    // d(n); Dom.getChildren(n).forEach { d(it) }
+    val doc = Dom.createDocument()
+    val nn = doc.importNode(n, true)
+    doc.appendChild(nn)
+    outputDom(doc, fileName)
+    return n
   }
 
 

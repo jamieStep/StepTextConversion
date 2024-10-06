@@ -7,9 +7,10 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLo
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.io.BufferedWriter
 import java.io.File
 
@@ -56,7 +57,7 @@ object Builder_InitialOsisRepresentationFromImp: Builder()
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun banner () = "Converting InputImp to InternalOsis"
+  override fun banner () = "Converting InputImp to initial OSIS"
   override fun commandLineOptions () = null
 
 
@@ -89,14 +90,8 @@ object Builder_InitialOsisRepresentationFromImp: Builder()
   /****************************************************************************/
   override fun doIt ()
   {
-    Dbg.withReportProgressMain(banner(), ::doIt1)
-  }
-
-
-  /****************************************************************************/
-  private fun doIt1 ()
-  {
     /**************************************************************************/
+    Rpt.report(level = 0, banner())
     val inFile = BuilderUtils.getInputFiles(FileLocations.getInputImpFolderPath(), FileLocations.getFileExtensionForImp(), 1)[0]
 
 
@@ -306,7 +301,7 @@ object Builder_InitialOsisRepresentationFromImp: Builder()
   /****************************************************************************/
   private fun matchReferenceLine (line: String): MatchResult
   {
-    val m = C_BookChapterVerseHeader.matchEntire(line.substring(3)) ?: throw StepExceptionBase("Invalid IMP line: $line")
+    val m = C_BookChapterVerseHeader.matchEntire(line.substring(3)) ?: throw StepExceptionWithStackTraceAbandonRun("Invalid IMP line: $line")
     return m
   }
 

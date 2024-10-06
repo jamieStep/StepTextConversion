@@ -33,6 +33,14 @@ package org.stepbible.textconverter.nonapplicationspecificutils.bibledetails
 *  opinion between USX and OSIS (and presumably other texts as well) as to which
 *  books should be supported in the DC.
 *
+*
+*
+*
+*
+*  ## Parallel running
+*
+*  All of the items in this package are thread safe I believe.
+*
 * @author ARA 'Jamie' Jamieson
 */
 

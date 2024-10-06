@@ -9,6 +9,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import java.io.BufferedWriter
 import java.io.File
 
@@ -97,19 +98,13 @@ object Builder_InitialOsisRepresentationFromVl: Builder()
   /****************************************************************************/
   override fun doIt ()
   {
-    Dbg.withReportProgressMain(Builder_InitialOsisRepresentationFromUsx.banner(), ::doIt1)
-  }
-
-  
-  /****************************************************************************/
-  private fun doIt1 ()
-  {
     /**************************************************************************/
-    val inFile = BuilderUtils.getInputFiles(FileLocations.getInputVlFolderPath(),FileLocations.getFileExtensionForVl(), 1)[0]
+    Rpt.report(0, Builder_InitialOsisRepresentationFromUsx.banner())
 
 
 
     /**************************************************************************/
+    val inFile = BuilderUtils.getInputFiles(FileLocations.getInputVlFolderPath(),FileLocations.getFileExtensionForVl(), 1)[0]
     val osisFilePath = BuilderUtils.createExternalOsisFolderStructure()
     m_Writer = File(osisFilePath).bufferedWriter()
 
@@ -147,7 +142,7 @@ object Builder_InitialOsisRepresentationFromVl: Builder()
     /**************************************************************************/
     ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(groupedLines.keys.toList()) // The argument gives us the list of book numbers.
     writeln(Osis_Utils.fileHeader(groupedLines.keys.map { it }))
-    Dbg.withProcessingBooks("Creating books ...") {
+    Rpt.reportWithContinuation(level = 1, "Creating books ...") {
       groupedLines.keys.forEach {
         processBook(groupedLines[it]!!)
       }
@@ -178,11 +173,10 @@ object Builder_InitialOsisRepresentationFromVl: Builder()
    {
      val bookNo = BibleBookNamesUsx.abbreviatedNameToNumber(parsedLines[0].m_UbsBookAbbreviation)
      val bookNameOsis = BibleBookNamesOsis.numberToAbbreviatedName(bookNo)
-     Dbg.withProcessingBook(bookNameOsis) {
-       bookHeader(bookNameOsis)
-       parsedLines.groupBy { Integer.parseInt(it.m_ChapterNo) }. forEach { processChapter(bookNameOsis, it.value) }
-       bookTrailer()
-     }
+     Rpt.reportBookAsContinuation(bookNameOsis)
+     bookHeader(bookNameOsis)
+     parsedLines.groupBy { Integer.parseInt(it.m_ChapterNo) }. forEach { processChapter(bookNameOsis, it.value) }
+     bookTrailer()
    }
 
 

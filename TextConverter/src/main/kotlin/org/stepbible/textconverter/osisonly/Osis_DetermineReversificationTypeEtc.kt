@@ -5,7 +5,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Vers
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 
 
 /******************************************************************************/
@@ -34,7 +36,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.Ste
 * @author ARA "Jamie" Jamieson
 */
 
-object Osis_DetermineReversificationTypeEtc
+object Osis_DetermineReversificationTypeEtc: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -82,7 +84,7 @@ object Osis_DetermineReversificationTypeEtc
   private fun doIt ()
   {
     /**************************************************************************/
-    Dbg.reportProgress("\nDetermining reversification requirements etc.")
+    Rpt.report(level = 1, "Determining reversification requirements etc.")
 
 
 
@@ -99,7 +101,7 @@ object Osis_DetermineReversificationTypeEtc
       true ->
       {
         if ("public" == targetAudience)
-          throw StepExceptionBase("Target audience cannot be Public if the text is marked as being copyright.")
+          throw StepExceptionWithStackTraceAbandonRun("Target audience cannot be Public if the text is marked as being copyright.")
         isCopyrightText = true
       }
       
@@ -109,7 +111,7 @@ object Osis_DetermineReversificationTypeEtc
       null ->
       {
         if ("public" == targetAudience)
-          throw StepExceptionBase("If target audience is Public you must overtly set stepIsCopyrightText to confirm this is not a copyright text.")
+          throw StepExceptionWithStackTraceAbandonRun("If target audience is Public you must overtly set stepIsCopyrightText to confirm this is not a copyright text.")
         isCopyrightText = "step" == targetAudience // Assume we have a copyright text if creating a STEP-only module.
       }  
     }
@@ -127,10 +129,10 @@ object Osis_DetermineReversificationTypeEtc
       "none" ->
       {
         if ("step" == targetAudience)
-          throw StepExceptionBase("Must apply run-time reversification when the target audience is STEP.")
+          throw StepExceptionWithStackTraceAbandonRun("Must apply run-time reversification when the target audience is STEP.")
 
         if ("public" == targetAudience && forcedVersificationScheme.isEmpty())
-          throw StepExceptionBase("If you are building a public module without reversification, you must specify a Crosswire versification scheme.")
+          throw StepExceptionWithStackTraceAbandonRun("If you are building a public module without reversification, you must specify a Crosswire versification scheme.")
       }
 
       "runtime" ->
@@ -138,12 +140,12 @@ object Osis_DetermineReversificationTypeEtc
         ConfigData.delete("stepVersificationScheme")
 
         if ("public" == targetAudience)
-          throw StepExceptionBase("Applying samification, so you can't create a public module.")
+          throw StepExceptionWithStackTraceAbandonRun("Applying samification, so you can't create a public module.")
       }
 
       "conversiontime" ->
       {
-        throw StepExceptionBase("Conversion-time reversification probably no longer wanted.  If we reinstate this, note we can't convert to Crosswire NRSV, because that's not NRSV-compliant.")
+        throw StepExceptionWithStackTraceAbandonRun("Conversion-time reversification probably no longer wanted.  If we reinstate this, note we can't convert to Crosswire NRSV, because that's not NRSV-compliant.")
       }
     }
 
@@ -289,7 +291,7 @@ object Osis_DetermineReversificationTypeEtc
 
   private fun setConversionTimeRestructuring (versificationScheme: String)
   {
-    throw StepExceptionBase("Needs more thought.  We thought we could do conversion-time restructuring and then use Crosswire osis2mod.  But we can't, because we'd have to target NRSV, and Crosswire NRSV isn't NRSV-compliant.")
+    throw StepExceptionWithStackTraceAbandonRun("Needs more thought.  We thought we could do conversion-time restructuring and then use Crosswire osis2mod.  But we can't, because we'd have to target NRSV, and Crosswire NRSV isn't NRSV-compliant.")
 //    ConfigData.deleteAndPut("stepReversificationType", "conversiontime", force = true)
 //    ConfigData.deleteAndPut("stepOsis2modType", "crosswire", force = true)
 //    ConfigData.deleteAndPut("stepVersified", "No", force = true)

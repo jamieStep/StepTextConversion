@@ -1,7 +1,7 @@
 package org.stepbible.textconverter.applicationspecificutils
 
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
-import org.w3c.dom.Document
+import org.w3c.dom.Node
 
 /******************************************************************************/
 /**
@@ -59,25 +59,50 @@ object Osis_BasicTweaker: BasicProtocolTweaker
   /****************************************************************************/
 
   /****************************************************************************/
-  override fun process (dataCollection: X_DataCollection) = process(dataCollection.getDocument())
-
-
-  /****************************************************************************/
   /**
   * Carries out any general simplifications to make subsequent processing
   * easier.
   *
-  * @param doc
+  * @param dataCollection
   */
 
-  fun process (doc: Document)
+  override fun process (dataCollection: X_DataCollection)
   {
-    /**************************************************************************/
-    /* OSIS supports (or strictly, _requires_) that bullet-point lists and
-       poetry tags be wrapped in enclosing tags.  These get in the way of other
-       processing and don't actually seem to be relevant to whether things work
-       or not, so it's convenient to ditch them. */
+    with(ParallelRunning(true)) {
+      run {
+        dataCollection.getRootNodes().forEach { rootNode ->
+          asyncable { Osis_BasicTweakerPerBook().processRootNode(rootNode) }
+        } // forEach
+      } // run
+    } // with
+  } // fun
+}
 
-    doc.findNodesByName("lg").forEach { Dom.promoteChildren(it); Dom.deleteNode(it) }
+
+
+
+private class Osis_BasicTweakerPerBook
+{
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                Private                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  fun processRootNode (rootNode: Node)
+  {
+    process_lg(rootNode)
   }
+
+
+  /****************************************************************************/
+  /* OSIS supports (or strictly, _requires_) that bullet-point lists and
+     poetry tags be wrapped in enclosing tags.  These get in the way of other
+     processing and don't actually seem to be relevant to whether things work
+     or not, so it's convenient to ditch them. */
+
+  private fun process_lg (rootNode: Node) = rootNode.findNodesByName("lg").forEach { Dom.promoteChildren(it); Dom.deleteNode(it) }
 }

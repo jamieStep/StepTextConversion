@@ -6,8 +6,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefRange
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Node
 
 /****************************************************************************/
@@ -87,23 +88,24 @@ object PA_TableHandler: PA()
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
-    Dbg.withProcessingBooks("Handling tables ...") {
-      dataCollection.getRootNodes().forEach(::processRootNode)
-    }
+    Rpt.reportWithContinuation(level = 1, "Handling tables ...") {
+      with(ParallelRunning(true)) {
+        run {
+          dataCollection.getRootNodes().forEach { rootNode ->
+            asyncable { PA_TableHandlerPerBook(m_FileProtocol).processRootNode(rootNode) }
+          } // forEach
+        } // run
+      } // parallel
+    } // reportWithContinuation
   }
+}
   
   
   
   
-  
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                              Private                                   **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
+/******************************************************************************/
+private class PA_TableHandlerPerBook (val m_FileProtocol: X_FileProtocol)
+{
   /****************************************************************************/
   /**
   * Processes all tables.
@@ -112,19 +114,16 @@ object PA_TableHandler: PA()
   *   processing.
   */
 
-  private fun processRootNode (rootNode: Node)
+  fun processRootNode (rootNode: Node)
   {
-    Dbg.withProcessingBook(m_FileProtocol.getBookAbbreviation(rootNode)) {
-      //Dbg.outputDom(rootNode.ownerDocument)
-
-      m_RootNode = rootNode
-      val tableNodes = Dom.findNodesByName(rootNode, m_FileProtocol.tagName_table(), false)
-      tableNodes.forEach {
-        if (Dom.findNodesByName(it, "verse", false).any())
-          restructureTablesConvertToElidedForm(it)
-        else
-          reformatTableWhichDidNotRequireElision(it)
-      }
+    Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
+    m_RootNode = rootNode
+    val tableNodes = Dom.findNodesByName(rootNode, m_FileProtocol.tagName_table(), false)
+    tableNodes.forEach {
+      if (Dom.findNodesByName(it, "verse", false).any())
+        restructureTablesConvertToElidedForm(it)
+      else
+        reformatTableWhichDidNotRequireElision(it)
     }
 
     //Dbg.outputDom(rootNode.ownerDocument)
@@ -218,6 +217,7 @@ object PA_TableHandler: PA()
        necessary. */
 
     val owningVerseSid = identifyAndPositionTableOwnerNode(table)
+    val verseRefKeysContainedInTable = mutableListOf(m_FileProtocol.getSidAsRefKey(owningVerseSid))
 
 
 
@@ -231,6 +231,7 @@ object PA_TableHandler: PA()
     var lastSidWithinTable: String? = null
     fun replaceVerseWithBoundaryMarker (sid: Node)
     {
+      verseRefKeysContainedInTable.add(m_FileProtocol.getSidAsRefKey(sid))
       val sidText = sid[m_FileProtocol.attrName_verseSid()]!!
       lastSidWithinTable = sidText
       val markerText = TranslatableFixedText.stringFormat(Language.Vernacular, "V_tableElision_verseBoundary", m_FileProtocol.readRef(sidText))
@@ -241,6 +242,7 @@ object PA_TableHandler: PA()
     }
 
     table.findNodesByName(m_FileProtocol.tagName_verse()).forEach { replaceVerseWithBoundaryMarker(it) }
+    NodeMarker.setTableRefKeys(owningVerseSid, verseRefKeysContainedInTable.joinToString(","))
 
 
 
@@ -331,7 +333,7 @@ object PA_TableHandler: PA()
     if (null == res)
     {
       Logger.error(ref.toRefKey(), "Table: Failed to find owning verse at or about $ref")
-      throw StepExceptionBase("Table: Failed to find owning verse at or about $ref")
+      throw StepExceptionWithStackTraceAbandonRun("Table: Failed to find owning verse at or about $ref")
     }
 
     NodeMarker.setTableOwnerType(res, "wasLastVerseBeforeTable")
