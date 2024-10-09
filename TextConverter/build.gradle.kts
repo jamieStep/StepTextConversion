@@ -6,7 +6,7 @@ import org.jetbrains.dokka.base.DokkaBaseConfiguration
 /******************************************************************************/
 // DON'T FORGET TO CHANGE ME !!!
 
-version = "4.0.0"
+version = "4.0.3"
 
 
 /******************************************************************************/
@@ -84,14 +84,14 @@ application {
 
 tasks.jar {
         excludes.addAll(listOf("META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA"))
-        archiveBaseName.set("TextConverter")    // Base name of your JAR
+        archiveBaseName.set("TextConverter")            // Base name of your JAR
         archiveVersion.set(project.version.toString())  // Use the project version
 
         manifest {
             attributes(
                 "Main-Class" to "org.stepbible.textconverter.MainKt",
                 "Implementation-Version" to project.version,
-                "Latest-Update-Reason" to "Add support for parallel processing."
+                "Latest-Update-Reason" to "Misc fixes."
             )
         }
 

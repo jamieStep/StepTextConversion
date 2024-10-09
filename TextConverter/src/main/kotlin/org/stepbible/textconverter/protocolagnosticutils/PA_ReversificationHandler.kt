@@ -1187,35 +1187,36 @@ open class PA_ReversificationHandler protected constructor (): PA()
     /**************************************************************************/
     /* Time was when we would only ever have a single chunk of text, and either
        zero or one associated reference, which appeared after the text.  This
-       is not longer the case.  We may have one or two chunks of text; and
-       there may or may not be a reference associated with either or both of
-       them, and references may occur either at the front or the end. */
+       is no longer the case.  I assume here that we may have ...
 
-    if (content.endsWith(".%.")) content = content.substring(0, content.length - 3) + "%."
-    val textParts = content.split("%")
-    val refs: MutableList<String> = mutableListOf()
-    val texts: MutableList<String> = mutableListOf()
-    for (i in textParts.indices step 2)
+       a) Just a single piece of text within %-signs, being a lookup string for
+          vernacular text which has no associated reference.
+
+       b) A list starting with a ref, and then alternating between refs and
+          %-delimited strings.
+
+       c) A list starting with a %-delimited string, and then alternative
+          between refs and %-delimited strings.
+
+       I assume also that with the exception of case 1 above, every %-delimited
+       string does have an associated ref, and that the ref precedes the string
+       if the very first element is a non-delimited string (which I take to be
+       a ref), or else the ref follows the string. */
+
+    if (content.endsWith(".")) content = content.substring(0, content.length - 1) // Remove trailing punctuation.  We'll add it to all strings later.
+    content = content.replace(".%", "%") // Don't want punctuation inside text which we will use as lookup keys.
+
+    val elts = content.split("%") // Numbering from zero, even number elts are either empty or are refs; odd number elts are lookup keys.
+    val offsetToCorrespondingReference = if (elts[0].isEmpty()) +1 else -1
+    for (ix in 1 ..< elts.size step 2) // Pick up the lookup keys.  Each is assumed at this point to have an associated reference
     {
-      refs.add(textParts[i].trim())
-      texts.add(if (i + 1 < textParts.size) textParts[i + 1] else "")
+      val lookupKey = elts[ix]
+      val ref = elts[ix + offsetToCorrespondingReference]
+      res += " " + getFootnoteContent(lookupKey, ref)
     }
 
-    for (i in texts.indices)
-      if (texts[i].isNotEmpty())
-      {
-        val thisChunk: String
-        val x = TranslatableFixedText.lookupText(Language.Vernacular, getTextKey(texts[i]))
-
-        thisChunk = if (x.startsWith("%ref"))
-          refs[i].trim() + " %" + texts[i] + "%"
-        else if (x.contains("%ref"))
-          "%" + texts[i] + "% " + refs[i + 1]
-        else
-          "%" + texts[i] + "%"
-
-        res += " " + getFootnoteContent(thisChunk)
-      }
+    if (!res.endsWith("."))
+      res += "."
 
 
 
@@ -1234,63 +1235,8 @@ open class PA_ReversificationHandler protected constructor (): PA()
 
 
   /*****************************************************************************/
-  /* Support method for the previous method.  This works the way it does (taking
-     a possible concatenation of a text string and a reference) because I've
-     hived it off from an earlier method which was created when footnotes only
-     ever consisted of one string to look up. */
-
-  private fun getFootnoteContent (contentAsSupplied: String): String
+  private fun getFootnoteContent (lookupKey: String, ref: String): String
   {
-    /**************************************************************************/
-    /* A change in December 2023 introduced some NoteB footnotes which have
-       a reference at the front, and then '%in some Bibles%' or '%in most Bibles%'.
-       It is convenient to move the reference to the end, to convert these
-       entries to the same form as the footnotes which we have processed
-       previously. */
-
-    var content = contentAsSupplied
-    val contentLowercase = content.lowercase()
-    if ("%in some bibles%" in contentLowercase || "%in most bibles%" in contentLowercase)
-    {
-      val ix = content.indexOf(' ')
-      val ref = content.substring(0, ix).trim()
-      val text = content.substring(ix + 1).trim()
-      content = "$text $ref"
-    }
-
-
-
-    /**************************************************************************/
-    /* All footnote entries have a leading %, and sometimes (but not
-       consistently) they have a trailing full stop.  We don't want either of
-       these. */
-
-    content = content.substring(1) // Get rid of leading %.
-    if ('.' == content.last()) content = content.substring(0, content.length - 1)
-
-
-
-    /**************************************************************************/
-    /* What we are now left with is the message text, with its end marked with
-       %, and then optionally a reference.  We split at the %-sign, having
-       first appended \u0001 (which subsequently we get rid of again) to ensure
-       that split always returns two elements. */
-
-    content += "\u0001" // Ensure split always gives two elements.
-    val bits = content.split("%")
-    val key = getTextKey(bits[0])
-
-
-
-    /**************************************************************************/
-    /* If the footnote has no associated reference, we can simply return the
-       text itself. */
-
-    if (1 == bits[1].length)
-      return TranslatableFixedText.stringFormat(Language.Vernacular, key)
-
-
-
     /**************************************************************************/
     /* In most cases, sorting out the reference collection is easy -- there may
        in theory be some ambiguity with single numbers as to what they represent
@@ -1304,7 +1250,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
        can't be parsed as collections.  We'll deal with the easy cases first
        (the ones where we don't have these odd separators. */
 
-    var refAsString = bits[1].replace("\u0001", "").trim()
+    var refAsString = ref
     val containsSlash = '/' in refAsString
     val containsPlus = '+' in refAsString
     if (!containsSlash && !containsPlus)
@@ -1312,7 +1258,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
       if (refAsString.endsWith("."))
         refAsString = refAsString.substring(0, refAsString.length - 1)
       val rc = RefCollection.rdUsx(usxifyFromStepFormat(refAsString), dflt = null, resolveAmbiguitiesAs = "v")
-      return TranslatableFixedText.stringFormat(Language.Vernacular, key, rc)
+      return TranslatableFixedText.stringFormat(Language.Vernacular, lookupKey, rc)
     }
 
 
@@ -1336,7 +1282,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
        fixed portions of the text.
     */
 
-    val rawMessage = TranslatableFixedText.lookupText(Language.English, getTextKey(bits[0].trim()))
+    val rawMessage = TranslatableFixedText.lookupText(Language.English, getTextKey(lookupKey))
     val regex = "(?i)(?<pre>.*)(?<ref>%Ref.*?>)(?<post>.*)".toRegex()
     val match = regex.matchEntire(rawMessage)
     val refFormat = match!!.groups["ref"]!!.value
@@ -1353,7 +1299,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
    *  the corresponding key which we can use to look up TranslatableFixedText.
    */
 
-  private fun getTextKey (lookupVal: String) = "V_reversification_[${lookupVal.trim()}]"
+  private fun getTextKey (lookupVal: String): String = "V_reversification_[${lookupVal.trim()}]"
 
 
   /****************************************************************************/

@@ -1,12 +1,119 @@
-################################################################################
-#
-# _NOT_ part of the main configuration data -- application-specific.
-#
-# Versification data used by osis2mod.  Used if we decide not to reversify a
-# given text, and want to choose an osis2mod scheme which fits it.  Used by
-# Osis2ModVersificationSchemes.
-#
-################################################################################
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#!
+#! _NOT_ part of the main configuration data -- application-specific.
+#!
+#! Versification data used by osis2mod.  Used if we decide not to reversify a
+#! given text, and want to choose an osis2mod scheme which fits it.  Used by
+#! Osis2ModVersificationSchemes.
+#!
+#!
+#!
+#! A note on DC books
+#! ==================
+#!
+#! Lists of DC books are associated with three different things -- the USX
+#! standard, the OSIS standard, and the header files which are summarised
+#! below (and where I have used the USX abbreviations for book names, rather
+#! than those which appear in the actual Crosswire header files.
+#!
+#! I _believe_ the limiting factor is the header files, since these are built
+#! into osis2mod.  On this basis ...
+#!
+#! The following books, supported by USX, might appear in a conformant text,
+#! but would have to be dropped because the header files do not support them:
+#!
+#!   LJE - Letter of Jeremiah
+#!   ODA - Odes
+#!   PSS - Psalms of Solomon
+#!   EZA - Apocalypse of Ezra
+#!   5EZ - 5 Ezra
+#!   6EZ - 6 Ezra
+#!   DAG - Daniel Greek
+#!   PS3 - Psalms 152-155
+#!   2BA - 2 Baruch (Apocalypse)
+#!   LBA - Letter of Baruch
+#!   JUB - Jubilees
+#!   ENO - Enoch 1MQ - 1 Meqabyan
+#!   2MQ - 2 Meqabyan
+#!   3MQ - 3 Meqabyan
+#!   REP - Reproof 4BA - 4 Baruch
+#!   LAO - Laodiceans
+#!
+#!
+#! The following books, supported by OSIS, might appear in a conformant text,
+#! but would have to be dropped because the header files do not support them:
+#!
+#!   AddDan
+#!   SgThree
+#!   EpJer
+#!
+#!
+#! Anything else in either USX or OSIS is ok: names may need to be mapped
+#! between the different representations (and there are a few complications
+#! detailed below), but the are supported in all three collections.  That's
+#! all of the OT and NT, and the following DC books (whose names here are the
+#! ones which appear in the Crosswire header files):
+#!
+#!   Tob
+#!   Jdt
+#!   EsthGr
+#!   Wis
+#!   Sir
+#!   Bar
+#!   PrAzar
+#!   Sus
+#!   Bel
+#!   1Macc
+#!   2Macc
+#!   1Esd
+#!   PrMan
+#!   3Macc
+#!   2Esd
+#!   4Macc
+#!
+#!
+#! In addition, the header files support AddPs (which I believe to be equivalent
+#! to USX's PS2).  We could therefore support this if supplied in the USX, and
+#! could also support it in OSIS, although it would not be compliant OSIS if it
+#! contained this book.  The main problem with it comes when I have to create
+#! OSIS for future use, since it had been my intention to make that conformant
+#! as far as possible.
+#!
+#! There is also an issue with S3Y / PrAzar.  I _believe_ these to be just
+#! different names for the same thing.  However, OSIS supports both (under the
+#! names SgThree and PrAzar), which seems to suggest they are _not_ the same
+#! thing.  At present I map USX S3Y to PrAzar for processing purposes, although
+#! whether I am right to do so, I don't know.  With OSIS input, I guess I'd
+#! accept PrAzar and would have to drop SgThree since there is no equivalent in
+#! the header files.  If generating OSIS, I'd have to output stuff as PrAzar.
+#!
+#! And then the final issue is Esg / AddEsth / EsthGr.  Greek Esther comes in
+#! two forms -- one in which the entire book is made available, and one in which
+#! the book contains only those chapters and verses which are additional to
+#! Hebrew Esther.
+#!
+#! The names Esg and EsthGr seem to imply the long form (and the information in
+#! the header files for EsthGr confirms that side of things); while the name
+#! AddEsth seems to imply only the additions.
+#!
+#! As far as internal processing is concerned, fortunately this is not an issue.
+#! I can accept either the long or short form: internally I convert the short
+#! form by adding missing chapters and verses so as to make it sufficiently like
+#! the long form to work.
+#!
+#! The main problem comes with naming.  We should never see EsthGr in an OSIS
+#! file, because OSIS recognises only AddEsth.  However, I've seen at least one
+#! OSIS file which _does_ have EsthGr, so clearly I am not the only one
+#! confused by all of this, and I need to accept either AddEsth or EsthGr in
+#! OSIS and rely on the fact that both will look like EsthGr by the time
+#! anything needs to work with them.
+#!
+#! But there is an additional side to the processing, in that one of the things
+#! I have to do is to _create_ and OSIS file, and presumably we want that to be
+#! conformant, so I will have to call the book AddEsth, regardless of whether it
+#! actually contains the entire text of the book or just the additions.
+#!
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 Calvin/Gen/31, 25, 24, 26, 32, 22, 24, 22, 29, 32, 32, 20, 18, 24, 21, 16, 27, 33, 38, 18, 34, 24, 20, 67, 34, 35, 46, 22, 35, 43, 55, 32, 20, 31, 29, 43, 36, 30, 23, 23, 57, 38, 34, 34, 28, 34, 31, 22, 33, 26
 Calvin/Exo/22, 25, 22, 31, 23, 30, 25, 32, 35, 29, 10, 51, 22, 31, 27, 36, 16, 27, 25, 26, 36, 31, 33, 18, 40, 37, 21, 43, 46, 38, 18, 35, 23, 35, 35, 38, 29, 31, 43, 38

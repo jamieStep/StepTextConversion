@@ -2972,6 +2972,7 @@ fun Node.hasAncestorNamed (name: String) = Dom.hasAncestorNamed(this, name)
 fun Node.isCommentNode () = Dom.isCommentNode(this)
 fun Node.isWhitespace () = Dom.isWhitespace(this)
 fun Node.isSiblingOf (node: Node) = Dom.isSiblingOf(this, node)
+fun Node.stringify (node: Node) = Dom.toString(node)
 
 fun Document.createNode (textForTag: String): Node = Dom.createNode(this, textForTag)
 fun Document.getAllNodesBelow (): List<Node> = Dom.getAllNodesBelow(this)

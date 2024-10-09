@@ -8,7 +8,10 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 
 /******************************************************************************/
@@ -86,8 +89,6 @@ object Builder_InternalOsis: Builder()
     Osis_ChapterAndVerseStructurePreprocessor.process(InternalOsisDataCollection); x()   // Sort out chapter structure, insert missing chapters, etc.
     PA_VerseEndRemover.process(InternalOsisDataCollection); x()                          // Some inputs may have eids already, some not.  Reduce everything to a common state.
     PA_DummyVerseHandler.insertDummyVerses(InternalOsisDataCollection)
-
-
 
 
 
@@ -254,13 +255,14 @@ object Builder_InternalOsis: Builder()
     }
     else
     {
+      val timeStamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))
+      val comment = "This OSIS file created by the STEPBible project $timeStamp.  This is a throw-away file.  Use the external OSIS as the basis of any long-term changes you wish to make."
       Rpt.report(level = 1, "Writing version of OSIS needed for use with osis2mod.")
       Dom.outputDomAsXml(InternalOsisDataCollection.convertToDoc(),
                          FileLocations.getInternalOsisFilePath(),
-              null)
-                         { x -> x.replace("^lt;", "&lt;")
-                                 .replace("^gt;", "&gt;")
-                                 .replace("xmlns=\"\" ", "") }
+                         comment) { x -> x.replace("^lt;", "&lt;")
+                                          .replace("^gt;", "&gt;")
+                                          .replace("xmlns=\"\" ", "") }
     }
   }
 

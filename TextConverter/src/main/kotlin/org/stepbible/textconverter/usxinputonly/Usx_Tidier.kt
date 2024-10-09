@@ -5,7 +5,6 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
-import org.w3c.dom.Document
 import org.w3c.dom.Node
 
 
@@ -85,15 +84,16 @@ private class Usx_TidierPerBook
 
   fun processRootNode (rootNode: Node)
   {
-    val doc = rootNode.ownerDocument
     m_BookName = rootNode["code"]!!
     Rpt.reportBookAsContinuation(m_BookName)
-    deleteIgnorableTags(doc)                           // Anything of no interest to our processing.
-    correctCommonUsxIssues(doc)                        // Correct common errors.
-    simplePreprocessTagModifications(doc)              // Sort out things we don't think we like.
-    convertTagsToLevelOneWhereAppropriate(doc)         // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
-    Usx_CrossReferenceCanonicaliser.process(doc)       // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
-    tidyUpMain(doc)
+    deleteIgnorableTags(rootNode)                                          // Anything of no interest to our processing.
+    correctCommonUsxIssues(rootNode)                                       // Correct common errors.
+    simplePreprocessTagModifications(rootNode)                             // Sort out things we don't think we like.
+    convertTagsToLevelOneWhereAppropriate(rootNode)                        // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
+    Usx_CrossReferenceCanonicaliser.process(rootNode)                      // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
+    convertMilestoneTagsToDifferentiatedTags(rootNode, "chapter")  // If we have things like <chapter sid=...> and <chapter eid=...>, processing is more convenient if we have type='sid' etc.
+    convertMilestoneTagsToDifferentiatedTags(rootNode, "verse")    // If we have things like <verse sid=...> and <verse eid=...>, processing is more convenient if we have type='sid' etc.
+    tidyUpMain(rootNode)
   }
 
 
@@ -107,6 +107,25 @@ private class Usx_TidierPerBook
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  /* We may have enclosing chapters or milestone chapters.  Later processing
+     will be assisted if the milestone versions are temporarily marked with a
+     style attribute to indicate whether they are sid's or eid's.
+
+     I assume enclosing chapter tags are already marked up with a sid, either
+     because they were that way in the raw text, or because we have converted
+     the 'number' attribute to a sid. */
+
+  private fun convertMilestoneTagsToDifferentiatedTags (rootNode: Node, tagName: String)
+  {
+    rootNode.findNodesByName(tagName).forEach {
+      if (it.hasChildNodes())
+        it["style"] = "enc"
+      else
+        it["style"] = if ("sid" in it) "sid" else "eid"}
+  }
+
 
   /****************************************************************************/
   /* Convert eg style='q' to style='q1'. */
@@ -132,7 +151,7 @@ private class Usx_TidierPerBook
      seamless job in converting from USFM to USX.  Whatever the reason, we need
      to straighten things out as best we can. */
 
-  private fun correctCommonUsxIssues (doc: Document)
+  private fun correctCommonUsxIssues (rootNode: Node)
   {
     /**************************************************************************/
     val C_ParaTranslations = mapOf("para:po" to "para:pmo",           // Epistle introductions.
@@ -154,8 +173,8 @@ private class Usx_TidierPerBook
 
 
     /**************************************************************************/
-    Dom.findNodesByName(doc, "para").forEach { changeNode(C_ParaTranslations, it) }
-    Dom.findNodesByName(doc, "char").forEach { changeNode(C_CharTranslations, it) }
+    rootNode.findNodesByName("para").forEach { changeNode(C_ParaTranslations, it) }
+    rootNode.findNodesByName("char").forEach { changeNode(C_CharTranslations, it) }
   }
 
 
@@ -163,17 +182,17 @@ private class Usx_TidierPerBook
   /* There are certain kinds of tags which are meaningless in an electronic
      version of a text, or which we can't handle, and these I delete. */
 
-  private fun deleteIgnorableTags (doc: Document)
+  private fun deleteIgnorableTags (rootNode: Node)
   {
-    Dom.findNodesByAttributeValue(doc, "para", "style", "toc\\d").forEach { Dom.deleteNode(it) }
-    Dom.findNodesByName(doc, "figure").forEach { Dom.deleteNode(it) }
+    Dom.findNodesByAttributeValue(rootNode, "para", "style", "toc\\d").forEach { Dom.deleteNode(it) }
+    Dom.findNodesByName(rootNode, "figure", false).forEach { Dom.deleteNode(it) }
   }
 
 
   /****************************************************************************/
   /* Changes tagName or tagName+style for another tagName or tagName+style. */
 
-  private fun simplePreprocessTagModifications (doc: Document)
+  private fun simplePreprocessTagModifications (rootNode: Node)
   {
     val modifications = ConfigData["stepSimplePreprocessTagModifications"] ?: return
     if (modifications.isEmpty()) return
@@ -186,9 +205,9 @@ private class Usx_TidierPerBook
 
       val froms =
         if (":" in from)
-          Dom.findNodesByAttributeValue(doc, fromTag, "style", fromStyle)
+          Dom.findNodesByAttributeValue(rootNode, fromTag, "style", fromStyle)
         else
-          Dom.findNodesByName(doc, fromTag)
+          Dom.findNodesByName(rootNode, fromTag, false)
 
       val setStyle = ":" in to
 
@@ -218,11 +237,11 @@ private class Usx_TidierPerBook
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun tidyUpMain (doc: Document)
+  private fun tidyUpMain (rootNode: Node)
   {
-    tidyMoveNotesToStartOfVerseWhereNecessary(doc)
-    tidyDeleteConsecutiveWhiteSpace(doc)
-    tidyDeleteBlanksAtEndOfChapter(doc)
+    tidyMoveNotesToStartOfVerseWhereNecessary(rootNode)
+    tidyDeleteConsecutiveWhiteSpace(rootNode)
+    tidyDeleteBlanksAtEndOfChapter(rootNode)
   }
 
 
@@ -232,7 +251,7 @@ private class Usx_TidierPerBook
      of no good reason for retaining this or anything else blank-ish at the
      end. */
 
-  private fun tidyDeleteBlanksAtEndOfChapter (doc: Document): Boolean
+  private fun tidyDeleteBlanksAtEndOfChapter (rootNode: Node): Boolean
   {
     var res = false
 
@@ -249,7 +268,7 @@ private class Usx_TidierPerBook
       }
     }
 
-    Dom.findNodesByName(doc, "chapter").forEach { deleteTerminatingBlanks(it) }
+    rootNode.findNodesByName("chapter").forEach { deleteTerminatingBlanks(it) }
 
     return res
   }
@@ -259,7 +278,7 @@ private class Usx_TidierPerBook
   /* Cosmetic only, but some books end up with a lot of newlines in them, which
      makes it difficult to read the USX. */
 
-  private fun tidyDeleteConsecutiveWhiteSpace (doc: Document): Boolean
+  private fun tidyDeleteConsecutiveWhiteSpace (rootNode: Node): Boolean
   {
     var res = false
 
@@ -271,7 +290,7 @@ private class Usx_TidierPerBook
       node.textContent = if (textContent.contains("\n")) "\n" else " "
     }
 
-    Dom.findAllTextNodes(doc).filter { Dom.isWhitespace(it) }.forEach { deleteWhiteSpace(it) }
+    Dom.findAllTextNodes(rootNode).filter { Dom.isWhitespace(it) }.forEach { deleteWhiteSpace(it) }
     return res
   }
 
@@ -283,7 +302,7 @@ private class Usx_TidierPerBook
      relevant to footnotes introduced during reversification processing, but
      since it could be useful for other things, may as well apply it here.) */
 
-  private fun tidyMoveNotesToStartOfVerseWhereNecessary (doc: Document): Boolean
+  private fun tidyMoveNotesToStartOfVerseWhereNecessary (rootNode: Node): Boolean
   {
     /**************************************************************************/
     var mostRecentSid: Node? = null
@@ -305,7 +324,7 @@ private class Usx_TidierPerBook
       } // when
     }
 
-    Dom.getAllNodesBelow(doc).forEach { processNode(it) }
+    rootNode.getAllNodesBelow().forEach { processNode(it) }
 
     return res
   }

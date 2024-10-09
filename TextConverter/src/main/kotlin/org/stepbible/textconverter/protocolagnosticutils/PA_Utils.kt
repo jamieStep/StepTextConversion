@@ -39,7 +39,7 @@ object PA_Utils
     /**************************************************************************/
     /* Turn things into enclosing nodes. */
 
-    for (i in 0..< indexes.size - 1)
+    for (i in 0..< indexes.size - 1 step 2)
     {
       val targetNode = allNodes[indexes[i]]
       val targetNodeParent = Dom.getParent(targetNode)!!

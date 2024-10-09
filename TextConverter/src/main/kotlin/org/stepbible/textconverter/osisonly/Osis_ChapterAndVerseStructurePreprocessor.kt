@@ -11,6 +11,7 @@ import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.applicationspecificutils.X_FileProtocol
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.protocolagnosticutils.PA_Utils.convertToEnclosingTags
 import org.w3c.dom.Node
 
@@ -80,7 +81,7 @@ private class Osis_ChapterAndVerseStructurePreprocessorPerBook (val m_FileProtoc
 
   /****************************************************************************/
   /* Just occasionally we may have books which lack chapters -- particularly
-     (exclusively?) in the DC.  For example, in the RV text, EsthGr starts at
+     (exclusively?) in the DC.  For example, in the RV text, AddEsth starts at
      chapter 10 (actually at 10:4).  Having missing chapters appears to be a
      no-no, so this processing creates any missing chapters. */
 
@@ -121,7 +122,7 @@ private class Osis_ChapterAndVerseStructurePreprocessorPerBook (val m_FileProtoc
       Dom.insertNodeBefore(firstExistingChapterNode, newChapterNode)
 
       IssueAndInformationRecorder.addChapterWhichWasMissingInTheRawText(newRef.toString())
-      if (null != footnoteNode) IssueAndInformationRecorder.addGeneratedFootnote(newRef.toString() + " (AddedChapter)")
+      if (null != footnoteNode) IssueAndInformationRecorder.addGeneratedFootnote("$newRef (AddedChapter)")
     }
 
 
@@ -155,14 +156,34 @@ private class Osis_ChapterAndVerseStructurePreprocessorPerBook (val m_FileProtoc
 
 
     /**************************************************************************/
-    /** Make osisID and sID uniform. */
+    /* Make osisID and sID uniform.  This is a frustratingly fiddly piece of
+       code, which may well still be wrong or inadequate.  It responds to the
+       fact that different texts do different things in terms of osisID, sID
+       and eID, and it is convenient for the sake of uniformity to have
+       an osisId as well as a sID or an eID, and to have all of them contain
+       the actual reference (the OSIS spec does not require this -- sID and
+       eID can be arbitrary strings, so long as the sID and eID of an element
+       are the same as each other and are otherwise unique). */
 
     val chapters = Dom.findNodesByName(doc, "chapter")
     chapters.forEach {
-      if ("osisID" in it && "sID" !in it)
+      if (it.hasChildNodes() && "osisID" in it && "sID" !in it) // An enclosing chapter which has an osisID and no sID.  Use the osisID as the sID.
+      {
         it["sID"] = it["osisID"]!!
-      else if ("sID" in it && "osisID" !in it)
-        it["osisID"] = it["sID"]!!
+        return@forEach
+      }
+
+
+      val isSid = "sID" in it
+      val sidOrEidSelector = if (isSid) "sID" else "eID"
+      val sidOrEidRefAsString = it[sidOrEidSelector]!!
+
+      val sidOrEidRef = RefCollection.rdOsisOrNull(sidOrEidRefAsString)
+
+      if (null == sidOrEidRef)
+        it[sidOrEidSelector] = it["osisID"]!!
+      else
+        it["osisID"] = sidOrEidRefAsString
     }
 
 

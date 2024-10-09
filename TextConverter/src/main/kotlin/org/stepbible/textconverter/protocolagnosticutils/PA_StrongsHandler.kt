@@ -116,7 +116,6 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
   }
 
 
-  //private var overallCount = 0 // $$$
   /****************************************************************************/
   /* Some texts nest Strongs. */
 
@@ -135,8 +134,6 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
       if (!nodeMap[node]!!)
         continue
 
-      //node["ZZZ"] = (overallCount++).toString() // $$$
-
       val children: MutableList<Node> = mutableListOf()
       var p = node
       while (true)
@@ -147,9 +144,6 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
         {
           val text = "Empty Strong's reference: ${Dom.toString(node)}."
           Logger.warning(text)
-          //Dbg.d(Dom.findAncestorByNodeName(p, "chapter")!!)
-          //if (1 == ++overallCount) Dbg.d(node.ownerDocument)
-          //Dbg.d(text)
           Dom.deleteNode(node) // No point in retaining an empty Strong's tag.
           ++deletedCount
           break
@@ -184,8 +178,6 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
   /****************************************************************************/
   /* Processes a single Strongs node. */
 
-  private val C_ExtendedStrongInfo = "(?i)[GH]\\d\\d\\d\\d".toRegex()
-  private val C_LemmaWithinStrongs = "(?i)^lemma.+".toRegex()
   private val C_MultiStrongSeparator = "(\\s*,\\s*|\\s+)".toRegex() // Comma optionally preceded and / or followed by spaces, or just one or more spaces.
 
   private fun doStrong (node: Node)
@@ -199,11 +191,6 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
     fun rejigStrongs (attr: String): String
     {
       var strong = attr.trim()
-      if (strong.matches(C_ExtendedStrongInfo))
-        return strong.uppercase()
-      else if (strong.matches(C_LemmaWithinStrongs))
-        return strong
-
       if (strong.substring(0, 1).uppercase() in "GH")
       {
         prefix = strong.substring(0, 1).uppercase() // I believe uppercase is ok, and possibly that it is required.

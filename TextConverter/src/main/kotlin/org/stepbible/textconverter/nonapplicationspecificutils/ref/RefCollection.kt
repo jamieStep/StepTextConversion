@@ -475,6 +475,48 @@ class RefCollection: RefBase
     fun rd (ref: RefCollectionPart): RefCollection { return RefCollection(ref) }
     fun rd (refs: List<Any>): RefCollection { return RefCollection(refs) } // May be List<RefKey> or List<RefCollectionPart>.
 
+    /**************************************************************************/
+    fun rdOsisOrNull (text: String, dflt: Ref? = null, resolveAmbiguitiesAs: String? = null): RefCollection?
+    {
+      try
+      {
+        return rdOsis(text, dflt, resolveAmbiguitiesAs)
+      }
+      catch (_: Exception)
+      {
+        return null
+      }
+    }
+
+
+    /**************************************************************************/
+    fun rdUsxOrNull (text: String, dflt: Ref? = null, resolveAmbiguitiesAs: String? = null): RefCollection?
+    {
+      try
+      {
+        return rdUsx(text, dflt, resolveAmbiguitiesAs)
+      }
+      catch (_: Exception)
+      {
+        return null
+      }
+    }
+
+
+    /**************************************************************************/
+    fun rdVernacularOrNull (text: String, dflt: Ref? = null, resolveAmbiguitiesAs: String? = null): RefCollection?
+    {
+      try
+      {
+        return rdVernacular(text, dflt, resolveAmbiguitiesAs)
+      }
+      catch (_: Exception)
+      {
+        return null
+      }
+    }
+
+
 
     /**************************************************************************/
     /* Specialist reader for OSIS.  In fact, collections are not permitted in

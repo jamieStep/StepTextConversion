@@ -192,6 +192,7 @@ object Builder_Master: Builder()
 
     deleteLogFilesEtc()
     StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
+    StepFileUtils.createFolderStructure(FileLocations.getOutputFolderPath())
 
     Builder_RepositoryPackage.process()
   }

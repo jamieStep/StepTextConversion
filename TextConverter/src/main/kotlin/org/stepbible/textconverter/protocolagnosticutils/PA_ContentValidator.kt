@@ -208,7 +208,8 @@ private class BookAnatomy
 {
   lateinit var m_AllNodes: List<Node>
   var m_VerseRefKeysToNodeIndex: MutableMap<RefKey, MutableList<SidEidPair>> = mutableMapOf()
-  var m_chapterSidToPsalmTitle: MutableMap<RefKey, Node> = mutableMapOf()
+  var m_ChapterSidToPsalmTitle: MutableMap<RefKey, Node> = mutableMapOf()
+  val m_VersesRemovedFromTables = mutableSetOf<RefKey>()
 }
 
 private data class SidEidPair (val sidIx: Int, var eidIx: Int)
@@ -230,14 +231,14 @@ private class PA_ContentValidator_ContentLoaderPerBook ()
   /****************************************************************************/
   fun process (anatomies: ConcurrentHashMap<Int, BookAnatomy>, dataCollection: X_DataCollection, bookNo: Int)
   {
-    anatomies[bookNo] = getBookAnatomy(dataCollection.getRootNode(bookNo)!!, dataCollection.getFileProtocol())
+    anatomies[bookNo] = makeBookAnatomy(dataCollection.getRootNode(bookNo)!!, dataCollection.getFileProtocol())
   }
 
 
   /****************************************************************************/
   /* Creates a single BookAnatomy data structure for a single book. */
 
-  private fun getBookAnatomy (rootNode: Node, fileProtocol: X_FileProtocol): BookAnatomy
+  private fun makeBookAnatomy (rootNode: Node, fileProtocol: X_FileProtocol): BookAnatomy
   {
     /**************************************************************************/
     //Dbg.outputDom(rootNode.ownerDocument)
@@ -262,7 +263,7 @@ private class PA_ContentValidator_ContentLoaderPerBook ()
     fun processCanonicalTitle (node: Node)
     {
       val sidRefKey = fileProtocol.readRef(Dom.getAttribute(Dom.getAncestorNamed(node, fileProtocol.tagName_chapter())!!, fileProtocol.attrName_chapterSid())!!).toRefKey()
-      res.m_chapterSidToPsalmTitle[sidRefKey] = node
+      res.m_ChapterSidToPsalmTitle[sidRefKey] = node
     }
 
 
@@ -319,6 +320,16 @@ private class PA_ContentValidator_ContentLoaderPerBook ()
 
       if (NodeMarker.hasTableOwnerType(node))
         m_ActiveSidEidPair!!.refKeysInTable = NodeMarker.getTableRefKeys(node)!!.split(",").map { it.toLong() }
+
+
+
+      /************************************************************************/
+      /* In the revised text, table owners have a list of contained verse
+         refKeys.  We need to record these so that the processing knows they
+         are implicitly present. */
+
+      val containedTableVerses = NodeMarker.getTableRefKeys(node) ?: return
+      res.m_VersesRemovedFromTables.addAll(containedTableVerses.split(",").map { it.toLong() })
     }
 
 
@@ -521,7 +532,7 @@ private class PA_ContentValidatorPerBook (val bookAnatomiesNew: ConcurrentHashMa
 
   private fun checkNonReversifiedMismatchedVerses (bookAnatomyNew: BookAnatomy, bookAnatomyOld: BookAnatomy)
   {
-    val inOldOnly = bookAnatomyOld.m_VerseRefKeysToNodeIndex.keys - bookAnatomyNew.m_VerseRefKeysToNodeIndex.keys
+    val inOldOnly = bookAnatomyOld.m_VerseRefKeysToNodeIndex.keys - bookAnatomyNew.m_VerseRefKeysToNodeIndex.keys - bookAnatomyNew.m_VersesRemovedFromTables
     val inNewOnly = bookAnatomyNew.m_VerseRefKeysToNodeIndex.keys - bookAnatomyOld.m_VerseRefKeysToNodeIndex.keys
 
     inOldOnly.forEach { error (it, "Verse in original text (as verse or as subverses), but not in revised text." )}

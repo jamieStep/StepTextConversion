@@ -119,115 +119,119 @@ object Dbg: ObjectInterface
   /* Index into array corresponds to UBS book number. */
 
   private val m_BooksToBeProcessed = arrayOf(
-    BookSelector("XXX"),
-    BookSelector("GEN"),
-    BookSelector("EXO"),
-    BookSelector("LEV"),
-    BookSelector("NUM"),
-    BookSelector("DEU"),
-    BookSelector("JOS"),
-    BookSelector("JDG"),
-    BookSelector("RUT"),
-    BookSelector("1SA"),
-    BookSelector("2SA"),
-    BookSelector("1KI"),
-    BookSelector("2KI"),
-    BookSelector("1CH"),
-    BookSelector("2CH"),
-    BookSelector("EZR"),
-    BookSelector("NEH"),
-    BookSelector("EST"),
-    BookSelector("JOB"),
-    BookSelector("PSA"),
-    BookSelector("PRO"),
-    BookSelector("ECC"),
-    BookSelector("SNG"),
-    BookSelector("ISA"),
-    BookSelector("JER"),
-    BookSelector("LAM"),
-    BookSelector("EZK"),
-    BookSelector("DAN"),
-    BookSelector("HOS"),
-    BookSelector("JOL"),
-    BookSelector("AMO"),
-    BookSelector("OBA"),
-    BookSelector("JON"),
-    BookSelector("MIC"),
-    BookSelector("NAM"),
-    BookSelector("HAB"),
-    BookSelector("ZEP"),
-    BookSelector("HAG"),
-    BookSelector("ZEC"),
-    BookSelector("MAL"),
-    BookSelector("XXX"),
-    BookSelector("MAT"),
-    BookSelector("MRK"),
-    BookSelector("LUK"),
-    BookSelector("JHN"),
-    BookSelector("ACT"),
-    BookSelector("ROM"),
-    BookSelector("1CO"),
-    BookSelector("2CO"),
-    BookSelector("GAL"),
-    BookSelector("EPH"),
-    BookSelector("PHP"),
-    BookSelector("COL"),
-    BookSelector("1TH"),
-    BookSelector("2TH"),
-    BookSelector("1TI"),
-    BookSelector("2TI"),
-    BookSelector("TIT"),
-    BookSelector("PHM"),
-    BookSelector("HEB"),
-    BookSelector("JAS"),
-    BookSelector("1PE"),
-    BookSelector("2PE"),
-    BookSelector("1JN"),
-    BookSelector("2JN"),
-    BookSelector("3JN"),
-    BookSelector("JUD"),
-    BookSelector("REV"),
-    BookSelector("TOB"),
-    BookSelector("JDT"),
-    BookSelector("ESG"),
-    BookSelector("WIS"),
-    BookSelector("SIR"),
-    BookSelector("BAR"),
-    BookSelector("LJE"),
-    BookSelector("S3Y"),
-    BookSelector("SUS"),
-    BookSelector("BEL"),
-    BookSelector("1MA"),
-    BookSelector("2MA"),
-    BookSelector("3MA"),
-    BookSelector("4MA"),
-    BookSelector("1ES"),
-    BookSelector("2ES"),
-    BookSelector("MAN"),
-    BookSelector("PS2"),
-    BookSelector("ODA"),
-    BookSelector("PSS"),
-    BookSelector("JSA"),
-    BookSelector("JDB"),
-    BookSelector("TBS"),
-    BookSelector("SST"),
-    BookSelector("DNT"),
-    BookSelector("BLT"),
-    BookSelector("LAO"),
-    BookSelector("XXX"),
-    BookSelector("XXX"),
-    BookSelector("XXX"),
-    BookSelector("XXX"),
-    BookSelector("XXX"),
-    BookSelector("XXX"),
-    BookSelector("XXX"),
-    BookSelector("XXX"),
-    BookSelector("XXX"),
-    BookSelector("XXX"),
-    BookSelector("EZA"),
-    BookSelector("5EZ"),
-    BookSelector("6EZ"),
-    BookSelector("DAG")
+    BookSelector("XXX"), //   0
+    BookSelector("GEN"), //   1
+    BookSelector("EXO"), //   2
+    BookSelector("LEV"), //   3
+    BookSelector("NUM"), //   4
+    BookSelector("DEU"), //   5
+    BookSelector("JOS"), //   6
+    BookSelector("JDG"), //   7
+    BookSelector("RUT"), //   8
+    BookSelector("1SA"), //   9
+    BookSelector("2SA"), //  10
+    BookSelector("1KI"), //  11
+    BookSelector("2KI"), //  12
+    BookSelector("1CH"), //  13
+    BookSelector("2CH"), //  14
+    BookSelector("EZR"), //  15
+    BookSelector("NEH"), //  16
+    BookSelector("EST"), //  17
+    BookSelector("JOB"), //  18
+    BookSelector("PSA"), //  19
+    BookSelector("PRO"), //  20
+    BookSelector("ECC"), //  21
+    BookSelector("SNG"), //  22
+    BookSelector("ISA"), //  23
+    BookSelector("JER"), //  24
+    BookSelector("LAM"), //  25
+    BookSelector("EZK"), //  26
+    BookSelector("DAN"), //  27
+    BookSelector("HOS"), //  28
+    BookSelector("JOL"), //  29
+    BookSelector("AMO"), //  30
+    BookSelector("OBA"), //  31
+    BookSelector("JON"), //  32
+    BookSelector("MIC"), //  33
+    BookSelector("NAM"), //  34
+    BookSelector("HAB"), //  35
+    BookSelector("ZEP"), //  36
+    BookSelector("HAG"), //  37
+    BookSelector("ZEC"), //  38
+    BookSelector("MAL"), //  39
+    BookSelector("XXX"), //  40
+    BookSelector("MAT"), //  41
+    BookSelector("MRK"), //  42
+    BookSelector("LUK"), //  43
+    BookSelector("JHN"), //  44
+    BookSelector("ACT"), //  45
+    BookSelector("ROM"), //  46
+    BookSelector("1CO"), //  47
+    BookSelector("2CO"), //  48
+    BookSelector("GAL"), //  49
+    BookSelector("EPH"), //  50
+    BookSelector("PHP"), //  51
+    BookSelector("COL"), //  52
+    BookSelector("1TH"), //  53
+    BookSelector("2TH"), //  54
+    BookSelector("1TI"), //  55
+    BookSelector("2TI"), //  56
+    BookSelector("TIT"), //  57
+    BookSelector("PHM"), //  58
+    BookSelector("HEB"), //  59
+    BookSelector("JAS"), //  60
+    BookSelector("1PE"), //  61
+    BookSelector("2PE"), //  62
+    BookSelector("1JN"), //  63
+    BookSelector("2JN"), //  64
+    BookSelector("3JN"), //  65
+    BookSelector("JUD"), //  66
+    BookSelector("REV"), //  67
+    BookSelector("TOB"), //  68
+    BookSelector("JDT"), //  69
+    BookSelector("ESG"), //  70
+    BookSelector("WIS"), //  71
+    BookSelector("SIR"), //  72
+    BookSelector("BAR"), //  73
+    BookSelector("LJE"), //  74
+    BookSelector("S3Y"), //  75
+    BookSelector("SUS"), //  76
+    BookSelector("BEL"), //  77
+    BookSelector("1MA"), //  78
+    BookSelector("2MA"), //  79
+    BookSelector("3MA"), //  80
+    BookSelector("4MA"), //  81
+    BookSelector("1ES"), //  82
+    BookSelector("2ES"), //  83
+    BookSelector("MAN"), //  84
+    BookSelector("PS2"), //  85
+    BookSelector("ODA"), //  86
+    BookSelector("PSS"), //  87
+    BookSelector("XXX"), //  88
+    BookSelector("XXX"), //  89
+    BookSelector("XXX"), //  90
+    BookSelector("XXX"), //  91
+    BookSelector("XXX"), //  92
+    BookSelector("XXX"), //  93
+    BookSelector("LAO"), //  94
+    BookSelector("4Es"), //  95
+    BookSelector("XXX"), //  96
+    BookSelector("XXX"), //  97
+    BookSelector("XXX"), //  98
+    BookSelector("XXX"), //  99
+    BookSelector("XXX"), // 100
+    BookSelector("XXX"), // 101
+    BookSelector("XXX"), // 102
+    BookSelector("XXX"), // 103
+    BookSelector("XXX"), // 104
+    BookSelector("EZA"), // 105
+    BookSelector("5EZ"), // 106
+    BookSelector("6EZ"), // 107
+    BookSelector("DAG"), // 108
+    BookSelector("PS3"), // 109
+    BookSelector("2BA"), // 110
+    BookSelector("LBA"), // 111
+    BookSelector("JUB")  // 112
   )
 
 

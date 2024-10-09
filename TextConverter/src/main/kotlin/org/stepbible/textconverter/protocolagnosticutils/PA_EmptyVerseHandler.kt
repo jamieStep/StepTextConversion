@@ -116,7 +116,7 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
 
     /**************************************************************************/
-    private fun processRootNode (rootNode: Node, fileProtocol: X_FileProtocol): Boolean
+    private fun processRootNode (rootNode: Node, fileProtocol: X_FileProtocol)
     {
       var toggle = true
       rootNode.getAllNodesBelow().filter { NodeMarker.hasEmptyVerseType(it) }.forEach { verse ->
@@ -130,8 +130,6 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
           Dom.insertNodeAfter(verse, wrapper)
         } // if
       } // forEach verse
-
-      return toggle
     }
   } // companion
 

@@ -44,7 +44,7 @@ object Osis_CrossReferenceChecker: ObjectInterface
         dataCollection.getRootNodes().forEach { rootNode ->
           asyncable {
             Rpt.reportBookAsContinuation(dataCollection.getFileProtocol().getBookAbbreviation(rootNode))
-            Osis_CrossReferenceCheckerForBook(dataCollection.getFileProtocol()).processRootNode(rootNode)
+            Osis_CrossReferenceCheckerForBook(dataCollection).processRootNode(rootNode)
           } // asyncable
         } // forEach
       } // run
@@ -57,12 +57,12 @@ object Osis_CrossReferenceChecker: ObjectInterface
 
 
 /******************************************************************************/
-private class Osis_CrossReferenceCheckerForBook (val m_FileProtocol: X_FileProtocol)
+private class Osis_CrossReferenceCheckerForBook (val m_DataCollection: X_DataCollection)
 {
   /****************************************************************************/
   fun processRootNode (rootNode: Node)
   {
-    val xrefNodes = rootNode.getAllNodesBelow().filter { node -> m_FileProtocol.isXrefNode(node) }
+    val xrefNodes = rootNode.getAllNodesBelow().filter { node -> m_DataCollection.getFileProtocol().isXrefNode(node) }
     process(xrefNodes)
   }
 
@@ -206,5 +206,4 @@ private class Osis_CrossReferenceCheckerForBook (val m_FileProtocol: X_FileProto
 
   /****************************************************************************/
   private var m_CanReadAndWriteVernacular =  ConfigData.getAsBoolean("stepUseVernacularFormats")
-  private lateinit var m_DataCollection: X_DataCollection
 }

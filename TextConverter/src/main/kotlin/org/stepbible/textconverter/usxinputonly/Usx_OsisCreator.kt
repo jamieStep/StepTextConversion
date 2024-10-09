@@ -393,7 +393,6 @@ object Usx_OsisCreator
     }
 
 
-
     /**************************************************************************/
     if ("#text" == lookupKey)
     {
@@ -417,11 +416,14 @@ object Usx_OsisCreator
       }
 
 
-      "chapter" ->
+      "chapter", "chapter:sid" ->
       {
-        thunk.m_ChapterNo = Ref.rdUsx(Dom.getAttribute(node, "sid")!!).getC()
-        thunk.m_CurrentVerseLow = Ref.rd(thunk.m_UsxBookNumber, thunk.m_ChapterNo, RefBase.C_DummyElement, RefBase.C_DummyElement)
-        thunk.m_CurrentVerseHigh = Ref.rd(thunk.m_UsxBookNumber, thunk.m_ChapterNo, RefBase.C_DummyElement, RefBase.C_DummyElement)
+        if ("sid" in node)
+        {
+          thunk.m_ChapterNo = Ref.rdUsx(Dom.getAttribute(node, "sid")!!).getC()
+          thunk.m_CurrentVerseLow = Ref.rd(thunk.m_UsxBookNumber, thunk.m_ChapterNo, RefBase.C_DummyElement, RefBase.C_DummyElement)
+          thunk.m_CurrentVerseHigh = Ref.rd(thunk.m_UsxBookNumber, thunk.m_ChapterNo, RefBase.C_DummyElement, RefBase.C_DummyElement)
+        }
       }
 
 
@@ -454,12 +456,15 @@ object Usx_OsisCreator
 
       "verse", "verse:sid" ->
       {
-        thunk.m_CurrentReferenceCollection = RefCollection.rdUsx(node["sid"]!!)
-        thunk.m_CurrentVerseLow = Ref.rd(thunk.m_CurrentReferenceCollection.getLowAsRef())
-        thunk.m_CurrentVerseHigh = Ref.rd(thunk.m_CurrentReferenceCollection.getHighAsRef())
-        if (0 == thunk.m_CurrentVerseLow.getS()) thunk.m_CurrentVerseLow.setS(RefBase.C_DummyElement)
-        if (0 == thunk.m_CurrentVerseHigh.getS()) thunk.m_CurrentVerseHigh.setS(RefBase.C_DummyElement)
-        thunk.m_PerVerseReferenceCounter = 0
+        if ("sid" in node)
+        {
+          thunk.m_CurrentReferenceCollection = RefCollection.rdUsx(node["sid"]!!)
+          thunk.m_CurrentVerseLow = Ref.rd(thunk.m_CurrentReferenceCollection.getLowAsRef())
+          thunk.m_CurrentVerseHigh = Ref.rd(thunk.m_CurrentReferenceCollection.getHighAsRef())
+          if (0 == thunk.m_CurrentVerseLow.getS()) thunk.m_CurrentVerseLow.setS(RefBase.C_DummyElement)
+          if (0 == thunk.m_CurrentVerseHigh.getS()) thunk.m_CurrentVerseHigh.setS(RefBase.C_DummyElement)
+          thunk.m_PerVerseReferenceCounter = 0
+        }
       }
 
       "cell" ->

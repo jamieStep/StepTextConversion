@@ -93,7 +93,8 @@ class MainProcessor
     finally
     {
       val moduleName = ConfigData["stepModuleName"] ?: "UNKNOWN MODULE"
-      if (0 != returnCode) Rpt.report(level = 1, "\n!!!!! RUN FAILED: " + args.joinToString(" "))
+      if (0 != returnCode) System.err.println("\n!!!!! RUN FAILED: " + args.joinToString(" "))
+      Rpt.reportEol()
       Rpt.report(level = -1, ">>>>>>>>>> End of processing for $moduleName (${ConfigData["stepTargetAudience"]} use).")
       Rpt.report(level = -1, ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n\n")
 

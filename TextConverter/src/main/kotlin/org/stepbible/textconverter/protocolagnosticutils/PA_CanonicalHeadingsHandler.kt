@@ -52,6 +52,7 @@ object PA_CanonicalHeadingsHandler: PA()
 
   fun process (dataCollection: X_DataCollection)
   {
+    //Dbg.d(dataCollection)
     extractCommonInformation(dataCollection)
     Rpt.reportWithContinuation(level = 1, "Handling canonical headings ...") {
       with(ParallelRunning(true)) {
@@ -119,7 +120,7 @@ private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProt
 
     /**************************************************************************/
     allNodesInChapter.forEach {
-      if (m_FileProtocol.tagName_verse() == Dom.getNodeName(it))
+      if (m_FileProtocol.tagName_verse() == Dom.getNodeName(it) && m_FileProtocol.attrName_verseSid() in it)
         ++verseCount
       else if (m_FileProtocol.isCanonicalTitleNode(it))
       {

@@ -156,7 +156,7 @@ import java.util.*
   * @param doc Document to be processed.
   */
 
-  fun process (doc: Document) = doc.findNodesByName("book").forEach(::doIt)
+  fun process (rootNode: Node) = doIt(rootNode)
 
 
 
@@ -1035,9 +1035,10 @@ import java.util.*
 
     fun processNode (node: Node)
     {
+      val bookRef = Usx_FileProtocol.getBookAbbreviation(rootNode)
       when (Dom.getNodeName(node))
       {
-        "chapter" -> chapterRef = Dom.getAttribute(node, "sid")!!
+        "chapter" -> chapterRef = if ("sid" in node) Dom.getAttribute(node, "sid")!! else bookRef
         "verse" -> theRef = if ("sid" in node) node["sid"]!! else chapterRef
         "verseSid" -> theRef = if ("sid" in node) node["sid"]!! else chapterRef
         "ref" -> node["_X_belongsTo"] = theRef

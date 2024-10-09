@@ -48,6 +48,46 @@ object BibleBookNamesOsis: BibleBookNames(), ObjectInterface
   /****************************************************************************/
   init { doInit() }
 
+  /****************************************************************************/
+  /* Most of this is fairly straightforward.  Be aware, though, that I may have
+     got confused while dealing with the later DC books.  I've included these
+     for completeness because they are mentioned in the USX reference manual.
+     However, in general they aren't mentioned in the Crosswire header files,
+     so although it would be legitimate for someone to give us a text
+     containing these books, we won't be able to process them.
+
+     The one possible exception is Ps2.  Here the header files do actually
+     support it, but OSIS doesn't, and since I have to create OSIS as well as
+     modules, I've opted to pretend we can't cope with it.
+
+     One other thing to bear in mind: there is a definite issue with Esg.
+     Greek Esther comes in two forms -- as a complete book, and as
+     additions which would be added to Hebrew Esther.
+
+     The name Esg here seems to imply the full book, and that's fine as far as
+     the header files are concerned (where the associated information makes it
+     clear that they do indeed have the full book in mind).
+
+     Unfortunately OSIS supports only AddEsth, which is presumably intended to
+     cover the additions.
+
+     From the point of view of the conversion processing none of this actually
+     matters -- if I'm given the additions in circumstances where I'm expecting
+     the full book, I simply create enough empty odds and ends within the
+     additions to make things work.  But there is a slight problem with the
+     OSIS, where I have to store the data under the name AddEsth even though
+     we may not be dealing with additions, but may have the full text.
+
+     And there's a further complication, in that I've seen at least one OSIS
+     file where the name EsthGr was used, despite the fact that apparently
+     OSIS does not support it.
+
+     Oh yes, and one final point.  I am not presently clear whether S3Y and
+     PrAzar are simply alternative names for the same thing.  USX supports
+     only S3Y.  OSIS supports both SgThree and PrAzar.  The header files
+     support only PrAzar.  I'm not presently too clear what we're going to do
+     about that. */
+
   @Synchronized private fun doInit ()
   {
     m_BookCollectionName = "OSIS"
@@ -121,11 +161,11 @@ object BibleBookNamesOsis: BibleBookNames(), ObjectInterface
     addBookDescriptor( 67, "Rev", "Rev", "Revelation of John")
     addBookDescriptor( 68, "Tob", "Tob", "Tobit")
     addBookDescriptor( 69, "Jdt", "Jdt", "Judith")
-    addBookDescriptor( 70, "EsthGr", "EsthGr", "Additions to Esther")
+    addBookDescriptor( 70, "AddEsth", "AddEsth", "Additions to Esther")
     addBookDescriptor( 71, "Wis", "Wis", "Wisdom")
     addBookDescriptor( 72, "Sir", "Sir", "Sirach")
     addBookDescriptor( 73, "Bar", "Bar", "Baruch")
-    addBookDescriptor( 74, "EpJer", "EpJer", "Epistle of Jeremiah")
+    addBookDescriptor( 74, "", C_NotSupported, "")
     addBookDescriptor( 75, "PrAzar", "PrAzar", "Prayer of Azariah")
     addBookDescriptor( 76, "Sus", "Sus", "Susanna")
     addBookDescriptor( 77, "Bel", "Bel", "Bel and the Dragon")
@@ -136,29 +176,8 @@ object BibleBookNamesOsis: BibleBookNames(), ObjectInterface
     addBookDescriptor( 82, "1Esd", "1Esd", "IEsdras")
     addBookDescriptor( 83, "2Esd", "2Esd", "IIEsdras")
     addBookDescriptor( 84, "PrMan", "PrMan", "Prayer of Manasses")
-    addBookDescriptor( 85, "AddPs", "AddPs", "Additional Psalm")
-    addBookDescriptor( 86, "Odes", "Odes", "Odes")
-    addBookDescriptor( 87, "PssSol", "PssSol", "PsalmsOfSolomon") // Supported by UBS, but not by NRSVA.
-    addBookDescriptor( 88, "JoshA", "Joshua A", "Joshua A")
-    addBookDescriptor( 89, "JudgB", "Judges B", "Judges B")
-    addBookDescriptor( 90, "TobS", "Tobit S", "Tobit S")
-    addBookDescriptor( 91, "SusTh", "Susannah θ", "Susannah θ")
-    addBookDescriptor( 92, "DanTh", "Daniel θ", "Daniel θ")
-    addBookDescriptor( 93, "BelTh", "Bel and the Dragon θ", "Bel and the Dragon θ")
-    addBookDescriptor( 94, "EpLao", "Epistle to the Laodiceans", "Epistle to the Laodiceans")
-    addBookDescriptor( 95, "", "", "") // Not assigned in the UBS numbering scheme.
-    addBookDescriptor( 96, "", "", "") // Not assigned in the UBS numbering scheme.
-    addBookDescriptor( 97, "", "", "") // Not assigned in the UBS numbering scheme.
-    addBookDescriptor( 98, "", "", "") // Not assigned in the UBS numbering scheme.
-    addBookDescriptor( 99, "", "", "") // Not assigned in the UBS numbering scheme.
-    addBookDescriptor(100, "", "", "") // Not assigned in the UBS numbering scheme.
-    addBookDescriptor(101, "", "", "") // Not assigned in the UBS numbering scheme.
-    addBookDescriptor(102, "", "", "") // Not assigned in the UBS numbering scheme.
-    addBookDescriptor(103, "", "", "") // Not assigned in the UBS numbering scheme.
-    addBookDescriptor(104, "", "", "") // Not assigned in the UBS numbering scheme.
-    addBookDescriptor(105, "4Ezra", "4 Ezra", "4 Ezra")
-    addBookDescriptor(106, "5Ezra", "5 Ezra", "5 Ezra")
-    addBookDescriptor(107, "6Ezra", "6 Ezra", "6 Ezra")
-    addBookDescriptor(108, "DanGr", "DanGr", "Greek Daniel") // Supported by UBS, but not by NRSVA.
+    addBookDescriptor( 85, "AddDan", C_NotSupported, "Additions to Daniel") // UBS BookNo does not apply from here on, but I have to give a meaningful value for use when indexing tables.
+    addBookDescriptor( 86, "SgThree", C_NotSupported, "")
+    addBookDescriptor( 87, "EpJer", C_NotSupported, "Epistle of Jeremiah")
   }
 }

@@ -61,12 +61,20 @@ open class BibleBookNames
   /****************************************************************************/
 
   /****************************************************************************/
-  val C_BookNo_Psa = 19
-  val C_BookNo_Hab = 35
+  /**
+   * Takes a book abbreviation which is ok as per the USX (or OSIS) standard
+   * and checks whether we can actually process that book.  (We cannot if there
+   * is no provision for the book in the Crosswire header files.)  This will be
+   * an issue only for DC books.
+   *
+   * @param abbreviatedName
+   * @return True if book is supported.
+   */
+
+  fun bookIsSupported (abbreviatedName: String) = "\u0001" != m_BooksInOrder[m_AbbreviatedNameToIndex[abbreviatedName]!!].shortName
 
 
-
-   /****************************************************************************/
+  /****************************************************************************/
   /**
    * Takes a name of the length implied by the name of the method, and returns
    * the corresponding UBS book number.  Throws a StepException if not found.
@@ -219,7 +227,7 @@ open class BibleBookNames
   /****************************************************************************/
 
   /****************************************************************************/
-  protected fun addBookDescriptor (ubsBookNo: Int, abbreviatedName: String, shortName: String, longName: String)
+  protected fun addBookDescriptor (ubsBookNo: Int, abbreviatedName: String, shortName: String = "", longName: String = "")
   {
     for (i in m_BooksInOrder.size .. ubsBookNo) m_BooksInOrder.add(i, BookDescriptor("", "", ""))
     m_BooksInOrder[ubsBookNo] = BookDescriptor(abbreviatedName, shortName, longName)
@@ -239,6 +247,14 @@ open class BibleBookNames
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  /* Marker used to indicate books which, although valid in USX, are not
+     supported by the Crosswire header files, and therefore cannot be handled
+     here. */
+
+  internal val C_NotSupported = "\u0001"
+
 
   /****************************************************************************/
   private data class BookDescriptor (val abbreviatedName: String, val shortName: String, val longName: String)
