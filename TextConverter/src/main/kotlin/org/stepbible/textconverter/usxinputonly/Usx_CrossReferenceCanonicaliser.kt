@@ -136,6 +136,14 @@ import java.util.*
  *   of them to char:xt, and then subject them to the usual checks on
  *   whether the target exists.
  *
+ *
+ *
+ * <span class='important'>There probably *ought* to be an OSIS counterpart of
+ * this.  In terms of alternative structures, OSIS is much simpler than USX,
+ * because I don't thing there *are* any alternatives.  But it would probably
+ * still be worth considering some of the validations which are applied here.
+ * At present I don't do that.</span>
+ *
  * @author ARA "Jamie" Jamieson
  */
 

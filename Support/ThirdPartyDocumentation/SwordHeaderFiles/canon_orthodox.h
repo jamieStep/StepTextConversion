@@ -1,8 +1,8 @@
 /******************************************************************************
  *
- *  canon_orthodox.h -	Versification data for the Orthodox system
+ * canon_orthodox.h -	Versification data for the Orthodox system
  *
- * $Id: canon_orthodox.h 2936 2013-08-02 18:00:19Z chrislit $
+ * $Id: canon_orthodox.h 3765 2020-07-26 10:31:09Z scribe $
  *
  * Copyright 2013 CrossWire Bible Society (http://www.crosswire.org)
  *	CrossWire Bible Society

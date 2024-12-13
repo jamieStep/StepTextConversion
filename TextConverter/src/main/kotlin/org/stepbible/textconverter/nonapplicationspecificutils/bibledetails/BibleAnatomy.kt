@@ -5,14 +5,34 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Obj
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.BiblePart
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
-import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType
 
 
 /******************************************************************************/
 /**
  * Basic information about the anatomy of the Bible in general, based upon
  * UBS book numbers.
- * <p>
+ *
+ * In fact it has recently been pointed out that ordering things according to
+ * UBS numbers may not be entirely appropriate, because that would see DC books
+ * come out after NT, rather than between the two testaments.  I've retained
+ * DC numbering for OT and NT anyway, because it's been baked into the system.
+ *
+ * I don't *think* changing things would have any adverse impact, because
+ * everything which is concerned about books and book numbers derives the
+ * relevant values by looking up the names and getting the corresponding
+ * number, rather than by assuming that the number is so-and-so.  Thus I need
+ * the book number for Psalms, but I get that by looking up 'Psa' to determine
+ * what the number is.  However, it's always just about possible that some
+ * piece of code somewhere else does hard-code the numbers, so I don't want to
+ * take the risk of making changes.
+ *
+ * There are some issues which perhaps you should be aware of, however.
+ * For example, I assume that the OT content is that of a standard Protestant
+ * Bible, and therefore runs from Gen to Mal, so that these mark the start
+ * and end of the OT, and anything with a book number between that for Gen and
+ * that for Mal is an OT book.  However, as I recall, the Vulgate and various
+ * Catholic Bibles place some DC books within the OT, and also order the OT
+ * books differently.
  *
  * @author ARA "Jamie" Jamieson
  */

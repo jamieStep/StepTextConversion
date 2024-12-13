@@ -1,21 +1,16 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.osisonly.Osis_Osis2modInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.runCommand
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Zip
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.FeatureIdentifier
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotify
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotifyIfContainsSpaces
+import org.stepbible.textconverter.osisonly.Osis_AudienceAndCopyrightSpecificProcessingHandler
 import java.io.File
 import java.nio.file.Paths
 import java.util.ArrayList
@@ -63,7 +58,7 @@ object Builder_Module: Builder()
     if (!ConfigData.getAsBoolean("stepEncrypted", "no")) Logger.warning("********** NOT ENCRYPTED **********")
     StepFileUtils.createFolderStructure(FileLocations.getInternalSwordFolderPath())
     PackageContentHandler.processPreOsis2mod()
-    handleOsis2modCall()
+    Osis_AudienceAndCopyrightSpecificProcessingHandler.invokeOsis2mod()
 
 
 
@@ -97,128 +92,6 @@ object Builder_Module: Builder()
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
-
-  /****************************************************************************/
-  private fun handleOsis2modCall ()
-  {
-    /**************************************************************************/
-    /* Since there are occasions when we need to be able to run the relevant
-       osis2mod command manually from the command line, and since it is always
-       a pain to work out what the command line should look like, here is the
-       information you need ...
-
-         osis2mod.exe <outputPath> <osisFilePath> -v <versificationScheme> -z -c "<password>"
-
-       where <outputPath> is eg ...\Sword\modules\texts\ztext\NIV2011 and
-       <password> is a random string of letters, digits and selected special
-       characters which is used as a password / encryption key when generating
-       the module.
-
-       You can optionally add '> logFile' to the end to redirect output.  And
-       perhaps more useful is '> logfile 2>&1' which redirects both stdout and
-       stderr to the same file.  But do that only if you are running direct from
-       a command line, not if you are using the code here to run things under
-       control of the converter -- there are problems with system utilities which
-       mean this doesn't work properly -- see head-of-method comments to
-       runCommand.
-
-       Re enclosing the program path in quotes below ...
-
-       Enclosing the path in quotes seems to make sense if you think in terms of
-       the command actually being expanded into something which is then run as
-       though from the command line -- otherwise, if the path contains spaces,
-       things won't be handled correctly.
-
-       And if you do that on Windows, things are indeed fine.  But not on Linux,
-       where things work only if you do _not_ enclose the path in quotes.
-
-       In fact, I get the impression that under the hood the processing _isn't_
-       actually just creating a command line, but instead is doing something
-       special with the first element -- and quotes get in the way of that on
-       Linux.
-
-       I have therefore stopped adding the quotes.  What I now have seems to
-       work on both Windows and Linux -- although I have to admit I suspect
-       that on neither platform have we actually had a path which contained
-       spaces. */
-
-    val usingStepOsis2Mod = "step" == ConfigData["stepOsis2modType"]!!
-    val programPath = ConfigData["stepOsis2modFilePath"]!!
-    val swordExternalConversionCommand: MutableList<String> = ArrayList()
-    swordExternalConversionCommand.add(programPath) // Don't enclose the path in quotes -- see note above.
-    swordExternalConversionCommand.add(FileLocations.getSwordTextFolderPath())
-    swordExternalConversionCommand.add(FileLocations.getInternalOsisFilePath())
-
-    if (usingStepOsis2Mod)
-    {
-      swordExternalConversionCommand.add("-V")
-      swordExternalConversionCommand.add(FileLocations.getOsis2ModSupportFilePath())
-    }
-    else
-    {
-      swordExternalConversionCommand.add("-v")
-      swordExternalConversionCommand.add(ConfigData["stepVersificationScheme"]!!)
-    }
-
-    swordExternalConversionCommand.add("-z")
-
-    val osis2modEncryptionKey = ConfigData["stepOsis2ModEncryptionKey"]
-    if (null != osis2modEncryptionKey)
-    {
-      swordExternalConversionCommand.add("-c")
-      swordExternalConversionCommand.add(osis2modEncryptionKey)
-    }
-
-
-
-    /**************************************************************************/
-    /* If we have any grounds at all for giving up, now would be a good time to
-       do it, before bothering with the remaining processing. */
-
-    Logger.announceAll(true)
-
-
-
-    /**************************************************************************/
-    /* Sometimes -- under circumstances I cannot fathom -- osis2mod hangs when
-       run under control of the converter (either as a JAR or from the IDE).
-       It seems to be something to do with the fact that it is generating
-       output to explain changes it has made; but then it always generates
-       _some_ output, if only to explain that it has succeeded, so I can't see
-       that generating explanatory output _can_ be the issue.
-
-       Under these circumstances, the only workaround I can find is to copy
-       the command line which I would like to run to the clipboard, and then
-       run it manually in a command window before permitting the converter to
-       continue and create the repository package.
-
-       In fact, to date this has been an issue only when creating public modules
-       -- STEP versions seem to work ok (probably because they don't generate
-       this output).
-
-       Given that it may be convenient to record in step.conf that manual
-       operation is required, and given that where a text can be used to
-       generate both a public and a STEP module, step.conf will be shared
-       by both, I take note of the manual osis2mod request only if this is
-       not a STEP run. */
-
-    if (ConfigData.getAsBoolean("stepManualOsis2mod") && "step" != ConfigData["stepTargetAudience"])
-    {
-      val commandAsString = swordExternalConversionCommand.joinToString(" "){ quotifyIfContainsSpaces(it) } + " > ${quotify(FileLocations.getOsisToModLogFilePath())} 2>&1"
-      MiscellaneousUtils.copyTextToClipboard(commandAsString)
-      println("")
-      println("The command to run osis2mod has been copied to the clipboard.  Open a plain vanilla command window and run it from there.")
-      println("In case you need it, it is ...  $commandAsString")
-      print("Hit ENTER here when osis2mod has completed: "); readlnOrNull()
-    }
-    else
-    {
-      val rc = runCommand("Running external command to generate Sword data: ", swordExternalConversionCommand, errorFilePath = FileLocations.getOsisToModLogFilePath())
-      ConfigData["stepOsis2modReturnCode"] = rc.toString()
-      Rpt.report(level = 1, "osis2mod completed")
-    }
-  }
-
 
   /****************************************************************************/
   /* Checks the content of the OSIS log file to make sure it contains the word
@@ -320,35 +193,32 @@ object PackageContentHandler
 
 
   /****************************************************************************/
-  data class ProcessingDetails (val wantIt: () -> Boolean, val processor: ((String) -> Unit)?, val filePath: String)
-  private fun doItAlways () = true
-  private fun ifEncrypting () = ConfigData.getAsBoolean("stepEncrypted")
-  private fun ifUsingStepOsis2mod () = ConfigData["stepOsis2modType"]!!.lowercase() == "step"
+  data class ProcessingDetails (val processor: ((String) -> Unit)?, val filePath: String)
+
 
 
   /****************************************************************************/
   private val m_DataPreOsis2mod = listOf(
-    ProcessingDetails(::ifEncrypting,        ::encryptionDataHandler,  FileLocations.getEncryptionDataFilePath()),
-    ProcessingDetails(::ifUsingStepOsis2mod, ::osis2modDataHandler,    FileLocations.getOsis2ModSupportFilePath()),
-    ProcessingDetails(::doItAlways,          null,            FileLocations.getSwordConfigFolderPath()),
-    ProcessingDetails(::doItAlways,          null,            Paths.get(FileLocations.getSwordTextFolderPath(), "dummyFile.txt").toString()),
+    ProcessingDetails(null,            FileLocations.getOsis2ModSupportFilePath()),
+    ProcessingDetails(null,            FileLocations.getSwordConfigFolderPath()),
+    ProcessingDetails(null,            Paths.get(FileLocations.getSwordTextFolderPath(), "dummyFile.txt").toString()),
   )
 
 
   /****************************************************************************/
   private val m_DataPostOsis2mod = listOf(
-    ProcessingDetails(::doItAlways, null,                           FileLocations.getSwordZipFilePath()),
-    ProcessingDetails(::doItAlways, ::featuresSummaryBibleStructureHandler, FileLocations.getTextFeaturesFilePath()),
-    ProcessingDetails(::doItAlways, ::featuresSummaryRunParametersHandler,  FileLocations.getRunFeaturesFilePath()),
-    ProcessingDetails(::doItAlways, ::osisSaver,                            FileLocations.makeInputOsisFilePath()),
-    ProcessingDetails(::doItAlways, ::swordConfigFileHandler,               FileLocations.getSwordConfigFilePath()),
+    ProcessingDetails(null,                          FileLocations.getSwordZipFilePath()),
+    ProcessingDetails(::featuresSummaryBibleStructureHandler, FileLocations.getTextFeaturesFilePath()),
+    ProcessingDetails(::featuresSummaryRunParametersHandler,  FileLocations.getRunFeaturesFilePath()),
+    ProcessingDetails(::osisSaver,                            FileLocations.makeInputOsisFilePath()),
+    ProcessingDetails(::swordConfigFileHandler,               FileLocations.getSwordConfigFilePath()),
  )
 
 
   /****************************************************************************/
   private fun doIt (items: List<ProcessingDetails>)
   {
-    items.filter{ it.wantIt() }.forEach{
+    items.forEach{
       StepFileUtils.createFolderStructure(StepFileUtils.getParentFolderName(it.filePath))
       it.processor?.let { it1 -> it1(it.filePath) }
     }
@@ -356,7 +226,6 @@ object PackageContentHandler
 
 
   /****************************************************************************/
-  private fun osis2modDataHandler (filePath: String) = Osis_Osis2modInterface.instance().createSupportingDataIfRequired(filePath)
   private fun featuresSummaryBibleStructureHandler (filePath: String) = IssueAndInformationRecorder.processFeaturesSummaryBibleDetails(filePath, InternalOsisDataCollection)
   private fun featuresSummaryRunParametersHandler (filePath: String) = IssueAndInformationRecorder.processFeaturesSummaryRunDetails(filePath)
 
@@ -373,54 +242,6 @@ object PackageContentHandler
     if ("osis" == ConfigData["stepOriginData"]!!) return // Nothing to do if this run started from OSIS, because that _is_ the external OSIS.
     StepFileUtils.renameFile(Paths.get(FileLocations.getInputOsisFolderPath(), ConfigData["stepModuleName"]!! + ".xml").toString(),
                              Paths.get(FileLocations.getInputOsisFolderPath(), "DONT_USE_ME.xml").toString())
-  }
-
-
-  /****************************************************************************/
-  /* Obtains encryption data.
-
-     There are two separate pieces of encryption data.  One is a longish
-     random password which is passed to osis2mod; and the other is an
-     encrypted form of this, which is stored in a special configuration file
-     used by JSword when decrypting data.
-
-     With offline STEP on Windows, this file needs to go into a special location
-     within the user's home folder, and I do this here in the converter so as
-     to avoid having to move it around manually.  With online STEP, I presume it
-     also needs to go into a special location, but I don't know where that is.
-
-     (I have a feeling that in fact it should go into the module's zip file, and
-     that it will automatically be moved to the right place when the module is
-     installed, but I remain unclear quite how to achieve that.)
-
-     I also store a copy of this configuration file in the Metadata folder so
-     that I can locate it easily and pass it to other people --
-     Metadata/<moduleName>.conf. */
-
-  private fun encryptionDataHandler (filePath: String)
-  {
-    /**************************************************************************/
-    if (!ConfigData.getAsBoolean("stepEncrypted"))
-      return
-
-
-
-    /**************************************************************************/
-    val osis2modEncryptionKey = MiscellaneousUtils.generateRandomString(64)
-    ConfigData.put("stepOsis2ModEncryptionKey", osis2modEncryptionKey, true)
-    val obfuscationKey = "p0#8j..8jm@72k}28\$0-,j[\$lkoiqa#]"
-    val stepEncryptionKey = MiscellaneousUtils.generateStepEncryptionKey(osis2modEncryptionKey, obfuscationKey)
-
-
-
-    /**************************************************************************/
-    /* Write the details to the file which controls encryption. */
-
-    val writer = File(filePath).bufferedWriter()
-    writer.write("[${ConfigData["stepModuleName"]!!}]"); writer.write("\n")
-    writer.write("CipherKey=$stepEncryptionKey");        writer.write("\n")
-    writer.write("STEPLocked=true");                     writer.write("\n")
-    writer.close()
   }
 
 
@@ -508,10 +329,25 @@ XXX_AddedValue_XXX
     val changesAppliedByStep: MutableList<String> = ArrayList()
     if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) changesAppliedByStep.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Morphology"))
     if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) changesAppliedByStep.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Strongs"))
-    if ("crosswire" == ConfigData["stepOsis2modType"]!!)
-    { // Both English and vernacular forms of text, assuming they differ.
+
+
+
+    /**************************************************************************/
+    /* If we are applying runtime reversification, then -- at least to a first
+       approximation -- the versification structure is left intact.  With other
+       types of reversification, this is not so: conversion-time
+       reversification may change the structure fairly radically in some cases,
+       and with no reversification, osis2mod may combine verses which are
+       excess to the scheme it has been told to use.
+
+       Some text suppliers require us to own up to making changes, so for
+       safety's sake, I assume all will.  I add the text in both English and
+       vernacular where available. */
+
+    if ("runtime" != ConfigData["stepReversificationType"])
+    {
       val english = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
-      val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+      val vernacular = TranslatableFixedText.stringFormatWithLookup    ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
       changesAppliedByStep.add(vernacular)
       if (vernacular != english) changesAppliedByStep.add(english)
     }

@@ -1,8 +1,8 @@
 /******************************************************************************
  *
- *  canon_lxx.h -	Versification data for the LXX system
+ * canon_lxx.h -	Versification data for the LXX system
  *
- * $Id: canon_lxx.h 2936 2013-08-02 18:00:19Z chrislit $
+ * $Id: canon_lxx.h 3765 2020-07-26 10:31:09Z scribe $
  *
  * Copyright 2013 CrossWire Bible Society (http://www.crosswire.org)
  *	CrossWire Bible Society

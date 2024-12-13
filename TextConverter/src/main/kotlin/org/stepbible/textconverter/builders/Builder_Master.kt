@@ -1,7 +1,6 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.applicationspecificutils.Osis_FileProtocol
-import org.stepbible.textconverter.applicationspecificutils.Usx_FileProtocol
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNames
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigDataSupport
@@ -59,7 +58,7 @@ object Builder_Master: Builder()
       CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false),
       CommandLineProcessor.CommandLineOption("supplierUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false),
       CommandLineProcessor.CommandLineOption("targetAudience", 1, "If it is possible to build both STEP-only and public version, selects the one required.", listOf("Public", "Step"), null, false, forceLc = true),
-      CommandLineProcessor.CommandLineOption("useExistingOsis", 1, "Ignore other inputs and start from OSIS.  asInput => Use existing OSIS as input but change it as necessary; asOutput => Use existing OSIS unchanged as far as possible.", listOf("asInput", "asOutput"), null, false),
+      CommandLineProcessor.CommandLineOption("useExistingOsis", 1, "Ignore other inputs and start from OSIS.  withChanges => Use existing OSIS as input apply any normal processing to it; withoutChanges => Use existing OSIS unchanged as far as possible.", listOf("withChanges", "withoutChanges"), null, false),
 
 
 

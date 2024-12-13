@@ -3,7 +3,6 @@ package org.stepbible.textconverter.applicationspecificutils
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
@@ -61,6 +60,7 @@ open class X_FileProtocol
 
   open fun attrName_chapterEid (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun attrName_chapterSid (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  open fun attrName_crossReference (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun attrName_note () = "note"
   open fun attrName_verseEid (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun attrName_verseSid (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
@@ -68,6 +68,7 @@ open class X_FileProtocol
 
   // No tagName_book, because in OSIS it is a div with a type attribute, and therefore it doesn't fit with search-by-tagName.
   open fun tagName_chapter (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  open fun tagName_crossReference (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun tagName_note (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun tagName_strong (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun tagName_verse (): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
@@ -77,7 +78,8 @@ open class X_FileProtocol
   fun tagName_table () = "table"
   open fun attrName_tableHeaderCellStyle () = "style"
 
-  fun getSid (sidVerse: Node) = sidVerse[attrName_verseSid()]!!
+  fun getEid (sidChapterOrVerse: Node) = sidChapterOrVerse[attrName_verseEid()]!!
+  fun getSid (sidChapterOrVerse: Node) = sidChapterOrVerse[attrName_verseSid()]!!
   open fun bookNameToNumber (name: String): Int = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun getBookAbbreviation (doc: Document): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden() // Assumes just one book per file.
   open fun getBookAbbreviation (node: Node): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
@@ -86,7 +88,8 @@ open class X_FileProtocol
   open fun getBookNode (doc: Document): Node? = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun getBookNodes (doc: Document): List<Node> = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun getExtendedNodeName (node: Node): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
-  open fun getSidAsRefKey (sidVerse: Node) = readRef(getSid(sidVerse)).toRefKey()
+  open fun getEidAsRefKey (eidChapterOrVerse: Node) = readRef(getEid(eidChapterOrVerse)).toRefKey()
+  open fun getSidAsRefKey (sidChapterOrVerse: Node) = readRef(getSid(sidChapterOrVerse)).toRefKey()
   open fun getTagsWithNumberedLevels (): Set<String> = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun getUsxBookAbbreviation (doc: Document): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden() // Assumes just one book per file.
   open fun getUsxBookAbbreviation (node: Node): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
@@ -119,7 +122,10 @@ open class X_FileProtocol
   open fun makeVerseSidNode (doc: Document, refKey: Pair<RefKey, RefKey?>): Node = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun makeVerseSidNode (doc: Document, refAsString: String): Node = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun recordTagChange (node: Node, newTag: String, newStyleOrType: String? = null, reason: String? = null): Node = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  open fun refToString (refCollection: RefCollection): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun refToString (refKey: RefKey): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  open fun setEid (node: Node, refKey: RefKey) { node[attrName_verseEid()] = refToString(refKey) }
+  open fun setSid (node: Node, refKey: RefKey) { node[attrName_verseSid()] = refToString(refKey) }
   open fun standardiseCallout (noteNode: Node): Unit = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun treatAsCanonicalNodeEvenThoughNot (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun updateVerseSid (verse: Node, refKey: RefKey): Unit = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
@@ -216,7 +222,6 @@ open class X_FileProtocol
 //      if (isNodeWhichNeedsToStickWithCanonicalText(n)) // Moved to 06-Jun-24 above.
 //        return Pair('Y', n) // Treat notes and xrefs as though they were canonical, so they remain with the verse.
 
-Dbg.dCont(key + " : " + Dom.getNodeName(node), "speaker")
       val res = m_TagDetails[key]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity // Try looking up the extended name, and failing that, the non-extended version.
       when (res)
       {
@@ -342,7 +347,19 @@ Dbg.dCont(key + " : " + Dom.getNodeName(node), "speaker")
   fun isNodeWhichNeedsToStickWithCanonicalText (node: Node) = isNoteNode(node) || isXrefNode(node)
   
   
-  
+  /****************************************************************************/
+  /**
+  * Modifies the book abbreviation.  (Occasionally we need to change the names
+  * of books, particularly when dealing with Greek Esther.)
+  *
+  * @param node: Book node.
+  * @param abbreviation
+  */
+
+  open fun setBookAbbreviation (node: Node, abbreviation: String) {}
+
+
+
   
   
   /****************************************************************************/
@@ -376,6 +393,7 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
   override fun getEmptyVerseHandler () = PA_EmptyVerseHandler(this)
   override fun attrName_chapterEid () = "eID"
   override fun attrName_chapterSid () = "sID"
+  override fun attrName_crossReference () = "osisRef"
   override fun attrName_strong () = "lemma"
   override fun attrName_tableHeaderCellStyle () = "%%%garbage%%%" // OSIS doesn't have one of these.
   override fun attrName_verseEid () = "eID"
@@ -383,13 +401,14 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 
   // No tagName_book, because in OSIS it is a div with a type attribute, and therefore it doesn't fit with search-by-tagName.
   override fun tagName_chapter () = "chapter"
+  override fun tagName_crossReference () = "reference"
   override fun tagName_note () = "note"
   override fun tagName_strong () = "w"
   override fun tagName_verse () = "verse"
 
   override fun bookNameToNumber (name: String) = BibleBookNamesOsis.nameToNumber(name)
   override fun getBookAbbreviation (doc: Document) = getBookAbbreviation(Dom.findNodeByName(doc,"book", false)!!)
-  override fun getBookAbbreviation (node: Node) = node["osisID"]!!
+
   override fun getBookNumber (doc: Document) = BibleBookNamesOsis.nameToNumber(getBookAbbreviation(doc))
   override fun getBookNumber (rootNode: Node) = BibleBookNamesOsis.nameToNumber(getBookAbbreviation(rootNode))
   override fun getBookNode (doc: Document) = Dom.findNodeByAttributeValue(doc, "div", "type", "book")!!
@@ -399,6 +418,17 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
   override fun isBookNode (node: Node) = "book" == Dom.getNodeName(node) || "div:book" == getExtendedNodeName(node)
   override fun isNoteNode (node: Node) = "note" == Dom.getNodeName(node) && !node["type"]!!.equals("CrossReference", ignoreCase = true)
   override fun isXrefNode (node: Node) = "note" == Dom.getNodeName(node) && node["type"]!!.equals("CrossReference", ignoreCase = true)
+
+
+  /****************************************************************************/
+  /**
+  * Gets the book abbreviation from the book node.
+  *
+  * @param node: Book node.
+  * @return Book abbreviation.
+  */
+
+  override fun getBookAbbreviation (node: Node) = node["osisID"]!!
 
 
   /****************************************************************************/
@@ -742,6 +772,18 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 
   /****************************************************************************/
   /**
+  * Modifies the book abbreviation.  (Occasionally we need to change the names
+  * of books, particularly when dealing with Greek Esther.)
+  *
+  * @param node: Book node.
+  * @param abbreviation
+  */
+
+  override fun setBookAbbreviation (node: Node, abbreviation: String) { node["osisID"] = abbreviation }
+
+
+  /****************************************************************************/
+  /**
    * Changes callout to reflect our house style.
    *
    * @param noteNode Note node to be updated.
@@ -846,6 +888,17 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 
     return node
   }
+
+
+  /****************************************************************************/
+  /**
+  * Converts a RefCollection to a string representation.
+  *
+  * @param refKey
+  * @return String representation.
+  */
+
+  override fun refToString (refCollection: RefCollection) = refCollection.toStringOsis()
 
 
   /****************************************************************************/
@@ -1050,10 +1103,12 @@ object Usx_FileProtocol: X_FileProtocol(), ObjectInterface
   /****************************************************************************/
   override fun getEmptyVerseHandler () = PA_EmptyVerseHandler(this)
   override fun attrName_chapterSid () = "sid"
+  override fun attrName_crossReference () = "loc"
   override fun attrName_verseEid () = "eid"
   override fun attrName_verseSid () = "sid"
   override fun attrName_strong () = "lemma"
   override fun tagName_chapter () = "chapter"
+  override fun tagName_crossReference () = "ref"
   override fun tagName_note () = "note"
   override fun tagName_strong () = "w"
   override fun tagName_verse () = "verse"
@@ -1063,9 +1118,8 @@ object Usx_FileProtocol: X_FileProtocol(), ObjectInterface
   fun internalAttrNameFor_bookTitle () = "_X_bookTitle"
 
   override fun getBookAbbreviation (doc: Document) = getBookAbbreviation(Dom.findNodeByName(doc,"book", false)!!)
-  override fun getBookAbbreviation (node: Node) = node["code"]!!
-  override fun getBookNumber (doc: Document) = BibleBookNamesUsx.nameToNumber(Usx_FileProtocol.getBookAbbreviation(doc))
-  override fun getBookNumber (rootNode: Node) = BibleBookNamesUsx.nameToNumber(Usx_FileProtocol.getBookAbbreviation(rootNode))
+  override fun getBookNumber (doc: Document) = BibleBookNamesUsx.nameToNumber(getBookAbbreviation(doc))
+  override fun getBookNumber (rootNode: Node) = BibleBookNamesUsx.nameToNumber(getBookAbbreviation(rootNode))
   override fun getUsxBookAbbreviation (doc: Document): String = getBookAbbreviation(doc)
   override fun getUsxBookAbbreviation (node: Node): String = getBookAbbreviation(node)
   override fun bookNameToNumber (name: String) = BibleBookNamesUsx.nameToNumber(name)
@@ -1078,6 +1132,29 @@ object Usx_FileProtocol: X_FileProtocol(), ObjectInterface
   override fun isCanonicalTitleNode (node: Node) = "para:d" == getExtendedNodeName(node)
   override fun isNoteNode (node: Node) = "note" == Dom.getNodeName(node) && node["style"]!!.lowercase() !in "x.ex"
   override fun isXrefNode (node: Node) = "note" == Dom.getNodeName(node) && node["style"]!!.lowercase() in "x.ex"
+
+
+  /****************************************************************************/
+  /**
+  * Gets the book abbreviation from the book node.
+  *
+  * @param node: Book node.
+  * @return Book abbreviation.
+  */
+
+  override fun getBookAbbreviation (node: Node) = node["code"]!!
+
+
+  /****************************************************************************/
+  /**
+  * Modifies the book abbreviation.  (Occasionally we need to change the names
+  * of books, particularly when dealing with Greek Esther.)
+  *
+  * @param node: Book node.
+  * @param abbreviation
+  */
+
+  override fun setBookAbbreviation (node: Node, abbreviation: String) { node["code"] = abbreviation }
 
 
   /****************************************************************************/
@@ -1513,6 +1590,17 @@ object Usx_FileProtocol: X_FileProtocol(), ObjectInterface
 
     return node
   }
+
+
+  /****************************************************************************/
+  /**
+  * Converts a RefCollection to a string representation.
+  *
+  * @param refKey
+  * @return String representation.
+  */
+
+  override fun refToString (refCollection: RefCollection) = refCollection.toStringUsx()
 
 
   /****************************************************************************/

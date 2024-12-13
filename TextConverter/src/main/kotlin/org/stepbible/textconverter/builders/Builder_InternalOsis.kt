@@ -8,7 +8,6 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.applicationspecificutils.*
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
@@ -54,7 +53,63 @@ object Builder_InternalOsis: Builder()
 
 
   /****************************************************************************/
+  /* We have two options here.  In most cases, we take the input OSIS merely as
+     a starting point, and do a lot to it to cater for reversification, etc.
+     This is the more normal option.
+
+     The alternative -- which has not really been exercised much, and
+     therefore may require some additional work, is to bypass all of this and
+     simply use the input OSIS as-is.  This option was introduced where we
+     already had a text which we trusted, and didn't want to risk the converter
+     messing it up.  However, at present it is bypassing _everything_ (including
+     identifying data which would give rise to mappings in the osis2mod JSON
+     file), and this is probably too much (particularly since it also bypasses
+     the processing which fills in holes in the text).
+
+     I don't really like the final code fragment (^lt etc) below.  It's there to
+     undo temporary changes to text content which may have been applied much
+     earlier in the processing (in this case, to replace things like '&lt;',
+     because many transformations applied here start getting confused as to
+     whether we have '&lt;' or '<', the latter being a problem in some cases).
+     But this architecture means that we apply these changes somewhere miles
+     away in the code (in X_DataCollection), and then undo them again here, which
+     isn't ideal.
+
+     Note, incidentally, that this is different from BasicOsisTweaker.unprocess.
+     That applies changes to the DOM.  Here we are applying changes to the XML
+     text to which the DOM is converted.  Hence, unfortunately, it's not
+     possible to combine the two steps into one. */
+
   override fun doIt ()
+  {
+    /**************************************************************************/
+    if ("withoutchanges" == ConfigData["stepUseExistingOsis"]?.lowercase())
+    {
+      Rpt.report(level = 0, "Using existing OSIS as-is.")
+      val doc = Dom.getDocument(FileLocations.getInputOsisFilePath()!!)
+      BookOrdering.initialiseFromOsis(doc)
+      InternalOsisDataCollection.loadFromDoc(doc)
+    }
+    else
+      doIt1()
+
+
+
+    /**************************************************************************/
+    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(InternalOsisDataCollection.getBookNumbers())
+    val timeStamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))
+    val comment = "This OSIS file created by the STEPBible project $timeStamp.  This is a throw-away file.  Use the external OSIS as the basis of any long-term changes you wish to make."
+    Rpt.report(level = 1, "Writing version of OSIS needed for use with osis2mod.")
+    Dom.outputDomAsXml(InternalOsisDataCollection.convertToDoc(),
+                       FileLocations.getInternalOsisFilePath(),
+                       comment) { x -> x.replace("^lt;", "&lt;")
+                                        .replace("^gt;", "&gt;")
+                                        .replace("xmlns=\"\" ", "") }
+  }
+
+
+  /****************************************************************************/
+  private fun doIt1 ()
   {
     /***************************************************************************/
     Builder_InitialOsisRepresentationOfInputs.process()
@@ -83,6 +138,7 @@ object Builder_InternalOsis: Builder()
        kinds of changes reduce the number of nodes to be processed, so
        probably better to make them as early as possible. */
 
+    BookOrdering.initialiseFromOsis(ExternalOsisDoc); x()                                // Get the book ordering (not used until later in the processing chain, but convenient to handle it here.
     InternalOsisDataCollection.loadFromDoc(ExternalOsisDoc); x()
     notesArchiver.archiveElements(InternalOsisDataCollection, InternalOsisDataCollection.getFileProtocol()::isNoteNode); x()
                                                                                          // Hive off footnotes to separate document to speed up main processing.
@@ -157,8 +213,8 @@ object Builder_InternalOsis: Builder()
 
     /**************************************************************************/
     Rpt.report(level = 0, "Performing reversification if necessary.")
-    Osis_DetermineReversificationTypeEtc.process()
-    PA_ReversificationHandler.instance().process(InternalOsisDataCollection); x()
+    Osis_AudienceAndCopyrightSpecificProcessingHandler.process()
+    Osis_AudienceAndCopyrightSpecificProcessingHandler.doReversificationIfNecessary(InternalOsisDataCollection); x()
 
 
 
@@ -191,79 +247,15 @@ object Builder_InternalOsis: Builder()
     PA_EmptyVerseHandler(InternalOsisDataCollection.getFileProtocol()).markVersesWhichWereEmptyInTheRawText(InternalOsisDataCollection); x() // What it says on the tin.
     PA_EmptyVerseHandler.preventSuppressionOfEmptyVerses(InternalOsisDataCollection); x()  // Unless we take steps, empty verses tend to be suppressed when rendered.
     PA_TextAnalyser.process(InternalOsisDataCollection)  ; x()                             // Gathers up information which might be useful to someone administering texts.
+    Osis_CrossReferenceUpdater.process(InternalOsisDataCollection, notesArchiver); x()     // Apply any updates required as a result of reversification processing.
     Osis_FinalInternalOsisTidier.process(InternalOsisDataCollection, notesArchiver); x()   // Ad hoc last minute tidying.
     PA_CalloutStandardiser.process(InternalOsisDataCollection); x()                        // Forces callouts to be in house style, assuming that's what we want.
-    Osis_CrossReferenceChecker.process(InternalOsisDataCollection)                         // Does what it says on the tin.
+    Osis_CrossReferenceCanonicaliser.process(InternalOsisDataCollection) ; x()                   // Does what it says on the tin.
     Osis_BasicTweaker.unprocess(InternalOsisDataCollection); x()                           // Undoes any temporary tweaks which were applied to make the overall processing easier.
     PA_FinalValidator.process(InternalOsisDataCollection); x()                             // Final health checks.
     Osis_InternalTagReplacer.process(InternalOsisDataCollection); x()                      // Replaces any _X_ tags which I introduced with pukka OSIS ones.
     PA_TemporaryAttributeRemover.process(InternalOsisDataCollection); x()                  // Removes all temporary attributes.
-
-
-
-    /**************************************************************************/
-    /* Save the OSIS so it's available to osis2mod.
-
-       We have two options here.
-
-       The more normal one appears in the else clause, and writes the internal
-       OSIS to the output file.
-
-       In this respect, I don't really like the final code fragment (^lt etc)
-       below.  It's there to undo temporary changes to text content which may
-       have been applied much earlier in the processing (in this case, to replace
-       things like '&lt;', because many transformations applied here start
-       getting confused as to whether we have '&lt;' or '<', the latter being a
-       problem in some cases).  But this architecture means that we apply these
-       changes somewhere miles away in the code (in X_DataCollection), and then
-       undo them again here, which isn't ideal.
-
-       Note, incidentally, that this is different from BasicOsisTweaker.unprocess.
-       That applies changes to the DOM.  Here we are applying changes to the XML
-       text to which the DOM is converted.  Hence, unfortunately, it's not
-       possible to combine the two steps into one.
-
-       I said there were two options.  The other ignores all the work done thus
-       far in creating an internal DOM representation, and simply assumes (where
-       starting from OSIS) that the original OSIS was ok.  I have added this
-       option because with ESV we do start from OSIS, and there was some concern
-       that we had a version of ESV which was apparently working, and didn't
-       want to risk introducing errors into it.
-
-       If used commonly, this is a somewhat risky undertaking, because I don't
-       do things to the internal OSIS for the sake of it: for instance, I make
-       sure there are no holes in the versification scheme, and I also apply
-       tweaks which are needed to ensure the rendering looks ok.  If we don't
-       use the internal OSIS, any such tweaks are lost.
-
-       Note that I still need to generate the internal OSIS, even if I then
-       throw it away, because one of the side-effects of doing that is that I
-       generate the supporting information needed for the various configuration
-       files (the Sword configuration file, the samification JSON file, etc).
-       This highlights another potential issue, in that this data will be based
-       upon the _internal_ OSIS.  We will now be replacing that internal OSIS
-       with the original OSIS, so we have to assume that the two are
-       sufficiently similar that the supporting information remains relevant.
-       This is definitely not a foregone conclusion. */
-
-    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(InternalOsisDataCollection.getBookNumbers())
-
-    if ("asoutput" == ConfigData["stepUseExistingOsis"]?.lowercase())
-    {
-      Rpt.report(level = 1, "Writing version of OSIS needed for use with osis2mod.")
-      StepFileUtils.copyFile(FileLocations.getInternalOsisFilePath(), FileLocations.getInputOsisFilePath()!!)
-    }
-    else
-    {
-      val timeStamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))
-      val comment = "This OSIS file created by the STEPBible project $timeStamp.  This is a throw-away file.  Use the external OSIS as the basis of any long-term changes you wish to make."
-      Rpt.report(level = 1, "Writing version of OSIS needed for use with osis2mod.")
-      Dom.outputDomAsXml(InternalOsisDataCollection.convertToDoc(),
-                         FileLocations.getInternalOsisFilePath(),
-                         comment) { x -> x.replace("^lt;", "&lt;")
-                                          .replace("^gt;", "&gt;")
-                                          .replace("xmlns=\"\" ", "") }
-    }
+    Osis_BooksWithAdditionsHandler.process(InternalOsisDataCollection); x()                // Handle eg renaming of AddEsth to EsthGr if that's what we decide to do.
   }
 
 

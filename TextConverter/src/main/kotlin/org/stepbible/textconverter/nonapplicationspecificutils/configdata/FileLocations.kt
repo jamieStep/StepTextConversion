@@ -275,12 +275,13 @@ object FileLocations: ObjectInterface
   /****************************************************************************/
   /* Metadata. */
 
+  fun getBookNamesFilePath () = "\$jarResources/bookNames.tsv"
+  fun getConfigDescriptorsFilePath () = "\$jarResources/configDataDescriptors.tsv"
   fun getMetadataFolderPath () = Paths.get(m_RootFolderPath, "Metadata").toString()
   fun getSharedConfigFolderPath () = Paths.get(ConfigData["stepTextConverterOverallDataRoot"]!!, "_SharedConfig_").toString()
   fun getSharedConfigZipFilePath () = Paths.get(getOutputFolderPath(), "sharedMetadata.zip").toString() // Place to store zipped
   fun getStepConfigFileName () = "step.conf"
   fun getStepConfigFilePath () = Paths.get(getMetadataFolderPath(), getStepConfigFileName()).toString()
-  fun getConfigDescriptorsFilePath () = "\$jarResources/configDataDescriptors.tsv"
 
 
 

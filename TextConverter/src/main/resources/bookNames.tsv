@@ -1,0 +1,226 @@
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#!
+#! There are a number of different sources of information as regards books and
+#! the order in which they appear:
+#!
+#! Details of these can be found at:
+#!
+#! - UBS: https://ubsicap.github.io/usfm/identification/books.html
+#!
+#! - USX: https://paratext.thedigitalbiblelibrary.org/static/docs/usx/vocabularies.html
+#!
+#! - OSIS: https://www2.crosswire.org/osis/OSIS%202.1.1%20User%20Manual%2006March2006.pdf
+#!   Appendix C1 or https://wiki.crosswire.org/OSIS_Book_Abbreviations#cite_note-10.
+#!
+#!
+#! There is also a fourth collection below -- the names needed in the JSON files
+#! we create in support of our own osis2mod, giving verse-structure and mapping
+#! details.  These need to follow Crosswire practice, which unfortunately to some
+#! extent represents yet another scheme.
+#!
+#! I did at one stage think that the Crosswire header files might also have a
+#! thing or two to say on the subject, but in fact I think they are not so
+#! relevant after all: they merely say which of the possible books appear within
+#! the various versification schemes for which they cater.
+#!
+#! I had also assumed that the OSIS reference manual would be definitive, but in
+#! fact Crosswire have their own greatly expanded list of books, and I now
+#! believe this to be the list to be which we should be working.
+#!
+#! Unfortunately, their list contains quite a lot of books which do not appear
+#! in the USX scheme, nor, so far as I can see, in the UBS document upon which
+#! USX is based.  This means that in theory we lack USX abbreviations and names
+#! for these books.  This is unfortunate, because I really need abbreviations
+#! for the sake of uniformity.  These entries in the data below are marked with
+#! a tilde in the data below so I don't lose track of them.  The processing
+#! replaces the tildes with a copy of the OSIS abbreviation and name for the
+#! sake of having something I can work with.
+#!
+#! There are also some places where the Crosswire list gives a USX abbreviation,
+#! but not one -- so far as I can see -- which actually appears in the USX
+#! or UBS documentation.  Pending further investigation, I have retained the
+#! abbreviation given in the Crosswire documentation, but placed a tilde at
+#! the front so I don't lose track of the ones with which I have a potential
+#! issue.
+#!
+#! Incidentally, it doesn't matter if there are some books which USX does not
+#! appear to support, since presumably we're simply not going to see them in
+#! any USX input, so it doesn't greatly matter what pretend name we give to
+#! them.
+#!
+#!
+#!
+#! IMPORTANT
+#! =========
+#!
+#! m_DcStart in BibleAnatomy assumes Tobit is the first DC entry.
+#! m_DcEnd in BibleAnatomy assumes 'DUMMY' is the last DC entry.
+#! Processing assumes that the DC books run contiguously.
+#!
+#! If you need to change any of the above, the definitions of m_DcStart and
+#! m_DcEnd may need to be changed and / or processing may need to be revised.
+#!
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+#BookNo	OsisAbbreviation	OsisShortName	UsxAbbreviation	UsxShortName	ImpAbbreviation	ImpShortName	JsonAbbreviation	JsonShortName
+0		Unused – for alignment with UBS book numbering		Unused		Unused		Unused
+1	Gen	Genesis	Gen	Genesis	Gen	Genesis	Gen	Genesis
+2	Exod	Exodus	Exo	Exodus	Exod	Exodus	Exo	Exodus
+3	Lev	Leviticus	Lev	Leviticus	Lev	Leviticus	Lev	Leviticus
+4	Num	Numbers	Num	Numbers	Num	Numbers	Num	Numbers
+5	Deut	Deuteronomy	Deu	Deuteronomy	Deut	Deuteronomy	Deu	Deuteronomy
+6	Josh	Joshua	Jos	Joshua	Josh	Joshua	Jos	Joshua
+7	Judg	Judges	Jdg	Judges	Judg	Judges	Judg	Judges
+8	Ruth	Ruth	Rut	Ruth	Ruth	Ruth	Rut	Ruth
+9	1Sam	1 Samuel	1Sa	1 Samuel	1Sam	I Samuel	1Sa	1 Samuel
+10	2Sam	2 Samuel	2Sa	2 Samuel	2Sam	II Samuel	2Sa	2 Samuel
+11	1Kgs	1 Kings	1Ki	1 Kings	1Kgs	I Kings	1Ki	1 Kings
+12	2Kgs	2 Kings	2Ki	2 Kings	2Kgs	II Kings	2Ki	2 Kings
+13	1Chr	1 Chronicles	1Ch	1 Chronicles	1Chr	I Chronicles	1Ch	1 Chronicles
+14	2Chr	2 Chronicles	2Ch	2 Chronicles	2Chr	II Chronicles	2Ch	2 Chronicles
+15	Ezra	Ezra	Ezr	Ezra	Ezra	Ezra	Ezr	Ezra
+16	Neh	Nehemiah	Neh	Nehemiah	Neh	Nehemiah	Neh	Nehemiah
+17	Esth	Esther[6]	Est	Esther	Esth	Esther	Est	Esther
+18	Job	Job	Job	Job	Job	Job	Job	Job
+19	Ps	Psalms	Psa	Psalms	Ps	Psalms	Psa	Psalms
+20	Prov	Proverbs	Pro	Proverbs	Prov	Proverbs	Pro	Proverbs
+21	Eccl	Ecclesiastes	Ecc	Ecclesiastes	Eccl	Ecclesiastes	Ecc	Ecclesiastes
+22	Song	Song of Solomon	Sng	Song of Solomon	Song	Song of Solomon	Song	Song of Solomon
+23	Isa	Isaiah	Isa	Isaiah	Isa	Isaiah	Isa	Isaiah
+24	Jer	Jeremiah	Jer	Jeremiah	Jer	Jeremiah	Jer	Jeremiah
+25	Lam	Lamentations	Lam	Lamentations	Lam	Lamentations	Lam	Lamentations
+26	Ezek	Ezekiel	Ezk	Ezekiel	Ezek	Ezekiel	Eze	Ezekiel
+27	Dan	Daniel	Dan	Daniel	Dan	Daniel	Dan	Daniel
+28	Hos	Hosea	Hos	Hosea	Hos	Hosea	Hos	Hosea
+29	Joel	Joel	Jol	Joel	Joel	Joel	Joe	Joel
+30	Amos	Amos	Amo	Amos	Amos	Amos	Amo	Amos
+31	Obad	Obadiah	Oba	Obadiah	Obad	Obadiah	Obd	Obadiah
+32	Jonah	Jonah	Jon	Jonah	Jonah	Jonah	Jon	Jonah
+33	Mic	Micah	Mic	Micah	Mic	Micah	Mic	Micah
+34	Nah	Nahum	Nam	Nahum	Nah	Nahum	Nah	Nahum
+35	Hab	Habakkuk	Hab	Habakkuk	Hab	Habakkuk	Hab	Habakkuk
+36	Zeph	Zephaniah	Zep	Zephaniah	Zeph	Zephaniah	Zep	Zephaniah
+37	Hag	Haggai	Hag	Haggai	Hag	Haggai	Hag	Haggai
+38	Zech	Zechariah	Zec	Zechariah	Zech	Zechariah	Zec	Zechariah
+39	Mal	Malachi	Mal	Malachi	Mal	Malachi	Mal	Malachi
+40		Unused – for alignment with UBS book numbering		Unused		Unused		Unused
+41	Matt	Matthew	Mat	Matthew	Matt	Matthew	Mat	Matthew
+42	Mark	Mark	Mrk	Mark	Mark	Mark	Mar	Mark
+43	Luke	Luke	Luk	Luke	Luke	Luke	Luk	Luke
+44	John	John	Jhn	John	John	John	Joh	John
+45	Acts	Acts	Act	Acts	Acts	Acts	Act	Acts
+46	Rom	Romans	Rom	Romans	Rom	Romans	Rom	Romans
+47	1Cor	1 Corinthians	1Co	1 Corinthians	1Cor	I Corinthians	1Cor	1 Corinthians
+48	2Cor	2 Corinthians	2Co	2 Corinthians	2Cor	II Corinthians	2Cor	2 Corinthians
+49	Gal	Galatians	Gal	Galatians	Gal	Galatians	Gal	Galatians
+50	Eph	Ephesians	Eph	Ephesians	Eph	Ephesians	Eph	Ephesians
+51	Phil	Philippians	Php	Philippians	Phil	Philippians	Phili	Philippians
+52	Col	Colossians	Col	Colossians	Col	Colossians	Col	Colossians
+53	1Thess	1 Thessalonians	1Th	1 Thessalonians	1Thess	I Thessalonians	1Th	1 Thessalonians
+54	2Thess	2 Thessalonians	2Th	2 Thessalonians	2Thess	II Thessalonians	2Th	2 Thessalonians
+55	1Tim	1 Timothy	1Ti	1 Timothy	1Tim	I Timothy	1Ti	1 Timothy
+56	2Tim	2 Timothy	2Ti	2 Timothy	2Tim	II Timothy	2Ti	2 Timothy
+57	Titus	Titus	Tit	Titus	Titus	Titus	Tit	Titus
+58	Phlm	Philemon	Phm	Philemon	Phlm	Philemon	Phile	Philemon
+59	Heb	Hebrews	Heb	Hebrews	Heb	Hebrews	Heb	Hebrews
+60	Jas	James	Jas	James	Jas	James	Jam	James
+61	1Pet	1 Peter	1Pe	1 Peter	1Pet	I Peter	1Pe	1 Peter
+62	2Pet	2 Peter	2Pe	2 Peter	2Pet	II Peter	2Pe	2 Peter
+63	1John	1 John	1Jn	1 John	1John	I John	1Jo	1 John
+64	2John	2 John	2Jn	2 John	2John	II John	2Jo	2 John
+65	3John	3 John	3Jn	3 John	3John	III John	3Jo	3 John
+66	Jude	Jude	Jud	Jude	Jude	Jude	Jude	Jude
+67	Rev	Revelation	Rev	Revelation	Rev	Revelation of John	Rev	Revelation of John
+68	Tob	Tobit	Tob	Tobit	Tob	Tobit	Tob	Tobit
+69	Jdt	Judith	Jdt	Judith	Jdt	Judith	Jdt	Judith
+70	EsthGr	Greek Esther	Esg	Esther Greek	EsthGr	Greek Esther	NoEquivalent	No equivalent to EsthGr
+71	AddEsth	Additions to Esther	~Ade	Additions to Esther (Greek)	AddEsth	Additions to Esther	Add Est	Additions to Esther
+72	Wis	Wisdom	Wis	Wisdom of Solomon	Wis	Wisdom	Wis	Wisdom of Solomon
+73	SirP	Sirach Prologue	~	~	SirP	Sirach Prologue	NoEquivalent	No equivalent to SirP
+74	Sir	Sirach	Sir	Sirach	Sir	Sirach	Sir	Sirach
+75	Bar	Baruch	Bar	Baruch	Bar	Baruch	Bar	Baruch
+76	EpJer	Letter of Jeremiah	Lje	Letter of Jeremiah	EpJer	Letter of Jeremiah	Ep Jer	Epistle of Jeremiah
+77	DanGr	Greek Daniel	Dag	Daniel Greek	DanGr	Greek Daniel	NoEquivalent	No equivalent to DanGr
+78	AddDan	Additions to Daniel	~	~	AddDan	Additions to Daniel	NoEquivalent	No equivalent to AddDan
+79	PrAzar	Prayer of Azariah	S3Y	Song of the Three Young Men	PrAzar	Prayer of Azariah	Pr Azar	Prayer of Azariah
+80	Sus	Susanna	Sus	Susannah	Sus	Susanna	Sus	Susanna
+81	Bel	Bel and the Dragon	Bel	Bel and the Dragon	Bel	Bel and the Dragon	Bel	Bel and the Dragon
+82	1Macc	1 Maccabees	1Ma	1 Maccabees	1Macc	1 Maccabees	1 Macc	1 Maccabees
+83	2Macc	2 Maccabees	2Ma	2 Maccabees	2Macc	2 Maccabees	2 Macc	2 Maccabees
+84	3Macc	3 Maccabees	3Ma	3 Maccabees	3Macc	3 Maccabees	3 Macc	3 Maccabees
+85	4Macc	4 Maccabees	4Ma	4 Maccabees	4Macc	4 Maccabees	4 Macc	4 Maccabees
+86	PrMan	Prayer of Manasseh	Man	Prayer of Manasseh	PrMan	Prayer of Manasseh	Pr Man	Prayer of Manasseh
+87	1Esd	1 Esdras	1Es	1 Esdras (Greek)	1Esd	1 Esdras	1 Esd	1 Esdras
+88	2Esd	2 Esdras	2Es	2 Esdras (Latin)	2Esd	2 Esdras	2 Esd	2 Esdras
+89	AddPs	Psalm 151	Ps2	Psalm 151	AddPs	Psalm 151	Ps151	Psalm 151
+90	Odes	Odes	Oda	Odae	Odes	Odes	No equivalent	No equivalent to Odes
+91	PssSol	Psalms of Solomon	Pss	Psalms of Solomon	PssSol	Psalms of Solomon	Ps Sol	Psalms of Solomon
+92	JoshA	Joshua A	~Jsa	~	JoshA	Joshua A	NoEquivalent	No equivalent to JoshA
+93	JudgB	Judges B	~Jdb	~	JudgB	Judges B	NoEquivalent	No equivalent to JudgB
+94	TobS	Tobit S	~Tbs	~	TobS	Tobit S	NoEquivalent	No equivalent to TobS
+95	SusTh	Susanna θ	~Sst	~	SusTh	Susanna θ	NoEquivalent	No equivalent to SusTh
+96	DanTh	Daniel θ	~Dnt	~	DanTh	Daniel θ	NoEquivalent	No equivalent to DanTh
+97	BelTh	Bel and the Dragon θ	~Blt	~	BelTh	Bel and the Dragon θ	NoEquivalent	No equivalent to BelTh
+98	EpLao	Epistle to the Laodiceans	Lao	Laodiceans	EpLao	Epistle to the Laodiceans	Ep Lao	Epistle to the Laodiceans
+99	5Ezra	5 Ezra	~5Ez	~	5Ezra	5 Ezra	NoEquivalent	No equivalent to 5Ezra
+100	4Ezra	4 Ezra	~Eza	~	4Ezra	4 Ezra	NoEquivalent	No equivalent to 4Ezra
+101	6Ezra	6 Ezra	~6Ez	~	6Ezra	6 Ezra	NoEquivalent	No equivalent to 6Ezra
+102	PrSol	Prayer of Solomon	~Pso	~	PrSol	Prayer of Solomon	NoEquivalent	No equivalent to PrSol
+103	PrJer	Prayer of Jeremiah	~Pje	~	PrJer	Prayer of Jeremiah	NoEquivalent	No equivalent to PrJer
+104	1En	1 Enoch	~Eno	~	1En	1 Enoch	NoEquivalent	No equivalent to 1En
+105	Jub	Jubilees	~Jub	~	Jub	Jubilees	NoEquivalent	No equivalent to Jub
+106	4Bar	4 Baruch	~4ba	~	4Bar	4 Baruch	NoEquivalent	No equivalent to 4Bar
+107	1Meq	1 Meqabyan	~1Mq	~	1Meq	1 Meqabyan	NoEquivalent	No equivalent to 1Meq
+108	2Meq	2 Meqabyan	~2Mq	~	2Meq	2 Meqabyan	NoEquivalent	No equivalent to 2Meq
+109	3Meq	3 Meqabyan	~3Mq	~	3Meq	3 Meqabyan	NoEquivalent	No equivalent to 3Meq
+110	Rep	Reproof	~Rep	~	Rep	Reproof	NoEquivalent	No equivalent to Rep
+111	AddJer	Additions to Jeremiah	~XAddJer	~	AddJer	Additions to Jeremiah	NoEquivalent	No equivalent to AddJer
+112	PsJos	Pseudo-Josephus	~XPsJos	~	PsJos	Pseudo-Josephus	NoEquivalent	No equivalent to PsJos
+113	EpCorPaul	Epistle of the Corinthians to Paul	~Cop	~	EpCorPaul	Epistle of the Corinthians to Paul	NoEquivalent	No equivalent to EpCorPaul
+114	3Cor	3 Corinthians	~3Co	~	3Cor	3 Corinthians	NoEquivalent	No equivalent to 3Cor
+115	WSir	Words of Sirach	~Wsi	~	WSir	Words of Sirach	NoEquivalent	No equivalent to WSir
+116	PrEuth	Prayer of Euthalius	~Eut	~	PrEuth	Prayer of Euthalius	NoEquivalent	No equivalent to PrEuth
+117	DormJohn	Dormition of John	~Doj	~	DormJohn	Dormition of John	NoEquivalent	No equivalent to DormJohn
+118	JosAsen	Joseph and Asenath	~XJosAsen	~	JosAsen	Joseph and Asenath	NoEquivalent	No equivalent to JosAsen
+119	T12Patr	Testaments of the Twelve Patriarchs (composed of:)	~XT12Patr	~	T12Patr	Testaments of the Twelve Patriarchs (composed of:)	NoEquivalent	No equivalent to T12Patr
+120	T12Patr.TAsh	Testament of Asher	~XT12Patr.TAsh	~	T12Patr.TAsh	Testament of Asher	NoEquivalent	No equivalent to T12Patr.TAsh
+121	T12Patr.TBenj	Testament of Benjamin	~XT12Patr.TBenj	~	T12Patr.TBenj	Testament of Benjamin	NoEquivalent	No equivalent to T12Patr.TBenj
+122	T12Patr.TDan	Testament of Dan	~XT12Patr.TDan	~	T12Patr.TDan	Testament of Dan	NoEquivalent	No equivalent to T12Patr.TDan
+123	T12Patr.TGad	Testament of Gad	~XT12Patr.TGad	~	T12Patr.TGad	Testament of Gad	NoEquivalent	No equivalent to T12Patr.TGad
+124	T12Patr.TIss	Testament of Issachar	~XT12Patr.TIss	~	T12Patr.TIss	Testament of Issachar	NoEquivalent	No equivalent to T12Patr.TIss
+125	T12Patr.TJos	Testament of Joseph	~XT12Patr.TJos	~	T12Patr.TJos	Testament of Joseph	NoEquivalent	No equivalent to T12Patr.TJos
+126	T12Patr.TJud	Testament of Judah	~XT12Patr.TJud	~	T12Patr.TJud	Testament of Judah	NoEquivalent	No equivalent to T12Patr.TJud
+127	T12Patr.TLevi	Testament of Levi	~XT12Patr.TLevi	~	T12Patr.TLevi	Testament of Levi	NoEquivalent	No equivalent to T12Patr.TLevi
+128	T12Patr.TNaph	Testament of Naphtali	~XT12Patr.TNaph	~	T12Patr.TNaph	Testament of Naphtali	NoEquivalent	No equivalent to T12Patr.TNaph
+129	T12Patr.TReu	Testament of Reuben	~XT12Patr.TReu	~	T12Patr.TReu	Testament of Reuben	NoEquivalent	No equivalent to T12Patr.TReu
+130	T12Patr.TSim	Testament of Simeon	~XT12Patr.TSim	~	T12Patr.TSim	Testament of Simeon	NoEquivalent	No equivalent to T12Patr.TSim
+131	T12Patr.TZeb	Testament of Zebulun	~XT12Patr.TZeb	~	T12Patr.TZeb	Testament of Zebulun	NoEquivalent	No equivalent to T12Patr.TZeb
+132	2Bar	2 Baruch	~2Ba	~	2Bar	2 Baruch	NoEquivalent	No equivalent to 2Bar
+133	EpBar	Letter of Baruch	~Lba[34]	~	EpBar	Letter of Baruch	NoEquivalent	No equivalent to EpBar
+134	5ApocSyrPss	Additional Syriac Psalms	~Ps3	~	5ApocSyrPss	Additional Syriac Psalms	NoEquivalent	No equivalent to 5ApocSyrPss
+135	JosephusJWvi	Josephus' Jewish War VI	~XJosephusJWvi	~	JosephusJWvi	Josephus' Jewish War VI	NoEquivalent	No equivalent to JosephusJWvi
+136	1Clem	1 Clement	~1Cl	~	1Clem	1 Clement	NoEquivalent	No equivalent to 1Clem
+137	2Clem	2 Clement	~2Cl	~	2Clem	2 Clement	NoEquivalent	No equivalent to 2Clem
+138	IgnEph	Ignatius to the Ephesians	~XIgnEph	~	IgnEph	Ignatius to the Ephesians	NoEquivalent	No equivalent to IgnEph
+139	IgnMagn	Ignatius to the Magnesians	~XIgnMagn	~	IgnMagn	Ignatius to the Magnesians	NoEquivalent	No equivalent to IgnMagn
+140	IgnTrall	Ignatius to the Trallians	~XIgnTrall	~	IgnTrall	Ignatius to the Trallians	NoEquivalent	No equivalent to IgnTrall
+141	IgnRom	Ignatius to the Romans	~XIgnRom	~	IgnRom	Ignatius to the Romans	NoEquivalent	No equivalent to IgnRom
+142	IgnPhld	Ignatius to the Philadelphians	~XIgnPhld	~	IgnPhld	Ignatius to the Philadelphians	NoEquivalent	No equivalent to IgnPhld
+143	IgnSmyrn	Ignatius to the Smyrnaeans	~XIgnSmyrn	~	IgnSmyrn	Ignatius to the Smyrnaeans	NoEquivalent	No equivalent to IgnSmyrn
+144	IgnPol	Ignatius to Polycarp	~XIgnPol	~	IgnPol	Ignatius to Polycarp	NoEquivalent	No equivalent to IgnPol
+145	PolPhil	Polycarp to the Philippians	~XPolPhil	~	PolPhil	Polycarp to the Philippians	NoEquivalent	No equivalent to PolPhil
+146	MartPol	Martyrdom of Polycarp	~XMartPol	~	MartPol	Martyrdom of Polycarp	NoEquivalent	No equivalent to MartPol
+147	Did	Didache	~Did	~	Did	Didache	NoEquivalent	No equivalent to Did
+148	Barn	Barnabas	~Lba[34]	~	Barn	Barnabas	NoEquivalent	No equivalent to Barn
+149	Herm	Shepherd of Hermas (comprised of:)	~She	~	Herm	Shepherd of Hermas (comprised of:)	NoEquivalent	No equivalent to Herm
+150	Herm.Mand	Shepherd of Hermas, Mandates	~XHerm.Mand	~	Herm.Mand	Shepherd of Hermas, Mandates	NoEquivalent	No equivalent to Herm.Mand
+151	Herm.Sim	Shepherd of Hermas, Similitudes	~XHerm.Sim	~	Herm.Sim	Shepherd of Hermas, Similitudes	NoEquivalent	No equivalent to Herm.Sim
+152	Herm.Vis	Shepherd of Hermas, Visions	~XHerm.Vis	~	Herm.Vis	Shepherd of Hermas, Visions	NoEquivalent	No equivalent to Herm.Vis
+153	Diogn	Diognetus	~XDiogn	~	Diogn	Diognetus	NoEquivalent	No equivalent to Diogn
+154	AposCreed	Apostles' Creed	~XAposCreed	~	AposCreed	Apostles' Creed	NoEquivalent	No equivalent to AposCreed
+155	PapFrag	Fragments of Papias	~XPapFrag	~	PapFrag	Fragments of Papias	NoEquivalent	No equivalent to PapFrag
+156	RelElders	Reliques of the Elders	~XRelElders	~	RelElders	Reliques of the Elders	NoEquivalent	No equivalent to RelElders
+157	QuadFrag	Fragment of Quadratus	~XQuadFrag	~	QuadFrag	Fragment of Quadratus	NoEquivalent	No equivalent to QuadFrag
+158	TatDiat	Diatessaron	~XTatDiat	~	TatDiat	Diatessaron	NoEquivalent	No equivalent to TatDiat
+159	PsMet	Metrical Psalms	~Psb	~	PsMet	Metrical Psalms	NoEquivalent	No equivalent to PsMet
+160	DUMMY	Dummy to mark end of table.   Always keep this as the last row.	DUMMY	Dummy to mark end of table.   Always keep this as the last row.	DUMMY	Dummy to mark end of table.   Always keep this as the last row.	DUMMY	Dummy to mark end of table.   Always keep this as the last row.

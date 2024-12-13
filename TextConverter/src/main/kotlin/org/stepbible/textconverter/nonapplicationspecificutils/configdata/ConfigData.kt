@@ -10,7 +10,6 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.iso.IsoLanguageAndCountryCodes
 import org.stepbible.textconverter.nonapplicationspecificutils.iso.Unicode
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase

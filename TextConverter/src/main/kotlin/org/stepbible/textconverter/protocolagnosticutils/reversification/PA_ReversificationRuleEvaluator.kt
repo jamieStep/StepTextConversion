@@ -1,13 +1,13 @@
 /******************************************************************************/
-package org.stepbible.textconverter.applicationspecificutils
+package org.stepbible.textconverter.protocolagnosticutils.reversification
 
+import org.stepbible.textconverter.applicationspecificutils.IssueAndInformationRecorder
+import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
-import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler
 
 
 /******************************************************************************/
@@ -17,7 +17,7 @@ import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandl
  * @author A Jamieson www.stepbible.org
  */
 
-open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
+open class PA_ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -187,7 +187,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
             refCollectionAsString = bits[1]
         }
 
-        val refs = RefCollection.rdUsx(PA_ReversificationHandler.usxifyFromStepFormat(refCollectionAsString)).getAllAsRefs()
+        val refs = RefCollection.rdUsx(PA_ReversificationUtilities.usxifyFromStepFormat(refCollectionAsString)).getAllAsRefs()
 
         var overallSize = 0
         var ref = m_BackstopDefaultRef
@@ -271,7 +271,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
           return true
       }
 
-      val ref = Ref.rdUsx(PA_ReversificationHandler.usxifyFromStepFormat(text.split("=")[0]), m_BackstopDefaultRef, "v")
+      val ref = Ref.rdUsx(PA_ReversificationUtilities.usxifyFromStepFormat(text.split("=")[0]), m_BackstopDefaultRef, "v")
       return m_BibleStructure.isEmptyVerse(ref)
     }
 
@@ -282,7 +282,7 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
     {
       var ref = m_BackstopDefaultRef
       text = text.replace("last", "").replace("=", "").trim()
-      ref = RefCollection.rdUsx(PA_ReversificationHandler.usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
+      ref = RefCollection.rdUsx(PA_ReversificationUtilities.usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
       return m_BibleStructure.getLastVerseNo(ref.toRefKey_bc()) == ref.getV()
     }
 
@@ -304,12 +304,12 @@ open class ReversificationRuleEvaluator (dataCollection: X_DataCollection)
       if (text.contains(":title"))
       {
         text = text.split(":")[0]
-        ref = RefCollection.rdUsx(PA_ReversificationHandler.usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
+        ref = RefCollection.rdUsx(PA_ReversificationUtilities.usxifyFromStepFormat(text), ref, "v").getFirstAsRef()
         res = m_BibleStructure.hasCanonicalTitle(ref)
       }
       else
       {
-        ref = RefCollection.rdUsx(PA_ReversificationHandler.usxifyFromStepFormat(text.uppercase()), ref).getFirstAsRef()
+        ref = RefCollection.rdUsx(PA_ReversificationUtilities.usxifyFromStepFormat(text.uppercase()), ref).getFirstAsRef()
         res = m_BibleStructure.verseOrSubverseExistsAsSpecified(ref.toRefKey_bcvs())
       }
 

@@ -2,7 +2,9 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.bibledetails
 
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.util.*
 
@@ -51,18 +53,16 @@ object VersificationSchemesSupportedByOsis2mod: ObjectInterface
 
 
   /****************************************************************************/
-  /* A line in the data looks like    Calvin/Rut/22, 23, 18, 22   */
+  /* A line in the data looks like    Calvin/Rut/22, 23, 18, 22   where '/'
+     represents a tab. */
 
   init { doInit() }
 
   @Synchronized private fun doInit ()
   {
     val C_UnwantedSchemes = ".calvin.darbyfr."
-    FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath())!!.bufferedReader().use { it.readText() } .lines()
-      .map { it.trim() }
-      .filter { it.isNotEmpty() && !it.startsWith('#') } // Remove comments and blanks
-      .map { it.substring(0, it.indexOf('/')) }          // Get the scheme name
-      .filter { it !in C_UnwantedSchemes }                    // Exclude unwanted schemes.
-      .forEach { m_CanonicalSchemeNameMappings[it] = it }
+    StepFileUtils.readDelimitedTextStream(FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath())!!)
+      .filter { it[0].lowercase() !in C_UnwantedSchemes }
+      .forEach { m_CanonicalSchemeNameMappings[it[0]] = it[0] }
   }
 }

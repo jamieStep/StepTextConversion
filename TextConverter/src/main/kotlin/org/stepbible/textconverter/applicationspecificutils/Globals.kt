@@ -2,6 +2,7 @@ package org.stepbible.textconverter.applicationspecificutils
 
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.w3c.dom.Document
+import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicInteger
 
 /****************************************************************************/
@@ -20,6 +21,27 @@ object Globals: ObjectInterface
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+  * Used to record the fact that I have had to change book names.  At present
+  * this is only an issue with Greek Esther, where I may receive either the
+  * full text or the additions text and want to allow for the possibility that
+  * they have been misidentified in the text (ie the additions named as though
+  * they were the full text or vice versa).
+  *
+  * Given that there is presently only this one possible renaming, using a
+  * map to hold the details is definitely overfill, but I want to allow for
+  * the possibility of handling additions to Daniel at some point, just in
+  * case.  (This isn't actually an issue at present so far as I can see,
+  * because things don't seem to cater properly for the two flavours of Greek
+  * Daniel.)
+  *
+  * This map is keyed on the revised book number and give the book number
+  * as received in the incoming text. */
+
+  val BookNamesRevisions = ConcurrentHashMap<Int, Int>()
+
 
   /****************************************************************************/
   /**
@@ -69,3 +91,6 @@ object Globals: ObjectInterface
 val InternalOsisDataCollection by lazy { Osis_DataCollection() }
 val UsxDataCollection by lazy { Usx_DataCollection() }
 lateinit var ExternalOsisDoc: Document
+
+@JvmInline value class Original<T> (val value: T)
+@JvmInline value class Revised<T>  (val value: T)

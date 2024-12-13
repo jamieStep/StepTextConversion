@@ -81,6 +81,7 @@ object Builder_InitialOsisRepresentationFromUsx: Builder()
     Usx_Tidier.process(UsxDataCollection)
     RefBase.setBibleStructure(UsxDataCollection.getBibleStructure())
     ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(UsxDataCollection.getBookNumbers())
+    BookOrdering.initialiseFromMetadata()
     Usx_OsisCreator.process(UsxDataCollection)
     RefBase.setBibleStructure(null)
   }

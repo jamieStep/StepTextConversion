@@ -4,11 +4,9 @@ import com.google.gson.GsonBuilder
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import java.io.PrintWriter
 import java.util.*
 import kotlin.collections.HashSet
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
@@ -18,7 +16,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
-import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler
+import org.stepbible.textconverter.osisonly.Osis_AudienceAndCopyrightSpecificProcessingHandler
+import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationDataHandler
+import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationUtilities
 import org.w3c.dom.Node
 
 
@@ -659,17 +659,17 @@ object IssueAndInformationRecorder: ObjectInterface
 
 
     /**************************************************************************/
-    val referenceMappings = PA_ReversificationHandler.instance().getRuntimeReversificationMappings()
+    val referenceMappings = Osis_AudienceAndCopyrightSpecificProcessingHandler.getReversificationHandler()?.getRuntimeReversificationMappings() ?: listOf()
     if (referenceMappings.isNotEmpty())
     {
       m_RunFeatures.HasReversificationMappings = true
-      m_RunFeatures.ReversificationMappings = referenceMappings.map { Ref.rd(it.first).toString() + " -> " + Ref.rd(it.second).toString() }
+      m_RunFeatures.ReversificationMappings = referenceMappings.map { Ref.rd(it.first.value).toString() + " -> " + Ref.rd(it.second.value).toString() }
     }
 
 
 
     /**************************************************************************/
-    val acceptedRows = PA_ReversificationHandler.instance().getSelectedRowsAsStrings()
+    val acceptedRows = PA_ReversificationDataHandler.getSelectedRowsAsStrings()
     if (acceptedRows.isNotEmpty())
     {
       m_RunFeatures.AcceptedReversificationRows = acceptedRows

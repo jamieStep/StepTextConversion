@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.applicationspecificutils
 
-import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
@@ -12,7 +11,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.Ste
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
-import java.util.*
+
 
 /******************************************************************************/
 /**
@@ -30,46 +29,15 @@ import java.util.*
  * book (as is typically the case with USX).  I have done my best to hide this
  * fact, so that regardless of the form of input things will just work.  More
  * details appear below.  (I *don't* cater for a situation where we have more
- * than one file some of which contain more than one book.)
+ * than one file with some, but not all, containing more than one book.)
  *
- * That constitutes one potential complication.  A second one arises because
- * we may need to cope with non-standard book orderings.
+ * Once the data has been read, you can no longer access it as though it were
+ * a single document (which in fact it is not -- it is now a separate document
+ * for each book, along with a template document which can be used to reassemble
+ * the documents into a single document for external use.
  *
- *
- *
- *
- *
- * ## Non-standard book orderings
- *
- * The ordering information is held internally in a data structure
- * (m_BookNumberToRootNode) which maps UBS book numbers to the book nodes for
- * those books.
- *
- * If there is a book list for the text (either in the STEP configuration data
- * or in externally supplied metadata such as that from DBL), that determines
- * the ordering.  If there is no available book list, ordering is assumed to
- * follow the standard UBS scheme.
- *
- * Except, in both cases, if all input is being taken from a single file, that
- * trumps everything else.
- *
- * Where m_BookNumberToRootNode is based upon the UBS scheme, it will have
- * a full list of entries, although some of them may be empty if there is no
- * text for the book.  Where it is based upon metadata, it will have entries
- * only for those books mentioned in the metadata (and again, some of them
- * may be empty).  Where this is overridden by the content of the data, it
- * will follow that.
- *
- *
- *
- *
- *
- * ## File-per-book and single file: hiding the differences
- *
- * When reading data, I recommend not structuring your code to work with
- * individual documents (all of which are, in fact available should you
- * *really* need them).  Rather, iterate over the book nodes using
- * [getRootNodes].
+ * Instead, you access single books via [getRootNodes] or [getRootNode].  At
+ * the end of processing, convertToDoc will give you back a full document.
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -126,15 +94,55 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   fun convertToDoc (): Document
   {
-    val doc = Dom.cloneDocument(m_PlaceHolderDocument)
-    m_FileProtocol.getBookNodes(doc).forEach { targetBookNode ->
-      val bookNo = m_FileProtocol.getBookNumber(targetBookNode)
-      val rootNode = m_BookNumberToRootNode[bookNo]
-      val replacementTargetBookNode = doc.importNode(rootNode, true)
-      Dom.insertNodeBefore(targetBookNode, replacementTargetBookNode)
-      Dom.deleteChildren(targetBookNode)
+    /**************************************************************************/
+    /* This first part works with books which already existed in the document
+       which was first read in, and replaces the book placeholders with the
+       actual data we've been working on. */
+
+    val bookNosStillToBeInsertedIntoDocument = m_BookNumberToRootNode.keys.filter { null != m_BookNumberToRootNode[it] }.toMutableSet()
+    val newBookNodes = mutableMapOf<Int, Node>()
+    val doc = Dom.cloneDocument(m_PlaceHolderDocument) // The document we are creating.
+    m_FileProtocol.getBookNodes(doc).forEach { placeHolderBookNode -> // Run over the placeholder book nodes.
+      val bookNo = m_FileProtocol.getBookNumber(placeHolderBookNode)
+      val rootNode = m_BookNumberToRootNode[bookNo] // Get the working copy of the data for that book from the present class.
+      bookNosStillToBeInsertedIntoDocument.remove(bookNo) // Flag the fact that we've processed this book.
+      val replacementTargetBookNode = doc.importNode(rootNode, true) // Clone the working copy of the book into the document under construction.
+      Dom.insertNodeBefore(placeHolderBookNode, replacementTargetBookNode) // Bung teh cloned copy into the document we are in the process of creating.
+      Dom.deleteNode(placeHolderBookNode) // We don't need the placeholder any more.
+      newBookNodes[m_FileProtocol.getBookNumber(replacementTargetBookNode)] = replacementTargetBookNode
     }
 
+
+
+    /**************************************************************************/
+    /* That's dealt with all available books, so there is nothing else to do. */
+
+    if (bookNosStillToBeInsertedIntoDocument.isEmpty())
+      return doc
+
+
+
+    /**************************************************************************/
+    /* Regrettably there is another possibility ... we may have created some
+       new books in the course of the processing, and need to work out where
+       we should put them. */
+
+    val bookOrdering = BookOrdering.getOrder()
+    bookNosStillToBeInsertedIntoDocument.sorted().forEach { bookNoToBeInserted -> // Run over the books still to be inserted.
+      val ixLow = bookOrdering.indexOf(bookNoToBeInserted) + 1 // Should be able to rely upon the book ordering containing the book.
+      for  (i in ixLow + 1 ..< bookOrdering.size) // Look over the following books in the ordering list
+        if (bookOrdering[i] in newBookNodes) // We already have in the output document a later book, so we need to insert before that.
+        {
+          Dom.insertNodeBefore(newBookNodes[bookOrdering[i]]!!, getRootNode(bookNoToBeInserted)!!)
+          return@forEach
+        }
+
+      doc.documentElement.appendChild(getRootNode(bookNoToBeInserted))!! // Nowhere to insert the book, so add it at the end.
+    }
+
+
+
+    /**************************************************************************/
     return doc
   }
 
@@ -163,6 +171,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
   private fun createPlaceHolderDocument (docIn: Document)
   {
     m_PlaceHolderDocument = Dom.cloneDocument(docIn)
+    m_FileProtocol.getBookNodes(m_PlaceHolderDocument).forEach(Dom::deleteChildren) // We only need the book nodes themselves.
   }
 
   private lateinit var m_PlaceHolderDocument: Document
@@ -216,45 +225,6 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
    return m_BibleStructure
   }
 
-
-  /****************************************************************************/
-  /**
-  * Populates the present instance from the *text* of another instance (or,
-  * indeed, of this instance).  It clears all existing data and reloads
-  * BibleStructure.
-  *
-  * @param text
-  * @param preprocessor Optional preprocess which is applied to the text.
-  */
-
-  fun loadFromText (text: String, preprocessor: ((String) -> String))
-  {
-    Rpt.report(level = 1, "Loading data from XML text.")
-
-    withThisBibleStructure { // Don't clear the text here, in case it's actually coming from the present class.
-      restoreBookNumberToRootNodeMappings()
-      val bookList = addFromText(text, preprocessor)
-      sortStructuresByBookOrder(bookList)
-    }
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Replaces the details of a single document.  This is intended mainly for
-  * use when carrying out XSLT-based tweaks to an input document which is not
-  * fully USX-conformant.  I am assuming, at the very least, that it will be
-  * called early, so that nothing much will be dependent upon the previous
-  * version of the document, since I do nothing here other than overwrite the
-  * previous version.
-  *
-  * @param doc
-  */
-
-  fun replaceDocumentStructure (doc: Document)
-  {
-    addFromDoc(doc)
-  }
 
 
 
@@ -313,50 +283,11 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
-  * For use particularly with OSIS, where all books are in the same document.
-  * Returns that document.
-  *
-  * @return Document.
-  */
-
-  fun getDocument (): Document
-  {
-    when (getNumberOfDocuments())
-    {
-       0    -> throw StepExceptionWithStackTraceAbandonRun("getDocument called where no document is available.")
-       1    -> return m_BookNumberToRootNode.values.first { null != it }!!.ownerDocument
-       else -> throw StepExceptionWithStackTraceAbandonRun("getDocument called where more than one document is available.")
-    }
-  }
-
-
-  /****************************************************************************/
-  /**
   * Returns the file protocol handler for this text.
   */
 
   fun getFileProtocol () = m_FileProtocol
 
-
-
-  /****************************************************************************/
-  /**
-  * Returns a count of the number of separate documents which have fed into the
-  * processing.  I do rather make the assumption here that either each book will
-  * have its own file, or else they'll all be in a single file: I'm assuming
-  * we're not going to get, say, two in one file and three in another.
-  *
-  * @return Number of documents.
-  */
-
-  fun getNumberOfDocuments (): Int
-  {
-    val nBooks = m_BookNumberToRootNode.values.filterNotNull().count()
-    val docs = IdentityHashMap<Any, Int>(); m_BookNumberToRootNode.values.filterNotNull().forEach { docs[it.ownerDocument] = 0 }
-    val nDocs = docs.count()
-    if (nBooks != nDocs && 1 != nDocs) throw StepExceptionWithStackTraceAbandonRun("USX input has neither all books in a single file nor a separate file per book.")
-    return nDocs
-  }
 
 
   /****************************************************************************/
@@ -388,35 +319,6 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
-  * Returns a list of all documents for the given text.  Note that I make no
-  * guarantee as regards ordering.
-  *
-  * @return Documents.
-  */
-
-  fun getDocuments (): List<Document>
-  {
-    val docs = IdentityHashMap<Document, Int>()
-    val docsInOrder: MutableList<Document> = mutableListOf()
-    getRootNodes().forEach { val doc = it.ownerDocument; if (doc !in docs) docs[doc] = 0; docsInOrder.add(doc) }
-    return docsInOrder.toList()
-  }
-
-
-  /****************************************************************************/
-  /**
-  * Flags the BibleStructure element as invalid.
-  */
-
-  fun invalidateBibleStructure ()
-  {
-    clearBibleStructure()
-    RefBase.setBibleStructure(null)
-  }
-
-
-  /****************************************************************************/
-  /**
   * Reloads the BibleStructure element -- for example after creating empty
   * verses to fill in blanks in the text.
   *
@@ -430,7 +332,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
       RefBase.setBibleStructure(m_BibleStructure)
       Rpt.reportWithContinuation(level = 1, "Determining Bible structure ...") {
         val rootNodes = m_BookNumberToRootNode.values.filterNotNull()
-        m_BibleStructure.addFromRootNodes("", rootNodes, wantCanonicalTextSize)
+        m_BibleStructure.addFromRootNodes(rootNodes, wantCanonicalTextSize)
       } // reportWithContinuation
 
       m_BibleStructureIsValid = true
@@ -613,19 +515,6 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
 
   /****************************************************************************/
-  /* In some cases, the book ordering is driven from the content of the data
-     files.  This arranges to have the internal data structures ordered
-     correctly. */
-
-  private fun sortStructuresByBookOrder (bookList: List<Int>)
-  {
-    val newBookNumberToRootNode: MutableMap<Int, Node?> = mutableMapOf()
-    bookList.forEach { newBookNumberToRootNode[it] = getRootNode(it) }
-    m_BookNumberToRootNode = newBookNumberToRootNode.toSortedMap()
-  }
-
-
-  /****************************************************************************/
   /* Sets the RefBase.BibleStructure entry to the BibleStructure of the present
      X_DataCollection instance, does something, and then restores
      RefBase.BibleStructure. */
@@ -641,7 +530,7 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   val m_BookNumberToRootNode_Lock = Any()
-  protected var m_BookNumberToRootNode: SortedMap<Int, Node?> = TreeMap()
+  protected var m_BookNumberToRootNode: MutableMap<Int, Node?> = mutableMapOf()
   protected val m_FileProtocol = fileProtocol
 
   private val m_BibleStructure = BibleStructure(m_FileProtocol)

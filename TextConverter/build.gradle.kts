@@ -6,7 +6,7 @@ import org.jetbrains.dokka.base.DokkaBaseConfiguration
 /******************************************************************************/
 // DON'T FORGET TO CHANGE ME !!!
 
-version = "4.0.3"
+version = "4.1.0"
 
 
 /******************************************************************************/
@@ -91,7 +91,7 @@ tasks.jar {
             attributes(
                 "Main-Class" to "org.stepbible.textconverter.MainKt",
                 "Implementation-Version" to project.version,
-                "Latest-Update-Reason" to "Misc fixes."
+                "Latest-Update-Reason" to "Revised support for Greek Esther; support for revised reversification data; consolidated book lists."
             )
         }
 

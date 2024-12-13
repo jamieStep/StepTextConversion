@@ -18,6 +18,7 @@
 
 step_TMP_garbage	Used internally only.	Calculated	Calculated			Calculated	Calculated
 stepAbout	Used as part of the information on the copyright page, via the About parameter in the Sword config file.  Calculated from various other elements.	Calculated	Calculated			Calculated	Calculated
+stepAboutAdditionalInfo	The bulk of the stepAbout information is either supplied by the translators or calculated.  This lets you add some more information.  It comes out right at the end.	UserSpecified	Optional			File	PerTextIfNecessary
 stepAddedValueLinesForSwordConfigComments	???	Calculated	Calculated			Calculated	Calculated
 stepAdminLine	Used to hold the line of admin data which is stored as a comment near the top of Sword config files.	Calculated	Calculated			Calculated	Calculated
 stepBookList	Used to obtain a list of book names and abbreviations from an external metadata source where available.	Calculated	Calculated			Calculated	Calculated
@@ -38,7 +39,6 @@ stepOnlineUsageOnly	This module cannot be used in offline STEP.	Calculated	Calcu
 stepOptions	Set to hold details of those features in the text which osis2mod needs to be aware of.	Calculated	Calculated			Calculated	Calculated
 stepOriginData	Set to USX, VL, OSIS, etc, reflecting the input data used on this run.	Calculated	Calculated			Calculated	Calculated
 stepOsis2ModEncryptionKey	Used to hold the encryption key to be used when generating the module.	Calculated	Calculated			Calculated	Calculated
-stepOsis2modType	Determines whether we use the STEP version of osis2mod or the Crosswire version.	Calculated	Calculated			Calculated	Calculated	Deduced from the type of module being generated.
 stepOsis2ModVersion	Gives the software version number reported by osis2mod.  Used for admin purposes, so we know which osis2mod was used.	Calculated	Calculated			Calculated	Calculated
 stepReleaseType	Distinguishes major and minor releases.	Calculated	Calculated			Calculated	Calculated
 stepReversificationMap	Used internally to hold mapping details for run-time reversification.	Calculated	Calculated			Calculated	Calculated
@@ -146,7 +146,7 @@ stepStepUpdateReason	Text to be recorded on History line to explain why the modu
 stepSupplierUpdateReason	Where the new module is being produced because the supplier has changed things, details of those changes.	UserSpecified	Optional		Arbitrary string.	CommandLine	PerRunIfNecessary
 stepSwordSoftwareDefaultVersion	The default version of Sword software needed to render the module.  There is a default value for this, so you shouldn't normally need to set it.	UserSpecified	MandatoryAlways	1.7.2	Arbitrary string.	File	IfCrosswireInternalsChange
 stepTargetAudience	Determines whether we are building a STEP-internal or a public facing module.	UserSpecified	MandatorySometimes	Calculated	Public / Step.	CommandLine	PerRunIfNecessary	Needed only where the root folder name ends in PublicStep, indicating that both forms of module can be built from the same source data.  In this case, says which should be built.
-stepUseExistingOsis	Says to start the process from OSIS rather than any other input.	UserSpecified	Optional		AsInput / AsOutput	CommandLine	PerRunIfNecessary	Where alternative inputs are available, you will be warned if you opt to use OSIS and the other inputs are more up to date.
+stepUseExistingOsis	Says to start the process from OSIS rather than any other input.	UserSpecified	Optional		WithChanges / WithoutChanges	CommandLine	PerRunIfNecessary	Where alternative inputs are available, you will be warned if you opt to use OSIS and the other inputs are more up to date.
 stepVersion	Requests the version of the converter JAR.	UserSpecified	Optional	Not requested		CommandLine	PerRunIfNecessary
 
 

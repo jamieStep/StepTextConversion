@@ -1,8 +1,8 @@
 /******************************************************************************
  *
- *  canon_catholic2.h -	Versification data for the Catholic2 system
+ * canon_catholic2.h -	Versification data for the Catholic2 system
  *
- * $Id: canon_catholic2.h 2915 2013-07-23 16:55:54Z chrislit $
+ * $Id: canon_catholic2.h 3765 2020-07-26 10:31:09Z scribe $
  *
  * Copyright 2010-2013 CrossWire Bible Society (http://www.crosswire.org)
  *	CrossWire Bible Society

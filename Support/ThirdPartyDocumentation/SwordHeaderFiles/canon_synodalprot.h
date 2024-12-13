@@ -1,8 +1,8 @@
 /******************************************************************************
  *
- *  canon_synodalprot.h -	Versification data for the SynodalProt system
+ * canon_synodalprot.h -	Versification data for the SynodalProt system
  *
- * $Id: canon_synodalprot.h 2930 2013-07-31 12:09:08Z chrislit $
+ * $Id: canon_synodalprot.h 3765 2020-07-26 10:31:09Z scribe $
  *
  * Copyright 2013 CrossWire Bible Society (http://www.crosswire.org)
  *	CrossWire Bible Society

@@ -1,13 +1,13 @@
 package org.stepbible.textconverter.builders
 
 import org.stepbible.textconverter.osisonly.Osis_Utils
-import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesImp
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
@@ -148,7 +148,7 @@ object Builder_InitialOsisRepresentationFromImp: Builder()
     val res: MutableList<String> = mutableListOf()
      lines.indices
       .filter { lines[it].startsWith("\$\$\$") && "[" !in lines[it] }
-      .filter { !Dbg.wantToProcessBook(getBookNumberFromName(matchReferenceLine(lines[it]).groups["bookNameFull"]!!.value)) }
+      .filter { Dbg.wantToProcessBook(getBookNumberFromName(matchReferenceLine(lines[it]).groups["bookNameFull"]!!.value)) }
       .forEach { res.add(lines[it]); res.add(lines[it + 1]) }
 
     return res
@@ -294,7 +294,7 @@ object Builder_InitialOsisRepresentationFromImp: Builder()
     var bookNameFull = name
     if (bookNameFull.matches("I+ .+".toRegex())) bookNameFull = bookNameFull.replaceFirst(" ", "")
     if (bookNameFull.startsWith("IV ")) bookNameFull = bookNameFull.replaceFirst(" ", "")
-    return BibleBookNamesOsis.nameToNumber(bookNameFull)
+    return BibleBookNamesImp.nameToNumber(bookNameFull)
   }
 
 

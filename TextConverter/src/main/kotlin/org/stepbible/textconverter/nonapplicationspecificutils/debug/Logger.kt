@@ -179,7 +179,7 @@ object Logger: ObjectInterface
 
   @Synchronized fun specialMessage (text: String)
   {
-    m_SpecialMessages.add(text)
+    m_SpecialMessages.add(text.replace("\n\n", "\n"))
   }
 
 

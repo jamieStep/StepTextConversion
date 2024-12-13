@@ -1,8 +1,8 @@
 /******************************************************************************
  *
- *  canon_darbyfr.h -	Versification data for the French Darby Bibles
+ * canon_darbyfr.h -	Versification data for the French Darby Bibles
  *
- *  $Id$
+ * $Id$
  *
  * Copyright 1998-2015 CrossWire Bible Society (http://www.crosswire.org)
  *	CrossWire Bible Society

@@ -43,7 +43,7 @@ class MainProcessor
   fun process (args: Array<String>)
   {
     /****************************************************************************/
-    var returnCode = 1
+    var returnCode = 999
     try
     {
       Builder_Master.process(args)
@@ -68,6 +68,7 @@ class MainProcessor
     /**************************************************************************/
     catch (e: StepExceptionBase)
     {
+      returnCode = 1
       e.terminate()
     }
 
@@ -75,6 +76,7 @@ class MainProcessor
     /**************************************************************************/
     catch (e: Exception)
     {
+      returnCode = 2
       Dbg.endOfRun()
       if (null != e.message) println(e.message)
       e.printStackTrace()
@@ -82,13 +84,13 @@ class MainProcessor
       if (reportStack.isNotEmpty()) reportStack += ": "
       System.err.println("Fatal error: $reportStack$e")
       System.err.flush()
-      returnCode = 1
     }
 
 
 
     /**************************************************************************/
-    /* If logging to a file, sort so that errors come out before warnings, etc. */
+    /* If logging to a file, sort so that errors come out before warnings,
+       etc. */
 
     finally
     {

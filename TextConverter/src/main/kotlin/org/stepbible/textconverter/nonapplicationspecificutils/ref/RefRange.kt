@@ -83,6 +83,22 @@ class RefRange: RefCollectionPart
   }
 
 
+  /****************************************************************************/
+  /**
+   * Construct from two RefKeys.  Note that the Refs are cloned, so any
+   * change made externally to the Refs will not impact the range.
+   *
+   * @param low
+   * @param high
+   */
+
+  constructor (low: RefKey, high: RefKey)
+  {
+    m_Low = Ref.rd(low)
+    m_High = Ref.rd(high)
+  }
+
+
   /******************************************************************************/
   /**
   * Formats the present instance using a particular format handler.

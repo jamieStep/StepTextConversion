@@ -225,8 +225,8 @@ object VersionAndHistoryHandler: ObjectInterface
 
     val previousStepVersion: String
     run {
-      val fallbackValue = "1.0"
-      val versionFromHistory = if (m_HistoryLinesForThisAudience.isEmpty()) "1.0" else m_HistoryLinesForThisAudience[0].stepVersion
+      val fallbackValue = "0.0"
+      val versionFromHistory = if (m_HistoryLinesForThisAudience.isEmpty()) fallbackValue else m_HistoryLinesForThisAudience[0].stepVersion
       val maxKey = maxOf(makeKey(fallbackValue), makeKey(versionFromHistory))
       val x = maxKey.split('.')
       previousStepVersion = x[0].toInt().toString() + "." + x[1].toInt().toString()

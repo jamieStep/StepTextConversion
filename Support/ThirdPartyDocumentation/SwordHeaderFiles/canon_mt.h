@@ -1,8 +1,8 @@
 /******************************************************************************
  *
- *  canon_mt.h -	Versification data for the Masoretic Text (MT) system
+ * canon_mt.h -	Versification data for the Masoretic Text (MT) system
  *
- * $Id: canon_mt.h 2915 2013-07-23 16:55:54Z chrislit $
+ * $Id: canon_mt.h 3765 2020-07-26 10:31:09Z scribe $
  *
  * Copyright 2009-2013 CrossWire Bible Society (http://www.crosswire.org)
  *	CrossWire Bible Society

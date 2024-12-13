@@ -4,6 +4,7 @@ package org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous
 import org.apache.commons.io.FilenameUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.io.File
+import java.io.InputStream
 import java.nio.file.*
 import java.nio.file.attribute.BasicFileAttributes
 import kotlin.io.path.notExists
@@ -387,10 +388,7 @@ object StepFileUtils: ObjectInterface
    * @return List of matching file details.
    */
 
-  fun getMatchingFilesFromFolder (folderName: String, pat: Regex): List<Path>
-  {
-    return getMatchingThingsFromFolder(folderName, pat, "F")
-  }
+  fun getMatchingFilesFromFolder (folderName: String, pat: Regex) = getMatchingThingsFromFolder(folderName, pat, "F")
 
 
   /******************************************************************************/
@@ -403,10 +401,7 @@ object StepFileUtils: ObjectInterface
    * @return List of matching file details.
    */
 
-  fun getMatchingFoldersFromFolder (folderName: String, pat: Regex): List<Path>
-  {
-    return getMatchingThingsFromFolder(folderName, pat, "D")
-  }
+  fun getMatchingFoldersFromFolder (folderName: String, pat: Regex) = getMatchingThingsFromFolder(folderName, pat, "D")
 
 
   /******************************************************************************/
@@ -417,10 +412,7 @@ object StepFileUtils: ObjectInterface
    * @return Name of parent folder.
    */
 
-  fun getParentFolderName (pathName: String): String
-  {
-    return File(pathName).parent
-  }
+  fun getParentFolderName (pathName: String) = File(pathName).parent
 
 
   /******************************************************************************/
@@ -448,7 +440,7 @@ object StepFileUtils: ObjectInterface
   * @return True if folder exists and is not empty.
   */
 
-  fun isNonEmptyFolder (folderPath: String): Boolean = fileOrFolderExists(folderPath) && !folderIsEmpty(folderPath)
+  fun isNonEmptyFolder (folderPath: String) = fileOrFolderExists(folderPath) && !folderIsEmpty(folderPath)
 
 
   /******************************************************************************/
@@ -549,9 +541,38 @@ object StepFileUtils: ObjectInterface
    * @return File path with revised extension.
    */
 
-  fun replaceFileExtension (filePath: String, newExtension: String): String
+  fun replaceFileExtension (filePath: String, newExtension: String) = FilenameUtils.getFullPath(filePath) + FilenameUtils.getBaseName(filePath) + FilenameUtils.EXTENSION_SEPARATOR_STR + newExtension
+
+
+  /******************************************************************************/
+  /**
+  * Reads a delimited text file, allowing for comments and blanks.  I assume
+  * comments start #!.
+  *
+  * @param filePath
+  * @param delimiter
+  * @return List of trimmed lines, split into fields.
+  */
+
+  fun readDelimitedTextFile (filePath: String, delimiter: String = "\t") = readDelimitedTextStream(File(filePath).inputStream(), delimiter)
+
+
+  /******************************************************************************/
+  /**
+  * Reads a delimited text stream, allowing for comments and blanks.  I assume
+  * comments start #!.
+  *
+  * @param stream
+  * @param delimiter
+  * @return List of trimmed lines, after excluding comment lines.
+  */
+
+  fun readDelimitedTextStream (stream: InputStream, delimiter: String = "\t"): List<List<String>>
   {
-    return FilenameUtils.getFullPath(filePath) + FilenameUtils.getBaseName(filePath) + FilenameUtils.EXTENSION_SEPARATOR_STR + newExtension
+    return stream.bufferedReader().use { it.readText() } .lines()
+      .map { it.trim() }
+      .filter { it.isNotBlank() && !it.startsWith('#') }
+      .map { line -> line.split(delimiter).map { field -> field.trim() } }
   }
 
 

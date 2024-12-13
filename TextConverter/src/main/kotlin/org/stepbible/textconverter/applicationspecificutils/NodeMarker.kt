@@ -175,30 +175,6 @@ object NodeMarker: ObjectInterface
 
 
 
-  /****************************************************************************/
-  /* I _think_ I'm correct in saying that all reversification-related
-     temporaries are used purely within conversion-time reversification and
-     should be removed there when no longer needed.  Even if not removed, I
-     don't think they're of interest outside of reversification. */
-  /****************************************************************************/
-
-  /****************************************************************************/
-  fun deleteReversificationChildPos (node: Node) = deleteTemporaryAttribute(node, C_ReversificationChildPos)
-  fun getReversificationChildPos (node: Node) = node[C_ReversificationChildPos]
-  fun hasReversificationChildPos (node: Node) = null != getReversificationChildPos(node)
-  fun setReversificationChildPos (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_ReversificationChildPos, value); return this }
-  private const val C_ReversificationChildPos = "_ReversificationChildPos"
-
-
-  /****************************************************************************/
-  fun deleteReversificationLastEid (node: Node) = deleteTemporaryAttribute(node, C_ReversificationLastEid)
-  fun getReversificationLastEid (node: Node) = node[C_ReversificationLastEid]
-  fun hasReversificationLastEid (node: Node) = null != getReversificationLastEid(node)
-  fun setReversificationLastEid (node: Node, value: String): NodeMarker { addTemporaryAttribute(node, C_ReversificationLastEid, value); return this }
-  private const val C_ReversificationLastEid = "_ReversificationLastEid"
-
-
-
 
 
   /****************************************************************************/

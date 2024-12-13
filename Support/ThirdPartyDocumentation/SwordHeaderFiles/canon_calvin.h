@@ -1,9 +1,9 @@
 /******************************************************************************
  *
- *  canon_calvin.h -	Versification data for French Bibles de Genève
- *                      (Bibles de Genève, Épée, Martin, Ostervald)
+ * canon_calvin.h -	Versification data for French Bibles de Genève
+ *			(Bibles de Genève, Épée, Martin, Ostervald)
  *
- *  $Id$
+ * $Id$
  *
  * Copyright 1998-2013 CrossWire Bible Society (http://www.crosswire.org)
  *	CrossWire Bible Society

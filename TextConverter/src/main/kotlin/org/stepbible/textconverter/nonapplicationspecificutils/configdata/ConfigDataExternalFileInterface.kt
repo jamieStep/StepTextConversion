@@ -218,7 +218,6 @@ abstract class ConfigDataExternalFileInterfaceXmlCommon: ConfigDataExternalFileI
     m_XmlDocument = Dom.getDocument(path)
   }
 
-
   protected lateinit var m_XmlDocument: Document
   protected val m_XPath = XPathFactory.newInstance().newXPath()!!
 }
@@ -288,7 +287,7 @@ private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfa
      The return value is the first of the xpaths to return a value, or the
      default value if any. */
 
-  override fun getValue (theParms: String): String?
+  override fun getValue (parms: String): String?
   {
     /************************************************************************/
     //Dbg.dCont(parms, "direction")
@@ -296,10 +295,10 @@ private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfa
 
 
     /************************************************************************/
-    var parms = theParms.trim()
-    if (parms.contains("names/*"))
+    var myParms = parms.trim()
+    if (myParms.contains("names/*"))
     {
-      getBookList(parms)
+      getBookList(myParms)
       return "dummyReturnValue"
     }
 
@@ -309,18 +308,18 @@ private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfa
     /* Split out any default value. */
 
     var dflt: String? = null
-    if ("=" in parms)
+    if ("=" in myParms)
     {
-      val (a, b) = parms.split("=")
-      parms = a.trim()
+      val (a, b) = myParms.split("=")
+      myParms = a.trim()
       dflt = b.trim()
     }
 
 
 
     /************************************************************************/
-    val paths = parms.split("\\s+".toRegex())
-    var res = paths.map { getValue1(it) }. firstOrNull { null != it }
+    val paths = myParms.split("\\s+".toRegex())
+    val res = paths.map { getValue1(it) }. firstOrNull { null != it }
 
 
 

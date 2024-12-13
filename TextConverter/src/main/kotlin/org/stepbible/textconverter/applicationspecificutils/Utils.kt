@@ -105,18 +105,10 @@ object Utils: ObjectInterface
 
   fun prettifyBookAbbreviation (abbreviation: String): String?
   {
-    val number = if (abbreviation[0].isDigit()) abbreviation[0].toString() else ""
-    var rest = abbreviation.substring(number.length)
-    rest = rest[0].uppercase() + rest.substring(1).lowercase()
-    val res = number + rest
-
-    if (BibleBookNamesUsx.abbreviatedNameExists(res))
-      return res
-    else if (BibleBookNamesOsis.abbreviatedNameExists(res))
-    {
-      val bookNo = BibleBookNamesOsis.abbreviatedNameToNumber(res)
-      return BibleBookNamesUsx.numberToAbbreviatedName(bookNo)
-    }
+    if (BibleBookNamesOsis.abbreviatedNameExists(abbreviation))
+      return BibleBookNamesOsis.numberToAbbreviatedName(BibleBookNamesOsis.abbreviatedNameToNumber(abbreviation))
+    else if (BibleBookNamesUsx.abbreviatedNameExists(abbreviation))
+      return BibleBookNamesUsx.numberToAbbreviatedName(BibleBookNamesUsx.abbreviatedNameToNumber(abbreviation))
     else
       return null
   }

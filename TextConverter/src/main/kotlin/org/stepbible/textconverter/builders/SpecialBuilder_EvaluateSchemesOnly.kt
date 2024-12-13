@@ -8,6 +8,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import java.io.File
 import kotlin.system.exitProcess
 
@@ -77,6 +78,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
 
     m_Evaluations.clear() // Just in case we've already evaluated a scheme, perhaps to see if the text needs reversifying.  Avoids duplicating the output.
     VersificationSchemesSupportedByOsis2mod.getSchemes().forEach { evaluateScheme(it, bibleStructureToCompareWith) }
+    Rpt.reportEol(1)
     val details = m_Evaluations.sortedBy { it.scoreForSorting }
 
     var additionalInformation = ""
@@ -93,8 +95,8 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
   private fun evaluateScheme (scheme: String, bibleStructureToCompareWith: BibleStructure): Evaluation
   {
     /**************************************************************************/
-    //Dbg.dCont(scheme, "nrsv")
-    //Dbg.dCont(scheme, "kjv")
+//    Dbg.dCont(scheme, "nrsv")
+//    Dbg.dCont(scheme, "kjv")
 
 
 

@@ -174,7 +174,7 @@ var header =
   * indeed constitute an entire work), but whether this is the right thing to
   * do -- or whether it actually matters anyway -- I have no idea.
   *
-  * @param
+  * @param bookNumbersPossiblyUnsorted
   * @return Scope string.
   */
 

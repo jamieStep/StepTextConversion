@@ -82,9 +82,6 @@ object Osis_FinalInternalOsisTidier: ObjectInterface
       generalChanges()
       notesArchiver.restoreElements(dataCollection) // Get notes back from the archive.
       notesChanges()
-
-
-      //dataCollection.getDocument().findNodeByName("osis")!!.getAllNodesBelow().forEach { it -= "xmlns" } // Delete all xmlns attributes.
     }
   }
 }

@@ -7,6 +7,11 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
+import org.stepbible.textconverter.osisonly.Osis_AudienceAndCopyrightSpecificProcessingHandler
+import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationDataHandler
+import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationHandler
+import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationUtilities
+import org.stepbible.textconverter.protocolagnosticutils.reversification.ReversificationDataRow
 import org.w3c.dom.Node
 import java.util.IdentityHashMap
 import java.util.concurrent.ConcurrentHashMap
@@ -64,8 +69,8 @@ object PA_ContentValidator
 
   fun process (dataCollectionNew: X_DataCollection, dataCollectionOld: X_DataCollection)
   {
-    val implicitReversificationRenumbers = PA_ReversificationHandler.instance().getImplicitRenumbers() // Places where the reversification data implies renumbering without stating as much.
-    val reversificationRowsForAllBooks = PA_ReversificationHandler.instance().getSelectedRows()
+    val implicitReversificationRenumbers = Osis_AudienceAndCopyrightSpecificProcessingHandler.getReversificationHandler()?.getImplicitRenumbers() ?: setOf() // Places where the reversification data implies renumbering without stating as much.
+    val reversificationRowsForAllBooks = PA_ReversificationDataHandler.getSelectedRows()
     loadContent(m_BookAnatomiesOld, dataCollectionOld, "original")
     loadContent(m_BookAnatomiesNew, dataCollectionNew, "revised")
     doChecksPerBook(dataCollectionNew, dataCollectionOld, implicitReversificationRenumbers, reversificationRowsForAllBooks)

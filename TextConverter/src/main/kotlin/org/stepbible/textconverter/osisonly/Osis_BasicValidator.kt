@@ -21,8 +21,8 @@ import org.w3c.dom.Node
 /**
  * Carries out OSIS validation (and simple corrections).
  *
- * The configuration parameters stepReversificationType and stepOsis2modType
- * must have been set before this processing is invoked.
+ * The configuration parameter stepReversificationType must have been set before
+ * this processing is invoked.
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -62,21 +62,6 @@ object Osis_BasicValidator
 
 
     /**************************************************************************/
-    /* If we're using our own osis2mod, then subverses are ok.  If not, I don't
-       think we can handle subverses. */
-
-    if ("step" != ConfigData["stepOsis2modType"])
-    {
-      if (bibleStructure.hasSubverses())
-      {
-        Logger.error("Text contains subverses, but that would require us to use our own version of osis2mod: " + bibleStructure.getAllSubverseRefKeys().joinToString(", "){ Ref.rd(it).toString() } )
-        return
-      }
-    }
-
-
-
-    /**************************************************************************/
     /* If we are applying conversion-time restructuring, we must end up with
        something which is entirely NRSV(A)-compliant.  It must also contain
        no subverses or missing verses, but I think the test for NRSVA-compliance
@@ -110,15 +95,16 @@ object Osis_BasicValidator
 
 
     /**************************************************************************/
-    /* Unless we're using our own version of osis2mod, we need to be reasonably
-       well aligned with whatever versification scheme has been selected.
+    /* If we're not reversifying, we need to be reasonably well aligned with
+       one of the Crosswire versification schemes.
 
        At one time I regarded it as an error if the target scheme made no
        provision for a verse present in the supplied text.  However, on a
        non-Samification run we _have_ to use a Crosswire scheme even if
-       it's not an ideal fit, so I've had to reduce it to a warning. */
+       it's not an ideal fit, so I've had to reduce most things here
+       to a warning. */
 
-    if ("step" != ConfigData["stepOsis2modType"])
+    if ("none" == ConfigData["stepReversificationType"])
     {
       val schemeName = ConfigData["stepVersificationScheme"]!!
       val scheme = BibleStructure.makeOsis2modSchemeInstance(schemeName)
@@ -150,7 +136,7 @@ object Osis_BasicValidator
   /****************************************************************************/
   private fun validationForOrderingAndHoles1 (dataCollection: X_DataCollection)
   {
-    val softReporter: (String) -> Unit = if ("step" == ConfigData["stepOsis2modType"]!!) Logger::warning else Logger::error
+    val softReporter: (String) -> Unit = if ("step" == ConfigData["stepTargetAudience"]!!) Logger::warning else Logger::error
 
     val outOfOrderVerses = dataCollection.getBibleStructure().getOutOfOrderVerses() // I think this will cover chapters too.
     if (outOfOrderVerses.isNotEmpty())

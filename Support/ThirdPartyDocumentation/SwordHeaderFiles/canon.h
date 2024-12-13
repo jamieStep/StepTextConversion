@@ -1,17 +1,8 @@
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-This file was named canon.h.  I _think_, in fact, that it's probably KJV,
-so I've renamed it as such, and have also altered the
-
-  int vm[]
-
-line to include 'khv'.
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  
 /******************************************************************************
  *
- *  canon.h -	Canonical text information to be included by VerseKey.cpp
+ * canon.h -	Canonical text information to be included by VerseKey.cpp
  *
- * $Id: canon.h 2915 2013-07-23 16:55:54Z chrislit $
+ * $Id: canon.h 3765 2020-07-26 10:31:09Z scribe $
  *
  * Copyright 1998-2013 CrossWire Bible Society (http://www.crosswire.org)
  *	CrossWire Bible Society
@@ -118,7 +109,7 @@ struct sbook ntbooks[] = {
  *	Maximum verses per chapter
  */
 
-int vm_kjv[] = {
+int vm[] = {
   // Genesis
   31, 25, 24, 26, 32, 22, 24, 22, 29, 32,
   32, 20, 18, 24, 21, 16, 27, 33, 38, 18,

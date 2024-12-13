@@ -1,24 +1,18 @@
 /******************************************************************************/
-package org.stepbible.textconverter.protocolagnosticutils
+package org.stepbible.textconverter.protocolagnosticutils.reversification
 
 import org.stepbible.textconverter.applicationspecificutils.IssueAndInformationRecorder
-import org.stepbible.textconverter.applicationspecificutils.Permissions
-import org.stepbible.textconverter.applicationspecificutils.ReversificationRuleEvaluator
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.convertNumberToRepeatingString
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.capitaliseWords
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodesByAttributeName
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
-import org.stepbible.textconverter.protocolagnosticutils.PA_ReversificationHandler.CalloutDetails
-import org.w3c.dom.Document
+import org.stepbible.textconverter.protocolagnosticutils.PA
 import org.w3c.dom.Node
 import java.io.File
 import java.net.URL
@@ -29,43 +23,6 @@ import java.util.*
 /**
  * Reads and stores reversification data and provides summary information about
  * it.
- *
- *
- *
- *
- * ## Use
- *
- * This class should never be instantiated directly.  Callers wishing to use a
- * reversification handler should use the *instance* method to return an
- * instance of a flavour of reversification handler relevant to the present
- * run.
- *
- *
- *
- *
- * ## Reversification flavours
- *
- * At one stage we were contemplating two forms of reversification -- one, which
- * I dubbed 'conversion-time' entailed physically restructuring the text during
- * the conversion process so as to end up with a module which was fully NRSVA
- * compliant.  The other ('runtime') involved -- at least to a first
- * approximation, nothing more than recording details of the way in which the
- * text deviated from NRSVA, this information then being used by a revised form
- * of osis2mod and the run-time system to restructure the text on the fly when
- * NRSVA compliance was needed in support of STEPBible's added value features.
- *
- * At the time of writing, conversion-time restructuring is no longer being
- * considered seriously, since such restructuring is ruled out by the licence
- * conditions on most copyright texts (and would also result in a Bible which
- * differed from the expectations of users acquainted with the text).
- *
- * In fact, I have retained my old conversion-time processing, although the
- * chances of it working without further attention are negligible.
- *
- * The present class analyses the data only to the extent needed for runtime
- * reversification.  In fact, this analysis is also relevant to conversion-
- * time restructuring, although that needs to build upon it to create
- * additional data structures of its own.
  *
  *
  *
@@ -83,35 +40,11 @@ import java.util.*
  * stand in a particular relationship.)  The Test field may be empty, in which
  * case the test is assumed to pass.  Note that length tests applied to elided
  * verses always fail, because we have no way of determining the correct length
- * of an elided field.
- *
- * In some cases, the name of the action may imply additional tests not already
- * in the Test field -- checking the source ref for existence, or the standard
- * ref for non-existence, or whatever.  The processing automatically adds these
- * tests into the Test field here.
+ * of an elided verse.
  *
  * All of this is taken into account automatically within the *process* method
  * here, so that by the time this method returns, the appropriate
  * reversification rows will have been selected for use by the caller.
- *
- *
- *
- *
- *
- * ## Data externally available $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
- *
- * I make available the following data for external use:
- *
- * - A full list of all selected rows.  This is needed in support of adding
- *   footnotes when permitted, and may also be useful for debugging purposes.
- *
- * - A list of those rows which may entail creating empty verses.  I have to
- *   create such verses during the conversion process, because osis2mod
- *   cannot cope if there are holes in the versification structure.
- *
- * - A list of those rows which have to be mentioned in the JSON file required
- *   by osis2mod.
- *
  *
  * Note that the reversification processing may create subverses in some
  * cases.  osis2mod and JSword cannot handle subverses and they therefore need
@@ -125,129 +58,8 @@ import java.util.*
  */
 
 /******************************************************************************/
-open class PA_ReversificationHandler protected constructor (): PA()
+object PA_ReversificationDataHandler: PA()
 {
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
-  /**                           Companion object                             **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  companion object
-  {
-    /**************************************************************************/
-    /**
-    * Returns an instance of the flavour of reversification handler appropriate
-    * to the present run.
-    *
-    * @return Instance of reversification handler.
-    */
-
-    fun instance (): PA_ReversificationHandler
-    {
-      if (null == m_Instance)
-        m_Instance = if (ConfigData.getAsBoolean("stepConversionTimeReversification", "no")) TODO() else PA_ReversificationHandler_RunTime
-      return m_Instance!!
-    }
-
-    private var m_Instance: PA_ReversificationHandler_RunTime? = null
-
-
-    /**************************************************************************/
-    /**
-     * The reversification data uses its own formats for references.  It's
-     * convenient to convert this to USX for processing.
-     *
-     * @param theStepRef Reference in STEP format.
-     * @return String representation of an equivalent reference in USX format.
-     *         Note that this may differ from the original in respect of
-     *         whitespace, separators, etc, but since we need it only for
-     *         parsing, that's not an issue.
-     */
-
-    fun usxifyFromStepFormat (theStepRef: String): String
-    {
-      /************************************************************************/
-      //Dbg.d(theStepRef)
-
-
-
-      /************************************************************************/
-      /* Get the reference string into canonical form.  The input may contain
-         commas or semicolons as collection separators, and since the parsing
-         processing is set up to handle either, it's convenient here to convert
-         them all to just one form. */
-
-      val stepRef = theStepRef.replace(",", ";")
-                              .replace("--", "-")
-                              .replace("–", "-")
-                              .replace(" +", "")
-                              .replace("•", "") // \u2022 -- Arabic zero.
-                              .replace("٠", "") // \u0660 -- Bullet point, used in some places instead of Arabic zero.
-                              .replace("([1-9A-Za-z][A-Za-z][A-Za-z]\\.)".toRegex()) { it.value.replace(".", " ") }
-                              .replace("(?i)title".toRegex(), "title")
-                              .replace("(?i):T$".toRegex(), "")// We have things like 53:T as the alternative reference on some Psalm rows.  I change these back to be chapter references.
-
-
-      /************************************************************************/
-      fun processCollectionElement (elt: String) = elt.split("-").joinToString("-"){ usxify1(it) }
-      return stepRef.split(";").joinToString(";"){ processCollectionElement(it) }
-    }
-
-
-    /**************************************************************************/
-    /* The reversification data has its own view of how references should be
-       represented, and to save having to include specialised code to cater for
-       these, it's convenient to convert to USX format up-front. */
-
-    private fun usxify1 (theStepRef: String): String
-    {
-      /************************************************************************/
-      /* Replace the full stop after the book name with a space. */
-
-      var stepRef = theStepRef
-      if (stepRef.matches("...\\..*".toRegex()))
-        stepRef = stepRef.substring(0, 3) + " " + stepRef.substring(4)
-
-
-
-      /************************************************************************/
-      /* I _think_ we can forget subverse zero.  Otherwise, if we have numeric
-         subverses, change them to alphabetic. */
-
-      if (stepRef.endsWith(".0"))
-        stepRef = stepRef.substring(0, stepRef.length - 2)
-      else if (stepRef.matches(".*\\.\\d+$".toRegex()))
-      {
-        val ix = stepRef.lastIndexOf(".")
-        val subverseNo = Integer.parseInt(stepRef.substring(ix + 1))
-        stepRef = stepRef.substring(0, ix) + convertNumberToRepeatingString(subverseNo, 'a', 'z')
-      }
-
-
-
-      /************************************************************************/
-      return stepRef
-    }
-
-
-    /**************************************************************************/
-    /* Used within the present class to indicate which checks should be applied
-       when trying to determine which reversification rows to select. */
-
-    private const val NoCheck                            = 0x00000000
-    private const val CheckSourceRefExists               = 0x00000001
-    private const val CheckStandardRefNonExistent        = 0x00000002
-    private const val CheckStandardRefEmptyOrNonExistent = 0x00000004
-  } // companion object
-
-
-
-
-
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -257,28 +69,11 @@ open class PA_ReversificationHandler protected constructor (): PA()
   /****************************************************************************/
 
   /****************************************************************************/
-  open fun process (dataCollection: X_DataCollection)
+  fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection, wantBibleStructure = true)
-    setReversificationNotesLevelForRun()
     load(dataCollection)
   }
-
-
-  /****************************************************************************/
-  /**
-  * Returns information needed by our own version of osis2mod and JSword to
-  * handle the situation where we have a Bible which is not NRSV(A)-compliant,
-  * and which we are not restructuring during the conversion process.
-  *
-  * The return value is a list of RefKey -> RefKey pairs, mapping source verse
-  * to standard verse.  (On PsalmTitle rows, the verse for the standard ref is
-  * set to zero.)
-  *
-  * @return List of mappings, ordered by source RefKey.
-  */
-
-  open fun getRuntimeReversificationMappings (): List<Pair<RefKey, RefKey>> = listOf()
 
 
   /****************************************************************************/
@@ -299,12 +94,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
    * @return Mapped reversification details.
    */
 
-   fun getSelectedRowsByBook (actionFlag: Int): Map<Int, List<ReversificationDataRow>>
-   {
-     return getSelectedRows()
-       .filter { 0 != (it.action.actions and actionFlag) }
-       .groupBy { it.sourceRef.getB() }
-   }
+   fun getSelectedRowsBySourceBook (): Map<Int, List<ReversificationDataRow>> = getSelectedRows().groupBy { it.sourceRef.getB() }
 
 
    /****************************************************************************/
@@ -335,39 +125,6 @@ open class PA_ReversificationHandler protected constructor (): PA()
   */
 
   fun getSelectedRowsAsStrings () = m_SelectedRows.map { it.toString() }
-
-
-  /****************************************************************************/
-  /**
-  * Some Moves or Renumbers target subverse 2 of a verse; and for some (but not
-  * all) of these, there is no corresponding row which targets subverse 1.
-  * For these, the reversification data implicitly assumes that the original
-  * verse itself serves as subverse 1.  Thus, for example, we have something
-  * which targets Num 20:28b, but nothing which targets Num 20:28a.  The
-  * reversification data can be taken as assuming that 20:28 itself serves as
-  * 20:28a, and does not need to be handled during the reversification
-  * processing.
-  *
-  * I need to know about all cases where this is the case, because during
-  * validation I need to know what source text fed into a particular
-  * standard verse.
-  *
-  * This method returns a set of all the subverse 2 refKeys where this is the
-  * case.
-  *
-  * @return Set of refKeys as described above.
-  */
-
-  fun getImplicitRenumbers (): Set<RefKey>
-  {
-    val standardRefs = m_SelectedRows.map { it.standardRefAsRefKey }.toSet()
-    return m_SelectedRows.asSequence()
-                         .filter { 2 == Ref.getS(it.standardRefAsRefKey) }
-                         .filter { Ref.setS(it.standardRefAsRefKey, 1) !in standardRefs }
-                         .filter { Action.RenumberVerse == it.action }
-                         .map { it.standardRefAsRefKey }
-                         .toSet()
-  }
 
 
 
@@ -436,7 +193,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
     m_DataCollection = dataCollection
     m_BibleStructure = dataCollection.getBibleStructure(wantCanonicalTextSize = true)
     m_FileProtocol = dataCollection.getFileProtocol()
-    m_RuleEvaluator = ReversificationRuleEvaluator(dataCollection)
+    m_RuleEvaluator = PA_ReversificationRuleEvaluator(dataCollection)
 
 
 
@@ -606,44 +363,13 @@ open class PA_ReversificationHandler protected constructor (): PA()
   private fun canonicaliseAndCorrectData (dataRow: ReversificationDataRow)
   {
     /**************************************************************************/
-    fun augmentTest (s: String)
-    {
-      var test = dataRow["Tests"]
-      if (test.isNotEmpty()) test += " & "
-      dataRow["Tests"] = test + s
-    }
-
-
-
-    /**************************************************************************/
-    /* At the time of writing we have alternative names for some Action values.
-       The deprecated ones I swap for the preferred values.
-
-       Some Actions implicitly require checks for the existence of the source
-       ref.  These tests I add to the Test field.
-
-       Some require that the standard ref not exist; and some require that
-       either that the standard ref not exist, or that it exist and be empty.
-
-       At some point in the future, the reversification data may be altered to
-       include these tests.  Pro tem, I'm adding them to the Test field here. */
-
-    var sourceRef = dataRow["StandardRef"]
-    var standardRef = dataRow["StandardRef"]
-    val x = capitaliseWords(dataRow["Action"].replace("*", "")).replace(" ", "") // '*' is used to mark actions which change the location of a verse.  With the processing as it stands, this is not relevant.
-    val action = C_ActionsWhichShouldBeRenamed[Action.valueOf(x)] ?: Action.valueOf(x)
-
-    if (0 != action.checks and CheckSourceRefExists)
-      augmentTest("$sourceRef=Exist")
-
-    if (0 != action.checks and CheckStandardRefEmptyOrNonExistent)
-      augmentTest("$standardRef=EmptyOrNotExist")
-    else if (0 != action.checks and CheckStandardRefNonExistent)
-      augmentTest("$standardRef=NotExist")
-
-    dataRow.action = action
-    dataRow.isMove = "*" in dataRow["Action"]
-    action.isMove = dataRow.isMove
+    /* Get the canonical form of the action name.  This is the form as supplied,
+       but with the '*' used to mark Moves removed, spaces suppressed and
+       converted to lower case. */
+   dataRow["Action"] = dataRow["Action"].replace(" ", "").lowercase()
+   dataRow.isMove = "*" in dataRow["Action"]
+    val x = dataRow["Action"].replace("*", "").replace(" ", "").lowercase()
+    dataRow.action = x
 
 
 
@@ -653,8 +379,8 @@ open class PA_ReversificationHandler protected constructor (): PA()
        convert them to USX form (unfortunately they aren't in that form in the
        reversification data -- or at least, not the source or standard ref). */
 
-    sourceRef   = usxifyFromStepFormat(dataRow["SourceRef"])
-    standardRef = usxifyFromStepFormat(dataRow["StandardRef"])
+    var sourceRef   = usxifyFromStepFormat(dataRow["SourceRef"])
+    var standardRef = usxifyFromStepFormat(dataRow["StandardRef"])
     dataRow.sourceIsPsalmTitle = "title" in sourceRef.lowercase()
 
 
@@ -721,16 +447,6 @@ open class PA_ReversificationHandler protected constructor (): PA()
   private fun ignoreRow (dataRow: ReversificationDataRow): Boolean
   {
     /**************************************************************************/
-    /* Probably temporary only.  Currently the data contains things like eg
-       Renumber before Est.1:2, which I think should be going shortly. */
-
-    val action = dataRow["Action"]
-    if (action.lowercase().contains("est."))
-      return true
-
-
-
-    /**************************************************************************/
     /* The reversification data contains a few rows for 4Esdras.  We need to
        weed these out, because the USX scheme doesn't recognise this book. */
 
@@ -745,12 +461,7 @@ open class PA_ReversificationHandler protected constructor (): PA()
        We need to ignore reversification data for any where the source
       reference is for a book which we are not processing. */
 
-    if (!Dbg.wantToProcessBookByAbbreviatedName(sourceRef.substring(0, 3))) return true
-
-
-
-    /**************************************************************************/
-    return false
+    return !Dbg.wantToProcessBook(sourceRef.substring(0, 3))
   }
 
 
@@ -810,133 +521,68 @@ open class PA_ReversificationHandler protected constructor (): PA()
 
 
   /****************************************************************************/
-  /* New format callout processing.
+  /* New format callout / footnote processing.
 
-     In early 2023, the original NoteMarker content was changed.  This method
-     extracts salient information from that field.  The notes below give details
-     of the format and the processing.
+     Callout / footnote processing is driven by the NoteMarker field.  Note
+     that footnotes are suppressed when processing a copyright text.  In what
+     follows I do not repeat this -- I explain what happens if we _are_
+     generating footnotes.
 
-     A 'full' NoteMarker field is now of the form :-
+     This NoteMarker field contains a number of separate pieces of information.
+     A typical entry looks like
 
-       Lvl. (V)^<sourceDetails>
+       Acd. (25)^[3:1a]
 
-     or, as an example :-
+     The 'Acd' portion may be replaced by any of the following:
 
-       Acd. (1)^12
+     * Nec: The associated footnote is relevant to _any_ audience, academic or
+       not.
 
-     (I say 'full' here because some of the elements are optional.  This is
-     spelt out below.)
+     * Opt: ??
 
-     One item of terminology before we proceed.  In the normal course of events,
-     where a verse has been affected by reversification, we include what I have
-     generally referred to as an 'embedded source reference' within the
-     canonical text.  Originally this was output in square brackets, so we might
-     have something like :-
+     * Inf: Inf appears only upon IfEmptyVerse rows in the reversification data.
+       If the standard verse is already present in the supplied text and the
+       translators have applied a footnote to it, we assume that the footnote
+       explains the fact that the verse is empty, and we do not add a footnote
+       of our own.  If the standard verse is present in the supplied text but
+       does not have a footnote, then we add one of our own.  If the standard
+       verse is missing from the supplied text, we generate an empty verse and
+       give it a footnote.
 
-       2) ^ [1:1] This text is now in verse 2, but came from v 1 of ch 1.
-
-     where 2) is the actual verse indicator displayed to the user, and [1:1]
-     indicates that the content originally came from 1:1.
-
-     In most cases, the embedded source reference comprises just the verse
-     number of the source reference, and we have dropped the square brackets in
-     order to make it look more like a verse number, so that the user is more
-     likely to read the text as being numbered in the way that they are
-     familiar with.
-
-     In some cases, though -- where the source verse is in a different chapter
-     or a different book from the standard verse -- we need to include either
-     the chapter or the book and chapter.  And when we have this additional
-     context, we presently try to present it in superscript form, so that it
-     still leaves the verse part looking like a verse number.
-
-     I always try to format this information in vernacular form, incidentally.
+     * Acd: The associated footnote is likely to be of interest only if the
+       module we are generating is aimed at an academic audience.  It is
+       suppressed when generating modules for a non-academic audience.
 
 
-     The various parts of the new NoteMarker field are as follows :-
+    Returning to the sample NoteMarker field above:
 
-     * Lvl controls whether or not a footnote should be generated to explain
-       what reversification is doing (or might do) here.  A value of 'Nec'
-       indicates that the footnote should be generated on _any_ reversification
-       run.  A value of 'Acd' indicates that the footnote should be generated
-       only on academic reversification runs.
+       Acd. (25)^[3:1a]
 
-     * <oldData> gives the information which appeared in this field previously
-       (ie before the new format data was adopted).  It is being retained just in
-       case, and may be dropped at some point.
+    The portion after the 'XXX.' comprises one or two verse references.  The
+    parenthesised part is always present (I think) and is always just a single
+    verse number (I think).
 
-     * (V) indicates that this reversification action produces data which should
-       be marked with a <verse> tag, and gives the verse number.  (The remainder
-       of the sid / eid for the verse comes from the book and chapter of the
-       StandardRef.)  It is optional; if absent, the data being handled by this
-       reversification row is not flagged as a verse.
+    The portion after the up-arrow is not always present.  When it _is_
+    present, it may or may not be enclosed in square brackets.  And it may be
+    a single verse number, or it may be more than that.
 
-       I do not need to rely upon this.  I can determine whether or not the
-       given text is to be marked with <verse> tags by reference to the
-       StandardRef field.  If that identifies a verse, or identifies subverse
-       zero of a verse, then we want the verse tag; if it identifies a subverse
-       other than subverse zero, we do not want the verse tag.  And the sid /
-       eid is simply the StandardRef.
+    These items were included at a time when we were intending to do
+    conversion-time reversification and wanted to include verse numbers in
+    the text to try to emphasise continuity with the text as supplied.  At
+    present it looks rather less likely that we will be doing conversion-time
+    reversification; and even if we do, our original plan (to give one or
+    other of these verse numbers as a callout) has been thwarted because STEP
+    always renders callouts as down-arrows.
 
-     * The caret indicates that a footnote callout appears.  The only purpose
-       it serves is to indicate that the footnote callout (assuming Lvl requires
-       a footnote) appears after the start of the verse and before the source
-       details which are set out in the remainder of the NoteMarker field.  And
-       since it appears on every single row in the reversification data, and
-       always in the same position, I do not need to rely upon it.
+    Since I have forgotten the precise details of these items, therefore, and
+    since at present we aren't using them, I don't propose to try to give
+    precise details of the way they are supposed to be used.
+   */
 
-     * The remainder of the NoteMarker field gives the details upon which the
-       embedded source reference is based.  It is optional.  If it is empty, or
-       comprises just [-], [+] or [0] (which are old options, and may be dropped
-       in future), no embedded source reference is generated.
-
-       Otherwise, I believe I can, in almost all cases, deduce what this portion
-       of the data is telling me from the SourceRef and StandardRef.  Note,
-       though, that this processing needs to be overridden using the data in the
-       NoteMarker field in some places, and if I have to cater for overrides,
-       there may be little advantage in retaining the existing processing
-
-       - If the source and standard ref are identical (as on most / all
-         KeepVerse rows), the embedded source reference is suppressed.
-
-       - If the source and standard ref are in the same book and chapter, the
-         embedded source ref consists of the source verse (or verse and
-         subverse) only.
-
-       - If they are in the same book, but different chapters, the embedded
-         source ref consists of the source chapter and verse.
-
-       - If they are in different books, the embedded source ref consists of
-         the book, chapter and verse (but subject to some special processing
-         discussed below).
-
-       - Where the embedded reference consists of more than just the verse
-         number, the non-verse portion is to be formatted differently from the
-         verse portion (presently by superscripting it).
-
-       - Except that this analysis of both the content and the formatting may be
-         overridden in some places TBD.
-
-
-       I mentioned special processing above.  Where we have blocks of text being
-       moved between books (and _only_ there), having a full embedded source
-       reference at the start of every verse would probably be oppressive.  In
-       these cases, we insert a header at the start of the block of verses
-       giving the source book and chapter, and then change the embedded
-       references to give the verse number only, relying upon the header to
-       provide the context.  Or more accurately, I leave the embedded reference
-       in the _first_ verse in a block as book, chapter and verse, but turn all
-       of the remaining ones into verse only.
-
-       Further, if the result of this means that the embedded reference
-       identifies the same verse number as the verse in which it appears -- if,
-       for example, S3Y 1:1 would contain an embedded reference of '1' -- we
-       suppress the embedded source reference altogether.
-  */
-
-  val C_FootnoteLevelNec = 0
-  val C_FootnoteLevelAcd  = 1
-  val C_FootnoteLevelOpt = 2
+  private const val C_FootnoteLevelNec = 'N'
+  private const val C_FootnoteLevelAcd = 'A'
+  private const val C_FootnoteLevelOpt = 'O'
+  private const val C_FootnoteLevelInf = 'I'
 
   private fun setCalloutAndFootnoteLevel (dataRow: ReversificationDataRow)
   {
@@ -944,9 +590,10 @@ open class PA_ReversificationHandler protected constructor (): PA()
     var x = dataRow["NoteMarker"]
     when (x.trim().substring(0, 2).lowercase())
     {
-      "ne" -> dataRow.footnoteLevel = C_FootnoteLevelNec // Necessary.
-      "ac" -> dataRow.footnoteLevel = C_FootnoteLevelAcd  // Academic.
+      "ne" -> dataRow.footnoteLevel = C_FootnoteLevelNec // If footnotes are permitted at all, this should always be output, regardless of whether this is an academic or non-academic run.
+      "ac" -> dataRow.footnoteLevel = C_FootnoteLevelAcd // Output on academic runs only.
       "op" -> dataRow.footnoteLevel = C_FootnoteLevelOpt // Not exactly sure what this means, but it is used in a slightly complicated way.
+      "in" -> dataRow.footnoteLevel = C_FootnoteLevelInf // Used selectively on empty verses.
       else -> Logger.error("Reversification invalid note level: " + x[0])
     }
 
@@ -1010,311 +657,89 @@ open class PA_ReversificationHandler protected constructor (): PA()
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                               Footnotes                                **/
+  /**                               Utilities                                **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
   /****************************************************************************/
-  protected lateinit var m_CalloutGenerator: (ReversificationDataRow) -> String
-  protected lateinit var m_NotesColumnName: String
-
-
-
-  /****************************************************************************/
   /**
-  * Runs over all verses affected by the reversification data, and applies any
-  * footnotes which may be required.
-  *
-  * @param rootNode Root node for the book which we are processing.
-  */
-
-  fun addFootnotes (rootNode: Node)
-  {
-    val selectedRows = getSelectedRowsForBook(rootNode)
-    if (selectedRows.isEmpty() || !ConfigData.getAsBoolean("stepOkToGenerateFootnotes"))
-      return
-    addFootnotes(rootNode, selectedRows)
-  }
-
-
-  /****************************************************************************/
-  /* Deals with footnotes on a single book. */
-
-  private fun addFootnotes (rootNode: Node, reversificationRows: List<ReversificationDataRow>)
-  {
-    val reversificationNoteType = ConfigData["stepReversificationNoteType"]?.first()?.uppercaseChar() ?: 'B' // A(cademic) or B(asic).
-
-    val sids = rootNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid()).associateBy {
-      m_FileProtocol.readRef(m_FileProtocol.getSid(it)).toRefKey()
-    } // Maps RefKey to verse node for all sids in the book.
-
-    reversificationRows.forEach { // Create footnote nodes if appropriate, and insert them after the sid.
-      val footnoteNodes = makeFootnote(rootNode.ownerDocument, it, reversificationNoteType) ?: return@forEach
-      val sid = sids[it.sourceRefAsRefKey] ?: throw StepExceptionWithStackTraceAbandonRun("Attempting to apply reversification footnote to a non-existent sid: ${it.sourceRef}.")
-      footnoteNodes.forEach { footnoteNode -> Dom.insertNodeAfter(sid, footnoteNode) }
-    }
-  }
-
-
-  /****************************************************************************/
-  /**
-   * Both flavours of reversification may add footnotes under some
-   * circumstances.  I leave the control of this to the flavours themselves, but
-   * the actual content etc is constructed in a common manner and is handled
-   * here.
+   * The reversification data uses its own formats for references.  It's
+   * convenient to convert this to USX for processing because I already have
+   * code to handle USX.
    *
-   * @param ownerDocument
-   * @param row Reversification row being handled.
-   * @param reversificationNoteTypeForRun B(asic) or A(cademic).
-   * @return List of nodes which between them constitute the note.
+   * @param theStepRef Reference in STEP format.
+   * @return String representation of an equivalent reference in USX format.
+   *         Note that this may differ from the original in respect of
+   *         whitespace, separators, etc, but since we need it only for
+   *         parsing, that's not an issue.
    */
 
-  private fun makeFootnote (ownerDocument: Document, row: ReversificationDataRow, reversificationNoteTypeForRun: Char): List<Node>?
+  fun usxifyFromStepFormat (theStepRef: String): String
   {
-    return when (reversificationNoteTypeForRun)
-    {
-      'B' -> if (C_FootnoteLevelNec == row.footnoteLevel) makeFootnote1(ownerDocument, row, 'B') else null
-      'A' -> makeFootnote1(ownerDocument, row, 'A')
-      else -> throw StepExceptionWithStackTraceAbandonRun("getFootnote: Invalid parameter.")
-    }
+    /**************************************************************************/
+    //Dbg.d(theStepRef)
+
+
+
+    /**************************************************************************/
+    /* Get the reference string into canonical form.  The input may contain
+       commas or semicolons as collection separators, and since the parsing
+       processing is set up to handle either, it's convenient here to convert
+       them all to just one form. */
+
+    val stepRef = theStepRef.replace(",", ";")
+                            .replace("--", "-")
+                            .replace("–", "-")
+                            .replace(" +", "")
+                            .replace("•", "") // \u2022 -- Arabic zero.
+                            .replace("٠", "") // \u0660 -- Bullet point, used in some places instead of Arabic zero.
+                            .replace("([1-9A-Za-z][A-Za-z][A-Za-z]\\.)".toRegex()) { it.value.replace(".", " ") }
+                            .replace("(?i)title".toRegex(), "title")
+                            .replace("(?i):T$".toRegex(), "")// We have things like 53:T as the alternative reference on some Psalm rows.  I change these back to be chapter references.
+
+
+    /**************************************************************************/
+    fun processCollectionElement (elt: String) = elt.split("-").joinToString("-"){ usxify1(it) }
+    return stepRef.split(";").joinToString(";"){ processCollectionElement(it) }
   }
 
 
   /****************************************************************************/
-  /* Creates the footnote construct.  We only get this far if we are sure we
-     want a footnote.  At this point, the only reason for _not_ generating one
-     is if the reversification data does not actually contain any footnote
-     text. */
+  /* The reversification data has its own view of how references should be
+     represented, and to save having to include specialised code to cater for
+     these, it's convenient to convert to USX format up-front. */
 
-  private fun makeFootnote1 (ownerDocument: Document, dataRow: ReversificationDataRow, basicOrAcademic: Char): List<Node>?
+  private fun usxify1 (theStepRef: String): String
   {
     /**************************************************************************/
-    var content = getFootnoteContent(dataRow, m_NotesColumnName, basicOrAcademic)
-    if (content.isEmpty())
-      return null
+    /* Replace the full stop after the book name with a space. */
 
-
-    /**************************************************************************/
-    val calloutDetails = dataRow.calloutDetails
-    val res: MutableList<Node> = mutableListOf()
+    var stepRef = theStepRef
+    if (stepRef.matches("...\\..*".toRegex()))
+      stepRef = stepRef.substring(0, 3) + " " + stepRef.substring(4)
 
 
 
     /**************************************************************************/
-    /* This is the 'pukka' callout -- ie the piece of text which you click on in
-       order to reveal the footnote.  Originally it was expected to be taken
-       from the NoteMarker text in the reversification data.  However, we then
-       found that STEP always rendered it as a down-arrow; and latterly DIB has
-       decided he wants it that way even if STEP is fixed to display the actual
-       callout text we request.  I therefore need to generate a down-arrow here,
-       which is what the callout generator gives me. */
+    /* I _think_ we can forget subverse zero.  Otherwise, if we have numeric
+       subverses, change them to alphabetic. */
 
-    val callout = m_CalloutGenerator(dataRow)
-
-
-
-    /**************************************************************************/
-    /* Insert the footnote itself. */
-
-    content = content.replace("S3y", "S3Y") // DIB prefers this.
-
-    val ancientVersions = if (m_ReversificationNotesLevelForRun > C_FootnoteLevelNec) dataRow.ancientVersions else null
-    if (null != ancientVersions) content += " $ancientVersions"
-
-    val noteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToGeneralVerseAffectedByReversification, ownerDocument, dataRow.standardRefAsRefKey, content, callout)
-    if (null != noteNode)
+    if (stepRef.endsWith(".0"))
+      stepRef = stepRef.substring(0, stepRef.length - 2)
+    else if (stepRef.matches(".*\\.\\d+$".toRegex()))
     {
-      res.add(noteNode)
-      res.add(Dom.createTextNode(ownerDocument, " "))
-      IssueAndInformationRecorder.addGeneratedFootnote(Ref.rd(dataRow.sourceRefAsRefKey).toString() + " (ReversificationFootnote)")
+      val ix = stepRef.lastIndexOf(".")
+      val subverseNo = Integer.parseInt(stepRef.substring(ix + 1))
+      stepRef = stepRef.substring(0, ix) + convertNumberToRepeatingString(subverseNo, 'a', 'z')
     }
 
 
 
     /**************************************************************************/
-    /* Check if we need the text which will typically be superscripted and
-       bracketed. */
-
-    val alternativeRefCollection = calloutDetails.alternativeRefCollection
-    if (null != alternativeRefCollection)
-    {
-      val basicContent = if (calloutDetails.alternativeRefCollectionHasEmbeddedPlusSign)
-        alternativeRefCollection.getLowAsRef().toString("a") + TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferenceEmbeddedPlusSign") + alternativeRefCollection.getHighAsRef().toString("a")
-      else if (calloutDetails.alternativeRefCollectionHasPrefixPlusSign)
-        TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferencePrefixPlusSign") + alternativeRefCollection.toString("a")
-      else
-        alternativeRefCollection.toString("a")
-
-      val textNode = Dom.createTextNode(ownerDocument, TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent))
-      val containerNode = Dom.createNode(ownerDocument, "<_X_reversificationCalloutAlternativeRefCollection/>")
-      containerNode.appendChild(textNode)
-      res.add(containerNode)
-    }
-
-
-
-    /**************************************************************************/
-    return res.reversed()
+    return stepRef
   }
 
-
-  /****************************************************************************/
-  /* Returns the fully formatted content for a footnote.  whichFootnote should
-     be either ReversificationNote or VersificationNote (in fact, only the
-     latter at present, because we have no reason to deal with the former. */
-
-  private fun getFootnoteContent (dataRow: ReversificationDataRow, whichFootnote: String, basicOrAcademic: Char): String
-  {
-    /**************************************************************************/
-    //Dbg.d(row.toString())
-
-
-
-    /**************************************************************************/
-    /* Is there in fact any footnote at all? */
-
-    var content = dataRow[whichFootnote]
-    if (content.isEmpty()) return ""
-
-
-
-    /**************************************************************************/
-    var res = ""
-
-
-
-    /**************************************************************************/
-    /* Time was when we would only ever have a single chunk of text, and either
-       zero or one associated reference, which appeared after the text.  This
-       is no longer the case.  I assume here that we may have ...
-
-       a) Just a single piece of text within %-signs, being a lookup string for
-          vernacular text which has no associated reference.
-
-       b) A list starting with a ref, and then alternating between refs and
-          %-delimited strings.
-
-       c) A list starting with a %-delimited string, and then alternative
-          between refs and %-delimited strings.
-
-       I assume also that with the exception of case 1 above, every %-delimited
-       string does have an associated ref, and that the ref precedes the string
-       if the very first element is a non-delimited string (which I take to be
-       a ref), or else the ref follows the string. */
-
-    if (content.endsWith(".")) content = content.substring(0, content.length - 1) // Remove trailing punctuation.  We'll add it to all strings later.
-    content = content.replace(".%", "%") // Don't want punctuation inside text which we will use as lookup keys.
-
-    val elts = content.split("%") // Numbering from zero, even number elts are either empty or are refs; odd number elts are lookup keys.
-    val offsetToCorrespondingReference = if (elts[0].isEmpty()) +1 else -1
-    for (ix in 1 ..< elts.size step 2) // Pick up the lookup keys.  Each is assumed at this point to have an associated reference
-    {
-      val lookupKey = elts[ix]
-      val ref = elts[ix + offsetToCorrespondingReference]
-      res += " " + getFootnoteContent(lookupKey, ref)
-    }
-
-    if (!res.endsWith("."))
-      res += "."
-
-
-
-    /**************************************************************************/
-    /* If this is an academic run, we may need to add AncientVersion
-       information. */
-
-    if ('A' == basicOrAcademic)
-      res += " " + dataRow.ancientVersions
-
-
-
-    /**************************************************************************/
-    return res.trim()
-  }
-
-
-  /*****************************************************************************/
-  private fun getFootnoteContent (lookupKey: String, ref: String): String
-  {
-    /**************************************************************************/
-    /* In most cases, sorting out the reference collection is easy -- there may
-       in theory be some ambiguity with single numbers as to what they represent
-       (chapters, verses, etc), but we force that here by saying that unadorned
-       numbers should be regarded as verses (which, in fact, I think unadorned
-       numbers actually are); and in any case, the aim is simply to output
-       stuff in the same form as it appears in the reversification data.
-
-       The fly in the ointment are the few rows which contain multiple
-       references which are separated by things like '/' and '+', and therefore
-       can't be parsed as collections.  We'll deal with the easy cases first
-       (the ones where we don't have these odd separators. */
-
-    var refAsString = ref
-    val containsSlash = '/' in refAsString
-    val containsPlus = '+' in refAsString
-    if (!containsSlash && !containsPlus)
-    {
-      if (refAsString.endsWith("."))
-        refAsString = refAsString.substring(0, refAsString.length - 1)
-      val rc = RefCollection.rdUsx(usxifyFromStepFormat(refAsString), dflt = null, resolveAmbiguitiesAs = "v")
-      return TranslatableFixedText.stringFormat(Language.Vernacular, lookupKey, rc)
-    }
-
-
-
-    /**************************************************************************/
-    /* Which just leaves the difficult case.  Unfortunately, there is at the
-       time of writing just one row where the reference looks like 9:9a/2:35f,
-       and of course the slash is a problem, because this cannot be parsed as a
-       reference collection.  If I'm to have any chance of doing this in such
-       a way that I can continue to support vernacular translation, this is
-       going to be unpleasantly fiddly ...
-
-       I start off by obtaining the basic text of the message in vernacular
-       form.  This should have precisely one entry of the form %RefV<...>.
-       I split this text up into that portion which appears the %RefV<...> bit,
-       the %RefV<...> bit itself, and the portion which appears afterwards.
-
-       I then use the %RefV<...> portion to format each of the references
-       individually.  And then finally I join these formatted references
-       together with the relevant separator, and stitch this together with the
-       fixed portions of the text.
-    */
-
-    val rawMessage = TranslatableFixedText.lookupText(Language.English, getTextKey(lookupKey))
-    val regex = "(?i)(?<pre>.*)(?<ref>%Ref.*?>)(?<post>.*)".toRegex()
-    val match = regex.matchEntire(rawMessage)
-    val refFormat = match!!.groups["ref"]!!.value
-
-    val elts = refAsString.split('/', '+').map { TranslatableFixedText.stringFormat(refFormat, RefCollection.rdUsx(it.trim(), dflt = null, resolveAmbiguitiesAs = "v")) }
-    val eltsAssembled = elts.joinToString(TranslatableFixedText.stringFormat(Language.Vernacular, if (containsSlash) "V_reversification_ancientVersionsAlternativeRefsSeparator" else "V_reversification_alternativeReferenceEmbeddedPlusSign"))
-    return match.groups["pre"]!!.value + eltsAssembled + match.groups["post"]!!.value
-  }
-
-
-  /****************************************************************************/
-  /**
-   *  Given a piece of footnote text from the reversification data, gives back
-   *  the corresponding key which we can use to look up TranslatableFixedText.
-   */
-
-  private fun getTextKey (lookupVal: String): String = "V_reversification_[${lookupVal.trim()}]"
-
-
-  /****************************************************************************/
-  private fun setReversificationNotesLevelForRun ()
-  {
-    when (ConfigData["stepReversificationFootnoteLevel"]!!.lowercase())
-    {
-      "basic" ->    m_ReversificationNotesLevelForRun = C_FootnoteLevelNec
-      "academic" -> m_ReversificationNotesLevelForRun = C_FootnoteLevelAcd
-    }
-  }
-
-
-  /****************************************************************************/
-  private var m_ReversificationNotesLevelForRun = -1 //
 
 
 
@@ -1700,66 +1125,6 @@ open class PA_ReversificationHandler protected constructor (): PA()
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                                Private                                 **/
-  /**                                                                        **/
-  /****************************************************************************/
-  /****************************************************************************/
-
-  /****************************************************************************/
-  private lateinit var m_RuleEvaluator: ReversificationRuleEvaluator
-  private val m_SelectedRows: MutableList<ReversificationDataRow> = ArrayList(10000)
-
-
-  /****************************************************************************/
-  /* Some actions are deprecated and need to be renamed during data load.
-
-     Some actions implicitly require a check for the existence of the source
-     ref.
-
-     Some actions require we check that the standard ref does not exist.
-
-     Some actions require that the standard ref either does not exist, or else
-     is empty.
-
-     The information here is used in canonicaliseAndCorrectData to make
-     suitable modifications to the incoming data. */
-
-  private val C_ActionsWhichShouldBeRenamed = mapOf(Action.IfAbsent to Action.MissingVerse, Action.IfEmpty to Action.EmptyVerse)
-
-
-
-  /****************************************************************************/
-  /* Action is an enum with one entry for each possible action, deprecated or
-     not.
-
-     Each action may have associated with it one or more of a few standard
-     actions (like reporting that the source has been remapped to a new
-     location).  This is not to preclude additional processing being associated
-     with the action -- it just covers the processing which a number of
-     different actions have in common.
-
-     There is no need to worry about action information for the two deprecated
-     entries, because these are replaced with other items during data load. */
-
-  enum class Action (val checks: Int, var actions: Int = 0, var isMove: Boolean = false) {
-    EmptyVerse         (checks = CheckStandardRefEmptyOrNonExistent),
-    KeepVerse          (checks = NoCheck),
-    MergedVerse        (checks = CheckSourceRefExists),
-    MissingVerse       (checks = CheckStandardRefNonExistent),
-    PsalmTitle         (checks = CheckSourceRefExists),
-    RenumberTitle      (checks = CheckSourceRefExists),
-    RenumberVerse      (checks = CheckSourceRefExists), // With the processing as it stands, I don't need to distinguish Move and Renumber.
-
-    IfAbsent           (checks = NoCheck), // These are really only dummies -- they're deprecated and are replaced during data load.
-    IfEmpty            (checks = NoCheck)
-  }
-
-
-
-
-  /****************************************************************************/
-  /****************************************************************************/
-  /**                                                                        **/
   /**                          Significant classes                           **/
   /**                             CalloutDetails                             **/
   /**                                                                        **/
@@ -1767,19 +1132,20 @@ open class PA_ReversificationHandler protected constructor (): PA()
   /****************************************************************************/
 
   /****************************************************************************/
-  /* Data parsed out of the rather complicated NoteMarker field of the
-     reversification data. */
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                 Data                                   **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
 
-  class CalloutDetails
-  {
-    var standardVerse: Ref? = null
-    var standardVerseIsCanonicalTitle = false
-    var alternativeRefCollection: RefCollection? = null
-    var alternativeRefCollectionHasPrefixPlusSign: Boolean = false
-    var alternativeRefCollectionHasEmbeddedPlusSign: Boolean = false
-    var sourceVerseCollection: RefCollection? = null
-  }
+  /****************************************************************************/
+  private lateinit var m_RuleEvaluator: PA_ReversificationRuleEvaluator
+  private val m_SelectedRows: MutableList<ReversificationDataRow> = ArrayList(10000)
 } // PA_ReversificationHandler
+
+
+
 
 
 /******************************************************************************/
@@ -1791,19 +1157,34 @@ open class PA_ReversificationHandler protected constructor (): PA()
 /******************************************************************************/
 /******************************************************************************/
 
+/******************************************************************************/
+/* Data parsed out of the rather complicated NoteMarker field of the
+   reversification data. */
+
+class CalloutDetails
+{
+  var standardVerse: Ref? = null
+  var standardVerseIsCanonicalTitle = false
+  var alternativeRefCollection: RefCollection? = null
+  var alternativeRefCollectionHasPrefixPlusSign: Boolean = false
+  var alternativeRefCollectionHasEmbeddedPlusSign: Boolean = false
+  var sourceVerseCollection: RefCollection? = null
+}
+
+
+
+
 
 /******************************************************************************/
 /* A single row of the reversification data. */
 
 class ReversificationDataRow (rowNo: Int)
 {
-  enum class AttachFootnoteTo { Source, Standard, Unknown }
-  lateinit var action: PA_ReversificationHandler.Action
+  lateinit var action: String
            var ancientVersions = ""
-           var attachFootnoteTo = AttachFootnoteTo.Unknown
   lateinit var fields: MutableList<String>
   lateinit var calloutDetails: CalloutDetails
-           var footnoteLevel = -1
+           var footnoteLevel = '?'
            var isMove = false
            val rowNumber = rowNo // Publicly accessible only for debugging.
            var sourceIsPsalmTitle = false
@@ -1994,22 +1375,6 @@ operator fun ReversificationDataRow.set (fieldName: String, value: String) { thi
 //
 //
 //
-//
-//    dataRow.processingFlags = dataRow.processingFlags.or(
-//      when (dataRow.action)
-//      {
-//        "emptyverse"     -> C_CreateIfNecessary
-//        "ifabsent"       -> C_CreateIfNecessary
-//        "ifempty"        -> 0
-//        "keepverse"      -> getAllBiblesComplaintFlag(dataRow)
-//        "mergedverse"    -> C_CreateIfNecessary
-//        "missingverse"   -> C_CreateIfNecessary
-//        "psalmtitle"     -> C_ComplainIfStandardRefDidNotExist
-//        "renumbertitle"  -> C_ComplainIfStandardRefExisted.or(C_StandardIsPsalmTitle).or(if ("title" in getField("SourceRef", dataRow).lowercase()) C_SourceIsPsalmTitle else 0).or(if ("title" in getField("StandardRef", dataRow).lowercase()) C_StandardIsPsalmTitle else 0)
-//        "renumberverse"  -> C_ComplainIfStandardRefExisted.or(C_Renumber)
-//        "renumberverse*" -> C_ComplainIfStandardRefExisted.or(C_Renumber).or(C_Move)
-//        else             -> 0
-//    })
 
 
 //  /****************************************************************************/
@@ -2041,8 +1406,3 @@ operator fun ReversificationDataRow.set (fieldName: String, value: String) { thi
 //    val noteA = getField("Reversification Note", row)
 //    return if (m_NoteAOptionsText.contains(noteA)) C_ComplainIfStandardRefDidNotExist else 0
 //  }
-
-
-
-
-

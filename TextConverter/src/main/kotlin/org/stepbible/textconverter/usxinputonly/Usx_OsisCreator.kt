@@ -43,6 +43,7 @@ object Usx_OsisCreator
      pattern of one main class and then a subclass which is instantiated for
      each book.
    */
+
   /****************************************************************************/
   /**
    * Converts a collection of USX documents to OSIS.
@@ -158,7 +159,7 @@ object Usx_OsisCreator
 
 
     /*************************************************************************/
-    return chunks.keys().toList().sorted().map { chunks[it] }.joinToString("")
+    return BookOrdering.getOrder().map { chunks[it] }.joinToString("")
   }
 
 

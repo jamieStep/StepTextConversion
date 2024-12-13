@@ -347,14 +347,13 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   * is marked 'open' mainly so that inheriting classes (and in particular,
   * BibleStructureOsis2ModScheme) can ensure that it doesn't get called.
   *
-  * @param prompt Output to screen as part of progress indicator.
   * @param rootNodes List of root nodes to be processed.
   * @param wantCanonicalTextSize True if we need to accumulate the text size.
   * @param filePath: Optional: used for debugging and progress reporting only.
   * @param bookName USX abbreviation.
   */
 
-  open fun addFromRootNodes (prompt: String, rootNodes: List<Node>, wantCanonicalTextSize: Boolean, filePath: String? = null, bookName: String? = null)
+  fun addFromRootNodes (rootNodes: List<Node>, wantCanonicalTextSize: Boolean, filePath: String? = null, bookName: String? = null)
   {
     // Note that this deliberately does not follow the common pattern elsewhere,
     // where I create a PerBook subclass and then use an instance of that for
@@ -437,10 +436,10 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /****************************************************************************/
   fun hasCanonicalTextSize () = m_CollectingCanonicalTextSize
 
-  open fun getAllBookNumbers   () = m_Text.m_Content.m_ContentMap.keys
-  open fun getAllBookNumbersOt () = m_Text.m_Content.m_ContentMap.keys.filter { BibleAnatomy.isOt(it) }
-  open fun getAllBookNumbersNt () = m_Text.m_Content.m_ContentMap.keys.filter { BibleAnatomy.isNt(it) }
-  open fun getAllBookNumbersDc () = m_Text.m_Content.m_ContentMap.keys.filter { BibleAnatomy.isDc(it) }
+  open fun getAllBookNumbers   () = m_Text.m_Content.m_ContentMap.keys.filter { null != m_Text.m_Content.m_ContentMap[it] }
+  open fun getAllBookNumbersOt () = getAllBookNumbers().filter { BibleAnatomy.isOt(it) }
+  open fun getAllBookNumbersNt () = getAllBookNumbers().filter { BibleAnatomy.isNt(it) }
+  open fun getAllBookNumbersDc () = getAllBookNumbers().filter { BibleAnatomy.isDc(it) }
 
   open fun getAllBookAbbreviations   () = getAllBookNumbers()  .map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
   open fun getAllBookAbbreviationsOt () = getAllBookNumbersOt().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
@@ -449,8 +448,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
 
-  open fun getAllBookAbbreviationsUsx  () = m_Text.m_Content.m_ContentMap.keys.map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
-  open fun getAllBookAbbreviationsOsis () = m_Text.m_Content.m_ContentMap.keys.map { BibleBookNamesOsis.numberToAbbreviatedName(it) }
+  open fun getAllBookAbbreviationsUsx  () = getAllBookNumbers().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
+  open fun getAllBookAbbreviationsOsis () = getAllBookNumbers().map { BibleBookNamesOsis.numberToAbbreviatedName(it) }
 
 
 
@@ -459,9 +458,9 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
 
-  open fun hasAnyBooksOt () = null != m_Text.m_Content.m_ContentMap.keys.firstOrNull { BibleAnatomy.isOt(it) }
-  open fun hasAnyBooksNt () = null != m_Text.m_Content.m_ContentMap.keys.firstOrNull { BibleAnatomy.isNt(it) }
-  open fun hasAnyBooksDc () = null != m_Text.m_Content.m_ContentMap.keys.firstOrNull { BibleAnatomy.isDc(it) }
+  open fun hasAnyBooksOt () = null != getAllBookNumbers().firstOrNull { BibleAnatomy.isOt(it) }
+  open fun hasAnyBooksNt () = null != getAllBookNumbers().firstOrNull { BibleAnatomy.isNt(it) }
+  open fun hasAnyBooksDc () = null != getAllBookNumbers().firstOrNull { BibleAnatomy.isDc(it) }
 
 
 
@@ -1360,7 +1359,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   {
     Rpt.reportWithContinuation(level = 1, "Determining Bible structure ...") {
       val rootNodes = doc.getAllNodesBelow().filter { m_FileProtocol!!.isBookNode(it) }
-      addFromRootNodes("", rootNodes, wantCanonicalTextSize)
+      addFromRootNodes(rootNodes, wantCanonicalTextSize)
     }
   }
 
@@ -2114,10 +2113,10 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
   private fun parseData ()
   {
     /**************************************************************************/
-    fun processLine (line: String, retain: Boolean = false)
+    fun processLine (fields: List<String>, retain: Boolean = false)
     {
-      val (schemeName, bookAbbreviation, verseCountDetails) = line.split('/')
-      val bookNo = BibleBookNamesUsx.nameToNumber(bookAbbreviation.trim())
+      val (schemeName, bookAbbreviation, verseCountDetails) = fields
+      val bookNo = BibleBookNamesOsis.nameToNumber(bookAbbreviation.trim())
       val verseCounts = verseCountDetails.replace("\\s+".toRegex(), "").split(',')
       for (chapterIx in verseCounts.indices)
       {
@@ -2130,10 +2129,8 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
 
 
     /**************************************************************************/
-    val selector = "$m_Scheme/"
-    FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath())!!.bufferedReader().use { it.readText() } .lines()
-      .map { it.trim() }
-      .filter { it.startsWith(selector) } // Limit to the lines for this text.
+    StepFileUtils.readDelimitedTextStream(FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath())!!)
+      .filter { it[0] == m_Scheme }
       .forEach { processLine(it) }
   }
 

@@ -1,25 +1,60 @@
 package org.stepbible.textconverter.osisonly
 
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
-import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
-import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
-import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefFormatHandlerReaderVernacular
-import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Node
 
 /****************************************************************************/
 /**
- * Checks cross-references -- eg do targets exist, are they correctly
- * formatted, etc.
+ * Checks cross-references.
+ *
+ * Cross-references normally comprise two parts -- an attribute which gives
+ * the target in internal form (ie a standard USX or OSIS references), and
+ * a content which typically gives the target in vernacular form.  Within
+ * STEP, you click on the latter, and the internal information is used to
+ * bring up the correct cross-referenced verse.
+ *
+ * There are a number of things which could go wrong with this, and it is the
+ * purpose of the present class to report issues and where possible to
+ * circumvent them:
+ *
+ * - The cross-reference may be perfectly valid, but may point to a target
+ *    which does not exist in this text.  For example, we may have a
+ *    reference to an OT verse in an NT--nly text.  These I change from
+ *    being cross-references, and convert to explanatory footnotes.
+ *
+ * - The cross-reference may be syntactically valid but semantically invalid
+ *   For example, we may have a reference to Gen 1:999.  It is not always
+ *   easy to distinguish such cases from those covered in the previous
+ *   bullet point, and so I treat these as discussed above.
+ *
+ * - The internal form of the cross-reference may be semantically invalid.
+ *   These I report as errors.
+ *
+ * - The external form of the cross-reference may be semantically invalid
+ *   or may point to a different place from the internal form.  To
+ *   recognise such a situation I would need details of how to parse
+ *   vernacular references, which information is seldom likely to be
+ *   available (it would require manual analysis plus provision of some
+ *   slightly fiddly configuration information).  Since most likely I will
+ *   not be in a position to text for this, I do not cater for it here.
+ *
+ * - The cross-reference may contain a reference *collection* (as opposed to
+ *   pointing to either a single verse, or a range).  Neither USX nor OSIS
+ *   support this.  I report it as an error, and rely upon someone to tidy
+ *   up the input for me.
+ *
+ * - The reference may point to subverses.  Here I convert the internal form
+ *   to point to the owning verse, but leave the external form unchanged.
  *
  * @author ARA "Jamie" Jamieson
  */
 
-object Osis_CrossReferenceChecker: ObjectInterface
+object Osis_CrossReferenceCanonicaliser: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -31,14 +66,14 @@ object Osis_CrossReferenceChecker: ObjectInterface
 
   /****************************************************************************/
   /**
-  * Handles cross-reference checks.
+  * Handles cross-reference checks etc.
   * 
   * @param dataCollection Data to be processed.
   */
   
   fun process (dataCollection: X_DataCollection)
   {
-    Rpt.report(level = 1, "Checking for dangling cross-references etc ...")
+    Rpt.report(level = 1, "Checking cross-references ...")
     with(ParallelRunning(true)) {
       run {
         dataCollection.getRootNodes().forEach { rootNode ->
@@ -84,14 +119,14 @@ private class Osis_CrossReferenceCheckerForBook (val m_DataCollection: X_DataCol
       val refKeys = RefCollection.rdOsis(node["osisRef"]!!).getAllAsRefKeys()
       val problems = refKeys
         .map { Ref.clearS(it) } // If we have cross-references which point to subverses, I'm happy to take them as being just the owning verse.
-        .filter { !m_DataCollection.getBibleStructure().thingExists(it) }
+        .filterNot { m_DataCollection.getBibleStructure().thingExists(it) }
         .map { Ref.getB(it) }
 
       if (problems.isEmpty())
         res.add(node)
       else
       {
-        IssueAndInformationRecorder.crossReferenceNonExistentTarget(node["osisRef"]!!, getOsisIdAsRefKey(node), forceError = true)
+        IssueAndInformationRecorder.crossReferenceNonExistentTarget(node["osisRef"]!!, getOsisIdAsRefKey(node), forceError = false)
         node["type"] = "explanation" // Convert to plain footnote.
       }
     }
@@ -183,11 +218,49 @@ private class Osis_CrossReferenceCheckerForBook (val m_DataCollection: X_DataCol
 
 
     /**************************************************************************/
+    fun removeSubverseReferences (node: Node, rc: RefCollection): Node
+    {
+      when (val r = rc.getElements()[0])
+      {
+        is Ref ->
+        {
+           r.clearS()
+           node["osisRef"] = r.toStringOsis()
+           return node
+        } // Ref
+
+        is RefRange ->
+        {
+          var refLow = r.getLowAsRefKey()
+          var refHigh = r.getHighAsRefKey()
+
+          if (Ref.hasS(refLow) || Ref.hasS(refHigh))
+          {
+            refLow = Ref.clearS(refLow)
+            refHigh = Ref.clearS(refHigh)
+            if (refLow == refHigh)
+              node["osisRef"] = Ref.rd(refLow).toStringOsis()
+            else
+              node["osisRef"] = RefRange(refLow, refHigh).toStringOsis()
+
+            return node
+          }
+        } // RefRange
+      } // when
+
+      throw StepExceptionWithStackTraceAbandonRun("removeSubverseReferences: Impossible case.")
+    }
+
+
+    /**************************************************************************/
     fun processRef (node: Node)
     {
       try {
-        RefCollection.rdOsis(node["osisRef"]!!) // Simply checks we can read things.
-        res.add(node)
+        val rc = RefCollection.rdOsis(node["osisRef"]!!) // Simply checks we can read things.
+        if (1 == rc.getElementCount())
+          res.add(removeSubverseReferences(node, rc))
+        else
+          IssueAndInformationRecorder.crossReferenceInvalidReference(node["osisRef"]!!, getOsisIdAsRefKey(node), forceError = true)
       }
       catch (_: Exception)
       {

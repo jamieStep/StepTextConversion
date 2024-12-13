@@ -3,11 +3,12 @@ package org.stepbible.textconverter.nonapplicationspecificutils.debug
 
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNames
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
-import org.stepbible.textconverter.protocolagnosticutils.ReversificationDataRow
+import org.stepbible.textconverter.protocolagnosticutils.reversification.ReversificationDataRow
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import java.io.File
@@ -102,137 +103,15 @@ object Dbg: ObjectInterface
   private fun getBookNo (containingBookAbbrev: String): Int
   {
     val uc = containingBookAbbrev.uppercase()
-    m_BooksToBeProcessed.forEachIndexed { ix, bookDetails -> if (uc.contains(bookDetails.m_Abbrev)) return ix }
+    BibleBookNames.dbgGetBookAbbreviations()
+      .map { it.uppercase() }
+      .forEachIndexed { ix, abbreviatedName -> if (uc.contains(abbreviatedName)) return ix }
     return -1
   }
 
 
   /****************************************************************************/
   private val G_Debug: MutableMap<String, Boolean> = hashMapOf()
-
-  private class BookSelector (abbrev: String)
-  {
-    var m_Abbrev = abbrev
-    var m_Process = true
-  }
-
-  /* Index into array corresponds to UBS book number. */
-
-  private val m_BooksToBeProcessed = arrayOf(
-    BookSelector("XXX"), //   0
-    BookSelector("GEN"), //   1
-    BookSelector("EXO"), //   2
-    BookSelector("LEV"), //   3
-    BookSelector("NUM"), //   4
-    BookSelector("DEU"), //   5
-    BookSelector("JOS"), //   6
-    BookSelector("JDG"), //   7
-    BookSelector("RUT"), //   8
-    BookSelector("1SA"), //   9
-    BookSelector("2SA"), //  10
-    BookSelector("1KI"), //  11
-    BookSelector("2KI"), //  12
-    BookSelector("1CH"), //  13
-    BookSelector("2CH"), //  14
-    BookSelector("EZR"), //  15
-    BookSelector("NEH"), //  16
-    BookSelector("EST"), //  17
-    BookSelector("JOB"), //  18
-    BookSelector("PSA"), //  19
-    BookSelector("PRO"), //  20
-    BookSelector("ECC"), //  21
-    BookSelector("SNG"), //  22
-    BookSelector("ISA"), //  23
-    BookSelector("JER"), //  24
-    BookSelector("LAM"), //  25
-    BookSelector("EZK"), //  26
-    BookSelector("DAN"), //  27
-    BookSelector("HOS"), //  28
-    BookSelector("JOL"), //  29
-    BookSelector("AMO"), //  30
-    BookSelector("OBA"), //  31
-    BookSelector("JON"), //  32
-    BookSelector("MIC"), //  33
-    BookSelector("NAM"), //  34
-    BookSelector("HAB"), //  35
-    BookSelector("ZEP"), //  36
-    BookSelector("HAG"), //  37
-    BookSelector("ZEC"), //  38
-    BookSelector("MAL"), //  39
-    BookSelector("XXX"), //  40
-    BookSelector("MAT"), //  41
-    BookSelector("MRK"), //  42
-    BookSelector("LUK"), //  43
-    BookSelector("JHN"), //  44
-    BookSelector("ACT"), //  45
-    BookSelector("ROM"), //  46
-    BookSelector("1CO"), //  47
-    BookSelector("2CO"), //  48
-    BookSelector("GAL"), //  49
-    BookSelector("EPH"), //  50
-    BookSelector("PHP"), //  51
-    BookSelector("COL"), //  52
-    BookSelector("1TH"), //  53
-    BookSelector("2TH"), //  54
-    BookSelector("1TI"), //  55
-    BookSelector("2TI"), //  56
-    BookSelector("TIT"), //  57
-    BookSelector("PHM"), //  58
-    BookSelector("HEB"), //  59
-    BookSelector("JAS"), //  60
-    BookSelector("1PE"), //  61
-    BookSelector("2PE"), //  62
-    BookSelector("1JN"), //  63
-    BookSelector("2JN"), //  64
-    BookSelector("3JN"), //  65
-    BookSelector("JUD"), //  66
-    BookSelector("REV"), //  67
-    BookSelector("TOB"), //  68
-    BookSelector("JDT"), //  69
-    BookSelector("ESG"), //  70
-    BookSelector("WIS"), //  71
-    BookSelector("SIR"), //  72
-    BookSelector("BAR"), //  73
-    BookSelector("LJE"), //  74
-    BookSelector("S3Y"), //  75
-    BookSelector("SUS"), //  76
-    BookSelector("BEL"), //  77
-    BookSelector("1MA"), //  78
-    BookSelector("2MA"), //  79
-    BookSelector("3MA"), //  80
-    BookSelector("4MA"), //  81
-    BookSelector("1ES"), //  82
-    BookSelector("2ES"), //  83
-    BookSelector("MAN"), //  84
-    BookSelector("PS2"), //  85
-    BookSelector("ODA"), //  86
-    BookSelector("PSS"), //  87
-    BookSelector("XXX"), //  88
-    BookSelector("XXX"), //  89
-    BookSelector("XXX"), //  90
-    BookSelector("XXX"), //  91
-    BookSelector("XXX"), //  92
-    BookSelector("XXX"), //  93
-    BookSelector("LAO"), //  94
-    BookSelector("4Es"), //  95
-    BookSelector("XXX"), //  96
-    BookSelector("XXX"), //  97
-    BookSelector("XXX"), //  98
-    BookSelector("XXX"), //  99
-    BookSelector("XXX"), // 100
-    BookSelector("XXX"), // 101
-    BookSelector("XXX"), // 102
-    BookSelector("XXX"), // 103
-    BookSelector("XXX"), // 104
-    BookSelector("EZA"), // 105
-    BookSelector("5EZ"), // 106
-    BookSelector("6EZ"), // 107
-    BookSelector("DAG"), // 108
-    BookSelector("PS3"), // 109
-    BookSelector("2BA"), // 110
-    BookSelector("LBA"), // 111
-    BookSelector("JUB")  // 112
-  )
 
 
 
@@ -406,20 +285,6 @@ object Dbg: ObjectInterface
 
   /****************************************************************************/
   /**
-  * Returns a list of the books selected for processing (empty if all books
-  * are to be processed).
-  *
-  * @return List of books to be processed.
-  */
-
-  fun getBooksToBeProcessed (): List<String>
-  {
-     return m_BooksToBeProcessed.filter { "XXX" != it.m_Abbrev && it.m_Process } .map { it.m_Abbrev }
-  }
-
-
-  /****************************************************************************/
-  /**
   * Used to make all books as being processed.  This is the default anyway, but
   * on a run where, for instance, you are just evaluating schemes, you need to
   * process all books, but may inadvertently have some config or whatever
@@ -428,7 +293,7 @@ object Dbg: ObjectInterface
 
   fun resetBooksToBeProcessed ()
   {
-    m_BooksToBeProcessed.forEach { it.m_Process = true}
+    BibleBookNames.DbgWantToProcessBook.indices.forEach { BibleBookNames.DbgWantToProcessBook[it] = true }
   }
 
 
@@ -470,11 +335,8 @@ object Dbg: ObjectInterface
     /**************************************************************************/
     val booksRequested = usxAbbrevs.uppercase().split("\\W+".toRegex()).toSet()
     m_DebugRunningOnPartialCollectionOfBooksOnly = true
-
-    if ("!=" == test)
-      m_BooksToBeProcessed.forEach{ it.m_Process = true }
-    else
-      m_BooksToBeProcessed.forEach{ it.m_Process = false }
+    val setting = "!=" == test
+    BibleBookNames.DbgWantToProcessBook.indices.forEach { BibleBookNames.dbgSetProcessBook(it, setting) }
 
 
 
@@ -483,39 +345,41 @@ object Dbg: ObjectInterface
     {
       "<" -> {
         val bookNo = getBookNo(usxAbbrevs)
-        for (i in 0..< bookNo) m_BooksToBeProcessed[i].m_Process = true
+        for (i in 0..< bookNo) BibleBookNames.dbgSetProcessBook(i, true)
       }
 
 
       "<=" -> {
         val bookNo = getBookNo(usxAbbrevs)
-        for (i in 0.. bookNo) m_BooksToBeProcessed[i].m_Process = true
+        for (i in 0.. bookNo) BibleBookNames.dbgSetProcessBook(i, true)
       }
 
       
       "=" ->
       {
-        m_BooksToBeProcessed.filter{ booksRequested.contains(it.m_Abbrev)}.forEach{ it.m_Process = true }
+        val abbreviatedNames = BibleBookNames.dbgGetBookAbbreviations().map { it.uppercase() }
+        abbreviatedNames.indices.filter { booksRequested.contains(abbreviatedNames[it]) }.forEach { BibleBookNames.dbgSetProcessBook(it, true) }
       }
 
       
       "!=" ->
       {
-        m_BooksToBeProcessed.filter{ booksRequested.contains(it.m_Abbrev)}.forEach{ it.m_Process = false }
+        val abbreviatedNames = BibleBookNames.dbgGetBookAbbreviations().map { it.uppercase() }
+        abbreviatedNames.indices.filter { booksRequested.contains(abbreviatedNames[it]) }.forEach { BibleBookNames.dbgSetProcessBook(it, false) }
       }
 
 
       ">" ->
       {
         val bookNo = getBookNo(usxAbbrevs)
-        for (i in bookNo + 1..< m_BooksToBeProcessed.size) m_BooksToBeProcessed[i].m_Process = true
+        for (i in bookNo + 1 ..< BibleBookNames.getNumberOfBooksSupported()) BibleBookNames.dbgSetProcessBook(i, true)
       }
       
       
       ">=" ->
       {
         val bookNo = getBookNo(usxAbbrevs)
-        for (i in bookNo..< m_BooksToBeProcessed.size) m_BooksToBeProcessed[i].m_Process = true
+        for (i in bookNo ..< BibleBookNames.getNumberOfBooksSupported()) BibleBookNames.dbgSetProcessBook(i, true)
       }
     }
   }
@@ -530,26 +394,20 @@ object Dbg: ObjectInterface
    * @return True if book should be processed.
    */
 
-  fun wantToProcessBook (bookNo: Int): Boolean
-  {
-    return m_BooksToBeProcessed[bookNo].m_Process
-  }
-  
+  fun wantToProcessBook (bookNo: Int) = BibleBookNames.dbgWantToProcessBook(bookNo)
+
   
   /****************************************************************************/
   /**
    * Used to limit the books (files) which are processed by those activities
    * which loop over a collection of books.
    * 
-   * @param bookName USX abbreviation for book being considered for processing.
+   * @param abbreviatedName USX abbreviation for book being considered for
+   *   processing.
    * @return True if book should be processed.
    */
 
-  fun wantToProcessBookByAbbreviatedName (bookName: String): Boolean
-  {
-    val bookNo = BibleBookNames[bookName]
-    return m_BooksToBeProcessed[bookNo].m_Process
-  }
+  fun wantToProcessBook (abbreviatedName: String): Boolean = BibleBookNames.dbgWantToProcessBook(abbreviatedName)
 
 
 
@@ -721,7 +579,7 @@ object Dbg: ObjectInterface
   * anything other than these -- works out whether we want to send output to
   * screen, file or both, and in the case of screen, whether we want the output
   * immediately at the time it is generated, or gathered up and output at the
-  * end of the run, and then returns a suitably list of outputters. */
+  * end of the run, and then returns a suitable list of outputters. */
 
   private fun getOutputter (selector: String): List<(String, String) -> Unit>
   {

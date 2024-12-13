@@ -366,8 +366,9 @@ abstract class RefBase
     private var m_BibleStructure: BibleStructure? = null
 
   }
-}
+} // RefBase
 
 
 /**********************************************************************************/
 typealias RefKey = Long
+
