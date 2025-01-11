@@ -1,10 +1,12 @@
 /******************************************************************************/
 package org.stepbible.textconverter.protocolagnosticutils.reversification
 
+import org.stepbible.textconverter.applicationspecificutils.IssueAndInformationRecorder
 import org.stepbible.textconverter.applicationspecificutils.Original
 import org.stepbible.textconverter.applicationspecificutils.Revised
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MarkerHandlerFactory
@@ -97,6 +99,10 @@ object PA_ReversificationHandler_RunTime: PA_ReversificationHandler()
     PA_ReversificationUtilities.setFileProtocol(m_FileProtocol)
     PA_ReversificationUtilities.setNotesColumnName("Versification Note")
 
+    if (PA_ReversificationDataHandler.getSelectedRows().isNotEmpty())
+      IssueAndInformationRecorder.setRuntimeReversification()
+
+
 
     /**************************************************************************/
     val reversificationDataRowsPerBook = ConcurrentHashMap<Int, List<ReversificationDataRow>>()
@@ -183,17 +189,17 @@ class PA_ReversificationHandler_RunTimePerBook (private val dataCollection: X_Da
     val canonicalTitlesMap = PA_ReversificationUtilities.makeCanonicalTitlesMap(rootNode)
     rowsForThisBook.forEach { dataRow ->
       val refKey = dataRow.sourceRefAsRefKey // With runtime reversification, it's only the _source_ verse which is available to work with.
-      val canonicalAction = dataRow["Action"].replace(" ", "").lowercase()
+      val action = dataRow.action
 
       if (dataRow.sourceIsPsalmTitle)
       {
         val targetNode = canonicalTitlesMap[Ref.getC(dataRow.sourceRefAsRefKey)]
-        m_Actions[canonicalAction]!!.action(targetNode, dataRow, null) // Third arg says where to insert the new node if we have to generate one.
+        m_Actions[action]!!.action(targetNode, dataRow, null) // Third arg says where to insert the new node if we have to generate one.
       }
       else
       {
         val targetNode = sidMap[refKey]
-        m_Actions[canonicalAction]!!.action(targetNode, dataRow, sidMap.ceilingEntry(refKey).value!!) // Third arg says where to insert the new node if we have to generate one.
+        m_Actions[action]!!.action(targetNode, dataRow, sidMap.ceilingEntry(refKey).value!!) // Third arg says where to insert the new node if we have to generate one.
       }
     }
   }
@@ -218,12 +224,14 @@ class PA_ReversificationHandler_RunTimePerBook (private val dataCollection: X_Da
   /****************************************************************************/
   private class ActionDescriptor (val action: (Node?, ReversificationDataRow, Node?) -> Unit, val reportMapping: Boolean = false)
   private val m_Actions: Map<String, ActionDescriptor> = mapOf(
-      "ifemptyverse"  to ActionDescriptor(action = ::ifEmpty),
-      "keepverse"     to ActionDescriptor(action = ::addFootnote),
-      "mergedverse"   to ActionDescriptor(action = ::addFootnote, reportMapping = true),
-      "psalmtitle"    to ActionDescriptor(action = ::addFootnoteToPsalmTitle),
-      "renumbertitle" to ActionDescriptor(action = ::addFootnote, reportMapping = true),
-      "renumberverse" to ActionDescriptor(action = ::addFootnote, reportMapping = true),
+      "ifemptyverse"    to ActionDescriptor(action = ::ifEmpty),
+      "keepverse"       to ActionDescriptor(action = ::addFootnote),
+      "mergednextverse" to ActionDescriptor(action = ::addFootnote, reportMapping = true),
+      "mergedprevverse" to ActionDescriptor(action = ::addFootnote, reportMapping = true),
+      "mergedverse"     to ActionDescriptor(action = ::addFootnote, reportMapping = true),
+      "psalmtitle"      to ActionDescriptor(action = ::addFootnoteToPsalmTitle),
+      "renumbertitle"   to ActionDescriptor(action = ::addFootnote, reportMapping = true),
+      "renumberverse"   to ActionDescriptor(action = ::addFootnote, reportMapping = true),
   )
 
 
@@ -233,7 +241,18 @@ class PA_ReversificationHandler_RunTimePerBook (private val dataCollection: X_Da
     if (null == targetNode)
       Logger.error(reversificationDataRow.sourceRefAsRefKey, "Runtime reversification source verse does not exist: $reversificationDataRow.")
     else
-      PA_ReversificationUtilities.addFootnote(targetNode, reversificationDataRow, dataCollection.getBibleStructure().getCanonicalTextSize(dataCollection.getFileProtocol().getSidAsRefKey(targetNode)))
+    {
+      val wordCount = try { // On empty verses which we have just created, this may fail, but that's fine -- we want these to appear empty anyway.
+        dataCollection.getBibleStructure().getCanonicalTextSize(dataCollection.getFileProtocol().getSidAsRefKey(targetNode))
+      }
+      catch (_: Exception)
+      {
+        0
+      }
+
+
+      PA_ReversificationUtilities.addFootnote(targetNode, reversificationDataRow, wordCount)
+    }
   }
 
 

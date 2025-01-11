@@ -333,6 +333,27 @@ XXX_AddedValue_XXX
 
 
     /**************************************************************************/
+    /* If we are applying runtime reversification, then probably the only
+       significant changes we make are to add footnotes.
+
+       Some text suppliers require us to own up to making changes, so for
+       safety's sake, I assume all will.  I add the text in both English and
+       vernacular where available.
+
+       (We _may_ also expand elisions and / or restructure tables, and possibly
+       I ought to consider owning up to this at some point.) */
+
+    if ("runtime" == ConfigData["stepReversificationType"])
+    {
+      val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_FootnotesMayHaveBeenAdded")
+      val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_FootnotesMayHaveBeenAdded")
+      changesAppliedByStep.add(vernacular)
+      if (vernacular != english) changesAppliedByStep.add(english)
+    }
+
+
+
+    /**************************************************************************/
     /* If we are applying runtime reversification, then -- at least to a first
        approximation -- the versification structure is left intact.  With other
        types of reversification, this is not so: conversion-time
@@ -344,10 +365,10 @@ XXX_AddedValue_XXX
        safety's sake, I assume all will.  I add the text in both English and
        vernacular where available. */
 
-    if ("runtime" != ConfigData["stepReversificationType"])
+    else // ("runtime" != ConfigData["stepReversificationType"])
     {
-      val english = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
-      val vernacular = TranslatableFixedText.stringFormatWithLookup    ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+      val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+      val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
       changesAppliedByStep.add(vernacular)
       if (vernacular != english) changesAppliedByStep.add(english)
     }
@@ -388,7 +409,7 @@ XXX_AddedValue_XXX
     stepInfo = stepInfo.replace("¬", "<br>")
     stepInfo = ConfigData.expandReferences(stepInfo, false)!!
     stepInfo = stepInfo.replace("NEWLINE", "")
-    ConfigData.put("stepConversionInfo", stepInfo, true)
+    ConfigData.put("stepConversionInfo", stepInfo, true) // $$$$
 
 
 

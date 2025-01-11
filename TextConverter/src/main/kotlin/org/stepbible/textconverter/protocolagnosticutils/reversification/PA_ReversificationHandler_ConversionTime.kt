@@ -84,6 +84,9 @@ object PA_ReversificationHandler_ConversionTime: PA_ReversificationHandler()
     PA_ReversificationUtilities.setFileProtocol(m_FileProtocol)
     PA_ReversificationUtilities.setNotesColumnName("Reversification Note")
 
+    if (PA_ReversificationDataHandler.getSelectedRows().isNotEmpty())
+      IssueAndInformationRecorder.setConversionTimeReversification()
+
 
 
     /**************************************************************************/

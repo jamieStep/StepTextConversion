@@ -8,11 +8,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.convertNumberToRepeatingString
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodesByAttributeName
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodesByName
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.getAllNodesBelow
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.w3c.dom.Document
@@ -209,7 +206,7 @@ object PA_ReversificationUtilities
 
 
     /**************************************************************************/
-    val calloutDetails = dataRow.calloutDetails
+//    val calloutDetails = dataRow.calloutDetails
     val res: MutableList<Node> = mutableListOf()
 
 
@@ -232,37 +229,12 @@ object PA_ReversificationUtilities
 
     content = content.replace("S3y", "S3Y") // DIB prefers this.
 
-    val ancientVersions = if ('A' == m_KnowledgeLevelOfAudience) dataRow.ancientVersions else null
-    if (null != ancientVersions) content += " $ancientVersions"
-
     val noteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToGeneralVerseAffectedByReversification, ownerDocument, dataRow.standardRefAsRefKey, content, callout)
     if (null != noteNode)
     {
       res.add(noteNode)
       res.add(Dom.createTextNode(ownerDocument, " "))
       IssueAndInformationRecorder.addGeneratedFootnote(Ref.rd(dataRow.sourceRefAsRefKey).toString() + " (ReversificationFootnote)")
-    }
-
-
-
-    /**************************************************************************/
-    /* Check if we need the text which will typically be superscripted and
-       bracketed. */
-
-    val alternativeRefCollection = calloutDetails.alternativeRefCollection
-    if (null != alternativeRefCollection)
-    {
-      val basicContent = if (calloutDetails.alternativeRefCollectionHasEmbeddedPlusSign)
-        alternativeRefCollection.getLowAsRef().toString("a") + TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferenceEmbeddedPlusSign") + alternativeRefCollection.getHighAsRef().toString("a")
-      else if (calloutDetails.alternativeRefCollectionHasPrefixPlusSign)
-        TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferencePrefixPlusSign") + alternativeRefCollection.toString("a")
-      else
-        alternativeRefCollection.toString("a")
-
-      val textNode = Dom.createTextNode(ownerDocument, TranslatableFixedText.stringFormatWithLookup("V_reversification_alternativeReferenceFormat", basicContent))
-      val containerNode = Dom.createNode(ownerDocument, "<_X_reversificationCalloutAlternativeRefCollection/>")
-      containerNode.appendChild(textNode)
-      res.add(containerNode)
     }
 
 
@@ -280,7 +252,8 @@ object PA_ReversificationUtilities
   private fun getFootnoteContent (dataRow: ReversificationDataRow, whichFootnote: String, basicOrAcademic: Char): String
   {
     /**************************************************************************/
-    //Dbg.d(row.toString())
+    Dbg.d(dataRow.toString())
+    //Dbg.d(2016 == dataRow.rowNumber)
 
 
 
@@ -293,43 +266,54 @@ object PA_ReversificationUtilities
 
 
     /**************************************************************************/
-    var res = ""
+    /* Punctuation in the form of full stops may or may not be present.  If it's
+       needed, though, we'll obtain it from the looked up text, so we don't need
+       it here, and having it gets in the way. */
+
+    if (content.endsWith(".")) content = content.substring(0, content.length - 1) // Remove trailing punctuation.  We'll add it to all strings later.
+    content = content.replace("\\.\\s*%".toRegex(), "%").trim() // Don't want punctuation inside text which we will use as lookup keys.
+    content = content.replace("%\\s*\\.".toRegex(), "%").trim() // Don't want punctuation outside text which we will use as lookup keys.
 
 
 
     /**************************************************************************/
-    /* Time was when we would only ever have a single chunk of text, and either
-       zero or one associated reference, which appeared after the text.  This
-       is no longer the case.  I assume here that we may have ...
+    /* The footnote information comprises one or more text selectors enclosed
+       by %-signs, along with zero or more reference strings.  Typically you
+       would expect refs and selectors to alternate, but I do not assume this:
+       I gather up all selectors, and separately all references, and then
+       process the selectors in order, letting each take as many or as few
+       reference details as it requires.
 
-       a) Just a single piece of text within %-signs, being a lookup string for
-          vernacular text which has no associated reference.
+       A simple footnote entry looks like
 
-       b) A list starting with a ref, and then alternating between refs and
-          %-delimited strings.
+         %In some Bibles the verse numbering here is% 3:1a.
+    */
 
-       c) A list starting with a %-delimited string, and then alternating
-          between refs and %-delimited strings.
+    val textSelectors = "%.*?%".toRegex().findAll(content).map { it.value.replace("%", "") }.toList()
+    val texts = textSelectors.map { TranslatableFixedText.lookupText(Language.Vernacular, "V_reversification_[$it]") }
+    val refs = content.split("%").filter { it.isNotEmpty() } .filter { it !in textSelectors }
+    var preprocessedRefs = refs.map(::preprocessRef)
 
-       I assume also that with the exception of case 1 above, every %-delimited
-       string does have an associated ref, and that the ref precedes the string
-       if the very first element is a non-delimited string (which I take to be
-       a ref), or else the ref follows the string. */
 
-    if (content.endsWith(".")) content = content.substring(0, content.length - 1) // Remove trailing punctuation.  We'll add it to all strings later.
-    content = content.replace(".%", "%") // Don't want punctuation inside text which we will use as lookup keys.
 
-    val elts = content.split("%") // Numbering from zero, even number elts are either empty or are refs; odd number elts are lookup keys.
-    val offsetToCorrespondingReference = if (elts[0].isEmpty()) +1 else -1
-    for (ix in 1 ..< elts.size step 2) // Pick up the lookup keys.  Each is assumed at this point to have an associated reference
+    /**************************************************************************/
+    fun getFinalContent (lookedUpText: String, refs: List<Any>): String
     {
-      val lookupKey = elts[ix]
-      val ref = elts[ix + offsetToCorrespondingReference]
-      res += " " + getFootnoteContent(lookupKey, ref)
+      return if (refs.isEmpty())
+        lookedUpText
+      else
+        StepStringFormatter.format(lookedUpText, refs)
     }
 
-    if (!res.endsWith("."))
-      res += "."
+
+
+    /**************************************************************************/
+    var res = ""
+    texts.forEach { text ->
+      res += getFinalContent(text, preprocessedRefs) // Returns the text to be added to the footnote, and the number of references used up.
+      val nRefsUsed = (text.length - text.replace("%ref", "").length) / 4
+      preprocessedRefs = preprocessedRefs.subList(nRefsUsed, preprocessedRefs.size)
+    }
 
 
 
@@ -343,76 +327,145 @@ object PA_ReversificationUtilities
 
 
     /**************************************************************************/
-    return res.trim()
+    return res.trim().replace("\\s+".toRegex(), " ")
   }
 
 
   /*****************************************************************************/
-  private fun getFootnoteContent (lookupKey: String, ref: String): String
+  /* Deals with individual reference strings -- things which may indeed represent
+     a reference, but which may also be more complicated than that.  Returns
+     a RefCollection where parsing is possible, or otherwise a string (which is
+     probably the same as the input string).  The second part of the return
+     value is true for */
+
+  private fun preprocessRef (putativeRef: String): Any
   {
     /**************************************************************************/
-    /* In most cases, sorting out the reference collection is easy -- there may
-       in theory be some ambiguity with single numbers as to what they represent
-       (chapters, verses, etc), but we force that here by saying that unadorned
-       numbers should be regarded as verses (which, in fact, I think unadorned
-       numbers actually are); and in any case, the aim is simply to output
-       stuff in the same form as it appears in the reversification data.
+    var revisedRef = putativeRef
+    val chunks: MutableMap<String, String> = mutableMapOf()
+    var ix = 0
 
-       The fly in the ointment are the few rows which contain multiple
-       references which are separated by things like '/' and '+', and therefore
-       can't be parsed as collections.  We'll deal with the easy cases first
-       (the ones where we don't have these odd separators. */
 
-    var refAsString = ref
-    val containsSlash = '/' in refAsString
-    val containsPlus = '+' in refAsString
-    if (!containsSlash && !containsPlus)
+
+    /**************************************************************************/
+    /* This identifies portions of the revisedRef which are bracketed by 'start'
+       and 'end'.  It can cope with multiple instances of such chunks, and
+       there is no need for start and end to be obviously related, nor for them
+       to be the same length.  (Having start as an opening paren and end as a
+       closing one is an obvious example, but you'll see uses below which
+       aren't as neat.)
+
+       It replaces each delimited instance by the result of calling 'processor'
+       on the content of the instance (ie devoid of the bracket), and then
+       stores this value in the 'chunks' map using a guaranteed unique key.
+
+       At the same time, it replaces the delimited string (including the
+       delimiters) with a placeholder of the form \u0001$key\u0002 where
+       'key' is the key just alluded to.  This makes it possible to reintroduce
+       the chunks into the final string later on. */
+
+    fun splitAt (start: String, end: String, designator: String, processor: (String) -> String)
     {
-      if (refAsString.endsWith("."))
-        refAsString = refAsString.substring(0, refAsString.length - 1)
-      val rc = RefCollection.rdUsx(usxifyFromStepFormat(refAsString), dflt = null, resolveAmbiguitiesAs = "v")
-      return TranslatableFixedText.stringFormat(Language.Vernacular, lookupKey, rc)
+      var ixHigh = 0
+      var ixLow: Int
+      while (true)
+      {
+        ixLow = revisedRef.indexOf(start, ixHigh)
+        if (-1 == ixLow) break
+        ixHigh = revisedRef.indexOf(end, ixLow)
+        val key = "\u0001${++ix}\u0002"
+        val chunk = revisedRef.substring(ixLow + start.length, ixHigh)
+        val trailerStartsAt = ixHigh + end.length
+        revisedRef = revisedRef.substring(0, ixLow) + key + if (trailerStartsAt >= revisedRef.length) "" else revisedRef.substring(trailerStartsAt)
+        chunks[key] = if (chunk.isEmpty()) "" else processor(chunk)
+      }
     }
 
 
 
     /**************************************************************************/
-    /* Which just leaves the difficult case.  Unfortunately, there is at the
-       time of writing just one row where the reference looks like 9:9a/2:35f,
-       and of course the slash is a problem, because this cannot be parsed as a
-       reference collection.  If I'm to have any chance of doing this in such
-       a way that I can continue to support vernacular translation, this is
-       going to be unpleasantly fiddly ...
+    /* Some refs contain further refs in parentheses.  The code below was
+       written on the assumption that a given ref entry would never contain
+       more than one parenthesised list. */
 
-       I start off by obtaining the basic text of the message in vernacular
-       form.  This should have precisely one entry of the form %RefV<...>.
-       I split this text up into that portion which appears the %RefV<...> bit,
-       the %RefV<...> bit itself, and the portion which appears afterwards.
+    fun parenthesisedCollectionHandler (text: String): String
+    {
+      val rc = RefCollection.rdUsx(usxifyFromStepFormat(text), dflt = null, resolveAmbiguitiesAs = "v")
+      return TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_parenthesisedReferenceList", rc)
+    }
 
-       I then use the %RefV<...> portion to format each of the references
-       individually.  And then finally I join these formatted references
-       together with the relevant separator, and stitch this together with the
-       fixed portions of the text.
-    */
+    splitAt("(", ")", "Paren", ::parenthesisedCollectionHandler)
 
-    val rawMessage = TranslatableFixedText.lookupText(Language.English, getTextKey(lookupKey))
-    val regex = "(?i)(?<pre>.*)(?<ref>%Ref.*?>)(?<post>.*)".toRegex()
-    val match = regex.matchEntire(rawMessage)
-    val refFormat = match!!.groups["ref"]!!.value
 
-    val elts = refAsString.split('/', '+').map { TranslatableFixedText.stringFormat(refFormat, RefCollection.rdUsx(it.trim(), dflt = null, resolveAmbiguitiesAs = "v")) }
-    val eltsAssembled = elts.joinToString(TranslatableFixedText.stringFormat(Language.Vernacular, if (containsSlash) "V_reversification_ancientVersionsAlternativeRefsSeparator" else "V_reversification_alternativeReferenceEmbeddedPlusSign"))
-    return match.groups["pre"]!!.value + eltsAssembled + match.groups["post"]!!.value
+
+    /**************************************************************************/
+    /* Some refs contain further refs in parentheses.  The code below was
+       written on the assumption that a given ref entry would never contain
+       more than one parenthesised list. */
+
+    fun bracketEqualsHandler (text: String): String
+    {
+      val rc = RefCollection.rdUsx(usxifyFromStepFormat(text), dflt = null, resolveAmbiguitiesAs = "v")
+      return TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsEquivalenceEquals", rc) // Strictly this is nothing to do with ancientVersions, but the text for that can be used here.
+    }
+
+    splitAt("[=", "]", "BraEq", ::bracketEqualsHandler)
+
+
+
+    /**************************************************************************/
+    /* There are some notes which contain two references separated by a plus
+       sign.  These are handled 'properly' here, arranging for them to be
+       separated by the vernacular equivalent of a plus sign. */
+
+    val C_PlusPat = "(?<chunk>(?<left>\\S+)\\s*\\+\\s*(?<right>\\S+))".toRegex()
+    while (true)
+    {
+      val m = C_PlusPat.find(revisedRef) ?: break
+      val leftRc = RefCollection.rdUsx(usxifyFromStepFormat(m.groups["left"]!!.value), dflt = null, resolveAmbiguitiesAs = "v")
+      val rightRc = RefCollection.rdUsx(usxifyFromStepFormat(m.groups["right"]!!.value), dflt = null, resolveAmbiguitiesAs = "v")
+      val key = "\u0001Plus${++ix}\u0002"
+      revisedRef = revisedRef.replace(m.groups["chunk"]!!.value, key)
+      chunks[key] = TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_[plus]", leftRc, rightRc)
+    }
+
+
+
+    /**************************************************************************/
+    /* If we haven't messed around with things at all so far, I'm going to
+       assume that the text is just a reference / range / collection, which I
+       can leave as-is and return just that. */
+
+    if (chunks.isEmpty())
+      return RefCollection.rdUsx(usxifyFromStepFormat(revisedRef), dflt = null, resolveAmbiguitiesAs = "v")
+
+
+
+    /**************************************************************************/
+    /* So we know now that this was a complex reference.  We may therefore
+       have some references embedded around the other bits.  There is not a lot
+       we can do with these, but at a guess we can just treat them in the same
+       way as most references are treated in the V_reversification texts. */
+
+    revisedRef = "[" + revisedRef.trim().replace("\u0001", "]\u0001")
+                                        .replace("\u0002", "\u0002[") + "]" // Bracket places where they may be refs.
+
+    fun plainVanillaHandler (text: String): String
+    {
+      val rc = RefCollection.rdUsx(usxifyFromStepFormat(text), dflt = null, resolveAmbiguitiesAs = "v")
+      return StepStringFormatter.format(text, rc)
+    }
+
+    splitAt("[", "]", "Vanilla", ::plainVanillaHandler)
+
+
+
+    /**************************************************************************/
+    /* Now assemble all of the bits. */
+
+    chunks.keys.forEach { revisedRef = revisedRef.replace(it, chunks[it]!!) }
+    return revisedRef
   }
-
-
-  /****************************************************************************/
-  /**
-   *  Given a piece of footnote text from the reversification data, gives back
-   *  the corresponding key which we can use to look up TranslatableFixedText.
-   */
-
-  private fun getTextKey (lookupVal: String): String = "V_reversification_[${lookupVal.trim()}]"
 
 
 
@@ -442,7 +495,7 @@ object PA_ReversificationUtilities
 
     val res = mutableMapOf<Int, Node>()
     rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach { chapterNode ->
-      val canonicalTitleNode = chapterNode.getAllNodesBelow().find { m_FileProtocol.isCanonicalNode(chapterNode) }
+      val canonicalTitleNode = chapterNode.getAllNodesBelow().find { m_FileProtocol.isCanonicalTitleNode(it) }
       if (null != canonicalTitleNode)
         res[Ref.getC(m_FileProtocol.getSidAsRefKey(chapterNode))] = canonicalTitleNode
     }

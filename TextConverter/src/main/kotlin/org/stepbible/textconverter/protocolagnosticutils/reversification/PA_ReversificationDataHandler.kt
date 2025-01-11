@@ -175,9 +175,6 @@ object PA_ReversificationDataHandler: PA()
   {
     Rpt.report(1, "Reading reversification data and checking applicability.  Data is normally taken from the online repository, so this may take a moment.")
     load_1(dataCollection)
-
-    if (m_SelectedRows.isNotEmpty())
-      IssueAndInformationRecorder.setRuntimeReversification()
   }
 
 
@@ -210,7 +207,7 @@ object PA_ReversificationDataHandler: PA()
 
 
     /****************************************************************************/
-    /* Used when Looks for a row containing a given piece of text.  Used to
+    /* Looks for a row containing a given piece of text.  Used to
        identify where the reversification data of interest to us starts and ends
        within the overall text. */
 
@@ -254,6 +251,45 @@ object PA_ReversificationDataHandler: PA()
 
 
   /****************************************************************************/
+  /* Determines whether a row should be accepted for processing. */
+
+  private fun acceptRowForProcessing (dataRow: ReversificationDataRow): Boolean
+  {
+    /**************************************************************************/
+    /* The reversification data contains a few rows for 4Esdras.  We need to
+       weed these out, because the USX scheme doesn't recognise this book. */
+
+    val sourceRef = dataRow["SourceRef"]
+    if (sourceRef.contains("4es", ignoreCase = true))
+      return false
+
+
+
+    /**************************************************************************/
+    /* For debug purposes it is often convenient to process only a few books.
+       We need to ignore reversification data for any where the source
+      reference is for a book which we are not processing. */
+
+    if (!Dbg.wantToProcessBook(sourceRef.substring(0, 3)))
+      return false
+
+
+
+    /**************************************************************************/
+    /* Does this book exist in the text? */
+
+    if (!m_BibleStructure!!.bookExists(Ref.rdUsx(usxifyFromStepFormat(sourceRef))))
+      return false
+
+
+
+
+    /**************************************************************************/
+    return m_RuleEvaluator.rulePasses(dataRow.getField("Tests"), dataRow.toString())
+  }
+
+
+  /****************************************************************************/
   /* Adds details of a single row, assuming it passes the relevant tests. */
 
   private fun loadRow (rawData: String, rowNumber: Int)
@@ -287,8 +323,8 @@ object PA_ReversificationDataHandler: PA()
        was, so that I'm guaranteed to have all the fields I need. */
 
     val fields = (if (ReversificationDataRow.headersInitialised()) rawData + "\t\t\t\t\t\t\t\t" else rawData).split("\t").map { it.trim() }.toMutableList()
-    val rawRow = ReversificationDataRow(rowNumber)
-    rawRow.fields = fields
+    val dataRow = ReversificationDataRow(rowNumber)
+    dataRow.fields = fields
 
 
 
@@ -307,44 +343,26 @@ object PA_ReversificationDataHandler: PA()
 
 
     /**************************************************************************/
-    /* We may want to ignore some rows.  The reversification data may, in a few
-       cases, refer to books which actually do not exist in the USX naming
-       scheme, and we can therefore never process them.  And if this is a
-       debugging run, being applied only to selected books, we can ignore rows
-       for any other books. */
+    /* We want to ignore rows which fail their applicability test, rows for
+       books we aren't processing on this run, etc. */
 
-    if (ignoreRow(rawRow))
-      return
+    val accept = acceptRowForProcessing(dataRow)
 
-
-
-    /**************************************************************************/
-    /* There are various anomalies in the data, or things which I'd prefer were
-       represented differently.  Sort these out. */
-
-    canonicaliseAndCorrectData(rawRow)
-
-
-
-    /**************************************************************************/
-    /* Checks that the row does actually apply, and performs miscellaneous
-       additional processing -- things like parsing the NoteMarker and
-       AncientVersions fields, which are quite complicated.  Returns null if
-       the row is not accepted. */
-
-    val processedRow = convertToProcessedForm(rawRow)
-    if (null != processedRow)
-      m_SelectedRows.add(processedRow)
+    if (accept)
+    {
+      canonicaliseAndCorrectData(dataRow)
+      m_SelectedRows.add(dataRow)
+    }
 
 
 
     /**************************************************************************/
     /* May be useful for debugging. */
 
-    if (null == processedRow)
-      debugRecordReversificationRowRejected(rawRow)
+    if (accept)
+      debugRecordReversificationRowAccepted(dataRow)
     else
-      debugRecordReversificationRowAccepted(processedRow)
+      debugRecordReversificationRowRejected(dataRow)
   }
 
 
@@ -366,8 +384,9 @@ object PA_ReversificationDataHandler: PA()
     /* Get the canonical form of the action name.  This is the form as supplied,
        but with the '*' used to mark Moves removed, spaces suppressed and
        converted to lower case. */
-   dataRow["Action"] = dataRow["Action"].replace(" ", "").lowercase()
-   dataRow.isMove = "*" in dataRow["Action"]
+
+    dataRow["Action"] = dataRow["Action"].replace(" ", "").lowercase()
+    dataRow.isMove = "*" in dataRow["Action"]
     val x = dataRow["Action"].replace("*", "").replace(" ", "").lowercase()
     dataRow.action = x
 
@@ -438,85 +457,12 @@ object PA_ReversificationDataHandler: PA()
     dataRow.standardRef = Ref.rdUsx(standardRef)
     dataRow.sourceRefAsRefKey   = dataRow.sourceRef.toRefKey()
     dataRow.standardRefAsRefKey = dataRow.standardRef.toRefKey()
-  }
-
-
-  /****************************************************************************/
-  /* Identifies rows which should not be processed. */
-
-  private fun ignoreRow (dataRow: ReversificationDataRow): Boolean
-  {
-    /**************************************************************************/
-    /* The reversification data contains a few rows for 4Esdras.  We need to
-       weed these out, because the USX scheme doesn't recognise this book. */
-
-    val sourceRef = dataRow["SourceRef"]
-    if (sourceRef.contains("4es", ignoreCase = true))
-      return true
-
-
-
-    /**************************************************************************/
-    /* For debug purposes it is often convenient to process only a few books.
-       We need to ignore reversification data for any where the source
-      reference is for a book which we are not processing. */
-
-    return !Dbg.wantToProcessBook(sourceRef.substring(0, 3))
-  }
-
-
-  /****************************************************************************/
-  /* Canonicalises the contents of a single row and adds it to the various
-     collections if it passes any applicability tests.  Note that by the
-     time we get here, we can be sure there are no blank rows or comment rows
-     in the data.
-
-     You may observe that there are a number of points within the processing
-     where it becomes apparent that the row being processed does not apply to
-     the present text, and from an efficiency point of view it would make sense
-     to abandon further processing at that point.  However, it is convenient to
-     stick with it to the end, because the processed form of the row may be
-     useful for debugging purposes. */
-
-  private fun convertToProcessedForm (dataRow: ReversificationDataRow): ReversificationDataRow?
-  {
-    /**************************************************************************/
-    //Dbg.d(5406 == dataRow.rowNumber)
-
-
-
-    /**************************************************************************/
-    /* Check to see if the row actually applies at all.  There are several parts
-       to this.
-
-       First 'Does this row apply?' check: Does it relate to a book which we are
-       actually processing on this run?  (It might not do if we're dealing with
-       a partial text, or have opted to process only selected books, perhaps to
-       speed up debugging.) */
-
-    if (!m_BibleStructure!!.bookExists(dataRow.sourceRef))
-      return null
-
-
-
-    /**************************************************************************/
-    /* Second 'Does this row apply?' check: If the Test field contains anything,
-       does the rule pass? */
-
-    val ruleData = dataRow["Tests"]
-    if (!m_RuleEvaluator.rulePasses(ruleData, dataRow.toString()))
-      return null
 
 
 
     /**************************************************************************/
     setCalloutAndFootnoteLevel(dataRow)
     setAncientVersions(dataRow["Ancient Versions"])
-
-
-
-    /**************************************************************************/
-    return dataRow
   }
 
 
@@ -597,57 +543,62 @@ object PA_ReversificationDataHandler: PA()
       else -> Logger.error("Reversification invalid note level: " + x[0])
     }
 
-    val ix = x.indexOf(".")
-    x = x.substring(ix + 1)
+    return // $$$$$$$$$$$$$$$$$$$  At present we have no need of any of the additional information.
 
-
-
-    /**************************************************************************/
-    val cd = CalloutDetails()
-    dataRow.calloutDetails = cd
-
-
-
-    /**************************************************************************/
-    var s = x.replace("\\s+".toRegex(), "").replace("^", "") // Don't want spaces or the up-arrow which indicates that the footnote is to be included (it always is).
-    if (s.contains("("))
-    {
-      val xx = s.split("(")[1].split(")")[0]
-      s = s.replace("\\(.+?\\)".toRegex(), "")
-      if (xx[0].lowercase() == "t")
-        cd.standardVerseIsCanonicalTitle = true
-      else
-        cd.standardVerse = Ref.rdUsx(usxifyFromStepFormat(xx), null, "v")
-    }
-
-
-
-    /**************************************************************************/
-    if (s.contains("["))
-    {
-      var xx = s.split("[")[1].split("]")[0]
-      s = s.replace("\\[.+?]".toRegex(), "")
-
-      if (xx.startsWith("+"))
-      {
-        cd.alternativeRefCollectionHasPrefixPlusSign = true
-        xx = xx.substring(1)
-      }
-
-      if (xx.contains("+"))
-      {
-        cd.alternativeRefCollectionHasEmbeddedPlusSign = true
-        xx = xx.replace("+", ",")
-      }
-
-      cd.alternativeRefCollection = RefCollection.rdUsx(usxifyFromStepFormat(xx), null, "v")
-    }
-
-
-
-    /**************************************************************************/
-    if (s.isNotEmpty())
-      cd.sourceVerseCollection = RefCollection.rdUsx(usxifyFromStepFormat(s), null, "v")
+//    val ix = x.indexOf(".")
+//    x = x.substring(ix + 1)
+//
+//
+//
+//    /**************************************************************************/
+//    val cd = CalloutDetails()
+//    dataRow.calloutDetails = cd
+//
+//
+//
+//    /**************************************************************************/
+//    var s = x.replace("\\s+".toRegex(), "").replace("^", "") // Don't want spaces or the up-arrow which indicates that the footnote is to be included (it always is).
+//    if (s.contains("("))
+//    {
+//      val xx = s.split("(")[1].split(")")[0]
+//      s = s.replace("\\(.+?\\)".toRegex(), "")
+//      if (xx[0].lowercase() == "t")
+//        cd.standardVerseIsCanonicalTitle = true
+//      else
+//        cd.standardVerse = Ref.rdUsx(usxifyFromStepFormat(xx), null, "v")
+//    }
+//
+//
+//
+//    /**************************************************************************/
+//    if (s.contains("["))
+//    {
+//      var xx = s.split("[")[1].split("]")[0]
+//      s = s.replace("\\[.+?]".toRegex(), "")
+//
+//      if (xx.startsWith("+"))
+//      {
+//        cd.alternativeRefCollectionHasPrefixPlusSign = true
+//        xx = xx.substring(1)
+//      }
+//
+//      if (xx.contains("+"))
+//      {
+//        cd.alternativeRefCollectionHasEmbeddedPlusSign = true
+//        xx = xx.replace("+", ",")
+//      }
+//
+//      if (xx.endsWith("."))
+//        xx = xx.substring(0, xx.length - 1)
+//
+//      cd.alternativeRefCollection = RefCollection.rdUsx(usxifyFromStepFormat(xx), null, "v")
+//    }
+//
+//
+//
+//    /**************************************************************************/
+//    if (s.isNotEmpty())
+//      cd.sourceVerseCollection = RefCollection.rdUsx(usxifyFromStepFormat(s), null, "v")
   }
 
 
@@ -813,7 +764,7 @@ object PA_ReversificationDataHandler: PA()
 
       /************************************************************************/
       val tradition: String = TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_language$m_Tradition")
-      return TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsTraditionFormat", "tradition", tradition, "main", mainEltsAsString, "equivalenceInformation", equivalenceInformation)
+      return TranslatableFixedText.stringFormat(Language.Vernacular, "V_reversification_ancientVersionsTraditionFormat", mapOf("tradition" to tradition, "main" to mainEltsAsString, "equivalenceInformation" to equivalenceInformation))
     }
 
 
@@ -1183,7 +1134,7 @@ class ReversificationDataRow (rowNo: Int)
   lateinit var action: String
            var ancientVersions = ""
   lateinit var fields: MutableList<String>
-  lateinit var calloutDetails: CalloutDetails
+  //lateinit var calloutDetails: CalloutDetails
            var footnoteLevel = '?'
            var isMove = false
            val rowNumber = rowNo // Publicly accessible only for debugging.

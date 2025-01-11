@@ -346,7 +346,7 @@ class RefRange: RefCollectionPart
 
 
       /************************************************************************/
-      val bits = text.replace("\\s+".toRegex(), " ").replace("\\s*-\\s*".toRegex(), "-").split("-")
+      val bits = text.replace("\\s+".toRegex(), " ").replace("\\s*-\\s*".toRegex(), "-").split("-").map { it.trim() }
       val refLow = Ref.rdUsx(bits[0], context, resolveAmbiguitiesAs)
       if (1 == bits.size) return RefRange(refLow, refLow)
 
@@ -359,7 +359,7 @@ class RefRange: RefCollectionPart
          though, if the trailing reference contains a space (which is used as a
          book/chapter separator), I guess I can assume it's complete. */
 
-      if (bits[1].contains(" "))
+      if (bits[1].contains(" ") && !bits[1].endsWith(" "))
         return RefRange(refLow, Ref.rdUsx(bits[1]))
 
 
@@ -393,7 +393,7 @@ class RefRange: RefCollectionPart
       /* Must be a subverse only (assuming we can get this in USX -- not sure
          we can, but I guess there's no harm in allowing for it. */
 
-      val prefix = bits[0].replace("[a-z]+$", "")
+      val prefix = bits[0].replace("[a-z]+$".toRegex(), "")
       return RefRange(refLow, Ref.rdUsx(prefix + bits[1]))
     }
   } // companion object

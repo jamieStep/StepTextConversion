@@ -112,7 +112,7 @@ object TranslatableFixedText: ObjectInterface
   fun stringFormat (languageSelector: Language, key: String, vararg otherBits: Any): String
   {
     val text = lookupText(languageSelector, key)
-    return StepStringFormatter.format(text, if (1 == otherBits.size) otherBits[0] else convertNameAndValueListToMap(*otherBits))
+    return StepStringFormatter.format(text, *otherBits) //convertNameAndValueListToMap(*otherBits))
   }
 
 
@@ -225,7 +225,7 @@ object TranslatableFixedText: ObjectInterface
   * if the key does not have any associated text.
   */
 
-  private fun getEnglish (key: String) = m_English[key] ?: throw StepExceptionWithStackTraceAbandonRun("Failed to find English message associated with $key.")
+  private fun getEnglish (key: String) = m_English[key] ?: throw StepExceptionWithStackTraceAbandonRun("Failed to find English message associated with '$key'.")
 
 
   /****************************************************************************/
@@ -270,7 +270,7 @@ object TranslatableFixedText: ObjectInterface
     if ("eng" == x[0])
       m_English[x[1]] = x[2]
     else
-      m_Vernacular[x[1]] = x[2]
+      m_Vernacular[x[1]] = x[2].replace("% ref", "%ref")
   }
 
 

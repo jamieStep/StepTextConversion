@@ -595,19 +595,13 @@ object ConfigData
         throw StepExceptionWithStackTraceAbandonRun("Folder name implies this is a STEP-only build, but targetAudience on the command line says otherwise.")
     }
 
-    else if (mayBePublic)
+    else // mayBePublic
     {
       targetAudience = "public"
        if (null != optionFromCommandLine && "public" != optionFromCommandLine)
          throw StepExceptionWithStackTraceAbandonRun("Folder name implies this is a public build, but targetAudience on the command line says otherwise.")
     }
 
-    else
-    {
-      targetAudience = "step"
-      if ("step" != optionFromCommandLine)
-        throw StepExceptionWithStackTraceAbandonRun("Folder name implies this is a STEP-only build, but targetAudience on the command line says otherwise.")
-    }
 
     deleteAndPut("stepTargetAudience", targetAudience, true)
     if (null == ConfigData["stepOnlineUsageOnly"])
@@ -2585,6 +2579,8 @@ object ConfigData
 
     "stepModuleCreationDate" to { SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date()) },
 
+    "stepRawBibleNames" to { getRawBibleNames() },
+
     "stepTextDirection" to { Unicode.getTextDirection(m_SampleText) }, // Need a string taken from a canonical portion of the scripture as input.
 
     "stepTextDirectionForSword" to
@@ -2619,5 +2615,26 @@ object ConfigData
     val res = fn()
     if (null != res) put(key, res, false)
     return res
+  }
+
+
+  /****************************************************************************/
+  /* Probably to be used only with open access texts (if there).  Biblica open
+     access texts contain the word 'open' (or the vernacular equivalent) in the
+     names as supplied to us.  We do not display that in the names as they
+     appear in the Bible chooser, but we still want this original form for use
+     in the copyright information.  And we want both the English and vernacular
+     form unless they are the same.
+
+     The information is returned in formatted form for immediate use in the
+     copyright information. */
+
+  private fun getRawBibleNames (): String
+  {
+    val english = (get("stepBibleNameEnglishAsSupplied") ?: get("stepBibleNameEnglish"))!!
+    val vernacular = get("stepBibleNameVernacularAsSupplied") ?: get("stepBibleNameVernacular") ?: ""
+    var res = "<p style='text-align: center>$english"
+    if (vernacular.isNotEmpty()) res += "<br>$vernacular"
+    return "$res</p>"
   }
 }

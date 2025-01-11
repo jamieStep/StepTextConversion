@@ -2,8 +2,10 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous
 
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import java.util.*
 
 
@@ -345,13 +347,13 @@ object StepStringFormatter: ObjectInterface
          form and then update the argument list and formatting string
          accordingly. */
 
-      val rc =
-        if (otherArgs[ix - 1] is RefCollection)
-          otherArgs[ix - 1] as RefCollection
-        else if (otherArgs[ix - 1] is RefRange)
-          RefCollection(otherArgs[ix - 1] as RefRange)
-        else
-          RefCollection(otherArgs[ix - 1] as Ref)
+      val rc = when (otherArgs[ix - 1])
+      {
+        is RefCollection -> otherArgs[ix - 1] as RefCollection
+        is RefRange      -> RefCollection.rdUsx(otherArgs[ix - 1] as String)
+        is Ref           -> RefCollection.rdUsx(otherArgs[ix - 1] as String)
+        else             -> throw StepExceptionWithStackTraceAbandonRun("handleRefs: Invalid data type") //; return otherArgs[ix - 1] as String
+      }
 
       var type = mr.groups["type"]!!.value
       if (type.isEmpty()) type = lastTypeUsed

@@ -20,7 +20,6 @@ step_TMP_garbage	Used internally only.	Calculated	Calculated			Calculated	Calcul
 stepAbout	Used as part of the information on the copyright page, via the About parameter in the Sword config file.  Calculated from various other elements.	Calculated	Calculated			Calculated	Calculated
 stepAboutAdditionalInfo	The bulk of the stepAbout information is either supplied by the translators or calculated.  This lets you add some more information.  It comes out right at the end.	UserSpecified	Optional			File	PerTextIfNecessary
 stepAddedValueLinesForSwordConfigComments	???	Calculated	Calculated			Calculated	Calculated
-stepAdminLine	Used to hold the line of admin data which is stored as a comment near the top of Sword config files.	Calculated	Calculated			Calculated	Calculated
 stepBookList	Used to obtain a list of book names and abbreviations from an external metadata source where available.	Calculated	Calculated			Calculated	Calculated
 stepBuildTimestamp	Present date / time in specific format.	Calculated	Calculated			Calculated	Calculated
 stepConversionInfo	Used to hold complex information about the conversion processing	Calculated	Calculated			Calculated	Calculated
@@ -80,10 +79,15 @@ stepWordingForDerivedWorkStipulatedByTextSupplier	Some suppliers require us to u
 
 # Description of text.
 stepAbbreviationEnglish	English form of abbreviated Bible name.	UserSpecified	MandatoryAlways		Arbitrary string.	File	PerTextAlways
+stepAbbreviationEnglishAsSupplied	English form of abbreviated Bible name.  A copy which is retained in case we override stepAbbreviationEnglish.	UserSpecified	Optional		Arbitrary string.	File	PerTextAlways
 stepAbbreviationVernacular	Vernacular form of abbreviated Bible name.	UserSpecified	Optional	stepAbbreviationEnglish	Arbitrary string.	File	PerTextIfAvailable
-stepBibleNameEnglish	English form of full Bible name.	UserSpecified	MandatoryAlways		Arbitrary string.	File	PerTextAlways
-stepBibleNameVernacular	Vernacular form of full Bible name.	UserSpecified	Optional	stepBibleNameEnglish	Arbitrary string.	File	PerTextIfAvailable
+stepAbbreviationVernacularAsSupplied	Vernacular form of abbreviated Bible name.  A copy which is retained in case we override stepAbbreviationVernacualr.	UserSpecified	Optional		Arbitrary string.	File	PerTextAlways
 stepBibleDescriptionAsItAppearsOnBiblePicker	The brief description of the Bible which appears on the Bible chooser in STEP.  Typically made up of a number of elements, but you can override that by specifying a value for stepBibleDescriptionAsItAppearsOnBibleListOverride.	UserSpecifiedOrCalculated	OptionalOrCalculated			FileOrCalculated	PerTextIfNecessary	Typically you allow this to be calculated, because the format is complicated.  But particularly when updating older modules, you may want to keep the previous value, in which case you can specify that value in a configuration file.
+stepBibleNameEnglish	English form of full Bible name.	UserSpecified	MandatoryAlways		Arbitrary string.	File	PerTextAlways
+stepBibleNameEnglishAsSupplied	English form of full Bible name.  A copy which is retained in case we override stepBibleNameEnglish.	UserSpecified	Optional		Arbitrary string.	File	PerTextAlways
+stepBibleNameVernacular	Vernacular form of full Bible name.	UserSpecified	Optional	stepBibleNameEnglish	Arbitrary string.	File	PerTextIfAvailable
+stepBibleNameVernacularAsSupplied	Vernacular form of full Bible name.  A copy which is retained in case we override stepBibleNameVernacular.	UserSpecified	Optional	stepBibleNameEnglish	Arbitrary string.	File	PerTextIfAvailable
+stepRawBibleNames	Probably to be used only with open access texts, where we need to include the original English and vernacular names in the copyright information, even if we have overridden them.	Calculated	Calculated			Calculated	Calculated
 stepVersificationScheme	Versification scheme.  This is used only with public modules, when it needs to be one of the schemes supported by osis2mod and must be a reasonable fit.	UserSpecified	MandatorySometimes		One of the versification schemes supported by Crosswire.	File	PerTextIfNecessary	Needed when creating a public-facing module.  For STEP-internal modules, this parameter is set internally to a name which reflects the name of the module.
 
 
@@ -144,7 +148,6 @@ stepRootFolder	The root folder holding data for the module.	UserSpecified	Mandat
 
 stepStepUpdateReason	Text to be recorded on History line to explain why the module has been generated (used when the new module has been occasioned by STEP itself).	UserSpecified	Optional	"Unspecified"	Arbitrary string.	CommandLine	PerRunIfNecessary
 stepSupplierUpdateReason	Where the new module is being produced because the supplier has changed things, details of those changes.	UserSpecified	Optional		Arbitrary string.	CommandLine	PerRunIfNecessary
-stepSwordSoftwareDefaultVersion	The default version of Sword software needed to render the module.  There is a default value for this, so you shouldn't normally need to set it.	UserSpecified	MandatoryAlways	1.7.2	Arbitrary string.	File	IfCrosswireInternalsChange
 stepTargetAudience	Determines whether we are building a STEP-internal or a public facing module.	UserSpecified	MandatorySometimes	Calculated	Public / Step.	CommandLine	PerRunIfNecessary	Needed only where the root folder name ends in PublicStep, indicating that both forms of module can be built from the same source data.  In this case, says which should be built.
 stepUseExistingOsis	Says to start the process from OSIS rather than any other input.	UserSpecified	Optional		WithChanges / WithoutChanges	CommandLine	PerRunIfNecessary	Where alternative inputs are available, you will be warned if you opt to use OSIS and the other inputs are more up to date.
 stepVersion	Requests the version of the converter JAR.	UserSpecified	Optional	Not requested		CommandLine	PerRunIfNecessary
@@ -189,4 +192,4 @@ stepExternalDataPath_TaggingMatJhn	Path from which to obtain reversification dat
 stepStepDidTheSwordConversion	Standard text explaining that we did the conversion.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
 stepThanks	Standard rubric thanking people who have supplied texts.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
 stepThanksToCrosswire	Standard text thanking Crosswire for their software etc.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
-stepTypeOfDocument	Probably always going to be Bible.	UserSpecified	MandatoryAlways	Bible	Currently only 'Bible' makes sense.	File	ProbablyNever
+stepTypeOfDocument	Probably always going to be Bible.	UserSpecified	Optional	Bible	Currently only 'Bible' makes sense.	File	ProbablyNever
