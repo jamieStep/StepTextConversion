@@ -5,6 +5,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Config
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Zip
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
@@ -17,7 +18,7 @@ import java.nio.file.Paths
  * @author ARA "Jamie" Jamieson
  */
 
-object Builder_RepositoryPackage: Builder()
+object Builder_RepositoryPackage: Builder(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

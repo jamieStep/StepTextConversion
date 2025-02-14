@@ -598,7 +598,7 @@ object IssueAndInformationRecorder: ObjectInterface
     var HasReversificationMappings = false
     var ReversificationMappings: List<String>? = null
 
-    val Doc_AcceptedReversificationRows = "Reversification rows which pass all the selection rules for this text.  Note that 'AllBibles' rows are selected even when we are not applying reversification."
+    val Doc_AcceptedReversificationRows = "Reversification rows which pass all the selection rules for this text."
     var HasAcceptedReversificationRows = false
     var AcceptedReversificationRows: List<String>? = null
 

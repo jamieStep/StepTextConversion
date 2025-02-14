@@ -125,9 +125,9 @@ import java.util.*
  *     If <note><reference>YOU CAN READ THIS</reference</note> I'll be amazed
  *     ```
  *
- *  Unfortunately, STEPBible *doesn't* display the enclosed text
- *  ('YOU CAN READ THIS'): the text only shows up when you hover over the
- *  callout and get the window which gives you details of the link.
+ *   Unfortunately, STEPBible *doesn't* display the enclosed text
+ *   ('YOU CAN READ THIS'): the text only shows up when you hover over the
+ *   callout and get the window which gives you details of the link.
  *
  * - Tables vanish in interlinear mode.  I had intended to use a table for the
  *   book summary material, but have had to abandon that idea.
@@ -1054,12 +1054,13 @@ object StudyNotes
       Dom.deleteAllAttributes(noteNode)
       Dom.setAttribute(noteNode, "osisRef", formattedRef)
       Dom.setAttribute(noteNode, "osisID", formattedRef.split("-")[0] + "!n${++uniqueNumber}")
-      Dom.setAttribute(noteNode, "n", formattedRef)
+      //Dom.setAttribute(noteNode, "n", formattedRef) // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+      Dom.setAttribute(noteNode, "n", "\u25BA") // Right arrow.
       Dom.setAttribute(noteNode, "type", "crossReference")
 
       val referenceNode = Dom.createNode(doc, "<reference osisRef='$formattedRef'/>")
       noteNode.appendChild(referenceNode)
-      referenceNode.appendChild(Dom.createTextNode(doc, "\u25BA")) // Non-breaking space followed by right arrow.
+      referenceNode.appendChild(Dom.createTextNode(doc, "\u25BA")) // Right arrow.
 
       if  (forceBoldFace)
       {
@@ -1605,8 +1606,9 @@ object ReferenceFormatter
           verses[1] = null
       }
 
-      val part2 = makeRef(1)
-      return "$part1-$part2"
+      var part2 = makeRef(1)
+      part2 = if (part1 == part2) "" else "-$part2"
+      return "$part1$part2"
     }
   }
 

@@ -175,12 +175,13 @@ object FileLocations: ObjectInterface
     if (canonicalFilePath.lowercase().startsWith("\$find"))
     {
       val endOfPath = canonicalFilePath.substring("\$find/".length)
-      val fileName = Path(endOfPath).fileName
+      var pathElements = Paths.get(endOfPath).map { it.toString() }
+      val fileName = pathElements.last()
+      pathElements = pathElements.subList(0, pathElements.size - 1)
       for (folderPath in listOfNotNull(getRootFolderPath(), getMetadataFolderPath(), getSharedConfigFolderPath()))
       {
-        val file = File(folderPath).walk(FileWalkDirection.BOTTOM_UP).firstOrNull { Path(it.toString()).endsWith(fileName) }
-        if (null != file)
-          return file.toString()
+        val putativeFilePath  = File(Paths.get(folderPath, *pathElements.toTypedArray()).toString()).walk(FileWalkDirection.BOTTOM_UP).firstOrNull { Path(it.toString()).fileName.toString() == fileName } ?: continue
+        return putativeFilePath.toString()
       }
 
       throw StepExceptionWithStackTraceAbandonRun("Can't locate file $canonicalFilePath.")
@@ -353,8 +354,8 @@ object FileLocations: ObjectInterface
   /* Sword structure and the stuff which resides in it. */
 
   fun getEncryptionAndBespokeOsisToModDataRootFolder ()= Paths.get(getInternalSwordFolderPath(), "step").toString()
-  private fun getEncryptionDataFolder () = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "jsword-mods.d").toString()
-  fun getEncryptionDataFilePath () = Paths.get(getEncryptionDataFolder(), "${getModuleName().lowercase()}.conf").toString()
+  fun getEncryptionDataFolderPath () = Paths.get(getEncryptionAndBespokeOsisToModDataRootFolder(), "jsword-mods.d").toString()
+  fun getEncryptionDataFilePath () = Paths.get(getEncryptionDataFolderPath(), "${getModuleName().lowercase()}.conf").toString()
 
   fun getSwordConfigFilePath (): String { return Paths.get(getSwordConfigFolderPath(), "${getModuleName().lowercase()}.conf").toString() }
   fun getSwordConfigFolderPath (): String = Paths.get(getInternalSwordFolderPath(), "mods.d").toString()

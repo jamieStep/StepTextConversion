@@ -5,6 +5,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLo
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 
@@ -21,7 +22,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.Ste
  * @author ARA "Jamie" Jamieson
  */
 
-object Builder_InitialOsisRepresentationOfInputs: Builder()
+object Builder_InitialOsisRepresentationOfInputs: Builder(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

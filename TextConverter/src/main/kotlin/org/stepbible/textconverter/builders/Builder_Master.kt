@@ -9,6 +9,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
@@ -27,7 +28,7 @@ import java.nio.file.Paths
  * @author ARA "Jamie" Jamieson
  */
 
-object Builder_Master: Builder()
+object Builder_Master: Builder(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -58,7 +59,8 @@ object Builder_Master: Builder()
       CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false),
       CommandLineProcessor.CommandLineOption("supplierUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false),
       CommandLineProcessor.CommandLineOption("targetAudience", 1, "If it is possible to build both STEP-only and public version, selects the one required.", listOf("Public", "Step"), null, false, forceLc = true),
-      CommandLineProcessor.CommandLineOption("useExistingOsis", 1, "Ignore other inputs and start from OSIS.  withChanges => Use existing OSIS as input apply any normal processing to it; withoutChanges => Use existing OSIS unchanged as far as possible.", listOf("withChanges", "withoutChanges"), null, false),
+      CommandLineProcessor.CommandLineOption("useExistingOsis", 1, "Ignore other inputs and start from OSIS.  withChanges => Use existing OSIS as input and apply any normal processing to it; withoutChanges => Use existing OSIS unchanged as far as possible.", listOf("withChanges", "withoutChanges"), null, false),
+      CommandLineProcessor.CommandLineOption("useExistingHistory", 0, "This assumes that the history and version information in the step.conf file is already correct and should not be updated.", null, null, false),
 
 
 

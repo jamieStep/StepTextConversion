@@ -350,8 +350,8 @@ object StepStringFormatter: ObjectInterface
       val rc = when (otherArgs[ix - 1])
       {
         is RefCollection -> otherArgs[ix - 1] as RefCollection
-        is RefRange      -> RefCollection.rdUsx(otherArgs[ix - 1] as String)
-        is Ref           -> RefCollection.rdUsx(otherArgs[ix - 1] as String)
+        is RefRange      -> RefCollection.rdUsx(otherArgs[ix - 1].toString())
+        is Ref           -> RefCollection.rdUsx(otherArgs[ix - 1].toString())
         else             -> throw StepExceptionWithStackTraceAbandonRun("handleRefs: Invalid data type") //; return otherArgs[ix - 1] as String
       }
 

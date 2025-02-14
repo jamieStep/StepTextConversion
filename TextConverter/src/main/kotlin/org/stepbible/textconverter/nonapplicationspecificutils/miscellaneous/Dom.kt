@@ -92,23 +92,34 @@ object Dom: ObjectInterface
      *
      * @param child Child node.
      * @param test Test to apply.
+     * @param ifNoFollowingSiblings The value to be returned if there are no siblings.
      * @return True if all preceding siblings satisfy the test.
      */
 
     fun allFollowingSiblingsSatisfy (child: Node, test: Predicate<Node>, ifNoFollowingSiblings: Boolean = true): Boolean
     {
-        val children = child.parentNode.childNodes
-        var doTest = false
-        for (i in 0..< children.length)
-        {
-            val n = children.item(i)
-            if (n === child)
-              doTest = true
-            else if (doTest && !test.test(n))
-              return false
-        }
+      val children = Dom.getChildren(child.parentNode)
 
-        return ifNoFollowingSiblings
+      for (i in children.indexOf(child) + 1 ..< children.size)
+      {
+        val n = children[i]
+        if (!test.test(n))
+          return false
+      }
+
+      return ifNoFollowingSiblings
+//        val children = child.parentNode.childNodes
+//        var doTest = false
+//        for (i in 0..< children.length)
+//        {
+//            val n = children.item(i)
+//            if (n === child)
+//              doTest = true
+//            else if (doTest && !test.test(n))
+//              return false
+//        }
+//
+//        return ifNoFollowingSiblings
     }
 
 

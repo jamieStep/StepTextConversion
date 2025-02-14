@@ -273,15 +273,15 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
     /****************************************************************************/
     /**
-    * Returns details for the osis2mod scheme which represents either NRSV or
-    * NRSVA, depending upon whether or not we are working with a text which
+    * Returns details for the osis2mod scheme which represents either KJV or
+    * KJVA, depending upon whether or not we are working with a text which
     * contains DC books.
     *
     * @param bibleStructureBeingWorkedOn
     * @return Details of osis2mod scheme.
     */
 
-    fun makeOsis2modNrsvxSchemeInstance (bibleStructureBeingWorkedOn: BibleStructure) = makeOsis2modSchemeInstance("NRSV" + (if (bibleStructureBeingWorkedOn.hasAnyBooksDc()) "A" else ""))
+    fun makeOsis2modKjvxSchemeInstance (bibleStructureBeingWorkedOn: BibleStructure) = makeOsis2modSchemeInstance("KJV" + (if (bibleStructureBeingWorkedOn.hasAnyBooksDc()) "A" else ""))
 
 
     /****************************************************************************/
@@ -714,12 +714,12 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
    *
    * This needs a little more explanation.  This method is a relative new kid on
    * the block, but builds upon earlier work which was aimed at providing
-   * anatomical information about NRSVA.
+   * anatomical information about KJVA.
    *
    * I anticipate that the method will be called mainly when handling
    * vernacular text, where the problem is that we don't necessarily know ahead
    * of time where verse boundaries will fall -- nor, indeed, what verses the
-   * text may contain, since it will perhaps not follow NRSVA.
+   * text may contain, since it will perhaps not follow KJVA.
    *
    * It will, I think, be called under two circumstances -- first, when
    * processing elided verses with a view to expanding them out so we can find
@@ -729,38 +729,38 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
    * I believe that in the former case, we can rely upon ranges not crossing
    * chapter boundaries, because if they did there would be no place in the USX
    * where chapter tags can be inserted.  This is useful, because it makes it
-   * easier to rely upon NRSVA information, which at this point will be the
+   * easier to rely upon KJVA information, which at this point will be the
    * only information available to us ...
    *
-   * If both start and end are recognised as NRSVA verses, we can simply return
+   * If both start and end are recognised as KJVA verses, we can simply return
    * a collection running from one to the other (something which is facilitated
    * by the fact that at this point, getAllReferencesForChapter will
-   * automatically look at the NRSVA data.
+   * automatically look at the KJVA data.
    *
-   * If neither start nor end are recognised as NRSVA verses, I can make the
+   * If neither start nor end are recognised as KJVA verses, I can make the
    * assumption that they are both in that portion of the versification scheme
-   * outside of NRSVA, and can return a collection running from the one to the
+   * outside of KJVA, and can return a collection running from the one to the
    * other.
    *
    * I don't think it's possible to have the situation at this point where the
-   * low reference is outside of NRSVA and the high reference is inside it, or
+   * low reference is outside of KJVA and the high reference is inside it, or
    * certainly not without crossing a chapter boundary, so this is a situation
    * for which I do not cater.
    *
-   * It is possible to have the high reference outside of NRSVA, in which case
-   * I return a collection which runs from lowRef to the end of the NRSVA verses
+   * It is possible to have the high reference outside of KJVA, in which case
+   * I return a collection which runs from lowRef to the end of the KJVA verses
    * for the containing chapter, and then appends everything up to and including
    * the high ref.
    *
    * Later, once this initial anatomical investigation had been completed, we
    * will know what verses we actually have.  At this point,
    * getAllReferencesForChapter will look at the actual anatomy (ie it will no
-   * RefKeyer look at NRSVA), and so ranges can be expanded correctly.
+   * RefKeyer look at KJVA), and so ranges can be expanded correctly.
    *
    * @param theRefKeyLow What it says on the tin.
    * @param theRefKeyHigh What it says on the tin.
    *
-   * @return Full list of all references for given book of the NRSVA.
+   * @return Full list of all references for given book of the KJVA.
    */
 
   open fun getRefKeysInRange (theRefKeyLow: RefKey, theRefKeyHigh: RefKey): List<RefKey>
@@ -780,7 +780,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     /* Strictly no need to factor this out as a special case, but it will
        commonly be the case that low and high are the same, and if they are,
        we just return that one ref, regardless of whether the verse is in
-       the collection for NRSVA or not. */
+       the collection for KJVA or not. */
 
     if (refKeyLow == refKeyHigh)
     {
@@ -793,7 +793,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     /**************************************************************************/
     /* In the normal course of events we'd expect this to work, but if we're
        being called in respect of vernacular text, it's always possible that
-       the vernacular may have a chapter which NRSVA does not.  In that case,
+       the vernacular may have a chapter which KJVA does not.  In that case,
        we assume that the caller knows what they're doing, so we don't give up
        here -- and later processing will simply give back a range based on what
        they've asked for. */
@@ -804,7 +804,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
-    /* If res is empty, we must be dealing with a chapter unknown to NRSVA, so
+    /* If res is empty, we must be dealing with a chapter unknown to KJVA, so
        we just return a range from low to high.  I've also come across a
        situation where both low and high are in the same chapter, but neither of
        them features in the list of references, and this can be treated the
@@ -1380,6 +1380,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   protected open fun addFromRootNode (rootNode: Node, wantCanonicalTextSize: Boolean)
   {
     /**************************************************************************/
+    Dbg.dCont(Dom.toString(rootNode), "ROM 1:6")
+    /**************************************************************************/
     var canonicalTitleCanonicalTextSize = 0
     val inCanonicalTitle = false
     var inVerse = false
@@ -1448,12 +1450,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
-    //Dbg.d(rootNode.ownerDocument)
-    //val allNodes = rootNode.getAllNodesBelow()
     val allNodes = getAllNodesBelowWithLocking(rootNode)
     allNodes.forEach {
-      //Dbg.dCont(Dom.toString(it), "Num.10.34")
-      //Dbg.d(Dom.toString(it))
       var processNode = true
       while (processNode)
       {
@@ -1462,9 +1460,6 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
         {
           NodeRelevanceType.VerseStart ->
           {
-//            Dbg.dCont(Dom.toString(it), "<verse osisID='Phil.1.16', sID='Phil.1.16'>")
-//            Dbg.dCont(Dom.toString(it), "<verse osisID='Phil.1.17', sID='Phil.1.17'>")
-
             if (RefBase.C_BackstopVerseNumber == m_FileProtocol.readRefCollection(relevance.idAsString).getLowAsRef().getV()) // Ignore dummy verses.
               isElision = false
             else
@@ -1507,10 +1502,15 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
     /**************************************************************************/
-    /* On Psalms only, I need to see if we have canonical titles.  Or I do if
-       we want content size. */
+    /* On Psalms only, I need to see if we have canonical titles.  The code
+       here also accumulates the length of the canonical title material, and
+       does it regardless of whether we've been asked for length or not.  It
+       isn't a huge hit if we calculate it unnecessarily, and it avoids
+       special case processing, because the code also works out what nodes
+       might form part of the canonical title, and I want those even when I
+       don't want the lengths. */
 
-    if (wantCanonicalTextSize && BibleAnatomy.C_BookNumberForPsa == m_FileProtocol.bookNameToNumber(m_FileProtocol.getBookAbbreviation(rootNode)))
+    if (BibleAnatomy.C_BookNumberForPsa == m_FileProtocol.bookNameToNumber(m_FileProtocol.getBookAbbreviation(rootNode)))
       rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach(::processCanonicalTitleForChapter)
 
 
@@ -1532,49 +1532,114 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
      - Not if it has a para:d or title:psalm heading: not all texts will do so.
 
-     - Not if according to NRSVA we would _expect_ this psalm to have a
+     - Not if according to KJVA we would _expect_ this psalm to have a
        canonical title.
 
      - But if it has any canonical text prior to the first verse sid.
 
-
-     The method takes all nodes from the start of the first such canonical
-     text node to the end of the last one and retains a list of pointers to
-     all of them.  (I'm very much hoping that they will all be direct children
-     of the chapter, and not be contained in anything else -- if they _are_
-     contained in anything else, I'm not too sure what the implications may
-     be.)
-
-     It retains a list of these nodes, along with a combined count of the
-     number of words in all of the canonical text nodes. */
+     The method always calculates the length of the nodes making up the
+     canonical title, even if we are not being asked for lengths.  This
+     is because it also retains a list of the nodes which should go to
+     make up the title, and I need that list regardless of whether I need
+     the lengths or not.  It's easier just to calculate the lengths than
+     to worry about whether I need them or not. */
 
   private fun processCanonicalTitleForChapter (chapterNode: Node)
   {
     /**************************************************************************/
-//    Dbg.dCont(Dom.toString(chapterNode), "Ps.44")
-//    Dbg.d(Dom.toString(chapterNode))
+    //val dbg = Dbg.dCont(Dom.toString(chapterNode), "Ps.150")
+    //if (dbg) Dbg.d(chapterNode.ownerDocument)
 
 
 
     /**************************************************************************/
-    var nodesOfInterest: MutableList<Node> = mutableListOf()
+    val nodesOfInterest: MutableList<Node> = mutableListOf()
     var canonicalTextSize = 0
-    //val allNodes = chapterNode.getAllNodesBelow()
     val allNodes = getAllNodesBelowWithLocking(chapterNode)
 
 
 
     /**************************************************************************/
-    /* Get a list of canonical nodes prior to the first verse node. */
+    /* I am supremely unconfident about the following code, not least because I
+       keep on hitting new arrangements of text which necessitate different
+       processing.
+
+       There are several different situations to be handled:
+
+       - We may have a canonical header prior to the first verse, in which
+         case there is essentially nothing to do.
+
+       - We may have what appears to be canonical text prior to the first verse,
+         but not marked as a header.
+
+       - We may have a canonical header tag which contains one or more verse
+         markers, and the verses may be 'nice' (they may start at the beginning
+         of the header tag and end at the end) or they may be 'nasty' (they may
+         overlap the header boundaries).
+
+
+       I can't actually manage to keep all of these in my head at the same time,
+       so I'm treating them separately, in the hopes that the various cases
+       never overlap in a manner to thwart the processing.
+
+       In this first loop, I collect together all nodes which are (or could be)
+       canonical, starting from the beginning of the chapter up to but excluding
+       the first verse node (or the node which contains the verse node).
+
+       In the case where the verse node is contained, as just implied, I exclude
+       the container from the list.  This does mean that if the container holds
+       text prior to the verse, and that text might reasonably form part of a
+       canonical header, it is going to be excluded here.  I'm kinda hoping this
+       is an odd situation which will be mopped up by later processing, but I
+       have to admit I'm not sure.
+
+       If I hit a non-canonical node in the course of the processing here, I
+       throw away any nodes accumulated to date, on the assumption that the
+       non-canonical node effectively blocks them. */
 
     for (n in allNodes)
     {
       if (m_FileProtocol!!.tagName_verse() == Dom.getNodeName(n)) // Stop when we hit the first verse.
+      {
+        if (nodesOfInterest.isNotEmpty() && Dom.hasAsAncestor(n, nodesOfInterest.last()))
+          nodesOfInterest.removeLast()
         break
+      }
 
-      if (m_FileProtocol.isCanonicalNode(n) && "#text" == n.nodeName)
-        nodesOfInterest.add(n)
+      if (m_FileProtocol.isCanonicalNode(n))
+      {
+        if (m_FileProtocol.tagName_chapter() == Dom.getNodeName(n.parentNode))
+          nodesOfInterest.add(n)
+      }
+      else
+        nodesOfInterest.clear() // If we hit a non-canonical node, I'm assuming that any preceding stuff is effectively marooned and of no interest.
     } // for
+
+
+
+    /**************************************************************************/
+    /* I now throw away any at start or end of list which contribute nothing to
+       the header. */
+
+    while (nodesOfInterest.isNotEmpty())
+    {
+      val node = nodesOfInterest.last()
+
+      if (Dom.isWhitespace(node) || node.textContent.isBlank())
+        nodesOfInterest.removeLast()
+      else
+        break
+    }
+
+    while (nodesOfInterest.isNotEmpty())
+    {
+      val node = nodesOfInterest.first()
+
+      if (Dom.isWhitespace(node) || node.textContent.isBlank())
+        nodesOfInterest.removeFirst()
+      else
+        break
+    }
 
 
 
@@ -1588,22 +1653,15 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
        the processing more generally. */
 
     nodesOfInterest
-      .filter { Dom.isTextNode(it) && m_FileProtocol!!.isCanonicalNode(it) }
+      .filter { m_FileProtocol!!.isCanonicalNode(it) }
       .forEach { canonicalTextSize += getCanonicalTextSizeForVerse(it.textContent) }
-
-
-
-    /**************************************************************************/
-    /* Reduce to top level nodes only. */
-
-    nodesOfInterest = nodesOfInterest.filter { m_FileProtocol!!.tagName_chapter() == Dom.getNodeName(it.parentNode) } .toMutableList()
 
 
 
     /**************************************************************************/
     if (canonicalTextSize > 0 && nodesOfInterest.isNotEmpty())
       m_Text.m_CanonicalTitleDetails[m_FileProtocol!!.readRef(chapterNode[m_FileProtocol.attrName_chapterSid()]!!).toRefKey_bc()] =
-        CanonicalTitleDetails(canonicalTextSize, nodesOfInterest.filter { m_FileProtocol.tagName_chapter() == Dom.getNodeName(it.parentNode) })
+        CanonicalTitleDetails(canonicalTextSize, nodesOfInterest)
   }
 
 
@@ -1946,18 +2004,10 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   private fun handleVerseEid (id: String, canonicalTextSize: Int)
   {
-    //Dbg.d(id + ": " + canonicalTextSize.toString())
-//      Dbg.d(OsisTempDataCollection.getDocument())
-
     val refKeys = m_FileProtocol!!.readRefCollection(id).getAllAsRefs()
     val isElision = refKeys.size > 1
 
     refKeys.forEach {
-      //if (Dbg.d(it.toString(), "Act 24:7"))
-      //{
-      //  debugDisplayStructure()
-      //}
-
       val v = getVerseDescriptor(it.getCopyOfElements())!!
       v.m_CanonicalTextSize = if (isElision) C_ElementInElision else canonicalTextSize
     }

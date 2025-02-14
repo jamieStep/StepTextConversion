@@ -5,6 +5,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodesByName
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.w3c.dom.Node
 import java.util.IdentityHashMap
@@ -27,7 +28,7 @@ import java.util.IdentityHashMap
  * @author ARA "Jamie" Jamieson
  */
 
-object PA_EnhancedVerseEndInsertionPreparer: PA()
+object PA_EnhancedVerseEndInsertionPreparer: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

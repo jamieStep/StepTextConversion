@@ -4,9 +4,24 @@ import org.jetbrains.dokka.base.DokkaBaseConfiguration
 
 
 /******************************************************************************/
+/*
+   Just so you don't forget ...
+
+   To build a new JAR in IDEA:
+
+   - Update teh version number below if necessary.
+
+   - In the bar at the extreme right of the IDEA screen, select Gradle (the
+     icon is an elephant, I think).
+
+   - Under Build, select JAR.
+*/
+
+
+/******************************************************************************/
 // DON'T FORGET TO CHANGE ME !!!
 
-version = "4.1.0"
+version = "5.0.0"
 
 
 /******************************************************************************/

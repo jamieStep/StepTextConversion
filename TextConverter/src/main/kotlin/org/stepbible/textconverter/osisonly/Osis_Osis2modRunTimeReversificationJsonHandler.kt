@@ -8,6 +8,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationHandler
 import java.io.File
@@ -25,7 +26,7 @@ import java.io.PrintWriter
  */
 
 /******************************************************************************/
-object Osis_Osis2modRunTimeReversificationJsonHandler
+object Osis_Osis2modRunTimeReversificationJsonHandler: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

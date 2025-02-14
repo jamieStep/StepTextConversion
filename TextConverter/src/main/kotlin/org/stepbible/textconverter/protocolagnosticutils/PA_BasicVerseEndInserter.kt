@@ -24,7 +24,7 @@ import org.w3c.dom.Node
 * @author ARA "Jamie" Jamieson
 */
 
-object PA_BasicVerseEndInserter: PA()
+object PA_BasicVerseEndInserter: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

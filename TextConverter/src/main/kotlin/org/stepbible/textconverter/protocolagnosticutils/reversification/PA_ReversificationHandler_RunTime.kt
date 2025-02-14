@@ -9,7 +9,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Config
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MarkerHandlerFactory
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
 import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationHandler_RunTime.setAlteredStructure
@@ -72,7 +74,7 @@ import java.util.concurrent.ConcurrentHashMap
  */
 
 /******************************************************************************/
-object PA_ReversificationHandler_RunTime: PA_ReversificationHandler()
+object PA_ReversificationHandler_RunTime: PA_ReversificationHandler(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -148,7 +150,7 @@ object PA_ReversificationHandler_RunTime: PA_ReversificationHandler()
   /****************************************************************************/
   /**
   * Returns information needed by our own version of osis2mod and JSword to
-  * handle the situation where we have a Bible which is not NRSV(A)-compliant,
+  * handle the situation where we have a Bible which is not KJV(A)-compliant,
   * and which we are not restructuring during the conversion process.
   *
   * The return value is a list of RefKey -> RefKey pairs, mapping source verse
@@ -199,6 +201,8 @@ class PA_ReversificationHandler_RunTimePerBook (private val dataCollection: X_Da
       else
       {
         val targetNode = sidMap[refKey]
+//        Dbg.d(Dom.toString(targetNode!!))
+//        Dbg.d(Dom.toString(targetNode!!), "<verse osisID='2Cor.10.5' sID='2Cor.10.5'>")
         m_Actions[action]!!.action(targetNode, dataRow, sidMap.ceilingEntry(refKey).value!!) // Third arg says where to insert the new node if we have to generate one.
       }
     }
@@ -207,7 +211,10 @@ class PA_ReversificationHandler_RunTimePerBook (private val dataCollection: X_Da
 
 
   /****************************************************************************/
-  fun reportMapping (reversificationDataRow: ReversificationDataRow) = m_Actions[reversificationDataRow["Action"]]!!.reportMapping
+  fun reportMapping (reversificationDataRow: ReversificationDataRow): Boolean
+  {
+    return m_Actions[reversificationDataRow["Action"].replace("*", "")]!!.reportMapping
+  }
 
 
 
@@ -226,13 +233,22 @@ class PA_ReversificationHandler_RunTimePerBook (private val dataCollection: X_Da
   private val m_Actions: Map<String, ActionDescriptor> = mapOf(
       "ifemptyverse"    to ActionDescriptor(action = ::ifEmpty),
       "keepverse"       to ActionDescriptor(action = ::addFootnote),
-      "mergednextverse" to ActionDescriptor(action = ::addFootnote, reportMapping = true),
-      "mergedprevverse" to ActionDescriptor(action = ::addFootnote, reportMapping = true),
-      "mergedverse"     to ActionDescriptor(action = ::addFootnote, reportMapping = true),
+      "mergednextverse" to ActionDescriptor(action = ::ignoreProTem),
+      "mergedprevverse" to ActionDescriptor(action = ::ignoreProTem),
+//      "mergednextverse" to ActionDescriptor(action = ::addFootnote, reportMapping = true),
+//      "mergedprevverse" to ActionDescriptor(action = ::addFootnote, reportMapping = true),
+//      "mergeverse"      to ActionDescriptor(action = ::addFootnote, reportMapping = true), // Temporary until data is fixed.
+//      "mergedverse"     to ActionDescriptor(action = ::addFootnote, reportMapping = true),
       "psalmtitle"      to ActionDescriptor(action = ::addFootnoteToPsalmTitle),
       "renumbertitle"   to ActionDescriptor(action = ::addFootnote, reportMapping = true),
       "renumberverse"   to ActionDescriptor(action = ::addFootnote, reportMapping = true),
   )
+
+
+  /****************************************************************************/
+  private fun ignoreProTem (targetNode: Node?, reversificationDataRow: ReversificationDataRow, dummy: Node?)
+  {
+  }
 
 
   /****************************************************************************/
@@ -269,6 +285,7 @@ class PA_ReversificationHandler_RunTimePerBook (private val dataCollection: X_Da
   /****************************************************************************/
   private fun ifEmpty (targetNode: Node?, reversificationDataRow: ReversificationDataRow, ifInsertingNewNodeInsertBefore: Node?)
   {
+    return// $$$$$ DO anything?  Map?
     /**************************************************************************/
     /* If the verse does not exist, create it. */
 

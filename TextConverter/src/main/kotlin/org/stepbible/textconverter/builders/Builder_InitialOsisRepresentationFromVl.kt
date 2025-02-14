@@ -10,6 +10,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import java.io.BufferedWriter
 import java.io.File
 
@@ -69,7 +70,7 @@ import java.io.File
  * @author ARA "Jamie" Jamieson
  */
 
-object Builder_InitialOsisRepresentationFromVl: Builder()
+object Builder_InitialOsisRepresentationFromVl: Builder(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -140,7 +141,6 @@ object Builder_InitialOsisRepresentationFromVl: Builder()
 
 
     /**************************************************************************/
-    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(groupedLines.keys.toList()) // The argument gives us the list of book numbers.
     writeln(Osis_Utils.fileHeader(groupedLines.keys.map { it }))
     Rpt.reportWithContinuation(level = 1, "Creating books ...") {
       groupedLines.keys.forEach {

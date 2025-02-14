@@ -1,5 +1,7 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.ref
 
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+
 /****************************************************************************/
 /**
  * A writer for OSIS references.
@@ -7,7 +9,7 @@ package org.stepbible.textconverter.nonapplicationspecificutils.ref
  * @author ARA "Jamie" Jamieson
  */
 
- object RefFormatHandlerWriterOsis : RefFormatHandlerWriterBase()
+ object RefFormatHandlerWriterOsis : RefFormatHandlerWriterBase(), ObjectInterface
  {
   /****************************************************************************/
   /**

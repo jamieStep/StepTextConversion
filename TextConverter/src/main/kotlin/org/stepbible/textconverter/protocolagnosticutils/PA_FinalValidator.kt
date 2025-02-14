@@ -21,7 +21,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-object PA_FinalValidator: PA()
+object PA_FinalValidator: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -84,6 +84,7 @@ private class PA_FinalValidatorPerBook (val m_FileProtocol: X_FileProtocol)
   {
     fun checkChapter (chapter: Node)
     {
+      //Dbg.d(rootNode.ownerDocument)
       val verses = chapter.findNodesByName("verse")
       for (i in verses.indices step 2)
         if (!Dom.isSiblingOf(verses[i], verses[i + 1]))

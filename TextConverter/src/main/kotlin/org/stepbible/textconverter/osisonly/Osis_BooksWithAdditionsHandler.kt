@@ -6,6 +6,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Par
 import org.w3c.dom.Node
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.set
 
 
@@ -29,7 +30,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.set
  * @author ARA "Jamie" Jamieson
  */
 
-object Osis_BooksWithAdditionsHandler
+object Osis_BooksWithAdditionsHandler: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

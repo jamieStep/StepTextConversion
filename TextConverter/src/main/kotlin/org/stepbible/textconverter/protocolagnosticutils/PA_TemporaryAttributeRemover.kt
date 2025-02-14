@@ -3,6 +3,7 @@ package org.stepbible.textconverter.protocolagnosticutils
 import org.stepbible.textconverter.applicationspecificutils.NodeMarker
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 
 /******************************************************************************/
@@ -16,7 +17,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Par
  * @author ARA "Jamie" Jamieson
  */
 
-object PA_TemporaryAttributeRemover
+object PA_TemporaryAttributeRemover: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

@@ -248,8 +248,8 @@ object ConfigDataSupport: ObjectInterface
 
   /****************************************************************************/
   /* The first 'if' test below caters for the situation where we are attempting
-     a Get.  When doing Get on something like @(stepVersificationScheme, NRSV),
-     "NRSV" is passed to the ConfigData 'get' method (from which this present
+     a Get.  When doing Get on something like @(stepVersificationScheme, KJV),
+     "KJV" is passed to the ConfigData 'get' method (from which this present
      method is called) as though it were the name of a configuration
      parameter.  However, clearly here it is not -- it's a default value.
      We therefore need to avoid reporting that we lack configuration
@@ -326,7 +326,7 @@ object ConfigDataSupport: ObjectInterface
     m_SpecialDescriptors["History_"] = Descriptor("History lines.", "Calculated", "Calculated", "", "", "", "Calculated", "")
     m_SpecialDescriptors["stepHistory_"] = Descriptor("History lines.", "Calculated", "Calculated", "", "", "", "Calculated", "")
     m_SpecialDescriptors["V_"] = Descriptor("Pieces of text, or fragments such as '[...]', of which a vernacular form may be desirable.", "UserSpecified", "MandatoryAlways", "Defaults to English version, which is built in to the converter.", "", "File", "PerhapsPerLanguage", "")
-    m_SpecialDescriptors["stepDistributionLicence_"] = Descriptor("Standard rubrics describing the various typed of copyright (eg CC_BY_SA_4.0).", "UserSpecified", "MandatoryAlways", "", "", "File", "ProbablyNever", "All of the most likely values are already built into a file in the Resources section of the JAR file.")
+    m_SpecialDescriptors["swordDistributionLicence_"] = Descriptor("Standard rubrics describing the various typed of copyright (eg CC_BY_SA_4.0).", "UserSpecified", "MandatoryAlways", "", "", "File", "ProbablyNever", "All of the most likely values are already built into a file in the Resources section of the JAR file.")
     //m_SpecialDescriptors["stepNonOsisXsltStylesheet_"] = Descriptor("Stylesheets to be applied to a particular non-OSIS books before the main processing occurs.", "UserSpecified", "Optional", "", "", "File", "PerTextIfNecessary", "")
   }
 }

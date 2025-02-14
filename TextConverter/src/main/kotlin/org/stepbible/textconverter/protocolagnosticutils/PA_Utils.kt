@@ -8,7 +8,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Node
 
-object PA_Utils
+object PA_Utils: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

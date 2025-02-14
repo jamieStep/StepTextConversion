@@ -3,6 +3,7 @@ package org.stepbible.textconverter.builders
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigDataSupport
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 
 
 /******************************************************************************/
@@ -13,7 +14,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Config
   * @author ARA "Jamie" Jamieson
   */
 
-object SpecialBuilder_ConfigDataDebugging: SpecialBuilder()
+object SpecialBuilder_ConfigDataDebugging: SpecialBuilder(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

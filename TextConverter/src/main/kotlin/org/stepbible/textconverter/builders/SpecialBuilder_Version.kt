@@ -3,6 +3,7 @@ package org.stepbible.textconverter.builders
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.getJarFileName
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import kotlin.system.exitProcess
 
 
@@ -14,7 +15,7 @@ import kotlin.system.exitProcess
   * @author ARA "Jamie" Jamieson
   */
 
-object SpecialBuilder_Version: SpecialBuilder()
+object SpecialBuilder_Version: SpecialBuilder(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

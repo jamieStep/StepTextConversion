@@ -41,7 +41,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
-object PA_StrongsHandler: PA()
+object PA_StrongsHandler: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

@@ -3,8 +3,10 @@ package org.stepbible.textconverter.protocolagnosticutils
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.PA_Utils.deleteLeadingAndTrailingWhitespace
 import org.stepbible.textconverter.protocolagnosticutils.PA_Utils.isExtendedWhitespace
 import org.w3c.dom.Node
@@ -27,7 +29,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-object PA_CanonicalHeadingsHandler: PA()
+object PA_CanonicalHeadingsHandler: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -59,7 +61,7 @@ object PA_CanonicalHeadingsHandler: PA()
         run {
           dataCollection.getRootNodes().forEach { rootNode ->
             Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
-            asyncable { PA_CanonicalHeadingsHandlerPerBook(m_FileProtocol).processRootNode(rootNode) }
+            asyncable { PA_CanonicalHeadingsHandlerPerBook(m_FileProtocol, dataCollection.getBibleStructure()).processRootNode(rootNode) }
           } // forEach
         } // run
       } // Parallel
@@ -71,7 +73,7 @@ object PA_CanonicalHeadingsHandler: PA()
 
 
 /******************************************************************************/
-private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
+private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m_BibleStructure: BibleStructure)
 {
   /****************************************************************************/
   fun processRootNode (rootNode: Node)
@@ -83,6 +85,22 @@ private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProt
   /****************************************************************************/
   private fun processChapter (chapterNode: Node)
   {
+    /**************************************************************************/
+    /* If we have nodes which should be treated as a canonical title but which
+       are not currently contained within a canonical title node, remedy
+       that. */
+
+    val nodesToBeUsedAsCanonicalTitle = m_BibleStructure.getNodeListForCanonicalTitle(m_FileProtocol.getSidAsRefKey(chapterNode))
+    if (null != nodesToBeUsedAsCanonicalTitle && null == nodesToBeUsedAsCanonicalTitle.firstOrNull { m_FileProtocol.isCanonicalTitleNode(it) } )
+    {
+      val titleNode = m_FileProtocol.makeCanonicalTitleNode(chapterNode.ownerDocument)
+      Dom.insertNodeBefore(nodesToBeUsedAsCanonicalTitle[0], titleNode)
+      Dom.deleteNodes(nodesToBeUsedAsCanonicalTitle)
+      Dom.addChildren(titleNode, nodesToBeUsedAsCanonicalTitle)
+    }
+
+
+
     /**************************************************************************/
     /* This gives a Pair containing two lists, the first containing all of the
        canonical title details which appear at the start of chapters, and the
@@ -144,20 +162,46 @@ private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProt
 
   private fun processTitlesAtEndOfChapter (titleNodesInChapter: List<Node>)
   {
+    /**************************************************************************/
     val titleNode = titleNodesInChapter[0]
     deleteLeadingAndTrailingWhitespace(titleNode)
     Dom.setNodeName(titleNode, "hi")
     Dom.deleteAllAttributes(titleNode)
     titleNode["type"] = "italic"
-    Dom.insertNodeBefore(titleNode, Dom.createNode(titleNode.ownerDocument, "<l level='1'/>")) // Add vertical whitespace after title.
+    Dom.insertNodeBefore(titleNode, Dom.createNode(titleNode.ownerDocument, "<l level='1'/>")) // Add vertical whitespace before title.
     IssueAndInformationRecorder.setReformattedTrailingCanonicalTitles()
 
-//    Dbg.d(titleNodesInChapter[0].ownerDocument)
+
+
+    /**************************************************************************/
+    /* This is a hack, and one which doubtless will come back to bite me at some
+       point.  The processing here kinda assumes that either the title will
+       contain no verse tags, or else that it will contain a single sid / eid
+       pair.  I have been dealing with one text -- lin_MNB -- where this is
+       indeed the case in the input USX, but by the time we get as far as here,
+       the eid has been moved out of the title tag (while the sid remains
+       inside it).  I'm therefore going to move any adjacent eid into the
+       title. */
+
+
 
     val verseTags = titleNode.findNodesByName("verse")
     when (verseTags.size)
     {
       0 -> return
+
+      1 ->
+      {
+        val titleSibling = titleNode.nextSibling
+        if (null != titleSibling && m_FileProtocol.tagName_verse() == Dom.getNodeName(titleSibling) && m_FileProtocol.attrName_verseEid() in titleSibling)
+        {
+          Dom.deleteNode(verseTags[0])
+          Dom.insertNodeBefore(titleNode, verseTags[0])
+          //Dbg.d(titleNode.ownerDocument)
+        }
+        else
+          throw StepExceptionWithoutStackTraceAbandonRun("processTitlesAtEndOfChapter: (A) Invalid number of contained verse tags: ${verseTags.size}.")
+      }
 
       2 ->
       {
@@ -167,7 +211,7 @@ private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProt
         Dom.insertNodeAfter(titleNode, verseTags[1])
       }
 
-      else -> throw StepExceptionWithStackTraceAbandonRun("processTitlesAtEndOfChapter: Invalid number of contained verse tags: ${verseTags.size}.")
+      else -> throw StepExceptionWithoutStackTraceAbandonRun("processTitlesAtEndOfChapter: (B) Invalid number of contained verse tags: ${verseTags.size}.")
     }
   }
 

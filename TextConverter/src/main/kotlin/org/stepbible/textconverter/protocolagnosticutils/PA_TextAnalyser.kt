@@ -7,6 +7,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.FeatureIdentifier
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionNotReallyAnException
 import org.w3c.dom.Node
 
@@ -19,7 +20,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-object PA_TextAnalyser: PA()
+object PA_TextAnalyser: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

@@ -4,6 +4,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.w3c.dom.Node
 
@@ -14,7 +15,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-object PA_CalloutStandardiser: PA()
+object PA_CalloutStandardiser: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

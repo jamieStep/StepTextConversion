@@ -2,6 +2,7 @@ package org.stepbible.textconverter.osisonly
 
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
@@ -242,9 +243,9 @@ private class Osis_CrossReferenceCheckerForBook (val m_DataCollection: X_DataCol
               node["osisRef"] = Ref.rd(refLow).toStringOsis()
             else
               node["osisRef"] = RefRange(refLow, refHigh).toStringOsis()
-
-            return node
           }
+
+          return node
         } // RefRange
       } // when
 
@@ -274,7 +275,7 @@ private class Osis_CrossReferenceCheckerForBook (val m_DataCollection: X_DataCol
 
 
   /****************************************************************************/
-  private fun getOsisIdAsRefKey (node: Node): RefKey = RefCollection.rdOsis(node["osisID"]!!).getFirstAsRefKey()
+  private fun getOsisIdAsRefKey (node: Node): RefKey = RefCollection.rdOsis(node["osisID"]!!.split("!")[0]).getFirstAsRefKey()
 
 
   /****************************************************************************/

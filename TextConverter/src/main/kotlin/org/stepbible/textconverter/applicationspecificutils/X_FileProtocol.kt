@@ -645,7 +645,7 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 
   override fun makeCanonicalTitleNode (doc: Document): Node
   {
-    return doc.createNode("<title type='psalm' canonical='true'>")
+    return doc.createNode("<title type='psalm' canonical='true'/>")
   }
 
 
@@ -994,7 +994,7 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
     m_TagDetails["div:imprimatur"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:index"] = TagDescriptor('X', 'N') //
     m_TagDetails["div:introduction"] = TagDescriptor('N', 'N') //
-    m_TagDetails["div:majorSection"] = TagDescriptor('Y', 'N') //
+    m_TagDetails["div:majorSection"] = TagDescriptor('N', 'N') //
     m_TagDetails["div:map"] = TagDescriptor('X', 'N') //
 
     m_TagDetails["div:outline"] = TagDescriptor('X', 'N') //

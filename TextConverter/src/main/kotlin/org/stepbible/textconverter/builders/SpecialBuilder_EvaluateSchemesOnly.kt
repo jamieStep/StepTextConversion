@@ -9,6 +9,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Ste
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import java.io.File
 import kotlin.system.exitProcess
 
@@ -21,7 +22,7 @@ import kotlin.system.exitProcess
   * @author ARA "Jamie" Jamieson
   */
 
-object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
+object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -63,7 +64,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
      processed and to report how well it fits with each of the schemes
      supported by osis2mod); or we may be being called because the user has
      specified basic? or academic? as reversification options, which leave it
-     to the converter to decide whether the text fits NRSV(A) well enough not
+     to the converter to decide whether the text fits KJV(A) well enough not
      to require reversification.
 
      In the former case, we merely write a report file.  In the latter, we make
@@ -95,7 +96,6 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
   private fun evaluateScheme (scheme: String, bibleStructureToCompareWith: BibleStructure): Evaluation
   {
     /**************************************************************************/
-//    Dbg.dCont(scheme, "nrsv")
 //    Dbg.dCont(scheme, "kjv")
 
 
@@ -174,7 +174,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
                     # your text conforms (or more or less conforms).
                     #
                     # If you are applying reversification, the processing always forces the scheme
-                    # to be NRSV(A), and since you have no choice in the matter, this present file
+                    # to be KJV(A), and since you have no choice in the matter, this present file
                     # is of no interest.
                     #
                     # If you are _not_ applying reversification, however, you need to choose one of
@@ -293,8 +293,8 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder()
       }
     }
 
-    // Want to favour NRSV(A) over other schemes which may score the same.
-    val scoreForSorting: Double = if ("nrsv" == scheme) score.toDouble() - 0.2 else if ("nrsva" == scheme) score.toDouble() - 0.1 else score.toDouble()
+    // Want to favour KJV(A) over other schemes which may score the same.
+    val scoreForSorting: Double = if ("kjv" == scheme) score.toDouble() - 0.2 else if ("kjva" == scheme) score.toDouble() - 0.1 else score.toDouble()
   }
 
 

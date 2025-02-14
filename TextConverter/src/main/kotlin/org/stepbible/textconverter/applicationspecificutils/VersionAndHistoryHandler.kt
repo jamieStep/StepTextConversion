@@ -3,6 +3,7 @@ package org.stepbible.textconverter.applicationspecificutils
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils
 import java.io.File
 import java.time.LocalDate
 
@@ -19,6 +20,10 @@ import java.time.LocalDate
  * module, have just produced one of them, and are mow simply producing the
  * other.  (You can force an up-issue -- ie can ignore this check -- using the
  * *forceUpIssue* flag on the command line.)
+ *
+ * You can also specify stepUseExistingHistory (or just useExistingHistory on
+ * the command line) in order to have the system assume that the most recent
+ * history and version information in step.conf is ok and should not be updated.
  *
  * The Crosswire documentation gives details of a version indicator and history
  * details which are to appear in the Sword configuration file.
@@ -241,7 +246,9 @@ object VersionAndHistoryHandler: ObjectInterface
 
     val newText ="SupplierReason: " + ConfigData.get("stepSupplierUpdateReason", "N/A") + "; StepReason: ${ConfigData.get("stepStepUpdateReason", "N/A")}."
     val prevText = if (m_HistoryLinesForThisAudience.isEmpty()) "" else m_HistoryLinesForThisAudience[0].text
-    if (newText.lowercase() == prevText.lowercase() && !ConfigData.getAsBoolean("stepForceUpIssue", "no"))
+    var useExisting = ConfigData.getAsBoolean("stepUseExistingHistory", "no")
+    if (!useExisting) useExisting = StepStringUtils.removePunctuationAndSpaces(newText).equals(StepStringUtils.removePunctuationAndSpaces(prevText), ignoreCase = true) && !ConfigData.getAsBoolean("stepForceUpIssue", "no")
+    if (useExisting)
     {
       ConfigData["stepTextRevision"] = previousStepVersion
       ConfigData["stepUpIssued"] = "n"
@@ -258,7 +265,7 @@ object VersionAndHistoryHandler: ObjectInterface
     val newStepVersion = getNewVersion(previousStepVersion)
     ConfigData["stepTextRevision"] = newStepVersion
     ConfigData["stepUpIssued"] = "y"
-    m_HistoryLinesForThisAudience.add(0, ParsedHistoryLine(targetAudienceSelector, newStepVersion, dateToString(LocalDate.now()), ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!, newText))
+    m_HistoryLinesForThisAudience.add(0, ParsedHistoryLine(targetAudienceSelector, newStepVersion, dateToString(LocalDate.now()), ConfigData["swordTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!, newText))
 
 
 

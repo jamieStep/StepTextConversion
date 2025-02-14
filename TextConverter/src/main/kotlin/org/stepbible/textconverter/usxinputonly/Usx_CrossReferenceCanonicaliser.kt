@@ -147,7 +147,7 @@ import java.util.*
  * @author ARA "Jamie" Jamieson
  */
 
- object Usx_CrossReferenceCanonicaliser
+ class Usx_CrossReferenceCanonicaliser
  {
   /****************************************************************************/
   /****************************************************************************/
@@ -161,7 +161,7 @@ import java.util.*
   /**
   * Processes a single document.
   *
-  * @param doc Document to be processed.
+  * @param rootNode Root node for book being processed.
   */
 
   fun process (rootNode: Node) = doIt(rootNode)

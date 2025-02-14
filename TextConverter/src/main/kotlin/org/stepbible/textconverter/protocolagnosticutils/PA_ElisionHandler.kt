@@ -40,7 +40,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-object PA_ElisionHandler: PA()
+object PA_ElisionHandler: PA(), ObjectInterface
 {
   /****************************************************************************/
   /* NOTE: Previous versions of this code assumed that verse ends were already

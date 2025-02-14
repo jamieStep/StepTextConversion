@@ -16,26 +16,16 @@ import java.util.*
  *
  *
  *
- * ## Use
- *
- * This class should never be instantiated directly.  Callers wishing to use a
- * reversification handler should use the *instance* method of
- * [PA_ReversificationUtilities] to obtain an instance of a flavour of
- * reversification handler relevant to the present run.
- *
- *
- *
- *
  * ## Reversification flavours
  *
  * At one stage we were contemplating two forms of reversification -- one, which
  * I dubbed 'conversion-time', entailed physically restructuring the text during
- * the conversion process so as to end up with a module which was fully NRSVA
+ * the conversion process so as to end up with a module which was fully KJVA
  * compliant.  The other ('runtime') involved -- at least to a first
  * approximation -- nothing more than recording details of the way in which the
- * text deviated from NRSVA, this information then being used by a revised form
+ * text deviated from KJVA, this information then being used by a revised form
  * of osis2mod and the run-time system to restructure the text on the fly when
- * NRSVA compliance was needed in support of STEPBible's added value features.
+ * KJVA compliance was needed in support of STEPBible's added value features.
  *
  * At the time of writing, conversion-time restructuring is not really being
  * considered seriously, since such restructuring is ruled out by the licence
@@ -108,7 +98,7 @@ open class PA_ReversificationHandler internal constructor (): PA ()
   /****************************************************************************/
   /**
   * Returns information needed by our own version of osis2mod and JSword to
-  * handle the situation where we have a Bible which is not NRSV(A)-compliant,
+  * handle the situation where we have a Bible which is not KJV(A)-compliant,
   * and which we are not restructuring during the conversion process.
   *
   * The return value is a list of RefKey -> RefKey pairs, mapping source verse

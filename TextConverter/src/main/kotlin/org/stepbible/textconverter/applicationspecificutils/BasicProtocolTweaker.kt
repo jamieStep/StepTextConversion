@@ -48,7 +48,7 @@ interface BasicProtocolTweaker
 * @author ARA "Jamie" Jamieson
 */
 
-object Osis_BasicTweaker: BasicProtocolTweaker
+object Osis_BasicTweaker: BasicProtocolTweaker, ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

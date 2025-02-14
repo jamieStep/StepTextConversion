@@ -25,7 +25,7 @@ import org.w3c.dom.Node
 * @author ARA "Jamie" Jamieson
 */
 
-object PA_VerseEndRemover: PA()
+object PA_VerseEndRemover: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

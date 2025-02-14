@@ -285,7 +285,7 @@ object PA_ReversificationDataHandler: PA()
 
 
     /**************************************************************************/
-    return m_RuleEvaluator.rulePasses(dataRow.getField("Tests"), dataRow.toString())
+    return m_RuleEvaluator.rulePasses(dataRow.getField("Tests"), dataRow)
   }
 
 
@@ -295,7 +295,6 @@ object PA_ReversificationDataHandler: PA()
   private fun loadRow (rawData: String, rowNumber: Int)
   {
     /**************************************************************************/
-    //Dbg.d(rowNumber)
     //Dbg.d(rawData)
     //Dbg.dCont(rawData, "Gen.32:33")
 
@@ -380,6 +379,11 @@ object PA_ReversificationDataHandler: PA()
 
   private fun canonicaliseAndCorrectData (dataRow: ReversificationDataRow)
   {
+    /**************************************************************************/
+    //Dbg.d(9003 == dataRow.rowNumber)
+
+
+
     /**************************************************************************/
     /* Get the canonical form of the action name.  This is the form as supplied,
        but with the '*' used to mark Moves removed, spaces suppressed and

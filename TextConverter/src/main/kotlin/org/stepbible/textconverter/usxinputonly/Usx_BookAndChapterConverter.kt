@@ -43,7 +43,7 @@ import org.w3c.dom.Document
 * @author ARA "Jamie" Jamieson
 */
 
-object Usx_BookAndChapterConverter
+object Usx_BookAndChapterConverter: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

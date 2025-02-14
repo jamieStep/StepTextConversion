@@ -314,7 +314,7 @@ object MiscellaneousUtils: ObjectInterface
     val packageName = getPackageName(MainProcessor::class)
     val objects = getSubtypes(ObjectInterface::class.java, packageName)
     objects.forEach {
-      //Rpt.report(1, "Initialising ${it.name}.")
+      //Dbg.d("Initialising ${it.name}.")
       it.getField("INSTANCE").get(null)
     }
   }

@@ -15,6 +15,7 @@ import org.w3c.dom.Node
 import java.io.File
 import java.util.concurrent.ConcurrentHashMap
 import java.util.regex.Pattern
+import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType
 
 
 /******************************************************************************/
@@ -28,7 +29,7 @@ import java.util.regex.Pattern
  * @author ARA "Jamie" Jamieson
  */
 
-object Usx_OsisCreator
+object Usx_OsisCreator: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -159,7 +160,7 @@ object Usx_OsisCreator
 
 
     /*************************************************************************/
-    return BookOrdering.getOrder().map { chunks[it] }.joinToString("")
+    return BookOrdering.getOrder().joinToString(""){ chunks[it] ?: "" }
   }
 
 

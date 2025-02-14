@@ -57,7 +57,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-object PA_TableHandler: PA()
+object PA_TableHandler: PA(), ObjectInterface
 {
   /****************************************************************************/
   /* NOTE: Previous versions of this code assumed that verse ends were already

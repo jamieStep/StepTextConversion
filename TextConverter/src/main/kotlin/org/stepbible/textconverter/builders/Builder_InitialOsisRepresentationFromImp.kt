@@ -46,7 +46,7 @@ import java.io.File
  * @author ARA "Jamie" Jamieson
  */
 
-object Builder_InitialOsisRepresentationFromImp: Builder()
+object Builder_InitialOsisRepresentationFromImp: Builder(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -168,7 +168,6 @@ object Builder_InitialOsisRepresentationFromImp: Builder()
   /****************************************************************************/
   private fun fileHeader ()
   {
-    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(m_BookNumbers.toList())
     appendText(Osis_Utils.fileHeader(m_BookNumbers.toList()))
   }
 

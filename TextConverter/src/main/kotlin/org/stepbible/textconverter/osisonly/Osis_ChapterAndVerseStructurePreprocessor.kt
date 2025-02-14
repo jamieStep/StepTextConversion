@@ -24,7 +24,7 @@ import org.w3c.dom.Node
  * @author ARA Jamieson
  */
 
-object Osis_ChapterAndVerseStructurePreprocessor
+object Osis_ChapterAndVerseStructurePreprocessor: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

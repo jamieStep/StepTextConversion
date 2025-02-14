@@ -5,12 +5,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodeByName
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodesByAttributeValue
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import java.io.File
 
@@ -32,7 +29,7 @@ import java.io.File
   * @author ARA "Jamie" Jamieson
   */
 
-object Builder_InitialOsisRepresentationFromOsis: Builder ()
+object Builder_InitialOsisRepresentationFromOsis: Builder (), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

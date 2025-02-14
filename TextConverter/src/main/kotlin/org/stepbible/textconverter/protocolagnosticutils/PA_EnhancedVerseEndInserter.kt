@@ -1,12 +1,14 @@
 package org.stepbible.textconverter.protocolagnosticutils
 
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Node
 import java.io.File
 import java.util.*
+import kotlin.reflect.jvm.internal.impl.load.kotlin.JvmType
 
 
 /******************************************************************************/
@@ -49,7 +51,7 @@ import java.util.*
 * @author ARA "Jamie" Jamieson
 */
 
-object PA_EnhancedVerseEndInserter: PA()
+object PA_EnhancedVerseEndInserter: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -58,14 +60,14 @@ object PA_EnhancedVerseEndInserter: PA()
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
- 
+
   /****************************************************************************/
   /**
   * Tries to place verse eids in optimal locations.
-  * 
+  *
   * @param dataCollection Data to be processed.
   */
-  
+
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
@@ -80,10 +82,10 @@ object PA_EnhancedVerseEndInserter: PA()
     } // reportWithContinuation
   } // fun
 }
-  
-  
-  
-  
+
+
+
+
 /******************************************************************************/
 private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProtocol)
 {
@@ -145,6 +147,8 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
         if ("tableElision" != NodeMarker.getElisionType(verses[i]))
           insertVerseEnd(verses[i], verses[i + 1])
     }
+
+//    Dbg.d(rootNode.ownerDocument)
   }
 
 
@@ -162,6 +166,11 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
   private fun insertVerseEnd (sidWhoseEidWeAreCreating: Node, nextVerseSid: Node)
   {
     /**************************************************************************/
+    //val dbg = Dbg.dCont(Dom.toString(sidWhoseEidWeAreCreating), "Acts.24.7")
+
+
+
+    /**************************************************************************/
     if ("_Dummy" in sidWhoseEidWeAreCreating)
       return
 
@@ -169,36 +178,166 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
 
     /**************************************************************************/
     val eid = m_FileProtocol.makeVerseEidNode(sidWhoseEidWeAreCreating.ownerDocument, sidWhoseEidWeAreCreating[m_FileProtocol.attrName_verseSid()]!!)
-//    Dbg.d(Dom.toString(eid))
-//    if ("Gen.2.1" in Dom.toString(eid))
-//      Dbg.d(sidWhoseEidWeAreCreating.ownerDocument)
+
+
+
+    /**************************************************************************/
+    /* Work backwards from just before the next eid node until we hit a
+       canonical text node.  I work backwards from the eid rather than forward
+       from the sid because it's likely to be quicker -- most verses are likely
+       to end somewhere very close to the eid. */
+
+    val sidIx = m_NodeMap[sidWhoseEidWeAreCreating]!!
+    val nextSidIx = sidIx + 1 + m_AllNodes.subList(sidIx + 1, m_AllNodes.size).indexOfFirst { m_FileProtocol.tagName_verse() == Dom.getNodeName(it) }
+    var lastCanonicalIx = nextSidIx
+    while (true)
+    {
+      val node = m_AllNodes[--lastCanonicalIx]
+
+      if (node === sidWhoseEidWeAreCreating)
+        break //throw StepExceptionWithStackTraceAbandonRun("insertVerseEnd empty verse not expected: ${Dom.toString(sidWhoseEidWeAreCreating)}.")
+
+      val isCanonical = m_FileProtocol.isCanonicalNode(node)
+      val isWhitespace = Dom.isWhitespace(node)
+      val nodeName = Dom.getNodeName(node)
+
+      if ("#text" == nodeName && !isWhitespace && isCanonical)
+        break // We've hit a non-blank canonical text node.  The eid must fall somewhere after this.
+
+      if (isCanonical && !isWhitespace && !node.hasChildNodes()) // This is intended to cater for things like eg Selah, which is canonical, but has no children.
+        break                                                    // I _think_ that anything else canonical will contain text, which the previous test will pick up.
+    }
+
+
+
+    /**************************************************************************/
+    fun getLevel (node: Node): Int
+    {
+      var res = 0
+      var n: Node? = node
+
+      while (null != n)
+      {
+        ++res
+        n = n.parentNode
+      }
+
+      return res
+    }
+
+
+
+    /**************************************************************************/
+    /* lastCanonicalIx now points at the ... well, the last canonical node.  We
+       know that the eid must be inserted somewhere after this, but we still
+       have some flexibility.  If the intended eid location would not make the
+       sid and eid into siblings, we can move the eid rightwards through its
+       siblings and then upwards through its ancestor chain.  However, there is
+       no point in doing that if it takes us past the level at which the sid
+       lies -- if that happens, then we know that there is actually nowhere we
+       can place the eid, so we have to give up. */
+
+    val initialInsertAfterNode = m_AllNodes[lastCanonicalIx]
+    var insertAfterNode = m_AllNodes[lastCanonicalIx]
+    val sidLevel = getLevel(sidWhoseEidWeAreCreating)
+    var insertAfterNodeLevel = getLevel(insertAfterNode)
+    while (!Dom.isSiblingOf(insertAfterNode, sidWhoseEidWeAreCreating) && insertAfterNodeLevel >= sidLevel)
+    {
+      --insertAfterNodeLevel
+      insertAfterNode = insertAfterNode.parentNode
+    }
+
+
+
+    /**************************************************************************/
+    /* If we managed to get to a sibling position, then we need to insert after
+       insertAfterNode.  If we didn't, then -- so far as I can manage to work
+       out -- we might as well simply position the node after the initial
+       position. */
+
+    var crossBoundary = false
+    if (!Dom.isSiblingOf(insertAfterNode, sidWhoseEidWeAreCreating))
+    {
+      insertAfterNode = initialInsertAfterNode
+      crossBoundary = true
+    }
+
+
+
+    /**************************************************************************/
+    /* Didn't find a good place to park the eid.  We therefore have to accept
+       the present location (and need to mark it as cross-boundary). */
+
+    Dom.insertNodeAfter(insertAfterNode, eid)
+    if (crossBoundary)
+      NodeMarker.setCrossBoundaryMarkup(sidWhoseEidWeAreCreating)
+  }
+
+
+  /****************************************************************************/
+  /* The aim here is to place the verse-end.  It can't come after the next
+     verse-start.  But it does have to come after all canonical nodes, and
+     also any pseudo-canonical nodes like notes.  Except ...
+
+     Just very occasionally we also have to cater for the possibility that
+     there may be a canonical title tag lying around.  At present I think this
+     can only be (in OSIS terms) title:psalm or title:acrostic.  These are
+     assumed to belong to the _next_ verse, and therefore we can't go past
+     them. */
+
+  private fun insertVerseEndOLD (sidWhoseEidWeAreCreating: Node, nextVerseSid: Node)
+  {
+    /**************************************************************************/
+    if ("_Dummy" in sidWhoseEidWeAreCreating)
+      return
+
+
+
+    /**************************************************************************/
+    val eid = m_FileProtocol.makeVerseEidNode(sidWhoseEidWeAreCreating.ownerDocument, sidWhoseEidWeAreCreating[m_FileProtocol.attrName_verseSid()]!!)
 
 
 
     /**************************************************************************/
     /* Work forward from the node after the sid looking for the rightmost
-       canonical node, and stopping once we hit the next verse sid.  I _think_
-       I need look only at text nodes and notes here.  True, things like
-       canonical headings also need to remain with verses, but they will
-       contain text which itself is recognised here as canonical, and it
-       should be enough to recognise the text. */
+       canonical node, and stopping once we hit the next verse sid.
+
+       The aim here is to leave lastCanonicalIx pointing at the last
+       _definitely_ canonical node.  This will normally be a text node,
+       but it may also be a note node -- note nodes need special processing
+       because normally they are pseudo-canonical (ie they need to remain as
+       part of their owning verses), but occasionally they may appear outside
+       of verses, where they are non-canonical.  (Except that they don't
+       actually seem to work outside of verses ...)
+
+       There may still be skippable nodes after the last canonical node --
+       empty para nodes and empty poetry nodes and blank text can all be
+       treated as either canonical or non-canonical depending upon context.
+       We worry about that shortly. */
 
     var ix = m_NodeMap[sidWhoseEidWeAreCreating]!!
     val ixPastEnd = m_NodeMap[nextVerseSid]!!
-    var lastCanonicalIx = -1
+    var lastDefinitelyCanonicalIx = -1
+    var lastPotentiallyCanonicalIx = -1
     while (++ix != ixPastEnd)
     {
       val node = m_AllNodes[ix]
 
       if (m_FileProtocol.isCanonicalTitleNode(node) || m_FileProtocol.isAcrosticDivNode(node) || m_FileProtocol.isSpeakerNode(node))
+      {
+        lastPotentiallyCanonicalIx = ix
+        while (Dom.isDescendantOf(m_AllNodes[ix], m_AllNodes[++lastPotentiallyCanonicalIx]))
+          ;
+        ix = lastPotentiallyCanonicalIx--
         continue
+      }
 
       when (Dom.getNodeName(node))
       {
         "#text" ->
         {
           if (!Dom.isWhitespace(node) && (m_FileProtocol.isCanonicalNode(node) || m_FileProtocol.treatAsCanonicalNodeEvenThoughNot(node)))
-            lastCanonicalIx = ix
+            lastDefinitelyCanonicalIx = ix
         }
 
 
@@ -212,16 +351,7 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
         "note" ->
         {
           if (m_FileProtocol.isCanonicalNode(node))
-            lastCanonicalIx = ix
-        }
-
-
-        //
-        "q" ->
-        {
-          //if (!node["marker"].isNullOrEmpty())
-          //Dbg.d("***" + Dom.toString(node))
-          lastCanonicalIx = ix
+            lastDefinitelyCanonicalIx = ix
         }
       } // when
     } // while
@@ -235,11 +365,9 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
        we should ever see this situation, because 'empty' verses aren't actually
        empty.) */
 
-    if (-1 == lastCanonicalIx)
-    {
-      Dom.insertNodeAfter(sidWhoseEidWeAreCreating, eid)
-      return
-    }
+    if (-1 == lastDefinitelyCanonicalIx)
+      throw StepExceptionWithStackTraceAbandonRun("insertVerseEnd unexpected case")
+
 
 
 
@@ -255,7 +383,17 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
        do that are non-canonical -- and we can repeat this up the tree if
        necessary. */
 
-    ix = lastCanonicalIx
+    fun couldBeTreatedAsNonCanonical (node: Node): Boolean
+    {
+      return when (Dom.getNodeName(node))
+      {
+        "#text" -> Dom.isWhitespace(node)
+        "p", "q" -> node.textContent.isBlank()
+        else -> false
+      }
+    }
+
+    ix = lastDefinitelyCanonicalIx
     var proposedInsertAfter = m_AllNodes[ix]
     while (true)
     {
@@ -268,7 +406,7 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
       if (m_FileProtocol.tagName_chapter() == Dom.getNodeName(proposedInsertAfter)) // No point in even thinking of going above chapter level.
         break
 
-      if (!Dom.allFollowingSiblingsSatisfy(proposedInsertAfter, { n -> !m_FileProtocol.isCanonicalNode(n) } ))
+      if (!Dom.allFollowingSiblingsSatisfy(proposedInsertAfter, { n -> couldBeTreatedAsNonCanonical(n) } ))
         break
 
       proposedInsertAfter = proposedInsertAfter.parentNode
@@ -280,7 +418,7 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
     /* Didn't find a good place to park the eid.  We therefore have to accept
        the present location (and need to mark it as cross-boundary). */
 
-    Dom.insertNodeAfter(m_AllNodes[lastCanonicalIx], eid)
+    Dom.insertNodeAfter(m_AllNodes[lastDefinitelyCanonicalIx], eid)
     NodeMarker.setCrossBoundaryMarkup(sidWhoseEidWeAreCreating)
   }
 
@@ -317,7 +455,7 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                              Debug                                    **/
+  /**                               Debug                                    **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/

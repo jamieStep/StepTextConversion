@@ -49,7 +49,7 @@ import java.util.concurrent.ConcurrentHashMap
 * @author ARA 'Jamie' Jamieson
 */
 
-object PA_ContentValidator
+object PA_ContentValidator: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

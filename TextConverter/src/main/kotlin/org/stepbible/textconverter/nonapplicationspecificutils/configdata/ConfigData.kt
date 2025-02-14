@@ -2,6 +2,8 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 
 
+import org.stepbible.textconverter.applicationspecificutils.Digest
+import org.stepbible.textconverter.applicationspecificutils.InternalOsisDataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
@@ -10,7 +12,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.iso.IsoLanguageAndCountryCodes
 import org.stepbible.textconverter.nonapplicationspecificutils.iso.Unicode
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.shared.FeatureIdentifier
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionNotReallyAnException
@@ -19,9 +23,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.Ste
 import java.io.*
 import java.nio.file.Paths
 import java.text.SimpleDateFormat
-import java.time.LocalDate
 import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.io.path.Path
@@ -322,7 +324,7 @@ import kotlin.io.path.Path
  * @author ARA "Jamie" Jamieson
  */
 
-object ConfigData
+object ConfigData: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -650,6 +652,7 @@ object ConfigData
 
     /**************************************************************************/
     delete("stepModuleName"); put("stepModuleName", moduleName, force = true)
+    delete("stepAbbreviationEnglish"); put("stepAbbreviationEnglish", abbreviatedName, force = true)
   }
 
 
@@ -1134,7 +1137,7 @@ object ConfigData
 
   operator fun get (key: String): String?
   {
-    //Dbg.d(key, "stepAboutAsSupplied")
+    //Dbg.d(key, "swordAboutAsSupplied")
     //Dbg.d(key)
     return getInternal(key, true)
   }
@@ -1370,8 +1373,8 @@ object ConfigData
 
   @Synchronized private fun getInternal (key: String, nullsOk: Boolean): String?
   {
-    /************************************************************************/
-    /* CAUTION: With something like @(stepVersificationScheme, NRSV), "NRSV"
+    /**************************************************************************/
+    /* CAUTION: With something like @(stepVersificationScheme, KJV), "KJV"
        is received here as though it were the key for an item of config data,
        when in fact, of course, it's simply a default value for the @(...).
        reportIfMissingDebugInfo therefore needs to be able to cater for this
@@ -1381,14 +1384,39 @@ object ConfigData
 
 
 
-    /************************************************************************/
-    val calculated = getCalculatedValue(key)
-    if (null != calculated && "@get" !in calculated) return calculated
+    /**************************************************************************/
+    /* Check if we have an actual stored value for this.  This ensures that
+       the user can override even where normally values would be
+       calculated. */
+
+    val parmDetails = m_Metadata[key]
 
 
 
-    /************************************************************************/
-    val parmDetails = m_Metadata[key] ?: return null
+    /**************************************************************************/
+    /* If there is no stored value, see if we can obtain a calculated
+       value. */
+
+    if (null == parmDetails)
+    {
+      val calculated = getCalculatedValue(key)
+      if (null != calculated)
+      {
+        return if ("@get" in calculated)
+          expandReferences(calculated, nullsOk)
+        else
+          calculated
+      }
+
+      if (nullsOk)
+        return null
+      else
+        throw StepExceptionWithStackTraceAbandonRun("ConfigData.get for $key: No value has been recorded, and no calculated value is available.")
+    }
+
+
+
+    /**************************************************************************/
     if (null != parmDetails.m_Value && parmDetails.m_Value!!.startsWith("%%%"))
       throw StepExceptionWithStackTraceAbandonRun("ConfigData.get for $key: value was recorded as ${parmDetails.m_Value} and no value has been supplied.")
 
@@ -1422,7 +1450,6 @@ object ConfigData
 
   operator fun set (key: String, value: String)
   {
-    Dbg.dCont(key, "isCopyrightText")
     put(key, value, false)
   }
 
@@ -1458,7 +1485,7 @@ object ConfigData
 
     try
     {
-      //Dbg.d(theLine ?: "")
+      //Dbg.dCont(theLine ?: "", "About=")
       return expandReferencesTopLevel(theLine, nullsOk, errorStack)
     }
     catch (_: StepExceptionBase)
@@ -1724,7 +1751,7 @@ object ConfigData
      else
      {
        if ("\b" in res)
-         throw StepExceptionWithStackTraceAbandonRun("")
+         throw StepExceptionWithStackTraceAbandonRun("Unresolved lookup in $res.")
      }
 
 
@@ -2064,147 +2091,515 @@ object ConfigData
 
 
 
+    /**************************************************************************/
+    /**************************************************************************/
+    /**                                                                      **/
+    /**                           OSIS support                               **/
+    /**                       Sword config information                       **/
+    /**                                                                      **/
+    /**************************************************************************/
+    /**************************************************************************/
+
+    /**************************************************************************/
+    /* Sword configuration information is complicated.
+
+       In part this is because it's not entirely clear from the Sword
+       documentation as to what it should contain.
+
+       In part it's because it's not inherently clear which Sword elements end
+       up on the STEP copyright page. (For example, it seems to make sense to
+       include anything at all which might be vaguely copyright-related in the
+       Sword 'About' parameter, where it can form part of a single dialogue.
+       But if you also include bits of copyright information piecemeal against
+       the other Sword attributes which seem to expect it, at least some of these
+       come out on the copyright page, leading to duplication.
+
+       In part it's because we have to superimpose upon all of this our own
+       STEP requirements.
+
+       And in part it's because those requirements get revised an awful lot,
+       not always for any easily-explained reason.  Thus we had rules --
+       admittedly fairly _complicated_ rules -- as to how to construct the
+       text which appears on the Bible chooser to identify a text.  These
+       rules then changed multiple times, and latterly are overridden
+       completely in many cases -- perhaps to reduce the length of the
+       title by four or five characters.
+
+       The overrides are there because we want our modules to have the same
+       names as those produced by other people for the same text; but the
+       overrides go beyond this in removing some of the standard data which
+       we were previously including as part of the title.  The result is that
+       we really have no consistent naming convention or format.  I do still
+       implement rules somewhat akin to the earlier ones, but the chances are
+       that they are never going to get a chance to run.
+
+       Anyway, all of these various complications can make life very difficult
+       when trying to work out how to specify information for use in the Sword
+       configuration file.  A detailed discussion follows, although probably
+       it will end up _so_ detailed as to be of little use.  And bear in mind
+       too that the code will probably change again in future, and chances are
+       that these comments won't.
+       
+       I am working towards something which I believe at least to be consistent.
+       That may, however, be all that it has going for it.
+       
+       At present I'm majoring on things which 'matter' in the Sword config
+       file, or on things which you might want to override in the config data,
+       or on things which are particularly complicated.
+       
+       Something matters if it is exposed to the Sword processing.  There are
+       various values in the Sword config file which I put there as comments.
+       These might merit similar special attention, but at the moment they
+       aren't getting it because there are more important things to do -- they
+       are things which _don't_ matter.
+
+       Something is complicated if either it has to be calculated, or if it is
+       assembled out of other bits.
+       
+       All of these are represented by STEP configuration parameters, but I
+       depart from my normal convention, and give them names starting 'sword'
+       rather than 'step'.
+       
+       I also try to group the names together -- so that, for example, all of
+       the elements which normally go to form the title as it appears in the
+       STEP Bible chooser have names with the same prefix.
+       
+       Parameters fall into two categories.  If they have 'Assembly' in their
+       names, then the parameter (if left to its own devices) gathers together
+       other information and formats it in a standard manner.  Otherwise they
+       supply basic atoms of information.
+       
+       You can override any of them in the normal way.  If you override an
+       Assembly parameter, then you take it on yourself to put together all
+       of the relevant information in an appropriate format.  Alternatively
+       you can override any of the atomic parameters, but leave the Assembly
+       parameter intact, in which case you will get a standard assemblage of
+       information in a standard format, but it will include your overrides.
+
+       If you do not override an atom, then accessing it will invoke the
+       standard processing to supply it.  This means that you can, if you
+       wish, assemble something out of a combination of overrides and standard
+       values.
+       
+       Most of these parameters (even the atomic ones) involve at least a
+       modicum of processing, and are therefore represented here by
+       _simulated_ parameters based upon processing methods.  The processing
+       will run only where you do not override the parameters, however.
+       
+       Details of the Sword parameters and how they appear in our own processing
+       are given in swordTemplateConfigFile.conf. 
+     */
+
+
+
+    /**************************************************************************/
+    /**************************************************************************/
+    /**************************************************************************/
+    /* Copyright details.  Often contains a lot of information and makes up the
+       bulk of the STEP copyright page. */
+
+    /**************************************************************************/
+    /* This is the thing which is normally copied to the Sword config file.
+
+       swordAboutAsSupplied comes from the translators / metadata or whatever.
+
+       stepSwordCopyrightDetailsConversionDetails is determined automatically
+         based upon what is done within the conversion processing.
+
+       stepSwordCopyrightDetailsAdditionalInformationSuppliedByUs allows the
+         caller to record any additional special information.  It comes out
+         at the end.
+         
+       The three elements (or whichever of them are present) are concatenated,
+       separates by newlines, and then returned with a modicum of markup which
+       later processing turns into an appropriate form. */
+
+    private fun swordCopyrightTextAssembly (): String
+    {
+      /************************************************************************/
+      var copyrightInformationAsSuppliedByTranslators = get("swordAboutAsSupplied")!! + (get("swordDerivedWorksLimitations") ?: "")
+      var detailsOfConversionProcessing = get("swordCopyrightTextConversionDetails")!!
+      val additionalCopyrightDetailsSuppliedByUs = get("swordCopyrightTextAdditionalInformationSuppliedByUs")
+
+
+
+      /************************************************************************/
+      /* The 'About' information may contain [$COPYRIGHT] ... [/$COPYRIGHT],
+         which I convert here to a prettier format.  That's partly to make
+         things clearer for the user, and partly to make it clearer for us if we
+         need to check the content of a non-English copyright page. */
+
+
+      copyrightInformationAsSuppliedByTranslators = copyrightInformationAsSuppliedByTranslators
+        .replace("[\$COPYRIGHT]",  "<p><b>Copyright statement</b><p><div style='padding-left:2em'>")
+        .replace("[/\$COPYRIGHT]", "</div>")
+
+        .replace("[\$USAGE_RIGHTS]", "<p><br><br><b>Usage rights</b><p><div style='padding-left:2em'>")
+        .replace("[/\$USAGE_RIGHTS]", "</div>")
+
+        .replace("[\$ORGANISATION]", "<p><br><br><b>Additional information</b><p><div style='padding-left:2em'>")
+        .replace("[/\$ORGANISATION]",  "</div>")
+
+        .replace("[\$DERIVED_WORKS_LIMITATIONS]", "<p><br><br><b>If you wish to generate derived works</b><p><div style='padding-left:2em'>")
+        .replace("[/\$DERIVED_WORKS_LIMITATIONS]",  "</div>")
+
+
+
+      /************************************************************************/
+      detailsOfConversionProcessing = "<p><br><br><b>STEPBible information</b><div style='padding-left:2em'>$detailsOfConversionProcessing<br><br>${additionalCopyrightDetailsSuppliedByUs ?: ""}</div>"
+
+
+
+      /************************************************************************/
+      val res = listOfNotNull(copyrightInformationAsSuppliedByTranslators, detailsOfConversionProcessing).joinToString("\n")
+      return res
+
+    //.replace("-", "&nbsp;")
+        //.replace("\n", "NEWLINE")
+        //.replace("^¬*(&nbsp;)*\\s*\\u0001".toRegex(), "") // Get rid of entirely 'blank' lines.
+    }
+
+
+    /**************************************************************************/
+    /* Calculated information, reflecting the processing applied during the
+       conversion processing.  Is preceded by a para and a horizontal rule. */
+
+    private fun swordCopyrightTextConversionDetails (): String
+    {
+      /************************************************************************/
+      val changesAppliedByStep: MutableList<String> = mutableListOf()
+      if (getAsBoolean("stepAddedValueMorphology", "No")) changesAppliedByStep.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Morphology"))
+      if (getAsBoolean("stepAddedValueStrongs", "No")) changesAppliedByStep.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Strongs"))
+
+
+
+      /************************************************************************/
+      /* If we are applying runtime reversification, then probably the only
+         significant changes we make are to add footnotes.
+
+         Some text suppliers require us to own up to making changes, so for
+         safety's sake, I assume all will.  I add the text in both English and
+         vernacular where available.
+
+         (We _may_ also expand elisions and / or restructure tables, and possibly
+         I ought to consider owning up to this at some point.) */
+
+      if ("runtime" == ConfigData["stepReversificationType"])
+      {
+        val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_FootnotesMayHaveBeenAdded")
+        val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_FootnotesMayHaveBeenAdded")
+        var s = english
+        if (vernacular != english) s += " / $vernacular"
+        changesAppliedByStep.add(s)
+      }
+
+
+
+      /************************************************************************/
+      /* Conversion time reversification. */
+
+      else // ("runtime" != ConfigData["stepReversificationType"])
+      {
+        val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+        val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+        var s = english
+        if (vernacular != english) s += " / $vernacular"
+        changesAppliedByStep.add(s)
+      }
+
+
+
+      /************************************************************************/
+      val deletedBooks = ConfigData["stepDeletedBooks"]
+      if (null != deletedBooks)
+        changesAppliedByStep.add("Software limitations mean we have had to remove the following books: ${deletedBooks}.")
+
+
+
+      /************************************************************************/
+      var text = "Sword module ${get("stepModuleName")!!} Rev ${get("stepTextRevision")!!} created by the STEPBible project ${get("stepModuleCreationDate")!!} (${get("swordTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation") ?: ""})."
+      text += "<br>${get("stepThanks")!!}<br>"
+
+      if (changesAppliedByStep.isNotEmpty())
+      {
+        text += "<br>We have made the following changes:<br><div style='padding-left:1em'>"  //TranslatableFixedText.stringFormatWithLookup("V_addedValue_AddedValue")
+        text += changesAppliedByStep.joinToString("<br>- ", prefix = "- ", postfix = "<br>")
+        text += "</div><br>"
+      }
+
+
+
+      /************************************************************************/
+      val stepManuallySuppliedDetailsOfChangesApplied = get("stepManuallySuppliedDetailsOfChangesApplied")
+      if (null != stepManuallySuppliedDetailsOfChangesApplied) text += "<br>${get("stepManuallySuppliedDetailsOfChangesApplied")}"
+
+
+
+      /************************************************************************/
+      val acknowledgementOfDerivedWork = get("swordWordingForDerivedWorkStipulatedByTextSupplier")
+      if (null != acknowledgementOfDerivedWork) text += "<br>$acknowledgementOfDerivedWork"
+
+
+
+      /************************************************************************/
+      return text
+    }
+
+
+
+
+
+    /**************************************************************************/
+    /**************************************************************************/
+    /**************************************************************************/
+    /* Bible title.  Appears in the Bible chooser. */
 
     /****************************************************************************/
-    /****************************************************************************/
-    /**                                                                        **/
-    /**                            OSIS support                                **/
-    /**                                                                        **/
-    /****************************************************************************/
-    /****************************************************************************/
-
-    /****************************************************************************/
-    /** This gets rather complicated.  Originally I had hoped to be able to define
-    *  this in the same was as all the other config information -- ie in a config
-    *  file -- but there are just too many conditional inclusions etc for this
-    *  to be really feasible.
+    /**
+    * This gets rather complicated.  Originally I had hoped to be able to define
+    * this in the same was as all the other config information -- ie in a config
+    * file -- but there are just too many conditional inclusions etc for this
+    * to be really feasible.
+    *
+    * The outside world can obtain the value here by accessing the config
+    * parameter stepTextDescriptionAsItAppearsOnBibleList.  The user can
+    * override this in its entirety if necessary, in which case the calculations
+    * here are not performed.
+    *
+    * Otherwise, the result is assembled out of the various configuration
+    * parameters detailed under 'Get basic components' in the in-code
+    * comments, all of which are available to the user if they want to
+    * assemble their own title using them, and all of which can be overridden.
+    *
+    * The assembly is somewhat selective, the aim being to avoid duplicating
+    * information.
     */
 
-    fun makeBibleDescriptionAsItAppearsOnBibleList (bookNumbers: List<Int>)
+    private fun swordBibleChooserTextAssembly (): String
     {
-       /**********************************************************************/
-       /* Allow the user to specify a value where it is necessary to force the
-          issue (typically this will be where a module already exists and we
-          want to retain its name). */
+        /**********************************************************************/
+        /* Get basic components. */
 
-       if (null != ConfigData["stepBibleDescriptionAsItAppearsOnBiblePicker"])
-         return
+        var englishTitle = get("swordBibleChooserTextBibleNameEnglish")!!
+        val englishTitleCanonicalised = get("swordBibleChooserTextBibleNameEnglishCanonicalised")!!
+        var vernacularTitle = get("swordBibleChooserTextBibleNameVernacular") // Null if essentially the same as the English.
 
+        val englishAbbreviation = get("swordBibleChooserTextAbbreviationEnglish")!!
+        val vernacularAbbreviation = get("swordBibleChooserTextAbbreviationVernacular") // Null if essentially the same as the English.
 
+        var officialYear = get("swordBibleChooserTextOfficialYear")
 
-       /**********************************************************************/
-        /* We want the English and vernacular titles, except where they are
-           basically the same thing, in which case the vernacular is essentially
-           irrelevant.  I further assume here that the vernacular title may not
-           be available, but that the English title will always be available. */
+        val countriesWhereUsedPortion = get("swordBibleChooserTextCountriesWhereLanguageUsed")
 
-        var englishTitle = get("stepBibleNameEnglish")!!
-        var vernacularTitle = get("stepBibleNameVernacular")
+        var coveragePortion = get("swordBibleChooserTextPortionOfBibleCovered")
 
-        if (null != vernacularTitle)
-        {
-          val englishTitleLowerCase = englishTitle.lowercase()
-          val vernacularTitleLowerCase = vernacularTitle.lowercase()
-
-          if ("eng".equals(get("stepLanguageCode3Char"), ignoreCase = true) ||
-              vernacularTitleLowerCase in englishTitleLowerCase ||
-              englishTitleLowerCase in vernacularTitleLowerCase)
-            vernacularTitle = null
-        }
+        var abbreviatedNameOfRightsHolder = get("swordTextOwnerOrganisationAbbreviatedName")
 
 
 
         /**********************************************************************/
-        /* And the English and vernacular abbreviations, except, again, where
-           they are essentially the same thing. */
+        /* Start assembling things. */
 
-        val englishAbbreviation = get("stepAbbreviationEnglish")!!
-        var vernacularAbbreviation = get("stepAbbreviationVernacular")
-
-        if (null != vernacularAbbreviation && englishAbbreviation.lowercase() == vernacularAbbreviation.lowercase())
-          vernacularAbbreviation = null
-
-
-
-         /**********************************************************************/
-         englishTitle = "$englishTitle ($englishAbbreviation)"
-         if (null != vernacularAbbreviation && null != vernacularTitle) vernacularTitle = "$vernacularTitle ($vernacularAbbreviation)"
-         val titlePortion = listOfNotNull(englishTitle, vernacularTitle).joinToString(" / ")
+        englishTitle = "$englishTitle ($englishAbbreviation)"
+        if (null != vernacularAbbreviation && null != vernacularTitle) vernacularTitle = "$vernacularTitle ($vernacularAbbreviation)"
+        val titlePortion = listOfNotNull(englishTitleCanonicalised, vernacularTitle).joinToString(" / ")
 
 
 
         /**********************************************************************/
-        var abbreviatedNameOfRightsHolder = get("stepTextOwnerOrganisationAbbreviatedName")
+        /* We want the rights holder only if it is not already mentioned in the
+           title. */
+
         if (null != abbreviatedNameOfRightsHolder && abbreviatedNameOfRightsHolder.lowercase() in titlePortion.lowercase()) abbreviatedNameOfRightsHolder = null
 
 
 
         /**********************************************************************/
-        var officialYear = makeStepBibleDescriptionAsItAppearsOnBiblePicker_getOfficialYear()
+        /* We want the official year only if it does not appear within the
+           titles. */
+
         if (null != officialYear)
         {
-           if (englishTitle.contains(officialYear))
-             officialYear = null
-           else if (null != vernacularTitle && vernacularTitle.contains(officialYear))
-             officialYear = null
+          if (englishTitle.contains(officialYear))
+            officialYear = null
+          else if (null != vernacularTitle && vernacularTitle.contains(officialYear))
+            officialYear = null
         }
 
 
 
         /**********************************************************************/
+        /* Join the rights holder and date if both are available. */
+
         var abbreviatedNameOfRightsHolderAndOfficialYearPortion: String? = listOfNotNull(abbreviatedNameOfRightsHolder, officialYear).joinToString(" ")
 
 
 
         /**********************************************************************/
-        var coveragePortion: String? = makeStepBibleDescriptionAsItAppearsOnBiblePicker_getBiblePortion(bookNumbers)
+        /* We want language details only if it is not English and not already
+           contained within the title. */
+
+        var languagePortion: String? = get("stepLanguageNameInEnglish")!!
+        languagePortion = if ("english".equals(languagePortion, ignoreCase = true))
+          null
+        else if (englishTitle.contains(languagePortion!!, ignoreCase = true))
+          null
+        else
+          " In $languagePortion "
 
 
 
         /**********************************************************************/
-        var languagePortion: String? = makeStepBibleDescriptionAsItAppearsOnBiblePicker_getLanguage(englishTitle)
+        /* We want to drop the coverage details if they merely duplicate
+           information in the canonicalised English title.  At present, all I
+           do is to see if the coverage is given as NT or OT only and if the
+           title contains NT or OT as a word.  Could probably do with something
+           rather better than that eventually. */
+           
+        if (null != coveragePortion)
+        {
+          coveragePortion = coveragePortion.replace(" only", "")
+          if ("NT" == coveragePortion && Regex("\\W+NT\\W+").containsMatchIn(englishTitleCanonicalised))
+            coveragePortion = null
+          else if ("OT" == coveragePortion && Regex("\\W+OT\\W+").containsMatchIn(englishTitleCanonicalised))
+            coveragePortion = null
+        }
 
-
-
-        /**********************************************************************/
-        val languageCode = get("stepLanguageCode3Char")!!
-        val countriesWhereUsedPortion =
-          if (languageCode in "grc.hbo.cmn.deu.eng.fra.fre.ger.nld.por.spa.") // Don't give details for ancient languages, common European languages and a few others.
-            null
-          else
-            "${IsoLanguageAndCountryCodes.getCountriesWhereUsed(languageCode)}."
-
-
-
-        /**********************************************************************/
-        //val moduleMonthYear = makeStepBibleDescriptionAsItAppearsOnBiblePicker_getModuleMonthYear().trim()
 
 
         /**********************************************************************/
         if (null != abbreviatedNameOfRightsHolderAndOfficialYearPortion && abbreviatedNameOfRightsHolderAndOfficialYearPortion.isBlank()) abbreviatedNameOfRightsHolderAndOfficialYearPortion= null
         if (null != coveragePortion && coveragePortion.isBlank()) coveragePortion= null
         if (null != languagePortion && languagePortion.isBlank()) languagePortion= null
-        ConfigData["stepBibleDescriptionAsItAppearsOnBiblePicker"] =
-          listOfNotNull(titlePortion, abbreviatedNameOfRightsHolderAndOfficialYearPortion, coveragePortion, languagePortion, countriesWhereUsedPortion).joinToString(" | ")
+        return listOfNotNull(titlePortion, abbreviatedNameOfRightsHolderAndOfficialYearPortion, coveragePortion, languagePortion, countriesWhereUsedPortion).joinToString(" | ")
+    }
+
+
+    /****************************************************************************/
+    /* Normally we'll simply use the English abbreviation deduced from the module
+       name.  Having this method available lets us use that as a backstop, but
+       have the thing stipulated by way of an override. */
+
+    private fun swordBibleChooserTextAbbreviationEnglish (): String
+    {
+      return get("stepAbbreviationEnglish")!!
+    }
+
+
+    /****************************************************************************/
+    /* Determines the vernacular abbreviation as follows:
+
+       - If no value has been specified, then return null.
+
+       - Otherwise, if the English and vernacular abbreviations are the same
+         (ignoring case), return null.
+
+       - Otherwise return the value specified.
+     */
+
+    private fun swordBibleChooserTextAbbreviationVernacular (): String?
+    {
+      var vernacularAbbreviation: String? = m_Metadata["stepTextDescriptionAbbreviationVernacular"]?.m_Value ?: return null
+      val englishAbbreviation = get("stepAbbreviationEnglish")!!
+
+      if (englishAbbreviation.equals(vernacularAbbreviation, ignoreCase = true))
+        vernacularAbbreviation = null
+
+      return vernacularAbbreviation
+    }
+
+
+    /****************************************************************************/
+    /* Having this intermediary lets us override this if necessary, but fall
+       back if necessary. */
+
+    private fun swordBibleChooserTextBibleNameEnglish (): String
+    {
+      return get("stepBibleNameEnglish")!!
+    }
+
+
+    /****************************************************************************/
+    /* Converts coverage information into standard format. */
+
+    private fun swordBibleChooserTextBibleNameEnglishCanonicalised (): String
+    {
+      val s = get("swordBibleChooserTextBibleNameEnglish")!!.replace("\\s+".toRegex(), " ").trim()
+      return s.replace("(?i)New Testament".toRegex(), "NT")
+              .replace("(?i)Old Testament".toRegex(), "OT")
+              .replace("(?i)N\\.\\s?T\\.".toRegex(), "NT")
+              .replace("(?i)O\\.\\s?T\\.".toRegex(), "OT")
+    }
+
+
+    /****************************************************************************/
+    /* Determines the vernacular name as follows:
+    
+       - If no value has been specified, then returns null.
+       
+       - Otherwise converts both the English and vernacular names to a form
+         devoid of punctuation.  If either contains the other (case-insensitive),
+         returns null.
+         
+       - Otherwise returns the actual vernacular name which was specified.
+    */
+    
+    private fun swordBibleChooserTextBibleNameVernacular (): String?
+    {
+      /****************************************************************************/
+      var vernacularName: String? = m_Metadata["stepTextDescriptionBibleNameVernacular"]?.m_Value ?: return null
+      val englishName = get("stepTextDescriptionBibleNameEnglish")!!
+      
+      val englishModified = StepStringUtils.removePunctuationAndSpaces(englishName)
+      val vernacularModified = StepStringUtils.removePunctuationAndSpaces(vernacularName!!)
+
+      if ("eng".equals(get("stepLanguageCode3Char"), ignoreCase = true)     ||
+          englishModified.contains(vernacularModified, ignoreCase = true)   ||
+          vernacularModified.contains(englishModified, ignoreCase = true)) 
+        vernacularName = null
+        
+        return vernacularName
+    }
+
+
+    /****************************************************************************/
+    /* Gives back a list of codes where the language is used, or null where the
+       language is ancient, common European, or a few others. */
+
+    private fun swordBibleChooserTextCountriesWhereLanguageUsed (): String?
+    {
+      val languageCode = get("stepLanguageCode3Char")!!
+      return if (languageCode.lowercase() in "grc.hbo.cmn.deu.eng.fra.fre.ger.nld.por.spa.") // Don't give details for ancient languages, common European languages and a few others.
+        null
+      else
+        "${IsoLanguageAndCountryCodes.getCountriesWhereUsed(languageCode)}."
     }
 
 
     /****************************************************************************/
     /* Simplest if I just copy the relevant portion of the spec :-
 
-     - The part of the Bible (OT+NT+Apoc) is only stated if it doesn’t contain
-       OT+NT.  This seems to suggest that you don't mention the Apocrypha on
-       a text which contains OT+NT even if it's present, and I suspect that's
-       not what's meant.
+      - The part of the Bible (OT+NT+Apoc) is only stated if it doesn’t contain
+        OT+NT.  This seems to suggest that you don't mention the Apocrypha on
+        a text which contains OT+NT even if it's present, and I suspect that's
+        not what's meant.
 
-     - If there are five books or fewer, they are listed (eg OT:Ps; Lam +NT).
+      - If there are five books or fewer, they are listed (eg OT:Ps; Lam +NT).
 
-     - If there are more than give books, but not the complete set, mark the
-       text as eg 'OT incomplete +NT'.
-    */
+      - If there are more than five books, but not the complete set, mark the
+        text as eg 'OT incomplete +NT'.
 
-    private fun makeStepBibleDescriptionAsItAppearsOnBiblePicker_getBiblePortion (bookNumbers: List<Int>): String?
+       Note that I make the assumption here that this is being called late in
+       the day, and that we therefore want to work with the OSIS internal
+       data collection. */
+
+    private fun swordBibleChooserTextPortionOfBibleCovered (): String?
     {
+        /************************************************************************/
+        val bookNumbers = InternalOsisDataCollection.getBookNumbers()
+
+
+
         /************************************************************************/
         val C_MaxIndividualBooksToReport = 5
         val otBooks = bookNumbers.filter{ BibleAnatomy.isOt(it) }.map{ BibleBookNamesUsx.numberToAbbreviatedName(it) }
@@ -2231,14 +2626,14 @@ object ConfigData
 
 
         /************************************************************************/
-        if (fullOt && fullNt) return if (dcBooks.isEmpty()) null else "+OT2"
-        if (fullOt && ntBooks.isEmpty()) return if (dcBooks.isEmpty()) "OT only" else "OT+OT2 only"
-        if (fullNt && otBooks.isEmpty()) return if (dcBooks.isEmpty()) "NT only" else "OT2+NT only"
+        if (fullOt && fullNt) return if (dcBooks.isEmpty()) null else "+DC"
+        if (fullOt && ntBooks.isEmpty()) return if (dcBooks.isEmpty()) "OT only" else "OT+DC only"
+        if (fullNt && otBooks.isEmpty()) return if (dcBooks.isEmpty()) "NT only" else "DC+NT only"
 
 
 
         /************************************************************************/
-        if (ntBooks.isEmpty() && otBooks.isEmpty()) return "OT2 only"
+        if (ntBooks.isEmpty() && otBooks.isEmpty()) return "DC only"
 
 
 
@@ -2275,7 +2670,7 @@ object ConfigData
 
 
         /************************************************************************/
-        val apocPortion = if (dcBooks.isEmpty()) "" else " OT2 "
+        val apocPortion = if (dcBooks.isEmpty()) "" else " DC "
 
 
 
@@ -2301,7 +2696,7 @@ object ConfigData
         - Date-stamp on the datafile.
         - Date the file was downloaded.
 
-       It's difficult to know what to do with this, not least because everything
+       It's difficult to know what to do with this, not least because every text
        seems to be a law unto itself.
 
        At present I'm dealing with Biblica texts from DBL.  For some of these we
@@ -2350,7 +2745,7 @@ object ConfigData
        my processing in this respect to be comprehensive).  If I _can't_ get it by
        this means, then I don't bother to give a year at all. */
 
-    private fun makeStepBibleDescriptionAsItAppearsOnBiblePicker_getOfficialYear (): String?
+    private fun swordBibleChooserTextOfficialYear (): String?
     {
         /************************************************************************/
         val mainPat = Regex("(?i)(&copy;|©|(copyright))\\W*(?<years>\\d{4}(\\W+\\d{4})*)") // &copy; or copyright symbol or the word 'copyright' followed by any number of blanks and four digits.
@@ -2360,7 +2755,7 @@ object ConfigData
 
 
         /************************************************************************/
-        for (key in listOf("stepAboutAsSupplied", "stepShortCopyright"))
+        for (key in listOf("swordAboutAsSupplied", "swordShortCopyright"))
         {
             var s = get(key) ?: continue
             var matchResult = mainPat.find(s)
@@ -2382,31 +2777,113 @@ object ConfigData
     }
 
 
-    /****************************************************************************/
-    /* We want the language name only if it's not English, and is not already
-    mentioned in the Bible name. */
+    /**************************************************************************/
+    /* List of options taken from the documentation mentioned above.
+       don't change the ordering here -- it's not entirely clear whether
+       order matters, but it may do.
 
-    private fun makeStepBibleDescriptionAsItAppearsOnBiblePicker_getLanguage (bibleNameInEnglish: String): String?
+       Note, incidentally, that sometimes STEP displays an information button at
+       the top of the screen indicating that the 'vocabulary feature' is not
+       available.  This actually reflects the fact that the Strong's feature is
+       not available in that Bible.
+
+       I am not sure about the inclusion of OSISLemma below.  OSIS actually
+       uses the lemma attribute of the w tag to record Strong's information,
+       so I'm not clear whether we should have OSISLemma if lemma appears at
+       all, even if only being used for Strong's; if it should be used if there
+       are occurrences of lemma _not_ being used for Strong's; or if, in fact,
+       it should be suppressed altogether.
+    */
+
+    private fun swordOptions (): String
     {
-        val languageName = get("stepLanguageNameInEnglish")
-        val languageNameLowerCase = languageName!!.lowercase()
-        if ("english" == languageNameLowerCase) return null
-        return if (bibleNameInEnglish.lowercase().contains(languageNameLowerCase)) null else " In $languageName "
+      var res = ""
+      FeatureIdentifier.process(FileLocations.getInternalOsisFilePath())
+      if ("ar" == ConfigData["stepLanguageCode2Char"]) res += "GlobalOptionFilter=UTF8ArabicPoints\n"
+      if (FeatureIdentifier.hasLemma()) res += "GlobalOptionFilter=OSISLemma\n"
+      if (FeatureIdentifier.hasMorphologicalSegmentation()) res += "GlobalOptionFilter=OSISMorphSegmentation\n"
+      if (FeatureIdentifier.hasStrongs()) res += "GlobalOptionFilter=OSISStrongs\n"
+      if (FeatureIdentifier.hasFootnotes()) res += "GlobalOptionFilter=OSISFootnotes\n"
+      if (FeatureIdentifier.hasScriptureReferences()) res += "GlobalOptionFilter=OSISScriprefs\n" // Crosswire doc is ambiguous as to whether this should be plural or not.
+      if (FeatureIdentifier.hasMorphology()) res += "GlobalOptionFilter=OSISMorph\n"
+      if (FeatureIdentifier.hasNonCanonicalHeadings()) res += "GlobalOptionFilter=OSISHeadings\n"
+      if (FeatureIdentifier.hasVariants()) res += "GlobalOptionFilter=OSISVariants\"\n"
+      if (FeatureIdentifier.hasRedLetterWords()) res += "GlobalOptionFilter=OSISRedLetterWords\n"
+      if (FeatureIdentifier.hasGlosses()) res += "GlobalOptionFilter=OSISGlosses\n"
+      if (FeatureIdentifier.hasTransliteratedForms()) res += "GlobalOptionFilter=OSISXlit\n"
+      if (FeatureIdentifier.hasEnumeratedWords()) res += "GlobalOptionFilter=OSISEnum\n"
+      if (FeatureIdentifier.hasGlossaryLinks()) res += "GlobalOptionFilter=OSISReferenceLinks\n"
+      if (FeatureIdentifier.hasStrongs()) res += "Feature=StrongsNumbers\n"
+      //??? if (!FeatureIdentifier.hasMultiVerseParagraphs()) res += "Feature=NoParagraphs\n"
+      return res
+    }
+
+
+    /**************************************************************************/
+    /* Probably to be used only with open access texts (if there).  Biblica open
+      access texts contain the word 'open' (or the vernacular equivalent) in the
+      names as supplied to us.  We do not display that in the names as they
+      appear in the Bible chooser, but we still want this original form for use
+      in the copyright information.  And we want both the English and vernacular
+      form unless they are the same. */
+
+    private fun swordRawBibleNames (): String
+    {
+      val english = (get("stepBibleNameEnglishAsSupplied") ?: get("stepBibleNameEnglish"))!!
+      val vernacular = get("stepBibleNameVernacularAsSupplied") ?: get("stepBibleNameVernacular") ?: ""
+      var res = english
+      if (vernacular.isNotEmpty()) res += "<br>$vernacular"
+      return res
     }
 
 
     /****************************************************************************/
-    /* The spec says that the module date should be included only if we make
-       changes to the text, for example pursuant to reversification.  However,
-       given the potential need to restructure the text so that markup does not
-       run across verse boundaries (to keep osis2mod happy), we almost always
-       _will_ be making changes, so I always give the date.*/
-
-    private fun makeStepBibleDescriptionAsItAppearsOnBiblePicker_getModuleMonthYear (): String
+    private fun swordTextSource (): String
     {
-        val s = DateTimeFormatter.ofPattern("MMM@yy").format(LocalDate.now())
-        return s.replace("@", "'")
+      var textSource = ""
+      if (textSource.isEmpty()) textSource = ConfigData["swordTextRepositoryOrganisationAbbreviatedName"] ?: ""
+      if (textSource.isEmpty()) textSource = ConfigData["swordTextRepositoryOrganisationFullName"] ?: ""
+      if (textSource.isEmpty()) textSource = "Unknown"
+
+      var ownerOrganisation = getOrError("swordTextOwnerOrganisationFullName")
+      if (ownerOrganisation.isNotEmpty()) ownerOrganisation = "&nbsp;&nbsp;Owning organisation: $ownerOrganisation"
+
+      var textDisambiguatorForId = getOrError("swordDisambiguatorForId")
+      if (textDisambiguatorForId.isBlank() || "unknown".equals(textDisambiguatorForId, ignoreCase = true)) textDisambiguatorForId = ""
+
+      var textId: String = ConfigData["swordTextIdSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""
+      if (textId.isBlank() || "unknown".equals(textId, ignoreCase = true)) textId = ""
+
+      val textCombinedId =
+        if (textDisambiguatorForId.isNotEmpty() && textId.isNotEmpty())
+          "$textDisambiguatorForId.$textId"
+        else if (textId.isNotEmpty())
+          "Version $textId"
+        else
+          ""
+
+      return "$textSource $ownerOrganisation $textCombinedId"
     }
+
+
+
+
+
+    /****************************************************************************/
+    /****************************************************************************/
+    /**                                                                        **/
+    /**                        Other calculated values                         **/
+    /**                                                                        **/
+    /****************************************************************************/
+    /****************************************************************************/
+
+    /****************************************************************************/
+    private fun stepDataPath (): String
+    {
+      return Paths.get("./modules/texts/ztext/", get("stepModuleName")).toString().replace("\\", "/") + "/"
+    }
+
+
 
 
 
@@ -2476,7 +2953,7 @@ object ConfigData
 
     private object ConfigFilesStack
     {
-      fun getSummary () = if (m_Summary.isEmpty()) "Calculated" else m_Summary
+      fun getSummary () = m_Summary.ifEmpty { "Calculated" }
 
       fun pop ()
       {
@@ -2571,6 +3048,8 @@ object ConfigData
         res
       },
 
+    "stepDataPath" to { stepDataPath() },
+
     "stepForceVersePerLine" to { "false" },
 
     "stepJarVersion" to { MiscellaneousUtils.getJarVersion() },
@@ -2579,23 +3058,51 @@ object ConfigData
 
     "stepModuleCreationDate" to { SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date()) },
 
-    "stepRawBibleNames" to { getRawBibleNames() },
-
     "stepTextDirection" to { Unicode.getTextDirection(m_SampleText) }, // Need a string taken from a canonical portion of the scripture as input.
 
-    "stepTextDirectionForSword" to
+    "stepTextModifiedDate" to { SimpleDateFormat("dd-MMM-yyyy").format(Date()) },
+
+    "swordBibleChooserTextAbbreviationEnglish" to { swordBibleChooserTextAbbreviationEnglish() },
+
+    "swordBibleChooserTextAbbreviationVernacular" to { swordBibleChooserTextAbbreviationVernacular() },
+
+    "swordBibleChooserTextAssembly" to { swordBibleChooserTextAssembly() },
+
+    "swordBibleChooserTextBibleNameEnglish" to { swordBibleChooserTextBibleNameEnglish() },
+
+    "swordBibleChooserTextBibleNameEnglishCanonicalised" to { swordBibleChooserTextBibleNameEnglishCanonicalised() },
+
+    "swordBibleChooserTextBibleNameVernacular" to { swordBibleChooserTextBibleNameVernacular() },
+
+    "swordBibleChooserTextCountriesWhereLanguageUsed" to { swordBibleChooserTextCountriesWhereLanguageUsed() },
+
+    "swordBibleChooserTextOfficialYear" to { swordBibleChooserTextOfficialYear() },
+
+    "swordBibleChooserTextPortionOfBibleCovered" to { swordBibleChooserTextPortionOfBibleCovered() },
+
+    "swordCopyrightTextAssembly" to { swordCopyrightTextAssembly() },
+
+    "swordCopyrightTextConversionDetails" to { swordCopyrightTextConversionDetails() },
+
+    "swordInputFileDigests" to { Digest.makeFileDigests() },
+
+    "swordOptions" to { swordOptions() },
+
+    "swordTextDirection" to
       {
         val x = (getInternal("stepTextDirection", true) ?: "LTR").uppercase()
         if ("LTR" == x || "LTOR" == x) "LtoR" else "RtoL"
       },
 
-    "stepTextModifiedDate" to { SimpleDateFormat("dd-MMM-yyyy").format(Date()) }
+    "swordRawBibleNames" to { swordRawBibleNames() },
+
+    "swordTextSource" to { swordTextSource() },
   )
 
 
   /****************************************************************************/
   /* Called to check if a given configuration item is actually supplied by a
-     calc_ function.  If it is, it carries out the calculation, and stores the
+     calc function.  If it is, it carries out the calculation, and stores the
      result for future use.  Storing it means that it will not be subject to
      changes if the things upon which it depends change.  It's swings and
      roundabouts as to whether this is the right thing to do, but I think
@@ -2615,26 +3122,5 @@ object ConfigData
     val res = fn()
     if (null != res) put(key, res, false)
     return res
-  }
-
-
-  /****************************************************************************/
-  /* Probably to be used only with open access texts (if there).  Biblica open
-     access texts contain the word 'open' (or the vernacular equivalent) in the
-     names as supplied to us.  We do not display that in the names as they
-     appear in the Bible chooser, but we still want this original form for use
-     in the copyright information.  And we want both the English and vernacular
-     form unless they are the same.
-
-     The information is returned in formatted form for immediate use in the
-     copyright information. */
-
-  private fun getRawBibleNames (): String
-  {
-    val english = (get("stepBibleNameEnglishAsSupplied") ?: get("stepBibleNameEnglish"))!!
-    val vernacular = get("stepBibleNameVernacularAsSupplied") ?: get("stepBibleNameVernacular") ?: ""
-    var res = "<p style='text-align: center>$english"
-    if (vernacular.isNotEmpty()) res += "<br>$vernacular"
-    return "$res</p>"
   }
 }

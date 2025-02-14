@@ -1,5 +1,7 @@
 package org.stepbible.textconverter.builders
 
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+
 /******************************************************************************/
 /**
  * Base class for 'special' builders.  These are things which do things like

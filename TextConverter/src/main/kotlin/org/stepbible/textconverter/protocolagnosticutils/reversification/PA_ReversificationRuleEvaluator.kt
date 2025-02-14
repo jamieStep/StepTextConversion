@@ -4,6 +4,7 @@ package org.stepbible.textconverter.protocolagnosticutils.reversification
 import org.stepbible.textconverter.applicationspecificutils.IssueAndInformationRecorder
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
@@ -86,16 +87,16 @@ open class PA_ReversificationRuleEvaluator (dataCollection: X_DataCollection)
    * @return True if the rule passes.
    */
 
-  fun rulePasses (theRuleData: String, rowAsString: String): Boolean
+  fun rulePasses (theRuleData: String, row: ReversificationDataRow): Boolean
   {
     /**************************************************************************/
-    //Dbg.d(row.rowNumber in listOf(1123))
+    //Dbg.d(row.rowNumber in listOf(21657, 21660))
     //Dbg.dCont(theRuleData, "Num.26:28>Num.26:29")
 
 
 
     /**************************************************************************/
-    m_RowAsString = rowAsString
+    m_RowAsString = row.toString()
     val ruleData = theRuleData.replace("\\s+".toRegex(), "").lowercase()
     if (ruleData.isEmpty()) return true
 

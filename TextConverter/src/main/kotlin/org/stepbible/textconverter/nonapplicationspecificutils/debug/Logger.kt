@@ -1,6 +1,7 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.debug
 
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionSilentAbandonRunBecauseErrorsRecordedInLog
@@ -8,6 +9,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.Ste
 import java.io.File
 import java.util.*
 import kotlin.collections.ArrayList
+import kotlin.io.path.Path
 
 
 /******************************************************************************/
@@ -330,7 +332,7 @@ abstract class LoggerBase
 * couldn't fathom at all.
 */
 
-object FileLogger: LoggerBase()
+object FileLogger: LoggerBase(), ObjectInterface
 {
   /****************************************************************************/
   /**
@@ -340,6 +342,7 @@ object FileLogger: LoggerBase()
   @Synchronized override fun close ()
   {
     sortLines()
+    StepFileUtils.createFolderStructure(Path(m_LogFilePath!!).parent.toString())
     File(m_LogFilePath).writeText(m_Lines.joinToString(separator = "\n"){ it.replace("<nl>", "\n") })
   }
 
@@ -422,7 +425,7 @@ object FileLogger: LoggerBase()
 * Sends output to the screen.
 */
 
-object ScreenLogger: LoggerBase()
+object ScreenLogger: LoggerBase(), ObjectInterface
 {
   @Synchronized override fun output (text: String) { println(text) }
 }

@@ -4,10 +4,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodeByName
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.findNodesByName
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.w3c.dom.Document
 import java.nio.file.Paths
 
@@ -37,7 +34,7 @@ import java.nio.file.Paths
  * @author ARA "Jamie" Jamieson
  */
 
-object BookOrdering
+object BookOrdering: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/

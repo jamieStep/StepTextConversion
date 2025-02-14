@@ -144,7 +144,7 @@ object IsoLanguageAndCountryCodes: ObjectInterface
     {
       val asSupplied = isoCode.lowercase()
       if (2 == isoCode.length) return isoCode.lowercase()
-      return m_3CharToLanguageDetails[asSupplied]!!.first ?: asSupplied
+      return m_3CharToLanguageDetails[asSupplied]?.first ?: asSupplied
     }
 
 

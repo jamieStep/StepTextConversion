@@ -112,6 +112,18 @@ object StepStringUtils: ObjectInterface
 
   /****************************************************************************/
   /**
+  * Strips all punctuation and spaces from a string to make rough comparisons
+  * possible.
+  *
+  * @param s String to be processed.
+  * @return String with punctuation and spaces removed.
+  */
+
+  fun removePunctuationAndSpaces (s: String) = s.replace(Regex("[\\p{Punct}\\s]"), "")
+
+
+  /****************************************************************************/
+  /**
   * Undoes the effect of markBalancedParentheses, qv
   *
   * @param text Text to be processed.

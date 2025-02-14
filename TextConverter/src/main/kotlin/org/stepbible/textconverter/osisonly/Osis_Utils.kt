@@ -123,8 +123,8 @@ var header =
     vals["publicationType"] = publicationType
     vals["revisionDesc"] = ConfigData["revisionDesc"] ?: "" // See note above.
     vals["scope"] = scope
-    vals["shortCopyright"] = ConfigData["stepShortCopyright"]!!.replace("<.*?>".toRegex(), " ").replace("&copy;", "(c)")
-    vals["title"] = ConfigData["stepBibleDescriptionAsItAppearsOnBiblePicker"]!!
+    vals["shortCopyright"] = ConfigData["swordShortCopyright"]!!.replace("<.*?>".toRegex(), " ").replace("&copy;", "(c)")
+    vals["title"] = ConfigData["stepBibleNameEnglish"]!!
     vals["toLowerPublicationType"] = publicationType.lowercase(Locale.getDefault())
     vals["yearOfText"] = yearOfText
 

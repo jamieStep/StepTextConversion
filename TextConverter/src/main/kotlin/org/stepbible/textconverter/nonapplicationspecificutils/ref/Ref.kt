@@ -4,6 +4,7 @@ package org.stepbible.textconverter.nonapplicationspecificutils.ref
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleAnatomy
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.convertRepeatingStringToNumber
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.convertNumberToRepeatingString
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionNotReallyAnException
@@ -716,13 +717,13 @@ class Ref : RefCollectionPart
     private fun rdUsxInternal (theText: String, context: Ref?, resolveAmbiguitiesAs: String?): Ref
     {
       /************************************************************************/
-      //Dbg.d(theText, "ZEC 4:9-10a")
+      //Dbg.dCont(theText, "MAT 5:1")
 
 
 
       /************************************************************************/
       val res = Ref()
-      var elts = theText.replace("\\s+".toRegex(), " ").trim().split("[: ]".toRegex())
+      val elts = theText.replace("\\s+".toRegex(), " ").replace("\u200F", "").trim().split("[: ]".toRegex()) // \u200F is right-to-left mark, which I found in a Hebrew text.
       var ambiguous = false
       var b: String? = null
       var c: String? = null

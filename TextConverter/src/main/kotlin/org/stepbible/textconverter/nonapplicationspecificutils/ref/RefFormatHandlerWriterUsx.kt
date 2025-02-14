@@ -1,5 +1,7 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.ref
 
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+
 /****************************************************************************/
 /**
  * A writer for USX references.
@@ -7,7 +9,7 @@ package org.stepbible.textconverter.nonapplicationspecificutils.ref
  * @author ARA "Jamie" Jamieson
  */
 
- object RefFormatHandlerWriterUsx : RefFormatHandlerWriterBase()
+ object RefFormatHandlerWriterUsx : RefFormatHandlerWriterBase(), ObjectInterface
  {
   /****************************************************************************/
   /**

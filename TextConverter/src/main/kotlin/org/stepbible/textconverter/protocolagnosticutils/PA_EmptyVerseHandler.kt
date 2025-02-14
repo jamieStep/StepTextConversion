@@ -28,8 +28,8 @@ import java.util.*
  * In theory reversification is capable of supply certain missing verses.
  * This, however, is academic -- there is no guarantee that we will use
  * reversification on a given text, and even if we did, we are no longer
- * planning to have the reversification processing carry out the kind of
- * physical restructuring of the text which would be necessary.
+ * necessarily planning to have the reversification processing carry out the
+ * kind of physical restructuring of the text which would be necessary.
  *
  * We therefore fill in empty verses entirely independently of
  * reversification.  And we may do this for a number of reasons:
@@ -72,12 +72,6 @@ import java.util.*
  *   of them, so we have to fill in the blanks.  Verses missing at the *ends*
  *   of chapters are not a problem, and I have been asked not to fill in
  *   these trailing verses.)
- *
- *
- * The reversification data itself interacts with this in two ways -- one at
- * present purely theoretical, and one actual.
- *
- * In theory, the reversification data may recognise the need to supply an
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -325,7 +319,8 @@ class PA_EmptyVerseHandler (fileProtocol: X_FileProtocol)
 
   private fun createEmptyVerseForMissingVerse (rootNode: Node, refKey: RefKey, insertBefore: Node?): Pair<Node, Node>
   {
-    //Dbg.d("EmptyVerseForMissingVerse: " + Ref.rd(refKey).toString())
+    Dbg.d("EmptyVerseForMissingVerse: " + Ref.rd(refKey).toString())
+    Dbg.outputDom(rootNode.ownerDocument  )
     Logger.info(refKey, "Created verse which was missing from the original text.")
 
     val footnoteText = TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_verseWasMissing")

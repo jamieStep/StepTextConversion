@@ -21,7 +21,7 @@ import java.time.format.DateTimeFormatter
  * @author ARA "Jamie" Jamieson
  */
 
-object Builder_InternalOsis: Builder()
+object Builder_InternalOsis: Builder(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -96,7 +96,7 @@ object Builder_InternalOsis: Builder()
 
 
     /**************************************************************************/
-    ConfigData.makeBibleDescriptionAsItAppearsOnBibleList(InternalOsisDataCollection.getBookNumbers())
+    //ConfigData.makeStepTextDescriptionAsItAppearsOnBibleList(InternalOsisDataCollection.getBookNumbers())
     val timeStamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))
     val comment = "This OSIS file created by the STEPBible project $timeStamp.  This is a throw-away file.  Use the external OSIS as the basis of any long-term changes you wish to make."
     Rpt.report(level = 1, "Writing version of OSIS needed for use with osis2mod.")
@@ -207,7 +207,7 @@ object Builder_InternalOsis: Builder()
 
     /**************************************************************************/
     Rpt.report(level = 0, "Performing initial validation.")
-    Osis_BasicValidator.structuralValidation(InternalOsisDataCollection); x()            // Checks for basic things like all verses being under chapters.
+    Osis_BasicValidatorAndAligner.structuralValidation(InternalOsisDataCollection); x()            // Checks for basic things like all verses being under chapters.
 
 
 
@@ -220,7 +220,7 @@ object Builder_InternalOsis: Builder()
 
     /**************************************************************************/
     Rpt.report(level = 0, "Performing validation.")
-    Osis_BasicValidator.structuralValidationAndCorrection(InternalOsisDataCollection); x() // Structural checks.  May create empty verses if necessary.
+    Osis_BasicValidatorAndAligner.structuralValidationAndCorrection(InternalOsisDataCollection); x() // Structural checks.  May create empty verses if necessary.
 
 
 
@@ -250,7 +250,7 @@ object Builder_InternalOsis: Builder()
     Osis_CrossReferenceUpdater.process(InternalOsisDataCollection, notesArchiver); x()     // Apply any updates required as a result of reversification processing.
     Osis_FinalInternalOsisTidier.process(InternalOsisDataCollection, notesArchiver); x()   // Ad hoc last minute tidying.
     PA_CalloutStandardiser.process(InternalOsisDataCollection); x()                        // Forces callouts to be in house style, assuming that's what we want.
-    Osis_CrossReferenceCanonicaliser.process(InternalOsisDataCollection) ; x()                   // Does what it says on the tin.
+    Osis_CrossReferenceCanonicaliser.process(InternalOsisDataCollection) ; x()             // Does what it says on the tin.
     Osis_BasicTweaker.unprocess(InternalOsisDataCollection); x()                           // Undoes any temporary tweaks which were applied to make the overall processing easier.
     PA_FinalValidator.process(InternalOsisDataCollection); x()                             // Final health checks.
     Osis_InternalTagReplacer.process(InternalOsisDataCollection); x()                      // Replaces any _X_ tags which I introduced with pukka OSIS ones.

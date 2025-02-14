@@ -10,6 +10,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils.runCommand
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotify
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotifyIfContainsSpaces
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
@@ -521,6 +522,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
     swordExternalConversionCommand.add("-z")
 
+    StepFileUtils.createFolderStructure(FileLocations.getEncryptionDataFolderPath())
     val osis2modEncryptionKey = encryptionDataHandler(FileLocations.getEncryptionDataFilePath())
     if (null != osis2modEncryptionKey)
     {

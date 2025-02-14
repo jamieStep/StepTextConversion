@@ -345,12 +345,15 @@ open class X_DataCollection (fileProtocol: X_FileProtocol)
 
   /****************************************************************************/
   /**
-  * Removes a single book.
+  * Removes a given node from the list of root nodes.
   *
-  * @param bookNo
+  * @param bookNumber
   */
 
-  fun removeBook (bookNo: Int) = m_BookNumberToRootNode.remove(bookNo)
+  fun removeNodeFromRootNodeStructure (bookNumber: Int)
+  {
+    m_BookNumberToRootNode[bookNumber] = null
+  }
 
 
   /****************************************************************************/

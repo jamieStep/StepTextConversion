@@ -3,17 +3,16 @@ package org.stepbible.textconverter.builders
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
-import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Zip
-import org.stepbible.textconverter.nonapplicationspecificutils.shared.FeatureIdentifier
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.osisonly.Osis_AudienceAndCopyrightSpecificProcessingHandler
 import java.io.File
 import java.nio.file.Paths
-import java.util.ArrayList
 
 
 /******************************************************************************/
@@ -24,7 +23,7 @@ import java.util.ArrayList
   * @author ARA "Jamie" Jamieson
   */
 
-object Builder_Module: Builder()
+object Builder_Module: Builder(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -185,7 +184,7 @@ object Builder_Module: Builder()
 
 
 /******************************************************************************/
-object PackageContentHandler
+object PackageContentHandler: ObjectInterface
 {
   /****************************************************************************/
   fun processPreOsis2mod () = doIt(m_DataPreOsis2mod)
@@ -252,24 +251,7 @@ object PackageContentHandler
   private fun swordConfigFileHandler (filePath: String)
   {
     /**************************************************************************/
-//    Dbg.d("stepModuleCreationDate=" + ConfigData["stepModuleCreationDate"])
-//    Dbg.d("stepTextIdSuppliedBySourceRepositoryOrOwnerOrganisation=" + ConfigData["stepTextIdSuppliedBySourceRepositoryOrOwnerOrganisation"])
-//    Dbg.d("stepModuleName=" + ConfigData["stepModuleName"])
-//    Dbg.d("stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation=" + ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"])
-//    Dbg.d("stepBibleNameInEnglish=" + ConfigData["stepBibleNameEnglish"])
-//    Dbg.d("stepOwnerOrganisation=" + ConfigData["stepTextOwnerOrganisationFullName"])
-//    Dbg.d("stepRepository=" + ConfigData["stepDisambiguatorForId"])
-//    Dbg.d("LicenceId=" + ConfigData["stepLicenceId"])
-//    Dbg.d("stepLicenceExpiryDate=" + ConfigData["stepLicenceExpiryDate"])
-//    Dbg.d("stepSoftwareVersionRequired=" + ConfigData["stepSoftwareVersionRequired"])
-//    Dbg.d("stepOriginData=" + ConfigData["stepOriginData"])
-//    Dbg.d("stepTarget=" + ConfigData["stepTargetAudience"])
-
-
-
-    /**************************************************************************/
     VersionAndHistoryHandler.process()
-    swordConfigFileHandler_addCalculatedValuesToMetadata()
 
 
 
@@ -307,255 +289,4 @@ object PackageContentHandler
     /**************************************************************************/
     writer.close()
   }
-
-
-  /****************************************************************************/
-  private fun swordConfigFileHandler_addCalculatedValuesToMetadata ()
-  {
-    /**************************************************************************/
-    var stepInfo = """¬<hr/>
-Sword module ${ConfigData["stepModuleName"]!!} Rev ${ConfigData["stepTextRevision"]!!} created by the STEPBible project ${ConfigData["stepModuleCreationDate"]!!} (${ConfigData["stepTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""}).
-¬${ConfigData["stepThanks"]!!}
-XXX_AddedValue_XXX
-"""
-
-    stepInfo = stepInfo.replace("-", "&nbsp;")
-      .replace("\n", "NEWLINE")
-      .replace("^¬*(&nbsp;)*\\s*\\u0001".toRegex(), "") // Get rid of entirely 'blank' lines.
-
-
-
-    /**************************************************************************/
-    val changesAppliedByStep: MutableList<String> = ArrayList()
-    if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) changesAppliedByStep.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Morphology"))
-    if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) changesAppliedByStep.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Strongs"))
-
-
-
-    /**************************************************************************/
-    /* If we are applying runtime reversification, then probably the only
-       significant changes we make are to add footnotes.
-
-       Some text suppliers require us to own up to making changes, so for
-       safety's sake, I assume all will.  I add the text in both English and
-       vernacular where available.
-
-       (We _may_ also expand elisions and / or restructure tables, and possibly
-       I ought to consider owning up to this at some point.) */
-
-    if ("runtime" == ConfigData["stepReversificationType"])
-    {
-      val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_FootnotesMayHaveBeenAdded")
-      val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_FootnotesMayHaveBeenAdded")
-      changesAppliedByStep.add(vernacular)
-      if (vernacular != english) changesAppliedByStep.add(english)
-    }
-
-
-
-    /**************************************************************************/
-    /* If we are applying runtime reversification, then -- at least to a first
-       approximation -- the versification structure is left intact.  With other
-       types of reversification, this is not so: conversion-time
-       reversification may change the structure fairly radically in some cases,
-       and with no reversification, osis2mod may combine verses which are
-       excess to the scheme it has been told to use.
-
-       Some text suppliers require us to own up to making changes, so for
-       safety's sake, I assume all will.  I add the text in both English and
-       vernacular where available. */
-
-    else // ("runtime" != ConfigData["stepReversificationType"])
-    {
-      val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
-      val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
-      changesAppliedByStep.add(vernacular)
-      if (vernacular != english) changesAppliedByStep.add(english)
-    }
-
-
-
-    /**************************************************************************/
-    var text = ""
-    if (changesAppliedByStep.isNotEmpty())
-    {
-      text = TranslatableFixedText.stringFormatWithLookup("V_addedValue_AddedValue")
-      var s =  changesAppliedByStep.joinToString(separator = "¬&nbsp;&nbsp;")
-      if (s.isNotEmpty()) s= "¬&nbsp;&nbsp;$s"
-      text += s
-    }
-
-
-
-    /**************************************************************************/
-    val acknowledgementOfDerivedWork = ConfigData["stepWordingForDerivedWorkStipulatedByTextSupplier"]
-    if (null != acknowledgementOfDerivedWork) text += "¬¬$acknowledgementOfDerivedWork"
-
-
-
-    /**************************************************************************/
-    if (null != ConfigData["stepManuallySuppliedDetailsOfChangesApplied"])
-      text += (if (text.isEmpty()) "" else "¬") + ConfigData["stepManuallySuppliedDetailsOfChangesApplied"]
-
-
-
-    /**************************************************************************/
-    if (text.isNotEmpty()) text = "¬$text"
-    stepInfo = stepInfo.replace("XXX_AddedValue_XXX", text)
-
-
-
-    /**************************************************************************/
-    stepInfo = stepInfo.replace("¬", "<br>")
-    stepInfo = ConfigData.expandReferences(stepInfo, false)!!
-    stepInfo = stepInfo.replace("NEWLINE", "")
-    ConfigData.put("stepConversionInfo", stepInfo, true) // $$$$
-
-
-
-    /**************************************************************************/
-    ConfigData.put("stepDataPath", "./modules/texts/ztext/" + ConfigData["stepModuleName"] + "/", true)
-
-
-
-    /**************************************************************************/
-    var textSource = ""
-    if (textSource.isEmpty()) textSource = ConfigData["stepTextRepositoryOrganisationAbbreviatedName"] ?: ""
-    if (textSource.isEmpty()) textSource = ConfigData["stepTextRepositoryOrganisationFullName"] ?: ""
-    if (textSource.isEmpty()) textSource = "Unknown"
-
-    var ownerOrganisation = ConfigData.getOrError("stepTextOwnerOrganisationFullName")
-    if (ownerOrganisation.isNotEmpty()) ownerOrganisation = "&nbsp;&nbsp;Owning organisation: $ownerOrganisation"
-
-    var textDisambiguatorForId = ConfigData.getOrError("stepDisambiguatorForId")
-    if (textDisambiguatorForId.isBlank() || "unknown".equals(textDisambiguatorForId, ignoreCase = true)) textDisambiguatorForId = ""
-
-    var textId: String = ConfigData["stepTextIdSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""
-    if (textId.isBlank() || "unknown".equals(textId, ignoreCase = true)) textId = ""
-
-    val textCombinedId =
-      if (textDisambiguatorForId.isNotEmpty() && textId.isNotEmpty())
-        "$textDisambiguatorForId.$textId"
-      else if (textId.isNotEmpty())
-        "Version $textId"
-      else
-        ""
-
-    textSource = "$textSource $ownerOrganisation $textCombinedId"
-    ConfigData.put("stepTextSource", textSource, true)
-
-
-
-    /**************************************************************************/
-    /* List of options taken from the documentation mentioned above.
-       don't change the ordering here -- it's not entirely clear whether
-       order matters, but it may do.
-
-       Note, incidentally, that sometimes STEP displays an information button at
-       the top of the screen indicating that the 'vocabulary feature' is not
-       available.  This actually reflects the fact that the Strong's feature is
-       not available in that Bible.
-
-       I am not sure about the inclusion of OSISLemma below.  OSIS actually
-       uses the lemma attribute of the w tag to record Strong's information,
-       so I'm not clear whether we should have OSISLemma if lemma appears at
-       all, even if only being used for Strong's; if it should be used if there
-       are occurrences of lemma _not_ being used for Strong's; or if, in fact,
-       it should be suppressed altogether.
-    */
-
-    var res = ""
-    FeatureIdentifier.process(FileLocations.getInternalOsisFilePath())
-    if ("ar" == ConfigData["stepLanguageCode2Char"]) res += "GlobalOptionFilter=UTF8ArabicPoints\n"
-    if (FeatureIdentifier.hasLemma()) res += "GlobalOptionFilter=OSISLemma\n"
-    if (FeatureIdentifier.hasMorphologicalSegmentation()) res += "GlobalOptionFilter=OSISMorphSegmentation\n"
-    if (FeatureIdentifier.hasStrongs()) res += "GlobalOptionFilter=OSISStrongs\n"
-    if (FeatureIdentifier.hasFootnotes()) res += "GlobalOptionFilter=OSISFootnotes\n"
-    if (FeatureIdentifier.hasScriptureReferences()) res += "GlobalOptionFilter=OSISScriprefs\n" // Crosswire doc is ambiguous as to whether this should be plural or not.
-    if (FeatureIdentifier.hasMorphology()) res += "GlobalOptionFilter=OSISMorph\n"
-    if (FeatureIdentifier.hasNonCanonicalHeadings()) res += "GlobalOptionFilter=OSISHeadings\n"
-    if (FeatureIdentifier.hasVariants()) res += "GlobalOptionFilter=OSISVariants\"\n"
-    if (FeatureIdentifier.hasRedLetterWords()) res += "GlobalOptionFilter=OSISRedLetterWords\n"
-    if (FeatureIdentifier.hasGlosses()) res += "GlobalOptionFilter=OSISGlosses\n"
-    if (FeatureIdentifier.hasTransliteratedForms()) res += "GlobalOptionFilter=OSISXlit\n"
-    if (FeatureIdentifier.hasEnumeratedWords()) res += "GlobalOptionFilter=OSISEnum\n"
-    if (FeatureIdentifier.hasGlossaryLinks()) res += "GlobalOptionFilter=OSISReferenceLinks\n"
-    if (FeatureIdentifier.hasStrongs()) res += "Feature=StrongsNumbers\n"
-    //??? if (!FeatureIdentifier.hasMultiVerseParagraphs()) res += "Feature=NoParagraphs\n"
-    ConfigData.put("stepOptions", res, true)
-
-
-
-    /**************************************************************************/
-    ConfigData["stepInputFileDigests"] = Digest.makeFileDigests()
-  }
-
-
-//  /****************************************************************************/
-//  /* More than a little complicated.  We have a list of mappings giving the
-//     source and standard verses which have been involved in reversification.
-//
-//     We want to convert this into a list of mappings for display to the user.
-//     However, this could be a very _long_ list, and therefore perhaps unwieldy,
-//     so ideally it would be good to coalesce runs of verses into a single
-//     mapping.
-//
-//     First off, there's no absolute guarantee this is ordered by ref, so we
-//     need to reorder based on the 'from' ref.
-//
-//     Then I need to run though the list looking for adjacent references (which
-//     must be adjacent in terms of both the source and the standard reference);
-//     and then finally I need to output this lot in human-readable form.
-//
-//     I'm not sure about this -- may really be relevant only with conversion-time
-//     processing.
-//  */
-//
-//  private fun swordConfigFileHandler_getReversificationMap (data: List<ReversificationMoveGroup>): String
-//  {
-//    /**************************************************************************/
-//    if (data.isEmpty()) return ""
-//
-//
-//
-//    /**************************************************************************/
-//    fun comparator (a: ReversificationMoveGroup, b: ReversificationMoveGroup): Int
-//    {
-//      var res = a.sourceRange.getLowAsRefKey().compareTo(b.sourceRange.getLowAsRefKey())
-//      if (0 == res) res = a.standardRange.getLowAsRefKey().compareTo(b.standardRange.getLowAsRefKey())
-//      return res
-//    }
-//
-//    val mappings = data.sortedWith(::comparator)
-//
-//
-//
-//    /**************************************************************************/
-//    val res = StringBuilder(100000)
-//    res.append("<p>The changes are as follows:<table>")
-//
-//
-//
-//    /**************************************************************************/
-//    /* Convert the data into an HTML table, taking into account the fact that
-//       a value of zero for the verse number corresponds to a canonical title. */
-//
-//    mappings.forEach {
-//      var sourceRef   = if (it.sourceRange  .isSingleReference()) it.sourceRange  .getLowAsRef().toString() else it.sourceRange  .toString()
-//      var standardRef = if (it.standardRange.isSingleReference()) it.standardRange.getLowAsRef().toString() else it.standardRange.toString()
-//      sourceRef   = sourceRef.  replace(":0", ":title")
-//      standardRef = standardRef.replace(":0", ":title")
-//      res.append("<tr><td>")
-//      res.append(sourceRef)
-//      res.append("</td><td>&#x25b6; ")
-//      res.append(standardRef)
-//      res.append("</td></tr>")
-//    }
-//
-//
-//
-//    /**************************************************************************/
-//    res.append("</table>")
-//    return res.toString()
-//  }
 }

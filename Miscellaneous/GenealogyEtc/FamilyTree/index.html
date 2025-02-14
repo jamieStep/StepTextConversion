@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- ===========================================================================
+     Evaluation layout for genealogical data.  See head-of-file comments to
+     tree.js for more details.
+
+     'Jamie' Jamieson   STEPBible   Jan-2025.
+     ======================================================================= -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genealogical information</title>
+    <style>
+      :root {
+	  --simulated-sidebar-width: 50%;
+	  --height-of-info-box: 200px;
+      }
+      
+      body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: rgb(192, 255, 192) }
+      
+      #info-box {
+        height: var(--height-of-info-box);
+        width: var(--simulated-sidebar-width);
+        background-color: rgb(255, 255, 192);
+        color: #333;
+	font-size: small;
+        border: 1px solid #ccc;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: left;
+	overflow-y: auto;
+        z-index: 1000;
+      }
+
+      #tree-container { width: var(--simulated-sidebar-width); overflow: hidden; height: 80vh; border: 1px solid #ccc; }
+
+      svg { width: 100%; height: 100%; cursor: grab; background-color: white; }
+      .node circle { fill: #69b3a2; stroke: #333; stroke-width: 2px; }
+      .link { fill: none; stroke: #ccc; stroke-width: 2px; }
+      .simulated-link { text-decoration: underline; cursor: pointer; color: blue }	
+
+
+      /* 29-Jan-25: Added to support tool tip on links to show parent details. */
+      .link:hover { stroke-width: 3px; stroke: !important #0000FF; }
+      .linkToolTip {
+	  position: absolute;
+	  background: rgba(255, 255, 255, 0); /* Fully transparent background */
+	  color: blue; /* Text color */
+	  border: none; /* Remove border for a cleaner look */
+	  font-size: small;
+	  display: none; /* Initially hidden */
+	  pointer-events: none; /* Prevent interaction */
+      }
+      /* 29-Jan-25: End. */
+    </style>
+  </head>
+
+  <body>
+    <div id="linkToolTip" class="linkToolTip"></div> <!-- 29-Jan-25: Added to support tool tip on links to show parent details. -->
+    <h2>Genealogical information</h2>
+    <label for="fileInput">Load data file (make sure you choose people.json!): </label>
+    <input type="file" id="fileInput">
+    <br><br>
+    <div id="controls">
+      <label>Siblings spacing: <input type="range" id="spacingBetweenSiblingsSlider" min="0" max="300" value="50"></label><span id="spacingBetweenSiblingsSliderValue">50</span>&nbsp;&nbsp;&nbsp;
+      <label>Generations spacing: <input type="range" id="spacingBetweenGenerationsSlider" min="0" max="600" value="100"></label><span id="spacingBetweenGenerationsSliderValue">50</span>&nbsp;&nbsp;&nbsp;
+
+      <br><br><label>
+        <input type="radio" name="viewMode" value="descendants" checked>
+        Show Descendants
+      </label>
+      <label>
+        <input type="radio" name="viewMode" value="ancestors">
+        Show Ancestors
+      </label>&nbsp;&nbsp;&nbsp;
+
+      <label for="personSelect">Select person: </label><select id="personSelect"></select><br><br>
+    </div>
+    
+    <div id="info-box">
+      <div id="info-box-content" style="padding:10px"></div>
+    </div>
+
+    <div id="tree-container">
+      <svg></svg>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="tree.js"></script>
+  </body>
+</html>
+

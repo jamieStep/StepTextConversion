@@ -252,7 +252,7 @@ object PA_ReversificationUtilities
   private fun getFootnoteContent (dataRow: ReversificationDataRow, whichFootnote: String, basicOrAcademic: Char): String
   {
     /**************************************************************************/
-    Dbg.d(dataRow.toString())
+    //Dbg.d(dataRow.toString())
     //Dbg.d(2016 == dataRow.rowNumber)
 
 
@@ -335,13 +335,26 @@ object PA_ReversificationUtilities
   /* Deals with individual reference strings -- things which may indeed represent
      a reference, but which may also be more complicated than that.  Returns
      a RefCollection where parsing is possible, or otherwise a string (which is
-     probably the same as the input string).  The second part of the return
-     value is true for */
+     probably the same as the input string). */
 
   private fun preprocessRef (putativeRef: String): Any
   {
     /**************************************************************************/
-    var revisedRef = putativeRef
+    var revisedRef = putativeRef.trim()
+
+
+
+    /**************************************************************************/
+    /* Yet another special case -- we now have some places which look like
+       51:T */
+
+    val putativeRefLc = revisedRef.lowercase()
+    if (putativeRefLc.endsWith(":t") || putativeRefLc.endsWith(":title"))
+      return revisedRef.split(":")[0] + ":Title" // Is it worth translating this?
+
+
+
+    /**************************************************************************/
     val chunks: MutableMap<String, String> = mutableMapOf()
     var ix = 0
 

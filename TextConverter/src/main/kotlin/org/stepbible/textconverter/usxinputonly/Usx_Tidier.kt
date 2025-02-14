@@ -25,7 +25,7 @@ import org.w3c.dom.Node
 * @author ARA "Jamie" Jamieson
 */
 
-object Usx_Tidier
+object Usx_Tidier: ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -90,7 +90,7 @@ private class Usx_TidierPerBook
     correctCommonUsxIssues(rootNode)                                       // Correct common errors.
     simplePreprocessTagModifications(rootNode)                             // Sort out things we don't think we like.
     convertTagsToLevelOneWhereAppropriate(rootNode)                        // Some tags can have optional level numbers on their style attributes.  A missing level corresponds to leve 1, and it's convenient to force it to be overtly marked as level 1.
-    Usx_CrossReferenceCanonicaliser.process(rootNode)                      // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
+    Usx_CrossReferenceCanonicaliser().process(rootNode)                      // Cross-refs can be represented in a number of different ways, and we'd rather have just one way.
     convertMilestoneTagsToDifferentiatedTags(rootNode, "chapter")  // If we have things like <chapter sid=...> and <chapter eid=...>, processing is more convenient if we have type='sid' etc.
     convertMilestoneTagsToDifferentiatedTags(rootNode, "verse")    // If we have things like <verse sid=...> and <verse eid=...>, processing is more convenient if we have type='sid' etc.
     tidyUpMain(rootNode)

@@ -20,7 +20,7 @@ import org.w3c.dom.Node
  * @author ARA "Jamie" Jamieson
  */
 
-object PA_SubverseCollapser: PA()
+object PA_SubverseCollapser: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
