@@ -83,14 +83,14 @@ open class PA_ReversificationRuleEvaluator (dataCollection: X_DataCollection)
    * Checks to see if a given rule passes.
    *
    * @param theRuleData The rule.
-   * @param rowAsString Raw row data, used only in error messages.
+   * @param row Raw row data, used only in error messages.
    * @return True if the rule passes.
    */
 
   fun rulePasses (theRuleData: String, row: ReversificationDataRow): Boolean
   {
     /**************************************************************************/
-    //Dbg.d(row.rowNumber in listOf(21657, 21660))
+    //Dbg.d(row.rowNumber == 9650)
     //Dbg.dCont(theRuleData, "Num.26:28>Num.26:29")
 
 

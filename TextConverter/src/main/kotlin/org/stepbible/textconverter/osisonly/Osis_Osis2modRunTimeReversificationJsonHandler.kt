@@ -11,6 +11,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLo
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationHandler
+import org.stepbible.textconverter.protocolagnosticutils.reversification.SourceRef
+import org.stepbible.textconverter.protocolagnosticutils.reversification.StandardRef
 import java.io.File
 import java.io.PrintWriter
 
@@ -37,10 +39,10 @@ object Osis_Osis2modRunTimeReversificationJsonHandler: ObjectInterface
   /****************************************************************************/
 
   /****************************************************************************/
-  fun process (reversificationHandler: PA_ReversificationHandler)
+  fun process ()
   {
     populateBibleStructure(InternalOsisDataCollection.getBibleStructure())
-    m_BibleStructure.jswordMappings = reversificationHandler.getRuntimeReversificationMappings().map{ Pair(it.first.value, it.second.value) }
+    m_BibleStructure.jswordMappings = PA_ReversificationHandler.getRuntimeReversificationMappings()
     outputJson(FileLocations.getOsis2ModSupportFilePath())
   }
 
@@ -64,7 +66,7 @@ object Osis_Osis2modRunTimeReversificationJsonHandler: ObjectInterface
      val otBooks: MutableList<BookDetails> = mutableListOf() // Includes DC.
      val ntBooks: MutableList<BookDetails> = mutableListOf()
 
-     var jswordMappings: List<Pair<RefKey, RefKey>> = listOf()
+     var jswordMappings: List<Pair<SourceRef<String>, StandardRef<String>>> = listOf()
 
 
      fun output (writer: PrintWriter)
@@ -96,24 +98,8 @@ object Osis_Osis2modRunTimeReversificationJsonHandler: ObjectInterface
 
     fun outputMappings (writer: PrintWriter)
     {
-      // WARNING: I've added this because psalm titles were coming out wrong.
-      // In fact, where Psalm titles are concerned, by the time I get here,
-      // it seems that there is always a subverse reference, and I presume
-      // we might have both !a and !b.  The processing below ignores that
-      // possibility, and simply strips off the subverse.  That's probably
-      // not good enough.
-
-      fun convertToRefAllowingForPsalmTitles (refKey: RefKey): String
-      {
-        val ref = Ref.rd(refKey)
-        return if (ref.getV() == RefBase.C_TitlePseudoVerseNumber)
-          ref.toStringOsis().replace(RefBase.C_TitlePseudoVerseNumber.toString(), "0").split("!")[0]
-        else
-          ref.toStringOsis()
-      }
-
       print(writer, "  'jsword_mappings': [\n")
-      val mappings = m_BibleStructure.jswordMappings.map { "${Ref.rd(it.first).toStringOsis()}=${convertToRefAllowingForPsalmTitles(it.second)}" }
+      val mappings = m_BibleStructure.jswordMappings.map { "${it.first.value}=${it.second.value}" }
       print(writer, "    \"" + mappings.joinToString("\",\n    \""))
       print(writer, "\"\n    ]\n")
     }

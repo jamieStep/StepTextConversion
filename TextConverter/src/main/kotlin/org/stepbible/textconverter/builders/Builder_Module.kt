@@ -107,7 +107,7 @@ object Builder_Module: Builder(), ObjectInterface
     var info = 0
     var warnings = 0
 
-    FileLocations.getInputStream(file.toString())!!.bufferedReader().readLines().forEach {
+    FileLocations.getInputStream(file.toString()).first!!.bufferedReader().readLines().forEach {
       if (it.startsWith("You are running osis2mod"))
         ConfigData["stepOsis2ModVersion"] = Regex("Rev: (\\S+)").find(it)!!.groups[1]!!.value
 
@@ -142,13 +142,13 @@ object Builder_Module: Builder(), ObjectInterface
     } // forEach
 
     if (fatals > 0)
-      System.err.println("CAUTION: osis2mod.exe reports $fatals fatal error(s).  Please check the OSIS log file to see if the conversion to Sword format has worked.")
+      System.err.println("\n\nCAUTION: osis2mod.exe reports $fatals fatal error(s).  Please check the OSIS log file to see if the conversion to Sword format has worked.")
     else if (errors > 0)
-      System.err.println("CAUTION: osis2mod.exe reports $errors error(s).  These have been treated here as non-fatal, because often they do not seem to reflect an actual problem, but please check the OSIS log file to see if the conversion to Sword format has worked.")
+      System.err.println("\n\nCAUTION: osis2mod.exe reports $errors error(s).  These have been treated here as non-fatal, because often they do not seem to reflect an actual problem, but please check the OSIS log file to see if the conversion to Sword format has worked.")
     else if (warnings > 0)
-      System.err.println("CAUTION: osis2mod.exe reports $warnings warning(s).  Please check the OSIS log file to see if the conversion to Sword format has worked.")
+      System.err.println("\n\nCAUTION: osis2mod.exe reports $warnings warning(s).  Please check the OSIS log file to see if the conversion to Sword format has worked.")
     else if (!hadSuccess)
-      System.err.println("CAUTION: osis2mod.exe has not reported success (return code was ${ConfigData["stepOsis2modReturnCode"]!!}.  Please check the OSIS log file to see if the conversion to Sword format has worked.")
+      System.err.println("\n\nCAUTION: osis2mod.exe has not reported success (return code was ${ConfigData["stepOsis2modReturnCode"]!!}.  Please check the OSIS log file to see if the conversion to Sword format has worked.")
 
     return hadSuccess
   }
@@ -198,9 +198,9 @@ object PackageContentHandler: ObjectInterface
 
   /****************************************************************************/
   private val m_DataPreOsis2mod = listOf(
-    ProcessingDetails(null,            FileLocations.getOsis2ModSupportFilePath()),
-    ProcessingDetails(null,            FileLocations.getSwordConfigFolderPath()),
-    ProcessingDetails(null,            Paths.get(FileLocations.getSwordTextFolderPath(), "dummyFile.txt").toString()),
+    ProcessingDetails(null, FileLocations.getOsis2ModSupportFilePath()),
+    ProcessingDetails(null, FileLocations.getSwordConfigFolderPath()),
+    ProcessingDetails(null, Paths.get(FileLocations.getSwordTextFolderPath(), "dummyFile.txt").toString()),
   )
 
 
@@ -257,7 +257,7 @@ object PackageContentHandler: ObjectInterface
 
     /**************************************************************************/
     val configFile = File(filePath)
-    val lines = FileLocations.getInputStream(FileLocations.getSwordTemplateConfigFilePath())!!.bufferedReader().readLines()
+    val lines = FileLocations.getInputStream(FileLocations.getSwordTemplateConfigFilePath()).first!!.bufferedReader().readLines()
     val writer = configFile.bufferedWriter()
 
 

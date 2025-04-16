@@ -4,11 +4,11 @@ package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import java.io.File
 import java.io.FileInputStream
 import java.nio.file.Paths
 import java.io.InputStream
-import kotlin.io.path.Path
 
 
 /******************************************************************************/
@@ -170,22 +170,10 @@ object FileLocations: ObjectInterface
     /**************************************************************************/
     /* Just locate it?  We look here through a series of folders, and attempt
        to locate the file anywhere under any of them.  The first match is
-       returned. */
+       returned.  See locateFile for more details. */
 
     if (canonicalFilePath.lowercase().startsWith("\$find"))
-    {
-      val endOfPath = canonicalFilePath.substring("\$find/".length)
-      var pathElements = Paths.get(endOfPath).map { it.toString() }
-      val fileName = pathElements.last()
-      pathElements = pathElements.subList(0, pathElements.size - 1)
-      for (folderPath in listOfNotNull(getRootFolderPath(), getMetadataFolderPath(), getSharedConfigFolderPath()))
-      {
-        val putativeFilePath  = File(Paths.get(folderPath, *pathElements.toTypedArray()).toString()).walk(FileWalkDirection.BOTTOM_UP).firstOrNull { Path(it.toString()).fileName.toString() == fileName } ?: continue
-        return putativeFilePath.toString()
-      }
-
-      throw StepExceptionWithStackTraceAbandonRun("Can't locate file $canonicalFilePath.")
-    }
+      return locateFile(canonicalFilePath) ?: throw StepExceptionWithStackTraceAbandonRun("Can't locate file $canonicalFilePath.")
 
 
 
@@ -193,6 +181,62 @@ object FileLocations: ObjectInterface
     /* Fully specified path. */
 
     return Paths.get(canonicalFilePath).normalize().toString()
+  }
+
+
+  /****************************************************************************/
+  /* Locates a file.  More specifically ...
+
+     We are concerned here only with paths which start $find/ (and we assume
+     that the caller has already determined that the path _does_ start that
+     way).
+
+     The $find/ may be followed either by a file name ($find/myFile.txt) or by
+     a relative path ($find/FolderA/FolderB/myFile.txt)
+
+     The processing works as follows:
+
+     - It looks for the _first_ file whose name matches (so if there's more
+       than you'll never know).
+
+     - It looks in various folders in a particular order: a) the root folder
+       for the text; b) the metadata folder for the text; c) folders identified
+       by the stepConfigFolderPaths setting in the StepTextConverterParameters
+       environment variable (if any) -- and these it runs through in the order
+       specified there.
+
+     - It ignores any relative path information in the canonicalFilePath
+       parameter (I continue to accept it, though, for the sake of backward
+       compatibility).  It simply looks for the file in the folder and in
+       any hierarchy below it.
+  */
+
+  private fun locateFile (canonicalFilePath: String): String?
+  {
+    /**************************************************************************/
+    fun getPathsFromEnvironmentVariable (): List<String>
+    {
+      val x = ConfigData["stepConfigFolderPaths"] ?: return listOf()
+      return x.split(",").map(String::trim)
+    }
+
+
+
+    /**************************************************************************/
+    val endOfPath = canonicalFilePath.substring("\$find/".length) // Strip off $find/.
+    val fileName = Paths.get(endOfPath).last().toString()
+
+
+
+    /**************************************************************************/
+    for (folderPath in listOf(getRootFolderPath(), getMetadataFolderPath()) + getPathsFromEnvironmentVariable())
+    {
+      val res = StepFileUtils.findFiles(folderPath, fileName)
+      if (res.isNotEmpty())
+        return res[0]
+    }
+
+    return null
   }
     
   
@@ -208,10 +252,11 @@ object FileLocations: ObjectInterface
    *   is assumed to give the name of a file within the resources section of
    *   the current JAR.  Otherwise it is taken to be a full path name.
    *
-   * @return Stream.
+   * @return Stream plus full path to file, except where the data is coming
+   *   from the JAR, in which case the path is null.
    */
   
-  fun getInputStream (filePath: String): InputStream?
+  fun getInputStream (filePath: String): Pair<InputStream?, String?>
   {
     /**************************************************************************/
     val expandedFilePath = getInputPath(filePath)
@@ -225,7 +270,7 @@ object FileLocations: ObjectInterface
     {
       val ix = expandedFilePath.indexOf("/")
       val newFileName = expandedFilePath.substring(ix + 1)
-      return {}::class.java.getResourceAsStream("/$newFileName")
+      return Pair({}::class.java.getResourceAsStream("/$newFileName"), null)
     }
     
     
@@ -236,8 +281,9 @@ object FileLocations: ObjectInterface
     val file = File(expandedFilePath)
     val fileName = file.name
     val folderPath = Paths.get(file.parent).toString()
-    val path = StepFileUtils.getSingleMatchingFileFromFolder(folderPath, ("\\Q$fileName\\E").toRegex()) ?: return null
-    return FileInputStream(path.toString())
+    val path = StepFileUtils.getSingleMatchingFileFromFolder(folderPath, ("\\Q$fileName\\E").toRegex()) ?: Pair(null, null)
+    val pathAsString = path.toString()
+    return Pair(FileInputStream(pathAsString), pathAsString)
   }
 
   
@@ -279,10 +325,30 @@ object FileLocations: ObjectInterface
   fun getBookNamesFilePath () = "\$jarResources/bookNames.tsv"
   fun getConfigDescriptorsFilePath () = "\$jarResources/configDataDescriptors.tsv"
   fun getMetadataFolderPath () = Paths.get(m_RootFolderPath, "Metadata").toString()
-  fun getSharedConfigFolderPath () = Paths.get(ConfigData["stepTextConverterOverallDataRoot"]!!, "_SharedConfig_").toString()
-  fun getSharedConfigZipFilePath () = Paths.get(getOutputFolderPath(), "sharedMetadata.zip").toString() // Place to store zipped
   fun getStepConfigFileName () = "step.conf"
   fun getStepConfigFilePath () = Paths.get(getMetadataFolderPath(), getStepConfigFileName()).toString()
+
+  fun getExistingArchivedConfigZipFilePath (): String
+  {
+    val rootFolder = getRootFolderPath()
+    val filePattern = makeExistingArchivedConfigFileName(".+").toRegex()
+    val res = StepFileUtils.findFiles(rootFolder, filePattern)
+    if (1 != res.size)
+      throw StepExceptionWithoutStackTraceAbandonRun(if (res.isEmpty()) "No previous config archive found." else "More than one previous config archive found.")
+    return res[0]
+  }
+
+  fun getNewArchivedConfigZipFilePath (): String
+  {
+    val fileName = makeExistingArchivedConfigFileName(ConfigData["stepTargetAudience"]!!)
+    return Paths.get(getOutputFolderPath(), fileName).toString()
+  }
+
+  private fun makeExistingArchivedConfigFileName (targetAudience: String): String
+  {
+    val backslashes = if (".+" == targetAudience) "\\" else ""
+    return "configFiles_${ConfigData["stepModuleName"]!!}_$targetAudience$backslashes.zip"
+  }
 
 
 
@@ -388,7 +454,7 @@ object FileLocations: ObjectInterface
   fun getCountryCodeInfoFilePath () = "\$jarResources/countryNamesToShortenedForm.tsv"
   fun getIsoLanguageCodesFilePath () = "\$jarResources/isoLanguageCodes.tsv"
   fun getOsis2modVersificationDetailsFilePath () = "\$jarResources/osis2modVersification.txt"
-  fun getVernacularTextDatabaseFilePath () = getSharedConfigFolderPath() + "/_Common_/vernacularTranslationsDb.txt"
+  fun getVernacularTextDatabaseFilePath () = locateFile("\$find/vernacularTranslationsDb.txt")!!
 
 
 
@@ -415,8 +481,6 @@ object FileLocations: ObjectInterface
      this special-case processing will not be needed. */
 
   fun getStrongsCorrectionsFilePath () = "\$jarResources/strongsCorrections.txt"
-  private fun getThirdPartySwordConfigFileName () = "sword.conf"
-  fun getThirdPartySwordConfigFilePath () = Paths.get(getMetadataFolderPath(), getThirdPartySwordConfigFileName()).toString()
 
 
   /****************************************************************************/

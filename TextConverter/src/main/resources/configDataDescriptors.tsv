@@ -1,21 +1,4 @@
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-#!
-#! Descriptions of config data items, for use when debugging etc.
-#!
-#! Entries are tab-separated, with fields as follows (some of which may be
-#! empty):
-#!
-#!   Name
-#!   Description
-#!   HowSet: By user, calculated, etc.
-#!   Optional/Mandatory
-#!   Default
-#!   Options
-#!   SetWhere: File / CommandLine / EnvironmentVariable
-#!   Notes
-#!
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+#!Element	Description	HowSet	Required	Default	Options	SetWhere	ChangeWhen	Notes
 step_TMP_garbage	Used internally only.	Calculated	Calculated			Calculated	Calculated
 stepAbout	Used as part of the information on the copyright page, via the About parameter in the Sword config file.  Calculated from various other elements.	Calculated	Calculated			Calculated	Calculated
 stepAboutAdditionalInfo	The bulk of the stepAbout information is either supplied by the translators or calculated.  This lets you add some more information.  It comes out right at the end.	UserSpecified	Optional			File	PerTextIfNecessary
@@ -38,10 +21,10 @@ stepOsis2ModEncryptionKey	Used to hold the encryption key to be used when genera
 stepOsis2ModVersion	Gives the software version number reported by osis2mod.  Used for admin purposes, so we know which osis2mod was used.	Calculated	Calculated			Calculated	Calculated
 stepReleaseType	Distinguishes major and minor releases.	Calculated	Calculated			Calculated	Calculated
 stepReversificationMap	Used internally to hold mapping details for run-time reversification.	Calculated	Calculated			Calculated	Calculated
-stepReversificationType	Indicates whether to apply runtime, conversion-time or no reversification.	Calculated	Calculated	Depends on various parameters.		Calculated	Calculated	if conversionTimeReversification is set to yes on the command line, then conversion-time is used.  Otherwise all STEP modules use runtime reversification, and all public modules use none.  Conversion-time has not been exercised currently.
+stepReversificationType	Indicates whether to apply runtime reversification or no reversification.	Calculated	Calculated	Depends on various parameters.		Calculated	Calculated	All STEP modules use runtime reversification, and all public modules use none.
 stepSoftwareVersionRequired	Indicates which version of the STEP software is required to display the module.	Calculated	Calculated			Calculated	Calculated
 stepTextRevision	The new revision number for the module.	Calculated	Calculated			Calculated	Calculated
-stepUpIssued	Set to 'y' if the text is being up-issued.  The processing will normally work this out for itself, but you can force the issue using stepForceUpIssue.	Calculated	Calculated			Calculated	Calculated
+stepUpIssued	Set to 'y' if the text is being up-issued.	Calculated	Calculated			Calculated	Calculated
 stepVersified	If yes, indicates that the text has used runtime reversification.	Calculated	Calculated			Calculated	Calculated
 xweird	Used internally to hold some markup information which I think may be needed only until STEPBible can be fixed.	Calculated	Calculated			Calculated	Calculated
 stepExternalDataPath_TaggingAll	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	Calculated	Calculated			Calculated	Calculated
@@ -94,7 +77,6 @@ swordCopyrightTextAdditionalInformationSuppliedByUs		Calculated	Calculated			Cal
 swordCopyrightTextAssembly		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
 swordCopyrightTextConversionDetails		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
 swordDerivedWorksLimitations	This may be picked up from supplied other metadata, but can also be overridden using this parameter.	UserSpecifiedOrCalculated	Optional		Arbitrary string.	File	PerTextIfNecessary
-swordDisambiguatorForId	For admin purposes, we use a text-supplier's id for a text where available.  However, there is no guarantee that another text supplier may not use this same id.  stepDisambiguatorForId allows you to specify a string which is prepended to the id which hopefully will make clashes less likely.  If you don't supply something, the processing will determine a value for itself, although the absolute backstop is to use the string 'Unknown'.	UserSpecifiedOrCalculated	Optional	"Unknown"	Arbitrary string.	File	PerTextIfAvailable
 swordInputFileDigests	Used internally to hold digests of the input files.	Calculated	Calculated			Calculated	Calculated
 swordOptions	Set to hold details of those features in the text which osis2mod needs to be aware of.	Calculated	Calculated			Calculated	Calculated
 swordShortCopyright	A brief description of the copyright status.	UserSpecified	MandatoryAlways		Arbitrary string.	File	PerTextAlways
@@ -122,13 +104,11 @@ stepPreprocessingXsltStylesheeWhenNotStartingFromOsis	An XSLT stylesheet used to
 
 
 # Process control.
-stepConversionTimeReversification	If Yes, restructures the text to conform to KJVA structure.	UserSpecified	Optional	No	Yes / No.	File	PerTextIfNecessary
 stepManualOsis2mod	Occasionally it is impossible to get osis2mod to run under control of the program in the IDE.  This lets you pause at the point where osis2mod is required in order to run it manually.	UserSpecified	Optional	No	Yes / No.	File	PerTextIfNecessary
 stepForceUpIssue	By default, if the reason for generating a new module is the same as that used last time, the module is not up-issued.  Give this as 'yes' if you want to force the issue.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunIfNecessary
 stepOkToGenerateFootnotes	Says whether it is ok to generate footnotes (depending upon licence conditions, it may not be).	UserSpecifiedOrCalculated	Calculated	No if copyright text, otherwise yes.		File	PerTextIfNecessary	You can force the matter by overtly specifying a value.
 stepPermitParallelRunning	Says whether to permit parallel running where the processing can use it.  May, for instance, be useful to turn it off when debugging.	UserSpecified	Optional	Yes	Yes / No.	Anywhere	PerRunForDebugging
 stepReversificationFootnoteLevel	Indicates the type of footnotes to be generated on verses affected by reversification.	UserSpecified	MandatorySometimes	Basic	Basic / Academic / <Empty>.	File	PerTextIfNecessary	Needed when performing conversion time or runtime reversification.
-stepUseExistingHistory	Indicates that the history and version information in step.conf is already ok and should not be updated.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerTextIfNecessary
 stepUseVernacularFormats	Used to force the processing to use vernacular formats for any references which it generates.  You will seldom want this to be Yes, because obtaining details of how references are formatted is onerous.	UserSpecified	MandatoryAlways	No	Yes / No.	File	PerTextIfNecessary
 stepValidationReportOutOfOrderAsError	Determines whether out-of-order verses are reported as an error.	UserSpecified	MandatoryAlways	Yes	Yes / No.	File	PerTextIfNecessary	Sometimes translators may deliberately put verses out of order, and we may need to accept this.  However, this works only for STEP-internal modules.
 
@@ -157,7 +137,7 @@ stepRootFolder	The root folder holding data for the module.	UserSpecified	Mandat
 stepStepUpdateReason	Text to be recorded on History line to explain why the module has been generated (used when the new module has been occasioned by STEP itself).	UserSpecified	Optional	"Unspecified"	Arbitrary string.	CommandLine	PerRunIfNecessary
 stepSupplierUpdateReason	Where the new module is being produced because the supplier has changed things, details of those changes.	UserSpecified	Optional		Arbitrary string.	CommandLine	PerRunIfNecessary
 stepTargetAudience	Determines whether we are building a STEP-internal or a public facing module.	UserSpecified	MandatorySometimes	Calculated	Public / Step.	CommandLine	PerRunIfNecessary	Needed only where the root folder name ends in PublicStep, indicating that both forms of module can be built from the same source data.  In this case, says which should be built.
-stepUseExistingOsis	Says to start the process from OSIS rather than any other input.	UserSpecified	Optional		WithChanges / WithoutChanges	CommandLine	PerRunIfNecessary	Where alternative inputs are available, you will be warned if you opt to use OSIS and the other inputs are more up to date.
+stepUseExistingOsis	Says to start the process from OSIS rather than any other input.	UserSpecified	Optional		Yes / No / AsIs	File	PerRunIfNecessary	Where alternative inputs are available, you will be warned if you opt to use OSIS and the other inputs are more up to date.  AsIs means to assume the data is ok as-is, and apply only minimal changes to it.
 stepVersion	Requests the version of the converter JAR.	UserSpecified	Optional	Not requested		CommandLine	PerRunIfNecessary
 
 
@@ -201,4 +181,3 @@ stepStepDidTheSwordConversion	Standard text explaining that we did the conversio
 stepThanks	Standard rubric thanking people who have supplied texts.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
 stepThanksToCrosswire	Standard text thanking Crosswire for their software etc.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
 stepTypeOfDocument	Probably always going to be Bible.	UserSpecified	Optional	Bible	Currently only 'Bible' makes sense.	File	ProbablyNever
-								

@@ -313,7 +313,7 @@ object TranslatableFixedText: ObjectInterface
     val code3Char = "(eng|$m_VernacularCode)"
     val C_DefinitionPattern = "^$code3Char\\|.+".toRegex()
 
-    FileLocations.getInputStream(FileLocations.getVernacularTextDatabaseFilePath())!!.bufferedReader().lines().forEach {
+    FileLocations.getInputStream(FileLocations.getVernacularTextDatabaseFilePath()).first!!.bufferedReader().lines().forEach {
       val line = it.trim()
       if (line.startsWith("Special:"))
         processDefinitionSpecial(line)

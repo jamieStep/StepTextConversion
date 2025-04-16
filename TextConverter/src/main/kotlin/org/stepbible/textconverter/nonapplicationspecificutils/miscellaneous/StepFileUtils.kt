@@ -476,6 +476,52 @@ object StepFileUtils: ObjectInterface
 
   /******************************************************************************/
   /**
+   * Locates files matching a given pattern anywhere within the folder hierarchy
+   * under a given folder.
+   *
+   * @param folder Folder at the root of the hierarchy to be examined.
+   * @param pattern: Regex to match relevant files.
+   * @return List of matching file paths.
+   */
+
+  fun findFiles (folder: String, fileName: String): List<String>
+  {
+    val matchedFiles = mutableListOf<String>()
+    File(folder).walk().forEach { file ->
+        if (file.isFile && file.name == fileName) {
+            matchedFiles.add(file.path)
+        }
+    }
+
+    return matchedFiles
+  }
+
+
+  /******************************************************************************/
+  /**
+   * Locates files matching a given pattern anywhere within the folder hierarchy
+   * under a given folder.
+   *
+   * @param folder Folder at the root of the hierarchy to be examined.
+   * @param pattern: Regex to match relevant files.
+   * @return List of matching file paths.
+   */
+
+  fun findFiles (folder: String, pattern: Regex): List<String>
+  {
+    val matchedFiles = mutableListOf<String>()
+    File(folder).walk().forEach { file ->
+        if (file.isFile && file.name.matches(pattern)) {
+            matchedFiles.add(file.path)
+        }
+    }
+
+    return matchedFiles
+  }
+
+
+  /******************************************************************************/
+  /**
    * Reads a text file and returns a list made up of the individual lines.
    *
    * @param inputFilePath Path from which lines are to be read.

@@ -218,7 +218,7 @@ object IsoLanguageAndCountryCodes: ObjectInterface
   {
     /**************************************************************************/
     val countryNameMappings: MutableMap<String, String> = mutableMapOf()
-    FileLocations.getInputStream(FileLocations.getCountryCodeInfoFilePath())!!.bufferedReader().lines().forEach {
+    FileLocations.getInputStream(FileLocations.getCountryCodeInfoFilePath()).first!!.bufferedReader().lines().forEach {
       val line = it.trim()
       if (line.isEmpty() || line.startsWith("#!"))
         return@forEach
@@ -232,7 +232,7 @@ object IsoLanguageAndCountryCodes: ObjectInterface
     /* 3char language code to combination (2char code + list of countries where
        used.  I use shortened country names where these are defined. */
        
-    FileLocations.getInputStream(FileLocations.getIsoLanguageCodesFilePath())!!.bufferedReader().lines().forEach {
+    FileLocations.getInputStream(FileLocations.getIsoLanguageCodesFilePath()).first!!.bufferedReader().lines().forEach {
       val line = it.trim()
       if (line.isEmpty() || line.startsWith("#!"))
         return@forEach

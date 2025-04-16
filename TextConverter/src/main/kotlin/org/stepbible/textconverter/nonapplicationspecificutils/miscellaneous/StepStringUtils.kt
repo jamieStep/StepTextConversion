@@ -291,3 +291,7 @@ object StepStringUtils: ObjectInterface
     val s = this.replace("\n", " ").replace("\\W+".toRegex(), " ").trim { it <= ' ' }.replace("\\s+".toRegex(), " ")
     return if (s.isBlank()) 0 else s.split("\\p{Z}+".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray().size
   }
+
+
+/******************************************************************************/
+fun String.butLast (): String = if (this.isEmpty()) "" else this.substring(0, this.length - 1)

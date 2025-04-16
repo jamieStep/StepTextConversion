@@ -1,50 +1,171 @@
 /******************************************************************************/
 package org.stepbible.textconverter.protocolagnosticutils.reversification
 
-import org.stepbible.textconverter.applicationspecificutils.Original
-import org.stepbible.textconverter.applicationspecificutils.Revised
+import org.stepbible.textconverter.applicationspecificutils.IssueAndInformationRecorder
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MarkerHandlerFactory
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.PA
-import java.util.*
+import org.w3c.dom.Node
+import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.atomic.AtomicBoolean
 
 
 /******************************************************************************/
 /**
- * Processes reversification data.
+ * ## Introduction
+ *
+ * This class, and the ones upon which it relies, is concerned with handling
+ * texts which do not follow KJV(A) versification  Such texts are problematical,
+ * because they cannot be used directly in things such as interlinear display --
+ * words which one text places in verse n in these 'non-standard' texts another
+ * text may place in verse m, and so you cannot simply display verse n in one
+ * text against verse n in the other.
+ *
+ * By way of a historical note, originally the idea was that we would physically
+ * restructure these texts during the conversion process, moving words around
+ * and / or renumbering to produce something which *did* follow KJV(A).
+ * However, this would have been precluded by the licence conditions which apply
+ * to many of the texts we receive, and we have dropped this.  Instead, we
+ * retain the texts as close as possible to their original form, and rely upon
+ * our own homebrew osis2mod and JSword to handle divergences at run-time.  This
+ * makes it possible to display the texts in their native form when viewing them
+ * standalone, but to align them with other texts on-the-fly when things like
+ * interlinear display require it.
  *
  *
  *
  *
- * ## Reversification flavours
  *
- * At one stage we were contemplating two forms of reversification -- one, which
- * I dubbed 'conversion-time', entailed physically restructuring the text during
- * the conversion process so as to end up with a module which was fully KJVA
- * compliant.  The other ('runtime') involved -- at least to a first
- * approximation -- nothing more than recording details of the way in which the
- * text deviated from KJVA, this information then being used by a revised form
- * of osis2mod and the run-time system to restructure the text on the fly when
- * KJVA compliance was needed in support of STEPBible's added value features.
+ * ## Processing overview
  *
- * At the time of writing, conversion-time restructuring is not really being
- * considered seriously, since such restructuring is ruled out by the licence
- * conditions on most copyright texts (and would also result in a Bible which
- * differed from the expectations of users acquainted with the text).
+ * The processing is driven by a large data file.  The salient portion of this
+ * comprises a number of rows, each made up of a number of fields.
  *
- * Having said that it is no longer being considered seriously, in fact from
- * time to time it is mooted that we might actually occasionally use it after
- * all.  In view of this, I have attempted to put together the outline of
- * something which might do the job -- see [PA_ReversificationHandler_ConversionTime]
- * for more details.
+ * Only a certain subset of the rows apply to any one text.  That subset is
+ * determined by the Tests field of the data.  This field contains a collection
+ * of criteria which must be satisfied by the text being processed in order for
+ * the row to be applicable.
  *
- * The present class serves as a base class for either form of reversification.
+ * The selected rows may give rise to either, both or (possibly) neither of
+ * two actions: we may add annotation to a (sub)verse to explain issues to do
+ * with the versification structure at that point; and we may output data for
+ * use by osis2mod and JSword when handling the text.
+ *
+ * More accurately, there is also a third possible action -- rows with the
+ * IfEmpty action (and only these) may create their source verse if it does
+ * not exist.  (From this point of view, I think the name is misleading -- so
+ * far as I can see it should read 'IfMissing'.)  In fact, processing which
+ * occurs prior to reversification will already have filled in any missing
+ * verses at the start or in the middle of chapters, so IfEmpty will only
+ * create verses which are missing from the ends of chapters, and I am not
+ * sure whether any IfEmpty rows currently attempt that.
+ *
+ * All of this is discussed in more detail below.
+ *
+ *
+ *
+ *
+ * ## Selecting rows
+ *
+ * The Tests column determines whether a given row applies or not.  It may
+ * require that a given (sub)verse exist (or not exist); that it be the last in
+ * its chapter; that its length bear some relationship to the length of some
+ * other (sub)verse etc.  And it may require the conjunction of these things --
+ * the verse must exist while some other does not, or whatever.
+ *
+ * I should perhaps highlight some implementation decisions in case they need to
+ * be queried in future:
+ *
+ * - A verse is taken as existing if either the verse itself or a collection of
+ *   subverses exists.
+ *
+ * - By contrast, a subverse exists only if the subverse itself exists.
+ *
+ * - At one stage subverse zero would have required special consideration.
+ *   However, there is now no longer any reference to subverse zero within the
+ *   Tests column.  (Subverse zero is mentioned elsewhere, but in this section
+ *   I am concerned only with the tests.)
+ *
+ * - Where a verse is made up of subverses, the length of the verse is the
+ *   aggregate length of its subverses.
+ *
+ * - A test involving the length of a verse which forms part of an elision
+ *   always fails -- we have no way of assigning a length to the constituent
+ *   elements of an elisions.
+ *
+ *
+ *
+ *
+ *
+ * ## Determining what to do
+ *
+ * Once rows have been selected, it is then necessary to apply them.
+ *
+ * - All selected rows potentially give rise to annotation, although in
+ *   practice not all of them will do so.  See the Annotation section
+ *   below for details.
+ *
+ * - Selected rows whose SourceRef and StandardRef values differ give rise to
+ *   mappings which are used by our osis2mod processing.
+ *
+ * There is one potential wrinkle here.  Some SourceRefs are subverses.  We
+ * have to ensure that the OSIS we supply to osis2mod does not contain
+ * subverses, because osis2mod cannot cope with them.  It would therefore seem
+ * to make sense to filter out any mappings which have subverses as their
+ * SourceRef.  Currently I am being told that this is not appropriate -- we
+ * want *all* mappings, including ones which refer to subverses.
+ *
+ *
+ *
+ *
+ * ## Annotation
+ *
+ * One of the tasks of the processing here is to add annotation to verses in
+ * some cases (in the form of footnotes).  Incidentally, the footnote data
+ * in the reversification file is always in English, but I do have an extensive
+ * file of translations, and try to use those wherever possible.
+ *
+ * The decision as to whether a footnote is generated at all -- and if so, how
+ * comprehensive it should be -- is driven in part by the reversification data
+ * and in part by the target audience.
+ *
+ * The VersificationNote field gives the text for the footnote.  If this field
+ * is empty, then no footnote is generated.
+ *
+ * The SourceRef field indicates the (sub)verse to which any note should be
+ * applied.  If that (sub)verse does not exist, then no footnote is generated.
+ * (In fact, I have no evidence that the SourceRef might ever *not* exist.  It
+ * may be that the nature of the Tests data is such that if a given row is
+ * selected, its SourceRef is guaranteed to exist.)
+ *
+ * The NoteMarker field (or more specifically, the first part of it) determines
+ * whether the note is appropriate to the target audience.  Where the
+ * NoteMarker field starts with Acd or Opt, the footnote is generated only if
+ * the target audience is academic.  Where the field starts with Nec, it is
+ * generated for *all* audiences.
+ *
+ * In the case of academic texts, the content of the individual footnotes is
+ * more extensive, because the content of the AncientVersions field is added to
+ * it.
+ *
+ * Note that in addition to the VersificationNote field, there is also a
+ * ReversificationNote field.  This contains text which was used in a
+ * previous incarnation of the processing, and is no longer relevant.
  *
  * @author ARA "Jamie" Jamieson
  */
 
 /******************************************************************************/
-open class PA_ReversificationHandler internal constructor (): PA ()
+object PA_ReversificationHandler: PA(), ObjectInterface
 {
   /****************************************************************************/
   /****************************************************************************/
@@ -55,44 +176,63 @@ open class PA_ReversificationHandler internal constructor (): PA ()
   /****************************************************************************/
 
   /****************************************************************************/
-  open fun process (dataCollection: X_DataCollection)
+  /**
+  * Runs the process.
+  *
+  * @param dataCollection
+  */
+
+  fun process (dataCollection: X_DataCollection)
   {
-    extractCommonInformation(dataCollection, wantBibleStructure = true)
+    /**************************************************************************/
+    extractCommonInformation(dataCollection, true)
+    dataCollection.reloadBibleStructureFromRootNodes(wantCanonicalTextSize = true)
+    val callout = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!).get()
+    PA_ReversificationDataLoader.process(dataCollection) // Loads the relevant reversification data.
+    PA_ReversificationUtilities.setCalloutGenerator { _ -> callout }
+    PA_ReversificationUtilities.setFileProtocol(m_FileProtocol)
+    PA_ReversificationUtilities.setNotesColumnName("Versification Note")
+
+    if (PA_ReversificationDataLoader.getSelectedRows().isNotEmpty())
+      IssueAndInformationRecorder.setRuntimeReversification()
+
+
+
+    /**************************************************************************/
+    /* Split out the selected rows per book, so that we can process things in
+       parallel. */
+
+    val reversificationDataRowsPerBook = ConcurrentHashMap<Int, List<ReversificationDataRow>>()
+    reversificationDataRowsPerBook.putAll(PA_ReversificationDataLoader.getSelectedRowsBySourceBook())
+
+
+
+    /**************************************************************************/
+    Rpt.reportWithContinuation(level = 1, "Carrying out reversification processing ...") {
+      with(ParallelRunning(true)) {
+        run {
+          reversificationDataRowsPerBook.keys.forEach { bookNo ->
+            val rowsForThisBook = reversificationDataRowsPerBook[bookNo]
+            if (!rowsForThisBook.isNullOrEmpty())
+              asyncable {
+                val createdVerse = PA_ReversificationHandlerPerBook(dataCollection).processRootNode(dataCollection.getRootNode(bookNo)!!, rowsForThisBook)
+                if (createdVerse)
+                  m_CreatedVerses.set(true)
+              } // asyncable
+          } // forEach
+        } // run
+      } // parallel
+    } // report
+
+
+
+    /**************************************************************************/
+    if (m_CreatedVerses.get())
+    {
+      //Dbg.d(m_DataCollection.convertToDoc())
+      m_DataCollection.reloadBibleStructureFromRootNodes(false)
+    }
   }
-
-
-  /****************************************************************************/
-  /**
-   * Lets a caller know whether the structure has been altered.
-   *
-   * @return True if structure has been altered.
-   */
-
-  internal fun hasAlteredStructure () = m_HasAlteredStructure
-  private var m_HasAlteredStructure = false
-
-
-  /****************************************************************************/
-  /**
-  * Sets a flag to indicate that the structure has been changed.
-  */
-
-  @Synchronized internal fun setAlteredStructure () { m_HasAlteredStructure = true }
-
-
-  /****************************************************************************/
-  /**
-  * Returns a map which maps original RefKey to revised RefKey, so that cross-
-  * references can be updated if necessary.
-  *
-  * This is meaningful only for conversion-time reversification.  In run-time
-  * reversification, we do not alter the structure of the text, and therefore
-  * if cross-references were correct to begin with, they remain correct.
-  *
-  * @return Map.
-  */
-
-  open fun getCrossReferenceMappings (): Map<Original<RefKey>, Revised<RefKey>> = mapOf()
 
 
   /****************************************************************************/
@@ -101,260 +241,127 @@ open class PA_ReversificationHandler internal constructor (): PA ()
   * handle the situation where we have a Bible which is not KJV(A)-compliant,
   * and which we are not restructuring during the conversion process.
   *
-  * The return value is a list of RefKey -> RefKey pairs, mapping source verse
+  * The return value is a list of OSISRef -> OSISRef pairs, mapping source verse
   * to standard verse.  (On PsalmTitle rows, the verse for the standard ref is
   * set to zero.)
   *
-  * This function returns meaningful information only with runtime
-  * reversification -- the kind of information it could supply is not used with
-  * conversion-time reversification.
-  *
-  * @return List of mappings, ordered by source RefKey.
+  * @return List of mappings, following the order of the reversification data
+  *   itself.  Each mapping is a pair, the first element being the SourceRef,
+  *   and the second being the StandardRef.
   */
 
-  open fun getRuntimeReversificationMappings (): List<Pair<SourceRef<RefKey>, StandardRef<RefKey>>> = listOf()
-
-
-  /****************************************************************************/
-  /**
-  * Some Moves or Renumbers target subverse 2 of a verse; and for some (but not
-  * all) of these, there is no corresponding row which targets subverse 1.
-  * For these, the reversification data implicitly assumes that the original
-  * verse itself serves as subverse 1.  Thus, for example, we have something
-  * which targets Num 20:28b, but nothing which targets Num 20:28a.  The
-  * reversification data can be taken as assuming that 20:28 itself serves as
-  * 20:28a, and does not need to be handled during the reversification
-  * processing.
-  *
-  * I need to know about all cases where this is the case, because during
-  * validation I need to know what source text fed into a particular
-  * standard verse.
-  *
-  * This method returns a set of all the subverse 2 refKeys where this is the
-  * case.
-  *
-  * @return Set of refKeys as described above.
-  */
-
-  fun getImplicitRenumbers (): Set<RefKey>
+  fun getRuntimeReversificationMappings (): List<Pair<SourceRef<String>, StandardRef<String>>>
   {
-    return setOf()
-//    val standardRefs = m_SelectedRows.map { it.standardRefAsRefKey }.toSet()
-//    return m_SelectedRows.asSequence()
-//                         .filter { 2 == Ref.getS(it.standardRefAsRefKey) }
-//                         .filter { Ref.setS(it.standardRefAsRefKey, 1) !in standardRefs }
-//                         .filter { Action.RenumberVerse == it.action }
-//                         .map { it.standardRefAsRefKey }
-//                         .toSet()
+    val titlePseudoVerseNumber = RefBase.C_TitlePseudoVerseNumber.toString()
+    fun replaceTitle (s: String) = s.replace(titlePseudoVerseNumber, "0")
+
+    return PA_ReversificationDataLoader.getSelectedRows()
+      .filter { row -> row.sourceRef != row.standardRef }
+      .map { row -> Pair(SourceRef(replaceTitle(row.sourceRef.toStringOsis())), StandardRef(replaceTitle(row.standardRef.toStringOsis()))) }
   }
-} // PA_ReversificationHandler
-
-@JvmInline value class SourceRef  <T> (val value: T)
-@JvmInline value class StandardRef<T> (val value: T)
 
 
-
-
-
-
-
-
+  private var m_CreatedVerses = AtomicBoolean(false)
+}
 
 
 
 
 
 /******************************************************************************/
-/* Code from the most recent previous version.   The first portion -- headed
-   'Data aggregation' -- contains code needed to pick up Moves and to
-   accumulate them into collections such that the collection can be moved en
-   masse, rather than moving verses one at a time.  Something along these lines
-   will be needed if we ever decide to reinstate conversion-time
-   restructuring. */
+class PA_ReversificationHandlerPerBook (private val dataCollection: X_DataCollection)
+{
+  /****************************************************************************/
+  /* Returns true if any nodes were created. */
 
-//  /****************************************************************************/
-//  /****************************************************************************/
-//  /**                                                                        **/
-//  /**                           Data aggregation                             **/
-//  /**                                                                        **/
-//  /****************************************************************************/
-//  /****************************************************************************/
-//
-//  /****************************************************************************/
-//  private val m_SelectedRows: MutableList<ReversificationDataRow> = ArrayList(10000)
-//
-//  private val m_MoveGroups: MutableList<ReversificationMoveGroup> = ArrayList()
-//
-//  private lateinit var m_AllBooks: List<String>
-//  private lateinit var m_SourceBooks: List<String>
-//  private lateinit var m_StandardBooks: List<String>
-//
-//  private lateinit var m_AllBooksInvolvedInMoveActions: List<String>
-//  private lateinit var m_SourceBooksInvolvedInMoveActions: List<String>
-//  private lateinit var m_StandardBooksInvolvedInMoveActions: List<String>
-//
-//
-//  /****************************************************************************/
-//  /* Carries out the various forms of data aggregation required by callers. */
-//
-//  private fun aggregateData ()
-//  {
-//    extractIfAbsentAndIfEmptyRows(AnticipatedIfAbsentDetails.getMap(), "ifabsent")
-//    extractIfAbsentAndIfEmptyRows(AnticipatedIfEmptyDetails.getMap(), "ifempty")
-//
-//    aggregateBooks()
-//    aggregateBooksInvolvedInMoveActions()
-//
-//    if (PROBABLY_NOT_WORKING_PA_ConversionTimeReversification().isRunnable())
-//    {
-//      aggregateMoveGroups()
-//      markSpecialistMoves()
-//    }
-//
-//    recordBookMappings()
-//  }
-//
-//
-//  /****************************************************************************/
-//  /* Generates lists containing:
-//
-//     a) All books mentioned in the selected reversification rows.
-//     b) All source books.
-//     c) All standard books.
-//  */
-//
-//  private fun aggregateBooks ()
-//  {
-//    val allBooks:     MutableSet<Int> = HashSet()
-//    val bookMappings: MutableSet<String> = HashSet()
-//    val sourceBooks:  MutableSet<Int> = HashSet()
-//    val targetBooks:  MutableSet<Int> = HashSet()
-//
-//    m_SelectedRows.forEach {
-//      allBooks.add(it.sourceRef.getB())
-//      allBooks.add(it.standardRef.getB())
-//      sourceBooks.add(it.sourceRef.getB())
-//      targetBooks.add(it.standardRef.getB())
-//      bookMappings.add(BibleBookNamesUsx.numberToAbbreviatedName(it.sourceRef.getB()) + "." + BibleBookNamesUsx.numberToAbbreviatedName(it.standardRef.getB()))
-//    }
-//
-//    m_AllBooks      = allBooks   .sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
-//    m_SourceBooks   = sourceBooks.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
-//    m_StandardBooks = targetBooks.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
-//  }
-//
-//
-//  /****************************************************************************/
-//  /* Generates lists containing:
-//
-//     a) All books involved in Move actions.
-//     b) All source books.
-//     c) All standard books.
-//  */
-//
-//  private fun aggregateBooksInvolvedInMoveActions ()
-//  {
-//    val allBooks:    MutableSet<Int> = HashSet()
-//    val sourceBooks: MutableSet<Int> = HashSet()
-//    val targetBooks: MutableSet<Int> = HashSet()
-//
-//    m_SelectedRows.filter { 0 != it.processingFlags.and(C_Move) }
-//      .forEach { allBooks.add(it.sourceRef.getB()); allBooks.add(it.standardRef.getB()); sourceBooks.add(it.sourceRef.getB()); targetBooks.add(it.standardRef.getB()) }
-//
-//    m_AllBooksInvolvedInMoveActions      = allBooks   .sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
-//    m_SourceBooksInvolvedInMoveActions   = sourceBooks.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
-//    m_StandardBooksInvolvedInMoveActions = targetBooks.sorted().map { BibleBookNamesUsx.numberToAbbreviatedName(it) }
-//  }
-//
-//
-//  /****************************************************************************/
-//  /* Records footnote details for IfAbsent and IfEmpty rows and then removes
-//     these rows from the ones to be processed.  Note that it doesn't matter
-//     whether I choose sourceRef or standardRef for key purposes, because they
-//     are the same.  And nor does it matter whether I choose the reversification
-//     footnote or the versification one, because again they are the same. */
-//
-//  private fun extractIfAbsentAndIfEmptyRows (map: MutableMap<RefKey, String>, action: String)
-//  {
-//    m_SelectedRows.filter { action == it.action }. forEach { map[it.sourceRefAsRefKey] = getFootnoteVersification(it) }
-//    m_SelectedRows.removeIf { action == it.action }
-//  }
-//
-//
-//  /****************************************************************************/
-//  /* Generates a set containing source/standard pairs detailing which source
-//     books map to which standard books. */
-//
-//  private fun recordBookMappings ()
-//  {
-//    fun addMapping (row: ReversificationDataRow)
-//    {
-//      val sourceBook   = BibleBookNamesUsx.numberToAbbreviatedName(row.sourceRef  .getB())
-//      val standardBook = BibleBookNamesUsx.numberToAbbreviatedName(row.standardRef.getB())
-//      m_BookMappings.add("$sourceBook.$standardBook")
-//    }
-//
-//    m_SelectedRows.forEach { addMapping(it) }
-//  }
-//
-//
-//  private lateinit var m_AllBooks: List<String>
-//  private lateinit var m_SourceBooks: List<String>
-//  private lateinit var m_StandardBooks: List<String>//
-//
-//
-//
-//
-//
-//
-//    dataRow.processingFlags = dataRow.processingFlags.or(
-//      when (dataRow.action)
-//      {
-//        "emptyverse"     -> C_CreateIfNecessary
-//        "ifabsent"       -> C_CreateIfNecessary
-//        "ifempty"        -> 0
-//        "keepverse"      -> getAllBiblesComplaintFlag(dataRow)
-//        "mergedverse"    -> C_CreateIfNecessary
-//        "missingverse"   -> C_CreateIfNecessary
-//        "psalmtitle"     -> C_ComplainIfStandardRefDidNotExist
-//        "renumbertitle"  -> C_ComplainIfStandardRefExisted.or(C_StandardIsPsalmTitle).or(if ("title" in getField("SourceRef", dataRow).lowercase()) C_SourceIsPsalmTitle else 0).or(if ("title" in getField("StandardRef", dataRow).lowercase()) C_StandardIsPsalmTitle else 0)
-//        "renumberverse"  -> C_ComplainIfStandardRefExisted.or(C_Renumber)
-//        "renumberverse*" -> C_ComplainIfStandardRefExisted.or(C_Renumber).or(C_Move)
-//        else             -> 0
-//    })
-
-
-//  /****************************************************************************/
-//  /* This is revolting; I can only assume that the need for it became apparent
-//     late in the day, when it would have been too difficult to rejig the
-//     reversification data to handle it properly.
-//
-//     Lots of rows are marked 'AllBibles' in the SourceType field, and most of
-//     these are marked KeepVerse.  Normally KeepVerse retains an existing verse
-//     and complains if the verse does not already exist.
-//
-//     However, on AllBibles rows, KeepVerse is allowed to create verses if they
-//     don't already exist -- except that in a further twist, it has to issue a
-//     warning in some cases (but not all) if it has to create the verse.
-//
-//     And just to make life thoroughly awful, the way I am required to
-//     distinguish these cases has to be based upon the contents of the FootnoteA
-//     column -- certain things there imply that a warning is needed, while others
-//     do not.  (The problem being here that this field is free-form text, so
-//     sooner or later it is going to change, sure as eggs is eggs, and I shan't
-//     realise that's an issue.) */
-//
-//  private val m_NoteAOptionsText = listOf("At the end of this verse some manuscripts add information such as where this letter was written",
-//                                          "In some Bibles this verse is followed by the contents of Man.1 (Prayer of Manasseh)",
-//                                          "In some Bibles this verse starts on a different word")
-//
-//  private fun getAllBiblesComplaintFlag (row: ReversificationDataRow): Int
-//  {
-//    val noteA = getField("Reversification Note", row)
-//    return if (m_NoteAOptionsText.contains(noteA)) C_ComplainIfStandardRefDidNotExist else 0
-//  }
+  fun processRootNode (rootNode: Node, rowsForThisBook: List<ReversificationDataRow>): Boolean
+  {
+    /**************************************************************************/
+    val fileProtocol = dataCollection.getFileProtocol()
+    val bookName = fileProtocol.getBookAbbreviation(rootNode); Rpt.reportBookAsContinuation(bookName)
+    var createdVerses = false
 
 
 
+    /**************************************************************************/
+    /* Canonical titles are relatively easy because we should be able to rely
+       upon them existing -- we never create them here, and if they _don't_
+       exist here, it probably indicates an error. */
 
+    val canonicalTitlesMap = PA_ReversificationUtilities.makeCanonicalTitlesMap(rootNode)
+    rowsForThisBook
+      .filter {dataRow -> RefBase.C_TitlePseudoVerseNumber == dataRow.sourceRef.getV() }
+      .forEach { dataRow ->
+        val targetNode = canonicalTitlesMap[dataRow.sourceRef.getC()] ?: throw StepExceptionWithoutStackTraceAbandonRun("Reversification -- missing canonical title: $dataRow")
+        PA_ReversificationUtilities.addFootnoteToCanonicalTitle(targetNode, dataRow) }
+
+
+
+    /**************************************************************************/
+    /* Probably a good idea to create any missing verses next. */
+
+    var sidMap = PA_ReversificationUtilities.makeVerseSidMap(rootNode)
+    val chapterMap = PA_ReversificationUtilities.makeChapterSidMap(rootNode)
+    rowsForThisBook
+      .filter {dataRow -> dataRow["Action"].startsWith("IfEmpty", ignoreCase = true) }
+      .filterNot { dataRow -> dataRow.sourceRef.toRefKey() in sidMap }
+      .forEach { dataRow ->
+        createdVerses = true
+        val newNodes = dataCollection.getFileProtocol().getEmptyVerseHandler().createEmptyVerseForReversification(rootNode.ownerDocument, dataRow.sourceRef.toRefKey())
+        val refKey = dataRow.sourceRef.toRefKey()
+        val insertBefore = sidMap.ceilingEntry(refKey)
+        if (null == insertBefore)
+        {
+          val chapterNode = chapterMap[dataRow.sourceRef.toRefKey_bc()]!!
+          Dom.addChildren(chapterNode, newNodes)
+        }
+        else
+          Dom.insertNodesBefore(insertBefore.value, newNodes)
+      }
+
+
+
+    /**************************************************************************/
+    /* That just leaves the job of annotating everything bar psalm titles
+       (which we already annotated earlier).  We need to rebuild the sid map
+       if we created any new verses, so that they appear in the map. */
+
+    if (createdVerses)
+      sidMap = PA_ReversificationUtilities.makeVerseSidMap(rootNode)
+
+    rowsForThisBook
+      .filterNot {dataRow -> RefBase.C_TitlePseudoVerseNumber == dataRow.sourceRef.getV() }
+      .forEach { addFootnote(it, sidMap) }
+
+
+    /**************************************************************************/
+    return createdVerses
+  }
+
+
+  /****************************************************************************/
+  private fun addFootnote (dataRow: ReversificationDataRow, sidMap: Map<RefKey, Node>)
+  {
+    val sourceRefKey = dataRow.sourceRef.toRefKey()
+    val sourceNode = sidMap[sourceRefKey] ?: sidMap[Ref.clearS(sourceRefKey)] // 03-Apr-2025: Added clearS.
+    if (null == sourceNode)
+    {
+      Logger.error(sourceRefKey, "Runtime reversification source verse does not exist: $dataRow.")
+      return
+    }
+
+    val wordCount = try { // On empty verses which we have just created, this may fail, but that's fine -- we want these to appear empty anyway.
+        dataCollection.getBibleStructure().getCanonicalTextSize(dataCollection.getFileProtocol().getSidAsRefKey(sourceNode))
+      }
+      catch (_: Exception)
+      {
+        0
+      }
+
+      PA_ReversificationUtilities.addFootnote(sourceNode, dataRow, wordCount)
+  }
+}
+
+@JvmInline value class SourceRef  <T> (val value: T)
+@JvmInline value class StandardRef<T> (val value: T)
 

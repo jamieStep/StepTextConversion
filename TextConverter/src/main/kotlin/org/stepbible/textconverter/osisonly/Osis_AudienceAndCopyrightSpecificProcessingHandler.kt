@@ -16,8 +16,6 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Ste
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationHandler
-import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationHandler_ConversionTime
-import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationHandler_RunTime
 import java.io.File
 import java.util.ArrayList
 
@@ -34,12 +32,7 @@ import java.util.ArrayList
 * We had intended to support three kinds of reversification -- 'none',
 * run-time and conversion-time.  'none' is ok (this would be used when creating
 * a public module).  Run-time is ok (this is what we use for all STEP-
-* internal modules).  Conversion-time is more of an issue, however.
-*
-* We never anticipated using this much anyway -- it entails physically
-* restructuring modules during the conversion process, and licence
-* conditions will normally preclude that.  Code does exist to handle it,
-* but be aware that at the time of writing, it has never been exercised.
+* internal modules).  Conversion-time is no longer supported.
 *
 * The processing here is driven by a few configuration parameters.  A
 * previous incarnation of this class forced these parameters into
@@ -192,14 +185,6 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
         if ("public" == targetAudience)
           throw StepExceptionWithStackTraceAbandonRun("Applying run-time versification, so you can't create a public module.")
       }
-
-      "conversiontime" ->
-      {
-        // It's possible conversion-time reversification isn't properly implemented, but we'll leave it to the conversion-time code to make that call.
-        // Not sure whether we need this to be public texts only -- certainly it doesn't really make sense to put this through Sami's code, since that's
-        // concerned with dealing with non-KJVA-compliant texts, and the whole point of doing conversion-time reversification is to ensure we end up
-        // with a text which _is_ compliant.
-      }
     }
 
 
@@ -209,7 +194,6 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
     {
       "none"           -> setNoReversificationActionRequired()
       "runtime"        -> setRunTimeReversification()
-      "conversiontime" -> setConversionTimeRestructuring(m_VersificationScheme)
     }
 
 
@@ -276,8 +260,6 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
   {
     return if ("step" == targetAudience) // Always use run-time if we're targetting STEPBible.
       "runtime"
-    else if (ConfigData.getAsBoolean("stepConversionTimeReversification", "no")) // Otherwise use conversion-time if that has been requested.
-      "conversiontime"
     else
       "none"
   }
@@ -334,28 +316,6 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
      - We have to set stepReversificationType to reflect this.
 
-      - We need to ensure that we use Crosswire's osis2mod.
-
-      - We need to flag the fact that version 1 of the offline STEP software
-        will be good enough.
-
-      - The target scheme will be KJV or KJV(A) as appropriate.
-  */
-
-  private fun setConversionTimeRestructuring (versificationScheme: String)
-  {
-    ConfigData.deleteAndPut("stepReversificationType", "conversiontime", force = true)
-    ConfigData.deleteAndPut("stepVersified", "No", force = true)
-    ConfigData.deleteAndPut("stepVersificationScheme", versificationScheme, force = true)
-    m_ReversificationHandler = PA_ReversificationHandler_ConversionTime
-  }
-
-
-  /****************************************************************************/
-  /* If we want to apply conversion-time restructuring to a text:
-
-     - We have to set stepReversificationType to reflect this.
-
      - We need to flag the fact that version 1 of the offline STEP software
        will be good enough.
     */
@@ -391,7 +351,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
     ConfigData.deleteAndPut("stepSoftwareVersionRequired", 2.toString(), force=true)
     ConfigData.deleteAndPut("stepVersificationScheme", ConfigData["stepModuleName"]!!, true) // Force to our own name for the versification scheme.
     ConfigData.delete("stepVersificationScheme")
-    m_ReversificationHandler = PA_ReversificationHandler_RunTime
+    m_ReversificationHandler = PA_ReversificationHandler
   }
   
   
@@ -456,9 +416,9 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
     /* Generate the JSON needed by our version of osis2mod if this is a runtime
        reversification run. */
 
-    val isRunTimeReversification = PA_ReversificationHandler_RunTime === m_ReversificationHandler
+    val isRunTimeReversification = PA_ReversificationHandler === m_ReversificationHandler
     if (isRunTimeReversification)
-      Osis_Osis2modRunTimeReversificationJsonHandler.process(m_ReversificationHandler!!)
+      Osis_Osis2modRunTimeReversificationJsonHandler.process()
 
 
 
@@ -574,7 +534,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
     }
     else
     {
-      val rc = runCommand("Running external command to generate Sword data: ", swordExternalConversionCommand, errorFilePath = FileLocations.getOsisToModLogFilePath())
+      val rc = runCommand("Running external command to generate Sword data: ", swordExternalConversionCommand, reportFilePath = FileLocations.getOsisToModLogFilePath())
       ConfigData["stepOsis2modReturnCode"] = rc.toString()
       Rpt.report(level = 1, "osis2mod completed")
     }

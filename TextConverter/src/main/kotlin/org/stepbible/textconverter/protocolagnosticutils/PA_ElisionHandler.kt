@@ -1,7 +1,6 @@
 package org.stepbible.textconverter.protocolagnosticutils
 
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.TranslatableFixedText
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
@@ -9,6 +8,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefRange
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.w3c.dom.Node
 
@@ -43,17 +43,6 @@ import org.w3c.dom.Node
 object PA_ElisionHandler: PA(), ObjectInterface
 {
   /****************************************************************************/
-  /* NOTE: Previous versions of this code assumed that verse ends were already
-     in place.  However, that strikes me now as a complication: it is simpler
-     to run this at a time when we have only sids, and then insert the eids
-     later. */
-  /****************************************************************************/
-
-
-
-
-
-  /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
   /**                         Public / Protected                             **/
@@ -74,7 +63,7 @@ object PA_ElisionHandler: PA(), ObjectInterface
       return // At present, I assume we always will expand elisions -- and indeed I think things will go wrong if we don't.
 
     extractCommonInformation(dataCollection)
-    m_EmptyVerseHandler = PA_EmptyVerseHandler(dataCollection.getFileProtocol())
+    m_EmptyVerseHandler = PA_MissingVerseHandler(dataCollection.getFileProtocol())
     Rpt.reportWithContinuation(level = 1, "Expanding elisions ...") {
       with(ParallelRunning(true)) {
         run {
@@ -90,17 +79,19 @@ object PA_ElisionHandler: PA(), ObjectInterface
 
 
 
-private class PA_ElisonHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m_EmptyVerseHandler: PA_EmptyVerseHandler)
+private class PA_ElisonHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m_EmptyVerseHandler: PA_MissingVerseHandler)
 {
   /****************************************************************************/
   fun processRootNode (rootNode: Node)
   {
     Rpt.reportBookAsContinuation(m_FileProtocol.getBookAbbreviation(rootNode))
     val attrNameSid = m_FileProtocol.attrName_verseSid()
-    val verses = rootNode.findNodesByAttributeName(m_FileProtocol.tagName_verse(), attrNameSid)
-    for (ix in verses.indices)
-      if ('-' in verses[ix][attrNameSid]!!)
-        processElision(verses[ix], if (ix + 1 >= verses.size) null else verses[ix + 1], Dom.findAncestorByNodeName(verses[ix], m_FileProtocol.tagName_chapter())!!)
+    val verses = rootNode.findNodesByName(m_FileProtocol.tagName_verse()).groupBy { Dom.hasAttribute(it, attrNameSid) }
+    val verseSids = verses[true]!!
+    val verseEids = verses[false]!!
+    for (ix in verseSids.indices)
+      if ('-' in verseSids[ix][attrNameSid]!!)
+        processElision(verseSids[ix], verseEids[ix], if (ix + 1 >= verseSids.size) null else verseSids[ix + 1], Dom.findAncestorByNodeName(verseSids[ix], m_FileProtocol.tagName_chapter())!!)
   }
 
 
@@ -209,7 +200,7 @@ private class PA_ElisonHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m
      the master verse.  For table elisions, the master comes first followed by
      the empty verses. */
 
-  private fun processElision (verse: Node, nextVerse: Node?, chapterNode: Node)
+  private fun processElision (verseSid: Node, verseEid: Node, nextVerse: Node?, chapterNode: Node)
   {
     /**************************************************************************/
     //Dbg.dCont(Dom.toString(verse), "!a")
@@ -217,8 +208,8 @@ private class PA_ElisonHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m
 
 
     /**************************************************************************/
-    val refKeys = getRefKeysForRefRange(verse[m_FileProtocol.attrName_verseSid()]!!)
-    val origSid = verse[m_FileProtocol.attrName_verseSid()]!!
+    val refKeys = getRefKeysForRefRange(verseSid[m_FileProtocol.attrName_verseSid()]!!)
+    val origSid = verseSid[m_FileProtocol.attrName_verseSid()]!!
     IssueAndInformationRecorder.elidedVerse(refKeys, origSid)
 
 
@@ -230,18 +221,18 @@ private class PA_ElisonHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m
        case I create a temporary node right at the end of the chapter and do
        the insertions before that, and then delete the temporary node again. */
 
-    if ("tableElision" == NodeMarker.getElisionType(verse))
+    if ("tableElision" == NodeMarker.getElisionType(verseSid))
     {
       var insertionPoint = nextVerse
       if (null == nextVerse)
       {
-        insertionPoint = Dom.createNode(verse.ownerDocument, "<XXX/>")
+        insertionPoint = Dom.createNode(verseSid.ownerDocument, "<XXX/>")
         chapterNode.appendChild(insertionPoint)
       }
 
       refKeys.subList(1, refKeys.size).forEach {
-        val nodeList = m_EmptyVerseHandler.createEmptyVerseForElision(verse.ownerDocument, it, false, "tableElision") // Start, content, and optionally footnote (but no eid).
-          m_FileProtocol.updateVerseSid(verse, refKeys[0])
+        val nodeList = m_EmptyVerseHandler.createEmptyVerseForElision(verseSid.ownerDocument, it, "tableElision") // Start, content, and optionally footnote (but no eid).
+          m_FileProtocol.updateVerseSid(verseSid, refKeys[0])
           Dom.insertNodesBefore(insertionPoint!!, nodeList)
           // No need to add a footnote here -- the table processing will already have handled that.
        }
@@ -249,7 +240,8 @@ private class PA_ElisonHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m
        if (null == nextVerse)
          Dom.deleteNode(insertionPoint!!)
 
-       m_FileProtocol.updateVerseSid(verse, refKeys.first())
+       m_FileProtocol.updateVerseSid(verseSid, refKeys.first())
+       m_FileProtocol.updateVerseEid(verseEid, refKeys.first())
     }
 
 
@@ -257,26 +249,27 @@ private class PA_ElisonHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m
     /**************************************************************************/
     else // Not a table elision.
       refKeys.subList(0, refKeys.size - 1).forEach {
-        val nodeList = m_EmptyVerseHandler.createEmptyVerseForElision(verse.ownerDocument, it, false) // Start, content, and optionally footnote (but no eid).
+        val nodeList = m_EmptyVerseHandler.createEmptyVerseForElision(verseSid.ownerDocument, it) // Start, content, and optionally footnote (but no eid).
         addTemporaryAttributesToEmptyVerse(nodeList[0], "elision")
-        m_FileProtocol.updateVerseSid(verse, refKeys.last())
-        Dom.insertNodesBefore(verse, nodeList)
+        m_FileProtocol.updateVerseSid(verseSid, refKeys.last())
+        Dom.insertNodesBefore(verseSid, nodeList)
         if (refKeys.size > 2) // No footnote on master verse if there is only one other verse in the elision.
         {
-          val footnote = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToMasterVerseInElision, verse.ownerDocument, m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!).getLowAsRefKey(), TranslatableFixedText.stringFormat(Language.Vernacular, "V_elision_containsTextFromOtherVerses", m_FileProtocol.readRefCollection(verse[m_FileProtocol.attrName_verseSid()]!!)))
+          val footnote = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToMasterVerseInElision, verseSid.ownerDocument, m_FileProtocol.readRefCollection(verseSid[m_FileProtocol.attrName_verseSid()]!!).getLowAsRefKey(), TranslatableFixedText.stringFormat(Language.Vernacular, "V_elision_containsTextFromOtherVerses", m_FileProtocol.readRefCollection(verseSid[m_FileProtocol.attrName_verseSid()]!!)))
           if (null != footnote)
           {
-            Dom.insertNodeAfter(verse, footnote)
-            NodeMarker.setAddedFootnote(verse)
+            Dom.insertNodeAfter(verseSid, footnote)
+            NodeMarker.setAddedFootnote(verseSid)
           }
         }
 
-       m_FileProtocol.updateVerseSid(verse, refKeys.last())
+       m_FileProtocol.updateVerseSid(verseSid, refKeys.last())
+       m_FileProtocol.updateVerseEid(verseEid, refKeys.last())
      }
 
 
 
     /**************************************************************************/
-    addTemporaryAttributesToMasterVerse(verse, NodeMarker.getElisionType(verse) ?: "elision", origSid, refKeys.size)
+    addTemporaryAttributesToMasterVerse(verseSid, NodeMarker.getElisionType(verseSid) ?: "elision", origSid, refKeys.size)
   }
 }

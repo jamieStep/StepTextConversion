@@ -158,7 +158,10 @@ private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProt
 
   /****************************************************************************/
   /* At the end of the chapter I hope for the best, and simply turn the
-     title node into hi:italic. */
+     title node into hi:italic.  At one time I was also potentially
+     restructuring here to make sure that any sid / eid pair was suitably
+     located relative to the title, but we now rely upon osis2mod to take
+     care of such things. */
 
   private fun processTitlesAtEndOfChapter (titleNodesInChapter: List<Node>)
   {
@@ -183,7 +186,7 @@ private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProt
        inside it).  I'm therefore going to move any adjacent eid into the
        title. */
 
-
+/*
 
     val verseTags = titleNode.findNodesByName("verse")
     when (verseTags.size)
@@ -213,6 +216,8 @@ private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProt
 
       else -> throw StepExceptionWithoutStackTraceAbandonRun("processTitlesAtEndOfChapter: (B) Invalid number of contained verse tags: ${verseTags.size}.")
     }
+ */
+
   }
 
 

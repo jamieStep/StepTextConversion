@@ -17,8 +17,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.osisonly.Osis_AudienceAndCopyrightSpecificProcessingHandler
-import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationDataHandler
-import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationUtilities
+import org.stepbible.textconverter.protocolagnosticutils.reversification.PA_ReversificationDataLoader
 import org.w3c.dom.Node
 
 
@@ -174,7 +173,6 @@ object IssueAndInformationRecorder: ObjectInterface
   @Synchronized fun setHasAcrosticDivTags ()                                     { m_BibleTextStructure.HasAcrosticDivTags = true}
   @Synchronized fun setHasAcrosticSpanTags ()                                    { m_BibleTextStructure.HasAcrosticSpanTags = true}
   @Synchronized fun setChangedFootnoteCalloutsToHouseStyle ()                    { m_RunFeatures.ChangedFootnoteCalloutsToHouseStyle = true }
-  @Synchronized fun setConversionTimeReversification ()                          { m_RunFeatures.ReversificationType = "Conversion time" }
   @Synchronized fun setRuntimeReversification ()                                 { m_RunFeatures.ReversificationType = "Run time" }
   @Synchronized fun setConvertedCrossReferencesToCanonicalForm ()                { m_RunFeatures.ConvertedCrossReferencesToCanonicalForm = true }
   @Synchronized fun setForcedSelfClosingParas ()                                 { m_RunFeatures.ForcedSelfClosingParas = true }
@@ -663,13 +661,13 @@ object IssueAndInformationRecorder: ObjectInterface
     if (referenceMappings.isNotEmpty())
     {
       m_RunFeatures.HasReversificationMappings = true
-      m_RunFeatures.ReversificationMappings = referenceMappings.map { Ref.rd(it.first.value).toString() + " -> " + Ref.rd(it.second.value).toString() }
+      m_RunFeatures.ReversificationMappings = referenceMappings.map { it.first.value + " -> " + it.second.value }
     }
 
 
 
     /**************************************************************************/
-    val acceptedRows = PA_ReversificationDataHandler.getSelectedRowsAsStrings()
+    val acceptedRows = PA_ReversificationDataLoader.getSelectedRowsAsStrings()
     if (acceptedRows.isNotEmpty())
     {
       m_RunFeatures.AcceptedReversificationRows = acceptedRows

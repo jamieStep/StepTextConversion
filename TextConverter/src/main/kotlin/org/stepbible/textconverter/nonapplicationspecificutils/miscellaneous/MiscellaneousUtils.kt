@@ -8,10 +8,9 @@ import org.reflections.scanners.Scanners
 import org.reflections.util.ClasspathHelper
 import org.reflections.util.ConfigurationBuilder
 import org.stepbible.textconverter.MainProcessor
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotify
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotifyIfContainsSpaces
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionNotReallyAnException
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.awt.Toolkit
@@ -87,7 +86,8 @@ object MiscellaneousUtils: ObjectInterface
 
   /****************************************************************************/
   /**
-   * Converts 1, 2, ... 26, 27, 28 ... to a, b, ... z, aa, ab ...
+   * Converts 1, 2, ... 26, 27, 28 ... to a, b, ... z, aa, ab ...  Zero gets
+   * special treatment -- it is returned as "*".
    *
    * @param n Number to be converted
    * @param lowChar First character in range of available characters.
@@ -97,6 +97,9 @@ object MiscellaneousUtils: ObjectInterface
 
   fun convertNumberToRepeatingString (n: Int, lowChar: Char, highChar: Char): String
   {
+    if (0 == n)
+      return "*"
+
     val lowCharCode = lowChar.code
     val nElts = highChar.code - lowCharCode + 1
     var x = n
@@ -133,11 +136,22 @@ object MiscellaneousUtils: ObjectInterface
    * @param text: String to be converted.
    * @param lowerBound Lowest character in range.
    * @param upperBound Highest character in range.
+   * @param zeroChar Character used to represent a zero.
+   * @param zeroVal Value used to reflect the presence of zeroChar.  This may
+   *   seem odd -- after all, zero would seem to be the obvious value to return
+   *   if we have a string representing zero.  Unfortunately this is no good
+   *   for subverses -- the reversification data requires that we support
+   *   subverse zero, and I use a zero value to represent the absence of a
+   *   subverse.  When processing subverse data, therefore I need to be able to
+   *   return something other than zero.
    * @return Converted value.
    */
 
-  fun convertRepeatingStringToNumber (text: String, lowerBound: Char, upperBound: Char): Int
+  fun convertRepeatingStringToNumber (text: String, lowerBound: Char, upperBound: Char, zeroChar: Char = '*', zeroVal: Int = RefBase.C_SubverseZeroPseudoNumber): Int
   {
+    if (text == zeroChar.toString())
+      return zeroVal
+
     val lowerBoundCode = lowerBound.code
     val range = upperBound.code - lowerBoundCode + 1
     var res = 0
@@ -369,29 +383,55 @@ object MiscellaneousUtils: ObjectInterface
   /**
     * Runs a (possibly empty) list of external commands.
     *
-    * There are some issues to be aware of here.  First, don't be tempted to
-    * pass a command which includes '>' to redirect output to a file --
-    * ProcessBuilder can't cope with that.  To get round it, you can use the
-    * redirectFile parameter here. If you do that, however, I have at least
-    * some anecdotal evidence that not all of the output ends up in the file.
-    * (This occurred when I was sending both stderr and stdout to the same file,
-    * for which reason I presently redirect stderr only, but this may not be
-    * acceptable.)
+    * Don't be tempted to pass, within command, something which includes '>'
+    * to redirect output to a file -- ProcessBuilder can't cope with that.
     *
     * @param prompt Written to System.out if non-null.
     * @param command Command to be run.
     * @param workingDirectory Directory to move to before running command.
-    * @param errorFilePath If non-null, output is redirected to here
+    * @param reportFilePath If non-null, output is redirected to here.
     * @return Return code from process which is being run.
     */
 
-  fun runCommand (prompt: String?, command: List<String>, errorFilePath: String? = null, workingDirectory: String? = null): Int
+  fun runCommand (prompt: String?, command: List<String>, reportFilePath: String? = null, workingDirectory: String? = null): Int
   {
-    if (null != prompt) Rpt.report(level = 1, prompt + command.map { quotifyIfContainsSpaces(it) }. joinToString(" "))
-    val pb = ProcessBuilder(command)
-    if (null != errorFilePath) pb.redirectError(File(errorFilePath))
-    if (null != workingDirectory) pb.directory(File(workingDirectory))
-    val res = pb.start().waitFor()
+    // The complicated code below is apparently necessary to stop things blocking if outputting
+    // to both stdout and stderr.
+
+    if (null != prompt) Rpt.report(level = 1, prompt + command.joinToString(" "){ quotifyIfContainsSpaces(it) })
+    val process = ProcessBuilder(command)
+      .redirectErrorStream(false) // Keep stdout and stderr separate.
+      .start()
+
+    val stdout = process.inputStream.bufferedReader()
+    val stderr = process.errorStream.bufferedReader()
+
+    val stderrs: MutableList<String> = mutableListOf()
+    val stdouts: MutableList<String> = mutableListOf()
+
+    val stdoutThread = Thread {
+        stdout.forEachLine { stdouts.add(it) }
+    }
+
+    val stderrThread = Thread {
+        stderr.forEachLine { stderrs.add(it) }
+    }
+
+    stdoutThread.start()
+    stderrThread.start()
+
+    val res = process.waitFor()
+    stdoutThread.join()
+    stderrThread.join()
+
+    if (null != reportFilePath)
+    {
+      File(reportFilePath).printWriter().use { writer ->
+        stderrs.forEach { writer.println(it) }
+        stdouts.forEach { writer.println(it) }
+      }
+    }
+
     Rpt.report(level = 1, "External command completed")
     return res
   }

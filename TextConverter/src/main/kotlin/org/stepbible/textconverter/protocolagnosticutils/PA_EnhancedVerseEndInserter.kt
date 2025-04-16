@@ -71,6 +71,10 @@ object PA_EnhancedVerseEndInserter: PA(), ObjectInterface
   fun process (dataCollection: X_DataCollection)
   {
     extractCommonInformation(dataCollection)
+
+    if (null != Dom.findNodeByAttributeName(dataCollection.getRootNodes()[0], m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid()))
+      return // I assume that if there is at least one verse eid in the first book, then there will be eids throughout.
+
     Rpt.reportWithContinuation(level = 1, "Handling cross-boundary markup ...") {
       with(ParallelRunning(true)) {
         run {
@@ -129,26 +133,47 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
 
   private fun insertVerseEnds (rootNode: Node, chapterNodes: List<Node>)
   {
-    initialise(rootNode)
+    val dummyVerses: MutableList<Node> = mutableListOf()
 
-    chapterNodes.forEach { chapterNode ->
-      val verses = Dom.findNodesByName(chapterNode, m_FileProtocol.tagName_verse(), false)
-      val tables: Map<Int, Node> = Dom.findNodesByName(chapterNode, m_FileProtocol.tagName_table(), false)
-        .filter { NodeMarker.hasUniqueId(it) }
-        .associateBy { NodeMarker.getUniqueId(it)!!.toInt() }
-
-      verses.filter { "tableElision" == NodeMarker.getElisionType(it) } .forEach {
-        val table = tables[NodeMarker.getUniqueId(it)!!.toInt()]!!
-        val verseEnd = m_FileProtocol.makeVerseEidNode(it.ownerDocument, it[m_FileProtocol.attrName_verseSid()]!!)
-        Dom.insertNodeAfter(table, verseEnd)
-      }
-
-      for (i in 0 ..< verses.size - 1) // -1 so we don't process the dummy verse.
-        if ("tableElision" != NodeMarker.getElisionType(verses[i]))
-          insertVerseEnd(verses[i], verses[i + 1])
+    chapterNodes.forEach {
+      val dummyVerse = Dom.createNode(it.ownerDocument, "<${m_FileProtocol.tagName_verse()} ${m_FileProtocol.attrName_verseSid()}='Gen.999.999'/>")
+      dummyVerses.add(dummyVerse)
+      it.appendChild(dummyVerse) // This means we can always insert eids before the next verse.  Without it, the last eid would have no next verse.
     }
 
-//    Dbg.d(rootNode.ownerDocument)
+    initialise(rootNode)
+
+    chapterNodes.forEach {
+      insertVerseEndsForChapter(it)
+    }
+
+    dummyVerses.forEach {
+      Dom.deleteNode(it)
+    }
+  }
+
+
+  /****************************************************************************/
+  private fun insertVerseEndsForChapter (chapterNode: Node)
+  {
+    //val dbg = Dbg.dCont(Dom.toString(chapterNode), "50")
+    val verses = Dom.findNodesByName(chapterNode, m_FileProtocol.tagName_verse(), false)
+    val tables: Map<Int, Node> = Dom.findNodesByName(chapterNode, m_FileProtocol.tagName_table(), false)
+      .filter { NodeMarker.hasUniqueId(it) }
+      .associateBy { NodeMarker.getUniqueId(it)!!.toInt() }
+
+    verses.filter { "tableElision" == NodeMarker.getElisionType(it) } .forEach {
+      val table = tables[NodeMarker.getUniqueId(it)!!.toInt()]!!
+      val verseEnd = m_FileProtocol.makeVerseEidNode(it.ownerDocument, it[m_FileProtocol.attrName_verseSid()]!!)
+      Dom.insertNodeAfter(table, verseEnd)
+    }
+
+    for (i in 0 ..< verses.size - 1) // -1 so we don't process the dummy verse.
+      if ("tableElision" != NodeMarker.getElisionType(verses[i]))
+        insertVerseEnd(verses[i], verses[i + 1])
+
+//   if (dbg)
+//     Dbg.d(chapterNode.ownerDocument)
   }
 
 
@@ -166,7 +191,7 @@ private class PA_EnhancedVerseEndInserterPerBook (val m_FileProtocol: X_FileProt
   private fun insertVerseEnd (sidWhoseEidWeAreCreating: Node, nextVerseSid: Node)
   {
     /**************************************************************************/
-    //val dbg = Dbg.dCont(Dom.toString(sidWhoseEidWeAreCreating), "Acts.24.7")
+    //val dbg = Dbg.dCont(Dom.toString(sidWhoseEidWeAreCreating), "Num.15.31")
 
 
 

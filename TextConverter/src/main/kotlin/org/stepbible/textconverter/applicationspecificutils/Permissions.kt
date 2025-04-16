@@ -86,9 +86,7 @@ object Permissions: ObjectInterface
 
 
   /****************************************************************************/
-  enum class RestructureAction { ConversionTimeReversification,
-                                 ExpandElisions,
-                                 ConvertTablesToElisions
+  enum class RestructureAction { ExpandElisions, ConvertTablesToElisions
   }
 
 
@@ -104,7 +102,6 @@ object Permissions: ObjectInterface
   {
     return when (type)
     {
-      RestructureAction.ConversionTimeReversification -> !m_IsCopyrightText
       RestructureAction.ExpandElisions                -> true
       RestructureAction.ConvertTablesToElisions       -> true
     }

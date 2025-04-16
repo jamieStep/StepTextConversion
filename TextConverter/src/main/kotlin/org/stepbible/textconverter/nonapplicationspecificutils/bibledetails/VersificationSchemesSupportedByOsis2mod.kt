@@ -61,7 +61,7 @@ object VersificationSchemesSupportedByOsis2mod: ObjectInterface
   @Synchronized private fun doInit ()
   {
     val C_UnwantedSchemes = ".calvin.darbyfr."
-    StepFileUtils.readDelimitedTextStream(FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath())!!)
+    StepFileUtils.readDelimitedTextStream(FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath()).first!!)
       .filter { it[0].lowercase() !in C_UnwantedSchemes }
       .forEach { m_CanonicalSchemeNameMappings[it[0]] = it[0] }
   }

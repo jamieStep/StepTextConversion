@@ -1,0 +1,102 @@
+//******************************************************************************
+//
+// Chronology information
+//
+// Once you have stripped off these head-of-file comments, this file is in JSON
+// format.
+//
+//
+//
+// Licensing information
+// =====================
+//
+// This file has been produced by the STEPBible project, and is made available
+// under the CC BY 4.0 licence at https://stepbible.github.io/STEPBible-Data/.
+//
+// You do not need permission to use the data, but we would love to hear about
+// anything you do with it.  We would also be grateful if you could inform us of
+// any errors you discover.  Please email us at Feedback @ StepBible.org.
+//
+//
+//
+// Structure
+// =========
+//
+// The file is made up of a collection of 'Event' records, each describing a
+// single event.  They are in the form of a list, ordered chronologically.
+//
+// Very many events -- although by no means all -- are associated with a single
+// identified individual, and since this is the case, I have concluded I might
+// as well make provision in all Event records to hold details of the
+// individual, even if occasionally those details may not be filled in.
+//
+// The structure of an individual Event record is therefore as follows:
+//
+// - branch: At present this is always an empty string, but the idea is that
+//   if we ever want to assign some events to, say, the Northern Kingdom, and
+//   some to the Southern, this could be used for the purpose.
+//
+// - eventType: Indicates the type of this event -- 'Born' or 'Died' where
+//   we are dealing with the birth or death of a person, 'Event' for anything
+//   else.
+//
+// - ussherDate / otherDate: All events have at least two dates (ie a date
+//   according to each of two different chronologies -- Ussher and Other).
+//   Many have additional dates, but I'm currently ignoring those).  More
+//   information about dates appears below.
+//
+// - personName: Where a named individual is involved, this gives the name of
+//   the person.  Where possible, I give the disambiguated name as it appears
+//   in the people.json file.  Where I cannot deduce this, I give the name as
+//   it appears in the chronology data.
+//
+// - description: For non-birth / date events, carries a description of the
+//   event.  (Some events involve an identified individual but are not a
+//   birth or death event.  These will carry both the name of the person and
+//   a description of the event.
+//
+// - academicNotes: Any academic notes relating eg to the reliability of the
+//   information or the manner in which it was obtained or relates to other
+//   things.
+//
+// - duration: Some events indicate a duration.  This is held here as a string,
+//   even though you might expect it to be a integer number of years.  This
+//   reflects the fact that in some cases a number of alternative durations
+//   are given.
+//
+// - scriptures: A list of scriptures relevant to the event.  I convert
+//   these to fully expanded-out USX format (so that, for instance,
+//   Gen.1:2-3 becomes Gen 1:2-Gen 1:3).
+//
+// - visibility: Speculative.  I am considering the potential desirability
+//   of implementing a zoomable user interface (ZUI) rather like Google
+//   earth) where you get to see more detail as you zoom in.  My idea is
+//   that this field might contain a number which indicates the zoom level
+//   at which the event should become visible.  Always zero at present.
+//
+//
+//
+// Dates
+// =====
+//
+// Dates are given as a structure:
+//
+// - startYear: Start (or only) year of event, as integer, BC negative.
+//
+// - startYearAdjunct: Additional information about the start date -- for
+//   example, allowing the seasons to be distinguished where several events
+//   occur in the same year.
+//
+// - Most events have only a single date.  For a few of them there is also an
+//   end date.
+//
+// - era: BC / AD / AM as a string.
+//
+// - approx: The date is assumed, in that it cannot be deduced directly from
+//   the biblical text.
+//
+// - orderingIssue: There may be an issue over ordering here.
+//
+//******************************************************************************
+
+{}

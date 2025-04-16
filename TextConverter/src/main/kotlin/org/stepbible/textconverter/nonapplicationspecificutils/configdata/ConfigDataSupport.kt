@@ -317,7 +317,7 @@ object ConfigDataSupport: ObjectInterface
 
   /****************************************************************************/
   init {
-    FileLocations.getInputStream(FileLocations.getConfigDescriptorsFilePath())!!.bufferedReader().use { it.readText() } .lines() .forEach {
+    FileLocations.getInputStream(FileLocations.getConfigDescriptorsFilePath()).first!!.bufferedReader().use { it.readText() } .lines() .forEach {
       val line = it.trim()
       if (line.isNotEmpty() && !line.startsWith("#!"))
         addDetails(line)

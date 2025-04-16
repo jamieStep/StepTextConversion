@@ -103,9 +103,11 @@ object Dbg: ObjectInterface
   private fun getBookNo (containingBookAbbrev: String): Int
   {
     val uc = containingBookAbbrev.uppercase()
-    BibleBookNames.dbgGetBookAbbreviations()
-      .map { it.uppercase() }
-      .forEachIndexed { ix, abbreviatedName -> if (uc.contains(abbreviatedName)) return ix }
+    val bookNames = BibleBookNames.dbgGetBookAbbreviations().map { it.uppercase() }
+    for (i in bookNames.indices)
+      if (uc == bookNames[i])
+      return i
+
     return -1
   }
 

@@ -3,7 +3,7 @@ package org.stepbible.textconverter.applicationspecificutils
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import java.io.File
 import java.time.LocalDate
 
@@ -12,44 +12,47 @@ import java.time.LocalDate
 /**
  * Handles the history information required in the Sword configuration file.
  *
- * History and version information is normally up-issued except where the
- * history line would be basically the same as the most recent one (if any).
- * In that case, I assume that things should *not* be up-issued, since very
- * likely this is just a rerun of the most recent build in order to correct a
- * bug, or else we are producing both a public and a STEP-only version of this
- * module, have just produced one of them, and are mow simply producing the
- * other.  (You can force an up-issue -- ie can ignore this check -- using the
- * *forceUpIssue* flag on the command line.)
  *
- * You can also specify stepUseExistingHistory (or just useExistingHistory on
- * the command line) in order to have the system assume that the most recent
- * history and version information in step.conf is ok and should not be updated.
+ * ## Overview
  *
- * The Crosswire documentation gives details of a version indicator and history
- * details which are to appear in the Sword configuration file.
+ * I have recently (March 2025) modified the way history and version information
+ * is handled -- the previous version being rather too complicated for its own
+ * good, and difficult to control.  This does have one slight downside, in that
+ * I still need to be able to cope with legacy data, since I need to be able to
+ * pick up version information from previous modules.
  *
- * To date in general this has come from information placed by the user into the
- * step.conf file -- perhaps supplemented by any configuration data which is
- * provided by the text suppliers.
+ * Now, the processing here is handled by two mandatory command-line parameters
+ * -- history and releaseNumber.
  *
- * Latterly, we have encountered a new situation, where we have, as our input,
- * OSIS, along with an actual Sword configuration file from a previous version
- * of the module.
+ * history (stepHistory by the time we get here) may be a text string explaining
+ * why a new module is being made, or the special values *FromMetadata* and
+ * *AsIs*.
  *
- * We therefore need to be able to cope with both sources of input.  In
- * addition, existing history lines may be of our own making, and may therefore
- * be in a format with which we are familiar, or may have been supplied by a
- * third party (in which case the format is predefined only to a very limited
- * degree.  We need to be able to cope with both.
+ * *AsIs* says to use the previous history.  I take this as indicating a
+ * special situation in which we want to retain both the previous history
+ * and the previous version number -- ie we don't want to add a new history
+ * line to the file.  This is mainly for my benefit, so that when I discover
+ * I've screwed up the processing, I can generate an improved version without
+ * at the same time updating the history.
  *
- * In the case where we are dealing with OSIS input and an existing Sword config
- * file, we also need a strategy for coping with the possibility that we have
- * relevant information in both the step.conf and the third party file (which
- * the user is required to have stored as sword.conf in the Metadata folder).
+ * *FromMetadata* needs to be treated with caution.  As the name implies, it
+ * attempts to obtain the history information from metadata supplied by the
+ * translators.  I have introduced it mainly to streamline things when dealing
+ * with the kinds of large collections of texts which we often receive from
+ * DBL -- and indeed it is only set up to work with DBL metadata at present.
+ * It needs to be carefully monitored, however: the DBL metadata is not well
+ * documented, so far as I can see, and there is therefore no guarantee that
+ * everyone will use the metadata tags in the same way.
+ *
+ * History information is stored in the step.conf file so that it continues
+ * to be available after rebuilds.  It is stored in two separate tranches,
+ * one for public versions, and one for STEPBible-only versions.
  *
  *
  *
- * ## History information
+ *
+ *
+ * ## Crosswire requirements
  *
  * Crosswire requires history lines to be of the form:
  *
@@ -57,47 +60,21 @@ import java.time.LocalDate
  *
  * where the 1.2 is the version number.
  *
- * Such lines may appear anywhere in either or both of step.conf and sword.conf.
- * Normally one would expect them to be contiguous (something I guarantee when
- * I am outputting history lines myself), but this cannot be assumed when
- * dealing with existing data.  Crosswire recommends that they be stored in
- * chronological (version number) order, most recent first.  Again, this cannot
- * be assumed, although I enforce it when generating history lines myself.
+ * Crosswire recommend that the lines are stored most recent (ie latest
+ * version number) first.  I follow this recommendation, although we cannot
+ * necessarily assume that existing modules have followed this convention
+ * (or indeed, I suppose, any convention at all).
  *
- * Crosswire recommend that history lines should end with the date upon which
+ * They also recommend that history lines should end with the date upon which
  * the change is being applied, in yyyy-mm-dd format.  This is, however, only a
  * recommendation: I do not follow it in the history lines which I generate, and
  * I cannot rely upon other people following it either.
  *
- * With the lines I generate myself, I use a stylised format as follows:
+ * With the lines I generate myself, I use a stylised format as follows -- ie I
+ * put the date at the front, where it is easier to take in at a glance.
  *
- *   History_1.2=2023-11-01 [SupplierVersion: blah] SupplierReason: blah or
- *   History_1.2=2023-11-01 [StepVersion: blah] StepReason: blah or
+ *   History_1.2=2023-11-01 blah
  *
- * the former where the new release reflects a change made by the supplier,
- * and the latter where the release reflects a change we have made ourselves.
- * Occasionally, we may have both STEP- and supplier- details.  This extended
- * information still appears on a single line.
- *
- * The bracketed SupplierVersion is the version number as applied by the
- * organisation which has supplied the text.  There's no guarantee we'll have
- * one, and no guarantee, if we do, that it will follow the Crosswire format for
- * version numbers, which is why I record it separately.
- *
- * After this I give the reason for the update.  If this is a new release from
- * the text supplier, the reason will start 'SupplierReason' and will give
- * any details which they themselves have provided.  If the new release has been
- * occasioned by changes we have made to the converter or whatever, it will
- * start StepReason, and will give our own explanation.
- *
- * Where we are dealing with a sword.conf file as well as step.conf, it is
- * perfectly possibly that both may contain previous history lines.  In this
- * case, I take all history lines from both.  If both files have a history line
- * for a given version, I take the line from step.conf.
- *
- * As well as writing the history lines to the module's Sword configuration file,
- * I also copy them to the end of the step.conf file, so that they will be
- * available for any future runs.
  *
  *
  *
@@ -111,37 +88,19 @@ import java.time.LocalDate
  * there is unlikely to be anything approaching consensus as to what constitutes
  * a major change and what a minor one.
  *
- * I therefore adopt the expedient that by default, any change resulting from
- * a new release by the text suppliers is major, and any change arising from us
- * altering the conversion process is minor.  (There is absolutely no reason why
- * this should be the case -- it is perfectly possible that a revised package
- * from the text suppliers has no visible impact at all, while changes we make to
- * the conversion process may be very significant.  But it is at lest easy to be
- * consistent.)
+ * I therefore propose adopting the approach that unless we have good reason to
+ * do otherwise, an up-issue occasioned by the translator supplying a new
+ * package is treated as a full release, and an up-issue occasioned by us
+ * revising our processing is treated as a dot release.  Nothing seeks to impose
+ * these conventions though -- if you consider them useful, it is down to you
+ * to use the command-line parameters as necessary to achieve them.
  *
- * By default, therefore, we look at the suppliers' version number for the text
- * being processed, and compare it with the one used last time.  If the two
- * differ, it's a major release, otherwise it's a minor one.  We don't always
- * have a version number from the text suppliers, however.  In this case, the
- * change would be treated as minor.  However it is possible to override this on
- * the command line.
- *
- * This aspect of processing is controlled by the runType command line
- * parameter.
- *
- * If this does not contain the word 'release', then none of the processing here
- * is applied (ie we don't modify the history or the version), the assumption being
- * that this is a test or evaluation run, and we aren't up-issuing.
- *
- * If runType *does* contain 'release', there are three possibilities:
- *
- * - If just as the value 'release', the decision as to whether this constitutes a
- *   major or minor release is left to the processing here, and will be based upon
- *   the supplier's version numbers as described above.
- *
- * - If it also contains the word 'major', it will be treated as a major release.
- *
- * - Otherwise, if it contains the word 'minor', it will be treated as a minor release.
+ * One final point.  I guess it would be useful to include, as part of the
+ * history information, any version number the suppliers have themselves
+ * associated with the text.  Unfortunately I cannot think of any automated
+ * way of doing this (even with DBL, there seems to be no reliable way of
+ * identifying the relevant information), so it would have to be a manual
+ * operation.
  *
  * @author ARA Jamieson
  */
@@ -158,10 +117,10 @@ object VersionAndHistoryHandler: ObjectInterface
 
   /****************************************************************************/
   /**
-  * Returns a list of history lines in order.  Can be called only after
-  * 'process' has been called.  This should be used only when setting up the
-  * Sword config file (where we want only those lines relevant to the present
-  * target audience).
+  * We maintain separate collections of history lines for public and STEPBible-
+  * only texts.  When creating a Sword config file, we need the collection
+  * appropriate to the audience we are targetting, and the present method
+  * supplies it.
   *
   * @return History lines.
   */
@@ -176,7 +135,10 @@ object VersionAndHistoryHandler: ObjectInterface
   /****************************************************************************/
   /**
   * Appends history lines to the step.conf file.  You can't call this until
-  * 'process' has been called.
+  * 'process' has been called.  Where a given text can turn into both a public
+  * and a STEPBible-only module, this returns *all* history lines for both
+  * collections, so that all of them can be retained in the step.conf file for
+  * future use.  Cannot be called until after 'process' has done its stuff.
   */
 
   fun appendHistoryLinesForAllAudiencesToStepConfigFile ()
@@ -200,6 +162,26 @@ object VersionAndHistoryHandler: ObjectInterface
   fun process ()
   {
     /**************************************************************************/
+    /* Get the relevant parameters.  Certain settings imply we're not
+       up-versioning. */
+
+    var history = ConfigData["stepHistory"]!!
+    val releaseVersion = ConfigData["stepReleaseNumber"]!!
+    val retainExisting = "=" == releaseVersion || "AsIs".equals(history, ignoreCase = true)
+    if ("FromMetadata".equals(history, ignoreCase = true))
+    {
+      val x = ConfigData["stepSupplierUpdateReason"]
+      if (x.isNullOrEmpty())
+        throw StepExceptionWithoutStackTraceAbandonRun("History was specified as FromMetadata, but no history information is available in the metadata.")
+      history = x
+    }
+
+
+
+    /**************************************************************************/
+    /* Get the parsed history lines for this target audience, and also those
+       _not_ for this target audience. */
+
     fun parseHistoryLines (keys: List<String>): MutableList<ParsedHistoryLine>
     {
       val res: MutableMap<String, ParsedHistoryLine> = mutableMapOf()
@@ -210,12 +192,6 @@ object VersionAndHistoryHandler: ObjectInterface
 
       return res.keys.sortedDescending().map { res[it]!! } .toMutableList()
     }
-
-
-
-    /**************************************************************************/
-    /* Get the parsed history lines for this target audience, and also those
-       _not_ for this target audience. */
 
     val targetAudienceSelector = ConfigData["stepTargetAudience"]!!
     val allHistoryLineKeys = ConfigData.getKeys().filter { it.startsWith("History_") }
@@ -228,29 +204,16 @@ object VersionAndHistoryHandler: ObjectInterface
     /* We now need the most recent previous revision.  This is taken from
        history or else defaults to 1.0. */
 
-    val previousStepVersion: String
-    run {
-      val fallbackValue = "0.0"
-      val versionFromHistory = if (m_HistoryLinesForThisAudience.isEmpty()) fallbackValue else m_HistoryLinesForThisAudience[0].stepVersion
-      val maxKey = maxOf(makeKey(fallbackValue), makeKey(versionFromHistory))
-      val x = maxKey.split('.')
-      previousStepVersion = x[0].toInt().toString() + "." + x[1].toInt().toString()
-    }
+    val previousVersion = if (m_HistoryLinesForThisAudience.isEmpty()) "1.0" else m_HistoryLinesForThisAudience[0].stepVersion
 
 
 
     /**************************************************************************/
-    /* If the reason details haven't changed, then I assume we're simply having
-       another attempt at building the same module, and don't want to update
-       history and version -- unless we're forcing an up-issue. */
+    /* If we're not updating, there's not a lot to do. */
 
-    val newText ="SupplierReason: " + ConfigData.get("stepSupplierUpdateReason", "N/A") + "; StepReason: ${ConfigData.get("stepStepUpdateReason", "N/A")}."
-    val prevText = if (m_HistoryLinesForThisAudience.isEmpty()) "" else m_HistoryLinesForThisAudience[0].text
-    var useExisting = ConfigData.getAsBoolean("stepUseExistingHistory", "no")
-    if (!useExisting) useExisting = StepStringUtils.removePunctuationAndSpaces(newText).equals(StepStringUtils.removePunctuationAndSpaces(prevText), ignoreCase = true) && !ConfigData.getAsBoolean("stepForceUpIssue", "no")
-    if (useExisting)
+    if (retainExisting)
     {
-      ConfigData["stepTextRevision"] = previousStepVersion
+      ConfigData["stepTextRevision"] = previousVersion
       ConfigData["stepUpIssued"] = "n"
       return
     }
@@ -258,19 +221,36 @@ object VersionAndHistoryHandler: ObjectInterface
 
 
     /**************************************************************************/
-    /* If this is a major revision, then we take the previous highest revision,
-       throw away any dot part, and then add one to the whole number part.
-       If this is a minor revision, we just up the dot part by one. */
+    /* Work out the new revision. */
 
-    val newStepVersion = getNewVersion(previousStepVersion)
-    ConfigData["stepTextRevision"] = newStepVersion
+    val newVersion = when (releaseVersion)
+    {
+      "+" ->
+      {
+        val x = previousVersion.split(".")
+        x[0] + "." + (x[1].toInt() + 1)
+      }
+
+      "++" ->
+      {
+        val x = previousVersion.split(".")
+        "" + (x[0].toInt() + 1) + "." + x[1]
+      }
+
+      else ->
+      {
+        releaseVersion
+      }
+    }
+
+    ConfigData["stepTextRevision"] = newVersion
     ConfigData["stepUpIssued"] = "y"
-    m_HistoryLinesForThisAudience.add(0, ParsedHistoryLine(targetAudienceSelector, newStepVersion, dateToString(LocalDate.now()), ConfigData["swordTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation"]!!, newText))
+    m_HistoryLinesForThisAudience.add(0, ParsedHistoryLine(targetAudienceSelector, newVersion, dateToString(LocalDate.now()), history))
 
 
 
     /**************************************************************************/
-    /* Delete. */
+    /* Delete old data -- we reinsert it later in revised form. */
 
     ConfigData.getKeys().filter { it.startsWith("History_") }. forEach { ConfigData.delete(it) }
   }
@@ -304,45 +284,16 @@ object VersionAndHistoryHandler: ObjectInterface
   private fun parseHistoryLine (line: String): ParsedHistoryLine
   {
     val mc = C_HistoryLineStepPat.matchEntire(line)!!
-    return ParsedHistoryLine(mc.groups["targetAudience"]!!.value, mc.groups["stepVersion"]!!.value, mc.groups["date"]!!.value, mc.groups["supplierVersion"]!!.value, mc.groups["text"]!!.value)
+    return ParsedHistoryLine(mc.groups["targetAudience"]!!.value, mc.groups["stepVersion"]!!.value, mc.groups["date"]!!.value, mc.groups["text"]!!.value)
   }
 
 
   /****************************************************************************/
-  /* This works out the new details -- what release we're now at, and what the
-     history details should look like.  It then adds these details at the top
-     of the collection, and also sets the stepTextRevision config parameter. */
-
-  private fun getNewVersion (previousStepVersion: String): String
-  {
-    when (ConfigData["stepReleaseType"]!!.lowercase())
-    {
-      "major" -> m_ReleaseType = ReleaseType.Major
-      "minor" -> m_ReleaseType = ReleaseType.Minor
-    }
-
-
-
-    /**************************************************************************/
-    /* Take the previous version from the most recent history entry.  The new
-       version is then an amended version of that, with the modification
-       depending upon whether this is a major or a minor release. */
-
-    val x = previousStepVersion.split('.')
-    return when (m_ReleaseType)
-    {
-      ReleaseType.Major -> (1 + Integer.parseInt(x[0])).toString() + ".0"
-      else -> x[0] + "." + (1 + Integer.parseInt(x[1])).toString()
-    }
-  }
-
-
-  /****************************************************************************/
-  private fun makeHistoryLine (targetAudience: String, stepVersion: String, moduleDate: String, supplierVersion: String, text: String): String
+  private fun makeHistoryLine (targetAudience: String, stepVersion: String, moduleDate: String, text: String): String
   {
     val revisedText = text + (if (text.endsWith('.')) "" else ".")
     val revisedModuleDate = if (moduleDate.isBlank()) "" else "$moduleDate "
-    return "History_${targetAudience}_$stepVersion=$revisedModuleDate[SupplierVersion: ${supplierVersion.ifEmpty { "N/A" }}] $revisedText"
+    return "History_${targetAudience}_$stepVersion=$revisedModuleDate $revisedText"
   }
 
 
@@ -360,18 +311,16 @@ object VersionAndHistoryHandler: ObjectInterface
 
 
   /****************************************************************************/
-  private data class ParsedHistoryLine (val targetAudience: String, val stepVersion: String, val moduleDate: String, val supplierVersion: String, var text: String)
+  private data class ParsedHistoryLine (val targetAudience: String, val stepVersion: String, val moduleDate: String, val text: String)
   {
     fun stepVersionAsKey (): String { return makeKey(stepVersion) }
-    override fun toString (): String { return makeHistoryLine(targetAudience, stepVersion, moduleDate, supplierVersion, text) }
+    override fun toString (): String { return makeHistoryLine(targetAudience, stepVersion, moduleDate, text) }
   }
 
 
 
   /****************************************************************************/
-  private enum class ReleaseType { Major, Minor, Unknown }
-  private val C_HistoryLineStepPat = "(?i)History_(?<targetAudience>.*?)_(?<stepVersion>.*?)=(?<date>.*?)\\s+\\[SupplierVersion: (?<supplierVersion>.*?)]\\s*(?<text>.*)".toRegex()
-  private var m_ReleaseType = ReleaseType.Unknown
+  private val C_HistoryLineStepPat = "(?i)History_(?<targetAudience>.*?)_(?<stepVersion>.*?)=(?<date>.*?)\\s+(?<text>.*)\\s*".toRegex()
   private var m_HistoryLinesForThisAudience: MutableList<ParsedHistoryLine> = mutableListOf()
   private var m_HistoryLinesNotForThisAudience: List<ParsedHistoryLine> = mutableListOf()
 }

@@ -32,6 +32,6 @@ fun main (args: Array<String>)
 {
   //ThrowAwayCode().testCollectObjects1()
   BibleBookNames.init()
-  //Dbg.setBooksToBeProcessed("2Co")
+  //Dbg.setBooksToBeProcessed("1Co", ">=")
   MainProcessor().process(args)
 }

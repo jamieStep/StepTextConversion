@@ -175,22 +175,6 @@ object PA_ReversificationUtilities
 
 
   /****************************************************************************/
-  /**
-  * Creates a new verse and returns the sid and eid.
-  *
-  * @param insertBefore Node before which the verse should be inserted.
-  * @param refKeyForNewVerse What it says on the tin.
-  * @return sid / eid node as a Pair.
-  */
-
-
-  fun createEmptyVerseForReversification (insertBefore: Node, refKeyForNewVerse: RefKey): Pair<Node, Node>
-  {
-    return m_FileProtocol.getEmptyVerseHandler().createEmptyVerseForReversification(insertBefore, refKeyForNewVerse)
-  }
-
-
-  /****************************************************************************/
   /* Creates the footnote construct.  We only get this far if we are sure we
      want a footnote.  At this point, the only reason for _not_ generating one
      is if the reversification data does not actually contain any footnote
@@ -229,12 +213,12 @@ object PA_ReversificationUtilities
 
     content = content.replace("S3y", "S3Y") // DIB prefers this.
 
-    val noteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToGeneralVerseAffectedByReversification, ownerDocument, dataRow.standardRefAsRefKey, content, callout)
+    val noteNode = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToGeneralVerseAffectedByReversification, ownerDocument, dataRow.standardRef.toRefKey(), content, callout)
     if (null != noteNode)
     {
       res.add(noteNode)
       res.add(Dom.createTextNode(ownerDocument, " "))
-      IssueAndInformationRecorder.addGeneratedFootnote(Ref.rd(dataRow.sourceRefAsRefKey).toString() + " (ReversificationFootnote)")
+      IssueAndInformationRecorder.addGeneratedFootnote(Ref.rd(dataRow.sourceRef.toRefKey()).toString() + " (ReversificationFootnote)")
     }
 
 
@@ -494,7 +478,7 @@ object PA_ReversificationUtilities
 
   /****************************************************************************/
   /**
-  * Creates a navigable map of chapter nodes, keyed on refKey and giving the
+  * Creates a map of canonical title nodes, keyed on refKey and giving the
   * corresponding chapter node.
   *
   * @param rootNode Root node for book.
@@ -519,16 +503,16 @@ object PA_ReversificationUtilities
 
   /****************************************************************************/
   /**
-  * Creates a navigable map of chapter nodes, keyed on refKey and giving the
+  * Creates a map of chapter nodes, keyed on refKey and giving the
   * corresponding chapter node.
   *
   * @param rootNode Root node for book.
   * @return Map.
   */
 
-  fun makeChapterSidMap (rootNode: Node): NavigableMap<RefKey, Node>
+  fun makeChapterSidMap (rootNode: Node): Map<RefKey, Node>
   {
-    val res: NavigableMap<RefKey, Node> = TreeMap()
+    val res: MutableMap<RefKey, Node> = mutableMapOf()
     rootNode.findNodesByName(m_FileProtocol.tagName_chapter()).forEach { res[m_FileProtocol.getSidAsRefKey(it)] = it }
     return res
   }
@@ -573,7 +557,8 @@ object PA_ReversificationUtilities
 
     /**************************************************************************/
     /* Get the reference string into canonical form.  The input may contain
-       commas or semicolons as collection separators, and since the parsing
+       commas or semicolons as collection separators; various different range
+       separators, and since the parsing
        processing is set up to handle either, it's convenient here to convert
        them all to just one form. */
 
@@ -581,11 +566,8 @@ object PA_ReversificationUtilities
                             .replace("--", "-")
                             .replace("–", "-")
                             .replace(" +", "")
-                            .replace("•", "") // \u2022 -- Arabic zero.
-                            .replace("٠", "") // \u0660 -- Bullet point, used in some places instead of Arabic zero.
                             .replace("([1-9A-Za-z][A-Za-z][A-Za-z]\\.)".toRegex()) { it.value.replace(".", " ") }
                             .replace("(?i)title".toRegex(), "title")
-                            .replace("(?i):T$".toRegex(), "")// We have things like 53:T as the alternative reference on some Psalm rows.  I change these back to be chapter references.
 
 
     /**************************************************************************/

@@ -3,7 +3,6 @@ package org.stepbible.textconverter.applicationspecificutils
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
@@ -12,7 +11,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceShouldHaveBeenOverridden
-import org.stepbible.textconverter.protocolagnosticutils.PA_EmptyVerseHandler
+import org.stepbible.textconverter.protocolagnosticutils.PA_MissingVerseHandler
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 
@@ -46,7 +45,7 @@ open class X_FileProtocol
   enum class ProtocolType { USX, OSIS }
   lateinit var Type: ProtocolType
 
-  open fun getEmptyVerseHandler (): PA_EmptyVerseHandler = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  open fun getEmptyVerseHandler (): PA_MissingVerseHandler = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
 
   // $$$ protected val m_OkToGenerateFootnotes: Boolean = ConfigData.getAsBoolean("stepOkToGenerateFootnotes")
   protected val m_StepCrossReferenceCallout = ConfigData["stepCrossReferenceCallout"]!!
@@ -129,6 +128,8 @@ open class X_FileProtocol
   open fun setSid (node: Node, refKey: RefKey) { node[attrName_verseSid()] = refToString(refKey) }
   open fun standardiseCallout (noteNode: Node): Unit = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun treatAsCanonicalNodeEvenThoughNot (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  open fun updateVerseEid (verse: Node, refKey: RefKey): Unit = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  open fun updateVerseEid (verse: Node, refKeyLow: RefKey, refKeyHigh: RefKey): Unit = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun updateVerseSid (verse: Node, refKey: RefKey): Unit = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun updateVerseSid (verse: Node, refKeyLow: RefKey, refKeyHigh: RefKey): Unit = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
 
@@ -391,7 +392,7 @@ open class X_FileProtocol
 object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 {
   /****************************************************************************/
-  override fun getEmptyVerseHandler () = PA_EmptyVerseHandler(this)
+  override fun getEmptyVerseHandler () = PA_MissingVerseHandler(this)
   override fun attrName_chapterEid () = "eID"
   override fun attrName_chapterSid () = "sID"
   override fun attrName_crossReference () = "osisRef"
@@ -818,7 +819,43 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 
   /****************************************************************************/
   /**
-  * Makes a verse sid tag.
+  * Updates a verse eid tag.
+  *
+  * @param verse Verse node to be updated.
+  * @param refKey Reference details for sid attribute.
+  * @return Tag.
+  */
+
+  override fun updateVerseEid (verse: Node, refKey: RefKey)
+  {
+    val refAsString = Ref.rd(refKey).toStringOsis()
+    verse["osisID"] = refAsString
+    verse["eID"] = refAsString
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Updates a verse eid tag covering a range.
+  *
+  * @param verse Verse node to be updated.
+  * @param refKeyLow Start of range.
+  * @param refKeyHigh End of range.
+  * @return Tag.
+  */
+
+  override fun updateVerseEid (verse: Node, refKeyLow: RefKey, refKeyHigh: RefKey)
+  {
+    val refLowAsString = Ref.rd(refKeyLow).toStringOsis()
+    val refHighAsString = Ref.rd(refKeyHigh).toStringOsis()
+    verse["osisID"] = "$refLowAsString-$refHighAsString"
+    verse["eID"] = "$refLowAsString-$refHighAsString"
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Updates a verse sid tag.
   *
   * @param verse Verse node to be updated.
   * @param refKey Reference details for sid attribute.
@@ -835,7 +872,7 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 
   /****************************************************************************/
   /**
-  * Makes a verse sid tag covering a range.
+  * Updates a verse sid tag covering a range.
   *
   * @param verse Verse node to be updated.
   * @param refKeyLow Start of range.
@@ -1079,7 +1116,7 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
     m_TagDetails["transChange"] = TagDescriptor('?', 'N') // The transChange element is used to mark text that is not present in the original  Has to come from context, because I've seen it used both in the main text and in footnotes.
     m_TagDetails["type"] = TagDescriptor('X', 'N') // The type element occurs only in a work element. It is used to indicate to the reader the type of
     m_TagDetails["verse"] = TagDescriptor('Y', 'N') // The verse element should almost always be used in its milestoneable form. While some older  I've marked this as non-canonical purely because it does not normally contain anything.
-    m_TagDetails["w"] = TagDescriptor('Y', 'N') // The w element is used to encode particular words in a text.  eg Strongs.
+    m_TagDetails["w"] = TagDescriptor('?', 'N') // The w element is used to encode particular words in a text.  eg Strongs.
 
     m_TagDetails["work"] = TagDescriptor('X', 'N') // The work element occurs only in a header element. It provides all the basic identification and
 
@@ -1102,7 +1139,7 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 object Usx_FileProtocol: X_FileProtocol(), ObjectInterface
 {
   /****************************************************************************/
-  override fun getEmptyVerseHandler () = PA_EmptyVerseHandler(this)
+  override fun getEmptyVerseHandler () = PA_MissingVerseHandler(this)
   override fun attrName_chapterSid () = "sid"
   override fun attrName_crossReference () = "loc"
   override fun attrName_verseEid () = "eid"
@@ -1522,6 +1559,40 @@ object Usx_FileProtocol: X_FileProtocol(), ObjectInterface
 
   /****************************************************************************/
   /**
+  * Updates a verse eid tag.
+  *
+  * @param verse Verse node to be updated.
+  * @param refKey Reference details for sid attribute.
+  * @return Tag.
+  */
+
+  override fun updateVerseEid (verse: Node, refKey: RefKey)
+  {
+    val refAsString = Ref.rd(refKey).toStringUsx()
+    verse["eid"] = refAsString
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Updates a verse eid tag as a range.
+  *
+  * @param verse Verse node to be updated.
+  * @param refKeyLow Start of range.
+  * @param refKeyHigh End of range.
+  * @return Tag.
+  */
+
+  override fun updateVerseEid (verse: Node, refKeyLow: RefKey, refKeyHigh: RefKey)
+  {
+    val refLowAsString = Ref.rd(refKeyLow).toStringUsx()
+    val refHighAsString = Ref.rd(refKeyHigh).toStringUsx()
+    verse["eid"] = "$refLowAsString-$refHighAsString"
+  }
+
+
+  /****************************************************************************/
+  /**
   * Updates a verse sid tag.
   *
   * @param verse Verse node to be updated.
@@ -1728,11 +1799,11 @@ object Usx_FileProtocol: X_FileProtocol(), ObjectInterface
     m_TagDetails["char:tl"] = TagDescriptor('Y', 'Y') // Transliterated (or foreign) word(s).  Eg Eli, Eli, lema sabachtani?
     m_TagDetails["char:va"] = TagDescriptor('N', 'Y') // Second (alternate) verse number.  Note that this is in the schema definition but is not mentioned in the documentation.
     m_TagDetails["char:vp"] = TagDescriptor('N', 'Y') // Published verse number -- a verse marking which would be used in the published text.  Note that this is in the schema definition but is not mentioned in the documentation.
-    m_TagDetails["char:w"] = TagDescriptor('Y', 'Y') // Wordlist/glossary/dictionary entry.
-    m_TagDetails["char:wa"] = TagDescriptor('N', 'Y') // Aramaic word list entry.
+    m_TagDetails["char:w"] = TagDescriptor('?', 'Y') // Wordlist/glossary/dictionary entry.
+    m_TagDetails["char:wa"] = TagDescriptor('?', 'Y') // Aramaic word list entry.
 
-    m_TagDetails["char:wg"] = TagDescriptor('N', 'Y') // Greek word list entry.
-    m_TagDetails["char:wh"] = TagDescriptor('N', 'Y') // Hebrew word list entry.
+    m_TagDetails["char:wg"] = TagDescriptor('?', 'Y') // Greek word list entry.
+    m_TagDetails["char:wh"] = TagDescriptor('?', 'Y') // Hebrew word list entry.
     m_TagDetails["char:wj"] = TagDescriptor('Y', 'Y') // Words of Jesus.
     m_TagDetails["char:xdc"] = TagDescriptor('N', 'Y') // For reference notes: References (or other material) to be included only in publications that contain the Deuterocanonical/Apocrypha books.  Deprecated.
     m_TagDetails["char:xk"] = TagDescriptor('N', 'Y') // For reference notes: A keyword from the scripture translation text which the target reference(s) also refer to.

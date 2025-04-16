@@ -295,6 +295,17 @@ abstract class RefBase
   
     /**************************************************************************/
     /**
+     *  In the reversification data (and only there) we may have a subverse
+     *  zero.  Unfortunately I'm already using zero to indicate the absence of
+     *  an element, so I need another value which I can use to represent
+     *  subverse zero.
+     */
+
+    const val C_SubverseZeroPseudoNumber = 499
+
+
+    /**************************************************************************/
+    /**
      * Used only with reversification data, which sometimes refers eg to
      * Psa 51:Title, and I need to turn it into a pretend verse.
      */

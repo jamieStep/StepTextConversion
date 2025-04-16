@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.debug
 
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
@@ -86,7 +87,7 @@ object Logger: ObjectInterface
   @Synchronized fun announceAll (throwException: Boolean)
   {
     val n = m_Errors!!.size
-    announce(m_Errors!!,   "Error"      ); if (FileLogger === m_Outputter) m_Errors!!.clear()
+    announce(m_Errors!!,   "Error"      ); if (FileLogger === m_Outputter) m_Errors!!.clear() // Don't want to report things more than once.
     announce(m_Warnings!!, "Warning"    ); if (FileLogger === m_Outputter) m_Warnings!!.clear()
     announce(m_Info!!,     "Information"); if (FileLogger === m_Outputter) m_Info!!.clear()
 
@@ -113,6 +114,22 @@ object Logger: ObjectInterface
   }
 
   
+  /****************************************************************************/
+  /**
+   * Writes a log file containing details of any errors etc, but leaves the
+   * internal data structures intact.  The idea is that this enables us to
+   * create a log file which can be included in the repository package, even
+   * though it may be slightly incomplete because further issues may be logged
+   * during or after the creation of the package.  Not complete, but better than
+   * nothing.
+   */
+
+  @Synchronized fun announceAllForRepositoryPackage ()
+  {
+    StringLogger.close()
+  }
+
+
   /****************************************************************************/
   /**
    * Records an error.
@@ -343,7 +360,7 @@ object FileLogger: LoggerBase(), ObjectInterface
   {
     sortLines()
     StepFileUtils.createFolderStructure(Path(m_LogFilePath!!).parent.toString())
-    File(m_LogFilePath).writeText(m_Lines.joinToString(separator = "\n"){ it.replace("<nl>", "\n") })
+    File(m_LogFilePath!!).writeText(m_Lines.joinToString(separator = "\n"){ it.replace("<nl>", "\n") })
   }
 
 
@@ -414,7 +431,7 @@ object FileLogger: LoggerBase(), ObjectInterface
 
   /****************************************************************************/
   private var m_LogFilePath: String? = null
-  private var m_Lines = mutableListOf<String>()
+  var m_Lines = mutableListOf<String>() // Public so that StringLogger can get at it.
 }
 
 
@@ -428,4 +445,59 @@ object FileLogger: LoggerBase(), ObjectInterface
 object ScreenLogger: LoggerBase(), ObjectInterface
 {
   @Synchronized override fun output (text: String) { println(text) }
+}
+
+
+
+
+
+/*******************************************************************************/
+/**
+* Sends output to a string.
+*/
+
+object StringLogger: LoggerBase(), ObjectInterface
+{
+  @Synchronized override fun output (text: String) { }
+
+  override fun close ()
+  {
+    val lines = FileLogger.m_Lines.toMutableList()
+    val logFilePath = FileLocations.getConverterLogFilePath()
+    StepFileUtils.createFolderStructure(Path(logFilePath).parent.toString())
+    sortLines(lines)
+    File(logFilePath).writeText(lines.joinToString(separator = "\n"){ it.replace("<nl>", "\n") })
+  }
+
+  /****************************************************************************/
+  private fun sortLines (lines: MutableList<String>)
+  {
+    val errors: MutableList<String> = ArrayList()
+    val informations: MutableList<String> = ArrayList()
+    val warnings: MutableList<String> = ArrayList()
+    val others: MutableList<String> = ArrayList()
+
+    fun partition (line: String) {
+      if (line.startsWith("Info"))
+        informations.add(line)
+      else if (line.startsWith("Warn"))
+        warnings.add(line)
+      else if (line.startsWith("Error"))
+        errors.add(line)
+      else if (line.trim().isNotEmpty())
+        others.add("$line<nl>")
+    }
+
+    lines.forEach(::partition)
+
+
+
+    /**************************************************************************/
+    lines.clear()
+    lines.addAll(others) // Make sure the file prefix is retained at the top of the file.  (I'm not actually expecting 'others' to contain more than just this one line.
+    lines.addAll(errors)
+    lines.addAll(warnings)
+    lines.addAll(informations)
+    lines.add("")
+  }
 }

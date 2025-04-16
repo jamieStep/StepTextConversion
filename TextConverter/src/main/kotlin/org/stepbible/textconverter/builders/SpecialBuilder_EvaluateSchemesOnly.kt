@@ -96,7 +96,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder(), ObjectInterface
   private fun evaluateScheme (scheme: String, bibleStructureToCompareWith: BibleStructure): Evaluation
   {
     /**************************************************************************/
-//    Dbg.dCont(scheme, "kjv")
+    //Dbg.dCont(scheme, "kjv")
 
 
 
@@ -139,7 +139,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder(), ObjectInterface
       else if (!bibleStructureToCompareWith.bookExists(bookNumber))
         ++booksInExcessInOsis2modScheme
 
-      else if (!bibleStructureToCompareWith.bookExists(bookNumber))
+      else if (!bibleStructureForScheme.bookExists(bookNumber))
         ++booksMissingInOsis2modScheme
 
       else
@@ -151,7 +151,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder(), ObjectInterface
       }
     }
 
-    bibleStructureToCompareWith.getAllBookNumbers().forEach { evaluate(it) }
+    (bibleStructureForScheme.getAllBookNumbers() + bibleStructureToCompareWith.getAllBookNumbers()).forEach { evaluate(it) }
 
 
 

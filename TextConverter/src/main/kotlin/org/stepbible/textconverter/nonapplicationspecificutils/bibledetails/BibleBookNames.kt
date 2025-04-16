@@ -114,7 +114,7 @@ open class BibleBookNames
 
     fun init ()
     {
-      StepFileUtils.readDelimitedTextStream(FileLocations.getInputStream(FileLocations.getBookNamesFilePath())!!).forEach {
+      StepFileUtils.readDelimitedTextStream(FileLocations.getInputStream(FileLocations.getBookNamesFilePath()).first!!).forEach {
         addDetails(it)
       }
 

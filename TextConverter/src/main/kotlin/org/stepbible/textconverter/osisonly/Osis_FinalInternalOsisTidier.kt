@@ -1,8 +1,8 @@
 package org.stepbible.textconverter.osisonly
 
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.applicationspecificutils.*
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.PA_ElementArchiver
@@ -191,11 +191,17 @@ private class Osis_FinalInternalOsisTidierGeneralHandlerPerBook (val m_FileProto
        time they are called, and therefore can't rely upon the lists
        established above. */
 
+       //Dbg.d(rootNode.ownerDocument)
     deleteWhitespaceWhichFollowsLTags(rootNode)
+       //Dbg.d(rootNode.ownerDocument)
     handleUnacceptableCharacters(rootNode)
+       //Dbg.d(rootNode.ownerDocument)
     handleVerticalWhitespace(rootNode)
+       //Dbg.d(rootNode.ownerDocument)
     handleVersesWithinSpanTypeTags(rootNode)
+       //Dbg.d(rootNode.ownerDocument)
   }
+
 
   /****************************************************************************/
   /* Not 100% sure about this ...  It is convenient, at some points in the
@@ -388,6 +394,18 @@ private class Osis_FinalInternalOsisTidierGeneralHandlerPerBook (val m_FileProto
   private fun handleSpeaker (nodeList: List<Node>)
   {
     nodeList.forEach {
+      Dom.setNodeName(it,"hi")
+      it["type"] = "italic"
+
+      val boldNode = Dom.createNode(it.ownerDocument, "<hi type='bold'/>")
+      Dom.insertNodeBefore(it, boldNode)
+      Dom.deleteNode(it)
+      boldNode.appendChild(it)
+    }
+
+    return
+
+    nodeList.forEach {
       if (null != it.nextSibling && null != it.nextSibling.nextSibling && "l" == Dom.getNodeName(it.nextSibling.nextSibling))
         Dom.deleteNode(it.nextSibling.nextSibling)
 
@@ -452,32 +470,67 @@ private class Osis_FinalInternalOsisTidierGeneralHandlerPerBook (val m_FileProto
 
 
   /****************************************************************************/
+  /* Apparently we can't have verse tags within a span-type tag (or certainly
+     not within an italic tag, and I'm assuming the same holds good for other
+     flavours).  This moves things around to avoid this -- it creates a
+     revised spanning tag which lacks the verse tag, and places the verse tag
+     and anything which followed it outside of the spanning tag.
+
+     Note that I make the assumption here that we have only _one_ verse tag
+     within the spanning tag -- either an sid or an eid but not both. */
+
   private fun handleVersesWithinSpanTypeTag (details: Pair<Node, Node>)
   {
-    val (spanTypeNode, originalVerseNode) = details
-    val newNode = Dom.cloneNode(spanTypeNode.ownerDocument, spanTypeNode) // Create a deep copy of the spanning node, and insert it before the node itself.
-    Dom.insertNodeBefore(spanTypeNode, newNode)
+    /**************************************************************************/
+    val (originalSpanNode, originalVerseNode) = details
+    val newSpanNode = Dom.cloneNode(originalSpanNode.ownerDocument, originalSpanNode) // Create a deep copy of the spanning node, and insert it before the node itself.
+    Dom.insertNodeBefore(originalSpanNode, newSpanNode)
 
-    // We now want to delete everything _after_ the verse tag in the cloned node, and everything _before_ it in the original.
-    val newVerseTag = newNode.findNodeByName("verse", false)
+
+
+    /**************************************************************************/
+    /* Delete everything from the cloned verse node onwards in the cloned
+       spanning node. */
+
+    val newVerseTag = newSpanNode.findNodeByName("verse", false)
     var doDelete = false
-    for (n in newNode.getAllNodesBelow())
+    for (n in newSpanNode.getAllNodesBelow())
+    {
       if (n === newVerseTag)
         doDelete = true
-      else if (doDelete)
-        try { Dom.deleteNode(n) } catch (_: Exception) {}
+      if (doDelete)
+        try { Dom.deleteNode(n) } catch (_: Exception) {} // try/catch saves me having to worry about only deleting top level items.
+    }
 
-    for (n in spanTypeNode.getAllNodesBelow())
+
+
+    /**************************************************************************/
+    /* From the original spanning node, delete everything up to but not
+       including the verse node. */
+
+    for (n in originalSpanNode.getAllNodesBelow())
       if (n === originalVerseNode)
         break
       else
-        try { Dom.deleteNode(n) } catch (_: Exception) {}
+        try { Dom.deleteNode(n) } catch (_: Exception) {}  // try/catch saves me having to worry about only deleting top level items.
 
-    if (!spanTypeNode.hasChildNodes())
-      Dom.deleteNode(spanTypeNode)
 
-    if (!newNode.hasChildNodes())
-      Dom.deleteNode(newNode)
+    /**************************************************************************/
+    /* That still leaves us with the original span node containing the verse
+       and whatever followed it.  We need to promote its contents, and delete
+       the span node. */
+
+    Dom.promoteChildren(originalSpanNode)
+    Dom.deleteNode(originalSpanNode)
+
+
+    /**************************************************************************/
+    /* It's unlikely that the original contained nothing other than the verse
+       node, but I suppose we may as well cater for it.  If it did, the new
+       span node will be empty, and might as well go. */
+
+    if (!newSpanNode.hasChildNodes())
+      Dom.deleteNode(newSpanNode)
   }
 
 
@@ -491,15 +544,14 @@ private class Osis_FinalInternalOsisTidierGeneralHandlerPerBook (val m_FileProto
     /* Remove whitespace before and after linebreaks.  The main purpose of this
        is to avoid having newline characters after linebreaks, but there's no
        harm, and possibly some advantage, in getting rid of all whitespace
-       adjacent to linebreaks.  Also 'l' after a linebreak seems to give too
-       much vertical whitespace, to ditch that too. */
+       adjacent to linebreaks. */
 
     Dom.findNodesByName(rootNode, "lb", false).forEach {
       var sibling = it.nextSibling
       while (true)
       {
         if (null == sibling) break
-        if (!Dom.isWhitespace(sibling) && "l" != Dom.getNodeName(sibling)) break
+        if (!Dom.isWhitespace(sibling)) break
         val siblingSibling = sibling.nextSibling
         Dom.deleteNode(sibling)
         sibling = siblingSibling

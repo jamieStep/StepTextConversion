@@ -1547,7 +1547,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   private fun processCanonicalTitleForChapter (chapterNode: Node)
   {
     /**************************************************************************/
-    //val dbg = Dbg.dCont(Dom.toString(chapterNode), "Ps.150")
+    //val dbg = Dbg.dCont(Dom.toString(chapterNode), "Ps.69")
     //if (dbg) Dbg.d(chapterNode.ownerDocument)
 
 
@@ -1755,7 +1755,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
      much so long as they're reasonably consistently wrong. */
 
   private val C_WordCharsRegex = "\\p{L}}".toRegex()
-  private fun getCanonicalTextSizeForVerse (s: String) = s.length // s.replace(C_WordCharsRegex, "").trim().length // s.trim().codePointCount(0, s.length - 1)
+  private fun getCanonicalTextSizeForVerse (s: String) = s.codePointCount(0, s.length) // s.replace(C_WordCharsRegex, "").trim().length // s.trim().codePointCount(0, s.length - 1)
 
 
 
@@ -2179,7 +2179,7 @@ open class BibleStructureOsis2ModScheme (scheme: String): BibleStructure(null)
 
 
     /**************************************************************************/
-    StepFileUtils.readDelimitedTextStream(FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath())!!)
+    StepFileUtils.readDelimitedTextStream(FileLocations.getInputStream(FileLocations.getOsis2modVersificationDetailsFilePath()).first!!)
       .filter { it[0] == m_Scheme }
       .forEach { processLine(it) }
   }

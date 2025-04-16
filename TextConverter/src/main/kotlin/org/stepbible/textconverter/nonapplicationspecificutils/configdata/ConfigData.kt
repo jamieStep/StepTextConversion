@@ -13,20 +13,23 @@ import org.stepbible.textconverter.nonapplicationspecificutils.iso.IsoLanguageAn
 import org.stepbible.textconverter.nonapplicationspecificutils.iso.Unicode
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.FeatureIdentifier
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionNotReallyAnException
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionSilentCommandLineIssue
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.*
 import java.io.*
 import java.nio.file.Paths
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.*
+import java.util.zip.ZipEntry
+import java.util.zip.ZipFile
+import java.util.zip.ZipInputStream
+import java.util.zip.ZipOutputStream
 import kotlin.collections.ArrayList
 import kotlin.io.path.Path
+import kotlin.io.path.name
 
 
 /******************************************************************************/
@@ -93,21 +96,32 @@ import kotlin.io.path.Path
  * in the same way, the only difference being that the former terminates the
  * processing if the file does not exist, whereas the latter does not.
  *
- * The filePaths here are always *relative* paths.  They can include '.' and
- * '..' in the usual way, and the separators should be given as '/'.  The
- * processing supports a number of special forms:
+ * The file paths here may be any of the following:
  *
- * - $root at the start implies the path is relative to the root folder for the
- *   Bible text you are processing.
+ * - $jarResources/fileName: This selects a file which is built into the
+ *   resources section of the present JAR.
  *
- * - $metadata implies the path is relative to the Metadata folder for the
- *   text.
+ * - $find/...../fileName (where ...../ is optional, and if present specifies
+ *   a folder hierarchy -- eg $find/MySpecialConfig/Messages/warnings.conf.
+ *   In this case, the processing looks for the path under a) the root folder
+ *   for the text being processed (Text_abc_DEF_step or whatever); b) the
+ *   Metadata folder associated with the text (Text_abc_DEF_step/Metadata);
+ *   and c) _SharedConfig_ under the common root folder below which all texts
+ *   sit (which is specified by the environment variable stepTextConverterOverallDataRoot
+ *   if present).  It works in that order, and stops as soon as it finds a
+ *   match.  (Having said which, it's a *very* good idea to rely upon ordering
+ *   like this -- avoid having more than one file with a given name.)
  *
- * - $jarResources implies the file lies within the resources section of the
- *   present JAR file, which is where I store a lot of defaults.
+ * - Or you can give an absolute path (but I strongly advise against it other
+ *   than perhaps for test purposes, because it will render things
+ *   non-portable).
  *
- * - Anything else implies the path is relative to the path of the file in
- *   which the $include appears.
+ *
+ * There is one other wrinkle.  If you indicate on the command line that
+ * configuration data is to be taken from a zip file created on a previous run,
+ * the above processing is ignored.  Instead, we simply look for data in that
+ * zip file, and in doing so we ignore any path information -- we merely look
+ * in the zip file for elements which match the actual file names.
  *
  *
  * Include's may be nested to any depth.  Processing proceeds as though all of
@@ -115,8 +129,8 @@ import kotlin.io.path.Path
  *
  * Note, incidentally, that the processing makes no assumptions about the way
  * in which configuration information is, or is not, split across files.  It
- * requires that it *sees* the information in the appropriate order, not that
- * * it sees it in any particular file.  The only requirement is that there be
+ * requires that it sees the information in the appropriate *order*, not that
+ * it sees it in any particular file.  The only requirement is that there be
  * a step.conf file to act as a starting point.
  *
  *
@@ -127,10 +141,9 @@ import kotlin.io.path.Path
  * Just to fill in the weasel words ('to a first approximation') above ...
  *
  * There are some values which we would like to regard as configuration items,
- * but which have to be determined at run time.  These are stored in the
- * configuration structure, and can indeed therefore be accessed as though they
- * were standard configuration items -- with the proviso that they become
- * available only once the processing needed to generate them has run.
+ * but which have to be determined at run time.  These are available as though
+ * they had been specified as configuration parameters, but are recalculated
+ * each time they are requested.
  *
  * Command-line parameters are also stored in the configuration structure.
  * It is possible that configuration files may also attempt to give values to
@@ -673,7 +686,6 @@ object ConfigData: ObjectInterface
      thread-safe. */
 
   /****************************************************************************/
-  private val m_AlreadyLoaded: MutableSet<String> = mutableSetOf()
   private var m_SampleText = ""
 
 
@@ -801,32 +813,14 @@ object ConfigData: ObjectInterface
 
 
     /**************************************************************************/
-    /* Originally I would have regarded any attempt to load the same file twice
-       as probably indicating an error.  However, it is convenient to accept
-       this and simply not load the file a second time.  */
+    val expandedFilePath = FileLocations.getInputPath(configFilePath)
+    val lines = ConfigArchiver.getDataFrom(expandedFilePath, okIfNotExists) ?: return
 
-    val inputPath = FileLocations.getInputPath(configFilePath)
-    if (m_AlreadyLoaded.contains(inputPath)) return
-    m_AlreadyLoaded.add(inputPath)
-
-
-
-    /**************************************************************************/
-    val modifiedConfigFilePath = FileLocations.getInputPath(configFilePath)
-    val sharedConfigFolderPath = FileLocations.getSharedConfigFolderPath()
-    if (Path(modifiedConfigFilePath).startsWith(Path(sharedConfigFolderPath)))
-    {
-      val x = Path(modifiedConfigFilePath.substring(sharedConfigFolderPath.length))
-      m_SharedConfigFolderPathAccesses.add(Paths.get(sharedConfigFolderPath, x.getName(0).toString()).toString())
-    }
-
-    ConfigFilesStack.push(modifiedConfigFilePath)
-
-    for (x in getConfigLines(modifiedConfigFilePath, okIfNotExists))
+    for (x in lines)
     {
       //Dbg.d("$configFilePath: $x")
       val line = x.trim().replace("@home", System.getProperty("user.home"))
-      if (processConfigLine(line, modifiedConfigFilePath)) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
+      if (processConfigLine(line, expandedFilePath)) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
       throw StepExceptionWithStackTraceAbandonRun("Couldn't process config line: $line")
     } // for
 
@@ -877,38 +871,6 @@ object ConfigData: ObjectInterface
     delete("stepLanguageCode3Char"); put("stepLanguageCode3Char", languageCode, force = true)
     delete("stepLanguageCode2Char"); put("stepLanguageCode2Char", IsoLanguageAndCountryCodes.get2CharacterIsoCode(languageCode).ifEmpty { languageCode }, force = true)
     return languageCode
-  }
-
-
-  /****************************************************************************/
-  /* Obtains the configuration lines from a given file, which may be specified
-     as being relative to the root folder, relative to the calling file (if
-     supplied) or within the JAR.
-
-     The returned list will have had comments and blank lines removed and
-     continuation lines combined into a single line. */
-
-  private fun getConfigLines (configFilePath: String, okIfNotExists: Boolean): List<String>
-  {
-    /************************************************************************/
-    try
-    {
-      val rawLines = FileLocations.getInputStream(configFilePath)!!.bufferedReader().use { it.readText() } .lines()
-      val lines: MutableList<String> = rawLines.map{ it.split("#!")[0].trim() }.filter{ it.isNotEmpty() }.toMutableList() // Ditch comments and remove blank lines.
-      for (i in lines.size - 2 downTo 0) // Join continuation lines.
-          if (lines[i].endsWith("\\"))
-          {
-            lines[i] = lines[i].substring(0, lines[i].length - 1) + lines[i + 1].replace(Regex("^\\s+"), "")
-            lines[i + 1] = ""
-          }
-
-          return lines.filter { it.isNotEmpty() }
-    }
-    catch (_: Exception)
-    {
-        if (!okIfNotExists) throw StepExceptionWithStackTraceAbandonRun("Could not find config file $configFilePath")
-        return listOf()
-    }
   }
 
 
@@ -1234,18 +1196,6 @@ object ConfigData: ObjectInterface
    */
 
   @Synchronized fun getKeys () : Set<String> = m_Metadata.keys
-
-
-  /****************************************************************************/
-  /**
-   *  Returns all of the keys from the metadata which are matched by a given
-   *  function.
-   *
-   *  @param matcher
-   *  @return Keys.
-   */
-
-  @Synchronized fun getMatchingKeys (matcher: (String) -> Boolean) = m_Metadata.keys.filter{ matcher(it) }.toSet()
 
 
   /****************************************************************************/
@@ -1888,18 +1838,6 @@ object ConfigData: ObjectInterface
     /**                                                                        **/
     /****************************************************************************/
     /****************************************************************************/
-
-    /****************************************************************************/
-    /**
-    * Returns a list of all the folders under the shared config folder which have
-    * been accessed (with the exception of _Common_).  This list can be used to
-    * make sure we include all relevant config data in the repository package.
-    *
-    * @return List of folders.
-    */
-
-    fun getSharedConfigFolderPathAccesses() = m_SharedConfigFolderPathAccesses
-
 
     /****************************************************************************/
     /**
@@ -2848,16 +2786,11 @@ object ConfigData: ObjectInterface
       var ownerOrganisation = getOrError("swordTextOwnerOrganisationFullName")
       if (ownerOrganisation.isNotEmpty()) ownerOrganisation = "&nbsp;&nbsp;Owning organisation: $ownerOrganisation"
 
-      var textDisambiguatorForId = getOrError("swordDisambiguatorForId")
-      if (textDisambiguatorForId.isBlank() || "unknown".equals(textDisambiguatorForId, ignoreCase = true)) textDisambiguatorForId = ""
-
       var textId: String = ConfigData["swordTextIdSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""
       if (textId.isBlank() || "unknown".equals(textId, ignoreCase = true)) textId = ""
 
       val textCombinedId =
-        if (textDisambiguatorForId.isNotEmpty() && textId.isNotEmpty())
-          "$textDisambiguatorForId.$textId"
-        else if (textId.isNotEmpty())
+        if (textId.isNotEmpty())
           "Version $textId"
         else
           ""
@@ -3122,5 +3055,260 @@ object ConfigData: ObjectInterface
     val res = fn()
     if (null != res) put(key, res, false)
     return res
+  }
+}
+
+
+
+
+
+/******************************************************************************/
+/**
+ * Creates a zip file to hold all of the configuration files used on the
+ * present run (excluding material in the Resources area of the JAR file),
+ * and, where being used on a subsequent run, provides access to it.
+ *
+ * @author ARA "Jamie" Jamieson
+ */
+
+object ConfigArchiver
+{
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                                 Public                                 **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+  * Creates a zip file containing all of the config data files used on this
+  * run, and returns the stylised name under which the data has been stored.
+  * except that it _doesn't_ do this if this run actually took its data from
+  * the zip file, because in that case nothing will have changed.  (It still
+  * gives back the file path, though.)
+  *
+  * @return Path to zip file.
+  */
+
+  fun createZip ()
+  {
+    /**************************************************************************/
+    val translationsFileName = "vernacularTranslationsDb.txt"
+    val zipFilePath = FileLocations.getNewArchivedConfigZipFilePath()
+    val zipFile = File(zipFilePath)
+
+
+
+    /**************************************************************************/
+    /* If we took input from a zip file, we can reuse that.  Or sadly, not
+       quite -- we need to replace the config.conf, because that gets updated
+       with new history and version information. */
+
+    if (ConfigData.getAsBoolean("configFromZip", "no"))
+    {
+      replaceConfigConf()
+      return
+    }
+
+
+
+    /**************************************************************************/
+    /* Take input from actual files. */
+
+    ZipOutputStream(BufferedOutputStream(FileOutputStream(zipFile))).use { zipOut ->
+        /**********************************************************************/
+        /* Physical files. */
+
+        m_FileNames.keys.forEach { fileName ->
+          if ("step.conf" == fileName) return@forEach
+          val file = File(m_FileNames[fileName]!!)
+          FileInputStream(file).use { fis ->
+            val zipEntry = ZipEntry(file.name) // Only store filename, not path.
+            zipOut.putNextEntry(zipEntry)
+            fis.copyTo(zipOut)
+            zipOut.closeEntry()
+          } // FileInputStream.use
+        } // m_FilePaths.forEach
+
+
+
+        /**********************************************************************/
+        /* Add material which we need to pre-process -- presently only the
+           translations database, where a given text will use only the
+           special lines, the English lines, and the ones specific to the
+           language of the text (if any). */
+
+        val translationsDbPath = FileLocations.getVernacularTextDatabaseFilePath()
+        val languageCode = ConfigData["stepLanguageCode3Char"]!!
+        val lines = File(translationsDbPath).readLines().filter { it.startsWith("Special:") || it.startsWith("eng|") || it.startsWith("$languageCode|")}
+        addTextDataToZip(zipOut, Path(translationsDbPath).name, lines)
+    }
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Obtains data either from the previous-config-zip-file (if taking config
+   * from there, or from an appropriate file location.  Throws an error if no
+   * file of the given *name* can be found.  Note that we are indeed concerned
+   * only with names here, so you need to avoid setting things up with more
+   * than one file with a given name.  Throws an exception if the file cannot
+   * be found
+   *
+   * @param pseudoFilePath Input file path, including specials like $find.
+   *
+   * @return Lines from file, or null if the file has already been loaded.
+   */
+
+  fun getDataFrom (pseudoFilePath: String, okIfNotExists: Boolean): List<String>?
+  {
+    /**************************************************************************/
+    /* Pseudo file path may, for instance, start $find/.  Or it may be a full
+       path.  Or, if we are taking input from a previous zip, it doesn't much
+       matter what it is, because we pretty much ignore the path. */
+
+    val takingInputFromPreviousZip = ConfigData.getAsBoolean("configFromZip", "no")
+    val fileName = File(pseudoFilePath).name
+    val filePath = if (takingInputFromPreviousZip) null else FileLocations.getInputPath(pseudoFilePath)
+
+
+
+    /**************************************************************************/
+    /* Check if we've already loaded the file -- and give up if we have.
+       Otherwise record the file name and the path for use when creating the
+       archival zip later -- except that we don't save stuff which is in the
+       resources section of the JAR, because that doesn't get archived. */
+
+    if (null != m_FileNames[fileName])
+      return null
+
+    if ("\$jar" !in pseudoFilePath)
+      m_FileNames[fileName] = filePath
+
+
+
+    /**************************************************************************/
+    return if (takingInputFromPreviousZip)
+      getLinesFromZipFile(fileName, okIfNotExists)
+    else
+      getLinesFromRealFile(filePath!!, okIfNotExists)
+  }
+
+
+  /****************************************************************************/
+  private fun addTextDataToZip (zipOut: ZipOutputStream, entryName: String, lines: List<String>)
+  {
+    zipOut.putNextEntry(ZipEntry(entryName))
+
+    BufferedWriter(OutputStreamWriter(zipOut, Charsets.UTF_8)).use { writer ->
+        lines.forEach { writer.write(it + "\n") }
+    }
+  }
+
+
+  /****************************************************************************/
+  /* Obtains the configuration lines from a given file, which may be specified
+     as being relative to the root folder, relative to the calling file (if
+     supplied) or within the JAR.
+
+     The returned list will have had comments and blank lines removed and
+     continuation lines combined into a single line. */
+
+  private fun getLinesFromRealFile (filePath: String, okIfNotExists: Boolean): List<String>
+  {
+    try
+    {
+      val fileDetails = FileLocations.getInputStream(filePath)
+      val rawLines = fileDetails.first!!.bufferedReader().use { it.readText() } .lines()
+      val lines: MutableList<String> = rawLines.map{ it.split("#!")[0].trim() }.filter{ it.isNotEmpty() }.toMutableList() // Ditch comments and remove blank lines.
+      for (i in lines.size - 2 downTo 0) // Join continuation lines.
+          if (lines[i].endsWith("\\"))
+          {
+            lines[i] = lines[i].substring(0, lines[i].length - 1) + lines[i + 1].replace(Regex("^\\s+"), "")
+            lines[i + 1] = ""
+          }
+
+          return lines.filter { it.isNotEmpty() }
+    }
+    catch (_: Exception)
+    {
+        if (!okIfNotExists) throw StepExceptionWithoutStackTraceAbandonRun("Could not find config file $filePath")
+        return listOf()
+    }
+  }
+
+
+  /****************************************************************************/
+  private fun getLinesFromZipFile (pseudoFilePath: String, okIfNotExists: Boolean): List<String>
+  {
+    val entryName = File(pseudoFilePath).name
+
+    ZipFile(m_ExistingConfigArchiveFile).use { zip ->
+        val entry = zip.getEntry(entryName) ?: throw StepExceptionWithoutStackTraceBase("Failed to find $entryName in previous config zip file.")
+        zip.getInputStream(entry).use { inputStream ->
+            return BufferedReader(InputStreamReader(inputStream)).readLines()
+        }
+    }
+  }
+
+
+  /****************************************************************************/
+  /* Creates a revised archive in the target location, containing a copy of the
+     original, but with config.conf replaced so as to pick up the new config
+     data. */
+
+  private fun replaceConfigConf ()
+  {
+    val originalZipBytes = File(m_ExistingConfigArchiveFile).readBytes()
+    val newFileBytes = File(FileLocations.getStepConfigFilePath()).bufferedReader().readText().toByteArray()
+    val entryName = "config.conf"
+    val updatedZipBytes = replaceZipEntry(originalZipBytes, entryName, newFileBytes)
+    StepFileUtils.deleteFile(m_ExistingConfigArchiveFile)
+    File(FileLocations.getNewArchivedConfigZipFilePath()).writeBytes(updatedZipBytes)
+  }
+
+  /****************************************************************************/
+  private fun replaceZipEntry(zipBytes: ByteArray, entryName: String, newFileBytes: ByteArray): ByteArray
+  {
+    val outputStream = ByteArrayOutputStream()
+    val zipOutputStream = ZipOutputStream(outputStream)
+
+    val inputStream = ByteArrayInputStream(zipBytes)
+    val zipInputStream = ZipInputStream(inputStream)
+
+    var entry: ZipEntry?
+
+    // Read the original ZIP file and copy its contents except the entry to be replaced
+    while (zipInputStream.nextEntry.also { entry = it } != null)
+    {
+      val name = entry!!.name
+      if (name == entryName)
+        continue
+
+      // Copy existing entry to new ZIP
+      zipOutputStream.putNextEntry(ZipEntry(name))
+      zipInputStream.copyTo(zipOutputStream)
+      zipOutputStream.closeEntry()
+    }
+
+    zipInputStream.close()
+
+    zipOutputStream.putNextEntry(ZipEntry(entryName))
+    zipOutputStream.write(newFileBytes)
+    zipOutputStream.closeEntry()
+    zipOutputStream.close()
+    return outputStream.toByteArray()
+  }
+
+
+
+  /****************************************************************************/
+  private val m_FileNames: MutableMap<String, String?> = mutableMapOf()
+  private val m_ExistingConfigArchiveFile by lazy {
+    val res = FileLocations.getExistingArchivedConfigZipFilePath()
+    ConfigData["stepTargetAudience"] = if ("_public" in res) "public" else "step"
+    res
   }
 }

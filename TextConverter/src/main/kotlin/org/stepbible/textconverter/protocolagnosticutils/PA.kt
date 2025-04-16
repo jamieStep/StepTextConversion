@@ -40,6 +40,6 @@ open class PA
   /****************************************************************************/
   protected var m_BibleStructure: BibleStructure? = null
   protected lateinit var m_DataCollection: X_DataCollection
-  protected lateinit var m_EmptyVerseHandler: PA_EmptyVerseHandler
+  protected lateinit var m_EmptyVerseHandler: PA_MissingVerseHandler
   protected lateinit var m_FileProtocol: X_FileProtocol
 }

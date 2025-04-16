@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNames
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigDataSupport
@@ -49,18 +48,19 @@ object Builder_Master: Builder(), ObjectInterface
 
     return listOf(
       /*************************************************************************/
-      /* Common or not otherwise available. */
-
-      //CommandLineProcessor.CommandLineOption("conversionTimeReversification", 0, "Use to force conversion time restructuring (you will seldom want this).", null, null, false),
-      CommandLineProcessor.CommandLineOption("forceUpIssue", 0, "Normally up-issue is suppressed if the update reason has not changed.  This lets you override this.", null, null, false),
-      CommandLineProcessor.CommandLineOption("permitParallelRunning", 1, "Permits parallel running where the processing supports it (you may want to turn it off while debugging).", listOf("yes", "no"), "yes", false),
       CommandLineProcessor.CommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true),
-      CommandLineProcessor.CommandLineOption("releaseType", 1, "Type of release.", listOf("Major", "Minor"), null, true, forceLc = true),
-      CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false),
-      CommandLineProcessor.CommandLineOption("supplierUpdateReason", 1, "The reason STEP is making the update (if the supplier has also supplied a reason, this will appear too).", null, null, false),
       CommandLineProcessor.CommandLineOption("targetAudience", 1, "If it is possible to build both STEP-only and public version, selects the one required.", listOf("Public", "Step"), null, false, forceLc = true),
-      CommandLineProcessor.CommandLineOption("useExistingOsis", 1, "Ignore other inputs and start from OSIS.  withChanges => Use existing OSIS as input and apply any normal processing to it; withoutChanges => Use existing OSIS unchanged as far as possible.", listOf("withChanges", "withoutChanges"), null, false),
-      CommandLineProcessor.CommandLineOption("useExistingHistory", 0, "This assumes that the history and version information in the step.conf file is already correct and should not be updated.", null, null, false),
+
+
+
+      /***********************************************************************/
+      CommandLineProcessor.CommandLineOption("configFromZip", 0, "Take config from previous zip file rather than current data.", null, "no", false),
+
+
+
+      /***********************************************************************/
+      CommandLineProcessor.CommandLineOption("history", 1, "The text to be used for the history record, or the special values FromMetadata or AsPrevious.", null, null, true),
+      CommandLineProcessor.CommandLineOption("releaseNumber", 1, "An explicit version number (eg 1.0, 2.1); or + for a dot release, leaving the processing to work out the actual value; or ++ for a whole number release; or = to keep previous number.  The supplied value is overridden and treated as = if historyText is AsPrevious", null, null, true),
 
 
 
@@ -73,7 +73,8 @@ object Builder_Master: Builder(), ObjectInterface
       /***********************************************************************/
       /* Debug. */
 
-      CommandLineProcessor.CommandLineOption("dbgAddDebugAttributesToNodes", 0, "Add debug attributes to nodes.", listOf("yes", "no"), "no", false),
+      CommandLineProcessor.CommandLineOption("permitParallelRunning", 1, "Permits parallel running where the processing supports it (you may want to turn it off while debugging).", listOf("yes", "no"), "yes", false),
+      CommandLineProcessor.CommandLineOption("dbgAddDebugAttributesToNodes", 0, "Add debug attributes to nodes.", null, "no", false),
       CommandLineProcessor.CommandLineOption("dbgDisplayReversificationRows", 0, "Display selected reversification rows$commonText", null, "no", false),
       CommandLineProcessor.CommandLineOption("dbgSelectBooks", 1, "Limits processing to selected books.  Either <, <=, -, >=, > followed by the USX abbreviation for a book, or else a comma-separated list of books.",null, null, false )
     )
@@ -163,9 +164,9 @@ object Builder_Master: Builder(), ObjectInterface
   /****************************************************************************/
   private fun doIt (args: Array<String>)
   {
-    /**************************************************************************/
+    val argsWithEnvironmentVariablesExpanded = args.map { expandEnvironmentVariable(it) } .toTypedArray()
     getCommandLineOptions()
-    if (!CommandLineProcessor.parse(args)) return
+    if (!CommandLineProcessor.parse(argsWithEnvironmentVariablesExpanded)) return
 
 
 
@@ -174,6 +175,20 @@ object Builder_Master: Builder(), ObjectInterface
     checkIfRunIsForSelectedBooksOnly()
     runProcess()
   }
+
+
+    /**************************************************************************/
+    /* Expands %...% on the assumption that these represent references to
+       environment variables. */
+
+    private fun expandEnvironmentVariable (s: String): String
+    {
+      val regex = Regex("%([^%]+)%")
+      return regex.replace(s) { matchResult ->
+          val varName = matchResult.groupValues[1]
+        System.getenv(varName) ?: matchResult.value
+      }
+    }
 
 
   /****************************************************************************/

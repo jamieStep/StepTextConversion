@@ -142,7 +142,7 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
 
         if (null == firstChild) // This shouldn't happen -- we should never have an entirely empty Strong's tag -- but I've seen texts where it does.
         {
-          val text = "Empty Strong's reference: ${Dom.toString(node)}."
+          val text = "Empty Strong's reference: ${Dom.toString(node)}.  (This may not be a problem -- USX char:w is used for a number of purposes, not just for Strong's.)"
           Logger.warning(text)
           Dom.deleteNode(node) // No point in retaining an empty Strong's tag.
           ++deletedCount
@@ -235,7 +235,7 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
 //
 //
     /**************************************************************************/
-    val strongsElts = node[m_FileProtocol.attrName_strong()]!!.replace("(?i)STRONG:".toRegex(), "").split(C_MultiStrongSeparator)
+    val strongsElts = node[m_FileProtocol.attrName_strong()]!!.trim().replace("(?i)STRONG:".toRegex(), "").split(C_MultiStrongSeparator)
     node[m_FileProtocol.attrName_strong()] = strongsElts.joinToString(" "){ rejigStrongs(it) }
   }
 
@@ -256,7 +256,7 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
   /****************************************************************************/
   private fun readCorrectionsData ()
   {
-    FileLocations.getInputStream(FileLocations.getStrongsCorrectionsFilePath())!!.bufferedReader().use { it.readText() } .lines()
+    FileLocations.getInputStream(FileLocations.getStrongsCorrectionsFilePath()).first!!.bufferedReader().use { it.readText() } .lines()
       .forEach {
         val line = it.trim()
         if (line.isNotEmpty() && '#' != line[0])
