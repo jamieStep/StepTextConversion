@@ -1324,6 +1324,11 @@ object ConfigData: ObjectInterface
   @Synchronized private fun getInternal (key: String, nullsOk: Boolean): String?
   {
     /**************************************************************************/
+    //Dbg.d(key, "_copyrightOwner")
+
+
+
+    /**************************************************************************/
     /* CAUTION: With something like @(stepVersificationScheme, KJV), "KJV"
        is received here as though it were the key for an item of config data,
        when in fact, of course, it's simply a default value for the @(...).
@@ -1486,7 +1491,7 @@ object ConfigData: ObjectInterface
     /************************************************************************/
     /* Split off the default, if any. */
 
-    val (line, dflt) = if ("=" in theLine) theLine.split("=").map { it.trim() } else listOf(theLine, null)
+    val (line, dflt) = if ("=" in theLine) theLine.split("=", limit = 2).map { it.trim() } else listOf(theLine, null)
     var args = splitStringAtCommasOutsideOfParens(line!!)
 
 
@@ -2144,10 +2149,6 @@ object ConfigData: ObjectInterface
        stepSwordCopyrightDetailsConversionDetails is determined automatically
          based upon what is done within the conversion processing.
 
-       stepSwordCopyrightDetailsAdditionalInformationSuppliedByUs allows the
-         caller to record any additional special information.  It comes out
-         at the end.
-         
        The three elements (or whichever of them are present) are concatenated,
        separates by newlines, and then returned with a modicum of markup which
        later processing turns into an appropriate form. */
@@ -2157,7 +2158,6 @@ object ConfigData: ObjectInterface
       /************************************************************************/
       var copyrightInformationAsSuppliedByTranslators = get("swordAboutAsSupplied")!! + (get("swordDerivedWorksLimitations") ?: "")
       var detailsOfConversionProcessing = get("swordCopyrightTextConversionDetails")!!
-      val additionalCopyrightDetailsSuppliedByUs = get("swordCopyrightTextAdditionalInformationSuppliedByUs")
 
 
 
@@ -2184,103 +2184,20 @@ object ConfigData: ObjectInterface
 
 
       /************************************************************************/
-      detailsOfConversionProcessing = "<p><br><br><b>STEPBible information</b><div style='padding-left:2em'>$detailsOfConversionProcessing<br><br>${additionalCopyrightDetailsSuppliedByUs ?: ""}</div>"
+      if (detailsOfConversionProcessing.isNotEmpty())
+        detailsOfConversionProcessing = "<p><br><br><b>STEPBible information</b><div style='padding-left:2em'>$detailsOfConversionProcessing</div>"
 
 
 
       /************************************************************************/
-      val res = listOfNotNull(copyrightInformationAsSuppliedByTranslators, detailsOfConversionProcessing).joinToString("\n")
+      // $$$ We also have a built-in rubric specifically thanking Crosswire for texts which they make available, if only I can work out when it should be used.
+      val thanks = "<p><br><br><b>Acknowledgments</b><div style='padding-left:2em'>${ConfigData["stepThanks"]}</div>"
+
+
+
+      /************************************************************************/
+      val res = listOfNotNull(copyrightInformationAsSuppliedByTranslators, detailsOfConversionProcessing, thanks).joinToString("\n")
       return res
-
-    //.replace("-", "&nbsp;")
-        //.replace("\n", "NEWLINE")
-        //.replace("^¬*(&nbsp;)*\\s*\\u0001".toRegex(), "") // Get rid of entirely 'blank' lines.
-    }
-
-
-    /**************************************************************************/
-    /* Calculated information, reflecting the processing applied during the
-       conversion processing.  Is preceded by a para and a horizontal rule. */
-
-    private fun swordCopyrightTextConversionDetails (): String
-    {
-      /************************************************************************/
-      val changesAppliedByStep: MutableList<String> = mutableListOf()
-      if (getAsBoolean("stepAddedValueMorphology", "No")) changesAppliedByStep.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Morphology"))
-      if (getAsBoolean("stepAddedValueStrongs", "No")) changesAppliedByStep.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Strongs"))
-
-
-
-      /************************************************************************/
-      /* If we are applying runtime reversification, then probably the only
-         significant changes we make are to add footnotes.
-
-         Some text suppliers require us to own up to making changes, so for
-         safety's sake, I assume all will.  I add the text in both English and
-         vernacular where available.
-
-         (We _may_ also expand elisions and / or restructure tables, and possibly
-         I ought to consider owning up to this at some point.) */
-
-      if ("runtime" == ConfigData["stepReversificationType"])
-      {
-        val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_FootnotesMayHaveBeenAdded")
-        val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_FootnotesMayHaveBeenAdded")
-        var s = english
-        if (vernacular != english) s += " / $vernacular"
-        changesAppliedByStep.add(s)
-      }
-
-
-
-      /************************************************************************/
-      /* Conversion time reversification. */
-
-      else // ("runtime" != ConfigData["stepReversificationType"])
-      {
-        val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
-        val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
-        var s = english
-        if (vernacular != english) s += " / $vernacular"
-        changesAppliedByStep.add(s)
-      }
-
-
-
-      /************************************************************************/
-      val deletedBooks = ConfigData["stepDeletedBooks"]
-      if (null != deletedBooks)
-        changesAppliedByStep.add("Software limitations mean we have had to remove the following books: ${deletedBooks}.")
-
-
-
-      /************************************************************************/
-      var text = "Sword module ${get("stepModuleName")!!} Rev ${get("stepTextRevision")!!} created by the STEPBible project ${get("stepModuleCreationDate")!!} (${get("swordTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation") ?: ""})."
-      text += "<br>${get("stepThanks")!!}<br>"
-
-      if (changesAppliedByStep.isNotEmpty())
-      {
-        text += "<br>We have made the following changes:<br><div style='padding-left:1em'>"  //TranslatableFixedText.stringFormatWithLookup("V_addedValue_AddedValue")
-        text += changesAppliedByStep.joinToString("<br>- ", prefix = "- ", postfix = "<br>")
-        text += "</div><br>"
-      }
-
-
-
-      /************************************************************************/
-      val stepManuallySuppliedDetailsOfChangesApplied = get("stepManuallySuppliedDetailsOfChangesApplied")
-      if (null != stepManuallySuppliedDetailsOfChangesApplied) text += "<br>${get("stepManuallySuppliedDetailsOfChangesApplied")}"
-
-
-
-      /************************************************************************/
-      val acknowledgementOfDerivedWork = get("swordWordingForDerivedWorkStipulatedByTextSupplier")
-      if (null != acknowledgementOfDerivedWork) text += "<br>$acknowledgementOfDerivedWork"
-
-
-
-      /************************************************************************/
-      return text
     }
 
 
@@ -3015,7 +2932,7 @@ object ConfigData: ObjectInterface
 
     "swordCopyrightTextAssembly" to { swordCopyrightTextAssembly() },
 
-    "swordCopyrightTextConversionDetails" to { swordCopyrightTextConversionDetails() },
+    "swordCopyrightTextConversionDetails" to { Issues.getDetailsForCopyrightPage() },
 
     "swordInputFileDigests" to { Digest.makeFileDigests() },
 

@@ -2,6 +2,7 @@ package org.stepbible.textconverter.osisonly
 
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
@@ -112,7 +113,7 @@ private class Osis_InternalTagReplacerPerBook ()
     /**************************************************************************/
     /* This deals with things like
 
-         stepUsxToOsisTagTranslation=(usx=Ͼ_X_subverseSeparatorVariableϿ Ͼ<hi type='super'>)
+         stepUsxToOsisTagTranslation=(usx=Ͼ_X_subverseSeparatorVariableϿ Ͼ<hi type='super'>Ͽ)
 
        where we want to ditch the node itself, but replace it by a substructure,
        in this case comprising <hi...> containing the children of the original
@@ -123,6 +124,9 @@ private class Osis_InternalTagReplacerPerBook ()
     var parent: Node? = null
 
     tags.split("<").forEach { nodeAsText ->
+      if (nodeAsText.isEmpty())
+      return@forEach
+
       val subNode = Dom.createNode(node.ownerDocument, "<" + nodeAsText.replace(">", "") + "/>")
 
       if (null == newNode)

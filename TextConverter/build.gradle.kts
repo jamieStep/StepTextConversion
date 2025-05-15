@@ -9,7 +9,7 @@ import org.jetbrains.dokka.base.DokkaBaseConfiguration
 
    To build a new JAR in IDEA:
 
-   - Update teh version number below if necessary.
+   - Update the version number below if necessary.
 
    - In the bar at the extreme right of the IDEA screen, select Gradle (the
      icon is an elephant, I think).
@@ -30,6 +30,7 @@ plugins {
     //kotlin("jvm") version "1.9.0"
     kotlin("jvm") version "2.0.20"
     id("org.jetbrains.dokka") version "1.9.20"
+    kotlin("plugin.serialization") version "1.9.0"
     application
 }
 
@@ -70,7 +71,8 @@ dependencies {
     implementation("org.reflections:reflections:0.10.2") // Note 1.
     implementation("org.javassist:javassist:3.30.2-GA")  // Note 2.
     implementation(kotlin("reflect"))                    // Note 3.
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
 }
 
 

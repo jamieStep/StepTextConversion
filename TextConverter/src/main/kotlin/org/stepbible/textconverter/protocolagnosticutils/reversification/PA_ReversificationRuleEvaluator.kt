@@ -91,7 +91,7 @@ open class PA_ReversificationRuleEvaluator (dataCollection: X_DataCollection)
   {
     /**************************************************************************/
     //Dbg.d(row.rowNumber == 9650)
-    //Dbg.dCont(theRuleData, "Num.26:28>Num.26:29")
+    //Dbg.d(row.toString())
 
 
 

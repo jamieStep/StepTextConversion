@@ -46,6 +46,10 @@ import java.util.*
  * here, so that by the time this method returns, the appropriate
  * reversification rows will have been selected for use by the caller.
  *
+ * Note that we are concerned here *only* with selecting rows based upon
+ * the Test field (whether blank or non blank).  Not all selected rows will do
+ * anything on a particular run, but that is handled elsewhere.
+ *
  * @author ARA "Jamie" Jamieson
  */
 
@@ -232,7 +236,7 @@ object PA_ReversificationDataLoader: PA()
   private fun acceptRowForProcessing (dataRow: ReversificationDataRow): Boolean
   {
     /**************************************************************************/
-    //Dbg.d(dataRow.rowNumber == 343)
+    //Dbg.d(dataRow.rowNumber == 22820)
 
 
 
@@ -247,7 +251,11 @@ object PA_ReversificationDataLoader: PA()
 
     /**************************************************************************/
     /* The reversification data contains a few rows for 4Esdras.  We need to
-       weed these out, because the USX scheme doesn't recognise this book. */
+       weed these out, because the USX scheme doesn't recognise this book.
+
+       $$$ This may need to be changed at some point because we're trying to
+       find ways to expand the list of books we accept -- although any such
+       expansion will necessarily not be standards-compliant. */
 
     val sourceRef = dataRow["SourceRef"]
     if (sourceRef.contains("4es", ignoreCase = true))
@@ -365,7 +373,8 @@ object PA_ReversificationDataLoader: PA()
      This does mean that these specific individual fields may not exactly
      mimic the content of the 'fields' array, but on the other hand it means
      that the 'fields' array is still as read from the reversification data,
-     which may simplify debugging. */
+     which may simplify debugging.
+   */
 
   private fun canonicaliseAndCorrectData (dataRow: ReversificationDataRow)
   {
@@ -554,10 +563,10 @@ object PA_ReversificationDataLoader: PA()
        have Gen.1:2*, I convert it to Gen.1:2.  If we have Gen.1:2*a, I
        convert it to Gen.1:2;a. */
 
-    if (stepRef.endsWith("*"))
-      stepRef = stepRef.butLast()
+    stepRef = if (stepRef.endsWith("*"))
+      stepRef.butLast()
     else
-      stepRef = stepRef.replace("*", ";")
+      stepRef.replace("*", ";")
 
 
 
@@ -847,7 +856,7 @@ object PA_ReversificationDataLoader: PA()
   private fun setAncientVersions (theText: String?): String
   {
     /**************************************************************************/
-    return theText ?: ""; // As noted elsewhere, at least pro tem we have decided not to parse and translate the ancient version information.
+    return theText ?: "" // As noted elsewhere, at least pro tem we have decided not to parse and translate the ancient version information.
 
 
 

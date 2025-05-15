@@ -249,6 +249,24 @@ object Builder_InternalOsis: Builder(), ObjectInterface
 
   override fun doIt ()
   {
+    /***************************************************************************/
+    /* Create a home for what we're about to generate. */
+
+    StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
+    //StepFileUtils.deleteFolder(FileLocations.getInternalOsisFolderPath())
+    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
+
+
+
+    /***************************************************************************/
+    /* Certain parameters need to be driven by things like what target audience
+       we have in mind (public or STEP-only).  Best to work these out as early
+       as possible. */
+
+    Osis_AudienceAndCopyrightSpecificProcessingHandler.process()
+
+
+
     /**************************************************************************/
     if ("asis" == ConfigData["stepUseExistingOsis"]?.lowercase())
     {
@@ -256,6 +274,9 @@ object Builder_InternalOsis: Builder(), ObjectInterface
       val doc = Dom.getDocument(FileLocations.getInputOsisFilePath()!!)
       BookOrdering.initialiseFromOsis(doc)
       InternalOsisDataCollection.loadFromDoc(doc)
+
+      Rpt.report(level = 0, "Performing reversification if necessary.")
+      Osis_AudienceAndCopyrightSpecificProcessingHandler.doReversificationIfNecessary(InternalOsisDataCollection)
     }
     else
       doIt1()
@@ -284,15 +305,6 @@ object Builder_InternalOsis: Builder(), ObjectInterface
 
 
     /***************************************************************************/
-    /* Certain parameters need to be driven by things like what target audience
-       we have in mind (public or STEP-only).  Best to work these out as early
-       as possible. */
-
-    Osis_AudienceAndCopyrightSpecificProcessingHandler.process(); x()
-
-
-
-    /***************************************************************************/
     /* Arrange to turn the raw inputs into OSIS.  In previous implementations,
        subsequent processing would check that we had verse eids and that they
        were positioned in a reasonably 'optimal' manner.  I have now dropped
@@ -302,15 +314,6 @@ object Builder_InternalOsis: Builder(), ObjectInterface
     Builder_InitialOsisRepresentationOfInputs.process(); x()
     Rpt.report(0, banner())
     InternalOsisDataCollection.loadFromDoc(ExternalOsisDoc); x()
-
-
-
-    /***************************************************************************/
-    /* Create a home for what we're about to generate. */
-
-    //Dbg.outputText(Phase1TextOutput)
-    StepFileUtils.deleteFolder(FileLocations.getInternalOsisFolderPath())
-    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
 
 
 
@@ -342,11 +345,12 @@ object Builder_InternalOsis: Builder(), ObjectInterface
        form which is easier to handle. */
 
     Rpt.report(level = 0, "Handling Strongs, tables and elisions.")
-    PA_StrongsHandler.process(InternalOsisDataCollection); x()                 // Canonicalise Strong's markup.
-    Osis_BasicTweaker.process(InternalOsisDataCollection); x()                 // Minor changes to make processing easier.
-    PA_TableHandler.process(InternalOsisDataCollection); x()                   // Collapses tables which span verses into a single elided verse.  $$$ Is this needed?
-    PA_ElisionHandler.process(InternalOsisDataCollection); x()                 // Expands elisions out into individual verses.
-    PA_ListEncapsulator.process(InternalOsisDataCollection); x()               // Might encapsulate lists (but in fact does not do so currently).
+    PA_EnclosingTagToSelfClosingConverter.process(InternalOsisDataCollection); x() // Does what it says on the tin.
+    PA_StrongsHandler.process(InternalOsisDataCollection); x()                     // Canonicalise Strong's markup.
+    Osis_BasicTweaker.process(InternalOsisDataCollection); x()                     // Minor changes to make processing easier.
+    PA_TableHandler.process(InternalOsisDataCollection); x()                       // Collapses tables which span verses into a single elided verse.  $$$ Is this needed?
+    PA_ElisionHandler.process(InternalOsisDataCollection); x()                     // Expands elisions out into individual verses.
+    PA_ListEncapsulator.process(InternalOsisDataCollection); x()                   // Might encapsulate lists (but in fact does not do so currently).
     //Dbg.d(InternalOsisDataCollection.convertToDoc())
     
     

@@ -53,21 +53,21 @@ import java.util.concurrent.atomic.AtomicBoolean
  * Only a certain subset of the rows apply to any one text.  That subset is
  * determined by the Tests field of the data.  This field contains a collection
  * of criteria which must be satisfied by the text being processed in order for
- * the row to be applicable.
+ * the row to be applicable.  This aspect of things is handled by
+ * [PA_ReversificationDataLoader], such that only rows which pass their
+ * respective tests are supplied to the present class for processing.
  *
- * The selected rows may give rise to either, both or (possibly) neither of
- * two actions: we may add annotation to a (sub)verse to explain issues to do
- * with the versification structure at that point; and we may output data for
- * use by osis2mod and JSword when handling the text.
+ * The selected rows may give rise to one or more of three actions here.
  *
- * More accurately, there is also a third possible action -- rows with the
- * IfEmpty action (and only these) may create their source verse if it does
- * not exist.  (From this point of view, I think the name is misleading -- so
- * far as I can see it should read 'IfMissing'.)  In fact, processing which
- * occurs prior to reversification will already have filled in any missing
- * verses at the start or in the middle of chapters, so IfEmpty will only
- * create verses which are missing from the ends of chapters, and I am not
- * sure whether any IfEmpty rows currently attempt that.
+ * The row may give rise to mapping information which we output for use by
+ * osis2mod and JSword.
+ *
+ * And / or the row may result in an empty verse being created to fill a hole
+ * in the text.  (At the time of writing, this action is taken only on rows
+ * whose Action field contains EmptyVerse.)
+ *
+ * And / or the verse identified by the sourceRef may have a footnote added
+ * to it to explain versification issues.
  *
  * All of this is discussed in more detail below.
  *
@@ -298,7 +298,11 @@ class PA_ReversificationHandlerPerBook (private val dataCollection: X_DataCollec
 
 
     /**************************************************************************/
-    /* Probably a good idea to create any missing verses next. */
+    /* Probably a good idea to create any missing verses next.  At the time of
+       writing, only IfEmpty can do that, and I think that's best seen really
+       as a kind of side-effect -- the main purpose of IfEmpty is to annotate
+       if the verse is empty, but if the verse is _missing_ then it's ok to
+       create it. */
 
     var sidMap = PA_ReversificationUtilities.makeVerseSidMap(rootNode)
     val chapterMap = PA_ReversificationUtilities.makeChapterSidMap(rootNode)
@@ -306,6 +310,7 @@ class PA_ReversificationHandlerPerBook (private val dataCollection: X_DataCollec
       .filter {dataRow -> dataRow["Action"].startsWith("IfEmpty", ignoreCase = true) }
       .filterNot { dataRow -> dataRow.sourceRef.toRefKey() in sidMap }
       .forEach { dataRow ->
+        //Dbg.d(dataRow.rowNumber == 22928 || dataRow.rowNumber == 22820)
         createdVerses = true
         val newNodes = dataCollection.getFileProtocol().getEmptyVerseHandler().createEmptyVerseForReversification(rootNode.ownerDocument, dataRow.sourceRef.toRefKey())
         val refKey = dataRow.sourceRef.toRefKey()
@@ -346,7 +351,7 @@ class PA_ReversificationHandlerPerBook (private val dataCollection: X_DataCollec
     val sourceNode = sidMap[sourceRefKey] ?: sidMap[Ref.clearS(sourceRefKey)] // 03-Apr-2025: Added clearS.
     if (null == sourceNode)
     {
-      Logger.error(sourceRefKey, "Runtime reversification source verse does not exist: $dataRow.")
+      Logger.warning(sourceRefKey, "Runtime reversification source verse does not exist: $dataRow.")
       return
     }
 

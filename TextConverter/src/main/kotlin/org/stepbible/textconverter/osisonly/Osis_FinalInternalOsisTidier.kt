@@ -200,6 +200,7 @@ private class Osis_FinalInternalOsisTidierGeneralHandlerPerBook (val m_FileProto
        //Dbg.d(rootNode.ownerDocument)
     handleVersesWithinSpanTypeTags(rootNode)
        //Dbg.d(rootNode.ownerDocument)
+       handleWhitespaceEtcAtChapterEnds(rootNode)
   }
 
 
@@ -581,6 +582,27 @@ private class Osis_FinalInternalOsisTidierGeneralHandlerPerBook (val m_FileProto
         Dom.deleteNode(sibling)
         Dom.insertNodeBefore(it, sibling)
       }
+    }
+  }
+
+
+  /****************************************************************************/
+  /* White space at the ends of chapters is pointless, but at least should have
+     no real adverse consequences.  Except that anecdotal evidence it does in
+     fact have some really weird consequences. */
+
+  private fun handleWhitespaceEtcAtChapterEnds (rootNode: Node)
+  {
+    fun shouldBeDeleted (node: Node): Boolean
+    {
+      if (Dom.isWhitespace(node)) return true;
+      val nodeName = Dom.getNodeName(node)
+      return ( ("p" == nodeName || "lb" == nodeName) && !node.hasChildNodes())
+    }
+
+    rootNode.findNodesByName("chapter").forEach { chapter ->
+      while (null != chapter.lastChild && shouldBeDeleted(chapter.lastChild))
+        Dom.deleteNode(chapter.lastChild)
     }
   }
 }

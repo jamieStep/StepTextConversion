@@ -55,12 +55,6 @@ import java.nio.file.Paths
  * - Mar_MRCV.zip: The actual module -- the files we would deploy so that the
  *   module can be made available in STEPBible.
  *
- * - previousConfig_Mar
- *
- *
- *
- *
- *
  * @author ARA "Jamie" Jamieson
  */
 
@@ -101,6 +95,8 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
     val inputUsx  = if (FileLocations.getInputUsxFilesExist())  FileLocations.getInputUsxFolderPath()  else null
     val inputVl   = if (FileLocations.getInputVlFilesExist())   FileLocations.getInputVlFolderPath()   else null
 
+    val inputIssuesList = if (StepFileUtils.fileOrFolderExists(FileLocations.getIssuesFilePath()) )FileLocations.getIssuesFilePath() else null
+
     if (null == inputOsis) throw StepExceptionWithStackTraceAbandonRun("No OSIS available to store in repository package.")
 
 
@@ -137,6 +133,7 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
                                inputUsx,
                                inputVl,
                                inputImp,
+                               inputIssuesList,
                                FileLocations.getTextFeaturesFolderPath(),
                                FileLocations.getConverterLogFilePath(),
                                FileLocations.getOsisToModLogFilePath(),

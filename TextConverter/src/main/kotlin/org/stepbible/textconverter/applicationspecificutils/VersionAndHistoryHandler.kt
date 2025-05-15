@@ -205,13 +205,14 @@ object VersionAndHistoryHandler: ObjectInterface
        history or else defaults to 1.0. */
 
     val previousVersion = if (m_HistoryLinesForThisAudience.isEmpty()) "1.0" else m_HistoryLinesForThisAudience[0].stepVersion
+    val previousHistory = if (m_HistoryLinesForThisAudience.isEmpty()) "First STEPBible release." else m_HistoryLinesForThisAudience[0].text
 
 
 
     /**************************************************************************/
     /* If we're not updating, there's not a lot to do. */
 
-    if (retainExisting)
+    if (retainExisting || ( previousVersion == releaseVersion && previousHistory == history))
     {
       ConfigData["stepTextRevision"] = previousVersion
       ConfigData["stepUpIssued"] = "n"

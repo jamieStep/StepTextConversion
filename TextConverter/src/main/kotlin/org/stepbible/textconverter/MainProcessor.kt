@@ -4,6 +4,7 @@ package org.stepbible.textconverter
 import org.stepbible.textconverter.builders.Builder_Master
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.Issues
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.*
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionBase
@@ -137,9 +138,11 @@ class MainProcessor
   {
     // The try below is required because if we start from OSIS, we won't have any reversification details.
     var res = ""
-    try { if (!ConfigData["stepExternalDataPath_ReversificationData"]!!.startsWith("http")) res += C_Local_ReversificationData } catch (_: Exception) {}
+    try { if (!ConfigData["stepExternalDataPath_ReversificationData"]!!.startsWith("http")) res += C_LocalReversificationData } catch (_: Exception) {}
     if (!ConfigData.getAsBoolean("stepEncrypted", "no")) res += C_NotEncrypted
     if (!ConfigData.getAsBoolean("stepUpIssued", "no")) res += C_NotUpIssued
+    val issues = Issues.getRemedialActions()
+    if (issues.isNotEmpty()) res += C_HaveYouChecked + "\n" + issues.joinToString("\n")
     return res
   }
 
@@ -147,7 +150,23 @@ class MainProcessor
   /****************************************************************************/
   // https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20  Font=Big.
 
-private val C_Local_ReversificationData ="""
+
+  /****************************************************************************/
+  private val C_HaveYouChecked = """
+  _    _                                            _               _            _             
+ | |  | |                                          | |             | |          | |            
+ | |__| | __ ___   _____   _   _  ___  _   _    ___| |__   ___  ___| | _____  __| |            
+ |  __  |/ _` \ \ / / _ \ | | | |/ _ \| | | |  / __| '_ \ / _ \/ __| |/ / _ \/ _` |            
+ | |  | | (_| |\ V /  __/ | |_| | (_) | |_| | | (__| | | |  __/ (__|   <  __/ (_| |  _   _   _ 
+ |_|  |_|\__,_| \_/ \___|  \__, |\___/ \__,_|  \___|_| |_|\___|\___|_|\_\___|\__,_| (_) (_) (_)
+                            __/ |                                                              
+                           |___/                                                               
+  """
+
+
+
+  /****************************************************************************/
+private val C_LocalReversificationData ="""
    _      ____   _____          _        _____  ________      ________ _____   _____ _____ ______ _____ _____       _______ _____ ____  _   _ 
   | |    / __ \ / ____|   /\   | |      |  __ \|  ____\ \    / /  ____|  __ \ / ____|_   _|  ____|_   _/ ____|   /\|__   __|_   _/ __ \| \ | |
   | |   | |  | | |       /  \  | |      | |__) | |__   \ \  / /| |__  | |__) | (___   | | | |__    | || |       /  \  | |    | || |  | |  \| |

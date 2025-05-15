@@ -169,7 +169,6 @@ private class Osis_BasicValidator_PerBook
       {
         if (null != expectedId)
         {
-          Dbg.d(verseNodes[0].ownerDocument)
           m_IssuesThunk.m_VersesWhereSidAndEidDoNotAlternate.add(Osis_FileProtocol.readRef(verseNode[Osis_FileProtocol.attrName_verseSid()]!!).toRefKey())
           return@forEach // Equivalent of continue.
         }
@@ -181,7 +180,6 @@ private class Osis_BasicValidator_PerBook
       {
         if (null == expectedId)
         {
-          Dbg.d(verseNodes[0].ownerDocument)
           m_IssuesThunk.m_VersesWhereSidAndEidDoNotAlternate.add(Osis_FileProtocol.readRef(verseNode[Osis_FileProtocol.attrName_verseEid()]!!).toRefKey())
           return@forEach // Equivalent of continue.
         }

@@ -143,7 +143,7 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
         if (null == firstChild) // This shouldn't happen -- we should never have an entirely empty Strong's tag -- but I've seen texts where it does.
         {
           val text = "Empty Strong's reference: ${Dom.toString(node)}.  (This may not be a problem -- USX char:w is used for a number of purposes, not just for Strong's.)"
-          Logger.warning(text)
+          //Logger.warning(text)
           Dom.deleteNode(node) // No point in retaining an empty Strong's tag.
           ++deletedCount
           break

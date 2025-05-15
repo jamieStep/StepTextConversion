@@ -49,7 +49,6 @@ object Builder_InitialOsisRepresentationOfInputs: Builder(), ObjectInterface
   override fun doIt ()
   {
     //Rpt.report(level = 0, banner())
-    StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
     determineInput().second.process()
   }
 

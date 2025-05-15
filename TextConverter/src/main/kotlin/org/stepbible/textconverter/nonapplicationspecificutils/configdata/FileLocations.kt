@@ -439,6 +439,7 @@ object FileLocations: ObjectInterface
 
 
   /****************************************************************************/
+  fun getIssuesFilePath () = locateFile("\$find/issues.json") ?: Paths.get(getMetadataFolderPath(), "issues.json").toString() // File recording any problems with the text.
   private fun getTextFeaturesRootFolderPath () = Paths.get(getInternalSwordFolderPath(), "textFeatures").toString()
   fun getTextFeaturesFolderPath () = makeTextFeaturesFolderPath()
   fun getRunFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "runFeatures.json").toString()

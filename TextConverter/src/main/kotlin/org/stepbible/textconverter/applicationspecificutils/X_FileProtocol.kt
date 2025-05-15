@@ -11,6 +11,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceShouldHaveBeenOverridden
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.PA_MissingVerseHandler
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -78,8 +79,8 @@ open class X_FileProtocol
   fun tagName_table () = "table"
   open fun attrName_tableHeaderCellStyle () = "style"
 
-  fun getEid (sidChapterOrVerse: Node) = sidChapterOrVerse[attrName_verseEid()]!!
-  fun getSid (sidChapterOrVerse: Node) = sidChapterOrVerse[attrName_verseSid()]!!
+  open fun getEid (sidChapterOrVerse: Node) = sidChapterOrVerse[attrName_verseEid()]!!
+  open fun getSid (sidChapterOrVerse: Node) = sidChapterOrVerse[attrName_verseSid()]!!
   open fun bookNameToNumber (name: String): Int = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun getBookAbbreviation (doc: Document): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden() // Assumes just one book per file.
   open fun getBookAbbreviation (node: Node): String = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
@@ -98,6 +99,7 @@ open class X_FileProtocol
   open fun isAcrosticSpanNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun isBookNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun isCanonicalTitleNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
+  open fun isCollapsibleParaNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun isCrossReferenceFootnoteNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
   open fun isDummySid (sidVerse: Node): Boolean = attrName_verseSid() in sidVerse && RefBase.C_BackstopVerseNumber == Ref.getV(getSidAsRefKey(sidVerse))
   open fun isExplanatoryFootnoteNode (node: Node): Boolean = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
@@ -450,6 +452,26 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 
 
   /****************************************************************************/
+  override fun getEid (sidChapterOrVerse: Node): String
+  {
+    return if (attrName_verseEid() in sidChapterOrVerse)
+      sidChapterOrVerse[attrName_verseEid()]!!
+    else
+      sidChapterOrVerse["osisID"]!!
+  }
+
+
+  /****************************************************************************/
+  override fun getSid (sidChapterOrVerse: Node): String
+  {
+    return if (attrName_verseSid() in sidChapterOrVerse)
+      sidChapterOrVerse[attrName_verseSid()]!!
+    else
+      sidChapterOrVerse["osisID"]!!
+  }
+
+
+  /****************************************************************************/
   /**
    * Returns details of tags which have numbered levels.
    *
@@ -507,6 +529,31 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
   */
 
   override fun isCanonicalTitleNode (node: Node) = "title:psalm" == getExtendedNodeName(node)
+
+
+  /****************************************************************************/
+  /**
+  * Returns an indication of whether this is a paragraph which could be
+  * converted to self-closing form.  In general I think our rendering is such
+  * that vanilla-ish flavours of para can be turned into self-closing form
+  * without adversely affecting the rendering, and doing so reduces the chances
+  * of getting cross-verse-boundary markup.  This is not so much of an issue for
+  * us as was once the case, but osis2mod still issues warnings if it encounters
+  * it.
+  *
+  * This makes its determination based upon tag and attributes, but excludes
+  * any nodes which do not, in fact, have children.
+  *
+  * @param node Node to be examined.
+  * @return True if this is a candidate for conversion to self-closing form.
+  */
+
+  override fun isCollapsibleParaNode (node: Node): Boolean
+  {
+    if (!node.hasChildNodes()) return false
+    val nodeName = Dom.getNodeName(node)
+    return nodeName == "p" || nodeName == "lb" // Should never get lb, because lb is required to be empty, but I've seen at least one text where it is not.
+  }
 
 
   /****************************************************************************/
@@ -1239,8 +1286,35 @@ object Usx_FileProtocol: X_FileProtocol(), ObjectInterface
 
   /****************************************************************************/
   /**
+  * Returns an indication of whether this is a paragraph which could be
+  * converted to self-closing form.  In general I think our rendering is such
+  * that vanilla-ish flavours of para can be turned into self-closing form
+  * without adversely affecting the rendering, and doing so reduces the chances
+  * of getting cross-verse-boundary markup.  This is not so much of an issue for
+  * us as was once the case, but osis2mod still issues warnings if it encounters
+  * it.
+  *
+  * This makes its determination based upon tag and attributes, but excludes
+  * any nodes which do not, in fact, have children.
+  *
+  * @param node Node to be examined.
+  * @return True if this is a candidate for conversion to self-closing form.
+  */
+
+  override fun isCollapsibleParaNode (node: Node): Boolean
+  {
+    if ("para" != Dom.getNodeName(node)) return false
+    if (!node.hasChildNodes()) return false
+    val style = Dom.getAttribute(node, "style")
+    return ("p" == style || "q" == style || "b" == style)
+  }
+
+
+  /****************************************************************************/
+  /**
   * Returns an indication of whether the given node is cross-reference footnote.
   *
+  * @param node Node to be examined.
   * @return True if this is a cross-reference footnote.
   */
 
@@ -1302,7 +1376,7 @@ object Usx_FileProtocol: X_FileProtocol(), ObjectInterface
   {
     if ("para" != Dom.getNodeName(node)) return false
     val style = Dom.getAttribute(node, "style")
-    return ("p" == style || "q" == style || "l" != style)
+    return ("p" == style || "q" == style)
   }
 
 
