@@ -220,15 +220,15 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
    /**************************************************************************/
    /* Report what we're doing. */
 
-   val okToGenerateFootnotes = ConfigData.getAsBoolean("stepOkToGenerateFootnotes")
-   val stepSoftwareVersionRequired = ConfigData["stepSoftwareVersionRequired"]
+   val okToGenerateFootnotes = ConfigData.getAsBoolean("calcIsOkToAddFootnotes")
+   val calcSoftwareVersionRequired = ConfigData["calcSoftwareVersionRequired"]
    val versificationScheme = ConfigData["stepVersificationScheme"]
    Logger.info("Treating this as a ${if (isCopyrightText) "copyright" else "non-copyright"} text.")
    Logger.info("Generation of our own footnotes is${if (!okToGenerateFootnotes) " NOT" else ""} permitted.")
    Logger.info("Versification scheme is ${versificationScheme ?: "STEP-internal"}.")
    Logger.info("ReversificationType is $reversificationType")
    Logger.info("Target audience is $targetAudience.")
-   Logger.info("Version of STEP runtime software required is $stepSoftwareVersionRequired.")
+   Logger.info("Version of STEP runtime software required is $calcSoftwareVersionRequired.")
   }
 
 
@@ -275,7 +275,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
      Suppressing the footnotes doesn't get rid of those changes -- it merely
      prevents us from explaining why they were made. */
 
-  private fun setCopyrightLimitations () = ConfigData.deleteAndPut("stepOkToGenerateFootnotes", "no", force = true)
+  private fun setCopyrightLimitations () = ConfigData.deleteAndPut("calcIsOkToAddFootnotes", "no", force = true)
 
 
   /****************************************************************************/
@@ -283,9 +283,9 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
   private fun setEncryption (wantEncryption: Boolean): Boolean
   {
-    ConfigData.deleteAndPut("stepEncrypted", if (wantEncryption) "Yes" else "No", force = true)
+    ConfigData.deleteAndPut("calcEncrypted", if (wantEncryption) "Yes" else "No", force = true)
     m_NeedEncryption = wantEncryption
-    return ConfigData.getAsBoolean("stepEncrypted")
+    return ConfigData.getAsBoolean("calcEncrypted")
   }
 
 
@@ -295,7 +295,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
   private fun setFreedomsForNonCopyrightTexts ()
   {
-    ConfigData.deleteAndPut("stepOkToGenerateFootnotes", "yes", force = true)
+    ConfigData.deleteAndPut("calcIsOkToAddFootnotes", "yes", force = true)
     val x = ConfigData.get("stepReversificationFootnoteLevel", "basic"); ConfigData.deleteAndPut("stepReversificationFootnoteLevel", x, force = true)
   }
 
@@ -314,7 +314,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
   /****************************************************************************/
   /* If we want to apply conversion-time restructuring to a text:
 
-     - We have to set stepReversificationType to reflect this.
+     - We have to set calcReversificationType to reflect this.
 
      - We need to flag the fact that version 1 of the offline STEP software
        will be good enough.
@@ -322,9 +322,8 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
    private fun setNoReversificationActionRequired ()
    {
-     ConfigData.deleteAndPut("stepReversificationType", "none", force = true)
-     ConfigData.deleteAndPut("stepVersified", "No", force = true)
-     ConfigData.deleteAndPut("stepSoftwareVersionRequired", 1.toString(), force=true)
+     ConfigData.deleteAndPut("calcReversificationType", "none", force = true)
+     ConfigData.deleteAndPut("calcSoftwareVersionRequired", 1.toString(), force=true)
      m_ReversificationHandler = null
    }
 
@@ -332,7 +331,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
   /****************************************************************************/
   /* If we want to samify a text:
 
-     - We have to set stepReversificationType to reflect this.
+     - We have to set calcReversificationType to reflect this.
 
      - We need to flag the fact that we need at least version 2 of the STEP
        offline module to use the module.
@@ -345,11 +344,10 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
   private fun setRunTimeReversification ()
   {
-    ConfigData.deleteAndPut("stepReversificationType", "runtime", force = true)
+    ConfigData.deleteAndPut("calcReversificationType", "runtime", force = true)
     ConfigData.deleteAndPut("stepTargetAudience", "step", false)
-    ConfigData.deleteAndPut("stepVersified", "Yes", force = true)
-    ConfigData.deleteAndPut("stepSoftwareVersionRequired", 2.toString(), force=true)
-    ConfigData.deleteAndPut("stepVersificationScheme", ConfigData["stepModuleName"]!!, true) // Force to our own name for the versification scheme.
+    ConfigData.deleteAndPut("calcSoftwareVersionRequired", 2.toString(), force=true)
+    ConfigData.deleteAndPut("stepVersificationScheme", ConfigData["calcModuleName"]!!, true) // Force to our own name for the versification scheme.
     ConfigData.delete("stepVersificationScheme")
     m_ReversificationHandler = PA_ReversificationHandler
   }
@@ -387,7 +385,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
     /**************************************************************************/
     val osis2modEncryptionKey = MiscellaneousUtils.generateRandomString(64)
-    ConfigData.put("stepOsis2ModEncryptionKey", osis2modEncryptionKey, true)
+    ConfigData.put("NOT_USED_calcOsis2modEncryptionKey", osis2modEncryptionKey, true)
     val obfuscationKey = "p0#8j..8jm@72k}28\$0-,j[\$lkoiqa#]" // Fixed for all time.
     val stepEncryptionKey = MiscellaneousUtils.generateStepEncryptionKey(osis2modEncryptionKey, obfuscationKey)
 
@@ -397,7 +395,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
     /* Write the details to the file which controls encryption. */
 
     val writer = File(filePath).bufferedWriter()
-    writer.write("[${ConfigData["stepModuleName"]!!}]"); writer.write("\n")
+    writer.write("[${ConfigData["calcModuleName"]!!}]"); writer.write("\n")
     writer.write("CipherKey=$stepEncryptionKey");        writer.write("\n")
     writer.write("STEPLocked=true");                     writer.write("\n")
     writer.close()
@@ -535,7 +533,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
     else
     {
       val rc = runCommand("Running external command to generate Sword data: ", swordExternalConversionCommand, reportFilePath = FileLocations.getOsisToModLogFilePath())
-      ConfigData["stepOsis2modReturnCode"] = rc.toString()
+      ConfigData["calcOsis2modReturnCode"] = rc.toString()
       Rpt.report(level = 1, "osis2mod completed")
     }
   }

@@ -30,8 +30,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 
 fun main (args: Array<String>)
 {
-  //ThrowAwayCode().testCollectObjects1()
   BibleBookNames.init()
-  //Dbg.setBooksToBeProcessed("1Co")
+  //Dbg.setBooksToBeProcessed("3Jn")
   MainProcessor().process(args)
 }

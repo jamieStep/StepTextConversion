@@ -215,7 +215,7 @@ object TranslatableFixedText: ObjectInterface
   /****************************************************************************/
   private val m_English   : MutableMap<String, String> = mutableMapOf()
   private val m_Vernacular: MutableMap<String, String> = mutableMapOf() // Contains definitions for the vernacular specific to this run only.  Does not get populated if the vernacular is eng.
-  private val m_VernacularCode: String = ConfigData["stepLanguageCode3Char"] ?: throw StepExceptionWithStackTraceAbandonRun("Initialising TranslatableFixedText too early.") // The language code for the text being processed.
+  private val m_VernacularCode: String = ConfigData["calcLanguageCode3Char"] ?: throw StepExceptionWithStackTraceAbandonRun("Initialising TranslatableFixedText too early.") // The language code for the text being processed.
   private val m_WarnedAboutUseOfEnglishTranslations: MutableSet<String> = mutableSetOf() // Used to prevent duplication of warnings.
 
 

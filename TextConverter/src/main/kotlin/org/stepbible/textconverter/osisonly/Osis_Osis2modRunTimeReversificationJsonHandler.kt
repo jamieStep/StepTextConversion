@@ -147,7 +147,7 @@ object Osis_Osis2modRunTimeReversificationJsonHandler: ObjectInterface
 
   private fun populateBibleStructure (bibleStructureUnderConstruction: BibleStructure)
   {
-    m_BibleStructure.v11nName = ConfigData["stepVersificationScheme"] ?: ConfigData["stepModuleName"]!!
+    m_BibleStructure.v11nName = ConfigData["stepVersificationScheme"] ?: ConfigData["calcModuleName"]!!
     populateBibleStructure1(bibleStructureUnderConstruction)
     m_BibleStructure.otBooks.add(BookDetails()) // Terminate with empty entry.
     m_BibleStructure.ntBooks.add(BookDetails()) // Terminate with empty entry.

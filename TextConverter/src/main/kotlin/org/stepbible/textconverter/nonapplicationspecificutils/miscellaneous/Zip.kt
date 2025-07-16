@@ -5,13 +5,18 @@ import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.Ste
 import java.io.*
 import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
+import java.nio.file.Files
+import java.nio.file.Path
 import java.nio.file.Paths
 import java.util.zip.*
 
 
 /******************************************************************************/
 /**
- * A ZIP file handler.
+ * A ZIP file handler.  This includes the basic stuff which you'd expect *any*
+ * zip utilities to handle.  But it also includes a more sophisticated set
+ * of facilities to let you specify the structure of a complex zip file in a
+ * readable form.  For details see ZipSupport.
  *
  *  @author ARA "Jamie" Jamieson
  */
@@ -435,4 +440,144 @@ object Zip: ObjectInterface
     m_ZipStream!!.putNextEntry(entry)
     FileInputStream(absolutePath).use { fi -> BufferedInputStream(fi, C_BufLen).use { source -> while (source.read(data, 0, C_BufLen).also { count = it } != -1) m_ZipStream!!.write(data, 0, count) } }
   }
+}
+
+
+/******************************************************************************/
+/**
+* A wrapper class for more sophisticated zip behaviour.  In particular, I was
+* finding it difficult to work out the structure of complicated zip files
+* where there were nested file structures, and perhaps some of the folders
+* or files didn't actually exist on disk and needed to be created on the
+* fly.
+*
+* This class provides a DSL to make it possible to specify the required
+* structure in a readable manner.
+*/
+
+object ZipSupport
+{
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                               Public                                   **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  sealed class ZipEntryConfig (val name: String)
+
+  class _Folder (name: String, val sourcePath: Path? = null, val children: List<ZipEntryConfig> = listOf()) : ZipEntryConfig(name)
+
+  class _FileFromDisk (name: String, val sourcePath: Path) : ZipEntryConfig(name)
+
+  class _GeneratedFile (name: String, val content: () -> String) : ZipEntryConfig(name)
+
+
+  /****************************************************************************/
+  fun fileFromDisk (filePath: String, name: String = File(filePath).name) = _FileFromDisk(name, Paths.get(filePath))
+
+
+  /****************************************************************************/
+  fun folderFromDisk (name: String, sourcePath: String, builder: (MutableList<ZipEntryConfig>.() -> Unit)? = null): _Folder
+  {
+    val children = mutableListOf<ZipEntryConfig>()
+    builder?.let { children.it() }
+    return _Folder(name, Paths.get(sourcePath), children)
+  }
+
+
+  /****************************************************************************/
+  fun generatedFolder (name: String, builder: (MutableList<ZipEntryConfig>.() -> Unit)? = null): _Folder
+  {
+    val children = mutableListOf<ZipEntryConfig>()
+    builder?.let { children.it() }
+    return _Folder(name, null, children)
+  }
+
+
+  /****************************************************************************/
+  fun generatedFile (name: String, content: () -> String) = _GeneratedFile(name, content)
+
+
+  /****************************************************************************/
+  /**
+  * Writes out the zip file.
+  *
+  * @param zipFilePath Path where zip file should be stored.
+  *
+  * @param structure The folder / file structure which defines the content and
+  *   layout of the zip file.  The facilities here require that this have a root
+  *   folder so that everything can be recorded beneath that folder.  However,
+  *   when writing things out, that root folder is ignored, and all of the
+  *   elements recorded as being beneath it are stored at the top level.
+  */
+
+  fun writeZip (zipFilePath: String, structure: _Folder)
+  {
+    ZipOutputStream(Files.newOutputStream(Paths.get(zipFilePath))).use { zipOut ->
+        for (entry in structure.children) {
+            writeEntry(zipOut, entry, "")
+        }
+    }
+  }
+
+
+  /****************************************************************************/
+  private fun writeEntry(zipOut: ZipOutputStream, entry: ZipEntryConfig, pathPrefix: String)
+  {
+    when (entry)
+    {
+      is _Folder -> {
+        val fullPath = if (entry.name.isNotEmpty()) "$pathPrefix${entry.name}/" else pathPrefix
+
+        // Write folder entry in the ZIP (optional, for completeness)
+        if (entry.name.isNotEmpty())
+        {
+          zipOut.putNextEntry(ZipEntry(fullPath))
+          zipOut.closeEntry()
+        }
+
+        // If pulling contents from disk
+        if (entry.sourcePath != null)
+        {
+          val basePath = entry.sourcePath.toAbsolutePath().normalize()
+          Files.walk(basePath).forEach { subPath ->
+            if (Files.isDirectory(subPath)) return@forEach
+
+            val relative = basePath.relativize(subPath)
+              .toString()
+              .replace(File.separatorChar, '/')
+              .trimStart('/')
+
+            val zipEntryPath = fullPath + relative
+            zipOut.putNextEntry(ZipEntry(zipEntryPath))
+            Files.newInputStream(subPath).use { it.copyTo(zipOut) }
+            zipOut.closeEntry()
+          } // forEach
+        } // if (entry.sourcePath != null)
+
+        // Write children recursively (both generated and disk-based additions)
+        for (child in entry.children)
+          writeEntry(zipOut, child, fullPath)
+      } // is _Folder
+
+
+      is _FileFromDisk -> {
+        val zipEntryPath = "$pathPrefix${entry.name}"
+        zipOut.putNextEntry(ZipEntry(zipEntryPath))
+        Files.newInputStream(entry.sourcePath).use { it.copyTo(zipOut) }
+        zipOut.closeEntry()
+      }
+
+
+      is _GeneratedFile -> {
+        val zipEntryPath = "$pathPrefix${entry.name}"
+        zipOut.putNextEntry(ZipEntry(zipEntryPath))
+        zipOut.write(entry.content().toByteArray(Charsets.UTF_8))
+        zipOut.closeEntry()
+      }
+    } // when
+  } // fun
 }

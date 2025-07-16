@@ -81,7 +81,7 @@ object BookOrdering: ObjectInterface
 
   fun initialiseFromMetadata (): Boolean
   {
-    val doneIt = when ((ConfigData["stepFileSelectorForExternalDataFormat"] ?: "").lowercase())
+    val doneIt = when ((ConfigData["stepExternalDataFormat"] ?: "").lowercase())
     {
       "dbl" -> initialiseFromMetadataDbl()
       else -> false

@@ -139,12 +139,12 @@
 #! '.' and '..' if you wish (with some limitations).  The main remaining
 #! issue is how to start the path.
 #!
-#! A path starting $jarResources/ refers to files in the resources section of this
-#! JAR.  So $jarResources/ReferenceFormats/referenceFormatVernacularDefaults.conf
+#! A path starting @jarResources/ refers to files in the resources section of this
+#! JAR.  So @jarResources/ReferenceFormats/referenceFormatVernacularDefaults.conf
 #! points to a file of the given name in the ReferenceFormats subfolder of the
 #! Resources section.
 #!
-#! A path starting $find/ examines a predefined list of locations in a predefined
+#! A path starting @find/ examines a predefined list of locations in a predefined
 #! order: the root folder for the text, the metadata folder for the text, and
 #! the shared configuration folder (_SharedConfig_).
 #!
@@ -154,9 +154,9 @@
 #! $include statements are subject to substitution in the normal way (which we
 #! discuss at exhausting length shortly).  Thus you can have something like:
 #!
-#!  @(stepMyPredefinedFolder)/myfile.conf
+#!  $stepMyPredefinedFolder/myfile.conf
 #!
-#! and the processing will substitute for @(stepMyPredefinedFolder) whatever
+#! and the processing will substitute for $stepMyPredefinedFolder whatever
 #! value you have associated with stepMyPredefinedFolder, and then work with
 #! that expanded path.
 #!
@@ -305,38 +305,27 @@
 #! previously and use them as part of the definition of a new parameter:
 #!
 #!   stepYourName=Ethelred
-#!   stepWelcome=Welcome, @(stepYourName)
+#!   stepWelcome=Welcome, $stepYourName
 #!
-#! The @(...) is replaced by the value of the parameter which it names.  In the
+#! The $... is replaced by the value of the parameter which it names.  In the
 #! form shown here, it is an error if stepYourName is undefined.  There are
 #! related alternatives, though:
 #!
-#!   stepWelcome=Welcome, @(stepYourName, stepMyName, ..., =friend)
+#!   stepWelcome=Welcome, $choose($stepYourName, $stepMyName, ..., "friend")
 #!
 #! In this case, the processing runs through the list of parameter names from
 #! the left until it finds one which is defined, in which case it uses that.  If
 #! none is defined, it uses the default value (which must be prefixed with '=').
 #! So if stepYourName and stepMyName etc are all undefined, stepWelcome becomes
-#! 'Welcome, friend'.  The default value (which is treated as literal text) is
-#! optional.  It is again an error if the processing needs to fall back upon a
-#! default and none has been defined.
+#! 'Welcome, friend'.  The default value is optional.
 #!
-#! A further subtle variant is @choose:
-#!
-#!   stepWelcome=Welcome, @choose(@(stepMyName), @(stepYourName), =friend)
-#!
-#! Where @(...) finds the first acceptable value, and then expands @-references
-#! in that if there are any, and so on until there are no more @-references ...
-#! where @(...) does that, @choose(...) simply finds the first acceptable value
-#! and then does no further expansion.
-#!
-#! You may also use @getExternal to obtain data from an external metadata file
+#! You may also use $getExternal to obtain data from an external metadata file
 #! (currently available only with DBL files).  This is discussed in more detail
 #! in PerTextRepositoryOrganisation/Dbl.conf.
 #!
-#! These various @-things can be nested in any way you like to any depth -- eg
+#! These various $-things can be nested in any way you like to any depth -- eg
 #!
-#!   @choose( @(myImportantParameter), @getExternal(metadata, DBLMetadata/thing), =DEFAULT VALUE)
+#!   $choose( $myImportantParameter, $getExternal("metadata", "DBLMetadata/thing"), "someDefaultOrOther")
 #!
 #! I wouldn't advise doing much of this nesting, though -- debugging complex
 #! configuration information can be difficult.
@@ -376,10 +365,10 @@
 #!
 #! A couple of caveats apply, however:
 #!
-#! - You probably don't want to use the @(...) mechanism to incorporate
+#! - You probably don't want to use the $... mechanism to incorporate
 #!   looked-up values into history lines at run time.  This _will_ work, but
 #!   when I write the history lines back into the file, I will write the
-#!   _expanded_ version, and so the @(...) will not be available for future
+#!   _expanded_ version, and so the $... will not be available for future
 #!   runs.
 #!
 #! - If you do opt to put history lines into your initial configuration

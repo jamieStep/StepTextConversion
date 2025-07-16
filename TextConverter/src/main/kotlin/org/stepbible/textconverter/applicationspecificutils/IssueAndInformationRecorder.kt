@@ -90,7 +90,7 @@ object IssueAndInformationRecorder: ObjectInterface
 
   @Synchronized fun addTranslatableTextWhichWasInEnglishWhenVernacularWouldBeBetter (key: String, text: String)
   {
-    if (ConfigData.isEnglishTranslatableText(key) && "eng" != ConfigData["stepLanguageCode3Char"])
+    if (ConfigData.isEnglishTranslatableText(key) && "eng" != ConfigData["calcLanguageCode3Char"])
       m_RunFeatures.FootnoteTextWhichWasOutputInEnglishWhenPerhapsATranslationWouldBeBetter[key] = text
   }
 
@@ -256,7 +256,7 @@ object IssueAndInformationRecorder: ObjectInterface
     m_FileProtocol = m_DataCollection.getFileProtocol()
 
     if ("tbd" == (ConfigData["stepVersificationScheme"] ?: "tbd"))
-      ConfigData["stepVersificationScheme"] = /* "x11n_" + */ ConfigData["stepModuleName"]!!
+      ConfigData["stepVersificationScheme"] = /* "x11n_" + */ ConfigData["calcModuleName"]!!
 
     outputBibleStructureToJson(outputFilePath)
   }
@@ -266,7 +266,7 @@ object IssueAndInformationRecorder: ObjectInterface
   fun processFeaturesSummaryRunDetails (filePath: String)
   {
     if ("tbd" == (ConfigData["stepVersificationScheme"] ?: "tbd"))
-      ConfigData["stepVersificationScheme"] = /* "x11n_" + */ ConfigData["stepModuleName"]!!
+      ConfigData["stepVersificationScheme"] = /* "x11n_" + */ ConfigData["calcModuleName"]!!
 
     outputRunDetailsToJson(filePath)
   }
@@ -491,7 +491,7 @@ object IssueAndInformationRecorder: ObjectInterface
     val header = """
                  //******************************************************************************
                  //
-                 // Text features for ${ConfigData["stepModuleName"]!!}
+                 // Text features for ${ConfigData["calcModuleName"]!!}
                  //
                  //******************************************************************************
                    
@@ -510,7 +510,7 @@ object IssueAndInformationRecorder: ObjectInterface
 
 
     /**************************************************************************/
-    m_BibleTextStructure.ModuleName = ConfigData["stepModuleName"]!!
+    m_BibleTextStructure.ModuleName = ConfigData["calcModuleName"]!!
     m_BibleTextStructure.BooksOT    = bibleStructure.getAllBookAbbreviationsOt()
     m_BibleTextStructure.BooksNT    = bibleStructure.getAllBookAbbreviationsNt()
     m_BibleTextStructure.BooksDC    = bibleStructure.getAllBookAbbreviationsDc()
@@ -630,7 +630,7 @@ object IssueAndInformationRecorder: ObjectInterface
     val header = """
                  //******************************************************************************
                  //
-                 // Run details for ${ConfigData["stepModuleName"]!!}
+                 // Run details for ${ConfigData["calcModuleName"]!!}
                  //
                  //******************************************************************************
                  
@@ -646,13 +646,13 @@ object IssueAndInformationRecorder: ObjectInterface
 
   private fun populateRunFeatures ()
   {
-    m_RunFeatures.ModuleName = ConfigData["stepModuleName"]!!
+    m_RunFeatures.ModuleName = ConfigData["calcModuleName"]!!
     m_RunFeatures.CopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText")
-    m_RunFeatures.OfflineUsePermitted = !ConfigData.getAsBoolean("stepOnlineUsageOnly")
+    m_RunFeatures.OfflineUsePermitted = !ConfigData.getAsBoolean("calcOnlineUsageOnly")
     m_RunFeatures.TargetAudience = ConfigData["stepTargetAudience"]!!
-    m_RunFeatures.RunStartedFrom = ConfigData["stepOriginData"]!!
+    m_RunFeatures.RunStartedFrom = ConfigData["calcOriginData"]!!
     m_RunFeatures.VersificationScheme = ConfigData["stepVersificationScheme"]!!
-    m_RunFeatures.ReversificationType = ConfigData["stepReversificationType"]!!
+    m_RunFeatures.ReversificationType = ConfigData["calcReversificationType"]!!
 
 
 

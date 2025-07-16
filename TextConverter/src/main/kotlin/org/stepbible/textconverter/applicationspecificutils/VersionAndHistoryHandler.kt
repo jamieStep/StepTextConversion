@@ -21,7 +21,7 @@ import java.time.LocalDate
  * I still need to be able to cope with legacy data, since I need to be able to
  * pick up version information from previous modules.
  *
- * Now, the processing here is handled by two mandatory command-line parameters
+ * The processing here is now handled by two mandatory command-line parameters
  * -- history and releaseNumber.
  *
  * history (stepHistory by the time we get here) may be a text string explaining
@@ -141,19 +141,25 @@ object VersionAndHistoryHandler: ObjectInterface
   * future use.  Cannot be called until after 'process' has done its stuff.
   */
 
-  fun appendHistoryLinesForAllAudiencesToStepConfigFile ()
+  fun appendHistoryLinesForAllAudiencesToHistoryFile ()
   {
-    val nonHistoryLines =
-      File(FileLocations.getStepConfigFilePath())
-        .readLines(Charsets.UTF_8)
-        .filter { !it.trim().lowercase().startsWith("history_") }
-        .dropLastWhile { it.trim().isEmpty() }
+    val writer = File(FileLocations.getExistingHistoryFilePath()!!).bufferedWriter(Charsets.UTF_8) // Should default to UTF-8 anyway, but I have my doubts.
 
-    val writer = File(FileLocations.getStepConfigFilePath()).bufferedWriter(Charsets.UTF_8) // Should default to UTF-8 anyway, but I have my doubts.
-    nonHistoryLines.forEach { writer.write(it); writer.write("\n") }
-    writer.write("\n")
-    m_HistoryLinesForThisAudience   .forEach { writer.write(it.toString()); writer.write("\n") }
-    m_HistoryLinesNotForThisAudience.forEach { writer.write(it.toString()); writer.write("\n") }
+    val data: MutableList<String> = mutableListOf()
+    data.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    data.add("#!")
+    data.add("#! History lines.  There may a set for STEPBible; there may be a set for public;")
+    data.add("#! or there may be both.")
+    data.add("#!")
+    data.add("#! You need to retain this file so that we can keep a full change history.  You")
+    data.add("#! can make changes if you wish, but you should do so with care.")
+    data.add("#!")
+    data.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    data.add("")
+
+    data                            .forEach { writer.appendLine(it.toString()) }
+    m_HistoryLinesForThisAudience   .forEach { writer.appendLine(it.toString()) }
+    m_HistoryLinesNotForThisAudience.forEach { writer.appendLine(it.toString()) }
     writer.close()
   }
 
@@ -162,15 +168,21 @@ object VersionAndHistoryHandler: ObjectInterface
   fun process ()
   {
     /**************************************************************************/
-    /* Get the relevant parameters.  Certain settings imply we're not
-       up-versioning. */
+    /* History and revision normally start out coming from the command lines. */
 
     var history = ConfigData["stepHistory"]!!
     val releaseVersion = ConfigData["stepReleaseNumber"]!!
-    val retainExisting = "=" == releaseVersion || "AsIs".equals(history, ignoreCase = true)
+
+
+
+    /**************************************************************************/
+    /* Certain settings require either that we don't up-version, or that we
+       take information from supplied metadata (eg DBL). */
+
+    val retainExisting = "=" == releaseVersion || "=".equals(history, ignoreCase = true)
     if ("FromMetadata".equals(history, ignoreCase = true))
     {
-      val x = ConfigData["stepSupplierUpdateReason"]
+      val x = ConfigData["calcSupplierUpdateReason"]
       if (x.isNullOrEmpty())
         throw StepExceptionWithoutStackTraceAbandonRun("History was specified as FromMetadata, but no history information is available in the metadata.")
       history = x
@@ -214,8 +226,9 @@ object VersionAndHistoryHandler: ObjectInterface
 
     if (retainExisting || ( previousVersion == releaseVersion && previousHistory == history))
     {
-      ConfigData["stepTextRevision"] = previousVersion
-      ConfigData["stepUpIssued"] = "n"
+      ConfigData.delete("stepReleaseNumber")
+      ConfigData["stepReleaseNumber"] = previousVersion
+      ConfigData["calcUpIssued"] = "n"
       return
     }
 
@@ -244,8 +257,9 @@ object VersionAndHistoryHandler: ObjectInterface
       }
     }
 
-    ConfigData["stepTextRevision"] = newVersion
-    ConfigData["stepUpIssued"] = "y"
+    ConfigData.delete("stepReleaseNumber")
+    ConfigData.put("stepReleaseNumber", newVersion, force = true)
+    ConfigData["calcUpIssued"] = "y"
     m_HistoryLinesForThisAudience.add(0, ParsedHistoryLine(targetAudienceSelector, newVersion, dateToString(LocalDate.now()), history))
 
 

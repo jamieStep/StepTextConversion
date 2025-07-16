@@ -227,7 +227,7 @@ object CommandLineProcessor: ObjectInterface
 
           if (m_ParsedCommandLine!!.hasOption("version"))
           {
-            println("\n${getJarFileName()}: Version ${ConfigData["stepJarVersion"]!!}.\n")
+            println("\n${getJarFileName()}: Version ${ConfigData["calcJarVersion"]!!}.\n")
             exitProcess(0)
           }
 
@@ -252,7 +252,7 @@ object CommandLineProcessor: ObjectInterface
 
     fun showHelpAndExit ()
     {
-      HelpFormatter().printHelp("java -jar ${getJarFileName()} [args]\n\nVersion: ${ConfigData["stepJarVersion"]!!}\n\n", m_Options)
+      HelpFormatter().printHelp("java -jar ${getJarFileName()} [args]\n\nVersion: ${ConfigData["calcJarVersion"]!!}\n\n", m_Options)
       exitProcess(0)
     }
 

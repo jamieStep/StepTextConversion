@@ -86,6 +86,12 @@ private class PA_CanonicalHeadingsHandlerPerBook (val m_FileProtocol: X_FileProt
   private fun processChapter (chapterNode: Node)
   {
     /**************************************************************************/
+    //if (Dbg.d("10" in Dom.toString(chapterNode)))
+    //  Dbg.outputDom(chapterNode.ownerDocument)
+
+
+
+    /**************************************************************************/
     /* If we have nodes which should be treated as a canonical title but which
        are not currently contained within a canonical title node, remedy
        that. */

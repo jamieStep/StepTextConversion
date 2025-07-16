@@ -48,9 +48,8 @@ open class X_FileProtocol
 
   open fun getEmptyVerseHandler (): PA_MissingVerseHandler = throw StepExceptionWithStackTraceShouldHaveBeenOverridden()
 
-  // $$$ protected val m_OkToGenerateFootnotes: Boolean = ConfigData.getAsBoolean("stepOkToGenerateFootnotes")
-  protected val m_StepCrossReferenceCallout = ConfigData["stepCrossReferenceCallout"]!!
-  protected val m_StepExplanationCallout = ConfigData["stepExplanationCallout"]!!
+  protected val m_StepCrossReferenceCallout by lazy { ConfigData["stepCrossReferenceCallout"]!! }
+  protected val m_StepExplanationCallout by lazy { ConfigData["stepExplanationCallout"]!! }
 
 
   /****************************************************************************/
@@ -1006,7 +1005,7 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
   /****************************************************************************/
   /****************************************************************************/
 
-  private val m_ExplanationFootnoteCalloutGenerator: MarkerHandler = MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!)
+  private val m_ExplanationFootnoteCalloutGenerator by lazy { MarkerHandlerFactory.createMarkerHandler(MarkerHandlerFactory.Type.FixedCharacter, ConfigData["stepExplanationCallout"]!!) }
 
 
   /****************************************************************************/

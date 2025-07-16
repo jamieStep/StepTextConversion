@@ -1,13 +1,11 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Zip
 import org.stepbible.textconverter.applicationspecificutils.*
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.osisonly.Osis_AudienceAndCopyrightSpecificProcessingHandler
@@ -38,10 +36,7 @@ object Builder_Module: Builder(), ObjectInterface
 
 
   /****************************************************************************/
-  override fun commandLineOptions () = listOf(
-    CommandLineProcessor.CommandLineOption("manualOsis2mod", 0, "Run osis2mod manually (useful where osis2mod fails to complete under control of the converter).", null, "n", false),
-    CommandLineProcessor.CommandLineOption("stepUpdateReason", 1, "A reason for creating this version of the module (required only if runType is Release and the release arises because of changes to the converter as opposed to a new release from the text suppliers).", null, null, false)
-  )
+  override fun commandLineOptions () = null
 
 
   /****************************************************************************/
@@ -54,7 +49,7 @@ object Builder_Module: Builder(), ObjectInterface
 
 
     /**************************************************************************/
-    if (!ConfigData.getAsBoolean("stepEncrypted", "no")) Logger.warning("********** NOT ENCRYPTED **********")
+    if (!ConfigData.getAsBoolean("calcEncrypted", "no")) Logger.warning("********** NOT ENCRYPTED **********")
     StepFileUtils.createFolderStructure(FileLocations.getInternalSwordFolderPath())
     PackageContentHandler.processPreOsis2mod()
     Osis_AudienceAndCopyrightSpecificProcessingHandler.invokeOsis2mod()
@@ -76,7 +71,7 @@ object Builder_Module: Builder(), ObjectInterface
     /**************************************************************************/
     PackageContentHandler.processPostOsis2mod()
     getFileSizeIndicator()
-    VersionAndHistoryHandler.appendHistoryLinesForAllAudiencesToStepConfigFile()
+    VersionAndHistoryHandler.appendHistoryLinesForAllAudiencesToHistoryFile()
     createModuleZip()
   }
 
@@ -109,7 +104,7 @@ object Builder_Module: Builder(), ObjectInterface
 
     FileLocations.getInputStream(file.toString()).first!!.bufferedReader().readLines().forEach {
       if (it.startsWith("You are running osis2mod"))
-        ConfigData["stepOsis2ModVersion"] = Regex("Rev: (\\S+)").find(it)!!.groups[1]!!.value
+        ConfigData["calcOsis2modVersion"] = Regex("Rev: (\\S+)").find(it)!!.groups[1]!!.value
 
       else if (it.startsWith("WARNING(PARSE): SWORD does not search numeric entities"))
         return@forEach  // osis2mod doesn't like things like &#9999;, but apparently we need them and they do work.  @forEach continues with the next item.
@@ -148,7 +143,7 @@ object Builder_Module: Builder(), ObjectInterface
     else if (warnings > 0)
       System.err.println("\n\nCAUTION: osis2mod.exe reports $warnings warning(s).  Please check the OSIS log file to see if the conversion to Sword format has worked.")
     else if (!hadSuccess)
-      System.err.println("\n\nCAUTION: osis2mod.exe has not reported success (return code was ${ConfigData["stepOsis2modReturnCode"]!!}.  Please check the OSIS log file to see if the conversion to Sword format has worked.")
+      System.err.println("\n\nCAUTION: osis2mod.exe has not reported success (return code was ${ConfigData["calcOsis2modReturnCode"]!!}.  Please check the OSIS log file to see if the conversion to Sword format has worked.")
 
     return hadSuccess
   }
@@ -175,7 +170,7 @@ object Builder_Module: Builder(), ObjectInterface
   {
     var size = File(Paths.get(FileLocations.getSwordTextFolderPath()).toString()).walkTopDown().filter { it.isFile }.map { it.length() }.sum()
     size = ((size + 500) / 1000) * 1000 // Round to nearest 1000.
-    ConfigData.put("stepModuleSize", size.toString(), true)
+    ConfigData.put("NOT_USED_calcModuleSize", size.toString(), true)
   }
 }
 
@@ -238,8 +233,8 @@ object PackageContentHandler: ObjectInterface
 
   private fun osisSaver (dummy: String)
   {
-    if ("osis" == ConfigData["stepOriginData"]!!) return // Nothing to do if this run started from OSIS, because that _is_ the external OSIS.
-    StepFileUtils.renameFile(Paths.get(FileLocations.getInputOsisFolderPath(), ConfigData["stepModuleName"]!! + ".xml").toString(),
+    if ("osis" == ConfigData["calcOriginData"]!!) return // Nothing to do if this run started from OSIS, because that _is_ the external OSIS.
+    StepFileUtils.renameFile(Paths.get(FileLocations.getInputOsisFolderPath(), ConfigData["calcModuleName"]!! + ".xml").toString(),
                              Paths.get(FileLocations.getInputOsisFolderPath(), "DONT_USE_ME.xml").toString())
   }
 
@@ -281,7 +276,7 @@ object PackageContentHandler: ObjectInterface
 
       if (line.startsWith("#!")) continue // Internal comment only.
       line = line.split("#!")[0].trim() // Remove any trailing comment.
-      writer.write(ConfigData.expandReferences(line, false)!!)
+      writer.write(ConfigData.expandConfigData(line))
       writer.write("\n")
     }
 

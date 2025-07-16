@@ -484,6 +484,22 @@ private class Osis_FinalInternalOsisTidierGeneralHandlerPerBook (val m_FileProto
   {
     /**************************************************************************/
     val (originalSpanNode, originalVerseNode) = details
+    //Dbg.d("10" in Dom.toString(originalVerseNode))
+    val canonicalTextNodes = Dom.getAllNodesBelow(originalSpanNode).filter { Dom.isTextNode(it) && m_FileProtocol.isCanonicalNode(it) }
+    canonicalTextNodes.forEach {
+      val container = Dom.createNode(originalSpanNode.ownerDocument, originalSpanNode, andSubstructure = false)
+      Dom.insertNodeBefore(it, container)
+      Dom.deleteNode(it)
+      container.appendChild(it)
+    }
+
+    Dom.promoteChildren(originalSpanNode)
+    Dom.deleteNode(originalSpanNode)
+    return
+
+
+
+    /**************************************************************************/
     val newSpanNode = Dom.cloneNode(originalSpanNode.ownerDocument, originalSpanNode) // Create a deep copy of the spanning node, and insert it before the node itself.
     Dom.insertNodeBefore(originalSpanNode, newSpanNode)
 

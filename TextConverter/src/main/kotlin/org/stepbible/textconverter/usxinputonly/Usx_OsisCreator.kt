@@ -541,7 +541,7 @@ object Usx_OsisCreator: ObjectInterface
 //      {
 //        Rpt.report(level = 1, "\nReading XSD")
 //        val factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI)
-//        val schema = factory.newSchema(URL(ConfigData["stepExternalDataPath_OsisXsd"]!!)) // Version with Crosswire tweaks.
+//        val schema = factory.newSchema(URL(ConfigData["???"]!!)) // Version with Crosswire tweaks.
 //        val validator = schema.newValidator()
 //        Rpt.report(level = 1, "  Validating OSIS")
 //        validator.validate(StreamSource(File(xmlPath)))

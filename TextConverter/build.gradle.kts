@@ -21,16 +21,15 @@ import org.jetbrains.dokka.base.DokkaBaseConfiguration
 /******************************************************************************/
 // DON'T FORGET TO CHANGE ME !!!
 
-version = "5.0.0"
+version = "6.0.0"
 
 
 /******************************************************************************/
 plugins {
-    //id("com.github.johnrengelman.shadow") version "8.1.1"  // Add Shadow plugin.
-    //kotlin("jvm") version "1.9.0"
     kotlin("jvm") version "2.0.20"
     id("org.jetbrains.dokka") version "1.9.20"
     kotlin("plugin.serialization") version "1.9.0"
+    id("antlr") // antlr.
     application
 }
 
@@ -73,6 +72,21 @@ dependencies {
     implementation(kotlin("reflect"))                    // Note 3.
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+    implementation("org.apache.poi:poi-ooxml:5.3.0")
+    antlr("org.antlr:antlr4:4.13.1") // antlr
+    implementation("org.antlr:antlr4-runtime:4.13.1") // antlr Required at runtime
+}
+
+
+/******************************************************************************/
+tasks.named<AntlrTask>("generateGrammarSource") {
+    arguments.addAll(listOf("-visitor", "-long-messages"))
+}
+
+sourceSets["main"].java.srcDirs("build/generated-src/antlr/main")
+
+tasks.named("compileKotlin") {
+    dependsOn("generateGrammarSource")
 }
 
 

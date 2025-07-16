@@ -113,7 +113,7 @@ object Digest: ObjectInterface
   fun makeFileDigests (): String
   {
     val inputOsisFilePath = FileLocations.getInputOsisFilePath()!!
-    val versificationJsonFilePath = if ("runtime" == ConfigData["stepReversificationType"]) FileLocations.getOsis2ModSupportFilePath() else null
+    val versificationJsonFilePath = if ("runtime" == ConfigData["calcReversificationType"]) FileLocations.getOsis2ModSupportFilePath() else null
     var res = getDigests().joinToString("\n") { "#  SHA256: ${Paths.get(it.first).fileName}: ${it.second}" }
     res += "\n#  SHA256 for OSIS available for future input: ${Paths.get(inputOsisFilePath).fileName}: ${MiscellaneousUtils.getSha256(inputOsisFilePath)}"
     if (null != versificationJsonFilePath)
@@ -138,7 +138,7 @@ object Digest: ObjectInterface
 
   private fun getDigests (): List<Pair<String, String>>
   {
-    m_Input = ConfigData["stepOriginData"]!!
+    m_Input = ConfigData["calcOriginData"]!!
     val fileList = when (m_Input)
     {
       "osis" -> listOf(FileLocations.getInputOsisFilePath()!!)

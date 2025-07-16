@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.builders
 
+import org.stepbible.textconverter.applicationspecificutils.Usx_FileProtocol
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigDataSupport
@@ -12,6 +13,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Obj
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefFormatHandlerReaderVernacular
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.io.File
 import java.nio.file.Paths
@@ -76,7 +78,8 @@ object Builder_Master: Builder(), ObjectInterface
       CommandLineProcessor.CommandLineOption("permitParallelRunning", 1, "Permits parallel running where the processing supports it (you may want to turn it off while debugging).", listOf("yes", "no"), "yes", false),
       CommandLineProcessor.CommandLineOption("dbgAddDebugAttributesToNodes", 0, "Add debug attributes to nodes.", null, "no", false),
       CommandLineProcessor.CommandLineOption("dbgDisplayReversificationRows", 0, "Display selected reversification rows$commonText", null, "no", false),
-      CommandLineProcessor.CommandLineOption("dbgSelectBooks", 1, "Limits processing to selected books.  Either <, <=, -, >=, > followed by the USX abbreviation for a book, or else a comma-separated list of books.",null, null, false )
+      CommandLineProcessor.CommandLineOption("dbgSelectBooks", 1, "Limits processing to selected books.  Either <, <=, -, >=, > followed by the USX abbreviation for a book, or else a comma-separated list of books.",null, null, false ),
+      CommandLineProcessor.CommandLineOption("dbgConfigData", 1, "Controls config data debugging.  Use reportSet to give details of what is set where.",listOf("reportSet"), null, false),
     )
   }
 
@@ -197,7 +200,7 @@ object Builder_Master: Builder(), ObjectInterface
     getSpecialBuilders().forEach { it.process() } // These aren't supposed to generate a repository package, and will exit after processing if they are invoked.
 
     Rpt.report(level = 0, ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-    Rpt.report(level = -1, ">>>>>>>>>> Start of processing for ${ConfigData["stepModuleName"]} (${ConfigData["stepTargetAudience"]} use).")
+    Rpt.report(level = -1, ">>>>>>>>>> Start of processing for ${ConfigData["calcModuleName"]} (${ConfigData["stepTargetAudience"]} use).")
 
     if (ParallelRunning.isPermitted())
     {
@@ -220,9 +223,9 @@ object Builder_Master: Builder(), ObjectInterface
 
   private fun checkIfRunIsForSelectedBooksOnly ()
   {
-    if (null == ConfigData["dbgSelectBooks"]) return
+    if (null == ConfigData["stepDbgSelectBooks"]) return
     val regex = "(?<comparison>\\W*?)(?<books>.*)".toRegex()
-    val mr = regex.matchEntire(ConfigData["dbgSelectBooks"]!!) ?: throw StepExceptionWithStackTraceAbandonRun("Invalid 'dbgSelectBooks' parameter")
+    val mr = regex.matchEntire(ConfigData["stepDbgSelectBooks"]!!) ?: throw StepExceptionWithStackTraceAbandonRun("Invalid 'stepDbgSelectBooks' parameter")
     val books = mr.groups["books"]!!.value.replace("\\s+".toRegex(), "")
     val comparison = mr.groups["comparison"]!!.value.replace("\\s+".toRegex(), "")
     Dbg.setBooksToBeProcessed(books, comparison.ifEmpty { "=" })
@@ -277,8 +280,7 @@ object Builder_Master: Builder(), ObjectInterface
     /* If we are being asked to investigate what happens to the config data, we
        need to know that before we actually start doing anything with it. */
 
-    val dbgConfigData = CommandLineProcessor.getOptionValue("dbgConfigData")
-    ConfigDataSupport.initialise(dbgConfigData ?: "")
+    ConfigDataSupport.initialise()
 
 
 
@@ -315,7 +317,7 @@ object Builder_Master: Builder(), ObjectInterface
     FileLocations.initialise(rootFolderPath)
     ConfigData.extractDataFromRootFolderName()
     Logger.setLogFile(FileLocations.getConverterLogFilePath())
-    ConfigData.load(FileLocations.getStepConfigFileName())
+    ConfigData.load()
     CommandLineProcessor.copyCommandLineOptionsToConfigData()
 
 
@@ -326,13 +328,12 @@ object Builder_Master: Builder(), ObjectInterface
        know whether they can generate footnotes or not. */
 
     val isCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText", "yes") // Default to text being copyright -- that's safer.
-    if (null == ConfigData["stepOkToGenerateFootnotes"]) // Unless we've specifically been told we can generate footnotes, derive the setting from the copyright setting.
-      ConfigData.put("stepOkToGenerateFootnotes", if (isCopyrightText) "no" else "yes", force = true)
+    if (null == ConfigData["calcIsOkToAddFootnotes"]) // Unless we've specifically been told we can generate footnotes, derive the setting from the copyright setting.
+      ConfigData.put("calcIsOkToAddFootnotes", if (isCopyrightText) "no" else "yes", force = true)
 
 
 
     /**************************************************************************/
-    ConfigDataSupport.checkMandatories()
     Logger.announceAllAndTerminateImmediatelyIfErrors()
   }
 }

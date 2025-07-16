@@ -474,7 +474,7 @@ object Dbg: ObjectInterface
     if (m_FileOutput.isEmpty()) return
 
     File(FileLocations.getDebugOutputFilePath()).bufferedWriter().use { out ->
-      out.write(ConfigData["stepModuleName"]!! + ": " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMM-yy HH:mm")))
+      out.write(ConfigData["calcModuleName"]!! + ": " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MMM-yy HH:mm")))
       out.newLine(); out.newLine()
       m_FileOutput.groupBy { group -> group.first } .forEach { elt -> elt.value.forEach { out.write(it.first + ": " + it.second); out.newLine() }; out.newLine(); out.newLine() }
     }

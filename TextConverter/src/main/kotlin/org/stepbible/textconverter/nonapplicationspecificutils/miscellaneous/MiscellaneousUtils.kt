@@ -328,7 +328,6 @@ object MiscellaneousUtils: ObjectInterface
     val packageName = getPackageName(MainProcessor::class)
     val objects = getSubtypes(ObjectInterface::class.java, packageName)
     objects.forEach {
-      //Dbg.d("Initialising ${it.name}.")
       it.getField("INSTANCE").get(null)
     }
   }

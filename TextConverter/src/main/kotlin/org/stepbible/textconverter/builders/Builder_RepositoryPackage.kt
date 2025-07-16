@@ -2,14 +2,17 @@ package org.stepbible.textconverter.builders
 
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigArchiver
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Zip
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ZipSupport
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.nio.file.Paths
+import kotlin.io.path.Path
+import kotlin.io.path.name
 
 
 /******************************************************************************/
@@ -24,7 +27,7 @@ import java.nio.file.Paths
  * probably be easiest if I used an actual example -- the text mar_MRCV,
  * which comes in both public and STEPBible-only forms.
  *
- * For the public version, the repository us forRepository_Mar_MRCV_public.zip.
+ * For the public version, the repository is forRepository_Mar_MRCV_public.zip.
  * (For the STEPBible-only version, 'public' is replaced by 'step'.)
  *
  * Within this we have:
@@ -95,14 +98,9 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
     val inputUsx  = if (FileLocations.getInputUsxFilesExist())  FileLocations.getInputUsxFolderPath()  else null
     val inputVl   = if (FileLocations.getInputVlFilesExist())   FileLocations.getInputVlFolderPath()   else null
 
-    val inputIssuesList = if (StepFileUtils.fileOrFolderExists(FileLocations.getIssuesFilePath()) )FileLocations.getIssuesFilePath() else null
+    val inputIssuesList = if (StepFileUtils.fileOrFolderExists(FileLocations.getIssuesFilePath()) ) FileLocations.getIssuesFilePath() else null
 
     if (null == inputOsis) throw StepExceptionWithStackTraceAbandonRun("No OSIS available to store in repository package.")
-
-
-
-    /**************************************************************************/
-    ConfigArchiver.createZip()
 
 
 
@@ -126,19 +124,42 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
 
 
     /**************************************************************************/
-    val zipPath: String = FileLocations.getRepositoryPackageFilePath()
-    val inputs = mutableListOf(FileLocations.getMetadataFolderPath(),
-                               FileLocations.getNewArchivedConfigZipFilePath(),
-                               inputOsis,
-                               inputUsx,
-                               inputVl,
-                               inputImp,
-                               inputIssuesList,
-                               FileLocations.getTextFeaturesFolderPath(),
-                               FileLocations.getConverterLogFilePath(),
-                               FileLocations.getOsisToModLogFilePath(),
-                               FileLocations.getSwordZipFilePath()).filterNotNull()
-    Zip.createZipFile(zipPath, 9, null, inputs)
-    StepFileUtils.deleteFile(FileLocations.getNewArchivedConfigZipFilePath())
+    val repositoryStructure = ZipSupport.generatedFolder("TOP_LEVEL_WILL_BE_IGNORED") {
+
+      add(ZipSupport.generatedFolder("Debug") {
+        if (null != inputIssuesList) add(ZipSupport.fileFromDisk(inputIssuesList))
+        add(ZipSupport.fileFromDisk(FileLocations.getConverterLogFilePath()))
+        add(ZipSupport.fileFromDisk(FileLocations.getOsisToModLogFilePath()))
+      })
+
+      add(ZipSupport.generatedFolder("Environment") {
+        add(ZipSupport.generatedFile("environment.txt")
+          { "Environment variable StepTextConverterParameters: ${System.getenv("StepTextConverterParameters") ?: "-"} \nCommand line: ${ConfigData.getCommandLine()}" })
+      })
+
+      add(ZipSupport.generatedFolder("Features") {
+        add(ZipSupport.fileFromDisk(FileLocations.getRunFeaturesFilePath()))
+        add(ZipSupport.fileFromDisk(FileLocations.getTextFeaturesFilePath()))
+      })
+
+      add(ZipSupport.generatedFolder("Inputs") {
+        if (null != inputImp) add(ZipSupport.folderFromDisk("InputImp", inputImp))
+        if (null != inputUsx) add(ZipSupport.folderFromDisk("InputUsx", inputUsx))
+        if (null != inputVl)  add(ZipSupport.folderFromDisk("InputVl", inputVl))
+        add(ZipSupport.folderFromDisk("InputOsis", inputOsis))
+        add(ZipSupport.folderFromDisk(FileLocations.getMetadataFolderName(), FileLocations.getMetadataFolderPath()))
+
+        val configFilesUsedByThisRun = ConfigArchiver.getConfigFilesUsedByThisRun()
+        add(ZipSupport.generatedFolder(FileLocations.getOtherMetadataFolderName()) {
+          configFilesUsedByThisRun.forEach { add(ZipSupport.fileFromDisk(it))}
+          add(ZipSupport.generatedFile(Path(FileLocations.getVernacularTextDatabaseFilePath()).name)
+            { ConfigArchiver.getTranslationTextUsedByThisRun().joinToString("\n") })
+        })
+      })
+
+      add(ZipSupport.fileFromDisk(FileLocations.getSwordZipFilePath()))
+    }
+
+    ZipSupport.writeZip(FileLocations.getRepositoryPackageFilePath(), repositoryStructure)
   }
 }

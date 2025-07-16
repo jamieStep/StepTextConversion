@@ -1,12 +1,9 @@
 /****************************************************************************/
 package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Dom
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.forceToSingleLine
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Document
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
@@ -39,29 +36,38 @@ abstract class ConfigDataExternalFileInterfaceBase
   /**
    * Returns the value associated with the given parameter..
    *
+   * @param selector "metadata" or "licence" -- lets us take data from one of
+   *   two files where available.
+   *
    * @param parms Whatever is meaningful to the processor in terms of obtaining a value.
-   * @return The value obtained
+   *
+   * @return The value obtained.
    */
 
-  internal abstract fun getValue (parms: String): String?
+  abstract fun getValue (selector: String, vararg parms: String): String?
+
 
 
   /****************************************************************************/
   /**
-   * Initialises the data store by reading data from a given file.
+  * Returns the full list of book details (abbreviations etc).  May not be
+  * available from all sources.
+  *
+   * @param selector "metadata" or "licence" -- lets us take data from one of
+   *   two files where available.
    *
-   * @param filePath File from which to obtain data.
+   * @param parms Whatever is meaningful to the processor in terms of obtaining a value.
+   *
+   * @return The value obtained.
    */
 
-  internal abstract fun initialise (filePath: String)
+  abstract fun getValueList (selector: String, vararg parms: String): List<Node>?
 
 
   /****************************************************************************/
-  internal var m_IsInUse = false
-  internal var m_OkIfNotExists = false
-  internal var m_Path = ""
-  internal var m_Status = ConfigDataExternalFileInterface.Status.NotTried
+  open fun initialise () {}
 }
+
 
 
 
@@ -75,153 +81,79 @@ abstract class ConfigDataExternalFileInterfaceBase
 /****************************************************************************/
 
 /****************************************************************************/
-object ConfigDataExternalFileInterface: ObjectInterface
+open class ConfigDataExternalFileInterfaceXml: ConfigDataExternalFileInterfaceBase()
 {
-  /**************************************************************************/
-  enum class Status { NotTried, Ok, Failed, FailedButButDontWorry }
+  /****************************************************************************/
+  override fun initialise()
+  {
+    super.initialise()
 
+    for (key in listOf("stepExternalMetadataFileName", "stepExternalLicenceFileName"))
+    {
+      var x = ConfigData[key] ?: continue
+      val selector = key.replace("stepExternal", "").replace("FileName", "").lowercase()
+      if (!x.startsWith("@find")) x = "@find/$x"
+      m_Files[selector] = Dom.getDocument(FileLocations.getInputPath(x)!!)
+    }
+  }
 
 
   /****************************************************************************/
   /* Called when someone has done a ConfigData.get and the data which has been
-     retrieved includes @getExternal.  This arranges to do the donkey work to
+     retrieved includes $getExternal.  This arranges to do the donkey work to
      obtain the data from the external source. */
 
-  fun getData (selector: String, xpath: String): String?
+  override fun getValue (selector: String, vararg parms: String): String?
   {
-    /**************************************************************************/
-    //Dbg.d(xpath, "DBLMetadata/agencies/rightsHolder/name")
+    /************************************************************************/
+    /* Check if we're getting an attribute. */
 
+    var attribute: String? = null
+    var xpath = parms[0]
 
-
-    /**************************************************************************/
-    /* We're accessing a logical name which hasn't been defined. */
-
-    val processor = m_ConfigDataExternalProcessors[selector] ?: throw StepExceptionWithStackTraceAbandonRun("External data processor not defined: $selector")
-
-
-
-    /**************************************************************************/
-    /* We have a file which has yet to be opened. */
-
-    if (Status.NotTried == processor.m_Status)
+    if ("/@" in xpath)
     {
-      try
-      {
-        processor.initialise(processor.m_Path)
-        processor.m_Status = Status.Ok
-      }
-      catch (_: Exception)
-      {
-        processor.m_Status = if (processor.m_OkIfNotExists) Status.FailedButButDontWorry else Status.Failed
-        if (Status.FailedButButDontWorry != processor.m_Status) throw StepExceptionWithStackTraceAbandonRun("Failed to open external data source: $selector / ${processor.m_Path}")
-      }
+      val x = xpath.split("/@")
+      xpath = x[0]
+      attribute = x[1]
     }
 
 
 
-    /**************************************************************************/
-    return when (processor.m_Status)
-    {
-      Status.Ok                    -> getValue(selector, xpath)
-      Status.Failed                -> null // Can't actually hit this, because we throw an exception on failure.
-      Status.FailedButButDontWorry -> null // This was subject to an 'ifExists', and the file didn't exist.
-      else                         -> null // Can't hit this because we weeded out the only other case (NotTried) a few lines ago.
+    /************************************************************************/
+    val doc = m_Files[selector] ?: return null
+    //Dbg.d(doc.documentElement.nodeName)
+    val node = try { // Have to allow for the possibility that a given element may not exist.  In DBL, eg nameLocal may appear in a variety of locations, and we may initially have tried the wrong one.
+      m_XPath.compile(xpath).evaluate(doc, XPathConstants.NODE) as Node
     }
+    catch (_: Exception)
+    {
+      return null
+    }
+
+
+
+
+    /************************************************************************/
+    return if (null == attribute)
+      forceToSingleLine(Dom.getNodeContentAsString(node, false))!!
+    else
+      return Dom.getAttribute(node, attribute)
   }
 
 
   /****************************************************************************/
-  /**
-   * Given the details extracted from a parsed line, returns the corresponding
-   * value, or the default if there is no corresponding value, or null if the
-   * default is null too.
-   */
-
-  fun getValue (selector: String, xpath: String): String?
+  override fun getValueList (selector: String, vararg parms: String): List<Node>?
   {
-    val processor = m_ConfigDataExternalProcessors[selector]!!
-    return forceToSingleLine(processor.getValue(xpath))
+    val doc = m_Files["metadata"] ?: return null
+    return (m_XPath.compile(parms[0]).evaluate(doc, XPathConstants.NODESET) as NodeList).toList()
   }
 
 
   /****************************************************************************/
-  /**
-  * Called to process a stepExternalDataSource line.  The source line should
-  * look something like:
-  *
-  *     stepExternalDataSource[IfExists]=dbl:metadata:$metadata/metadata.xml
-  *
-  * where dbl should be one of the recognised external data types (currently
-  * only dbl, in fact), metadata is a logical name to be associated with the
-  * file, and can be pretty much anything you like (no meaning is ascribed
-  * to the name), and the remainder is the file path.
-  *
-  * @param sourceLine The line to be processed.
-  * @param callingFilePath The path of the file being processed when this
-  *        method was invoked (used when trying to resolve relative paths).
-  */
-
-  fun recordDataSourceMapping (sourceLine: String, callingFilePath: String)
-  {
-    var parts = sourceLine.split("=")
-    val ifExists = parts[0].lowercase().contains("ifexists")
-
-    parts = parts[1].split(":")
-    val type        = parts[0].trim()
-    val logicalName = parts[1].trim()
-    val path        = parts[2].trim()
-
-    val existingEntry = m_ConfigDataExternalProcessors[logicalName]
-    if (null != existingEntry && existingEntry.m_IsInUse) return
-
-    val newEntry = makeConcreteInstance(type)
-    newEntry.m_Path = path.replace("\$metadata", FileLocations.getMetadataFolderPath())
-    newEntry.m_Status = Status.NotTried
-    newEntry.m_OkIfNotExists = ifExists
-    m_ConfigDataExternalProcessors[logicalName] = newEntry
-  }
-
-
-  /**************************************************************************/
-  private fun makeConcreteInstance (type: String): ConfigDataExternalFileInterfaceBase
-  {
-    return when (type.lowercase())
-    {
-      "dbl" -> return ConfigDataExternalFileInterfaceDbl()
-      else  -> throw StepExceptionWithStackTraceAbandonRun("Unknown external data type: $type")
-    }
-  }
-
-
-  /**************************************************************************/
-  private val m_ConfigDataExternalProcessors: MutableMap<String, ConfigDataExternalFileInterfaceBase> = TreeMap(String.CASE_INSENSITIVE_ORDER)
+  private val m_Files: MutableMap<String, Document> = mutableMapOf()
+  private val m_XPath = XPathFactory.newInstance().newXPath()!!
 }
-
-
-
-
-
-/******************************************************************************/
-/******************************************************************************/
-/**                                                                          **/
-/**             Common functionality for XML-based config data               **/
-/**                                                                          **/
-/******************************************************************************/
-/******************************************************************************/
-
-abstract class ConfigDataExternalFileInterfaceXmlCommon: ConfigDataExternalFileInterfaceBase()
-{
-  override fun initialise (filePath: String)
-  {
-    val path = FileLocations.getInputPath(filePath)
-    m_XmlDocument = Dom.getDocument(path)
-  }
-
-  protected lateinit var m_XmlDocument: Document
-  protected val m_XPath = XPathFactory.newInstance().newXPath()!!
-}
-
 
 
 
@@ -234,23 +166,36 @@ abstract class ConfigDataExternalFileInterfaceXmlCommon: ConfigDataExternalFileI
 /******************************************************************************/
 /******************************************************************************/
 
-/******************************************************************************/
-private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfaceXmlCommon()
+object ConfigDataExternalFileInterfaceDbl: ConfigDataExternalFileInterfaceXml(), ObjectInterface
 {
+  override fun initialise()
+  {
+    super.initialise()
+    getBookList()
+  }
+
+
   /****************************************************************************/
-  private fun getBookList (xpath: String)
+  override fun getValue (selector: String, vararg parms: String): String?
+  {
+    var res = super.getValue(selector, *parms)
+    if ("DBLMetadata/language/iso" == parms[0] && "eng".equals(res, ignoreCase = true)) res = "en" // Need 2-char version so Bibles are presented in the 'English Bibles' section of STEP's LoadBible screen.
+    return res
+  }
+
+
+  /****************************************************************************/
+  private fun getBookList ()
   {
     /**************************************************************************/
-    val myXpath: String = xpath.replace("/*", "/name")
-    val bookList: MutableList<Pair<String, Map<String, String>>> = ArrayList()
+    val bookDetails = getValueList("metadata", "DBLMetadata/names/name") ?: return
 
 
 
     /**************************************************************************/
-    val nodeList = m_XPath.compile(myXpath).evaluate(m_XmlDocument, XPathConstants.NODESET) as NodeList
-    for (i in 0..< nodeList.length)
+    val bookList: MutableList<Pair<String, MutableMap<String, String>>> = mutableListOf()
+    for (nameNode in bookDetails)
     {
-      val nameNode = nodeList.item(i)
       val ubsName = nameNode["id"]!!.split("-")[1]
       val vernacularNames: MutableMap<String, String> = HashMap()
       val vernacularNameNodes = nameNode.childNodes
@@ -273,101 +218,5 @@ private class ConfigDataExternalFileInterfaceDbl : ConfigDataExternalFileInterfa
       for (nameLength in p.second.keys) s += (StepStringUtils.safeSentenceCase(nameLength) + ":= " + p.second[nameLength]) + "; "
       ConfigData.processVernacularBibleDetails(s.substring(0, s.length - 2))
     }
-  }
-
-
-  /****************************************************************************/
-  /* The argument (theParms) may be a list of one or more space-separated
-     xpaths -- eg DBLMetadata/archiveStatus/dateUpdated  DBL/archiveStatus/dateArchived  DBLMetadata/identification/dateCompleted --
-     followed optionally by an equals sign and a default value.
-
-     The special path 'names-slash-asterisk' gives back a list of all book
-     names.
-
-     The return value is the first of the xpaths to return a value, or the
-     default value if any. */
-
-  override fun getValue (parms: String): String?
-  {
-    /************************************************************************/
-    //Dbg.dCont(parms, "direction")
-
-
-
-    /************************************************************************/
-    var myParms = parms.trim()
-    if (myParms.contains("names/*"))
-    {
-      getBookList(myParms)
-      return "dummyReturnValue"
-    }
-
-
-
-    /************************************************************************/
-    /* Split out any default value. */
-
-    var dflt: String? = null
-    if ("=" in myParms)
-    {
-      val (a, b) = myParms.split("=")
-      myParms = a.trim()
-      dflt = b.trim()
-    }
-
-
-
-    /************************************************************************/
-    val paths = myParms.split("\\s+".toRegex())
-    val res = paths.map { getValue1(it) }. firstOrNull { null != it }
-
-
-
-    /************************************************************************/
-    return res ?: if (null == dflt) dflt else getValue(dflt)
-  }
-
-
-  /****************************************************************************/
-  private fun getValue1 (path: String): String?
- {
-    /************************************************************************/
-    /* Check if we're getting an attribute. */
-
-    var attribute: String? = null
-    var res: String
-    var xpath = path
-
-    if ("/@" in path)
-    {
-      val x = xpath.split("/@")
-      xpath = x[0]
-      attribute = x[1]
-    }
-
-
-
-    /************************************************************************/
-    val node = try { // Have to allow for the possibility that a given element may not exist.  In DBL, eg nameLocal may appear in a variety of locations, and we may initially have tried the wrong one.
-      m_XPath.compile(xpath).evaluate(m_XmlDocument, XPathConstants.NODE) as Node
-    }
-    catch (_: Exception)
-    {
-      return null
-    }
-
-    if (null != attribute)
-      return Dom.getAttribute(node, attribute)
-
-
-
-    /************************************************************************/
-    /* Obtain the full text content of the selected node. */
-
-    res = Dom.getNodeContentAsString(node, false)
-
-    if ("DBLMetadata/language/iso" == xpath && "eng".equals(res, ignoreCase = true)) res = "en" // Need 2-char version so Bibles are presented in the 'English Bibles' section of STEP's LoadBible screen.
-
-    return res
   }
 }

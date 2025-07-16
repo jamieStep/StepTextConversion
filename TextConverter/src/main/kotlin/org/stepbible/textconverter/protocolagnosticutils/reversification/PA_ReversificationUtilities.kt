@@ -58,7 +58,7 @@ object PA_ReversificationUtilities
   private lateinit var m_FileProtocol: X_FileProtocol
   private var m_FootnoteLevelsOfInterest = ""
   private val m_IsCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText")
-  private val m_KnowledgeLevelOfAudience = ConfigData["stepReversificationNoteType"]?.first()?.uppercaseChar() ?: 'B' // A(cademic) or B(asic).
+  private val m_KnowledgeLevelOfAudience = ConfigData["stepReversificationFootnoteLevel"]?.first()?.uppercaseChar() ?: 'B' // A(cademic) or B(asic).
   private lateinit var m_NotesColumnName: String
 
 

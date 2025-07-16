@@ -46,9 +46,9 @@ object LocaleHandler: ObjectInterface
   {
     if (null != m_Locale) return
 
-    val languageCode = ConfigData["stepLanguageCode2Char"]
-    val languageCountryCode = ConfigData["stepSuppliedCountryCode"]
-    val languageVariant = ConfigData["stepSuppliedScriptCode"]
+    val languageCode = ConfigData["calcLanguageCode2Char"]
+    val languageCountryCode = ConfigData["calcCountryCodeAsSupplied"]
+    val languageVariant = ConfigData["calcScriptCodeAsSupplied"]
 
     m_Locale =
       if (null != languageCode && null != languageCountryCode && null != languageVariant)

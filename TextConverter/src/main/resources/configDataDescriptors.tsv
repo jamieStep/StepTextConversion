@@ -1,183 +1,208 @@
-#!Element	Description	HowSet	Required	Default	Options	SetWhere	ChangeWhen	Notes
-step_TMP_garbage	Used internally only.	Calculated	Calculated			Calculated	Calculated
-stepAbout	Used as part of the information on the copyright page, via the About parameter in the Sword config file.  Calculated from various other elements.	Calculated	Calculated			Calculated	Calculated
-stepAboutAdditionalInfo	The bulk of the stepAbout information is either supplied by the translators or calculated.  This lets you add some more information.  It comes out right at the end.	UserSpecified	Optional			File	PerTextIfNecessary
-stepBookList	Used to obtain a list of book names and abbreviations from an external metadata source where available.	Calculated	Calculated			Calculated	Calculated
-stepBuildTimestamp	Present date / time in specific format.	Calculated	Calculated			Calculated	Calculated
-stepConversionInfo	Used to hold complex information about the conversion processing	Calculated	Calculated			Calculated	Calculated
-stepDataPath	Holds a relative data path pointing to data within the module zip file.	Calculated	Calculated			Calculated	Calculated
-stepEncrypted	Set to Yes on copyright texts.	Calculated	Calculated			Calculated	Calculated
-stepExtendedLanguageCode	Language code plus script code and / or country code where appropriate.  (To date, this has never done anything with script- or country- codes.)	Calculated	Calculated			Calculated	Calculated
-stepJarVersion	Version number for converter JAR.	Calculated	Calculated			Calculated	Calculated
-stepLanguageCode2Char	2-character language code.	Calculated	Calculated			Calculated	Calculated	Determined from name of root folder.
-stepLanguageCode3Char	3-character language code.	Calculated	Calculated			Calculated	Calculated	Determined from name of root folder.
-stepLanguageNameInEnglish	Language name in English.	Calculated	Calculated			Calculated	Calculated	Determined from language code in name of root folder.
-stepModuleCreationDate	Today's date.	Calculated	Calculated			Calculated	Calculated
-stepModuleSize	Used internally when creating the Sword config file.	Calculated	Calculated			Calculated	Calculated
-stepModuleName	The basic module name plus various flags to distinguish release modules from evaluation ones etc.	Calculated	Calculated			Calculated	Calculated
-stepOnlineUsageOnly	This module cannot be used in offline STEP.	Calculated	Calculated			Calculated	Calculated
-stepOriginData	Set to USX, VL, OSIS, etc, reflecting the input data used on this run.	Calculated	Calculated			Calculated	Calculated
-stepOsis2ModEncryptionKey	Used to hold the encryption key to be used when generating the module.	Calculated	Calculated			Calculated	Calculated
-stepOsis2ModVersion	Gives the software version number reported by osis2mod.  Used for admin purposes, so we know which osis2mod was used.	Calculated	Calculated			Calculated	Calculated
-stepReleaseType	Distinguishes major and minor releases.	Calculated	Calculated			Calculated	Calculated
-stepReversificationMap	Used internally to hold mapping details for run-time reversification.	Calculated	Calculated			Calculated	Calculated
-stepReversificationType	Indicates whether to apply runtime reversification or no reversification.	Calculated	Calculated	Depends on various parameters.		Calculated	Calculated	All STEP modules use runtime reversification, and all public modules use none.
-stepSoftwareVersionRequired	Indicates which version of the STEP software is required to display the module.	Calculated	Calculated			Calculated	Calculated
-stepTextRevision	The new revision number for the module.	Calculated	Calculated			Calculated	Calculated
-stepUpIssued	Set to 'y' if the text is being up-issued.	Calculated	Calculated			Calculated	Calculated
-stepVersified	If yes, indicates that the text has used runtime reversification.	Calculated	Calculated			Calculated	Calculated
-xweird	Used internally to hold some markup information which I think may be needed only until STEPBible can be fixed.	Calculated	Calculated			Calculated	Calculated
-stepExternalDataPath_TaggingAll	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	Calculated	Calculated			Calculated	Calculated
-stepTextModifiedDate	Used only in the OSIS header (and I'm not sure it’s useful there).  You can specify it, but the default (of today's date) is probably good enough.	Calculated	Calculated			Calculated	Calculated
+#! Identification.
+%Comment
+swordTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation
 
+#! Text naming.
+calcModuleName
+calcAbbreviationEnglish
+stepBibleNameEnglishAsSupplied
+stepBibleNameEnglishCanonicalForBibleChooser
+stepAbbreviationEnglishAsSupplied
+stepAbbreviationEnglishCanonicalForBibleChooser
+stepBibleNameVernacularAsSupplied
+stepBibleNameVernacularCanonicalForBibleChooser
+stepAbbreviationVernacularAsSupplied
+stepAbbreviationVernacularCanonicalForBibleChooser
 
-# Description of text.
-stepAbbreviationEnglish	English form of abbreviated Bible name.	UserSpecified	MandatoryAlways		Arbitrary string.	File	PerTextAlways
-stepAbbreviationEnglishAsSupplied	English form of abbreviated Bible name.  A copy which is retained in case we override stepAbbreviationEnglish.	UserSpecified	Optional		Arbitrary string.	File	PerTextAlways
-stepAbbreviationVernacular	Vernacular form of abbreviated Bible name.	UserSpecified	Optional	stepAbbreviationEnglish	Arbitrary string.	File	PerTextIfAvailable
-stepAbbreviationVernacularAsSupplied	Vernacular form of abbreviated Bible name.  A copy which is retained in case we override stepAbbreviationVernacualr.	UserSpecified	Optional		Arbitrary string.	File	PerTextAlways
-stepBibleNameEnglish	English form of full Bible name.	UserSpecified	MandatoryAlways		Arbitrary string.	File	PerTextAlways
-stepBibleNameEnglishAsSupplied	English form of full Bible name.  A copy which is retained in case we override stepBibleNameEnglish.	UserSpecified	Optional		Arbitrary string.	File	PerTextAlways
-stepBibleNameVernacular	Vernacular form of full Bible name.	UserSpecified	Optional	stepBibleNameEnglish	Arbitrary string.	File	PerTextIfAvailable
-stepBibleNameVernacularAsSupplied	Vernacular form of full Bible name.  A copy which is retained in case we override stepBibleNameVernacular.	UserSpecified	Optional	stepBibleNameEnglish	Arbitrary string.	File	PerTextIfAvailable
-stepRawBibleNames	Probably to be used only with open access texts, where we need to include the original English and vernacular names in the copyright information, even if we have overridden them.	Calculated	Calculated			Calculated	Calculated
-stepVersificationScheme	Versification scheme.  This is used only with public modules, when it needs to be one of the schemes supported by osis2mod and must be a reasonable fit.	UserSpecified	MandatorySometimes		One of the versification schemes supported by Crosswire.	File	PerTextIfNecessary	Needed when creating a public-facing module.  For STEP-internal modules, this parameter is set internally to a name which reflects the name of the module.
+#! Copyright and ownership.
+calcCopyrightOrOpenAccess
+stepIsCopyrightText
+calcOnlineUsageOnly
+swordShortCopyright
+swordShortPromo
 
+stepEncryptionRequired
+swordDistributionLicence
+swordDistributionNotes
 
-# Copyright and licensing.
-stepIsCopyrightText	Indicates that this is (or is to be treated as) a copyright text.	UserSpecified	MandatoryAlways		Yes / No.	File	PerTextAlways
-swordAboutAsSupplied	Basic information which feeds into the Sword About parameter and thence into our copyright page (ie information typically provided by the text supplier to describe the text).	UserSpecified	MandatoryAlways		Arbitrary string.	File	PerTextAlways	With DBL texts, may be derived from metadata.xml.
-swordDistributionLicence	Says, for instance, that the text is covered by a CC licence.	UserSpecified	MandatoryAlways		Not policed, but should be drawn from a list which appears in the Crosswire documentation.	File	PerTextAlways
-swordDistributionNotes	Optional notes giving more details about the distribution licence etc.	UserSpecified	Optional		Arbitrary string.	File	PerTextAlways
-swordLicenceExpiryDate	Date on which licence expires.	UserSpecified	Optional		Date.	File	PerTextIfAvailable	Used for admin purposes only.  With DBL data, this can be deduced automatically from license.xml.
-swordLicenceId	Licence id.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfAvailable	Used for admin purposes only.  With DBL data, this can be deduced automatically from license.xml.
-swordWordingForDerivedWorkStipulatedByTextSupplier	Some suppliers require us to use particular words to acknowledge the fact that we have made changes in our version.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfAvailable
+#! The organisation which owns the text.
+swordTextOwnerOrganisationFullName
+swordTextOwnerOrganisationAbbreviatedName
+swordTextOwnerOrganisationWebsiteLinkOrDescription
+stepStandardOwnerOrganisation
 
+#! The organisation which owns the site from which the text was obtained (eg DBL).  Defaults to owner organisation if not supplied.
+swordTextRepositoryOrganisationFullName
+swordTextRepositoryOrganisationAbbreviatedName
 
-# Controlling organisations (used only in Sword config file).
-swordTextOwnerOrganisationAbbreviatedName	Abbreviated name of the owning organisation.  (We use the full name if the abbreviated name is not available.)	UserSpecified	Optional	swordTextOwnerOrganisationFullName	Arbitrary string.	File	PerTextIfAvailable
-swordTextOwnerOrganisationFullName	Full name of the owning organisation.	UserSpecified	MandatoryAlwaysMayBeEmpty		Arbitrary string or empty.	File	PerTextAlways
-swordTextOwnerOrganisationWebsiteLinkOrDescription	Details of text owner and / or link to their website as HTML.	UserSpecified	MandatoryAlwaysMayBeEmpty		Arbitrary string or empty.	File	PerTextAlways
-swordTextRepositoryOrganisationAbbreviatedName	Where the text comes from a repository, the abbreviated name of the repository organisation.  (We use the full name if the abbreviated name is not available.)	UserSpecified	Optional	swordTextRepositoryOrganisationFullName	Arbitrary string.	File	PerTextIfAvailable
-swordTextRepositoryOrganisationFullName	Full name of the repository organisation, if there is one.	UserSpecified	MandatoryAlwaysMayBeEmpty		Arbitrary string or empty.	File	PerTextAlways
-swordTextRepositoryOrganisationWebsiteLinkOrDescription	Details of repository organisation and / or link to their website as HTML.	UserSpecified	MandatoryAlwaysMayBeEmpty		Arbitrary string or empty.	File	PerTextAlways
-swordTextSource	Holds details of where the source came from.  Involves some fairly fiddly processing to allow for the fact that different modules may have different information available.	Calculated	Calculated			Calculated	Calculated
+#! Language and script.
+calcCountriesWhereLanguageUsed
+calcLanguageCode2Char
+calcLanguageCode3Char
+calcLanguageCodeAsSupplied
 
-# Parameters for Sword config files.
-swordBibleChooserTextAbbreviationEnglish		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordBibleChooserTextAbbreviationVernacular		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordBibleChooserTextAssembly		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordBibleChooserTextBibleNameEnglish	After replacing eg 'New Testament' by NT.	Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordBibleChooserTextBibleNameEnglishCanonicalised		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordBibleChooserTextBibleNameVernacular		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordBibleChooserTextCountriesWhereLanguageUsed		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordBibleChooserTextOfficialYear		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordBibleChooserTextPortionOfBibleCovered		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordCopyrightTextAdditionalInformationSuppliedByUs		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordCopyrightTextAssembly		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordCopyrightTextConversionDetails		Calculated	Calculated			Calculated	PerTextAlways	Specifically feeds into the text description in the configuration file.  May differ from any other apparently related item, because sometimes values are set to null to avoid duplication.   Normally calculated, but can be overridden if necessary.
-swordDerivedWorksLimitations	This may be picked up from supplied other metadata, but can also be overridden using this parameter.	UserSpecifiedOrCalculated	Optional		Arbitrary string.	File	PerTextIfNecessary
-swordInputFileDigests	Used internally to hold digests of the input files.	Calculated	Calculated			Calculated	Calculated
-swordOptions	Set to hold details of those features in the text which osis2mod needs to be aware of.	Calculated	Calculated			Calculated	Calculated
-swordShortCopyright	A brief description of the copyright status.	UserSpecified	MandatoryAlways		Arbitrary string.	File	PerTextAlways
-swordShortPromo	A short promotion for the text supplier -- perhaps naming them and linking to their website.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfAvailable
-swordTextIdSuppliedBySourceRepositoryOrOwnerOrganisation	Any id supplied by the source repository or owner organisation to identify this text.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfAvailable	On DBL texts, something relevant may be available in metadata.xml.
-swordTextVersionSuppliedBySourceRepositoryOrOwnerOrganisation	Any version number for the text supplied by the source repository or the owning organisation.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfAvailable
-swordTextDirection	LToR, RToL or BiDi.  Aggravating that we need this alternative form, but there we are.	Calculated	Calculated			Calculated	Calculated	Deduced from stepTextDirection.
-stepSpecialFeatures	Used to hold details of any special features which need to appear in the Sword config file.  (At the time of writing, does not appear to be used).	Calculated	Calculated			Calculated	Calculated
+calcTextDirection
+calcCountryCodeAsSupplied
+calcScriptCodeAsSupplied
 
+#! Processing mechanics.
+stepOsis2modFilePath
+stepUseExistingOsis
+stepValidationReportOutOfOrderAsError
+stepVersificationScheme
+calcReversificationType
+stepReversificationFootnoteLevel
+stepUseVernacularFormats
 
-# Description of language or script.
-stepSuppliedCountryCode	Country code for module.	UserSpecified	Optional		A country code.	File	PerTextIfAvailable
-stepSuppliedScriptCode	A script code for the module.	UserSpecified	Optional	Latn	A script code.	File	PerTextIfAvailable
-stepTextDirection	LTR, RTL or BiDi (currently we've never used BiDi).  May be specified, defaulted, or calculated.	UserSpecifiedOrCalculated	Optional	LTR	LTR / RTL / BiDi.	File	PerTextIfNecessary	The system will try to work this out by examining the input if necessary.
+#! Access to external information
+stepExternalDataFormat
+stepExternalMetadataFileName
+stepExternalLicenceFileName
+stepStandardOwnerOrganisation
 
+#! Sword config file.  Parameters from other sections in this data also appear here, but these are the things which are specific to the Sword config file – either things which Sword requires as parameters, or things which appear in our admin comments.
+calcEncrypted
+calcExtendedLanguageCode
+calcInputFileDigests
+calcLanguageNameInEnglish
+calcLicenceExpiryDate
+calcLicenceId
+calcModuleCreationDate
+calcOsis2modVersion
+calcSoftwareVersionRequired
+calcSwordDataPath
+calcSwordOptions
+calcTextSource
+stepTextModifiedDate
+calcTypeOfDocument
+swordTextIdSuppliedBySourceRepositoryOrOwnerOrganisation
+swordModDrv
 
-# Preprocessing.
-stepPreprocessingRegexWhenStartingFromOsis	May occur multiple times.  Lines should be of the form 'stepPreprocessingRegexWhenStartingFromOsis=regex=>replacement'.  Each statement defines a modification to be applied to the input data before processing.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
-stepPreprocessingRegexWhenNotStartingFromOsis	May occur multiple times.  Lines should be of the form 'stepPreprocessingRegexWhenNotStartingFromOsis=regex=>replacement'.  Each statement defines a modification to be applied to the input data before processing.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
-stepSimplePreprocessTagModifications	A string of the form 'mapping | mapping | …' where each mapping looks like 'para:li4 -> para:li1' or  note -> specialNote to change a given _USX_ tag or tag and style attribute.  You can also specify eg tag:attr -> tag, to remove the attribute altogether.	UserSpecified	Optional		String with particular format.	File	PerTextIfNecessary
-stepVlCommentMarker	Used when processing VL to indicate how comments (if any) are marked in the VL text.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
-stepVlLineFormat	Regular expression which defines how lines in VL format should be parsed.   Needs to hold named capturing groups called bookAbbrev, chapter, verse and text.	UserSpecified	Optional		Regex.	File	PerTextIfNecessary
-stepPreprocessingXsltStylesheeWhenStartingFromOsis	An XSLT stylesheet used to pre-process the OSIS file where we are starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
-stepPreprocessingXsltStylesheeWhenNotStartingFromOsis	An XSLT stylesheet used to pre-process theinput data where where we are not starting from OSIS.	UserSpecified	Optional		Arbitrary string.	File	PerTextIfNecessary
+#! Compound fields and their content.  You _can_ override these if you need to, but bear in mind that the compound field definitions are intended to generate a measure of standardisation between different texts.
+stepRightsHolderForBibleChooser
+calcBibleNameForBibleChooser
+calcDateForBibleChooser
+calcLanguageDetailsForBibleChooser
+calcScriptureCoverageForBibleChooser
+calcBibleChooserTextAssembly
 
+swordCopyrightStatement
+swordUsageRights
+swordDerivedWorksLimitations
+swordAdditionalInformationForCopyrightPage
+calcAbout
 
-# Process control.
-stepManualOsis2mod	Occasionally it is impossible to get osis2mod to run under control of the program in the IDE.  This lets you pause at the point where osis2mod is required in order to run it manually.	UserSpecified	Optional	No	Yes / No.	File	PerTextIfNecessary
-stepForceUpIssue	By default, if the reason for generating a new module is the same as that used last time, the module is not up-issued.  Give this as 'yes' if you want to force the issue.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunIfNecessary
-stepOkToGenerateFootnotes	Says whether it is ok to generate footnotes (depending upon licence conditions, it may not be).	UserSpecifiedOrCalculated	Calculated	No if copyright text, otherwise yes.		File	PerTextIfNecessary	You can force the matter by overtly specifying a value.
-stepPermitParallelRunning	Says whether to permit parallel running where the processing can use it.  May, for instance, be useful to turn it off when debugging.	UserSpecified	Optional	Yes	Yes / No.	Anywhere	PerRunForDebugging
-stepReversificationFootnoteLevel	Indicates the type of footnotes to be generated on verses affected by reversification.	UserSpecified	MandatorySometimes	Basic	Basic / Academic / <Empty>.	File	PerTextIfNecessary	Needed when performing conversion time or runtime reversification.
-stepUseVernacularFormats	Used to force the processing to use vernacular formats for any references which it generates.  You will seldom want this to be Yes, because obtaining details of how references are formatted is onerous.	UserSpecified	MandatoryAlways	No	Yes / No.	File	PerTextIfNecessary
-stepValidationReportOutOfOrderAsError	Determines whether out-of-order verses are reported as an error.	UserSpecified	MandatoryAlways	Yes	Yes / No.	File	PerTextIfNecessary	Sometimes translators may deliberately put verses out of order, and we may need to accept this.  However, this works only for STEP-internal modules.
+#! Details of added value.
+stepAddedValueMorphology
+stepAddedValueStrongs
 
+#! Other things you may want to include.  These go at the bottom of the generated configuration information.  They need to be complete configuration statements.
+%AdditionalStatements
+%AdditionalIncludes
+%Trailer
 
-# Value added by STEP project.
-stepAddedValueMorphology	Set this to yes if STEP has added morphology.  Used to include this fact on the copyright page.	UserSpecified	Optional	No	Yes / No.	File	PerTextIfNecessary
-stepAddedValueStrongs	Set this to yes if STEP has added Strongs.  Used to include this fact on the copyright page.	UserSpecified	Optional	No	Yes / No.	File	PerTextIfWarranted
-stepDeletedBooks	OK -- not exactly added value.  Admits to deleting books not supported by a Crosswire versification scheme.	Calculated	Optional			Calculated	Calculated
+#! Preprocessing.  These are used very rarely (and indeed they haven't been used for a long time, and therefore may not be working at present.)
+stepPreprocessingXsltStylesheetWhenNotStartingFromOsis
+stepPreprocessingXsltStylesheetWhenStartingFromOsis
+stepSimplePreprocessTagModifications
 
-# Converter environment.
-stepOsis2ModFilePath	Path to the STEP version of osis2mod.  (The STEP version can be used both for STEP-only and for public modules -- it works in the same way as the Crosswire version when given the appropriate command line parameters.)	UserSpecified	MandatoryAlways		Path.	EnvironmentVariable	IfComputingEnvironmentChanges	I'm not sure whether we can get away without this, relying on the program to be in the path.  I'm assuming not because of needing to pick up the right DLLs on Windows.
-stepOsis2modReturnCode	Return code from running osis2mod.	Calculated	Calculated		Integer.	Calculated	Calculated
-stepTextConverterOverallDataRoot	It may be convenient to store _all_ data under a given folder.  If you define this variable to identify that folder, you can then use relative paths elsewhere, and have things work relative to this one.  That way, it's easy to move everything to a new location if necessary.	UserSpecified	Optional		Path.	EnvironmentVariable	IfYouOptToUseThis
+#! For VL data
+stepVlCommentMarker
+stepVlLineFormat
+stepVlTextMappings
 
+#! Reference formats – used when parsing or creating references in vernacular format.
+stepReferenceCollectionInputFormat
+stepReferenceCollectionInputSeparators
+stepReferenceElementInputPattern
+stepReferenceElementOutputDefault
+stepReferenceInputFormat
+stepReferenceInputFormatSingletonAdorned
+stepReferenceOutputCollectionFormat
+stepReferenceOutputCollectionSeparatorDifferentChapters
+stepReferenceOutputCollectionSeparatorSameChapter
+stepReferenceOutputFormat
+stepReferenceOutputRangeSeparatorDifferentChapters
+stepReferenceOutputRangeSeparatorSameChapter
+stepReferenceRangeInputSeparators
+stepReferenceRangeOutputFormat
 
-# Interface to external metadata.
-stepFileSelectorForExternalDataFormat	For DBL texts, give Dbl here.  Other repository organisations may be added in future.  Used to make it possible to pick up definitions directly from the metadata files supplied by the organisation.	UserSpecified	Optional		Currently 'Dbl' only, or empty.	File	PerTextIfDesired
-stepFileSelectorForOwnerOrganisation	For Biblica texts, give Biblica here.  Other owning organisations may be added in future.  Used to make it possible to pick up definitions related to this organisation, and to apply organisation-specific corrections to texts.	UserSpecified	Optional		Currently 'Biblica' only, or empty.	File	PerTextIfDesired
+stepCrossReferenceCallout
+stepExplanationCallout
+stepMapCallout
+stepStudyNotesCallout
+stepTranslationNotesCallout
+stepVariantTextCallout
 
+#! Used purely internally and not intended to be overridden.
+calcAddedFeaturesForCopyrightPage
+calcAmendmentsAppliedForCopyrightPage
+calcDateForBibleChooser
+calcDeletedBooks
+calcIsOkToAddCrossReferences
+calcIsOkToAddFootnotes
+calcIsOkToAddIntroductions
+calcJarVersion
+calcOriginData
+calcOsis2modReturnCode
+calcSupplierUpdateReason
+calcUpIssued
+constWeird
 
-# Command-line.
-stepCheckInputsAgainstPreviousModule	Checks the SHA-256 of the present inputs against those for the previous version of the module.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunIfNecessary
-stepEvaluateSchemesOnly	If yes, the run simply scores the text against the schemes available in Crosswire's osis2mod.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunIfNecessary
-stepHelp	Requests the version of the converter JAR.	UserSpecified	Optional	Not requested		CommandLine	PerRunIfNecessary
-stepRootFolder	The root folder holding data for the module.	UserSpecified	MandatoryAlways		Path.	CommandLine	PerTextAlways
-stepStepUpdateReason	Text to be recorded on History line to explain why the module has been generated (used when the new module has been occasioned by STEP itself).	UserSpecified	Optional	"Unspecified"	Arbitrary string.	CommandLine	PerRunIfNecessary
-stepSupplierUpdateReason	Where the new module is being produced because the supplier has changed things, details of those changes.	UserSpecified	Optional		Arbitrary string.	CommandLine	PerRunIfNecessary
-stepTargetAudience	Determines whether we are building a STEP-internal or a public facing module.	UserSpecified	MandatorySometimes	Calculated	Public / Step.	CommandLine	PerRunIfNecessary	Needed only where the root folder name ends in PublicStep, indicating that both forms of module can be built from the same source data.  In this case, says which should be built.
-stepUseExistingOsis	Says to start the process from OSIS rather than any other input.	UserSpecified	Optional		Yes / No / AsIs	File	PerRunIfNecessary	Where alternative inputs are available, you will be warned if you opt to use OSIS and the other inputs are more up to date.  AsIs means to assume the data is ok as-is, and apply only minimal changes to it.
-stepVersion	Requests the version of the converter JAR.	UserSpecified	Optional	Not requested		CommandLine	PerRunIfNecessary
+#! Debug.  These haven't been used for a long time, and for all I know, may not still work – or at any rate, may not do what they suggest.
+stepDbgAddDebugAttributesToNodes
+stepDbgConfigData
+stepDbgDisplayReversificationRows
+stepDbgReversificationAnticipatedSourceType
+stepDbgSelectBooks
 
+#! Things where I have retained existing processing, but am not presently using.
+NOT_USED_calcModuleSize
+NOT_USED_calcOsis2ModEncryptionKey
+NOT_USED_stepSuppliedLanguageNameEnglish
+NOT_USED_stepSuppliedLanguageNameVernacular
+stepManualOsis2mod
 
-# Rendering.
-stepCrossReferenceCallout	The callout to be used for cross-reference footnotes.	UserSpecified	Optional	Down-arrow	Arbitrary string.  Can also use specific values to force callouts to be a, b, c, etc.	File	PerhapsPerLanguage	May want to change this to suit the vernacular.
-stepExplanationCallout	The callout to be used for explanation footnotes.	UserSpecified	Optional	Down-arrow	Arbitrary string.  Can also use specific values to force callouts to be a, b, c, etc.	File	PerhapsPerLanguage	May want to change this to suit the vernacular.
-stepMapCallout	The callout to be used for maps.	UserSpecified	Optional	Down-arrow	Arbitrary string.  Can also use specific values to force callouts to be a, b, c, etc.	File	PerhapsPerLanguage	May want to change this to suit the vernacular.
-stepStudyNotesCallout	The callout to be used for study notes.	UserSpecified	Optional	Down-arrow	Arbitrary string.  Can also use specific values to force callouts to be a, b, c, etc.	File	PerhapsPerLanguage	May want to change this to suit the vernacular.
-stepTranslationNotesCallout	The callout to be used for translation notes.	UserSpecified	Optional	Down-arrow	Arbitrary string.  Can also use specific values to force callouts to be a, b, c, etc.	File	PerhapsPerLanguage	May want to change this to suit the vernacular.
-stepVariantTextCallout	The callout to be used for variant text notes.	UserSpecified	Optional	Down-arrow	Arbitrary string.  Can also use specific values to force callouts to be a, b, c, etc.	File	PerhapsPerLanguage	May want to change this to suit the vernacular.
+#! Command line.  (On the command line, all of these have names devoid of 'step'.  'step' is added when the parameters are stored in the config data structure internally.
+stepCheckInputsAgainstPreviousModule
+stepConfigFromZip
+stepEvaluateSchemesOnly
+stepHistory
+stepReleaseNumber
+stepPermitParallelRunning
+stepRootFolder
+stepVersion
+stepTargetAudience
 
+#! Environment variable: things which, if supplied at all, would normally be placed in the stepTextConverterParameters environment variable.  Other things _can_ go here too; and some of the things listed here _could_ go elsewhere.
+stepConfigFolderPaths
+stepTemporaryInvestigationsFolderPath
+stepTextConverterOverallDataRoot
 
-# Debug etc.
-dbgSelectBooks	Limits the run to processing only selected books (may possibly work only with USX input).	UserSpecified	Optional		List of book abbreviations, book range, etc.	CommandLine	PerRunForDebugging
-stepDbgAddDebugAttributesToNodes	Used to add debug attributes to XML nodes to assist with debugging.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunForDebugging
-stepDbgConfigData	Outputs information which may be of use when trying to debug config data.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunForDebugging
-stepDbgDisplayReversificationRows	Used to display active reversification rows for debugging purposes.	UserSpecified	Optional	No	Yes / No.	CommandLine	PerRunForDebugging
-stepDbgReversificationAnticipatedSourceType	Used to indicate what flavour of versification we believe the text follows, so as to be able to check whether the correct reversification rows are selected.  Actually of very limited use.	UserSpecified	Optional		English / Hebrew / Latin / Greek.	File	PerRunForDebugging
-stepTemporaryInvestigationsFolderPath	Location for any temporaries generated while debugging.	UserSpecified	Optional		Path.		ProbablyNever
+#! Constant values -- things set up to save having to duplicate them all over the place.
+constDistributionLicence_CopyrightedStep
+constDistributionLicence_CC_BY_SA_4_0
+constDistributionLicence_PublicDomain
+constDistributionLicence_Biblica
 
+constDummyNameForNonExistentFile
+constStepDidTheSwordConversion
 
-# External data paths and URLs.  With the exception of Reversification data, in general these aren't used or will be fixed.  They are available if you need to refer out to them from your own config file.
-stepExternalDataPath_CrosswireModuleListBibles	Points to the list of Bibles available from Crosswire.  Not used currently so far as I can see.	UserSpecified	NotUsed	URL.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_CrosswireModuleListCommentaries	Points to the list of commentaries available from Crosswire.  Not used currently so far as I can see.	UserSpecified	NotUsed	URL.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_CrosswireModuleListDevotionals	Points to the list of devotionals available from Crosswire.  Not used currently so far as I can see.	UserSpecified	NotUsed	URL.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_CrosswireWebsite	Points to Crosswire website.	UserSpecified	NotUsed	URL.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_DblWebsite	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	MandatoryAlways	URL.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_ReversificationData	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	MandatoryAlways	The URL of the tab-separated form of the reversification data within the STEP repository.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_StepDataRepository	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	NotUsed	URL.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_TaggingActRev	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	NotUsed	The URL of a portion of the tagging data within the STEP data repository.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_TaggingAll	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	Calculated	Calculated			Calculated	Calculated
-stepExternalDataPath_TaggingGenDeu	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	NotUsed	The URL of the STEP repository.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_TaggingIsaMal	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	NotUsed	The URL of the STEP repository.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_TaggingJobSng	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	NotUsed	The URL of the STEP repository.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_TaggingJosEst	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	NotUsed	The URL of the STEP repository.	URL.	File	IfOutsideWorldChanges
-stepExternalDataPath_TaggingMatJhn	Path from which to obtain reversification data.  May be a URL or a local file; I recommend the former so you are always using the most recent data.	UserSpecified	NotUsed	The URL of the STEP repository.	URL.	File	IfOutsideWorldChanges
+constThanksToTextOwners
+constThanksToCrosswire
 
+constExternalDataPath_CrosswireWebsite
+constExternalDataPath_DblWebsite
+constExternalDataPath_StepDataRepository
+constExternalDataPath_CrosswireModuleListBibles
+constExternalDataPath_CrosswireModuleListCommentaries
+constExternalDataPath_CrosswireModuleListDevotionals
+constExternalDataPath_ReversificationData
+constExternalDataPath_TaggingGenDeu
+constExternalDataPath_TaggingJosEst
+stepExternalDataPath_TaggingJobSng
+constExternalDataPath_TaggingIsaMal
+stepExternalDataPath_TaggingMatJhn
+constExternalDataPath_TaggingActRev
+constExternalDataPath_TaggingAll
 
-# Standard values.
-stepStepDidTheSwordConversion	Standard text explaining that we did the conversion.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
-stepThanks	Standard rubric thanking people who have supplied texts.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
-stepThanksToCrosswire	Standard text thanking Crosswire for their software etc.	UserSpecified	MandatoryAlways	Standard text already supplied in one of the configuration files.	Arbitrary string.	File	ProbablyNever
-stepTypeOfDocument	Probably always going to be Bible.	UserSpecified	Optional	Bible	Currently only 'Bible' makes sense.	File	ProbablyNever

@@ -107,10 +107,8 @@ import java.io.File
  *
  * ## Actions
  *
- * getDetailsForCopyrightPage returns details of any text which needs to appear
- * on the copyright page.  This includes any non-null textForCopyrightPage
- * entries from the issues file, along (possibly) with other standard text.
- * The value is returned as a per-formatted block.
+ * getCopyrightPageStatementsFromIssuesList returns details of any text which
+ * should appear on the copyright page.
  *
  * getRemedialActions returns details of any remedial actions which should have
  * been applied to the text, so we can confirm that they have indeed been
@@ -130,103 +128,19 @@ object Issues: ObjectInterface
   /****************************************************************************/
 
   /****************************************************************************/
-  /**
-  * Returns the information which needs to be added to the copyright page.
-  * This covers our obligation to admit to changes which we have had to
-  * apply and which might impact what people see.  More information appears in
-  * the in-code comments.
-  *
-  * @return Information for copyright page, or an empty string if none.
+  /* Returns details of any issues inherent in the input text which we have
+     had to sort out.
+
+     @return Issues.
   */
 
-  fun getDetailsForCopyrightPage (): String
+  fun getCopyrightPageStatementsFromIssuesList (): List<String>
   {
-    /**************************************************************************/
-    /* Not too sure about this.  In reality there are _some_ kinds of changes
-       that we _always_ have to make (expanding elisions, for example).  So
-       long as I've got them right, these changes should have no material
-       impact upon the content or structure of the data which the users see
-       (although in a few cases, the changes _may_ be more apparent -- for
-       example if I have to convert tables into elisions); and we have little
-       control over what osis2mod may do.
-
-       With copyright texts, the assumption has to be that we aren't allowed
-       to make changes at all.
-
-       These two things don't sit together too well.  I've decided here that
-       on copyright texts we just can't reasonably admit to anything, even
-       though on non-copyright texts (dealt with in the remainder of this
-       method) I _do_ do so. */
-
-    if (ConfigData.getAsBoolean("stepIsCopyrightText"))
-      return ""
-
-
-
-    /**************************************************************************/
-    val addedValue: MutableList<String> = mutableListOf()
-    if (ConfigData.getAsBoolean("stepAddedValueMorphology", "No")) addedValue.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Morphology"))
-    if (ConfigData.getAsBoolean("stepAddedValueStrongs", "No")) addedValue.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Strongs"))
-    var english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_FootnotesMayHaveBeenAdded")
-    var vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_FootnotesMayHaveBeenAdded")
-    var s = english
-    if (vernacular != english) s += " / $vernacular"
-    addedValue.add(s)
-
-
-
-
-    /**************************************************************************/
-    val amendments: MutableList<String> = mutableListOf()
-    english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
-    vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
-    s = english
-    if (vernacular != english) s += " / $vernacular"
-    amendments.add(s)
-
-
-
-    /**************************************************************************/
-    val deletedBooks = ConfigData["stepDeletedBooks"]
-    if (null != deletedBooks)
-      amendments.add("Software limitations mean we have had to remove the following books: ${deletedBooks}.")
-
-
-
-    /**************************************************************************/
-    amendments.addAll(getCopyrightPageStatementsFromIssuesList())
-
-
-
-    /**************************************************************************/
-    var text = ""
-    if (addedValue.isNotEmpty())
-    {
-      text += "<br>We have added the following information:<br><div style='padding-left:1em'>"
-      text += addedValue.joinToString("<br>- ", prefix = "- ", postfix = "<br>")
-      text += "</div><br>"
-    }
-
-
-
-    /**************************************************************************/
-    if (amendments.isNotEmpty())
-    {
-      text += "<br>We may have made minor changes to the text so that our processing can handle it:<br><div style='padding-left:1em'>"
-      text += amendments.joinToString("<br>- ", prefix = "- ", postfix = "<br>")
-      text += "</div><br>"
-    }
-
-
-
-    /**************************************************************************/
-    val acknowledgementOfDerivedWork = ConfigData["swordWordingForDerivedWorkStipulatedByTextSupplier"]
-    if (null != acknowledgementOfDerivedWork) text += "<br>$acknowledgementOfDerivedWork"
-
-
-
-    /**************************************************************************/
-    return text
+    loadIssuesList()
+    return if (null == m_Issues)
+      emptyList()
+    else
+      m_Issues!!.issues.mapNotNull { it.textForCopyrightPage }
   }
 
 
@@ -256,17 +170,6 @@ object Issues: ObjectInterface
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
-
-  /****************************************************************************/
-  private fun getCopyrightPageStatementsFromIssuesList (): List<String>
-  {
-    loadIssuesList()
-    return if (null == m_Issues)
-      emptyList()
-    else
-      m_Issues!!.issues.mapNotNull { it.textForCopyrightPage }
-  }
-
 
   /****************************************************************************/
   private fun loadIssuesList ()

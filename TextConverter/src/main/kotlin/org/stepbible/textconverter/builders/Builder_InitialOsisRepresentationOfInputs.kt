@@ -114,7 +114,7 @@ object Builder_InitialOsisRepresentationOfInputs: Builder(), ObjectInterface
         Logger.warning("Starting from OSIS, but the InputVl data is later.")
     }
 
-    ConfigData["stepOriginData"] = startFrom
+    ConfigData["calcOriginData"] = startFrom
 
 
 

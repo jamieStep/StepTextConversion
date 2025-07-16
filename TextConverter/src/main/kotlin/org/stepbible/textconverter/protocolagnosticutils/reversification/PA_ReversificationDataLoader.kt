@@ -180,7 +180,7 @@ object PA_ReversificationDataLoader: PA()
        data can be guaranteed to be up to date.  But you can also use a local
        file, for example if that will help with testing. */
 
-    val dataLocation = ConfigData["stepExternalDataPath_ReversificationData"]!!
+    val dataLocation = ConfigData["constExternalDataPath_ReversificationData"]!!
     if (!dataLocation.startsWith("http")) Logger.warning("Running with local copy of reversification data.")
     val rawData = (if (dataLocation.contains("http")) URL(dataLocation).readText() else File(dataLocation).readText()).split("\n")
 
@@ -236,7 +236,7 @@ object PA_ReversificationDataLoader: PA()
   private fun acceptRowForProcessing (dataRow: ReversificationDataRow): Boolean
   {
     /**************************************************************************/
-    //Dbg.d(dataRow.rowNumber == 22820)
+    //Dbg.d(dataRow.rowNumber == 7862 || dataRow.rowNumber == 7881)
 
 
 

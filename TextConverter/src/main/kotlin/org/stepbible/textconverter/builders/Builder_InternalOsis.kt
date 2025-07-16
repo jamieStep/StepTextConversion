@@ -314,6 +314,7 @@ object Builder_InternalOsis: Builder(), ObjectInterface
     Builder_InitialOsisRepresentationOfInputs.process(); x()
     Rpt.report(0, banner())
     InternalOsisDataCollection.loadFromDoc(ExternalOsisDoc); x()
+    //Dbg.d(InternalOsisDataCollection.convertToDoc())
 
 
 

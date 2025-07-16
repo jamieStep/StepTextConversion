@@ -37,7 +37,6 @@ object SpecialBuilder_Version: SpecialBuilder(), ObjectInterface
   {
     if (ConfigData.getAsBoolean("stepVersion", "no"))
     {
-
       exitProcess(0)
     }
   }

@@ -74,7 +74,7 @@ open class PA_ReversificationRuleEvaluator (dataCollection: X_DataCollection)
    *       all of the individual verses separated by '+'.
    *
    * Note that where canonical titles are involved, you can have eg
-   * Psa.13:Title where a verse reference would otherwise be required.
+   * Psa.13:TextBeforeV1 where a verse reference would otherwise be required.
    */
 
 
@@ -90,7 +90,7 @@ open class PA_ReversificationRuleEvaluator (dataCollection: X_DataCollection)
   fun rulePasses (theRuleData: String, row: ReversificationDataRow): Boolean
   {
     /**************************************************************************/
-    //Dbg.d(row.rowNumber == 9650)
+    //Dbg.d(row.rowNumber == 7862 || row.rowNumber == 7881)
     //Dbg.d(row.toString())
 
 
@@ -144,6 +144,14 @@ open class PA_ReversificationRuleEvaluator (dataCollection: X_DataCollection)
      - Tests may involve verses or subverses.  Where you ask for a verse which
        actually exists as subverses, the number of words is the sum of the
        numbers for each of the subverses.
+
+     IMPORTANT NOTE: Some of the tests were originally cast in terms of looking
+     to see whether the chapter had a canonical title.  We have recast this as
+     TextBeforeV1, because what we are concerned with is whether there is
+     canonical text before v1, not with whether this canonical text is actually
+     marked with a typical title tag or not.  In other words, our concern is
+     not whether we have something _identified_ as a title, so much as
+     something which _could_ be so identified.
   */
 
   private fun lengthComparison (text: String): Boolean
@@ -165,8 +173,8 @@ open class PA_ReversificationRuleEvaluator (dataCollection: X_DataCollection)
       val elts = sides[side].split("+").toMutableList() // Bits to be added together.
       for (i in elts.indices)
       {
-        val isTitle = elts[i].contains("title")
-        if (isTitle) elts[i] = elts[i].replace(":title", "")
+        val isTitle = elts[i].contains("textbeforev1")
+        if (isTitle) elts[i] = elts[i].replace(":textbeforev1", "")
 
         var fac: Double?
         var refCollectionAsString: String
@@ -291,7 +299,7 @@ open class PA_ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 
     /**************************************************************************/
     /* Exist / NotExist is the only case where we may be being asked about a
-       canonical header (':title').  In this case, we need to check the
+       canonical header (':textBeforeV1').  In this case, we need to check the
        existence of the header, rather than the existence of the verse. */
 
     if (text.contains("exist"))
@@ -302,7 +310,7 @@ open class PA_ReversificationRuleEvaluator (dataCollection: X_DataCollection)
 
       var ref = m_BackstopDefaultRef
 
-      if (text.contains(":title"))
+      if (text.contains(":textbeforev1"))
       {
         text = text.split(":")[0]
         ref = RefCollection.rdUsx(PA_ReversificationUtilities.usxifyFromStepFormat(text), ref, "v").getFirstAsRef()

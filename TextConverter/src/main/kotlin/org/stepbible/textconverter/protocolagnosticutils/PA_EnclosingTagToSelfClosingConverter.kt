@@ -15,7 +15,7 @@ import org.w3c.dom.Node
  * warnings, and this avoids them.)
  *
  * I'm fairly sure I already have processing to do this somewhere else, but I
- * can't find it now.  Just in case you come across it and wonder why the
+ * can't find it now -- just in case you come across it and wonder why the
  * duplication.
  *
  * @author ARA "Jamie" Jamieson

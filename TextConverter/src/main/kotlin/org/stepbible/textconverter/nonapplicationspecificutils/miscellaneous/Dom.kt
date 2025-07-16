@@ -2036,10 +2036,9 @@ object Dom: ObjectInterface
 
     fun isFirstNonBlankChildOf (parent: Node, child: Node): Boolean
     {
-        val children = parent.childNodes
-        for (i in 0..< children.length)
+        val children = getChildren(parent)
+        for (n in children)
         {
-            val n = children.item(i)
             if (n === child) return true
             if (!isWhitespace(n)) return false
         }
@@ -2991,3 +2990,5 @@ fun Document.findNodeByName (nodeName: String) = Dom.findNodeByName(this, nodeNa
 fun Document.findNodesByName (nodeName: String) = Dom.findNodesByName(this, nodeName)
 fun Document.findNodesByAttributeName (nodeName: String, attributeName: String) = Dom.findNodesByAttributeName(this, nodeName, attributeName)
 fun Document.findNodesByAttributeValue (nodeName: String, attributeName: String, attributeValue: String) = Dom.findNodesByAttributeValue(this, nodeName, attributeName, attributeValue)
+
+fun NodeList.toList(): List<Node> = List(length) { item(it) }

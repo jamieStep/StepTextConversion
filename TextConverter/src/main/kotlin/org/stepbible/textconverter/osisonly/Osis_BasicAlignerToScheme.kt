@@ -74,7 +74,7 @@ object Osis_BasicAlignerToScheme: ObjectInterface
 
     var targetScheme: BibleStructureOsis2ModScheme? = null
     var targetSchemeName = ""
-    val reversificationType = ConfigData["stepReversificationType"]!!.lowercase()
+    val reversificationType = ConfigData["calcReversificationType"]!!.lowercase()
     if ("none" == reversificationType)
     {
       val selectedSchemeName = ConfigData["stepVersificationScheme"] ?: throw StepExceptionWithoutStackTraceAbandonRun("Non-reversification run, but no Crosswire versification scheme identified.")
@@ -108,7 +108,7 @@ object Osis_BasicAlignerToScheme: ObjectInterface
 
       /************************************************************************/
       if (deletedBooks.isNotEmpty())
-        ConfigData["stepDeletedBooks"] = deletedBooks.joinToString(", ")
+        ConfigData["calcDeletedBooks"] = deletedBooks.joinToString(", ")
     }
 
 

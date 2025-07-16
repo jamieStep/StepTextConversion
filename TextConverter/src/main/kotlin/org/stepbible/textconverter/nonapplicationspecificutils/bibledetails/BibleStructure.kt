@@ -132,6 +132,7 @@ import kotlin.math.abs
  *
  *
  *
+ *
  * ## When to obtain derived instances
  *
  * osis2mod details can be obtained at any point.
@@ -140,6 +141,18 @@ import kotlin.math.abs
  * canonical form (eg after div:chapter has been converted to <chapter>,
  * but *before* any restructuring has been applied (such as expanding out
  * elided verses).
+ *
+ *
+ *
+ *
+ * ## IMPORTANT NOTE: Canonical titles
+ *
+ * The reversification processing, in particular, needs to know about the text
+ * structure at the start of individual psalms.  Originally this was cast in
+ * terms of looking for a canonical title, and I have retained the word 'Title'
+ * here.  However, it is important to realise that what we are actually looking
+ * for is canonical text prior to v1 of a psalm, and not necessarily for text
+ * which has actually been *marked* as being a title.
  *
  * @author ARA "Jamie" Jamieson
 */

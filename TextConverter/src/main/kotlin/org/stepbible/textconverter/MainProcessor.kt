@@ -47,6 +47,8 @@ class MainProcessor
     var returnCode = 999
     try
     {
+      ConfigData.commandLineWas(args)
+
       Builder_Master.process(args)
       Logger.summariseResults()
 
@@ -95,7 +97,7 @@ class MainProcessor
 
     finally
     {
-      val moduleName = ConfigData["stepModuleName"] ?: "UNKNOWN MODULE"
+      val moduleName = ConfigData["calcModuleName"] ?: "UNKNOWN MODULE"
       if (0 != returnCode) System.err.println("\n!!!!! RUN FAILED: " + args.joinToString(" "))
       Rpt.reportEol()
       Rpt.report(level = -1, ">>>>>>>>>> End of processing for $moduleName (${ConfigData["stepTargetAudience"]} use).")
@@ -138,9 +140,9 @@ class MainProcessor
   {
     // The try below is required because if we start from OSIS, we won't have any reversification details.
     var res = ""
-    try { if (!ConfigData["stepExternalDataPath_ReversificationData"]!!.startsWith("http")) res += C_LocalReversificationData } catch (_: Exception) {}
-    if (!ConfigData.getAsBoolean("stepEncrypted", "no")) res += C_NotEncrypted
-    if (!ConfigData.getAsBoolean("stepUpIssued", "no")) res += C_NotUpIssued
+    try { if (!ConfigData["constExternalDataPath_ReversificationData"]!!.startsWith("http")) res += C_LocalReversificationData } catch (_: Exception) {}
+    if (!ConfigData.getAsBoolean("calcEncrypted", "no")) res += C_NotEncrypted
+    if (!ConfigData.getAsBoolean("calcUpIssued", "no")) res += C_NotUpIssued
     val issues = Issues.getRemedialActions()
     if (issues.isNotEmpty()) res += C_HaveYouChecked + "\n" + issues.joinToString("\n")
     return res

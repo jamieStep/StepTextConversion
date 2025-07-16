@@ -313,7 +313,7 @@ import java.util.*
        habit of enclosing _all_ footnotes in note:f, whereas really cross-
        references should be in note:x. */
 
-    if ("Biblica".equals(ConfigData["stepFileSelectorForOwnerOrganisation"], ignoreCase = true))
+    if ("Biblica".equals(ConfigData["stepStandardOwnerOrganisation"], ignoreCase = true))
       canonicaliseNotesCorrectNoteStyles(rootNode)
 
 

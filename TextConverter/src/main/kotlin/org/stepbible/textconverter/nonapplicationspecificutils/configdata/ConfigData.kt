@@ -2,6 +2,10 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 
 
+import configDataParserBaseVisitor
+import configDataParserLexer
+import configDataParserParser
+
 import org.stepbible.textconverter.applicationspecificutils.Digest
 import org.stepbible.textconverter.applicationspecificutils.InternalOsisDataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleAnatomy
@@ -13,23 +17,23 @@ import org.stepbible.textconverter.nonapplicationspecificutils.iso.IsoLanguageAn
 import org.stepbible.textconverter.nonapplicationspecificutils.iso.Unicode
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.shared.FeatureIdentifier
-import org.stepbible.textconverter.nonapplicationspecificutils.shared.Language
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.*
 import java.io.*
 import java.nio.file.Paths
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
+import java.util.concurrent.ConcurrentHashMap
 import java.util.zip.ZipEntry
-import java.util.zip.ZipFile
-import java.util.zip.ZipInputStream
 import java.util.zip.ZipOutputStream
 import kotlin.collections.ArrayList
-import kotlin.io.path.Path
-import kotlin.io.path.name
+
+import org.antlr.v4.runtime.*
+import org.antlr.v4.runtime.misc.Interval
+
 
 
 /******************************************************************************/
@@ -98,19 +102,17 @@ import kotlin.io.path.name
  *
  * The file paths here may be any of the following:
  *
- * - $jarResources/fileName: This selects a file which is built into the
+ * - @jarResources/fileName: This selects a file which is built into the
  *   resources section of the present JAR.
  *
- * - $find/...../fileName (where ...../ is optional, and if present specifies
- *   a folder hierarchy -- eg $find/MySpecialConfig/Messages/warnings.conf.
+ * - @find/...../fileName (where ...../ is optional, and if present specifies
+ *   a folder hierarchy -- eg @find/MySpecialConfig/Messages/warnings.conf.
  *   In this case, the processing looks for the path under a) the root folder
  *   for the text being processed (Text_abc_DEF_step or whatever); b) the
  *   Metadata folder associated with the text (Text_abc_DEF_step/Metadata);
- *   and c) _SharedConfig_ under the common root folder below which all texts
- *   sit (which is specified by the environment variable stepTextConverterOverallDataRoot
- *   if present).  It works in that order, and stops as soon as it finds a
- *   match.  (Having said which, it's a *very* good idea to rely upon ordering
- *   like this -- avoid having more than one file with a given name.)
+ *   and c) in any folders identified by the optional parameter
+ *   stepConfigFolderPaths in the optional environment variable
+ *   stepTextConverterParameters.
  *
  * - Or you can give an absolute path (but I strongly advise against it other
  *   than perhaps for test purposes, because it will render things
@@ -142,13 +144,16 @@ import kotlin.io.path.name
  *
  * There are some values which we would like to regard as configuration items,
  * but which have to be determined at run time.  These are available as though
- * they had been specified as configuration parameters, but are recalculated
- * each time they are requested.
+ * they had been specified as configuration parameters, but are calculated
+ * internally.
  *
  * Command-line parameters are also stored in the configuration structure.
  * It is possible that configuration files may also attempt to give values to
  * these same parameters.  The values obtained from the command line always
- * take priority.
+ * take priority.  (Command-line parameters do not have names starting with
+ * 'step' -- unlike most other parameters.  The analogues of the command-line
+ * parameters available internally *do* have 'step' -- so that, for instance,
+ * targetAudience becomes stepTargetAudience.
  *
  *
  *
@@ -191,14 +196,13 @@ import kotlin.io.path.name
  *
  * The effect is to associate the given key with the given value.  If you
  * encounter two '=' settings for the same key, the later one takes
- * precedence.  Similarly if you have two '#=' settings.  If you have both a
- * '#=' and an '=' setting for the same key, the '#=' one takes precedence.
+ * precedence.  If you have more than one #= setting, the *first* takes
+ * precedence over all other settings of either flavour.
  *
  * This arrangement lets me start off by storing default settings, and then
  * giving the user the chance to override them.  '#=' gives you a way of
  * forcing a particular value to be used in preference to any 'normal'
- * definitions which will be encountered -- if it gives you a way of forcing
- * things.
+ * definitions which will be encountered.
  *
  * While reading the configuration data, these definitions are merely stored
  * against their associated key value.  They are evaluated only when something
@@ -211,7 +215,7 @@ import kotlin.io.path.name
  *      .
  *      .
  *      .
- *      hi=Hello ${name}
+ *      hi=Hello $name
  *
  * and hi will be given the value 'Hello John'.  By deferring evaluation until
  * the processing actually requires the data, I can cater for the possibility
@@ -222,7 +226,7 @@ import kotlin.io.path.name
  * Definitions like this may be nested to any depth, so that you might, for
  * instance, have had:
  *
- *     name = ${firstName} ${surname}
+ *     name = $firstName $surname
  *
  * I recommend against doing anything too sophisticated, however, or it will
  * get very confusing.
@@ -232,6 +236,31 @@ import kotlin.io.path.name
  * DBL, for which I have processing to read configuration data straight from
  * the metadata files they supply, and deferring makes this easier to handle in
  * a uniform manner.
+ *
+ *
+ *
+ *
+ *
+ * ## Naming conventions
+ *
+ * For historical reasons, most configuration parameters have names starting
+ * 'step'.  (Command-line parameters omit the 'step', but they are transcribed
+ * into the configuration data, and here they *do* have the 'step', so that,
+ * for example, 'targetAudience' becomes 'stepTargetAudience'.
+ *
+ * Latterly I have taken to using a 'sword' prefix for parameters which are
+ * written out to the Sword configuration file.  And In some cases where
+ * values are calculated, I use 'calc'.  However, this is a relatively recent
+ * departure, and at present probably hasn't worked its way through properly.
+ * (And in addition, there are some places where there is no 'right' answer --
+ * if a value is calculated and then used only in the Sword configuration file,
+ * does that make is 'sword' or 'calc'.
+ *
+ * Occasionally people may want to store their own intermediate values en route
+ * to setting up one of the parameters used by the converter.  I suggest using
+ * '_' as a prefix for these.  (In fact, it doesn't much matter what is used,
+ * so long as there are no clashes, but I guarantee to avoid '_' when creating
+ * my own parameters.)
  *
  *
  *
@@ -253,7 +282,10 @@ import kotlin.io.path.name
  * - There may be lines starting $include.  These are directive, and are dealt
  *   with in the next section.
  *
- * - Some definition lines may include @getExternal on their right-hand sides.
+ * - There may be multiple lines starting copyAsIs=.  The right-hand side of
+ *   these is passed straight through to the Sword config file.
+ *
+ * - Some definition lines may include $getExternal on their right-hand sides.
  *   These pick up data from an external data source (of which currently only
  *   DBL is supported).  More information about this appears below.
  *
@@ -265,11 +297,9 @@ import kotlin.io.path.name
  *
  * The only directives currently supported are $include and $includeIfExists.
  * Unlike definition statements, these are actioned immediately they are
- * encountered.  The filePath part is subject to @(...) expansion in the
+ * encountered.  The filePath part is subject to $... expansion in the
  * normal manner, but the evaluation occurs at the time the $include directive
- * is encountered, and not at the end of processing.  Note that one side-
- * effect of this is that any other definition to which you refer via ${...}
- * will itself also be evaluated at this point.
+ * is encountered, and not at the end of processing.
  *
  *
  *
@@ -287,10 +317,11 @@ import kotlin.io.path.name
  * to have available a file which explains how to extract the relevant
  * information from there.
  *
- * For details of this, see the file commonForSourceDbl.conf.  In essence, you
- * use special definition statements of the form:
+ * For details of this, see the file PerTextRepositoryOrganisation/Dbl.conf in
+ * the Resources section of this JAR.  In essence, you use special definition
+ * statements of the form:
  *
- *     key=@getExternal(metadata, ...)
+ *     key=$getExternal(metadata, ...)
  *
  * where 'metadata' can be any reasonable name you choose (ie there is no
  * particular significance to the actual name chosen), and serves as a logical
@@ -300,7 +331,7 @@ import kotlin.io.path.name
  * but I'm reasonably hopeful it will carry through to other things, should we
  * ever decide to cater for them.)
  *
- * These definitions are subject to @(...) processing in the usual way, before
+ * These definitions are subject to $... processing in the usual way, before
  * they are actioned, although I'd recommend not taking advantage of that.
  *
  * If you are going to use this feature, you also need one or more definitions
@@ -313,9 +344,9 @@ import kotlin.io.path.name
  * the logical name 'metadata' is associated with $metadata/metadata/xml,
  * using the normal pathname conventions -- see the discussion of $include
  * above).  The 'dbl' portion identifies the type of the data (in this case
- * DBL, which is the only external format supported at the time of writing.
+ * DBL, which is the only external format supported at the time of writing).
  *
- * The definition is not used until the first time a @getExternal statement is
+ * The definition is not used until the first time a $getExternal statement is
  * encountered which uses that particular logical name, and it is the value at
  * that particular time which determines the file to be used.  Once a file has
  * been used for the first time, any later attempt to change the association
@@ -327,7 +358,7 @@ import kotlin.io.path.name
  * different logical names with the same file, via two different
  * stepExternalDataSource statements.
  *
- * If you use the 'IfExists' form and the file does *not* exist, @getExternal
+ * If you use the 'IfExists' form and the file does *not* exist, $getExternal
  * statements will return null.
  *
  * Much more information about the way in which configuration files are handled
@@ -355,6 +386,47 @@ object ConfigData: ObjectInterface
         var vernacularShort: String,
         var vernacularLong: String
     )
+
+
+
+
+
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**                             Command line                               **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /**
+   *  Saves the command line in case it's useful when rebuilding the module.
+   *  Note that the result needs to be used with some care.  There is no
+   *  platform-independent of getting at the raw command-line -- the program
+   *  only ever gets to see the parsed arguments, and in these escapes etc
+   *  will already have been processed.  I do my best to get back to the
+   *  original here, but there's no absolute guarantee.
+   *
+   *  @param args Command-line arguments.
+   */
+
+  fun commandLineWas (args: Array<String>)
+  {
+    m_CommandLine = args.joinToString(" "){ if (it.startsWith("-")) it else "\"${it.replace("\"", "\\\"")}\"" }
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Returns the command line.
+  *
+  * @return Command line.
+  */
+
+  fun getCommandLine () = m_CommandLine
+
+  private var m_CommandLine = ""
 
 
 
@@ -395,26 +467,43 @@ object ConfigData: ObjectInterface
      you should give that suffix next (including the preceding underscore).
 
      And then after this, you may give an additional suffix, again preceded
-     by an underscore -- '_public' for '_onlineOnly' for modules which must
-     not be made available offline.
+     by an underscore.  This should include ...
 
-     You can optionally also give '_step' for modules which can be used only
-     within STEP, although this is the default, and is therefore optional.
+     - 'public' if it is permissible to generate a public module from the
+       text.
+
+     - 'step' if it is permissible to generate a STEPBible module.
+
+     - 'onlineOnly' if we do not have permission to make the module available
+       offline.
+
+
+     This suffix is not case-sensitive, so you are free, for instance, to use
+     camelback notation to aid readability.
+
+     Note that these are not mutually exclusive, and indeed you could have all
+     three if you were permitted to make public and STEPBible modules from the
+     text but could make things available only online (not that this is a very
+     likely scenario).
+
+     Note also that the settings are very likely to reflect copyright conditions
+     -- for instance in general you are unlikely to be able to produce a public
+     module from a copyright text.  However, I deliberately do not derive the
+     settings from a knowledge of whether the text is copyright or not, because
+     there _are_ special cases (for example we have been told that it is ok to
+     make a public module for one particular copyright text we have been
+     handling recently).
 
      A few examples:
 
        Text_eng_KJV_public: An English language text with the abbreviated name
-         'KJV', which can be turned into a publicly available module.  (By this
-         I mean that we are free to generate a module which can then be offered
-         in our repository for use even outside of STEP.)
+         'KJV', which is to be turned into a publicly available module.  (By
+         this I mean that we are free to generate a module which can then be
+         offered in our repository for use even outside of STEP.)
 
        Text_ger_HFA or Text_ger_HFA_step: A German language text with the
          abbreviated name HFA which must give rise to a module which is used
          only within STEP.
-
-       Text_ger_XyZ_onlineOnly: A German language text with the abbreviated name
-         XyZ, where permissions limit us to creating only a STEP-internal
-         version which we are not permitted to make available in offline STEP.
 
 
 
@@ -428,7 +517,7 @@ object ConfigData: ObjectInterface
      preference or the code preferred by the translators.
 
      At present we have not given any consideration to how to handle things if
-     it is ever necessary to hve a country-specific language code (eg Latin
+     it is ever necessary to have a country-specific language code (eg Latin
      American Spanish).
 
 
@@ -485,15 +574,9 @@ object ConfigData: ObjectInterface
 
      Probably best done by example.
 
-     Text_fra_BDS gives rise to a MODULE called FraBDS.  This is true also of
-     Text_fra_BDS_step -- as mentioned above, the _step is optional, because the
-     default is that modules are intended for use only within STEP.  And it is
-     true too of Text_fra_BDS_onlineOnly.
-
-     Note that the language code is converted to uppercase-lowercase-lowercase.
-
-     The language code is suppressed on English language and ancient language
-     texts.
+     Text_fra_BDS_step gives rise to a MODULE called FraBDS.  The language
+     code is suppressed on English Bibles and on texts in the ancient
+     languages.
 
      Modules are held in a zip file.  The zip file has a name of the form
      <moduleName>.zip, where <moduleName> duplicates the module name exactly.
@@ -535,8 +618,10 @@ object ConfigData: ObjectInterface
   fun extractDataFromRootFolderName ()
   {
     /**************************************************************************/
+    /* Things where we break our own rules. */
+
     val C_SpecialNaming =
-      listOf("ArbKEH" to "NAV",
+      listOf(//"ArbKEH" to "NAV",
               "ChiCCB" to "CCB",
                "PesPCB" to "FCB",
                 "PorNVI" to "PNVI",
@@ -548,62 +633,70 @@ object ConfigData: ObjectInterface
 
 
     /**************************************************************************/
-    val parsedFolderName = "Text_(?<languageCode>...)_(?<abbreviation>[^_]+)(_(?<rest>.*)?)?".toRegex().matchEntire(FileLocations.getRootFolderName())
-    var languageCode = canonicaliseLanguageCode(parsedFolderName!!.groups["languageCode"]!!.value)
-    var abbreviatedName = parsedFolderName.groups["abbreviation"]!!.value
-    val rest = parsedFolderName.groups["rest"]?.value
-    var legacySuffix = ""
-    var operationalSuffix = ""
+    /* Parse the folder name and split out the main elements. */
 
-    if (null != rest)
-    {
-      val x = rest.split("_")
-      if (2 == x.size)
-      {
-        legacySuffix = x[0]
-        operationalSuffix = x[1].lowercase()
-      }
-      else
-      {
-        val lc = x[0].lowercase()
-        if ("step" in lc || "onlineonly" in lc || "public" in lc)
-        {
-          operationalSuffix = lc
-          legacySuffix = ""
-        }
-        else
-          legacySuffix = x[0]
-      }
-    }
+    val parsedFolderName = "Text_(?<languageCode>...)_(?<abbreviation>[^_]+)(_(?<rest>.*)?)?".toRegex().matchEntire(FileLocations.getRootFolderName())!!
+    var abbreviatedName = parsedFolderName.groups["abbreviation"]!!.value
+    val rest = parsedFolderName.groups["rest"]!!.value
 
 
 
     /**************************************************************************/
-    /* Work out the target audience (STEP-only or public).  This comes either
-       from the root folder name or from a command-line argument.
+    /* Cater for the possibility that we may have been given the 2-character
+       code rather than the 3-character code in error; and then get the actual
+       2-character and 3-character codes. */
 
-       If the root folder name states public or step unambiguously then we use
-       that (and the command-line argument is optional, but if given must state
-       the same as the folder name).
+    var languageCode = IsoLanguageAndCountryCodes.get3CharacterIsoCode(parsedFolderName.groups["languageCode"]!!.value)
+    delete("calcLanguageCode3Char"); put("calcLanguageCode3Char", languageCode, force = true)
+    delete("calcLanguageCode2Char"); put("calcLanguageCode2Char", IsoLanguageAndCountryCodes.get2CharacterIsoCode(languageCode).ifEmpty { languageCode }, force = true)
 
-       If the root folder states both public and step, then the command-line
-       argument must be present and we go with that.
 
-       If the root folder states neither, it is as though it stated step -- see
-       above. */
 
-    val mayBePublic   = "public" in operationalSuffix
-    var mayBeStepOnly = "step"   in operationalSuffix
-    if (!mayBeStepOnly && !mayBePublic) mayBeStepOnly = true // If the module name doesn't indicate public or step, assume step.
-    val optionFromCommandLine = CommandLineProcessor["targetAudience"]
+    /**************************************************************************/
+    /* We may now have a legacy suffix (eg _th) AND an operational suffix (eg
+       _public), or we may have just an operational suffix.  Split them out. */
+
+    val suffixes = rest.split("_")
+    var legacySuffix = ""
+    var operationalSuffix = suffixes[0]
+
+    if (2 == suffixes.size)
+    {
+      legacySuffix = suffixes[0]
+      operationalSuffix = suffixes[1]
+    }
+
+    operationalSuffix = operationalSuffix.lowercase()
+
+
+
+    /**************************************************************************/
+    /* The folder name tells us what we're capable of doing (public / step /
+       online only).  We need to parse this out.
+
+       If both STEP and Public are permitted, then we check that we've been
+       given a command-line parameter to say which we are building.
+
+       And whether we're permitted to build both or only one, we set the
+       internal representation of this command line parameter to canonical
+       (ie lower case) form.
+
+       And finally, we check to see if this is online only, and if so (and if
+       we have not been given a forcible assignment)*/
+
+    val mayBePublic = "public" in operationalSuffix
+    var mayBeStep   = "step"   in operationalSuffix
+    if (!mayBeStep && !mayBePublic) mayBeStep = true // If the module name doesn't indicate public or step, assume step.
+    val optionFromCommandLine = CommandLineProcessor["targetAudience"]?.lowercase()
+
     val targetAudience: String
-    if (mayBeStepOnly && mayBePublic)
+    if (mayBeStep && mayBePublic)
     {
        if (null == optionFromCommandLine) throw StepExceptionSilentCommandLineIssue("Could be public or STEP-only run.  Need targetAudience on command line to indicate which.")
        targetAudience = optionFromCommandLine
     }
 
-    else if (mayBeStepOnly)
+    else if (mayBeStep)
     {
       targetAudience = "step"
       if (null != optionFromCommandLine && "step" != optionFromCommandLine)
@@ -619,30 +712,24 @@ object ConfigData: ObjectInterface
 
 
     deleteAndPut("stepTargetAudience", targetAudience, true)
-    if (null == ConfigData["stepOnlineUsageOnly"])
-      deleteAndPut("stepOnlineUsageOnly", if ("onlineonly" in operationalSuffix) "Yes" else "No", true)
+
+    if (null == ConfigData["calcOnlineUsageOnly"])
+      deleteAndPut("calcOnlineUsageOnly", if ("online" in operationalSuffix) "Yes" else "No", true)
 
 
 
     /**************************************************************************/
-    /* Legacy code -- can't recall why I had this.
-
-       By this point, I've extracted the abbreviated name from the folder name.
-       However, it appears that in some cases, the folder name may be wrong,
-       and I wanted to have the opportunity to override it.
-
-       I'm assuming I may need to retain this -- and that at the least, that
-       retaining it will have no adverse consequences. */
-
-    val x = get("stepAbbreviationVernacular")
-    abbreviatedName = if (null != x && StepStringUtils.isAsciiCharacters(x)) x else get("stepAbbreviationEnglish") ?: abbreviatedName
-
-
-
-    /**************************************************************************/
+    /* Get things into the format we require for file-naming etc. */
+    
     if (legacySuffix.isNotEmpty()) legacySuffix = "_$legacySuffix"
     languageCode = StepStringUtils.sentenceCaseFirstLetter(languageCode)
 
+
+
+    /**************************************************************************/
+    /* See if it's one of the abbreviations which we got wrong in the past, but
+       have to maintain in their wrong form for backwards compatibility. */
+       
     val revisedAbbreviation = C_SpecialNaming.find { it.first == languageCode + abbreviatedName } ?.second
     if (null != revisedAbbreviation)
       abbreviatedName = revisedAbbreviation
@@ -650,6 +737,12 @@ object ConfigData: ObjectInterface
 
 
     /**************************************************************************/
+    /* For public modules, we always have the language code, an underscore,
+       the abbreviated name and any legacy suffix.  For STEP modules, we drop
+       the language code and we never have the underscore.  The existence of
+       the underscore is a subtle way by which we can distinguish public and
+       STEP modules. */
+       
     val moduleName: String =
       if ("public" == targetAudience)
         languageCode + "_" + abbreviatedName + legacySuffix
@@ -664,8 +757,8 @@ object ConfigData: ObjectInterface
 
 
     /**************************************************************************/
-    delete("stepModuleName"); put("stepModuleName", moduleName, force = true)
-    delete("stepAbbreviationEnglish"); put("stepAbbreviationEnglish", abbreviatedName, force = true)
+    delete("calcModuleName"); put("calcModuleName", moduleName, force = true)
+    delete("stepAbbreviationEnglishAsSupplied"); put("stepAbbreviationEnglishAsSupplied", abbreviatedName, force = true)
   }
 
 
@@ -706,97 +799,168 @@ object ConfigData: ObjectInterface
   /****************************************************************************/
   /**
    * Loads metadata
-   *
-   * @param rootConfigFilePath The configuration file.  If the name starts
-   *   '$jarResources/', it is assumed that it names a file within the resources
-   *   section of the present JAR file.  Otherwise, it is taken as being an
-   *   actual path name.
    */
 
-  fun load (rootConfigFilePath: String)
+  fun load ()
   {
     if (m_Initialised) return // Guard against multiple initialisation.
     m_Initialised = true
-    val configFilePath = if (File(rootConfigFilePath).isAbsolute) rootConfigFilePath else Paths.get(FileLocations.getMetadataFolderPath(), rootConfigFilePath).toString()
-    legacyPreprocessRootFile(configFilePath)
-    load(configFilePath, false) // User overrides.
+
+    val configTextFilePath = FileLocations.getConfigTextFilePath()
+    val configSpreadsheetFilePath = FileLocations.getConfigSpreadsheetFilePath()
+
+    legacyHandler(configTextFilePath)
+
+    if (null != configSpreadsheetFilePath && File(configSpreadsheetFilePath).exists()) // Use spreadsheet if available, in preference to step.conf.
+      load(configSpreadsheetFilePath, false)
+    else
+       load(configTextFilePath!!, false)
+
     loadDone()
+
+    //m_Metadata.forEach { Dbg.d(it.key + ": " + it.value )}
   }
 
 
   /****************************************************************************/
-  /* Rather late in the day, I realised that we might be using this one
-     step.conf file for building both STEPBible and Public versions -- and that
-     there is no absolute guarantee that the two are going to follow the same
-     history path: the two are subject to different processing, and therefore
-     may be updated at different times and for different reasons.
-
-     I toyed with the idea of setting up separate history files for STEPBible
-     and Public history, but the more separate files we have, the more likely
-     it is that sooner or later something will be lost.  So in the end I
-     decided the best course was to continue storing all history lines in
-     step.conf, but to have one set for STEPBible and one for Public -- and
-     to simplify processing, to have both sets even in texts which, at
-     present, are generating only a single flavour of output.  That way we
-     have the necessary history should we decide to add a new flavour in future.
-
-     However, there is one further complication, in that we have to cope with
-     legacy modules, where all we have are history lines not flagged as being
-     for STEPBible or Public.  This is the purpose of the present method: it
-     pre-processes the config file, removing such lines and replacing them by
-     STEPBible and Public copies. */
-
-  private fun legacyPreprocessRootFile (rootConfigFilePath: String)
+  private fun canonicaliseConfiguration ()
   {
+    /**************************************************************************/
+    fun forceLc (parameterName: String)
+    {
+      val x = m_Metadata[parameterName]!!
+      delete(parameterName)
+      m_Metadata[parameterName] = ParameterSetting(x.m_Value!!.lowercase(), x.m_Force, x.m_Resolved)
+    }
+
+
+
+    /**************************************************************************/
+    put("calcCopyrightOrOpenAccess", if (getAsBoolean("stepIsCopyrightText")) "copyright" else "openAccess", force = true)
+  }
+
+
+  /****************************************************************************/
+  /* Legacy issues.
+
+     At one stage I had no notion of building more than one module from a
+     given text, and therefore one set of history lines sufficed.  Now we
+     may build both a STEPBible version and a public version off the same text
+     where the licensing conditions permit.
+
+     Also, I was storing the history information in the step.conf file.
+     However at the time of writing we may be moving away from that, with a
+     view to taking config information from a spreadsheet -- and once the
+     spreadsheet becomes the long-term repository of config information, it
+     becomes more difficult to update it with history information.
+
+     The purpose of this present method is to determine where we have legacy
+     data (which basically will be the case if we don't have history.conf in
+     the Metadata folder).
+
+     Where we have this legacy situation, it moves the history information
+     across to history.conf and also handles the STEPBible / public
+     duplication if necessary.
+  */
+
+  private fun legacyHandler (configTextFilePath: String?)
+  {
+    /**************************************************************************/
+    /* I assume that if we already have a history.conf, there is nothing to
+       do.  When looking for an existing history file, I'm content to trawl
+       various folders for it.  If not found, I use the forced path, which
+       places it in the metadata folder. */
+
+    var historyFilePath = FileLocations.getExistingHistoryFilePath()
+    if (null != historyFilePath && File(historyFilePath).exists())
+      return
+
+    historyFilePath = FileLocations.getForcedHistoryFilePath()
+
+
+
+    /**************************************************************************/
+    /* If we _don't_ have history.conf, I assume that we're definitely going to
+       have to create one, and the one I create has some standard comments at
+       the top.  If I have a step.conf as well, then I move any existing data
+       across to the history file, and leave an explanation in step.conf.
+       Beyond this, I retain step.conf as-is, because there is no guarantee that
+       we have a spreadsheet version with which to replace it. */
+
     /**************************************************************************/
     val revised: MutableList<String> = mutableListOf()
     val publicHistoryLines: MutableList<String> = mutableListOf()
     val stepHistoryLines: MutableList<String> = mutableListOf()
-    var madeChanges = false
 
 
 
     /**************************************************************************/
-    File(rootConfigFilePath).bufferedReader().lines().forEach {
-      if (!it.startsWith("History"))
-      {
-        revised.add(it)
-        return@forEach
-      }
+    if (null != configTextFilePath)
+    {
+      File(configTextFilePath).bufferedReader().lines().forEach {
+        if (!it.startsWith("History"))
+        {
+          revised.add(it)
+          return@forEach
+        }
 
-      if ("History_step_" in it)
-        stepHistoryLines.add(it)
-      else if ("History_public_" in it)
-        publicHistoryLines.add(it)
-      else
+        if ("History_step_" in it)
+          stepHistoryLines.add(it)
+        else if ("History_public_" in it)
+          publicHistoryLines.add(it)
+        else
+        {
+          stepHistoryLines.add(it.replace("History_", "History_step_"))
+          publicHistoryLines.add(it.replace("History_", "History_public_"))
+        }
+      } // forEach
+
+
+
+      /************************************************************************/
+      /* If step.conf yielded any history lines, update step.conf to say that the
+         history has been moved to history.conf. */
+
+      if (stepHistoryLines.isNotEmpty() || publicHistoryLines.isNotEmpty())
       {
-        madeChanges = true
-        stepHistoryLines.add(it.replace("History_", "History_step_"))
-        publicHistoryLines.add(it.replace("History_", "History_public_"))
+        if (revised.isNotEmpty())
+        {
+          revised.add(""); revised.add(""); revised.add("")
+        }
+
+        revised.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        revised.add("#!")
+        revised.add("#! Any history lines have now been moved to ${FileLocations.getHistoryFileName()}.")
+        revised.add("#!")
+        revised.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n")
+
+        val writer = File(configTextFilePath).bufferedWriter()
+        revised.forEach { writer.appendLine(it) }
+        writer.close()
       }
-    } // forEach
+    } // lines forEach
 
 
 
     /**************************************************************************/
-    if (!madeChanges) return
+    /* Write a header and any history lines to history.conf. */
 
-    revised.add("")
-    revised.add("")
-    revised.add("")
-    revised.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    revised.add("#!")
-    revised.add("#! History lines.  Even if the module is currently only for one target (STEPBible")
-    revised.add("#! or Public), I store lines for both here, in case we ever change our minds.")
-    revised.add("#!")
-    revised.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-    revised.add("")
-
-    revised.addAll(stepHistoryLines)
-    revised.addAll(publicHistoryLines)
-
-    val writer = File(rootConfigFilePath).bufferedWriter()
-    revised.forEach { writer.appendLine(it) }
+    val writer = File(historyFilePath).bufferedWriter()
+    val data: MutableList<String> = mutableListOf()
+    data.clear()
+    data.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    data.add("#!")
+    data.add("#! History lines.  There may a set for STEPBible; there may be a set for public;")
+    data.add("#! or there may be both.")
+    data.add("#!")
+    data.add("#! You need to retain this file so that we can keep a full change history.  You")
+    data.add("#! can make changes if you wish, but you should do so with care.")
+    data.add("#!")
+    data.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    data.add("")
+    data.addAll(stepHistoryLines)
+    data.addAll(publicHistoryLines)
+    data.forEach { writer.appendLine(it) }
     writer.close()
   }
 
@@ -805,21 +969,34 @@ object ConfigData: ObjectInterface
   /* Need this as a separate function because $include's involve recursive
      calls. */
 
+  private val m_AvoidDuplicateLoads: MutableSet<String> = mutableSetOf()
+
   private fun load (configFilePath: String, okIfNotExists: Boolean)
   {
     /**************************************************************************/
-    // Dbg.d("Loading config file: " + configFilePath)
+    //Dbg.d("Loading config file: $configFilePath")
 
 
 
     /**************************************************************************/
-    val expandedFilePath = FileLocations.getInputPath(configFilePath)
-    val lines = ConfigArchiver.getDataFrom(expandedFilePath, okIfNotExists) ?: return
+    val expandedFilePath = FileLocations.getInputPath(configFilePath)!!
+    if (expandedFilePath in m_AvoidDuplicateLoads)
+      return
+
+    m_AvoidDuplicateLoads.add(expandedFilePath)
+
+
+
+    /**************************************************************************/
+    val lines = if (expandedFilePath.endsWith(".xlsx"))
+      ConfigDataExcelReader.process()!!
+    else
+      ConfigArchiver.getDataFrom(expandedFilePath, okIfNotExists) ?: return
 
     for (x in lines)
     {
-      //Dbg.d("$configFilePath: $x")
-      val line = x.trim().replace("@home", System.getProperty("user.home"))
+      //Dbg.d(x.contains("include", ignoreCase = true) && x.contains("choose", ignoreCase = true))
+      val line = x.trim().replace("\$home", System.getProperty("user.home"))
       if (processConfigLine(line, expandedFilePath)) continue // Common processing for 'simple' lines -- shared with the method which extracts settings from an environment variable.
       throw StepExceptionWithStackTraceAbandonRun("Couldn't process config line: $line")
     } // for
@@ -865,38 +1042,100 @@ object ConfigData: ObjectInterface
 
 
   /****************************************************************************/
-  private fun canonicaliseLanguageCode (rawLanguageCode: String): String
-  {
-    val languageCode = IsoLanguageAndCountryCodes.get3CharacterIsoCode(rawLanguageCode)
-    delete("stepLanguageCode3Char"); put("stepLanguageCode3Char", languageCode, force = true)
-    delete("stepLanguageCode2Char"); put("stepLanguageCode2Char", IsoLanguageAndCountryCodes.get2CharacterIsoCode(languageCode).ifEmpty { languageCode }, force = true)
-    return languageCode
-  }
-
-
-  /****************************************************************************/
   /**
    * Called when all defaults and metadata have been handled.
    *
    * The method also checks that mandatory parameters have been supplied, and
    * sets to an empty string any optional parameters which have not been
    * supplied.
+   *
+   * If the configuration data implies that we may be picking up information
+   * from external data files (eg those supplied by DBL), we also arrange to
+   * pick up the details which indicate how that information can be obtained.
    */
 
   private fun loadDone()
   {
+    /**************************************************************************/
+    canonicaliseConfiguration()
+
+
+
+    /**************************************************************************/
+    /* See we have if externally-supplied metadata or licence information. */
+
+    val externalDataFormat = get("stepExternalDataFormat", "").uppercase()
+    when (externalDataFormat)
+    {
+      "DBL" ->
+      {
+        load("@jarResources/ReferenceFormats/$externalDataFormat.conf", false)
+        ConfigDataExternalFileInterfaceDbl.initialise()
+        m_ExternalDataHandler = ConfigDataExternalFileInterfaceDbl
+      }
+    }
+
+
+
+    /**************************************************************************/
+    /* Earlier legacy processing will have ensured that any history
+       information is now in history.txt, and we need to ensure we load those
+       details too. */
+
+    load(FileLocations.getExistingHistoryFilePath()!!, false)
+
+
+
+    /**************************************************************************/
+    processAsSuppliedAndCanonical()
     generateTagTranslationDetails() // Convert any saved tag translation details to usable form.
   }
 
 
   /****************************************************************************/
-  /* Parses a line so as to determine the key and value, and stores them. */
+  /* Parses a line so as to determine the key and value, and stores them.  Note
+     that we store this as raw data -- we don't expand out parameter references
+     at this point.  That occurs the first time a parameter is read
+
+     Jun 2025: We are now hoping to take config details from a very rudimentary
+     spreadsheet.  In particular the aim is that people should be able to cut
+     and paste from that spreadsheet straight into a step.conf file.  More than
+     this, ideally we want this to work regardless of whether they are using
+     Excel, Google Sheets or LibreOffice Calc.  This means we don't want any
+     processing or formulae in the file.
+
+     Now the file contains a _lot_ of potential settings, and on any given run
+     probably many of them will be empty simply because the user is happy to
+     rely upon the defaults.
+
+     Previously an empty reference (ie just x= or x#= with no right hand side)
+     would have established an empty value for the parameter.  I no longer want
+     that -- if the right-hand side is empty, I want to ignore the setting.
+     (Unfortunately, this change may not be backwards compatible.)
+   */
 
   private fun loadParameterSetting (line: String)
   {
     val force = line.contains("#=")
     val parts = line.split(Regex(if (force) "\\#\\=" else "\\="), 2)
-    put(parts[0].trim(), parts[1].trim(), force)
+    if (parts[1].trim().isNotEmpty()) // Jun 2025 -- see comment above.
+      put(parts[0].trim(), parts[1].trim(), force)
+  }
+
+
+  /****************************************************************************/
+  /* Some parameters -- notably Bible names and abbreviations -- come in pairs,
+     'AsSupplied' and 'Canonical'.  If both are provided, then we use both.
+     If only the AsSupplied version is supplied, we take that as serving also
+     as the Canonical. */
+
+  private fun processAsSuppliedAndCanonical ()
+  {
+    m_Metadata.keys.filter { it.matches(".*stepBible(Name|Abbrev).*AsSupplied$".toRegex()) } .forEach {
+      val canonicalKey = it.replace("AsSupplied", "CanonicalForBibleChooser")
+      if (canonicalKey !in m_Metadata)
+        put(canonicalKey, getInternal(it, false)!!, true)
+    }
   }
 
 
@@ -905,32 +1144,51 @@ object ConfigData: ObjectInterface
      turn up both in config files and in the converter's environment
      variable. */
 
-  private fun processConfigLine (directive: String, callerFilePath: String): Boolean
+  private fun processConfigLine (xDirective: String, callerFilePath: String): Boolean
   {
+    /**************************************************************************/
+    /* Jun 2025: We are now taking inputs generated from a spreadsheet.  In
+       order to allow the user to include ad hoc configuration statements in
+       that input (ie statements which I don't cater for by way of explicit
+       pre-defined assignments), I allow for a few fields with names starting
+       '%'.  '%comment' is treated as a comment.  With anything else, I drop
+       the '%...#=' bit, so that I process only the rest of the string. */
+
+    if (xDirective.startsWith("%comment", ignoreCase = true))
+      return true
+
+    var directive = xDirective
+
+    if (directive.startsWith("%"))
+      directive = let {
+        val ix = directive.indexOf("#=") + 2
+        directive.substring(ix).trim()
+      }
+
+
+
     /**************************************************************************/
     if (directive.isEmpty())
       return true
 
-    val lineLowerCase = directive.lowercase()
-
 
 
     /**************************************************************************/
-    if (lineLowerCase.startsWith("\$include"))
+    if (directive.startsWith("\$include"))
     {
       var newFilePath = directive.replace("${'$'}includeIfExists", "")
       newFilePath = newFilePath.replace("${'$'}include", "").trim()
-      newFilePath = expandReferences(newFilePath, false)!!
-      if (!newFilePath.startsWith("$") && !File(newFilePath).isAbsolute)
-        newFilePath = Paths.get(File(callerFilePath).parent, newFilePath).toString()
-      load(newFilePath, lineLowerCase.contains("exist"))
+      newFilePath = expandConfigData(newFilePath)!!
+      if (!newFilePath.startsWith("@") && !File(newFilePath).isAbsolute)
+        newFilePath = "@find/$newFilePath" // Paths.get(File(callerFilePath).parent, newFilePath).toString()
+      load(newFilePath, directive.contains("exist", ignoreCase = true))
       return true
     }
 
 
 
     /**************************************************************************/
-    if (lineLowerCase.startsWith("#vernacularbookdetails"))
+    if (directive.matches(Regex("(?i)^#vernacularbookdetails.*")))
     {
       processVernacularBibleDetails(directive)
       return true
@@ -942,15 +1200,6 @@ object ConfigData: ObjectInterface
     if (directive.matches(Regex("(?i)stepUsxToOsisTagTranslation.*")))
     {
       saveUsxToOsisTagTranslation(directive)
-      return true
-    }
-
-
-
-    /**************************************************************************/
-    if (directive.matches(Regex("(?i)stepExternalDataSource.*")))
-    {
-      ConfigDataExternalFileInterface.recordDataSourceMapping(directive, callerFilePath)
       return true
     }
 
@@ -997,9 +1246,7 @@ object ConfigData: ObjectInterface
     /**************************************************************************/
     if (directive.contains("=")) // I think this should account for all remaining lines.
     {
-      var x = directive.replace("(?i)\\.totextdirection\\s*\\(\\s*\\)".toRegex(), ".#toTextDirection")
-      x = x.replace("(?i)\\.todate\\s*\\(\\s*\\)".toRegex(), ".#toDate")
-      loadParameterSetting(x)
+      loadParameterSetting(directive)
       return true
     }
 
@@ -1030,7 +1277,7 @@ object ConfigData: ObjectInterface
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                              Get and put                               **/
+  /**                             get, put, etc                              **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
@@ -1099,8 +1346,6 @@ object ConfigData: ObjectInterface
 
   operator fun get (key: String): String?
   {
-    //Dbg.d(key, "swordAboutAsSupplied")
-    //Dbg.d(key)
     return getInternal(key, true)
   }
 
@@ -1135,22 +1380,6 @@ object ConfigData: ObjectInterface
 
   /****************************************************************************/
   /**
-   * Gets the value associated with a given key, or throws an exception if the
-   * key has no associated value.
-   *
-   * @param key
-   * @return Associated value if any.
-   */
-
-  fun getOrError (key: String): String
-  {
-    return get(key) ?: throw StepExceptionWithStackTraceAbandonRun("No metadata found for $key ${ConfigDataSupport.getDescriptorAsString(key)}.")
-  }
-
-
-
-  /****************************************************************************/
-  /**
    * Obtains the value associated with a given key, or throws an exception if
    * the key has no associated value.  The value is assumed to be a string
    * representation of a Boolean -- Y(es) or T(rue) or anything else.  Returns
@@ -1162,7 +1391,7 @@ object ConfigData: ObjectInterface
 
   fun getAsBoolean (key: String): Boolean
   {
-    var s = getOrError(key)
+    var s = get(key)!!
     if (s.isEmpty()) return false
     s = s.substring(0, 1).uppercase()
     return s == "Y" || s == "T"
@@ -1207,7 +1436,7 @@ object ConfigData: ObjectInterface
    */
 
   fun getPreprocessingRegexes () =
-    if ("osis" == ConfigData["stepOriginData"])
+    if ("osis" == ConfigData["calcOriginData"])
       m_RegexesForForcedOsisPreprocessing
     else
       m_RegexesForGeneralInputPreprocessing
@@ -1222,7 +1451,7 @@ object ConfigData: ObjectInterface
    */
 
   fun getPreprocessingXslt () =
-    if ("osis" == ConfigData["stepOriginData"])
+    if ("osis" == ConfigData["calcOriginData"])
       get("stepPreprocessingXsltStylesheetWhenStartingFromOsis")
     else
       get("stepPreprocessingXsltStylesheetWhenNotStartingFromOsis")
@@ -1258,17 +1487,17 @@ object ConfigData: ObjectInterface
 
 
     /************************************************************************/
+    ConfigDataSupport.validateParameter(key, "put")
+
+
+
+    /************************************************************************/
     /* Dummy placeholder -- parameters may be included in files for reference
        purposes, but given the value '%%%UNDEFINED', in which case it is as
        though they had not been mentioned at all. */
          
     if ("%%%UNDEFINED" == theValue)
       return
-
-
-
-    /************************************************************************/
-    ConfigDataSupport.reportIfMissingDebugInfo(key, "Put")
 
 
 
@@ -1312,70 +1541,7 @@ object ConfigData: ObjectInterface
 
     /************************************************************************/
     ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), null)
-    m_Metadata[key] = ParameterSetting(value, force)
-  }
-
-
-  /****************************************************************************/
-  /* This should be called only directly from the external-facing methods or
-     when expanding @-references and we have a new value which needs to be
-     looked up. */
-
-  @Synchronized private fun getInternal (key: String, nullsOk: Boolean): String?
-  {
-    /**************************************************************************/
-    //Dbg.d(key, "_copyrightOwner")
-
-
-
-    /**************************************************************************/
-    /* CAUTION: With something like @(stepVersificationScheme, KJV), "KJV"
-       is received here as though it were the key for an item of config data,
-       when in fact, of course, it's simply a default value for the @(...).
-       reportIfMissingDebugInfo therefore needs to be able to cater for this
-       possibility, and not treat it as a key. */
-
-    ConfigDataSupport.reportIfMissingDebugInfo(key, "Get")
-
-
-
-    /**************************************************************************/
-    /* Check if we have an actual stored value for this.  This ensures that
-       the user can override even where normally values would be
-       calculated. */
-
-    val parmDetails = m_Metadata[key]
-
-
-
-    /**************************************************************************/
-    /* If there is no stored value, see if we can obtain a calculated
-       value. */
-
-    if (null == parmDetails)
-    {
-      val calculated = getCalculatedValue(key)
-      if (null != calculated)
-      {
-        return if ("@get" in calculated)
-          expandReferences(calculated, nullsOk)
-        else
-          calculated
-      }
-
-      if (nullsOk)
-        return null
-      else
-        throw StepExceptionWithStackTraceAbandonRun("ConfigData.get for $key: No value has been recorded, and no calculated value is available.")
-    }
-
-
-
-    /**************************************************************************/
-    if (null != parmDetails.m_Value && parmDetails.m_Value!!.startsWith("%%%"))
-      throw StepExceptionWithStackTraceAbandonRun("ConfigData.get for $key: value was recorded as ${parmDetails.m_Value} and no value has been supplied.")
-
-    return expandReferences(parmDetails.m_Value, nullsOk)
+    m_Metadata[key] = ParameterSetting(value, m_Force = force, m_Resolved = false) // Mark as not resolved, just in case the value requires $ processing.
   }
 
 
@@ -1411,351 +1577,387 @@ object ConfigData: ObjectInterface
 
 
 
-
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
-  /**                   Expansion of embedded references                     **/
+  /**                               getInternal                              **/
   /**                                                                        **/
   /****************************************************************************/
   /****************************************************************************/
 
-  /**************************************************************************/
-  /**
-   * Takes a string possibly containing @(...) and / or @getExternal(...) and
-   * returns the expanded form.
-   *
-   * nullsOk is relevant only where we are obtaining a single value.  If
-   * we have multiple top level values being concatenated, a null is always
-   * an error.
-   *
-   * @param theLine Line to be processed.
-   * @param nullsOk True if a null value is ok.  (Throws an exception otherwise.)
-   * @return Resulting value.
-   */
+  /****************************************************************************/
+  /* Until recently I've been trying to parse configuration data myself (data
+     which may contain $myVar references, $fn(...) function calls, etc).  This
+     was getting to be too difficult and I was having to make too many special
+     case functions.  I have therefore probably gone way over the top, in that
+     I have moved to using Antlr to generate a fully-fledged parser.  The Antlr
+     grammar is in main/antlr/configDataParser.g4.  From this, Antlr auto
+     generates a number of classes to handle lexical and syntax analysis, which
+     are used here.
 
-  fun expandReferences (theLine: String?, nullsOk: Boolean): String?
+     If you make any changes to the grammar you need to run:
+
+       ./gradlew clean generateGrammarSource build
+
+     in the IDEA command window (the 'clean' is optional, but useful if things
+     have been going wrong).
+  */
+
+  /****************************************************************************/
+  /* I've hived this off to a separate section because there's rather a lot of
+     it.  The task of the functions here is to take configuration items and
+     expand out function calls and parameter references.
+
+     Formats are as follows:
+
+       $myVar -- A reference to myVar.
+
+       $myFn($a, $b, "...", $c) -- An invocation of myFn, passing the given
+         arguments.
+
+       Variable references are assumed to run from the $-sign through any
+       subsequent word characters (of which there must be at least one).
+       If you need a variable name to be followed immediately by more word
+       characters, you can end the name with $$.
+
+       Printer's double quotes are replaced by straight quotes.
+
+       I make the simplifying assumption that $-signs will never be included
+       as plain text -- ie that they will always indicate function invocation
+       or parameter references.
+  */
+
+  /****************************************************************************/
+  /* Expands a string potentially containing $-references etc. */
+
+  @Synchronized fun expandConfigData (theData: String): String?
   {
-    val errorStack: Stack<String> = Stack()
+    if (theData.isBlank())
+      return ""
 
-    try
-    {
-      //Dbg.dCont(theLine ?: "", "About=")
-      return expandReferencesTopLevel(theLine, nullsOk, errorStack)
-    }
-    catch (_: StepExceptionBase)
-    {
-      throw StepExceptionWithStackTraceAbandonRun("ConfigData error parsing: " + errorStack.joinToString(" -> "))
-    }
-  }
+    if (theData.trim().startsWith("#")) // No point in attempting to parse comments.
+      return theData
 
+    //Dbg.dCont(theData, "PerOwnerOrganisation/\$choose(\$stepStandardOwnerOrganisation")
 
-  /**************************************************************************/
-  private val C_Pat_ExpandReferences = "(?i)(?<at>(@|@getExternal|@choose|@getTranslation))\\(\\.(\\d\\d\\d)\\.(?<content>.*?)\\.\\3\\.\\)(?<additionalProcessing>(\\.#\\w+))?".toRegex()
-  private val C_Pat_ExpandReferences_AdditionalProcessing = "(?<additionalProcessing>(\\.#\\w+))".toRegex()
+    val inputStream = CharStreams.fromString(theData)
+    val lexer = configDataParserLexer(inputStream)
+    val tokens = CommonTokenStream(lexer)
 
+//    let {
+//      tokens.fill()
+//      tokens.tokens.forEach { println("${it.text} -> ${lexer.vocabulary.getSymbolicName(it.type)}") }
+//    }
 
+    val parser = configDataParserParser(tokens)
 
-  /**************************************************************************/
-  /* Processes a single @-thing.  These are characterised by the fact that
-     they contain one or more elements, comma-separated, and we run across the
-     list until we find one that returns non-null.  In addition, they may
-     optionally contain a fixed string by way of default.  If present, this
-     will be preceded by '='.  Note that the default value is _not_ expanded
-     out -- it is taken as a fixed string. */
+    parser.removeErrorListeners()
+    parser.addErrorListener(VerboseErrorListener(theData))
 
-  private fun expandReferenceAtThing (at: String, theLine: String, additionalProcessing: String?, errorStack: Stack<String>): String?
-  {
-    /************************************************************************/
-    val C_Evaluate = 1
-    val C_Choose = 2
-    val C_GetExternal = 3
-    val C_GetTranslation = 4
-    val atType =
-      when (at.lowercase())
-      {
-        "@" -> C_Evaluate
-        "@choose" -> C_Choose
-        "@gettranslation" -> C_GetTranslation
-        else -> C_GetExternal
-      }
-    //Dbg.d(C_Choose == atType)
-
-
-
-    /************************************************************************/
-    errorStack.push("[expandReferenceAlternative: $theLine]")
-
-
-
-    /************************************************************************/
-    /* Split off the default, if any. */
-
-    val (line, dflt) = if ("=" in theLine) theLine.split("=", limit = 2).map { it.trim() } else listOf(theLine, null)
-    var args = splitStringAtCommasOutsideOfParens(line!!)
-
-
-
-    /************************************************************************/
-    /* Deal with getTranslation, which is of the form
-
-         @getTranslation(key)   OR
-         @getTranslation(key, eng)
-
-       I don't really do any checking here: if there is more than one
-       argument, I simply assume that it is the second form above.
-    */
-
-    if (C_GetTranslation == atType)
-      return TranslatableFixedText.lookupText(if (1 == args.size) Language.Vernacular else Language.English, args[0])
-
-
-
-    /************************************************************************/
-    /* If this is a getExternal, the first element is the file selector. */
-
-    var fileSelector: String? = null
-    if (C_GetExternal == atType)
-    {
-      fileSelector = args[0]
-      args = args.subList(1, args.size)
-    }
-
-
-
-    /************************************************************************/
-    /* This takes a single argument to the @-thing, and expands this one
-       argument -- not to evaluate any value associated with it, but to see
-       if it, itself, involves @-things, in which case these @-things are
-       expanded out.  This leaves us with the actual value which can be
-       used to evaluate the @-thing.  Note that this will never return a
-       null -- the caller is guaranteed to have _something_ which can be
-       evaluated. */
-
-    fun expandArgument (arg: String): String?
-    {
-      val res = expandReferencesTopLevel(arg, false, errorStack) ?: return null // Expand out the argument itself.
-      return if (C_Choose == atType) res else expandReferenceIndividualElement(fileSelector, res, errorStack)
-    }
-
-
-
-    /**************************************************************************/
-    /* Run over the individual elements until we find a non-null. */
-
-    var res: String? = null
-    for (arg in args)
-    {
-      res = expandArgument(arg) // See if the argument contains any @-things to be expanded.  res will always be non-null.
-
-      if (null != res) // If we've found a value. there's no need to evaluate further, but we do need to see if the value needs to be post-processed.
-      {
-        if (null != additionalProcessing)
-          res = specialistProcessing(res, additionalProcessing.replace(".#", ""))
-        break
-      }
-    }
-
-
-
-    /**************************************************************************/
-    errorStack.pop()
-    return res ?: dflt
-  }
-
-
-  /**************************************************************************/
-  private fun expandReferenceIndividualElement (fileSelector: String?, elt: String, errorStack: Stack<String>): String?
-  {
-    errorStack.push("[expandReferenceAlternative: $elt]")
-    val res = if (null == fileSelector) get(elt) else ConfigDataExternalFileInterface.getData(fileSelector, elt)
-    errorStack.pop()
+    val tree = parser.file()
+    val visitor = ParseTreeVisitor()
+    val thunk = visitor.visit(tree)
+    val res = thunk()
     return res
   }
 
 
+  /****************************************************************************/
+  /* This parses potential values and applies and processing implied by the
+     content (eg expanding variable references etc). */
+
+  @Synchronized fun getInternal (key: String, nullsOk: Boolean): String?
+  {
     /**************************************************************************/
-    /* Handles a string which may contain one or more @-things at the top level.
-       Expands all of them. */
+    ConfigDataSupport.validateParameter(key, "get")
 
-    private fun expandReferencesTopLevel (theLine: String?, nullsOk: Boolean, errorStack: Stack<String>): String?
+
+
+    /**************************************************************************/
+    /* Get existing data and deal with nulls. */
+
+    var existingValue = m_Metadata[key]
+    if (null == existingValue) // See if we can calculate a value.
     {
-      /************************************************************************/
-      if (null == theLine)
-        return null
-
-
-
-      /************************************************************************/
-      var line = tidyVal(theLine) // Replace {space} by ' ' etc.
-
-
-
-      /************************************************************************/
-      //Dbg.dCont(line, "MinimumVersion=")
-
-
-
-      /************************************************************************/
-      /* Nothing to do unless the string contains "@(" or "@getExternal(". */
-
-      if ("@(" !in line && "@getExternal(" !in line && "@choose(" !in line && "@getTranslation(" !in line)
-        return line
-
-
-
-      /************************************************************************/
-      //$$$line = line.replace("\\(", "JamieBra").replace("\\)", "JamieKet")
-
-
-
-      /************************************************************************/
-      errorStack.push("[expandReferencesConsecutive: $line]")
-
-
-
-      /************************************************************************/
-      /* Mark the corresponding sets of parens so that balanced parens can be
-         identified -- eg '(.001.   .001.)' */
-
-      line = StepStringUtils.markBalancedParens(line)
-
-
-
-      /************************************************************************/
-      /* Called when we have an @-thing to expand.  Parses the @-thing to
-         determine if it's @(), @getExternal(), etc and to obtain its content.
-         Removes from the content the markers introduced by
-         StepStringUtils.markBalancedParens because this method may be called
-         recursively on the content, and we don't want the markers to confuse
-         things.  Then expands the @-thing. */
-
-      fun evaluate (details: String, additionalProcessing: String?): String?
+      val fnForCalculatingValue = m_DataCalculators[key]
+      if (null != fnForCalculatingValue)
       {
-        val mr = C_Pat_ExpandReferences.find(details) ?: return details
-        val at = mr.groups["at"]!!.value
-        var content = mr.groups["content"]!!.value
-        content = content.replace("\\.\\d\\d\\d\\.".toRegex(), "")
-        return expandReferenceAtThing(at, content, additionalProcessing, errorStack)
-     }
+        existingValue = ParameterSetting(fnForCalculatingValue(), m_Force = true, m_Resolved = true)
+        m_Metadata[key] = existingValue
+      }
+    }
+
+    if (existingValue?.m_Value == null) // Still null?
+    {
+      if (!nullsOk)
+        throw StepExceptionWithoutStackTraceAbandonRun("Metadata for $key is null, but is not permitted to be.")
+
+      m_Metadata[key] = ParameterSetting(null, m_Force = true, m_Resolved = true)
+      return null
+    }
 
 
 
-     /*************************************************************************/
-     /* Repeatedly looks for the next @-thing in the string and then arranges
-        to parse it and replace it by its expanded value. */
+    /**************************************************************************/
+    /* If we already have a value, we can return that. */
 
-     while (true)
-     {
-       var at = "@(" // Look for @(.
-       var ixLow = line.indexOf(at)
-       if (-1 == ixLow)
-       {
-         at = "@getExternal("
-         ixLow = line.indexOf(at) // If @( wasn't found, look for @getExternal( instead.
-       }
-       if (-1 == ixLow)
-       {
-         at = "@choose("
-         ixLow = line.indexOf(at) // If @getExternal( wasn't found, look for @choose( instead.
-       }
-
-       if (-1 == ixLow) // If we didn't find any @-things, there's nothing else to expand.
-         break
-
-       val atLength = at.length
-       val marker = line.substring(ixLow + atLength, ixLow + atLength + 5) // Get the start marker eg .001.
-       val ixHigh = line.indexOf(marker, ixLow + at.length + 1) + marker.length + 1 // Points to the corresponding end marker.
-
-       val pre = line.substring(0, ixLow) // The bit before the @-thing.
-       val content = line.substring(ixLow, ixHigh) // The argument list within the @-thing.
-       var post = line.substring(ixHigh) // The bit after the @-thing.
-
-       var additionalProcessing: String? = null // Check to see if there's any additional processing -- eg .#toDate.
-       val mr = C_Pat_ExpandReferences_AdditionalProcessing.find(post)
-       if (null != mr)
-       {
-         additionalProcessing = mr.groups["additionalProcessing"]!!.value
-         post = post.substring(additionalProcessing.length) // Knock the additionalProcessing off the text which followed the @-thing.
-       }
-
-       line = pre + (evaluate(content, additionalProcessing) ?: "\b") + post // I use \b to flag the fact that we've had a null value.
-     }
+    if (existingValue.m_Resolved)
+      return existingValue.m_Value
 
 
 
-     /*************************************************************************/
-     /* I used \b above to indicate that something has returned a null.  If the
-        processed line comprises just a \b, then the overall value is null. */
+    /**************************************************************************/
+    val res = expandConfigData(existingValue.m_Value!!)
 
-     var res = if ("\b" == line) null else line
+    if (null == res && !nullsOk)
+        throw StepExceptionWithoutStackTraceAbandonRun("Metadata for $key is null, but is not permitted to be.")
 
+    if (null != res && res.startsWith("%%%"))
+      throw StepExceptionWithStackTraceAbandonRun("ConfigData.get for $key: value was recorded as $res and no value has been supplied.")
 
-
-     /*************************************************************************/
-     /* If the overall result is a null, then it's an error if we actually have
-        just a null.  Otherwise, it's an error if we have a null anywhere in
-        the string, because we've been concatenating things, and it doesn't make
-        sense to concatenate something with a null. */
-
-     if (null == res)
-     {
-       if (!nullsOk)
-         throw StepExceptionWithStackTraceAbandonRun("")
-     }
-     else
-     {
-       if ("\b" in res)
-         throw StepExceptionWithStackTraceAbandonRun("Unresolved lookup in $res.")
-     }
-
-
-
-     /*************************************************************************/
-     /* If the result is non-null, we try expanding it again, and then also
-        replace the special markers I use for escaped parens. */
-
-     if (null != res)
-     {
-       res = expandReferencesTopLevel(res, nullsOk, errorStack)
-       //$$$res = res!!.replace("JamieBra", "(").replace("JamieKet", ")")
-       res = StepStringUtils.unmarkBalancedParens(res!!)
-     }
-
-     errorStack.pop()
-     return res
+    m_Metadata[key] = ParameterSetting(res, m_Force = true, m_Resolved = true)
+    return res
   }
 
+
   /****************************************************************************/
-  /* Applies any additional specialist processing required on certain types
-     of value. */
-
-  private fun specialistProcessing (value: String, fn: String): String
+  class VerboseErrorListener (private val inputString: String) : BaseErrorListener()
   {
-    var revisedValue = value
-
-    when (fn.lowercase())
+    /**************************************************************************/
+    private fun underlineError (recognizer: Parser, offendingToken: Token, line: Int, charPositionInLine: Int)
     {
-      "todate" ->
-      {
-        if (revisedValue.matches(".*([+-])\\d\\d:\\d\\d$".toRegex())) // Assume standard format but may need to get rid of daylight savings because LocalDateTime can't handle it.
-          revisedValue = revisedValue.substring(0, revisedValue.length - 7)
-        val ldt = LocalDateTime.parse(revisedValue)
-        val cal = Calendar.getInstance()
-        cal[ldt.year, ldt.monthValue - 1] = ldt.dayOfMonth
-        revisedValue = SimpleDateFormat("yyyy-MM-dd").format(cal.time)
-      }
+      val input = recognizer.inputStream.toString()
+      val lines = input.lines()
+      val errorLine = lines[line - 1]
+      Dbg.d(inputString)
+      Dbg.d(" ".repeat(charPositionInLine) + "^")
+    }
 
-      "totextdirection" ->
+
+    /**************************************************************************/
+    override fun syntaxError (
+        recognizer: Recognizer<*, *>,
+        offendingSymbol: Any?,
+        line: Int,
+        charPositionInLine: Int,
+        msg: String?,
+        e: RecognitionException?
+    )
+    {
+      underlineError(recognizer as Parser, offendingSymbol as Token, line, charPositionInLine)
+      val offendingToken = offendingSymbol.toString()
+      val errorMessage = "Syntax error at line $line:$charPositionInLine. Offending symbol: $offendingToken. $msg"
+      throw IllegalArgumentException(errorMessage)
+    }
+  }
+
+
+  /****************************************************************************/
+  /* Used to crawl over the parse tree and generate actual config values.
+     Rather than having String? as the return value, I have () -> String?
+     This makes it possible to do lazy evaluation, so that, for instance,
+     $choose only evaluates as many arguments as are needed to determine its
+     value. */
+
+  private class ParseTreeVisitor: configDataParserBaseVisitor<() -> String?>()
+  {
+    /**************************************************************************/
+    private val C_Dbg = false
+
+
+    /**************************************************************************/
+    private fun applyFn (fn: String, argFuncs: List<() -> String?>): String?
+    {
+      when (fn.lowercase())
       {
-        revisedValue = revisedValue.lowercase()
-        revisedValue = if (revisedValue == "ltr") "LtoR" else "RtoL"
-        if ("RtoL" == revisedValue) revisedValue = "BiDi" // Assume bidirectional on all RTL scripts.
-      }
+        "choose" -> // $choose($a, $b, ... ["Hello"]) Returns the first non-null argument
+        {
+          for (f in argFuncs)
+          {
+            val x = f()
+            if (null != x)
+              return x
+          }
+
+          return null
+        }
+
+
+        "delimited" -> // $delimited(bra, content, ket) Returns null if content is null, otherwise bra + content + ket.
+        {
+          val bra     = argFuncs[0]()
+          val content = argFuncs[1]()
+          val ket     = argFuncs[2]()
+          return if (content.isNullOrBlank()) "" else (bra ?: "") + content + (ket ?: "")
+        }
+
+
+        "eq" -> // $eq($a, $b) Yes or No, according as the two arguments are or are not equal.
+        {
+          val arg1 = argFuncs[0]()
+          val arg2 = argFuncs[1]()
+          return if (arg1.equals(arg2, ignoreCase = true)) "Yes" else "No"
+        }
+
+
+        "getexternalxml" -> // $getExternalXml(fileSelector, args ...)  Returns a value from an external metadata file.
+        {
+           return if (null == m_ExternalDataHandler)
+             null
+           else
+           {
+             val expandedArgs = argFuncs.map { it()!! }
+             val otherArgs = expandedArgs.subList(1, expandedArgs.size)
+             m_ExternalDataHandler!!.getValue(expandedArgs[0], *otherArgs.toTypedArray())
+           }
+        }
+
+
+        "indirect" ->
+        {
+          var ref = ""
+          for (arg in argFuncs)
+            ref += arg() ?: return null
+          return getInternal(ref, true)
+        }
+
+
+        "join" -> // $join(sep, $a, $b, ...)  Returns a string in which the non-null arguments are separated by sep.
+        {
+          var res = ""
+          val sep = argFuncs[0]()
+          for (arg in argFuncs.subList(1, argFuncs.size))
+          {
+            val x = arg() ?: return null
+            if (res.isNotEmpty() && x.isNotEmpty())
+              res += sep
+            res += x
+          }
+
+          return res
+        }
+
+
+        "todate" -> // $toDate(outputFormat, inputFormat, text) Converts text (which is assumed to represent a date in format inputFormat to a date in format outputFormat.
+        {
+         val outputFormat = argFuncs[0]()!!
+          val inputFormat  = argFuncs[1]()!!
+          val text         = argFuncs[2]()!!
+          val dt = LocalDate.parse(text.split("T")[0], DateTimeFormatter.ofPattern(inputFormat))
+          return dt.format(DateTimeFormatter.ofPattern(outputFormat))
+        }
+
+        else ->
+          throw StepExceptionWithoutStackTraceAbandonRun("Unknown metadata function: $fn.")
+
     } // when
+  }
 
 
-    return revisedValue
+    /**************************************************************************/
+    /* Called with any expression, and routes control to the appropriate
+       handler. */
+
+    override fun visitTopLevelExpression (ctx: configDataParserParser.TopLevelExpressionContext): () -> String?
+    {
+      //println("Visiting expression: ${ctx.text}")
+      return when
+      {
+        ctx.functionCall() != null -> visit(ctx.functionCall())
+        ctx.variableRef()  != null -> visit(ctx.variableRef())
+        ctx.miscellaneousText() != null -> visit(ctx.miscellaneousText())
+        ctx.quotedString() != null -> visit(ctx.quotedString())
+        else -> throw StepExceptionWithStackTraceAbandonRun("Bad case in antlr")
+          //-> { -> null }
+      }
+    }
+
+    /**************************************************************************/
+    /* Amalgamates a number of separate elements.  If there is only a single
+       element, I assume it was a reference lookup, and assume also that it's
+       ok for it to be null.  Otherwise, if the entries contain any nulls, it's
+       an error, because I can't combine them all. */
+
+    override fun visitExpressionSequence (ctx: configDataParserParser.ExpressionSequenceContext): () -> String?
+    {
+      val exprFuncs = ctx.topLevelExpression().map { exprCtx -> visit(exprCtx) } // List<() -> String?>
+      return {
+        val res = exprFuncs.map { it.invoke() }
+        if (exprFuncs.size <= 1)
+          res[0]
+        else
+        {
+          val nonNull = res.filterNotNull()
+          if (nonNull.size == res.size)
+            res.joinToString(separator = "").replace("\\\"", "\"")
+          else
+            throw StepExceptionWithStackTraceAbandonRun("Null entries found in ${res.joinToString(separator = "") { it ?: "NULL" }}")
+        }
+      }
+    }
+
+
+    /**************************************************************************/
+    override fun visitFile (ctx: configDataParserParser.FileContext): () -> String?
+    {
+      return visit(ctx.expressionSequence())
+    }
+
+
+    /**************************************************************************/
+    /* Called with a quoted string (ie a string in double quotes) and returns
+       the string itself. */
+
+    override fun visitQuotedString (ctx: configDataParserParser.QuotedStringContext): () -> String?
+    {
+      return { ctx.QUOTED_STRING().text.trim('"') }
+    }
+
+
+    /**************************************************************************/
+    /* This one is a law unto itself because I need to be able to retain
+       whitespace exactly as-is in non-quoted text strings, and it seems to be
+       difficult if not impossible to do that relying upon the lexer and parser
+       alone. */
+       
+    override fun visitMiscellaneousText (ctx: configDataParserParser.MiscellaneousTextContext): () -> String?
+    {
+      val startIndex = ctx.start.startIndex
+      val stopIndex = ctx.stop.stopIndex
+      val inputStream = ctx.start.inputStream
+      return { inputStream.getText(Interval.of(startIndex, stopIndex)) }
+    }
+
+
+    /**************************************************************************/
+    /* Receives something like $myVar, and needs to return any associated value.
+       I have to permit nulls as an option here, because this may be being
+       called, say, from $choose, and there a null argument is perfectly
+       permissible. */
+
+    override fun visitVariableRef (ctx: configDataParserParser.VariableRefContext): () -> String?
+    {
+        return {
+          val res = getInternal(ctx.DOLLAR_IDENT().text.substring(1), true)
+          if (C_Dbg) Dbg.d(ctx.DOLLAR_IDENT().text + " -> " + res)
+          res
+        }
+    }
+
+
+    /**************************************************************************/
+    override fun visitFunctionCall (ctx: configDataParserParser.FunctionCallContext): () -> String?
+    {
+      val fn = ctx.DOLLAR_IDENT().text
+      val argFuncs: List<() -> String?> =
+        ctx.arguments()
+            ?.argument()
+            ?.map {
+              exprCtx -> { visit(exprCtx).invoke() } // wrap the visit in a lambda
+            } ?: emptyList()
+
+        return { applyFn(fn.substring(1), argFuncs) }
+    }
   }
 
 
@@ -1781,6 +1983,12 @@ object ConfigData: ObjectInterface
     * metadata, so if that has indicated that books are required to be out of
     * order, that's what you'll get.
     *
+    * If the config data contains the necessary details, then the data structure
+    * which this relies upon should have been populated as a result of
+    * processing that.  If we are reliant upon taking the data from external
+    * metadata files, we rely upon that having run already and used
+    * processVernacularBibleDetails below to populate things.
+    *
     * @return Book descriptors.
     */
 
@@ -1788,7 +1996,6 @@ object ConfigData: ObjectInterface
     {
       if (m_BookDescriptors.isNotEmpty()) return m_BookDescriptors
 
-      get("stepBookList") // Dummy call which forces things to be populated from external metadata if available.
       if (m_BookDescriptors.isNotEmpty()) return m_BookDescriptors
 
       m_BookDescriptors = BibleBookNamesUsx.getBookDescriptors().toMutableList()
@@ -1797,7 +2004,7 @@ object ConfigData: ObjectInterface
 
 
     /****************************************************************************/
-    /* Book details need to be of the form:
+    /* Processes a single line of book details, which needs to be of the form:
 
          #VernacularBookDetails usxAbbrev:=abbr:=abc;short=abcd;long=abcde
 
@@ -1854,7 +2061,7 @@ object ConfigData: ObjectInterface
 
     @Synchronized fun getValuesHavingPrefix (prefix: String): Map<String, String?>
     {
-        val res: MutableMap<String, String?> = HashMap()
+        val res: MutableMap<String, String?> = mutableMapOf()
         m_Metadata.filterKeys { it.startsWith(prefix) }. forEach { res[it.key] = m_Metadata[it.key]!!.m_Value }
         return res
     }
@@ -1933,7 +2140,7 @@ object ConfigData: ObjectInterface
 
     /****************************************************************************/
     /* Converts the saved translation lines to the form needed for further
-    processing. */
+       processing. */
 
     private fun processConverterStepTagTranslation (forcedAssignments: MutableSet<String>, theLine: String)
     {
@@ -1943,10 +2150,17 @@ object ConfigData: ObjectInterface
 
 
         /**************************************************************************/
+//        Dbg.d(">>>" + theLine)
+//        Dbg.dCont(theLine, "weird")
+
+
+
+        /**************************************************************************/
         val forced = "#=" in theLine
         var line = theLine.split(Regex("="), 2)[1]
         line = line.substring(line.indexOf("=") + 1).trim() // Get the RHS.
-        line = expandReferences(line, false)!!.trim()
+        line = line.substring(0, line.length - 1) // Remove the closing paren.
+        line = expandConfigData(line)!!.trim()
         val usx = line.split(" ")[0].substring(1).replace("Ͽ", "")
 
 
@@ -2034,706 +2248,343 @@ object ConfigData: ObjectInterface
 
 
 
+  /****************************************************************************/
+  /****************************************************************************/
+  /****************************************************************************/
+  /**                                                                        **/
+  /**       Calculated fields and functions used in calculated fields        **/
+  /**                                                                        **/
+  /****************************************************************************/
+  /****************************************************************************/
+
+  /****************************************************************************/
+  /*
+     Most configuration parameters are overtly supplied on the command line,
+     in configuration files, or via an environment variable.
+
+     But there are also some which are generated internally -- you still refer
+     to the parameter name in the normal way in order to access it, but instead
+     of its value being stored within the data from the outset, it is calculated
+     the first time it is used.  Many of these are used simply as intermediates
+     which are needed in order to create compound fields.  All of these are
+     handled via the data structure m_DataCalculators: some of the necessary
+     code is embedded within that, and in more complex cases, it calls upon
+     methods in this present section with names starting calculatedParameter_.
+
+     There are also a few functions which can be included in parameter
+     definitions.  These are marked out from the calculated parameters in
+     that they all take arguments.  They are handled by applyMetadataFunction
+     in this section.
+   */
+
+  /****************************************************************************/
+  /* Bible name used in Bible chooser.
+
+     General format is:
+
+       canonicalEnglishName (canonicalnglishAbbrev) / canonicalVernacularName (canonicalVernacularAbbrev)
+
+     where the canonical name is the name as supplied, but with mentions of
+     'New Testament' etc reduced to standard format.
+
+     The English portion is always present.  The vernacular portion is omitted
+     on English Bibles, and in cases where the English and vernacular forms are
+     very similar. */
+
+  private fun calculatedParameter_BibleNameForBibleChooser (): String
+  {
     /**************************************************************************/
-    /**************************************************************************/
-    /**                                                                      **/
-    /**                           OSIS support                               **/
-    /**                       Sword config information                       **/
-    /**                                                                      **/
-    /**************************************************************************/
-    /**************************************************************************/
-
-    /**************************************************************************/
-    /* Sword configuration information is complicated.
-
-       In part this is because it's not entirely clear from the Sword
-       documentation as to what it should contain.
-
-       In part it's because it's not inherently clear which Sword elements end
-       up on the STEP copyright page. (For example, it seems to make sense to
-       include anything at all which might be vaguely copyright-related in the
-       Sword 'About' parameter, where it can form part of a single dialogue.
-       But if you also include bits of copyright information piecemeal against
-       the other Sword attributes which seem to expect it, at least some of these
-       come out on the copyright page, leading to duplication.
-
-       In part it's because we have to superimpose upon all of this our own
-       STEP requirements.
-
-       And in part it's because those requirements get revised an awful lot,
-       not always for any easily-explained reason.  Thus we had rules --
-       admittedly fairly _complicated_ rules -- as to how to construct the
-       text which appears on the Bible chooser to identify a text.  These
-       rules then changed multiple times, and latterly are overridden
-       completely in many cases -- perhaps to reduce the length of the
-       title by four or five characters.
-
-       The overrides are there because we want our modules to have the same
-       names as those produced by other people for the same text; but the
-       overrides go beyond this in removing some of the standard data which
-       we were previously including as part of the title.  The result is that
-       we really have no consistent naming convention or format.  I do still
-       implement rules somewhat akin to the earlier ones, but the chances are
-       that they are never going to get a chance to run.
-
-       Anyway, all of these various complications can make life very difficult
-       when trying to work out how to specify information for use in the Sword
-       configuration file.  A detailed discussion follows, although probably
-       it will end up _so_ detailed as to be of little use.  And bear in mind
-       too that the code will probably change again in future, and chances are
-       that these comments won't.
-       
-       I am working towards something which I believe at least to be consistent.
-       That may, however, be all that it has going for it.
-       
-       At present I'm majoring on things which 'matter' in the Sword config
-       file, or on things which you might want to override in the config data,
-       or on things which are particularly complicated.
-       
-       Something matters if it is exposed to the Sword processing.  There are
-       various values in the Sword config file which I put there as comments.
-       These might merit similar special attention, but at the moment they
-       aren't getting it because there are more important things to do -- they
-       are things which _don't_ matter.
-
-       Something is complicated if either it has to be calculated, or if it is
-       assembled out of other bits.
-       
-       All of these are represented by STEP configuration parameters, but I
-       depart from my normal convention, and give them names starting 'sword'
-       rather than 'step'.
-       
-       I also try to group the names together -- so that, for example, all of
-       the elements which normally go to form the title as it appears in the
-       STEP Bible chooser have names with the same prefix.
-       
-       Parameters fall into two categories.  If they have 'Assembly' in their
-       names, then the parameter (if left to its own devices) gathers together
-       other information and formats it in a standard manner.  Otherwise they
-       supply basic atoms of information.
-       
-       You can override any of them in the normal way.  If you override an
-       Assembly parameter, then you take it on yourself to put together all
-       of the relevant information in an appropriate format.  Alternatively
-       you can override any of the atomic parameters, but leave the Assembly
-       parameter intact, in which case you will get a standard assemblage of
-       information in a standard format, but it will include your overrides.
-
-       If you do not override an atom, then accessing it will invoke the
-       standard processing to supply it.  This means that you can, if you
-       wish, assemble something out of a combination of overrides and standard
-       values.
-       
-       Most of these parameters (even the atomic ones) involve at least a
-       modicum of processing, and are therefore represented here by
-       _simulated_ parameters based upon processing methods.  The processing
-       will run only where you do not override the parameters, however.
-       
-       Details of the Sword parameters and how they appear in our own processing
-       are given in swordTemplateConfigFile.conf. 
-     */
+    val englishTitle = get("stepBibleNameEnglishCanonicalForBibleChooser")!!
+    val abbrevEnglish = get("stepAbbreviationEnglishCanonicalForBibleChooser") ?: get("stepAbbreviationEnglishAsSupplied")!!
+    val xVernacularTitle = getInternal("stepBibleNameVernacularCanonicalForBibleChooser", true)
+    val xAbbrevVernacular = getInternal("stepAbbreviationVernacularCanonicalForBibleChooser", true) ?: get("stepAbbreviationVernacularAsSupplied")!!
 
 
 
     /**************************************************************************/
-    /**************************************************************************/
-    /**************************************************************************/
-    /* Copyright details.  Often contains a lot of information and makes up the
-       bulk of the STEP copyright page. */
+    /* Reduce the English title to canonical form. */
+
+    val englishTitleCanonicalised = englishTitle.replace("\\s+".toRegex(), " ").trim()
+      .replace("(?i)New Testament".toRegex(), "NT")
+      .replace("(?i)Old Testament".toRegex(), "OT")
+      .replace("(?i)N\\.\\s?T\\.".toRegex(), "NT")
+      .replace("(?i)O\\.\\s?T\\.".toRegex(), "OT")
+
+
 
     /**************************************************************************/
-    /* This is the thing which is normally copied to the Sword config file.
+    /* Null out the vernacular name if we're dealing with an English text
+       or if the vernacular and English names are very similar.  This
+       isn't _guaranteed_ to avoid having very similar names, but it's a
+       reasonable stab at it. */
 
-       swordAboutAsSupplied comes from the translators / metadata or whatever.
-
-       stepSwordCopyrightDetailsConversionDetails is determined automatically
-         based upon what is done within the conversion processing.
-
-       The three elements (or whichever of them are present) are concatenated,
-       separates by newlines, and then returned with a modicum of markup which
-       later processing turns into an appropriate form. */
-
-    private fun swordCopyrightTextAssembly (): String
+    var vernacularTitle = xVernacularTitle
+    if (null != vernacularTitle)
     {
-      /************************************************************************/
-      var copyrightInformationAsSuppliedByTranslators = get("swordAboutAsSupplied")!! + (get("swordDerivedWorksLimitations") ?: "")
-      var detailsOfConversionProcessing = get("swordCopyrightTextConversionDetails")!!
+      val englishModified = StepStringUtils.removePunctuationAndSpaces(englishTitle)
+      val vernacularModified = StepStringUtils.removePunctuationAndSpaces(vernacularTitle)
 
-
-
-      /************************************************************************/
-      /* The 'About' information may contain [$COPYRIGHT] ... [/$COPYRIGHT],
-         which I convert here to a prettier format.  That's partly to make
-         things clearer for the user, and partly to make it clearer for us if we
-         need to check the content of a non-English copyright page. */
-
-
-      copyrightInformationAsSuppliedByTranslators = copyrightInformationAsSuppliedByTranslators
-        .replace("[\$COPYRIGHT]",  "<p><b>Copyright statement</b><p><div style='padding-left:2em'>")
-        .replace("[/\$COPYRIGHT]", "</div>")
-
-        .replace("[\$USAGE_RIGHTS]", "<p><br><br><b>Usage rights</b><p><div style='padding-left:2em'>")
-        .replace("[/\$USAGE_RIGHTS]", "</div>")
-
-        .replace("[\$ORGANISATION]", "<p><br><br><b>Additional information</b><p><div style='padding-left:2em'>")
-        .replace("[/\$ORGANISATION]",  "</div>")
-
-        .replace("[\$DERIVED_WORKS_LIMITATIONS]", "<p><br><br><b>If you wish to generate derived works</b><p><div style='padding-left:2em'>")
-        .replace("[/\$DERIVED_WORKS_LIMITATIONS]",  "</div>")
-
-
-
-      /************************************************************************/
-      if (detailsOfConversionProcessing.isNotEmpty())
-        detailsOfConversionProcessing = "<p><br><br><b>STEPBible information</b><div style='padding-left:2em'>$detailsOfConversionProcessing</div>"
-
-
-
-      /************************************************************************/
-      // $$$ We also have a built-in rubric specifically thanking Crosswire for texts which they make available, if only I can work out when it should be used.
-      val thanks = "<p><br><br><b>Acknowledgments</b><div style='padding-left:2em'>${ConfigData["stepThanks"]}</div>"
-
-
-
-      /************************************************************************/
-      val res = listOfNotNull(copyrightInformationAsSuppliedByTranslators, detailsOfConversionProcessing, thanks).joinToString("\n")
-      return res
+      if ("eng".equals(get("calcLanguageCode3Char"), ignoreCase = true)   ||
+        englishModified.contains(vernacularModified, ignoreCase = true)   ||
+        vernacularModified.contains(englishModified, ignoreCase = true))
+      vernacularTitle = ""
     }
 
 
 
+    /**************************************************************************/
+    /* The English abbreviation is what it is.  The vernacular abbreviation is
+       set to null if it is the same as the English. */
+
+    var vernacularAbbreviation = xAbbrevVernacular
+    if (null != vernacularAbbreviation && abbrevEnglish.equals(vernacularAbbreviation, ignoreCase = true))
+      vernacularAbbreviation = ""
+
 
 
     /**************************************************************************/
+    var res = "$englishTitleCanonicalised ($abbrevEnglish)"
+    var vernacularBit = "$vernacularTitle ($vernacularAbbreviation)"
+    if (vernacularBit.contains("()")) vernacularBit = vernacularBit.replace(" ()", "")
+    if (vernacularBit.isNotEmpty()) res += " / $vernacularBit"
+
+    return res
+  }
+
+
+  /****************************************************************************/
+  /* Simplest if I just copy the relevant portion of the spec :-
+
+     - The part of the Bible (OT+NT+Apoc) is only stated if it doesn’t contain
+       OT+NT.  This seems to suggest that you don't mention the Apocrypha on
+       a text which contains OT+NT even if it's present, and I suspect that's
+       not what's meant.
+
+     - If there are five books or fewer, they are listed (eg OT:Ps; Lam +NT).
+
+     - If there are more than five books, but not the complete set, mark the
+       text as eg 'OT incomplete +NT'.
+
+     Note that I make the assumption here that this is being called late in
+     the day, and that we therefore want to work with the _OSIS_ internal
+     data collection. */
+
+  private fun calculatedParameter_ScriptureCoverage (): String?
+  {
     /**************************************************************************/
+    val bookNumbers = InternalOsisDataCollection.getBookNumbers()
+
+
+
     /**************************************************************************/
-    /* Bible title.  Appears in the Bible chooser. */
+    val C_MaxIndividualBooksToReport = 5
+    val otBooks = bookNumbers.filter{ BibleAnatomy.isOt(it) }.map{ BibleBookNamesUsx.numberToAbbreviatedName(it) }
+    val ntBooks = bookNumbers.filter{ BibleAnatomy.isNt(it) }.map{ BibleBookNamesUsx.numberToAbbreviatedName(it) }
+    val dcBooks = bookNumbers.filter{ BibleAnatomy.isDc(it) }.map{ BibleBookNamesUsx.numberToAbbreviatedName(it) }
 
-    /****************************************************************************/
-    /**
-    * This gets rather complicated.  Originally I had hoped to be able to define
-    * this in the same was as all the other config information -- ie in a config
-    * file -- but there are just too many conditional inclusions etc for this
-    * to be really feasible.
-    *
-    * The outside world can obtain the value here by accessing the config
-    * parameter stepTextDescriptionAsItAppearsOnBibleList.  The user can
-    * override this in its entirety if necessary, in which case the calculations
-    * here are not performed.
-    *
-    * Otherwise, the result is assembled out of the various configuration
-    * parameters detailed under 'Get basic components' in the in-code
-    * comments, all of which are available to the user if they want to
-    * assemble their own title using them, and all of which can be overridden.
-    *
-    * The assembly is somewhat selective, the aim being to avoid duplicating
-    * information.
-    */
 
-    private fun swordBibleChooserTextAssembly (): String
+
+    /**************************************************************************/
+    var fullOt = otBooks.size == BibleAnatomy.getNumberOfBooksInOt()
+    val fullNt = ntBooks.size == BibleAnatomy.getNumberOfBooksInNt()
+
+
+
+    /**************************************************************************/
+    if (!fullOt && otBooks.isNotEmpty())
     {
-        /**********************************************************************/
-        /* Get basic components. */
-
-        var englishTitle = get("swordBibleChooserTextBibleNameEnglish")!!
-        val englishTitleCanonicalised = get("swordBibleChooserTextBibleNameEnglishCanonicalised")!!
-        var vernacularTitle = get("swordBibleChooserTextBibleNameVernacular") // Null if essentially the same as the English.
-
-        val englishAbbreviation = get("swordBibleChooserTextAbbreviationEnglish")!!
-        val vernacularAbbreviation = get("swordBibleChooserTextAbbreviationVernacular") // Null if essentially the same as the English.
-
-        var officialYear = get("swordBibleChooserTextOfficialYear")
-
-        val countriesWhereUsedPortion = get("swordBibleChooserTextCountriesWhereLanguageUsed")
-
-        var coveragePortion = get("swordBibleChooserTextPortionOfBibleCovered")
-
-        var abbreviatedNameOfRightsHolder = get("swordTextOwnerOrganisationAbbreviatedName")
-
-
-
-        /**********************************************************************/
-        /* Start assembling things. */
-
-        englishTitle = "$englishTitle ($englishAbbreviation)"
-        if (null != vernacularAbbreviation && null != vernacularTitle) vernacularTitle = "$vernacularTitle ($vernacularAbbreviation)"
-        val titlePortion = listOfNotNull(englishTitleCanonicalised, vernacularTitle).joinToString(" / ")
-
-
-
-        /**********************************************************************/
-        /* We want the rights holder only if it is not already mentioned in the
-           title. */
-
-        if (null != abbreviatedNameOfRightsHolder && abbreviatedNameOfRightsHolder.lowercase() in titlePortion.lowercase()) abbreviatedNameOfRightsHolder = null
-
-
-
-        /**********************************************************************/
-        /* We want the official year only if it does not appear within the
-           titles. */
-
-        if (null != officialYear)
-        {
-          if (englishTitle.contains(officialYear))
-            officialYear = null
-          else if (null != vernacularTitle && vernacularTitle.contains(officialYear))
-            officialYear = null
-        }
-
-
-
-        /**********************************************************************/
-        /* Join the rights holder and date if both are available. */
-
-        var abbreviatedNameOfRightsHolderAndOfficialYearPortion: String? = listOfNotNull(abbreviatedNameOfRightsHolder, officialYear).joinToString(" ")
-
-
-
-        /**********************************************************************/
-        /* We want language details only if it is not English and not already
-           contained within the title. */
-
-        var languagePortion: String? = get("stepLanguageNameInEnglish")!!
-        languagePortion = if ("english".equals(languagePortion, ignoreCase = true))
-          null
-        else if (englishTitle.contains(languagePortion!!, ignoreCase = true))
-          null
-        else
-          " In $languagePortion "
-
-
-
-        /**********************************************************************/
-        /* We want to drop the coverage details if they merely duplicate
-           information in the canonicalised English title.  At present, all I
-           do is to see if the coverage is given as NT or OT only and if the
-           title contains NT or OT as a word.  Could probably do with something
-           rather better than that eventually. */
-           
-        if (null != coveragePortion)
-        {
-          coveragePortion = coveragePortion.replace(" only", "")
-          if ("NT" == coveragePortion && Regex("\\W+NT\\W+").containsMatchIn(englishTitleCanonicalised))
-            coveragePortion = null
-          else if ("OT" == coveragePortion && Regex("\\W+OT\\W+").containsMatchIn(englishTitleCanonicalised))
-            coveragePortion = null
-        }
-
-
-
-        /**********************************************************************/
-        if (null != abbreviatedNameOfRightsHolderAndOfficialYearPortion && abbreviatedNameOfRightsHolderAndOfficialYearPortion.isBlank()) abbreviatedNameOfRightsHolderAndOfficialYearPortion= null
-        if (null != coveragePortion && coveragePortion.isBlank()) coveragePortion= null
-        if (null != languagePortion && languagePortion.isBlank()) languagePortion= null
-        return listOfNotNull(titlePortion, abbreviatedNameOfRightsHolderAndOfficialYearPortion, coveragePortion, languagePortion, countriesWhereUsedPortion).joinToString(" | ")
+      var nOtBooks = otBooks.size
+      if (dcBooks.contains("Dag") && !otBooks.contains("Dan")) ++nOtBooks
+      if (dcBooks.contains("Esg") && !otBooks.contains("Est")) ++nOtBooks
+      fullOt = nOtBooks == BibleAnatomy.getNumberOfBooksInOt()
     }
 
 
-    /****************************************************************************/
-    /* Normally we'll simply use the English abbreviation deduced from the module
-       name.  Having this method available lets us use that as a backstop, but
-       have the thing stipulated by way of an override. */
 
-    private fun swordBibleChooserTextAbbreviationEnglish (): String
-    {
-      return get("stepAbbreviationEnglish")!!
-    }
+    /**************************************************************************/
+    if (fullOt && fullNt) return if (dcBooks.isEmpty()) null else "+DC"
+    if (fullOt && ntBooks.isEmpty()) return if (dcBooks.isEmpty()) "OT only" else "OT+DC only"
+    if (fullNt && otBooks.isEmpty()) return if (dcBooks.isEmpty()) "NT only" else "DC+NT only"
 
 
-    /****************************************************************************/
-    /* Determines the vernacular abbreviation as follows:
 
-       - If no value has been specified, then return null.
-
-       - Otherwise, if the English and vernacular abbreviations are the same
-         (ignoring case), return null.
-
-       - Otherwise return the value specified.
-     */
-
-    private fun swordBibleChooserTextAbbreviationVernacular (): String?
-    {
-      var vernacularAbbreviation: String? = m_Metadata["stepTextDescriptionAbbreviationVernacular"]?.m_Value ?: return null
-      val englishAbbreviation = get("stepAbbreviationEnglish")!!
-
-      if (englishAbbreviation.equals(vernacularAbbreviation, ignoreCase = true))
-        vernacularAbbreviation = null
-
-      return vernacularAbbreviation
-    }
+    /**************************************************************************/
+    if (ntBooks.isEmpty() && otBooks.isEmpty()) return "DC only"
 
 
-    /****************************************************************************/
-    /* Having this intermediary lets us override this if necessary, but fall
-       back if necessary. */
 
-    private fun swordBibleChooserTextBibleNameEnglish (): String
-    {
-      return get("stepBibleNameEnglish")!!
-    }
-
-
-    /****************************************************************************/
-    /* Converts coverage information into standard format. */
-
-    private fun swordBibleChooserTextBibleNameEnglishCanonicalised (): String
-    {
-      val s = get("swordBibleChooserTextBibleNameEnglish")!!.replace("\\s+".toRegex(), " ").trim()
-      return s.replace("(?i)New Testament".toRegex(), "NT")
-              .replace("(?i)Old Testament".toRegex(), "OT")
-              .replace("(?i)N\\.\\s?T\\.".toRegex(), "NT")
-              .replace("(?i)O\\.\\s?T\\.".toRegex(), "OT")
-    }
-
-
-    /****************************************************************************/
-    /* Determines the vernacular name as follows:
-    
-       - If no value has been specified, then returns null.
-       
-       - Otherwise converts both the English and vernacular names to a form
-         devoid of punctuation.  If either contains the other (case-insensitive),
-         returns null.
-         
-       - Otherwise returns the actual vernacular name which was specified.
-    */
-    
-    private fun swordBibleChooserTextBibleNameVernacular (): String?
-    {
-      /****************************************************************************/
-      var vernacularName: String? = m_Metadata["stepTextDescriptionBibleNameVernacular"]?.m_Value ?: return null
-      val englishName = get("stepTextDescriptionBibleNameEnglish")!!
-      
-      val englishModified = StepStringUtils.removePunctuationAndSpaces(englishName)
-      val vernacularModified = StepStringUtils.removePunctuationAndSpaces(vernacularName!!)
-
-      if ("eng".equals(get("stepLanguageCode3Char"), ignoreCase = true)     ||
-          englishModified.contains(vernacularModified, ignoreCase = true)   ||
-          vernacularModified.contains(englishModified, ignoreCase = true)) 
-        vernacularName = null
-        
-        return vernacularName
-    }
-
-
-    /****************************************************************************/
-    /* Gives back a list of codes where the language is used, or null where the
-       language is ancient, common European, or a few others. */
-
-    private fun swordBibleChooserTextCountriesWhereLanguageUsed (): String?
-    {
-      val languageCode = get("stepLanguageCode3Char")!!
-      return if (languageCode.lowercase() in "grc.hbo.cmn.deu.eng.fra.fre.ger.nld.por.spa.") // Don't give details for ancient languages, common European languages and a few others.
-        null
+    /**************************************************************************/
+    val otPortion =
+      if (fullOt)
+        "OT "
+      else if (otBooks.isEmpty())
+        ""
+      else if (otBooks.size > C_MaxIndividualBooksToReport)
+       "OT (partial) "
       else
-        "${IsoLanguageAndCountryCodes.getCountriesWhereUsed(languageCode)}."
-    }
+      {
+        val fullBookList = otBooks.sortedBy { BibleBookNamesUsx.nameToNumber(it) }
+        fullBookList.joinToString(", ") + " only "
+      }
 
-
-    /****************************************************************************/
-    /* Simplest if I just copy the relevant portion of the spec :-
-
-      - The part of the Bible (OT+NT+Apoc) is only stated if it doesn’t contain
-        OT+NT.  This seems to suggest that you don't mention the Apocrypha on
-        a text which contains OT+NT even if it's present, and I suspect that's
-        not what's meant.
-
-      - If there are five books or fewer, they are listed (eg OT:Ps; Lam +NT).
-
-      - If there are more than five books, but not the complete set, mark the
-        text as eg 'OT incomplete +NT'.
-
-       Note that I make the assumption here that this is being called late in
-       the day, and that we therefore want to work with the OSIS internal
-       data collection. */
-
-    private fun swordBibleChooserTextPortionOfBibleCovered (): String?
-    {
-        /************************************************************************/
-        val bookNumbers = InternalOsisDataCollection.getBookNumbers()
-
-
-
-        /************************************************************************/
-        val C_MaxIndividualBooksToReport = 5
-        val otBooks = bookNumbers.filter{ BibleAnatomy.isOt(it) }.map{ BibleBookNamesUsx.numberToAbbreviatedName(it) }
-        val ntBooks = bookNumbers.filter{ BibleAnatomy.isNt(it) }.map{ BibleBookNamesUsx.numberToAbbreviatedName(it) }
-        val dcBooks = bookNumbers.filter{ BibleAnatomy.isDc(it) }.map{ BibleBookNamesUsx.numberToAbbreviatedName(it) }
-
-
-
-        /************************************************************************/
-        var fullOt = otBooks.size == BibleAnatomy.getNumberOfBooksInOt()
-        val fullNt = ntBooks.size == BibleAnatomy.getNumberOfBooksInNt()
-
-
-
-        /************************************************************************/
-        if (!fullOt && otBooks.isNotEmpty())
-        {
-            var nOtBooks = otBooks.size
-            if (dcBooks.contains("Dag") && !otBooks.contains("Dan")) ++nOtBooks
-            if (dcBooks.contains("Esg") && !otBooks.contains("Est")) ++nOtBooks
-            fullOt = nOtBooks == BibleAnatomy.getNumberOfBooksInOt()
-        }
-
-
-
-        /************************************************************************/
-        if (fullOt && fullNt) return if (dcBooks.isEmpty()) null else "+DC"
-        if (fullOt && ntBooks.isEmpty()) return if (dcBooks.isEmpty()) "OT only" else "OT+DC only"
-        if (fullNt && otBooks.isEmpty()) return if (dcBooks.isEmpty()) "NT only" else "DC+NT only"
-
-
-
-        /************************************************************************/
-        if (ntBooks.isEmpty() && otBooks.isEmpty()) return "DC only"
-
-
-
-        /************************************************************************/
-        val otPortion =
-          if (fullOt)
-              "OT "
-          else if (otBooks.isEmpty())
-              ""
-          else if (otBooks.size > C_MaxIndividualBooksToReport)
-               "OT (partial) "
-          else
-          {
-              val fullBookList = otBooks.sortedBy { BibleBookNamesUsx.nameToNumber(it) }
-              fullBookList.joinToString(", ") + " only "
-          }
-
-
-
-        /************************************************************************/
-        val ntPortion =
-          if (fullNt)
-              "NT "
-          else if (ntBooks.isEmpty())
-              ""
-          else if (ntBooks.size > C_MaxIndividualBooksToReport)
-              "NT (partial) "
-          else
-          {
-              val fullBookList = ntBooks.sortedBy { BibleBookNamesUsx.nameToNumber(it) }
-              fullBookList.joinToString(", ") + " only "
-          }
-
-
-
-        /************************************************************************/
-        val apocPortion = if (dcBooks.isEmpty()) "" else " DC "
-
-
-
-        /************************************************************************/
-        val haveNtPortion = ntPortion.isNotEmpty()
-        val haveApocPortion = apocPortion.isNotEmpty()
-        var res = otPortion + if (otPortion.isNotEmpty() && (haveNtPortion || haveApocPortion)) " + " else ""
-        res += ntPortion + if (haveApocPortion) " + " else ""
-        res += apocPortion
-
-        if (res.startsWith("+ ")) res = res.substring(2)
-
-        return res.ifEmpty { null }
-    }
-
-
-    /****************************************************************************/
-    /* This is the year which relates to the publication itself, and there are
-       various options for it, in descending order of priority :-
-
-        - Most recent copyright year.
-        - Publication year.
-        - Date-stamp on the datafile.
-        - Date the file was downloaded.
-
-       It's difficult to know what to do with this, not least because every text
-       seems to be a law unto itself.
-
-       At present I'm dealing with Biblica texts from DBL.  For some of these we
-       have been given specific copyright information as part of our agreement
-       with DBL.  These do not, in general, identify the copyright year as such
-       (ie as an entity in its own right), but they do usually have it within a
-       larger string, and -- so long as all of them are like the one I'm looking
-       at currently -- will have that preceded by a copyright symbol, so I can at
-       least extract the year from the available text.
-
-       Not all of the Biblica texts are like this, however, and where we have not
-       been given specific instructions regarding what copyright information to
-       use, I am forced back upon the DBL metadata.  Unfortunately, there does not
-       seem to be a tag corresponding to the copyright year (not sure if the
-       DBL metadata supports one, but even if it does, Biblica aren't using it).
-
-       In the case of the Biblica files, there is freeform text under
-       copyright/fullStatement/statementContent, and again it is possible to
-       parse this -- although we have to accept that because this is freeform
-       text, there is no guarantee that we will always be able to do so.
-
-       If the copyright year cannot be extracted, the STEP spec calls for
-       publication year to be used instead.  Assuming this refers to the year
-       the translators published the text, rather than the year STEP did its
-       stuff, again either DBL lacks a tag to identify this, or else Biblica are
-       not using it.  There _is_ a tag 'dateCompleted', but I have no reason to
-       believe that is meaningful.  In view of all this, I am not attempting to
-       give a publication date.
-
-       The next alternative, according to the STEP specification (above), is the
-       date-stamp on the data file.  Again I'm not sure what this means; the only
-       sense I can assign to it is the date on which the files were downloaded,
-       and that's covered by the final option (below), and therefore does not
-       actually constitute a separate option.
-
-       The final alternative is the date the data was downloaded.  However, we
-       seldom download stuff much in advance of generating a module for it
-       (certainly not often in a different year), and we're giving the module-
-       generation date later in the description string which the present method is
-       being used to help assemble, and there seems little point in duplicating
-       it.
-
-       In summary, therefore, if I can parse and find an actual copyright year in
-       the freeform copyright information, then you'll get it (although I'm not
-       convinced that we've seen enough different ways of representing this for
-       my processing in this respect to be comprehensive).  If I _can't_ get it by
-       this means, then I don't bother to give a year at all. */
-
-    private fun swordBibleChooserTextOfficialYear (): String?
-    {
-        /************************************************************************/
-        val mainPat = Regex("(?i)(&copy;|©|(copyright))\\W*(?<years>\\d{4}(\\W+\\d{4})*)") // &copy; or copyright symbol or the word 'copyright' followed by any number of blanks and four digits.
-        val subPat = Regex("(?<year>\\d{4})$") // eg ', 2012' -- ie permits the copyright details to have more than one date, in which case we take the last.
-        var res: String? = null
-
-
-
-        /************************************************************************/
-        for (key in listOf("swordAboutAsSupplied", "swordShortCopyright"))
-        {
-            var s = get(key) ?: continue
-            var matchResult = mainPat.find(s)
-            if (matchResult != null)
-              s = matchResult.groups["years"]!!.value
-
-            matchResult = subPat.find(s)
-            if (null != matchResult)
-            {
-                res = matchResult.groups["year"]!!.value
-                break
-            }
-        }
-
-
-
-        /************************************************************************/
-        return res?.trim()
-    }
 
 
     /**************************************************************************/
-    /* List of options taken from the documentation mentioned above.
-       don't change the ordering here -- it's not entirely clear whether
-       order matters, but it may do.
+    val ntPortion =
+      if (fullNt)
+        "NT "
+      else if (ntBooks.isEmpty())
+        ""
+      else if (ntBooks.size > C_MaxIndividualBooksToReport)
+        "NT (partial) "
+      else
+      {
+        val fullBookList = ntBooks.sortedBy { BibleBookNamesUsx.nameToNumber(it) }
+        fullBookList.joinToString(", ") + " only "
+      }
 
-       Note, incidentally, that sometimes STEP displays an information button at
-       the top of the screen indicating that the 'vocabulary feature' is not
-       available.  This actually reflects the fact that the Strong's feature is
-       not available in that Bible.
-
-       I am not sure about the inclusion of OSISLemma below.  OSIS actually
-       uses the lemma attribute of the w tag to record Strong's information,
-       so I'm not clear whether we should have OSISLemma if lemma appears at
-       all, even if only being used for Strong's; if it should be used if there
-       are occurrences of lemma _not_ being used for Strong's; or if, in fact,
-       it should be suppressed altogether.
-    */
-
-    private fun swordOptions (): String
-    {
-      var res = ""
-      FeatureIdentifier.process(FileLocations.getInternalOsisFilePath())
-      if ("ar" == ConfigData["stepLanguageCode2Char"]) res += "GlobalOptionFilter=UTF8ArabicPoints\n"
-      if (FeatureIdentifier.hasLemma()) res += "GlobalOptionFilter=OSISLemma\n"
-      if (FeatureIdentifier.hasMorphologicalSegmentation()) res += "GlobalOptionFilter=OSISMorphSegmentation\n"
-      if (FeatureIdentifier.hasStrongs()) res += "GlobalOptionFilter=OSISStrongs\n"
-      if (FeatureIdentifier.hasFootnotes()) res += "GlobalOptionFilter=OSISFootnotes\n"
-      if (FeatureIdentifier.hasScriptureReferences()) res += "GlobalOptionFilter=OSISScriprefs\n" // Crosswire doc is ambiguous as to whether this should be plural or not.
-      if (FeatureIdentifier.hasMorphology()) res += "GlobalOptionFilter=OSISMorph\n"
-      if (FeatureIdentifier.hasNonCanonicalHeadings()) res += "GlobalOptionFilter=OSISHeadings\n"
-      if (FeatureIdentifier.hasVariants()) res += "GlobalOptionFilter=OSISVariants\"\n"
-      if (FeatureIdentifier.hasRedLetterWords()) res += "GlobalOptionFilter=OSISRedLetterWords\n"
-      if (FeatureIdentifier.hasGlosses()) res += "GlobalOptionFilter=OSISGlosses\n"
-      if (FeatureIdentifier.hasTransliteratedForms()) res += "GlobalOptionFilter=OSISXlit\n"
-      if (FeatureIdentifier.hasEnumeratedWords()) res += "GlobalOptionFilter=OSISEnum\n"
-      if (FeatureIdentifier.hasGlossaryLinks()) res += "GlobalOptionFilter=OSISReferenceLinks\n"
-      if (FeatureIdentifier.hasStrongs()) res += "Feature=StrongsNumbers\n"
-      //??? if (!FeatureIdentifier.hasMultiVerseParagraphs()) res += "Feature=NoParagraphs\n"
-      return res
-    }
 
 
     /**************************************************************************/
-    /* Probably to be used only with open access texts (if there).  Biblica open
-      access texts contain the word 'open' (or the vernacular equivalent) in the
-      names as supplied to us.  We do not display that in the names as they
-      appear in the Bible chooser, but we still want this original form for use
-      in the copyright information.  And we want both the English and vernacular
-      form unless they are the same. */
+    val apocPortion = if (dcBooks.isEmpty()) "" else " DC "
 
-    private fun swordRawBibleNames (): String
+
+
+    /**************************************************************************/
+    val haveNtPortion = ntPortion.isNotEmpty()
+    val haveApocPortion = apocPortion.isNotEmpty()
+    var res = otPortion + if (otPortion.isNotEmpty() && (haveNtPortion || haveApocPortion)) " + " else ""
+    res += ntPortion + if (haveApocPortion) " + " else ""
+    res += apocPortion
+
+    if (res.startsWith("+ ")) res = res.substring(2)
+
+    return res.ifEmpty { null }
+  }
+
+
+  /****************************************************************************/
+  private fun calculatedParameter_calcTextSource (): String
+  {
+    var textSource = ""
+    if (textSource.isEmpty()) textSource = ConfigData["swordTextRepositoryOrganisationAbbreviatedName"] ?: ""
+    if (textSource.isEmpty()) textSource = ConfigData["swordTextRepositoryOrganisationFullName"] ?: ""
+    if (textSource.isEmpty()) textSource = "Unknown"
+
+    var ownerOrganisation = get("swordTextOwnerOrganisationFullName")!!
+    if (ownerOrganisation.isNotEmpty()) ownerOrganisation = "&nbsp;&nbsp;Owning organisation: $ownerOrganisation"
+
+    var textId: String = ConfigData["swordTextIdSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""
+    if (textId.isBlank() || "unknown".equals(textId, ignoreCase = true)) textId = ""
+
+    val textCombinedId =
+      if (textId.isNotEmpty())
+        "Version $textId"
+      else
+        ""
+
+    return "$textSource $ownerOrganisation $textCombinedId"
+  }
+
+  /****************************************************************************/
+  /* This is a year used to identify the text.  It's a little difficult to work
+     out what it should be, in part because every text appears to be a law
+     unto itself, and in part because I'm really not at all sure what this is
+     supposed to achieve.  I _think_ it works as follows:
+
+     If the English or vernacular text contains something which matches yyyy,
+     we assume that's the year we want.  Except that that means it's already
+     visible, so in this case we return null.
+
+     Otherwise, we work through the following:
+
+     - Any overtly specified year.
+     - Any yyyy figure available from fields likely to contain copyright
+       details.
+  */
+
+  private fun calculatedParameter_DateForBibleChooser (): String?
+  {
+    /**************************************************************************/
+    val yyyyRegex = Regex("(?<!\\d)\\d{4}(?!\\d)")
+    var x: String? = get("stepBibleNameEnglishAsSupplied");    if (yyyyRegex.containsMatchIn(x!!)) return null
+    x = get("stepBibleNameVernacularAsSupplied"); if (null != x && yyyyRegex.containsMatchIn(x)) return null
+
+
+
+    /**************************************************************************/
+    val mainPat = Regex("(?i)(&copy;|©|(copyright))\\W*(?<years>\\d{4}(\\W+\\d{4})*)") // &copy; or copyright symbol or the word 'copyright' followed by any number of blanks and four digits.
+    val subPat = Regex("(?<year>\\d{4})$") // eg ', 2012' -- ie permits the copyright details to have more than one date, in which case we take the last.
+    var res: String? = null
+
+
+
+    /**************************************************************************/
+    for (key in listOf("swordCopyrightStatement", "swordShortCopyright"))
     {
-      val english = (get("stepBibleNameEnglishAsSupplied") ?: get("stepBibleNameEnglish"))!!
-      val vernacular = get("stepBibleNameVernacularAsSupplied") ?: get("stepBibleNameVernacular") ?: ""
-      var res = english
-      if (vernacular.isNotEmpty()) res += "<br>$vernacular"
-      return res
+      var s = get(key) ?: continue
+      var matchResult = mainPat.find(s)
+      if (matchResult != null)
+        s = matchResult.groups["years"]!!.value
+
+      matchResult = subPat.find(s)
+      if (null != matchResult)
+      {
+        res = matchResult.groups["year"]!!.value
+        break
+      }
     }
 
 
-    /****************************************************************************/
-    private fun swordTextSource (): String
-    {
-      var textSource = ""
-      if (textSource.isEmpty()) textSource = ConfigData["swordTextRepositoryOrganisationAbbreviatedName"] ?: ""
-      if (textSource.isEmpty()) textSource = ConfigData["swordTextRepositoryOrganisationFullName"] ?: ""
-      if (textSource.isEmpty()) textSource = "Unknown"
 
-      var ownerOrganisation = getOrError("swordTextOwnerOrganisationFullName")
-      if (ownerOrganisation.isNotEmpty()) ownerOrganisation = "&nbsp;&nbsp;Owning organisation: $ownerOrganisation"
-
-      var textId: String = ConfigData["swordTextIdSuppliedBySourceRepositoryOrOwnerOrganisation"] ?: ""
-      if (textId.isBlank() || "unknown".equals(textId, ignoreCase = true)) textId = ""
-
-      val textCombinedId =
-        if (textId.isNotEmpty())
-          "Version $textId"
-        else
-          ""
-
-      return "$textSource $ownerOrganisation $textCombinedId"
-    }
+    /**************************************************************************/
+    return if (null == res)
+      null
+    else
+      "[$res]"
+  }
 
 
+  /****************************************************************************/
+  /* List of options taken from the documentation mentioned above.
+     don't change the ordering here -- it's not entirely clear whether
+     order matters, but it may do.
 
+     Note, incidentally, that sometimes STEP displays an information button at
+     the top of the screen indicating that the 'vocabulary feature' is not
+     available.  This actually reflects the fact that the Strong's feature is
+     not available in that Bible.
 
+     I am not sure about the inclusion of OSISLemma below.  OSIS actually
+     uses the lemma attribute of the w tag to record Strong's information,
+     so I'm not clear whether we should have OSISLemma if lemma appears at
+     all, even if only being used for Strong's; if it should be used if there
+     are occurrences of lemma _not_ being used for Strong's; or if, in fact,
+     it should be suppressed altogether.
+  */
 
-    /****************************************************************************/
-    /****************************************************************************/
-    /**                                                                        **/
-    /**                        Other calculated values                         **/
-    /**                                                                        **/
-    /****************************************************************************/
-    /****************************************************************************/
-
-    /****************************************************************************/
-    private fun stepDataPath (): String
-    {
-      return Paths.get("./modules/texts/ztext/", get("stepModuleName")).toString().replace("\\", "/") + "/"
-    }
-
-
+  private fun calculatedParameter_calcSwordOptions (): String
+  {
+    var res = ""
+    FeatureIdentifier.process(FileLocations.getInternalOsisFilePath())
+    if ("ar" == ConfigData["calcLanguageCode2Char"]) res += "GlobalOptionFilter=UTF8ArabicPoints\n"
+    if (FeatureIdentifier.hasLemma()) res += "GlobalOptionFilter=OSISLemma\n"
+    if (FeatureIdentifier.hasMorphologicalSegmentation()) res += "GlobalOptionFilter=OSISMorphSegmentation\n"
+    if (FeatureIdentifier.hasStrongs()) res += "GlobalOptionFilter=OSISStrongs\n"
+    if (FeatureIdentifier.hasFootnotes()) res += "GlobalOptionFilter=OSISFootnotes\n"
+    if (FeatureIdentifier.hasScriptureReferences()) res += "GlobalOptionFilter=OSISScriprefs\n" // Crosswire doc is ambiguous as to whether this should be plural or not.
+    if (FeatureIdentifier.hasMorphology()) res += "GlobalOptionFilter=OSISMorph\n"
+    if (FeatureIdentifier.hasNonCanonicalHeadings()) res += "GlobalOptionFilter=OSISHeadings\n"
+    if (FeatureIdentifier.hasVariants()) res += "GlobalOptionFilter=OSISVariants\"\n"
+    if (FeatureIdentifier.hasRedLetterWords()) res += "GlobalOptionFilter=OSISRedLetterWords\n"
+    if (FeatureIdentifier.hasGlosses()) res += "GlobalOptionFilter=OSISGlosses\n"
+    if (FeatureIdentifier.hasTransliteratedForms()) res += "GlobalOptionFilter=OSISXlit\n"
+    if (FeatureIdentifier.hasEnumeratedWords()) res += "GlobalOptionFilter=OSISEnum\n"
+    if (FeatureIdentifier.hasGlossaryLinks()) res += "GlobalOptionFilter=OSISReferenceLinks\n"
+    if (FeatureIdentifier.hasStrongs()) res += "Feature=StrongsNumbers\n"
+    //??? if (!FeatureIdentifier.hasMultiVerseParagraphs()) res += "Feature=NoParagraphs\n"
+    return res
+  }
 
 
 
@@ -2748,31 +2599,6 @@ object ConfigData: ObjectInterface
     /****************************************************************************/
 
     /****************************************************************************/
-    /* Does what it says on the tin -- takes a string which may contain commas
-       and (hopefully balanced) parentheses, and splits the string at commas
-       outside of parens.  The individual elements are then trimmed. */
-
-    private fun splitStringAtCommasOutsideOfParens (line: String): List<String>
-    {
-      var level = 0
-      var modifiedString = ""
-      for (c in line)
-      {
-        var newC = c
-        when (c)
-        {
-          '(' -> ++level
-          ')' -> --level
-          ',' -> if (0 == level) newC = '\u0003'
-        }
-        modifiedString += newC
-      }
-
-      return modifiedString.split("\u0003").map { it.trim() }
-    }
-
-
-    /****************************************************************************/
     private fun tidyVal (vv: String): String
     {
         val v = vv.trim()
@@ -2782,15 +2608,16 @@ object ConfigData: ObjectInterface
 
 
     /****************************************************************************/
-    data class ParameterSetting (var m_Value: String?, var m_Force: Boolean)
+    data class ParameterSetting (var m_Value: String?, var m_Force: Boolean, var m_Resolved: Boolean = false)
 
 
     /****************************************************************************/
     private var m_BookDescriptors: MutableList<VernacularBookDescriptor> = ArrayList()
     private val m_CopyAsIsLines: MutableList<String> = ArrayList()
     private val m_EnglishDefinitions: MutableSet<String> = mutableSetOf()
+    private var m_ExternalDataHandler: ConfigDataExternalFileInterfaceBase? = null
     private var m_Initialised: Boolean = false
-    private val m_Metadata = TreeMap<String, ParameterSetting?>(String.CASE_INSENSITIVE_ORDER)
+    private val m_Metadata: MutableMap<String, ParameterSetting?> = ConcurrentHashMap()
     private val m_RawUsxToOsisTagTranslationLines: MutableList<String> = ArrayList()
     private val m_RegexesForForcedOsisPreprocessing: MutableList<Pair<Regex, String>> = mutableListOf()
     private val m_RegexesForGeneralInputPreprocessing: MutableList<Pair<Regex, String>> = mutableListOf()
@@ -2885,94 +2712,152 @@ object ConfigData: ObjectInterface
   /****************************************************************************/
 
   /****************************************************************************/
-  /* Various methods which calculate config data on demand. */
+  /* Various methods which calculate config data on demand.  These are
+     used where the value is associated with a parameter name (the name being
+     the one which appears as the key in each entry below).  There is a separate
+     block which handles situations where the processing requires a function to
+     calculate it. */
 
   private val m_DataCalculators: Map<String, () -> String?> = mapOf(
-    "stepExtendedLanguageCode" to
+    /**************************************************************************/
+    /* Items which feed into the Bible chooser text.  (This is also duplicated
+       in the copyright / description block.) */
+
+    "calcBibleNameForBibleChooser" to { calculatedParameter_BibleNameForBibleChooser() },
+
+    "calcCountriesWhereLanguageUsed" to
+     {
+        val languageCode = get("calcLanguageCode3Char")!!
+        if (languageCode.lowercase() in "grc.hbo.ara.arb.cmn.deu.eng.fra.fre.ger.nld.por.spa.")
+          null
+        else
+          "${IsoLanguageAndCountryCodes.getCountriesWhereUsed(languageCode)}."
+     },
+
+    "calcLanguageDetailsForBibleChooser" to
+    {
+        val languageName = get("calcLanguageNameInEnglish")!!
+        if ("english".equals(languageName, ignoreCase = true))
+          null
+        else if (get("stepBibleNameEnglishAsSupplied")!!.contains(languageName, ignoreCase = true))
+          null
+        else
+          " In $languageName "
+    },
+
+    "calcScriptureCoverageForBibleChooserForBibleChooser" to { calculatedParameter_ScriptureCoverage() },
+
+    "calcDateForBibleChooser" to { calculatedParameter_DateForBibleChooser() },
+
+
+
+    /**************************************************************************/
+    /* Items which end up on the copyright / description block. */
+
+    /*----------------------------------------------------------------------*/
+    "calcAddedFeaturesForCopyrightPage" to
+    {
+      if (getAsBoolean("stepIsCopyrightText"))
+        ""
+      else
       {
-        val languageCode = get("stepLanguageCode2Char")!!
-        val script = get("stepSuppliedScriptCode")!!
-        val country = get("stepSuppliedCountryCode")!!
-        var res = listOf(languageCode, script, country).joinToString("-")
-        while (res.endsWith("-")) res = res.substring(0, res.length - 1)
-        res
-      },
+        val addedValue: MutableList<String> = mutableListOf()
+        if (getAsBoolean("stepAddedValueMorphology", "No")) addedValue.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Morphology"))
+        if (getAsBoolean("stepAddedValueStrongs", "No")) addedValue.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Strongs"))
+        val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_FootnotesMayHaveBeenAdded")
+        val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_FootnotesMayHaveBeenAdded")
+        var s = english
+        if (vernacular != english) s += " / $vernacular"
+        addedValue.add(s)
 
-    "stepDataPath" to { stepDataPath() },
+        if (addedValue.isEmpty())
+          ""
+        else
+          addedValue.joinToString("<br>- ", prefix = "- ", postfix = "<br>")
+      }
+    },
 
-    "stepForceVersePerLine" to { "false" },
 
-    "stepJarVersion" to { MiscellaneousUtils.getJarVersion() },
 
-    "stepLanguageNameInEnglish" to { IsoLanguageAndCountryCodes.getLanguageName(getInternal("stepLanguageCode3Char", false)!!) },
+    /*----------------------------------------------------------------------*/
+    "calcAmendmentsAppliedForCopyrightPage" to
+    {
+      if (getAsBoolean("stepIsCopyrightText"))
+        ""
+      else
+      {
+        /**********************************************************************/
+        val amendments: MutableList<String> = mutableListOf()
+        val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+        val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+        var s = english
+        if (vernacular != english) s += " / $vernacular"
+        amendments.add(s)
 
-    "stepModuleCreationDate" to { SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date()) },
 
-    "stepTextDirection" to { Unicode.getTextDirection(m_SampleText) }, // Need a string taken from a canonical portion of the scripture as input.
+
+        /**********************************************************************/
+        val deletedBooks = ConfigData["calcDeletedBooks"]
+        if (null != deletedBooks)
+          amendments.add("Software limitations mean we have had to remove the following books: ${deletedBooks}.")
+
+
+
+        /************************************************************************/
+        amendments += Issues.getCopyrightPageStatementsFromIssuesList()
+        amendments.joinToString("<br>- ", prefix = "- ", postfix = "<br>")
+      }
+    },
+
+
+
+    /**************************************************************************/
+    /* Items which end up in the Sword configuration file.  Unless indicated to
+       the contrary, items with names starting 'sword' supply values for
+       Sword config parameters of the same name (but devoid of the word Sword').
+       Items starting 'step' represent information generated by the processing
+       here and not actually required by Sword, but added as stylised comments
+       in the Sword config file for admin purposes. */
+
+    "calcExtendedLanguageCode" to // Sword config file.
+    {
+      val languageCode = get("calcLanguageCode2Char")!!
+      val script = get("calcScriptCodeAsSupplied")!!
+      val country = get("calcCountryCodeAsSupplied", "")
+      var res = listOf(languageCode, script, country).joinToString("-")
+      while (res.endsWith("-")) res = res.substring(0, res.length - 1)
+      res
+    },
+
+    "calcModuleCreationDate" to { SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date()) },
+
+    "calcJarVersion" to { MiscellaneousUtils.getJarVersion() },
+
+     // Fiddly.  The code here will be invoked only if we have no other means of obtaining the text direction
+     // (which we will do if we can successfully obtain the details from DBL metadata or if we have overtly
+     // been supplied with it).  The value here will be LTR or RTL, which is what most things use.  Unfortunately
+     // Sword requires LtoR or RtoL, so we have a separate swordTextDirection parameter.
+
+    "calcTextDirection" to { Unicode.getTextDirection(m_SampleText) },
 
     "stepTextModifiedDate" to { SimpleDateFormat("dd-MMM-yyyy").format(Date()) },
 
-    "swordBibleChooserTextAbbreviationEnglish" to { swordBibleChooserTextAbbreviationEnglish() },
+    "calcSwordDataPath" to { Paths.get("./modules/texts/ztext/", get("calcModuleName")).toString().replace("\\", "/") + "/" }, // Sword config file.
 
-    "swordBibleChooserTextAbbreviationVernacular" to { swordBibleChooserTextAbbreviationVernacular() },
+    "calcInputFileDigests" to { Digest.makeFileDigests() },
 
-    "swordBibleChooserTextAssembly" to { swordBibleChooserTextAssembly() },
+    "calcLanguageNameInEnglish" to { IsoLanguageAndCountryCodes.getLanguageName(getInternal("calcLanguageCode3Char", false)!!) },
 
-    "swordBibleChooserTextBibleNameEnglish" to { swordBibleChooserTextBibleNameEnglish() },
+    "calcSwordOptions" to { calculatedParameter_calcSwordOptions() },
 
-    "swordBibleChooserTextBibleNameEnglishCanonicalised" to { swordBibleChooserTextBibleNameEnglishCanonicalised() },
-
-    "swordBibleChooserTextBibleNameVernacular" to { swordBibleChooserTextBibleNameVernacular() },
-
-    "swordBibleChooserTextCountriesWhereLanguageUsed" to { swordBibleChooserTextCountriesWhereLanguageUsed() },
-
-    "swordBibleChooserTextOfficialYear" to { swordBibleChooserTextOfficialYear() },
-
-    "swordBibleChooserTextPortionOfBibleCovered" to { swordBibleChooserTextPortionOfBibleCovered() },
-
-    "swordCopyrightTextAssembly" to { swordCopyrightTextAssembly() },
-
-    "swordCopyrightTextConversionDetails" to { Issues.getDetailsForCopyrightPage() },
-
-    "swordInputFileDigests" to { Digest.makeFileDigests() },
-
-    "swordOptions" to { swordOptions() },
-
-    "swordTextDirection" to
+    "swordTextDirection" to // See notes for calcTextDirection.
       {
-        val x = (getInternal("stepTextDirection", true) ?: "LTR").uppercase()
+        val x = (getInternal("calcTextDirection", true) ?: "LTR").uppercase()
         if ("LTR" == x || "LTOR" == x) "LtoR" else "RtoL"
       },
 
-    "swordRawBibleNames" to { swordRawBibleNames() },
-
-    "swordTextSource" to { swordTextSource() },
+    "calcTextSource" to { calculatedParameter_calcTextSource() },
   )
-
-
-  /****************************************************************************/
-  /* Called to check if a given configuration item is actually supplied by a
-     calc function.  If it is, it carries out the calculation, and stores the
-     result for future use.  Storing it means that it will not be subject to
-     changes if the things upon which it depends change.  It's swings and
-     roundabouts as to whether this is the right thing to do, but I think
-     it's probably more comprehensible if it remains constant after first
-     being accessed.
-
-     Note that I don't set the 'force' flag when storing the calculated
-     value.  Again a bit of a moot point, but I don't think I want to override
-     any values which the user may have chosen to supply.  Not that we'll
-     actually get as far as the present method anyway if we already have a
-     value available for the selected parameter. */
-
-  private fun getCalculatedValue (key: String): String?
-  {
-    //Dbg.d(key)
-    val fn = m_DataCalculators[key] ?: return null
-    val res = fn()
-    if (null != res) put(key, res, false)
-    return res
-  }
 }
 
 
@@ -3000,67 +2885,45 @@ object ConfigArchiver
 
   /****************************************************************************/
   /**
-  * Creates a zip file containing all of the config data files used on this
-  * run, and returns the stylised name under which the data has been stored.
-  * except that it _doesn't_ do this if this run actually took its data from
-  * the zip file, because in that case nothing will have changed.  (It still
-  * gives back the file path, though.)
+   * Returns a list of all of those config files (other than the root files and
+   * built-in ones) used by this run.  I save these as part of the repository
+   * package, so they're available should we need to rebuild things.
+   *
+   * @return List of file paths.
+   */
+
+  fun getConfigFilesUsedByThisRun (): List<String>
+  {
+    return m_FileNames.values.mapNotNull { fileName ->
+      if (null == fileName)
+        null
+      else if ("step.conf" == fileName || "step.xlsx" == fileName || fileName.contains("jarResources", ignoreCase = true))
+        null
+      else
+        FileLocations.getInputPath(fileName)
+      }
+  }
+
+
+  /****************************************************************************/
+  /**
+  * Returns a list of translatable text entries used (or potentially used) in
+  * this run.
   *
-  * @return Path to zip file.
+  * This includes all of the special entries, all of the English entries, and
+  * any entries for this text's language which contain actual values.
+  *
+  * @return List of strings.
   */
 
-  fun createZip ()
+  fun getTranslationTextUsedByThisRun (): List<String>
   {
-    /**************************************************************************/
-    val translationsFileName = "vernacularTranslationsDb.txt"
-    val zipFilePath = FileLocations.getNewArchivedConfigZipFilePath()
-    val zipFile = File(zipFilePath)
-
-
-
-    /**************************************************************************/
-    /* If we took input from a zip file, we can reuse that.  Or sadly, not
-       quite -- we need to replace the config.conf, because that gets updated
-       with new history and version information. */
-
-    if (ConfigData.getAsBoolean("configFromZip", "no"))
-    {
-      replaceConfigConf()
-      return
-    }
-
-
-
-    /**************************************************************************/
-    /* Take input from actual files. */
-
-    ZipOutputStream(BufferedOutputStream(FileOutputStream(zipFile))).use { zipOut ->
-        /**********************************************************************/
-        /* Physical files. */
-
-        m_FileNames.keys.forEach { fileName ->
-          if ("step.conf" == fileName) return@forEach
-          val file = File(m_FileNames[fileName]!!)
-          FileInputStream(file).use { fis ->
-            val zipEntry = ZipEntry(file.name) // Only store filename, not path.
-            zipOut.putNextEntry(zipEntry)
-            fis.copyTo(zipOut)
-            zipOut.closeEntry()
-          } // FileInputStream.use
-        } // m_FilePaths.forEach
-
-
-
-        /**********************************************************************/
-        /* Add material which we need to pre-process -- presently only the
-           translations database, where a given text will use only the
-           special lines, the English lines, and the ones specific to the
-           language of the text (if any). */
-
-        val translationsDbPath = FileLocations.getVernacularTextDatabaseFilePath()
-        val languageCode = ConfigData["stepLanguageCode3Char"]!!
-        val lines = File(translationsDbPath).readLines().filter { it.startsWith("Special:") || it.startsWith("eng|") || it.startsWith("$languageCode|")}
-        addTextDataToZip(zipOut, Path(translationsDbPath).name, lines)
+    val translationsDbPath = FileLocations.getVernacularTextDatabaseFilePath()
+    val languageCode = ConfigData["calcLanguageCode3Char"]!!
+    return File(translationsDbPath).readLines().filter {
+      it.startsWith("Special:") ||
+      it.startsWith("eng|")     ||
+      (it.startsWith("$languageCode|") && "#Untranslatable#" !in it )
     }
   }
 
@@ -3074,7 +2937,7 @@ object ConfigArchiver
    * than one file with a given name.  Throws an exception if the file cannot
    * be found
    *
-   * @param pseudoFilePath Input file path, including specials like $find.
+   * @param pseudoFilePath Input file path, including specials like @find.
    *
    * @return Lines from file, or null if the file has already been loaded.
    */
@@ -3082,11 +2945,11 @@ object ConfigArchiver
   fun getDataFrom (pseudoFilePath: String, okIfNotExists: Boolean): List<String>?
   {
     /**************************************************************************/
-    /* Pseudo file path may, for instance, start $find/.  Or it may be a full
+    /* Pseudo file path may, for instance, start @find/.  Or it may be a full
        path.  Or, if we are taking input from a previous zip, it doesn't much
        matter what it is, because we pretty much ignore the path. */
 
-    val takingInputFromPreviousZip = ConfigData.getAsBoolean("configFromZip", "no")
+    val takingInputFromPreviousZip = ConfigData.getAsBoolean("stepConfigFromZip", "no")
     val fileName = File(pseudoFilePath).name
     val filePath = if (takingInputFromPreviousZip) null else FileLocations.getInputPath(pseudoFilePath)
 
@@ -3107,10 +2970,7 @@ object ConfigArchiver
 
 
     /**************************************************************************/
-    return if (takingInputFromPreviousZip)
-      getLinesFromZipFile(fileName, okIfNotExists)
-    else
-      getLinesFromRealFile(filePath!!, okIfNotExists)
+    return getLinesFromRealFile(filePath!!, okIfNotExists)
   }
 
 
@@ -3158,74 +3018,6 @@ object ConfigArchiver
 
 
   /****************************************************************************/
-  private fun getLinesFromZipFile (pseudoFilePath: String, okIfNotExists: Boolean): List<String>
-  {
-    val entryName = File(pseudoFilePath).name
-
-    ZipFile(m_ExistingConfigArchiveFile).use { zip ->
-        val entry = zip.getEntry(entryName) ?: throw StepExceptionWithoutStackTraceBase("Failed to find $entryName in previous config zip file.")
-        zip.getInputStream(entry).use { inputStream ->
-            return BufferedReader(InputStreamReader(inputStream)).readLines()
-        }
-    }
-  }
-
-
-  /****************************************************************************/
-  /* Creates a revised archive in the target location, containing a copy of the
-     original, but with config.conf replaced so as to pick up the new config
-     data. */
-
-  private fun replaceConfigConf ()
-  {
-    val originalZipBytes = File(m_ExistingConfigArchiveFile).readBytes()
-    val newFileBytes = File(FileLocations.getStepConfigFilePath()).bufferedReader().readText().toByteArray()
-    val entryName = "config.conf"
-    val updatedZipBytes = replaceZipEntry(originalZipBytes, entryName, newFileBytes)
-    StepFileUtils.deleteFile(m_ExistingConfigArchiveFile)
-    File(FileLocations.getNewArchivedConfigZipFilePath()).writeBytes(updatedZipBytes)
-  }
-
-  /****************************************************************************/
-  private fun replaceZipEntry(zipBytes: ByteArray, entryName: String, newFileBytes: ByteArray): ByteArray
-  {
-    val outputStream = ByteArrayOutputStream()
-    val zipOutputStream = ZipOutputStream(outputStream)
-
-    val inputStream = ByteArrayInputStream(zipBytes)
-    val zipInputStream = ZipInputStream(inputStream)
-
-    var entry: ZipEntry?
-
-    // Read the original ZIP file and copy its contents except the entry to be replaced
-    while (zipInputStream.nextEntry.also { entry = it } != null)
-    {
-      val name = entry!!.name
-      if (name == entryName)
-        continue
-
-      // Copy existing entry to new ZIP
-      zipOutputStream.putNextEntry(ZipEntry(name))
-      zipInputStream.copyTo(zipOutputStream)
-      zipOutputStream.closeEntry()
-    }
-
-    zipInputStream.close()
-
-    zipOutputStream.putNextEntry(ZipEntry(entryName))
-    zipOutputStream.write(newFileBytes)
-    zipOutputStream.closeEntry()
-    zipOutputStream.close()
-    return outputStream.toByteArray()
-  }
-
-
-
-  /****************************************************************************/
   private val m_FileNames: MutableMap<String, String?> = mutableMapOf()
-  private val m_ExistingConfigArchiveFile by lazy {
-    val res = FileLocations.getExistingArchivedConfigZipFilePath()
-    ConfigData["stepTargetAudience"] = if ("_public" in res) "public" else "step"
-    res
-  }
 }
+

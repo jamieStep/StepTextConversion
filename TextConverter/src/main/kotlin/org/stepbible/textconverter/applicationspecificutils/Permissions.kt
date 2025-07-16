@@ -120,6 +120,5 @@ object Permissions: ObjectInterface
   /****************************************************************************/
 
   /****************************************************************************/
-  private val m_IsCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText", "yes")
-  private val m_IsOkToGenerateFootnotes = !ConfigData.getAsBoolean("stepIsCopyrightText", "yes") || ConfigData.getAsBoolean("stepIsOkToGenerateFootnotes", "no")
+  private val m_IsOkToGenerateFootnotes = !ConfigData.getAsBoolean("stepIsCopyrightText", "yes") || ConfigData.getAsBoolean("calcIsOkToAddFootnotes", "no")
 }
