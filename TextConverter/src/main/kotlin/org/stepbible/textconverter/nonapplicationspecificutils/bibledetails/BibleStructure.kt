@@ -336,6 +336,10 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
       val chaptersInOtherSchemeButNotInTextUnderConstruction = chaptersInOtherScheme subtract chaptersInTextUnderConstruction
       val chaptersInBoth = chaptersInTextUnderConstructionButNotInOtherScheme intersect chaptersInOtherScheme
       val versesOutOfOrder = schemeA.getOutOfOrderVerses()
+
+//      Dbg.d("In text but not osis2mod: " + versesInTextUnderConstructionButNotInOtherScheme.sorted().map { Ref.rd(it).toString()}.joinToString(", "))
+//      Dbg.d("In osis2mod but not text: " + versesInOtherSchemeButNotInTextUnderConstruction.sorted().map { Ref.rd(it).toString()}.joinToString(", "))
+
       return ComparisonWithOtherScheme(chaptersInTextUnderConstructionButNotInOtherScheme.sorted(), chaptersInOtherSchemeButNotInTextUnderConstruction.sorted(), chaptersInBoth.sorted(),
                                        versesInTextUnderConstructionButNotInOtherScheme.sorted(), versesInOtherSchemeButNotInTextUnderConstruction.sorted(), versesInBoth.sorted(),
                                        versesOutOfOrder)

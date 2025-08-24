@@ -304,8 +304,8 @@ class PA_MissingVerseHandler (fileProtocol: X_FileProtocol)
 
   private fun createEmptyVerseForMissingVerse (rootNode: Node, refKey: RefKey, insertBefore: Node?): Pair<Node, Node>
   {
-    Dbg.d("EmptyVerseForMissingVerse: " + Ref.rd(refKey).toString())
-    Dbg.outputDom(rootNode.ownerDocument  )
+    //Dbg.d("EmptyVerseForMissingVerse: " + Ref.rd(refKey).toString())
+    //Dbg.outputDom(rootNode.ownerDocument  )
     Logger.info(refKey, "Created verse which was missing from the original text.")
 
     val footnoteText = TranslatableFixedText.stringFormat(Language.Vernacular, "V_emptyContentFootnote_verseWasMissing")

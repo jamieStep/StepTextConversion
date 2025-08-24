@@ -199,34 +199,56 @@ private class PA_TableHandlerPerBook (val m_FileProtocol: X_FileProtocol)
   /****************************************************************************/
 
   /****************************************************************************/
-  /* The aim here time is to encapsulate the entire table within an elision,
-     and then to insert some kind of marker wherever the verse boundaries
-     originally came, just to show where they are.  If the table 'more or less'
-     starts with a sid, then I move that sid out of the table and use that as
-     the container for the elided verses.  Otherwise I locate the last verse
-     prior to the table and use that.  Trouble is that there are still probably
-     plenty of special cases for which I don't cater -- for example if the table
-     contains headers before the first verse.  In this case, we'd want the
-     headers to come outside the table, but we'd have no preceding verse to own
-     the table. */
+  /* In most cases, we're going to have a table running across multiple verses,
+     and probably doing so in a fairly unpalatable.  (This isn't _always_ the
+     case, though -- I have seen a few cases where the translators have elided
+     the content of a table, so that the entire table appears within a single
+     verse.)
+
+     Our aim here is to do what I have just said that translators very
+     occasionally do -- to take all of the verses in the table and to place
+     the entire table within one elided verse.
+
+     There is some slight complication as to what that verse should be --
+     should it be the very first verse in the table, or should it be the
+     verse which starts immediately before the table.  This is handled by
+     identifyAndPositionTableOwnerNode.
+
+     The present method then replaces each sid within the table by a
+     boundary marker -- a <_X_verseBoundaryWithinElidedTable> tag (which
+     I process into valid OSIS elsewhere) containing a stylised piece of
+     text (which presently is the verse number in parentheses).  This makes
+     it possible to identify where the verse boundaries fell originally.
+
+     There is a slight issue here, because there is no guarantee that a
+     parenthesised verse number will make sense in all text; in particular,
+     parentheses may carry a different semantics, or may simply be susceptible
+     to being confused with other characters.  However, it is the best I can
+     think of presently.
+
+     We also remove contained eids here, so as to ensure there is no verse
+     markup within the table. */
 
   private fun restructureTablesConvertToElidedForm (table: Node)
   {
     /**************************************************************************/
     /* Work out which verse should own the table, and position it if
-       necessary. */
+       necessary.  If identifyAndPositionTableOwnerNode returns null, it
+       implies that the table already does not cross a verse boundary, and
+       there is therefore nothing we need to do with it. */
 
-    val owningVerseSid = identifyAndPositionTableOwnerNode(table)
+    val owningVerseSid = identifyAndPositionTableOwnerNode(table) ?: return
     val verseRefKeysContainedInTable = mutableListOf(m_FileProtocol.getSidAsRefKey(owningVerseSid))
 
 
 
     /**************************************************************************/
-    /* Replace all sids by visible verse-boundary markers.  I'm not really sure
-       what to do about the verse-boundary markup.  I suspect the actual
-       numerals need to be in English so they look like verse numbers.  But
-       the enclosing markup (eg parens) may need to be converted to vernacular.
-       Can't achieve that combination at present. */
+    /* Replace all sids by visible verse-boundary markers, and then remove all
+       internal verse ends.  I'm not really sure what to do about the
+       verse-boundary markup.  I suspect the actual numerals need to be in
+       English so they look like verse numbers.  But the enclosing markup (eg
+       parens) may need to be converted to vernacular.  Can't achieve that
+       combination at present. */
 
     var lastSidWithinTable: String? = null
     fun replaceVerseWithBoundaryMarker (sid: Node)
@@ -241,34 +263,98 @@ private class PA_TableHandlerPerBook (val m_FileProtocol: X_FileProtocol)
       Dom.deleteNode(sid)
     }
 
-    table.findNodesByName(m_FileProtocol.tagName_verse()).forEach { replaceVerseWithBoundaryMarker(it) }
+    table.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid()).forEach { replaceVerseWithBoundaryMarker(it) }
+    val eids = table.findNodesByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid())
+    val lastEidWithinTable = if (eids.isEmpty()) null else eids.last()[m_FileProtocol.attrName_verseEid()]
+    eids.forEach { Dom.deleteNode(it) }
+
+
+
+    /**************************************************************************/
+    /* There is one special case we need to deal with.  The table may have
+       contained a number of sids, and we will have got rid of all of the
+       contained sids and eids.  However, it's possible that the eid
+       corresponding to the last sid may actually fall outside the table, in
+       which case we still need to get rid of it. */
+
+    if (null != lastSidWithinTable && lastEidWithinTable != lastSidWithinTable)
+      Dom.deleteNode(Dom.findNodeByAttributeValue(Dom.getAncestorNamed(table, m_FileProtocol.tagName_chapter())!!, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseEid(), lastSidWithinTable!!)!!)
+
+
+
+    /**************************************************************************/
+    /* Add the verse refKeys as an attribute to the containing verse sid.
+       Seems like a reasonable idea, but I can't recall whether this is just
+       for debugging, or whether I actually _need_ it. */
+
     NodeMarker.setTableRefKeys(owningVerseSid, verseRefKeysContainedInTable.joinToString(","))
 
 
 
     /**************************************************************************/
-    /* Turn the original verse into an elision covering the entire table.
-       Change the sid of the owning verse to reflect the elision, and add an
-       explanatory footnote. */
+    /* Add some useful addition attributes ...
 
-    val startOfElisionRef = m_FileProtocol.readRef(owningVerseSid, m_FileProtocol.attrName_verseSid())
-    m_FileProtocol.updateVerseSid(owningVerseSid, startOfElisionRef.toRefKey())
-    NodeMarker.setElisionType(owningVerseSid, "tableElision")
+       - Make up a unique id and add it to the table and the owning verse, so
+         we can readily tie the two together.
+
+       - Mark the owning verse as being a table elision.  (Note that if the
+         table was already set up as an elision by the translators -- or more
+         accurately, if it contained no verse boundaries, and therefore we
+         adjudged that it required no work -- we never get here, and therefore
+         such tables are not marked.
+     */
 
     val uniqueId = Globals.getUniqueInternalId() // Link the table with its associated sid to help later processing (SE_EnhancedVerseEndInserter).
     NodeMarker.setUniqueId(owningVerseSid, uniqueId)
     NodeMarker.setUniqueId(table, uniqueId)
+    NodeMarker.setElisionType(owningVerseSid, "tableElision")
 
-    if (null != lastSidWithinTable)
-    {
-      m_FileProtocol.updateVerseSid(owningVerseSid, startOfElisionRef.toRefKey(), m_FileProtocol.readRef(lastSidWithinTable!!).toRefKey())
-      val range = RefRange(startOfElisionRef, m_FileProtocol.readRef(lastSidWithinTable!!))
-      range.getLowAsRef().setV(range.getLowAsRef().getV() + 1)
-      val owningVerseFootnote = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToMasterVerseInElidedTable, m_RootNode.ownerDocument, startOfElisionRef.toRefKey(), TranslatableFixedText.stringFormatWithLookup("V_tableElision_owningVerse", range))
-      if (null != owningVerseFootnote)
-        Dom.insertNodeAfter(owningVerseSid, owningVerseFootnote)
-    }
 
+
+    /**************************************************************************/
+    /* I imagine all of the tables which we have had cause to process here will
+       have had verse markup within the table to begin with, and therefore in
+       particular will have had a last contained verse.  I check that this is
+       the case anyway.*/
+
+    if (null == lastSidWithinTable)
+      return
+
+
+
+    /**************************************************************************/
+    /* Change the sid for the containing verse to reflect the elision. */
+
+    val startOfElisionRef = m_FileProtocol.readRef(owningVerseSid, m_FileProtocol.attrName_verseSid())
+    m_FileProtocol.updateVerseSid(owningVerseSid, startOfElisionRef.toRefKey(), m_FileProtocol.readRef(lastSidWithinTable!!).toRefKey()) // Change sid.
+
+
+
+    /**************************************************************************/
+    /* If we're permitted to create footnotes, add one explaining what we've
+       done.  We need to refer to the range covered by the footnote, which can
+       be deduced from the sid of the containing verse and the last contained
+       verse -- except that we need to increment the verse number for the former
+       to fit in with the wording of the footnote. */
+
+    val range = RefRange(startOfElisionRef, m_FileProtocol.readRef(lastSidWithinTable!!))
+    range.getLowAsRef().setV(range.getLowAsRef().getV() + 1)
+    val owningVerseFootnote = m_FileProtocol.makeFootnoteNode(Permissions.FootnoteAction.AddFootnoteToMasterVerseInElidedTable, m_RootNode.ownerDocument, startOfElisionRef.toRefKey(), TranslatableFixedText.stringFormatWithLookup("V_tableElision_owningVerse", range))
+    if (null != owningVerseFootnote) // Will be null if, in fact, we're not permitted to create footnotes.
+      Dom.insertNodeAfter(owningVerseSid, owningVerseFootnote)
+
+
+
+    /**************************************************************************/
+    /* Finally, earlier processing will have deleted the eid for the
+       containing verse, so we need to insert it, just after the table. */
+
+    val eidNode = m_FileProtocol.makeVerseEidNode(table.ownerDocument, owningVerseSid[m_FileProtocol.attrName_verseSid()]!!)
+    Dom.insertNodeAfter(table, eidNode)
+
+
+
+    /**************************************************************************/
     //Dbg.d(table.ownerDocument)
   }
 
@@ -280,8 +366,21 @@ private class PA_TableHandlerPerBook (val m_FileProtocol: X_FileProtocol)
      with a verse node, then the verse which immediately precedes the table is
      the owner. */
 
-  private fun identifyAndPositionTableOwnerNode (table: Node): Node
+  private fun identifyAndPositionTableOwnerNode (table: Node): Node?
   {
+    /**************************************************************************/
+    /* Very occasionally the translators supply us with something where no work
+       is required.  Given that tables are _never_ small enough to fit within
+       a single verse, this will presumably mean that they have already placed
+       it within an elided verse.  However the test below is rather more simple-
+       minded: I simply assume that if the table contains no verse markers, it
+       must already be ok. */
+
+    if (null == table.findNodeByName(m_FileProtocol.tagName_verse(), false))
+      return null
+
+
+
     /**************************************************************************/
     val owningVerseSid: Node?
     var ix = -1
@@ -327,7 +426,7 @@ private class PA_TableHandlerPerBook (val m_FileProtocol: X_FileProtocol)
     /* Otherwise, the first verse _wasn't_ at the start of the table, so we
        make the verse prior to the table into the owner. */
 
-    val ref = m_FileProtocol.readRef(table.findNodeByName(m_FileProtocol.tagName_verse(), false)!!, m_FileProtocol.attrName_verseSid())
+    val ref = m_FileProtocol.readRef(table.findNodeByAttributeName(m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid())!!, m_FileProtocol.attrName_verseSid())
     ref.setV(ref.getV() - 1)
     val res = Dom.findNodeByAttributeValue(m_RootNode, m_FileProtocol.tagName_verse(), m_FileProtocol.attrName_verseSid(), m_FileProtocol.refToString(ref.toRefKey()))
     if (null == res)

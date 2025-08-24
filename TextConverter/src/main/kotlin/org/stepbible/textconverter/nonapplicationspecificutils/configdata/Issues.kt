@@ -39,7 +39,7 @@ import java.io.File
  * - A text contained broken cross-references.  The USX was perfectly valid,
  *   but incomplete.  Although fixable in theory, there seemed little point
  *   in giving over effort to it.  Here I opted to record the existence of
- *   the issue (and we also intended to report it to the supplier, but I
+ *   the issue (and we also intended to report it to the supplier), but I
  *   did not record a remedial action, and did not consider it worth mentioning
  *   on the copyright page.
  *
@@ -83,7 +83,7 @@ import java.io.File
  * moduleName should give enough information to enable us to be certain which
  * module the file belongs to, should it become separated from other things.
  *
- * issues should always ne present.
+ * issues should always be present.
  *
  * Each individual issue must have a date field.  The other fields shown above
  * are the ones I look for, but you can add other fields if you feel they would

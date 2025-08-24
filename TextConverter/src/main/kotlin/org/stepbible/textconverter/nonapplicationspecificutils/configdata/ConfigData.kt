@@ -1023,13 +1023,15 @@ object ConfigData: ObjectInterface
    * Clearly you're not going to want to store too many settings this way, but
    * there may be things -- such as the location of osis2mod -- which is more
    * easily handled like this, rather than storing it in config files.
+   *
+   * @param environmentVariable Content of the environment variable.
    */
 
-  fun loadFromEnvironmentVariable ()
+  fun loadFromEnvironmentVariable (environmentVariable: String)
   {
     ConfigFilesStack.push("StepTextConverterParameters environment variable")
 
-    var parmList = System.getenv("StepTextConverterParameters") ?: return
+    var parmList = environmentVariable ?: return
     parmList = parmList.replace("\\\\", "\u0001").replace("\\;", "\u0002")
     val settings = parmList.split(";").map { it.trim().replace("\u0001", "\\").replace("\u0002", ";") }
     settings.forEach {
@@ -1069,7 +1071,7 @@ object ConfigData: ObjectInterface
     {
       "DBL" ->
       {
-        load("@jarResources/ReferenceFormats/$externalDataFormat.conf", false)
+        load("@jarResources/PerTextRepositoryOrganisation/$externalDataFormat.conf", false)
         ConfigDataExternalFileInterfaceDbl.initialise()
         m_ExternalDataHandler = ConfigDataExternalFileInterfaceDbl
       }
@@ -2507,9 +2509,14 @@ object ConfigData: ObjectInterface
   {
     /**************************************************************************/
     val yyyyRegex = Regex("(?<!\\d)\\d{4}(?!\\d)")
-    var x: String? = get("stepBibleNameEnglishAsSupplied");    if (yyyyRegex.containsMatchIn(x!!)) return null
-    x = get("stepBibleNameVernacularAsSupplied"); if (null != x && yyyyRegex.containsMatchIn(x)) return null
 
+    for (key in listOf("stepBibleNameEnglishAsSupplied", "stepBibleNameVernacularAsSupplied"))
+    {
+      val x: String? = get(key);
+      val match = if (null == x) null else yyyyRegex.find(x)
+      if (null != match)
+        return match.value
+    }
 
 
     /**************************************************************************/
@@ -2538,10 +2545,7 @@ object ConfigData: ObjectInterface
 
 
     /**************************************************************************/
-    return if (null == res)
-      null
-    else
-      "[$res]"
+    return res
   }
 
 
@@ -2728,7 +2732,7 @@ object ConfigData: ObjectInterface
     "calcCountriesWhereLanguageUsed" to
      {
         val languageCode = get("calcLanguageCode3Char")!!
-        if (languageCode.lowercase() in "grc.hbo.ara.arb.cmn.deu.eng.fra.fre.ger.nld.por.spa.")
+        if (languageCode.lowercase() in "grc.hbo.ara.arb.chi.cmn.deu.eng.fra.fre.ger.nld.por.spa.")
           null
         else
           "${IsoLanguageAndCountryCodes.getCountriesWhereUsed(languageCode)}."
@@ -2742,7 +2746,7 @@ object ConfigData: ObjectInterface
         else if (get("stepBibleNameEnglishAsSupplied")!!.contains(languageName, ignoreCase = true))
           null
         else
-          " In $languageName "
+          "In $languageName"
     },
 
     "calcScriptureCoverageForBibleChooserForBibleChooser" to { calculatedParameter_ScriptureCoverage() },
@@ -2838,8 +2842,6 @@ object ConfigData: ObjectInterface
      // been supplied with it).  The value here will be LTR or RTL, which is what most things use.  Unfortunately
      // Sword requires LtoR or RtoL, so we have a separate swordTextDirection parameter.
 
-    "calcTextDirection" to { Unicode.getTextDirection(m_SampleText) },
-
     "stepTextModifiedDate" to { SimpleDateFormat("dd-MMM-yyyy").format(Date()) },
 
     "calcSwordDataPath" to { Paths.get("./modules/texts/ztext/", get("calcModuleName")).toString().replace("\\", "/") + "/" }, // Sword config file.
@@ -2852,7 +2854,8 @@ object ConfigData: ObjectInterface
 
     "swordTextDirection" to // See notes for calcTextDirection.
       {
-        val x = (getInternal("calcTextDirection", true) ?: "LTR").uppercase()
+        val textDirectionAsSupplied = ConfigData["textDirectionAsSupplied"] ?: Unicode.getTextDirection(m_SampleText)
+        val x = textDirectionAsSupplied.uppercase()
         if ("LTR" == x || "LTOR" == x) "LtoR" else "RtoL"
       },
 
@@ -2931,7 +2934,7 @@ object ConfigArchiver
   /****************************************************************************/
   /**
    * Obtains data either from the previous-config-zip-file (if taking config
-   * from there, or from an appropriate file location.  Throws an error if no
+   * from there), or from an appropriate file location.  Throws an error if no
    * file of the given *name* can be found.  Note that we are indeed concerned
    * only with names here, so you need to avoid setting things up with more
    * than one file with a given name.  Throws an exception if the file cannot

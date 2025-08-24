@@ -39,10 +39,11 @@ swordTextRepositoryOrganisationAbbreviatedName
 calcCountriesWhereLanguageUsed
 calcLanguageCode2Char
 calcLanguageCode3Char
-calcLanguageCodeAsSupplied
 
-calcTextDirection
+swordTextDirection
+textDirectionAsSupplied
 calcCountryCodeAsSupplied
+
 calcScriptCodeAsSupplied
 
 #! Processing mechanics.
@@ -159,8 +160,6 @@ stepDbgSelectBooks
 #! Things where I have retained existing processing, but am not presently using.
 NOT_USED_calcModuleSize
 NOT_USED_calcOsis2ModEncryptionKey
-NOT_USED_stepSuppliedLanguageNameEnglish
-NOT_USED_stepSuppliedLanguageNameVernacular
 stepManualOsis2mod
 
 #! Command line.  (On the command line, all of these have names devoid of 'step'.  'step' is added when the parameters are stored in the config data structure internally.
@@ -178,6 +177,9 @@ stepTargetAudience
 stepConfigFolderPaths
 stepTemporaryInvestigationsFolderPath
 stepTextConverterOverallDataRoot
+
+#! Miscellaneous.
+stepUserName
 
 #! Constant values -- things set up to save having to duplicate them all over the place.
 constDistributionLicence_CopyrightedStep
@@ -200,9 +202,9 @@ constExternalDataPath_CrosswireModuleListDevotionals
 constExternalDataPath_ReversificationData
 constExternalDataPath_TaggingGenDeu
 constExternalDataPath_TaggingJosEst
-stepExternalDataPath_TaggingJobSng
+constExternalDataPath_TaggingJobSng
 constExternalDataPath_TaggingIsaMal
-stepExternalDataPath_TaggingMatJhn
+constExternalDataPath_TaggingMatJhn
 constExternalDataPath_TaggingActRev
 constExternalDataPath_TaggingAll
 

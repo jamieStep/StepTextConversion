@@ -109,6 +109,7 @@ object Builder_InitialOsisRepresentationFromUsx: Builder(), ObjectInterface
       run {
         filePaths.forEach { filePath ->
           asyncable {
+            Dbg.d(filePath)
             val text = Builder_Master.processRegexes(File(filePath).bufferedReader().readText(), ConfigData.getPreprocessingRegexes())
             var doc = Dom.getDocumentFromText(text, true)
             doc = BuilderUtils.processXslt(doc, Usx_FileProtocol)

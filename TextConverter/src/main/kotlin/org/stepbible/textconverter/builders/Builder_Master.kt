@@ -1,6 +1,5 @@
 package org.stepbible.textconverter.builders
 
-import org.stepbible.textconverter.applicationspecificutils.Usx_FileProtocol
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigDataSupport
@@ -8,12 +7,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLo
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.MiscellaneousUtils
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ParallelRunning
-import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
+import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
-import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefFormatHandlerReaderVernacular
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.io.File
 import java.nio.file.Paths
@@ -50,7 +45,8 @@ object Builder_Master: Builder(), ObjectInterface
 
     return listOf(
       /*************************************************************************/
-      CommandLineProcessor.CommandLineOption("rootFolder", 1, "Root folder of Bible text structure.", null, null, true),
+      CommandLineProcessor.CommandLineOption("rootFolder", 1, "Root folder of Bible text structure (defaults to current working directory).", null, System.getProperty("user.dir"), false),
+      CommandLineProcessor.CommandLineOption("configFolderPaths", 1, "List of folders to be searched for configuration data, comma-separated.", null, null, false),
       CommandLineProcessor.CommandLineOption("targetAudience", 1, "If it is possible to build both STEP-only and public version, selects the one required.", listOf("Public", "Step"), null, false, forceLc = true),
 
 
@@ -285,9 +281,23 @@ object Builder_Master: Builder(), ObjectInterface
 
 
     /**************************************************************************/
-    /* Extract settings from the STEP environment variable. */
+    /* Extract settings from the STEP environment variable.  One wrinkle ...
+       stepConfigFolderPaths may be set either */
 
-    ConfigData.loadFromEnvironmentVariable()
+    val environmentVariable = System.getenv("StepTextConverterParameters")
+    if (null != environmentVariable)
+    {
+      ConfigData.loadFromEnvironmentVariable(environmentVariable)
+      val keys = environmentVariable.split(";").map { it.split("=")[0].trim() }
+      for (configDataKey in keys)
+      {
+        var commandLineKey = configDataKey.replace("step", "")
+        commandLineKey = commandLineKey[0].lowercase() + commandLineKey.substring(1)
+        val commandLineSetting = CommandLineProcessor.getOptionValue(commandLineKey)
+        if (null != commandLineSetting)
+            ConfigData.put(configDataKey, commandLineSetting, true)
+      }
+    }
 
 
 

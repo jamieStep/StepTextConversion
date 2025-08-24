@@ -10,6 +10,7 @@ import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructure
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
+import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
 import java.io.File
 import kotlin.system.exitProcess
 
@@ -111,7 +112,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder(), ObjectInterface
     val osis2modSchemeHasDc = bibleStructureForScheme.hasAnyBooksDc()
     if (bibleStructureToCompareWithHasDc && !osis2modSchemeHasDc)
     {
-      val x = Evaluation(scheme, Int.MAX_VALUE, 0, 0, 0, 0, 0, text = "Rejected because it lacks DC.")
+      val x = Evaluation(scheme, Long.MAX_VALUE, 0, 0, 0, 0, 0, text = "Rejected because it lacks DC.")
       m_Evaluations.add(x)
       return x
     }
@@ -148,6 +149,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder(), ObjectInterface
         versesMissingInOsis2modScheme += comparisonDetails.versesInTextUnderConstructionButNotInTargetScheme.size
         versesInExcessInOsis2modScheme += comparisonDetails.versesInTargetSchemeButNotInTextUnderConstruction.size
         versesOutOfOrder += comparisonDetails.versesInTextUnderConstructionOutOfOrder.size
+        //Dbg.d("Out of order: " + comparisonDetails.versesInTextUnderConstructionOutOfOrder.sorted().map { Ref.rd(it).toString()}.joinToString(", "))
       }
     }
 
@@ -156,7 +158,8 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder(), ObjectInterface
 
 
     /**************************************************************************/
-    val score = 1_000_000_000 * versesOutOfOrder.coerceAtMost(1) + booksMissingInOsis2modScheme * 1_000_000 + versesMissingInOsis2modScheme * 1000 + versesInExcessInOsis2modScheme
+    val amendedVersesOutOfOrder = 0 // I was including out-of-order verses in the evaluation.  However, that's misleading: that's an attribute of the text itself, not of the available schemes.
+    val score: Long = 1_000_000_000L * amendedVersesOutOfOrder.coerceAtMost(1) + booksMissingInOsis2modScheme * 1_000_000 + versesMissingInOsis2modScheme * 1000 + versesInExcessInOsis2modScheme
     val res = Evaluation(scheme, score, booksMissingInOsis2modScheme, versesMissingInOsis2modScheme, booksInExcessInOsis2modScheme, versesInExcessInOsis2modScheme, versesOutOfOrder, additionalText)
     m_Evaluations.add(res)
     return res
@@ -242,7 +245,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder(), ObjectInterface
 
   /****************************************************************************/
   data class Evaluation (val scheme: String,
-                         val score: Int,
+                         val score: Long,
                          val booksMissingInOsis2modScheme: Int,
                          val versesMissingInOsis2modScheme: Int,
                          val booksInExcessInOsis2modScheme: Int,
@@ -254,7 +257,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder(), ObjectInterface
 
     fun getDeviationType (): VersificationDeviationType
     {
-      return if (0 == score)
+      return if (0L == score)
         VersificationDeviationType.EXACT_MATCH
       else if (booksMissingInOsis2modScheme > 0 || versesMissingInOsis2modScheme > 0 || versesOutOfOrder > 0)
         VersificationDeviationType.BAD
@@ -264,7 +267,7 @@ object SpecialBuilder_EvaluateSchemesOnly: SpecialBuilder(), ObjectInterface
 
     override fun toString (): String
     {
-      return if (Int.MAX_VALUE == score)
+      return if (Long.MAX_VALUE == score)
         String.format("Scheme: %12s   %s", scheme, text!!)
       else
         String.format("Scheme: %12s   Score: %12d   Based upon    %3d books and %6d verses which osis2mod lacks   AND   %3d books and %6d verses which osis2mod has in excess.%s",

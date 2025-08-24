@@ -224,7 +224,7 @@ private class PA_ElisonHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m
     if ("tableElision" == NodeMarker.getElisionType(verseSid))
     {
       var insertionPoint = nextVerse
-      if (null == nextVerse)
+      if (null == nextVerse || m_FileProtocol.readRef(verseSid[m_FileProtocol.attrName_verseSid()]!!).getC() != m_FileProtocol.readRef(nextVerse[m_FileProtocol.attrName_verseSid()]!!).getC())
       {
         insertionPoint = Dom.createNode(verseSid.ownerDocument, "<XXX/>")
         chapterNode.appendChild(insertionPoint)
@@ -237,8 +237,8 @@ private class PA_ElisonHandlerPerBook (val m_FileProtocol: X_FileProtocol, val m
           // No need to add a footnote here -- the table processing will already have handled that.
        }
 
-       if (null == nextVerse)
-         Dom.deleteNode(insertionPoint!!)
+       if ("XXX" == Dom.getNodeName(insertionPoint!!))
+         Dom.deleteNode(insertionPoint)
 
        m_FileProtocol.updateVerseSid(verseSid, refKeys.first())
        m_FileProtocol.updateVerseEid(verseEid, refKeys.first())

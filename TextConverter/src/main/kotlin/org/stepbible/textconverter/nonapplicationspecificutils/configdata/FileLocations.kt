@@ -369,13 +369,13 @@ object FileLocations: ObjectInterface
   fun getInputUsxFilePaths (): List<String>
   {
     if (!StepFileUtils.fileOrFolderExists(getInputUsxFolderPath())) return listOf()
-    return StepFileUtils.getMatchingFilesFromFolder(getInputUsxFolderPath(), ".*\\.${getFileExtensionForUsx()}".toRegex()).map { it.toString() }
+    return StepFileUtils.getMatchingFilesFromFolder(getInputUsxFolderPath(), ".*\\.${getFileExtensionForUsx()}".toRegex()).map { it.toString() }.sorted()
   }
 
   fun getInputVlFilePaths (): List<String>
   {
     if (!StepFileUtils.fileOrFolderExists(getInputVlFolderPath())) return listOf()
-    return StepFileUtils.getMatchingFilesFromFolder(getInputVlFolderPath(), ".*\\.${getFileExtensionForVl()}".toRegex()).map { it.toString() }
+    return StepFileUtils.getMatchingFilesFromFolder(getInputVlFolderPath(), ".*\\.${getFileExtensionForVl()}".toRegex()).map { it.toString() }.sorted()
   }
 
   fun getInputImpFilesExist  () = if (!StepFileUtils.fileOrFolderExists(getInputImpFolderPath()))  false else StepFileUtils.getMatchingFilesFromFolder(getInputImpFolderPath(),  ".*\\.${getFileExtensionForImp()}" .toRegex()).isNotEmpty()
@@ -430,7 +430,7 @@ object FileLocations: ObjectInterface
   /****************************************************************************/
   fun getIssuesFilePath () = locateFile("@find/issues.json") ?: Paths.get(getMetadataFolderPath(), "issues.json").toString() // File recording any problems with the text.
   private fun getTextFeaturesRootFolderPath () = Paths.get(getInternalSwordFolderPath(), "textFeatures").toString()
-  fun getTextFeaturesFolderPath () = makeTextFeaturesFolderPath()
+  private fun getTextFeaturesFolderPath () = makeTextFeaturesFolderPath()
   fun getRunFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "runFeatures.json").toString()
   fun getTextFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "textFeatures.json").toString()
 

@@ -10,6 +10,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Obj
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ZipSupport
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
+import java.io.File
 import java.nio.file.Paths
 import kotlin.io.path.Path
 import kotlin.io.path.name
@@ -124,6 +125,11 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
 
 
     /**************************************************************************/
+    val computingEnvironment = "OS Name: ${System.getProperty("os.name")}\nOS Version: ${System.getProperty("os.version")}\nOS Architecture: ${System.getProperty("os.arch")}\nJava version: ${System.getProperty("java.version")}\nConverter JAR version: ${ConfigData["calcJarVersion"]!!}\nosis2mod version: ${ConfigData["calcOsis2modVersion"]!!}\n"
+
+
+
+    /**************************************************************************/
     val repositoryStructure = ZipSupport.generatedFolder("TOP_LEVEL_WILL_BE_IGNORED") {
 
       add(ZipSupport.generatedFolder("Debug") {
@@ -134,7 +140,7 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
 
       add(ZipSupport.generatedFolder("Environment") {
         add(ZipSupport.generatedFile("environment.txt")
-          { "Environment variable StepTextConverterParameters: ${System.getenv("StepTextConverterParameters") ?: "-"} \nCommand line: ${ConfigData.getCommandLine()}" })
+          { "${computingEnvironment}\nEnvironment variable StepTextConverterParameters: ${System.getenv("StepTextConverterParameters") ?: "-"}\n\nCommand line: ${ConfigData.getCommandLine()}" })
       })
 
       add(ZipSupport.generatedFolder("Features") {
@@ -142,7 +148,7 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
         add(ZipSupport.fileFromDisk(FileLocations.getTextFeaturesFilePath()))
       })
 
-      add(ZipSupport.generatedFolder("Inputs") {
+      add(ZipSupport.generatedFolder(File(ConfigData["stepRootFolder"]!!).name) {
         if (null != inputImp) add(ZipSupport.folderFromDisk("InputImp", inputImp))
         if (null != inputUsx) add(ZipSupport.folderFromDisk("InputUsx", inputUsx))
         if (null != inputVl)  add(ZipSupport.folderFromDisk("InputVl", inputVl))

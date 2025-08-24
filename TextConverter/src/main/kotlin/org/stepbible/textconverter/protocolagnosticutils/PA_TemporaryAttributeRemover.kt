@@ -36,7 +36,7 @@ object PA_TemporaryAttributeRemover: ObjectInterface
 
   fun process (dataCollection: X_DataCollection)
   {
-    Rpt.reportWithContinuation(level = 1, "Replacing temporary nodes ...") {
+    Rpt.reportWithContinuation(level = 1, "PA_TemporaryAttributeRemover: Replacing temporary nodes ...") {
       with(ParallelRunning(true)) {
         run {
           dataCollection.getRootNodes().forEach { rootNode ->

@@ -31,6 +31,6 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 fun main (args: Array<String>)
 {
   BibleBookNames.init()
-  //Dbg.setBooksToBeProcessed("3Jn")
+  Dbg.setBooksToBeProcessed("Mat")
   MainProcessor().process(args)
 }

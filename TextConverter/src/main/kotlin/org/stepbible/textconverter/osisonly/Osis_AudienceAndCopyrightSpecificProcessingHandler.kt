@@ -226,7 +226,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
    Logger.info("Treating this as a ${if (isCopyrightText) "copyright" else "non-copyright"} text.")
    Logger.info("Generation of our own footnotes is${if (!okToGenerateFootnotes) " NOT" else ""} permitted.")
    Logger.info("Versification scheme is ${versificationScheme ?: "STEP-internal"}.")
-   Logger.info("ReversificationType is $reversificationType")
+   Logger.info("ReversificationType is $reversificationType.")
    Logger.info("Target audience is $targetAudience.")
    Logger.info("Version of STEP runtime software required is $calcSoftwareVersionRequired.")
   }
@@ -461,7 +461,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
        that on neither platform have we actually had a path which contained
        spaces. */
 
-    val programPath = ConfigData["stepOsis2modFilePath"]!!
+    val programPath = ConfigData["stepOsis2modFilePath"] ?: "osis2mod" // Default on Linux, although whether this will work I don't know.
     val swordExternalConversionCommand: MutableList<String> = ArrayList()
     swordExternalConversionCommand.add(programPath) // Don't enclose the path in quotes -- see note above.
     swordExternalConversionCommand.add(FileLocations.getSwordTextFolderPath())

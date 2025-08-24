@@ -148,7 +148,7 @@ object IssueAndInformationRecorder: ObjectInterface
 
   @Synchronized fun elidedVerse (locations: List<RefKey>, text: String)
   {
-    report("Elided verse: $text", false, "LogInfo", locations.first(), m_ElidedVerses, null)
+    report("Elided verse: $text.", false, "LogInfo", locations.first(), m_ElidedVerses, null)
     m_BibleTextStructure.HasElisions = true
     if (null == m_BibleTextStructure.ElisionLocations) m_BibleTextStructure.ElisionLocations = mutableListOf()
     m_BibleTextStructure.ElisionLocations!!.addAll(locations.map { Ref.rd(it).toString() })
