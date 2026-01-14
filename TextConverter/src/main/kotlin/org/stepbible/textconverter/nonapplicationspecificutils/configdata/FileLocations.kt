@@ -4,7 +4,6 @@ package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
-import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import java.io.File
 import java.io.FileInputStream
 import java.nio.file.Paths
@@ -27,7 +26,7 @@ import java.io.InputStream
  *      |
  *      +-- Metadata
  *      |   |
- *      |   + -- step.conf
+ *      |   + -- step.xlsx
  *      |   |
  *      |   + -- Possibly metadata.xml, licence.xml, etc.
  *      |
@@ -73,7 +72,7 @@ import java.io.InputStream
  * or OSIS was generated previously (under which circumstances it is possible
  * to start processing direct from this OSIS if that is preferred).
  *
- * The Metadata folder must have a step.conf file, which may or may not refer
+ * The Metadata folder must have a step.xlsx file, which may or may not refer
  * out to other files.  Where we have the opportunity to pick up metadata from
  * files supplied to us (presently only with DBL texts) the metadata folder
  * may contain other files (with DBL that would be metadata.xml and
@@ -229,7 +228,13 @@ object FileLocations: ObjectInterface
 
 
     /**************************************************************************/
-    for (folderPath in listOf(getRootFolderPath(), getMetadataFolderPath(), getOtherMetadataFolderPath()) + getPathsFromEnvironmentVariable())
+    val folderPaths = when (ConfigData["stepConfigLimitations"]!!)
+    {
+      "othermetadataonly" -> listOf(getMetadataFolderPath(), getOtherMetadataFolderPath())
+      "notothermetadata"  -> listOf(getMetadataFolderPath()) + getPathsFromEnvironmentVariable()
+      else                -> listOf(getMetadataFolderPath(), getOtherMetadataFolderPath()) + getPathsFromEnvironmentVariable()
+    }
+    for (folderPath in folderPaths)
     {
       val res = StepFileUtils.findFiles(folderPath, fileName)
       if (res.isNotEmpty())
@@ -321,6 +326,8 @@ object FileLocations: ObjectInterface
 
   /****************************************************************************/
   /* Metadata. */
+
+  fun getCommonRootFilePath () = "@jarResources/commonRoot.conf"
 
   fun getBookNamesFilePath () = "@jarResources/bookNames.tsv"
   fun getConfigDescriptorsFilePath () = "@jarResources/configDataDescriptors.tsv"

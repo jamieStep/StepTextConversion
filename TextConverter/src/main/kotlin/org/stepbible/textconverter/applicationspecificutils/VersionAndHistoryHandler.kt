@@ -224,7 +224,7 @@ object VersionAndHistoryHandler: ObjectInterface
     /**************************************************************************/
     /* If we're not updating, there's not a lot to do. */
 
-    if (retainExisting || ( previousVersion == releaseVersion && previousHistory == history))
+    if (retainExisting || ( previousVersion == releaseVersion && previousHistory.replace(".", "") == history.replace(".", "")))
     {
       ConfigData.delete("stepReleaseNumber")
       ConfigData["stepReleaseNumber"] = previousVersion

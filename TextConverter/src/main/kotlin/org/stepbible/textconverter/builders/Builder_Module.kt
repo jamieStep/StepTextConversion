@@ -276,7 +276,7 @@ object PackageContentHandler: ObjectInterface
 
       if (line.startsWith("#!")) continue // Internal comment only.
       line = line.split("#!")[0].trim() // Remove any trailing comment.
-      writer.write(ConfigData.expandConfigData(line))
+      writer.write(ConfigData.expandConfigData(line)!!)
       writer.write("\n")
     }
 

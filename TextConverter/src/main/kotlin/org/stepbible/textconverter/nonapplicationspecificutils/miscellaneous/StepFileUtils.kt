@@ -480,7 +480,7 @@ object StepFileUtils: ObjectInterface
    * under a given folder.
    *
    * @param folder Folder at the root of the hierarchy to be examined.
-   * @param pattern: Regex to match relevant files.
+   * @param fileName: Name of file.
    * @return List of matching file paths.
    */
 

@@ -97,7 +97,7 @@ import java.io.File
  * 'description' is intended to help a human reader looking at the file: it is
  * not used by any processing.
  *
- * 'remedialAction' explains what changes are required.  If omotted, or if it
+ * 'remedialAction' explains what changes are required.  If omitted, or if it
  * starts with the word 'None', then it is assumed that no changes are required.
  *
  * 'textForCopyrightPage' gives any text which should appear on the copyright

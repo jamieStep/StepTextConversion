@@ -1,0 +1,52 @@
+//------------------------------------------------------------------------------
+//
+// Configuration file for tagging scripture reference data
+// =======================================================
+//
+// This is in extended JSON format -- anything after // is ignored, giving the
+// opportunity for me to add comments.
+//
+// The file here contains only those fields which are actually needed for the
+// processing of this particular form of input.  Other fields retain the default
+// values which appear in the definition of Config in generalTagger.
+//
+// See the definition of Config for much more information, including details of
+// other fields which might be relevant when processing other kinds of files.
+//
+// It may help make sense of some of the stuff below to know that the
+// chapter summary file with which I am working is a TSV file, with field 0
+// containing the chapter reference, and field 1 containing the associated
+// text.
+//
+// Field 0 can (we hope) be used to help with disambiguation -- if a name
+// appears in the descriptive text, and if that name is ambiguous, we
+// assume that there will probably be just a single entry for the name which
+// is associated with the scripture reference in field 0.
+//
+// Field 1 is the field whose content is to be updated.  I do include here
+// processing for both people/place tagging and also scripture reference
+// tagging, although in fact we don't believe there are any scripture
+// references in this particular field.
+//
+//------------------------------------------------------------------------------
+
+{
+    inputFilePath:  "C:/Program Files (x86)/STEP/step-web/html/json/J_AppsJson/J_Framework/J_ChapterSummaries/j_framework_chapterSummaries.tsv",
+    outputFilePath: "C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/Miscellaneous/_Conversions_/ChapterSummaries/j_framework_chapterSummaries.tsv",
+
+    peopleDataFilePath: "C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/Miscellaneous/GenealogyEtc/people.json",
+    placesDataFilePath: "C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/Miscellaneous/GenealogyEtc/places.json",
+
+    outputTagFormatForPersonName:          "<jLink data-type='P' data-strong='$dStrongs' clickHandler>$=</jLink>",
+    outputTagFormatForPlaceName:           "<jLink data-type='L' data-strong='$dStrongs' clickHandler>$=</jLink>",
+    outputTagFormatForScriptureReferences: "<jLink data-type='S' data-ref='$standardRef'>$=</jLink>",
+
+    disambiguatorFieldInInput: 0,                 // Field 0 contains the chapter reference which we think may help with disambiguation.
+    disambiguationDataCheckAgainst: "allRefKeys", // When looking at the people and places data
+    disambiguationType: "ref",                    // The disambiguator may be an form of reference, including collections and ranges.  Any bc references are replaced by a collection giving all the references for that chapter.
+
+    dontTag: ["On"], // 'On' is a person's name, and we don't want to tag all occurrences of it.  Unfortunately, this means it will _never_ be tagged, so we'll have to handle genuine instances manually if required.
+
+    forTsvFilesIndexesOfFieldsForPeopleAndPlacesProcessing:    [1],
+    forTsvFilesIndexesOfFieldsForScriptureReferenceProcessing: [1]
+}

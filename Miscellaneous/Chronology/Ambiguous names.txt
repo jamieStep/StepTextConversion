@@ -1,0 +1,442 @@
+^([^\t\r\n]*)\t([^\t\r\n]*)\r\n([^\t\r\n]*)\t((place|person|untagged|wrong).*)\r\n => \3\t\4\tTAG AS \2\r\n	
+
+
+
+
+
+Abednego	TAG AS H5838Z	untagged
+Abel-mizraim	TAG AS H0329G	untagged
+Abimelech	TAG AS H0040G	person
+Abram	TAG AS H0085	untagged
+Achaemenid	TAG AS NONE	untagged
+Actium	TAG AS NONE	untagged
+Adar	TAG AS H0143	untagged
+Ahab	TAG AS H0256G	person
+Ahaz	TAG AS H0271G	person
+Ahaziah	TAG AS H0274G	person
+Ahijah	TAG AS H0281H	person (1012, 935 BC)
+Ahijah	TAG AS H0281H	person (910, 909 BC)
+Ahimelech	TAG AS H0288G	person
+Ahinoam	TAG AS H0293H	person
+Ahmose	TAG AS NONE	untagged
+Ai	TAG AS H5857G	place
+Alexander	TAG AS G0223J	person Never any dStrong
+Alexandra	TAG AS NONE	untagged
+Amalekite	TAG AS H6002	untagged
+Amalekites	TAG AS H6002	untagged
+Amman	TAG AS NONE	untagged
+Ammihud	TAG AS H5989J	person
+Ammonite	TAG AS H5983	untagged
+Ammonites	TAG AS H5983	untagged
+Amnon	TAG AS H0550G	person
+Amon	TAG AS H0526H	person except "No-Amon"
+Amos	TAG AS H5986	person
+Ananias	TAG AS G0367G	person not high priest Ananias
+Anathoth	TAG AS H6068G	person - PLACE not person
+Annius	TAG AS NONE	untagged
+Antigonus	TAG AS NONE	untagged
+Antioch	TAG AS G0490G	place (AD 40, 42, 43, 44, 46, 52, 53)
+Antioch	TAG AS G0490H	place (AD 47. 48)
+Antiochus	TAG AS NONE	untagged
+Antipater	TAG AS NONE	untagged
+Aphek	TAG AS H0663I	place
+Arabian	TAG AS H6152B	untagged
+Arabs	TAG AS H6152B	untagged
+Aram	TAG AS H0758I	person - PLACE not person
+Aram	TAG AS H0758I	untagged
+Aramaic	TAG AS H0762	untagged
+Aramean	TAG AS H0123G	untagged
+Arameans	TAG AS H0123G	untagged
+Araunah	TAG AS H0771	untagged
+Areopagite	TAG AS G0697	untagged
+Areus	TAG AS NONE	untagged
+Aristobulus	TAG AS NONE	untagged
+Arphaxad	TAG AS H0775	untagged
+Artemis	TAG AS G0735	untagged
+Asherah	TAG AS H0842	untagged
+Ashurbanipal	TAG AS NONE	untagged
+Assyrian	TAG AS H0804G	untagged
+Assyrians	TAG AS H0804G	untagged
+Athaliah	TAG AS H6271G	person
+Augustan	TAG AS NONE	untagged
+Azariah	TAG AS H5818G	person (792, 767, 744 BC)
+Azariah	TAG AS H5838M	person (897 BC)
+Azariah	TAG AS H5838Z	person (605 BC)
+Baal	TAG AS H1168A	person = OTHER - ie a god
+Babel	TAG AS H0894	untagged
+Babylonian	TAG AS H0894	untagged
+Babylonians	TAG AS H0894	untagged
+Bagoas	TAG AS NONE	untagged
+Baptist	TAG AS NONE	untagged
+Belteshazzar	TAG AS H1840G	untagged
+Ben-Hadad	TAG AS H1130G	person (896, 858 BC)
+Ben-Hadad	TAG AS H1130H	person (841 BC)
+Ben-Hadad	TAG AS H1130I	person (814 BC)
+Benjamin	TAG AS H1144G	person
+Benjamite	TAG AS H1144G	untagged
+Berenice	TAG AS NONE	untagged
+Bethel	TAG AS H1008G	place
+Bethlehem	TAG AS H1035G	place
+Beth-shemesh	TAG AS H1053G	place
+Caesar	TAG AS NONE	untagged
+Caesarean	TAG AS G2542H	untagged
+Caleb	TAG AS H3612G	person
+Caligula	TAG AS NONE	untagged
+Cambyses	TAG AS NONE	untagged
+Cana	TAG AS H7071H	untagged
+Canaanite	TAG AS H3667A	untagged
+Canaanites	TAG AS H3667A	untagged
+Candace	TAG AS G2582	untagged
+Chaldean	TAG AS H3778	untagged
+Chaldeans	TAG AS H3778	untagged
+Chemosh	TAG AS H3645	untagged
+Colossians	TAG AS NONE	untagged
+Coponius	TAG AS NONE	untagged
+Corinthian	TAG AS G2882	untagged
+Cush	TAG AS H3568G	person
+Cushite	TAG AS H3568G	untagged
+Dagon	TAG AS H1712	untagged
+Darius	TAG AS H1867G	person (400 BC)
+Darius	TAG AS H1867H	person (522 BC, 516 BC)
+Darius	TAG AS H1867I	person (538 BC)
+Deborah	TAG AS H1683H	person
+Domitian	TAG AS NONE	untagged
+Eber	TAG AS H5677G	person
+Eden	TAG AS H5729	person = PLACE not person
+Edomite	TAG AS H0123G	untagged
+Edomites	TAG AS H0123G	untagged
+Egyptian	TAG AS H4714G	untagged
+Egyptians	TAG AS H4714G	untagged
+Ehud	TAG AS H0164G	person
+Elah	TAG AS H0425H	person (886, 885, 732 BC)
+Elah	TAG AS H0425L	person (1018 BC) = PLACE not person
+Eleazar	TAG AS H0499G	person (1407, 1400 BC)
+Eleazar	TAG AS No dStrong for: 	person (260 BC)
+Eliada	TAG AS H0450H	person
+Eliakim	TAG AS H3079	person
+Eliashib	TAG AS H0475N	person
+Elijah	TAG AS H0452G	person
+Elymas	TAG AS G0919	untagged
+Enoch	TAG AS H2585H	person
+Ephesian	TAG AS G2181	untagged
+Ephrath	TAG AS H1035G	untagged
+Epiphanes	TAG AS NONE	untagged
+erxes	TAG AS NONE	untagged
+Etemenanki	TAG AS NONE	untagged
+Ethiopian	TAG AS H3568A	untagged
+Florus	TAG AS NONE	untagged
+Gabriel	TAG AS H1403	untagged
+Gad	TAG AS H1410G	person
+Gaius	TAG AS G0828	person (27 BC)
+Gaius	TAG AS G1050J	person (AD 90)
+Gaius	TAG AS NONE	person (AD 41)
+Galatian	TAG AS G1053	untagged
+Galilean	TAG AS H1551	untagged
+Gaugamela	TAG AS NONE	untagged
+Genesis	TAG AS NONE	untagged
+Gentile	TAG AS H1471G	untagged
+Gentiles	TAG AS H1471G	untagged
+Gerizim	TAG AS H1630	untagged
+Geshurites	TAG AS H1650	untagged
+Gibeah	TAG AS H1390H	place
+Gibeonite	TAG AS H1391	untagged
+Gibeonites	TAG AS H1391	untagged
+Gilead	TAG AS H1568G	person = PLACE not person
+Gileadite	TAG AS H1568G	untagged
+Gileadites	TAG AS H1568G	untagged
+Gilgal	TAG AS H1537G	place
+Gilonite	TAG AS H1542	untagged
+Gittite	TAG AS H1661	untagged
+Goshen	TAG AS H1657G	place
+Gratus	TAG AS NONE	untagged
+Hadad	TAG AS H1908I	person (935 BC)
+Hadad	TAG AS H1909	person (995 BC)
+Hadad	TAG AS H2301	person (1943 BC)
+Hagoyim	TAG AS H2800	untagged
+Hammurabi	TAG AS NONE	untagged
+Hanani	TAG AS H2607G	person
+Hananiah	TAG AS H2608T	person
+Hanukkah	TAG AS G1456	untagged
+Haran	TAG AS H2039G	person
+Harosheth	TAG AS H2800	untagged
+Hasmonean	TAG AS NONE	untagged
+Havilah	TAG AS H2341J	person = PLACE not person
+Havvoth	TAG AS NONE	untagged
+Hazor	TAG AS H2674G	place
+Heber	TAG AS H2268H	person
+Hebrew	TAG AS NONE	untagged
+Hebron	TAG AS H2275A	person = PLACE not person
+Hegesippus	TAG AS NONE	untagged
+Hellenistic	TAG AS H3120H	untagged
+Hellenizing	TAG AS NONE	untagged
+Herod	TAG AS G0067	person (AD 37, 44) 
+Herod	TAG AS G0493	person (AD 27, 30, 40) 
+Herod	TAG AS G0745	person (AD 6, 9, 12, 36) 
+Herod	TAG AS G2264G	person (40, 37, 27, 7, 6, 5, 4, 3 BC) 
+Herodian	TAG AS G2265	untagged
+Hezekiah	TAG AS H2396G	person
+Hiram	TAG AS H2438G	person
+Hittite	TAG AS H2845	untagged
+Hittites	TAG AS H2845	untagged
+Hivite	TAG AS H2340	untagged
+Holies	TAG AS H6944H	untagged
+Horeb	TAG AS H5514G	untagged
+Horonite	TAG AS H2772	untagged
+Hyksos	TAG AS NONE	untagged
+Hyrcanus	TAG AS NONE	untagged
+Idumean	TAG AS G2401	untagged
+Iscariot	TAG AS G2455H	untagged
+Ishmael	TAG AS H3458G	person
+Ishmaelite	TAG AS H3458G	untagged
+Ishtar	TAG AS NONE	untagged
+Israeli	TAG AS H3478	untagged
+Israelite	TAG AS H3478	untagged
+Israelites	TAG AS H3478	untagged
+Issachar	TAG AS H3485G	person
+Ittai	TAG AS H0863G	person
+Jabesh	TAG AS H3003H	untagged
+James	TAG AS G2385G	person (AD 27, 28, 44)
+James	TAG AS G2385I	person (AD 37, 48, 57, 58, 62)
+Jamnia	TAG AS NONE	untagged
+Jannaeus	TAG AS NONE	untagged
+Javneh	TAG AS NONE	untagged
+Jebus	TAG AS H3389	untagged
+Jebusite	TAG AS H2983G	untagged
+Jehoahaz	TAG AS H3059G	person (814, 798, 793 BC)
+Jehoahaz	TAG AS H3059H	person (735, 730, 609 BC)
+Jehoash	TAG AS H3101J	untagged
+Jehohanan	TAG AS H3110L	person 
+Jehoiada	TAG AS H3077H	person
+Jehoram	TAG AS H3088G	person
+Jehoshaphat	TAG AS H3092I	person
+Jehosphat	TAG AS NONE	untagged
+Jehu	TAG AS H3058H	person
+Jephthtah	TAG AS NONE	untagged
+Jeremiah	TAG AS H3414L	person
+Jeroboam	TAG AS H3379G	person (971 BC)
+Jerubbaal	TAG AS H1439	untagged
+Jeshua	TAG AS H3442G	person
+Jewish	TAG AS G2454	untagged
+Jews	TAG AS G2454	untagged
+Jezreel	TAG AS H3157G	person (1012 BC) = PLACE not person
+Jezreel	TAG AS H3157H	person (856 BC) = PLACE not person
+Jezreelite	TAG AS H3157G	untagged
+Joab	TAG AS H3097G	person
+Joash	TAG AS H3101I	person
+John	TAG AS G2491G	person (7, 4 BC, AD 14, 26, 27)
+John	TAG AS G2491H	person (AD 28)
+John	TAG AS NONE	person (134 BC)
+Jonadab	TAG AS H3122G	person
+Jonathan	TAG AS H3083H	person (1021, 1010, 994, 973 BC)
+Jonathan	TAG AS NONE	person (350, 300, 160, 142,  BC
+Joram	TAG AS H3141H	person
+Joseph	TAG AS G2501G	person (6, 5, 3 BC)
+Joseph	TAG AS H3130G	person (1928, 1925, 1915, 1902, 1898, 1897, 1886, 1885, 1878, 1877, 1876, 1859, 1857, 1805, 1789 BC)
+Joseph	TAG AS NONE	person (240 BC)
+Josephus	TAG AS NONE	untagged
+Joshua	TAG AS H3091G	person (1491, 1485, 1445, 1444, 1407, 1406, 1400, 1399, 1381, 1328, 976 BC)
+Joshua	TAG AS H3091J	person (536, 520, 518 BC)
+Joshua	TAG AS NONE	person (400 BC)
+Josiah	TAG AS H2977G	person
+Jotham	TAG AS H3147H	person
+Judah	TAG AS H3063G	person
+Judahite	TAG AS H3057	untagged
+Judahites	TAG AS H3057	untagged
+Judaism	TAG AS G2454	untagged
+Judas	TAG AS G2455H	person (AD 28)
+Judas	TAG AS NONE	person (167, 165, 160 BC)
+Judean	TAG AS H3063G	untagged
+Jupiter	TAG AS G2203	untagged
+Kadesh	TAG AS H6946G	place
+Kadesh	TAG AS H8483	untagged
+Karnak	TAG AS NONE	untagged
+Kirjath	TAG AS H2275A	untagged
+Kirjath	TAG AS H2275A	untagged
+Kish	TAG AS H7027G	person
+Kushite	TAG AS H3568A	untagged
+Lamech	TAG AS H3929G	person
+Lebo	TAG AS H2574G	untagged
+Levant	TAG AS NONE	untagged
+Levi	TAG AS H3878	person
+Levite	TAG AS H3878	untagged
+Levites	TAG AS H3878	untagged
+Levitical	TAG AS H3878	untagged
+Longimanus	TAG AS NONE	untagged
+Maacah	TAG AS H0062	person (977 BC) = PLACE not person
+Maacah	TAG AS H4601I	person (987 BC)
+Maacah	TAG AS H4601K	person (911 BC)
+Maacah	TAG AS H4601R	person (991 BC) = PLACE not person
+Maccabaeus	TAG AS NONE	untagged
+Maccabees	TAG AS NONE	untagged
+Macedonian	TAG AS G3109	untagged
+Magdalene	TAG AS G3093	untagged
+Magnesia	TAG AS NONE	untagged
+Mahalalel	TAG AS H4111G	person
+Maltese	TAG AS G3194	untagged
+Manasseh	TAG AS H4519G	person (1928, 1400, 1399 BC)
+Manasseh	TAG AS H4519H	person (697, 688, 687, 677, 643, 641, 630 BC)
+Manasseh	TAG AS NONE	person (350, 332, 245 BC)
+Marcellus	TAG AS NONE	untagged
+Mary	TAG AS G3137G	person (6, 5, 3 BC)
+Mary	TAG AS G3137J	person (AD 30)
+Mattan	TAG AS H4977G	person
+Mattaniah	TAG AS H4983P	person
+Mattathias	TAG AS H6667H	person
+Mede	TAG AS H4074H	untagged
+Medes	TAG AS H4074H	untagged
+Mediterranean	TAG AS H1419J	untagged
+Meholathite	TAG AS H4259	untagged
+Mephibosheth	TAG AS H4648G	person
+Meribah	TAG AS H4809H	place
+Mesha	TAG AS H4338	person
+Meshach	TAG AS H4332I	untagged
+Mesopotamian	TAG AS H0763G	untagged
+Mibsam	TAG AS H4017H	person
+Micah	TAG AS H4318K	person
+Midianite	TAG AS H4080H	untagged
+Midianites	TAG AS H4080H	untagged
+Milkom	TAG AS H4432	untagged
+Miriam	TAG AS H4813G	person
+Mishael	TAG AS H4332I	person
+Mishma	TAG AS H4927G	person
+Moabite	TAG AS H4124G	untagged
+Moabites	TAG AS H4124G	untagged
+Modein	TAG AS NONE	untagged
+Mordecai	TAG AS H4782H	person
+Moriah	TAG AS H4179	untagged
+Naaman	TAG AS H5283I	person
+Nadab	TAG AS H5070H	person
+Naharaim	TAG AS H0763H	untagged
+Nahor	TAG AS H5152G	person (AM 1558, 1819, 1849, 1878, 1948, 1997, 2049)
+Nahor	TAG AS H5152H	person (AM 2083; 2091, 2026, 1966 BC)
+Nahum	TAG AS H5151	person
+Nathan	TAG AS H5416H	person
+Nazirite	TAG AS H5139	untagged
+Necho	TAG AS H5224G	untagged
+Negev	TAG AS H5045G	untagged
+Nehemiah	TAG AS H5166H	person
+Nicaso	TAG AS NONE	untagged
+Nicolas	TAG AS NONE	untagged
+Noah	TAG AS H5146	person
+Noahic	TAG AS H5270	untagged
+Nubian	TAG AS H3568A	untagged
+Nuzi	TAG AS NONE	untagged
+Octavius	TAG AS G0828	untagged
+Oded	TAG AS H5752H	person
+Olives	TAG AS H2132G	untagged
+Olivet	TAG AS H2132G	untagged
+Omri	TAG AS H6018G	person
+Onias	TAG AS G3683	untagged
+Ostia	TAG AS NONE	untagged
+Palti	TAG AS H6406H	person
+Parthian	TAG AS G3934	untagged
+Passover	TAG AS H6453	untagged
+Paul	TAG AS G3972G	untagged
+Pauline	TAG AS G3972G	untagged
+Pella	TAG AS NONE	untagged
+Pentateuch	TAG AS NONE	untagged
+Pentecost	TAG AS H7620G	untagged
+Perea	TAG AS NONE	untagged
+Persian	TAG AS H6539	untagged
+Persians	TAG AS H6539	untagged
+Peter	TAG AS G4074G	untagged
+Petronius	TAG AS NONE	untagged
+Pharaoh	TAG AS H5224G	person (609, 605 BC)
+Pharaoh	TAG AS H6547G	person (2090 BC)
+Pharaoh	TAG AS H6547H	person (1898, 1897, 1885, 1878, 1877, 1876, 1857, 1805, 1532, 1529, 1528, 1526 BC)
+Pharaoh	TAG AS H6547I	person (1532, 1529, 1528, 1526, 1491, 1486, 1446 BC)
+Pharaoh	TAG AS H6547R	person (594 BC)
+Pharaoh	TAG AS H7895	person (968, 947 BC)
+Pharisee	TAG AS G5330	untagged
+Pharisees	TAG AS G5330	untagged
+Pharoah	TAG AS H6547I	untagged
+Phichol	TAG AS H6369	untagged
+Philip	TAG AS G5376G	person (AD 28)
+Philip	TAG AS G5376I	person (4 BC)
+Philip	TAG AS G5376J	person (AD 31, 32)
+Philippian	TAG AS G5375	untagged
+Philistines	TAG AS H6430H	untagged
+Philopator	TAG AS NONE	untagged
+Phinehas	TAG AS H6372H	person
+Phoenician	TAG AS G5403	untagged
+Pisces	TAG AS NONE	untagged
+Pisidian	TAG AS G4099	untagged
+Pollux	TAG AS NONE	untagged
+Pontius	TAG AS G4091	untagged
+Praetorian	TAG AS NONE	untagged
+Ptolemaic	TAG AS NONE	untagged
+Ptolemies	TAG AS NONE	untagged
+Puah	TAG AS H6312G	person (1138 BC)
+Puah	TAG AS H6326	person (1532 BC)
+Purim	TAG AS H6332	untagged
+Rabbah	TAG AS H5983	untagged
+Ramah	TAG AS H7414G	place
+Ramathaim	TAG AS H4709G	untagged
+Ramoth	TAG AS H7433	untagged
+Reuel	TAG AS H3503	person
+Rezin	TAG AS H7526G	person
+Riblah	TAG AS H7247H	place
+Sabbath	TAG AS H7676	untagged
+Sabbaths	TAG AS H7676	untagged
+Sadducees	TAG AS G4523	untagged
+Salah	TAG AS H7974	untagged
+Salem	TAG AS H3389	untagged
+Samaritan	TAG AS H8111	untagged
+Samaritans	TAG AS H8111	untagged
+Sargon	TAG AS H5576	untagged
+Satan	TAG AS H7854	untagged
+Seleucid	TAG AS NONE	untagged
+Semitic	TAG AS NONE	untagged
+Senusret	TAG AS NONE	untagged
+Sergius	TAG AS G4588	untagged
+Shadrach	TAG AS H2608T	untagged
+Shallum	TAG AS H7967G	person
+Sheba	TAG AS H7614J	person (939 BC) = PLACE not person
+Sheba	TAG AS H7652A	person (978 BC)
+Shechem	TAG AS H7927G	person
+Shechemites	TAG AS H7928H	untagged
+Shelah	TAG AS H7956	person (1897 BC)
+Shelah	TAG AS H7974	person  (AM 1558, 1658, 1693, 2078, 2048, 2016; 1987 BC)
+Shemaiah	TAG AS H8098A	person
+Shilonite	TAG AS H8023	untagged
+Shimeah	TAG AS H8093	person
+Shunammite	TAG AS H8126	untagged
+Sicily	TAG AS NONE	untagged
+Sidonians	TAG AS H6721H	untagged
+Siloam	TAG AS H7975A	untagged
+Simeon	TAG AS G4826G	person (6 BC)
+Simeon	TAG AS H8095G	person (1930, 1927, 1926, 1909, 1877, 1789 BC)
+Simon	TAG AS G4613G	person (AD 27, 28, 32)
+Simon	TAG AS NONE	person (332, 300, 280, 260, 240, 218, 185, 175, 142, 134 BC)
+Sirach	TAG AS NONE	untagged
+Solomonic	TAG AS H8010	untagged
+Sulpicius	TAG AS NONE	untagged
+Syrian	TAG AS H0758I	untagged
+Talmai	TAG AS H8526H	person
+Thaddaeus	TAG AS G2455G	untagged
+Tiberias	TAG AS H7557	untagged
+Timnah	TAG AS H8553G	place
+Timnath	TAG AS H8556A	untagged
+Tiphsah	TAG AS H8607H	place
+Tishbite	TAG AS H8453B	untagged
+Tobiah	TAG AS H2900I	person
+Tobias	TAG AS NONE	untagged
+Tola	TAG AS H8439H	person
+Turkey	TAG AS NONE	untagged
+Uriah	TAG AS H0223A	person
+Uzziah	TAG AS H5818G	person
+Valerius	TAG AS NONE	untagged
+Yahweh	TAG AS H3068G	untagged
+Zachariah	TAG AS NONE	untagged
+Zadok	TAG AS H6659G	person 
+Zadokite	TAG AS H6659G	untagged
+Zechariah	TAG AS G2197H	person (7 BC)
+Zechariah	TAG AS H2148P	person (792, 767 BC)
+Zechariah	TAG AS H2148v	person (522, 520, 518, 458 BC; AD 30)
+Zechariah	TAG AS H2148w	person (799 BC)
+Zedekiah	TAG AS H6667H	person
+Zerah	TAG AS H2226I	person (1897 BC)
+Zerah	TAG AS H2226K	person (897, 896 BC)
+Zerubbabel	TAG AS H2216	person
+Zerubbubel	TAG AS H2216	untagged
+Zimri	TAG AS H2174A	person

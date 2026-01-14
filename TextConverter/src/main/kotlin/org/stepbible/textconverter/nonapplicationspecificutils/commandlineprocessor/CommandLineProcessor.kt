@@ -97,8 +97,10 @@ object CommandLineProcessor: ObjectInterface
        /************************************************************************/
        fun recordOption (opt: Option)
        {
-         val value = if (opt.hasArg()) opt.value else "y"
+         var value = if (opt.hasArg()) opt.value else "y"
          ConfigData.delete(generateConfigDataName(opt.opt))
+         if ("targetAudience" == opt.opt.toString())
+           value = value.lowercase()
          ConfigData.put(generateConfigDataName(opt.opt), value, true)
        }
 
@@ -247,10 +249,25 @@ object CommandLineProcessor: ObjectInterface
 
     /****************************************************************************/
     /**
+    * Processes options which have to be read early because, for instance, they
+    * control the config processing.
+    */
+
+    fun processCommandLineOptionsEarly ()
+    {
+      listOf("configLimitations").forEach { parm ->
+       val value = getOptionValue(parm)!!
+       ConfigData.put(generateConfigDataName(parm), value.lowercase(), true)
+       }
+     }
+
+
+    /****************************************************************************/
+    /**
     * Does what it says on the tin.
     */
 
-    fun showHelpAndExit ()
+    private fun showHelpAndExit ()
     {
       HelpFormatter().printHelp("java -jar ${getJarFileName()} [args]\n\nVersion: ${ConfigData["calcJarVersion"]!!}\n\n", m_Options)
       exitProcess(0)

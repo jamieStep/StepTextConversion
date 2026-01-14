@@ -33,6 +33,7 @@ import kotlin.collections.ArrayList
 
 import org.antlr.v4.runtime.*
 import org.antlr.v4.runtime.misc.Interval
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 
 
 
@@ -42,211 +43,335 @@ import org.antlr.v4.runtime.misc.Interval
  *
  *
  *
+ * ## What to read
+ *
+ * The handling of config data is appallingly complicated.  (If you can think of
+ * a better way to handle all this, I'm definitely interested.)
+ *
+ * The volume of documentation reflects this.  You won't want to read all of it
+ * unless you absolutely have to.
+ *
+ * If you're a newbie, then my apologies, but it's going to have to be the whole
+ * lot.  Better get a coffee.  Or perhaps something stronger.  And a sleeping bag.
+ *
+ * But if you've worked with config before, you may be able to get away with less
+ * -- at least until you discover you can't.  Skip straight to 'Creating and
+ * updating modules'.
+ *
+ *
+ *
  * ## Overview
  *
- * Configuration, it turns out, is both complex and very extensive -- because
- * the various texts potentially differ so much in their character, there are
- * many hundreds of aspects of the processing which we might wish to control
- * without necessarily wanting to change the Kotlin code.  Fortunately it does
- * not follow that we will often *need* to change the vast majority of
- * them; but there are quite a few which will *definitely* differ from one
- * text to another, and we require the flexibility to be able to change many
- * more should that turn out to be necessary.
+ * - Config data provides information which feeds through into the finished
+ *   module, and also controls the conversion process.
  *
- * This implies a need to be able to set out a whole raft of defaults, and then
- * to override them as necessary.  We look at this in more detail shortly.
+ * - Config is complex and extensive.  There are hundreds of config parameters.
+ *   Fortunately, though, most texts require you to specify only a handful --
+ *   I provide sensible defaults for all of the others.
  *
- * A further complicating factor arises because the configuration data is not
- * entirely under our control.  Internally I use a simple home-brew format for
- * configuration data, partly for historical reasons, but also because it makes
- * it easy to override defaults in a fairly logical manner.
- *
- * DBL (the Digital Bible Library), on the other hand, normally makes a lot of
- * metadata available in XML form, and it is convenient to be able to pick up
- * some of the things we need from that without having to transcribe them --
- * which implies the need both to be able to handle XML inputs and to indicate
- * how to take this XML input and store it against the keys which otherwise
- * would be covered by the homebrew-format data.
+ * - What you need to know falls into two categories -- you need to know how
+ *   to specify config settings, and you need to know where to store them.
+ *   We'll deal with the latter first.
  *
  *
  *
+ * ## Where to store config settings
  *
- * ## General approach
+ * - A few config settings are taken from the command line.
  *
- * To a first approximation (weasel words to which I will return shortly), the
- * homebrew configuration information is made up of a series of key-value
- * pairs.
+ * - A *lot* of default settings are taken from files in the Resources section
+ *   of this JAR file.  As the name implies, you can override this, although
+ *   hopefully you won't normally need to do so.
  *
- * The processing automatically sets up a lot of defaults on your behalf.  You
- * will also need, in your Metadata folder, a file called step.conf.  You
- * use this to define any parameters which absolutely _have_ to be set up on a
- * per-text basis (copyright information being an obvious example), or to
- * override the defaults.  You can put these definitions directly into
- * step.conf, or you can put them into other files which you refer to from
- * step.conf via an 'include' mechanism -- see below.
+ * - If you are dealing with data from DBL, you can optionally organise to
+ *   take some settings direct from the metadata files they supply.
+ *
+ * - Some settings are calculated during processing.
+ *
+ * - But the bulk of the settings you supply yourself in files you create.
  *
  *
+ * There is an 'include' mechanism which lets you reference one config
+ * file from another.  The processing works as though the include'd file
+ * has been expanded out and the include statement has been replaced
+ * by the resulting text.
+ *
+ * You can use this mechanism to partition your data into coherent chunks.
+ * It also gives you the chance to share data among texts -- you set up one
+ * or more common files and then have everything include them.
+ *
+ * Note that no particular meaning is ascribed to the file structure you
+ * choose.  You *can* put settings anywhere you like.
+ *
+ * It is ok for a given parameter to be defined multiple times.  In such
+ * cases, the order in which these definitions are encountered determines
+ * the actual value assigned to the parameter (see below).  This makes possible
+ * the defaulting mechanism I refer to above -- the defaults are stored in the
+ * JAR here, but you can override them by providing settings in the files
+ * you create.
+ *
+ * All of this is discussed in more detail later.
  *
  *
  *
  * ## The Include mechanism
  *
- * There are two forms of Include statement:
+ * An Include statement goes on a line of its own in your config files, and
+ * there are two forms of Include statement:
  *
  *     $include filePath
  *     $includeIfExists filePath
  *
- * Each must appear on a line in its own right in a config file, and each works
- * in the same way, the only difference being that the former terminates the
- * processing if the file does not exist, whereas the latter does not.
+ * Each works in the same way, the only difference being that the former
+ * aborts the processing if the file does not exist, whereas the latter
+ * does not.
+ *
+ * Include's may be nested to any depth.  The various config files are
+ * pre-processed so that all include's are replaced by the content of
+ * the included file before processing proper begins.  The effect,
+ * therefore, is as though you had just one massive config file.
  *
  * The file paths here may be any of the following:
  *
  * - @jarResources/fileName: This selects a file which is built into the
- *   resources section of the present JAR.
+ *   resources section of the present JAR.  (You are unlikely to need to
+ *   make much use of this.  Typically you include just one Resources file --
+ *   commonRoot.conf, and it automatically loads all the other ones for you.
+ *   And if you make use of the most recent approach, described below, you
+ *   don't need to include even that one file, because it, too, is
+ *   automatically included.)
  *
- * - @find/...../fileName (where ...../ is optional, and if present specifies
- *   a folder hierarchy -- eg @find/MySpecialConfig/Messages/warnings.conf.
- *   In this case, the processing looks for the path under a) the root folder
- *   for the text being processed (Text_abc_DEF_step or whatever); b) the
- *   Metadata folder associated with the text (Text_abc_DEF_step/Metadata);
- *   and c) in any folders identified by the optional parameter
- *   stepConfigFolderPaths in the optional environment variable
- *   stepTextConverterParameters.
+ * - @find/fileName where filename is just that -- just the name of the file,
+ *   devoid of any path information.  See below.
  *
  * - Or you can give an absolute path (but I strongly advise against it other
  *   than perhaps for test purposes, because it will render things
  *   non-portable).
  *
  *
- * There is one other wrinkle.  If you indicate on the command line that
- * configuration data is to be taken from a zip file created on a previous run,
- * the above processing is ignored.  Instead, we simply look for data in that
- * zip file, and in doing so we ignore any path information -- we merely look
- * in the zip file for elements which match the actual file names.
+ * With @find the system runs through the following folders in order:
+ *
+ * 1. The Metadata folder for the text -- Text_abc_DEF_step/Metadata.
+ *
+ * 2. The OtherMetadata folder for the text if there is one --
+ *    Text_abc_DEF_step/OtherMetadata (discussed below).
+ *
+ * 3. The root folder for the text -- Text_abc_DEF_step.
+ *
+ * 4. Any folders specified by the optional parameter stepConfigFolderPaths
+ *   in the optional environment variable stepTextConverterParameters.
+ *
+ * (The examples above all assume that the root folder name ends _step.
+ * They are equally applicable to folders ending _public or _publicStep).
+ *
+ * It looks in each of these places in turn, and then runs over the entire
+ * folder hierarchy below it.  As soon as it locates a file with the
+ * given name, it takes the first such file and does not look further.
+ *
+ * OtherMetadata is a folder is a folder stored in repository packages to
+ * give a record of the metadata used when building that module.  It will
+ * therefore not be available unless you are starting from an existing
+ * repository package.
+ *
+ * Note that if OtherMetadata *is* available, config data will always be
+ * taken from there in preference to any other similarly named files you
+ * may have lying around, with four exceptions: config.step or config.xlsx
+ * and, if you have them, metadata.xml and license.xml are always taken
+ * from Metadata.
  *
  *
- * Include's may be nested to any depth.  Processing proceeds as though all of
- * the included files have been expanded out before it begins.
- *
- * Note, incidentally, that the processing makes no assumptions about the way
- * in which configuration information is, or is not, split across files.  It
- * requires that it sees the information in the appropriate *order*, not that
- * it sees it in any particular file.  The only requirement is that there be
- * a step.conf file to act as a starting point.
  *
  *
+ * ## Third party config
+ *
+ * At present the discussion here is applicable only where you are working with,
+ * data taken from DBL, which supplies the files metadata.xml and license.xml
+ * for each text -- and even then, is applicable only if you choose to store
+ * these files in the Metadata folder, and if you set up the config data to
+ * indicate that they are to be used.
+ *
+ * In the early days I thought this would be useful, because we were processing
+ * many DBL texts.  In practice, this is looking rather less useful than I'd
+ * imagined.  This is partly because we very often tend to ignore the supplied
+ * information and override it with our own settings; and partly because the
+ * metadata is not well documented, and therefore tends not to be used in a
+ * consistent manner.
+ *
+ * Having said this, the processing to do all of this *is* still present, and
+ * will do its stuff unless you prevent it, so you need to know about it.
+ * (One simple way of thwarting it, if you want one, is simply not to store
+ * the metadata.xml and license.xml files in the Metadata folder.)
+ *
+ * Data from the metadata.xml file plays an active part in the processing and,
+ * for instance, participates in the Bible description which appears in
+ * STEPBible's Bible chooser.
+ *
+ * Data from license.xml is essentially passive -- I merely copy things like
+ * expiry date into a comment at the top of the Sword config file so that it
+ * is available for admin purposes if required.
+ *
+ * **IMPORTANT**: You are unlikely to want to modify the content of these files.
+ * If the information we would otherwise take from them is not appropriate, it
+ * is normally better to supply your own settings and organise for those
+ * settings to take precedence.  How you do this is discussed later.
  *
  *
- * ## The other bits
  *
- * Just to fill in the weasel words ('to a first approximation') above ...
+ * ## Creating and updating modules
  *
- * There are some values which we would like to regard as configuration items,
- * but which have to be determined at run time.  These are available as though
- * they had been specified as configuration parameters, but are calculated
- * internally.
- *
- * Command-line parameters are also stored in the configuration structure.
- * It is possible that configuration files may also attempt to give values to
- * these same parameters.  The values obtained from the command line always
- * take priority.  (Command-line parameters do not have names starting with
- * 'step' -- unlike most other parameters.  The analogues of the command-line
- * parameters available internally *do* have 'step' -- so that, for instance,
- * targetAudience becomes stepTargetAudience.
+ * The approach you adopt to creating and updating modules *may* differ
+ * slightly depending upon what you are trying to achieve.  In fact all
+ * approaches come down to much the same thing; the main difference is the
+ * lengths you wish to go to in order to have just a single copy of shared
+ * data.
  *
  *
+ *
+ * ### Updating one or two existing modules
+ *
+ * Least complicated is the situation where you have an existing repository
+ * package and are happy to work with that and the config data in its
+ * OtherMetadata folder.  More particularly, this is a good approach if you
+ * are updating only one or two modules and are doing different things to
+ * each or -- if updating shared information -- don't mind making separate
+ * updates to each.
+ *
+ * Here Metadata and OtherMetadata should contain all the config you need.++
+ * If you need to alter config data you need change only the files in
+ * Metadata and / or OtherMetadata.  (As a reminder, on recent modules,
+ * Metadata will contain step.xlsx and optionally metadata.xml and license.xml.)
+ * You then make any necessary changes to the actual textual content, and run
+ * the converter to create a new repository package.
+ *
+ * ++ Regrettably this statement really applies only where you are working
+ * with repository packages which have been built relatively recently.
+ * Earlier ones use a variety of different arrangements and will have to be
+ * handled on a case-by-case basis.
+ *
+ *
+ *
+ * ### Creating new modules
+ *
+ * You need to create a Metadata folder under the root folder for the text.
+ * Within this you will need a copy of step.xlsx (a template appears in the
+ * Resources section of the present JAR file), duly filled in.  If you are
+ * working with DBL and may potentially wish to take data from there
+ * automatically, you will also need to store DBL's metadata.xml and
+ * license.xml files there.
+ *
+ * You may also need to set up additional config files to hold other data.
+ * The earlier discussion about the include mechanism gives details of
+ * where you can store them.  If you are likely to have many modules which
+ * have common config data, you might wish to factor out this common data
+ * and put it in a location where all of the modules can see it.
+ *
+ * Once you have done all of this, you can use the converter to create a
+ * repository package.
+ *
+ *
+ *
+ * ### Updating existing modules en masse
+ *
+ * I am thinking here particularly of the situation where you expect to
+ * be updating many modules all of which shared common config data, and
+ * it is this common information which needs to be updated.
+ *
+ * You *can* work here as described in the section 'Updating one or two
+ * existing modules' above, provided you don't mind repeating the changes
+ * for each module.
+ *
+ * Alternatively, you can attempt to set up a shared folder structure,
+ * and then work with that.
+ *
+ * Bear in mind, if you do this, that if the OtherData folder exists for
+ * any module, config information will be taken from there in preference
+ * to using the various shared locations you have set up.  If you wish to
+ * be certain your shared data is being used in preference, you should
+ * probably delete or rename OtherMetadata before you start.
  *
  *
  *
  * ## Syntax -- overview
  *
- * Each line in a configuration file contains a comment, a definition, a
- * directive, or is blank.
+ * It may be easiest if I start by supplying a sample config fragment:
  *
- * A single definition or directive may be continued over more than one line by
- * appending a backslash to the end of it.  Whitespace before a backslash is
- * retained.  Whitespace at the start of a continuation line is ignored.
+ *     #! This is a comment line.  Comments start with '#!'
+ *     #! Comments may appear on a line of their own, or may be appended to other statements.
+ *     #! All data from #! to the end of the line are stripped off before processing begins.
+ *     #! Spaces are then removed from the start and end of the line.
+ *     #! If the resulting line is blank, it is ignored.
  *
+ *     name=John                      #! This associates the value 'John' with the parameter 'name'.  If the processing asks for a value for 'name' this is what it will get.
+ *     fullName=$firstName $lastName  #! This shows that a setting may refer out to other settings.  In this case 'fullName' is assembled out of firstName and lastName.
  *
+ *     $include myConfig.conf         #! Includes another file at this point.
+ *     $include $langCode/texts.conf  #! The target of an include statement can also refer out to other settings.
  *
- *
- *
- * ## Syntax -- comments
- *
- * '#!' is used as a comment marker.  Comments may appear on lines in their own
- * right, or at the end of other lines.  The comment marker and anything to the
- * right of it, and any whitespace to the left of it, is removed before
- * processing begins.  If the result is a blank line -- or if you have any
- * lines which were entirely blank to begin with -- they are ignored.
- *
- * Note that a backslash at the end of a line containing a comment is regarded
- * as being part of the comment -- you can continue a line only if it does
- * *not* contain a comment.
+ *     book#=Romans                   #! An alternative form of assignment, discussed below.
+ *     chapterRef#=$book.$chapter     #! This form of assignment can also refer out to other items.
  *
  *
  *
+ *     #! You can spit long values over several lines to improve readability by appending a backslash to each line but the last.
+ *     #! Spaces prior to a backslash are retained.  Spaces at the front of continuation lines are ignored.
+ *     #! You can't have both a backslash and a comment on the same line -- the backslash will simply be treated as part of the comment.
  *
- * ## Definition statements
- *
- * Definition statements are of the form:
- *
- *     key=value or
- *     key#=value
- *
- * The effect is to associate the given key with the given value.  If you
- * encounter two '=' settings for the same key, the later one takes
- * precedence.  If you have more than one #= setting, the *first* takes
- * precedence over all other settings of either flavour.
- *
- * This arrangement lets me start off by storing default settings, and then
- * giving the user the chance to override them.  '#=' gives you a way of
- * forcing a particular value to be used in preference to any 'normal'
- * definitions which will be encountered.
- *
- * While reading the configuration data, these definitions are merely stored
- * against their associated key value.  They are evaluated only when something
- * asks to have the value associated with its key.
- *
- * Why does this matter?  Partly because definitions may refer to one another.
- * You can have eg
- *
- *      name=John
- *      .
- *      .
- *      .
- *      hi=Hello $name
- *
- * and hi will be given the value 'Hello John'.  By deferring evaluation until
- * the processing actually requires the data, I can cater for the possibility
- * that 'name' may have been defined more than once, and pick up the later
- * definition.  It also means that ordering doesn't matter -- the definition
- * for 'name' may come after that for 'hi' and it will still work.
- *
- * Definitions like this may be nested to any depth, so that you might, for
- * instance, have had:
- *
- *     name = $firstName $surname
- *
- * I recommend against doing anything too sophisticated, however, or it will
- * get very confusing.
- *
- * And the other reason for deferring things is that, as mentioned earlier,
- * there may be some cases where are dealing with files from a source such as
- * DBL, for which I have processing to read configuration data straight from
- * the metadata files they supply, and deferring makes this easier to handle in
- * a uniform manner.
+ *     longValue=This value \
+ *               is split over \
+ *               several lines.
  *
  *
+ * All of these lines can appear in any order, and there can be as many of each
+ * flavour as you like.
+ *
+ * You may have more than one definition of the same parameter.  Where this is
+ * the case, the order in which the processing encounters them matters:
+ *
+ * - With '=' assignments, the *last* definition is the one to be used.
+ *
+ * - With '#=' assignments, the *first* definition is the one to be used.
+ *
+ * - If you have both forms of assignment, the *first* '#=' assignment will be
+ *   used, and all the others will be ignored.
+ *
+ *
+ * This, for instance, is how the defaulting mechanism works.  In the files in
+ * the Resources section of the JAR, all of the assignments I make use '='. This
+ * means you can then override them, either by using '#=' or simply by placing
+ * your definitions later. (I recommend using '#=' anywhere where you are trying
+ * to force matters, rather than relying just upon ordering -- it's clearer.)
+ *
+ * There are some specialist settings -- particularly where data is to be picked
+ * up from the DBL metadata file.  These are discussed below.
+ *
+ * Note also that there are a number of ways in which values can be assembled
+ * out of other values -- the examples above were for illustration only.  Again
+ * these are discussed below.
+ *
+ * At the time the data is *read* the definitions are stored exactly as they
+ * appear above.  Thus, for example, against 'fullName' the value
+ * '$firstName $lastName' will be stored.  Only when the processing first
+ * *accesses* the parameter will the calculation be carried out.  So if
+ * firstName has the value 'John' at the time fullName is accessed, and
+ * lastName the value 'Smith', fullName will have the value 'John Smith'.
+ *
+ * Once a value has been assigned to a parameter in this manner, it does
+ * not subsequently change, even if the underlying values change.  If
+ * we access fullName as above, and get John Smith, and then access it
+ * again, then even if $lastName has changed to Jones in the interim, the
+ * value we see will still be 'John Smith'.
  *
  *
  *
  * ## Naming conventions
  *
- * For historical reasons, most configuration parameters have names starting
- * 'step'.  (Command-line parameters omit the 'step', but they are transcribed
- * into the configuration data, and here they *do* have the 'step', so that,
- * for example, 'targetAudience' becomes 'stepTargetAudience'.
+ * These are a bit of a mess at present.
+ *
+ * In the main, all 'official' STEP parameters have names which start 'step'.
+ *
+ * Parameters named on the command line lack this 'step' prefix, but when
+ * they are stored internally the prefix is added, so that the command-line
+ * parameter targetAudience becomes stepTargetAudience.
  *
  * Latterly I have taken to using a 'sword' prefix for parameters which are
  * written out to the Sword configuration file.  And In some cases where
@@ -254,15 +379,104 @@ import org.antlr.v4.runtime.misc.Interval
  * departure, and at present probably hasn't worked its way through properly.
  * (And in addition, there are some places where there is no 'right' answer --
  * if a value is calculated and then used only in the Sword configuration file,
- * does that make is 'sword' or 'calc'.
+ * does that make is 'sword' or 'calc'?)
  *
- * Occasionally people may want to store their own intermediate values en route
- * to setting up one of the parameters used by the converter.  I suggest using
- * '_' as a prefix for these.  (In fact, it doesn't much matter what is used,
- * so long as there are no clashes, but I guarantee to avoid '_' when creating
- * my own parameters.)
+ * Occasionally it is possible you may want to define your own intermediate
+ * values en route to setting up one of the parameters used by the converter.
+ * If you do, use '_' as a prefix to avoid any potential clashes.
+ *
+ * Note that names are case-sensitive.
  *
  *
+ *
+ * ## Parameter definition language
+ *
+ * The samples above included things like
+ *
+ *     fullName=$firstName $lastName
+ *
+ * and I commented that this makes it possible to define one parameter in terms
+ * of others.  Going way over the top, there is, in fact, something approaching
+ * a fully-fledged language for this:
+ *
+ * - **$myVar** is replaced by the value associated with myVar.  Variable names
+ *   are assumed to run from the $-sign through any subsequent word characters
+ *   (of which there must be at least one).  If you need a variable name to be
+ *   followed immediately by more word characters, you can end the name with
+ *   $$.*
+ *
+ * - **fn($a, $b, "...", $c)** is replaced by the value returned by 'fn',
+ *   passing the given arguments.  This also illustrates that the arguments can
+ *   themselves be reference to parameters or fixed strings.  The available
+ *   functions are discussed below.
+ *
+ * Printer's double quotes are replaced by straight quotes during processing.
+ *
+ * I make the simplifying assumption that $-signs will never be included as
+ * plain text -- ie that they will always indicate function invocation or
+ * parameter references.
+ *
+ *
+ * The available functions are as follows.  I make the assumption that the
+ * names are, in general, self-explanatory, and therefore document only
+ * functions where this may not be the case.  Unless otherwiste stated
+ * arguments may be either quoted text strings ("Hi there") or parameter
+ * references ($a, $b, etc), in any order.
+ *
+ *
+ * #### General text manipulation:
+ *
+ * - $choose($choose(x, y, ...): Returns the first non-null argument, or null if
+ *   all are null.
+ *
+ * - $delimited(bra, content, ket): Returns null if 'content is null, otherwise
+ *   the concatenation bra + content + key.
+ *
+ * - $eq($a, $b): Returns Yes or No, according as the two arguments are or are
+ *   not equal.
+ *
+ * - $getExternal: See discussion of third party config below.
+ *
+ * - $indirect(x, y, ...): Concatenates all of the argument to give what it
+ *   takes as a new parameter name and the returns the value associated with
+ *   that parameter.  Legacy only, I think -- I don't think anything now uses
+ *   this.
+ *
+ * - $join(sep, x, y, ...): Returns a string concatenates x, y etc, separating
+ *   them by sep.  Null arguments are ignored.
+ *
+ * - $toDate(outputFormat, inputFormat, text): Takes a text string representing
+ *   a date in format inputFormat, and converts it to an outputFormat
+ *   representation.  Formats are as supported by DateTimeFormatter.
+ *
+ *
+ * #### Items which feed into the Bible chooser text:
+ *
+ * - $calcBibleNameForBibleChooser()
+ * - $calcCountriesWhereLanguageUsed()
+ * - $calcDateForBibleChooser()
+ * - $calcLanguageDetailsForBibleChooser()
+ * - $calcScriptureCoverageForBibleChooserForBibleChooser()
+ *
+ *
+ * #### Items which end up on the copyright / description block:
+ *
+ * - $calcAddedFeaturesForCopyrightPage(): Records changes we may have made ourselves.
+ * - $calcAmendmentsAppliedForCopyrightPage()
+ *
+ *
+ * #### General items which end up in the Sword configuration file
+ *
+ * - $calcExtendedLanguageCode()
+ * - $calcInputFileDigests()
+ * - $calcJarVersion()
+ * - $calcLanguageNameInEnglish()
+ * - $calcModuleCreationDate()
+ * - $calcSwordDataPath()
+ * - $calcSwordOptions()
+ * - $calcTextSource()
+ * - $stepTextModifiedDate()
+ * - $swordTextDirection()
  *
  *
  *
@@ -270,100 +484,83 @@ import org.antlr.v4.runtime.misc.Interval
  *
  * There are a few special cases:
  *
- * - There may be multiple lines each starting with the key
+ * - You may create *multiple* lines each starting with the key
  *   vernacularBookDetails. These supply details of book names.  They are
  *   presently used internally only, so I won't go into detail here.
  *
- * - There may be multiple lines each starting with the key
+ * - You may create *multiple* lines each starting with the key
  *   stepUsxToOsisTagTranslation. These are concerned with the (rather large
  *   number of) straightforward mappings from USX to OSIS tags.  More details
- *   are given in usxToOsisTagConversionsEtc.conf.
+ *   are given in usxToOsisTagConversionsEtc.conf in the Resources section of
+ *   the JAR.
  *
- * - There may be lines starting $include.  These are directive, and are dealt
- *   with in the next section.
+ * - You may create *multiple* lines starting copyAsIs=.  The right-hand side of
+ *   these is passed straight through to the Sword config file.  For example:
  *
- * - There may be multiple lines starting copyAsIs=.  The right-hand side of
- *   these is passed straight through to the Sword config file.
+ *      copyAsIs=Obsoletes=TsnLEF
  *
- * - Some definition lines may include $getExternal on their right-hand sides.
- *   These pick up data from an external data source (of which currently only
- *   DBL is supported).  More information about this appears below.
- *
- *
- *
- *
- *
- * ## Directives
- *
- * The only directives currently supported are $include and $includeIfExists.
- * Unlike definition statements, these are actioned immediately they are
- * encountered.  The filePath part is subject to $... expansion in the
- * normal manner, but the evaluation occurs at the time the $include directive
- * is encountered, and not at the end of processing.
- *
- *
+ *   results in 'Obsoletes=TsnLEF' being inserted into the Sword config file.
  *
  *
  * ## Getting data from external file formats
  *
- * There are some repositories (such as DBL) from which we obtain large numbers
- * of texts, and these (as in the case of DBL) may make metadata available in
- * their own standard form.
+ * At present, the only external format we support is DBL (metadata.xml and
+ * license.xml) -- and as mentioned previously, the benefits of doing even this
+ * are looking increasingly illusory.
  *
- * If a given repository makes sufficient texts available, it may be worthwhile
- * creating special processing to pick up configuration data direct from that
- * repository's own metadata files, rather than have to transcribe it manually.
- * At present we have such processing for DBL (only); and you therefore need
- * to have available a file which explains how to extract the relevant
- * information from there.
+ * There is a special form of assignment statement to access this data:
  *
- * For details of this, see the file PerTextRepositoryOrganisation/Dbl.conf in
- * the Resources section of this JAR.  In essence, you use special definition
- * statements of the form:
+ *     myVal=$getExternal(fileIdentifier, ...)
  *
- *     key=$getExternal(metadata, ...)
+ * '$getExternal' indicates that we are to look for the data in an external
+ * file (ie something not in STEP config file format).
  *
- * where 'metadata' can be any reasonable name you choose (ie there is no
- * particular significance to the actual name chosen), and serves as a logical
- * name for the file; and the '...' contains the parameters needed by the
- * processing to extract the relevant data from the external file.  (This syntax
- * has been developed purely to cater for the needs of DBL metadata at present,
- * but I'm reasonably hopeful it will carry through to other things, should we
- * ever decide to cater for them.)
+ * 'fileIdentifier' indicates which file is to be accessed.  You need to
+ * use a name of your own choosing.  Perhaps when dealing with metadata and
+ * licence files, the values 'metadata' and 'licence' are appropriate, although
+ * the actual names do not matter.  You need to associate the names with the
+ * actual files -- perhaps something like
  *
- * These definitions are subject to $... processing in the usual way, before
- * they are actioned, although I'd recommend not taking advantage of that.
+ *     stepExternalDataSource=dbl:metadata:filePath or
+ *     stepExternalDataSourceIfExists=dbl:metadata:filePath
  *
- * If you are going to use this feature, you also need one or more definitions
- * of the form:
- *
- *    stepExternalDataSource=dbl:metadata:$metadata/metadata.xml or
- *    stepExternalDataSourceIfExists=dbl:metadata:$metadata/metadata.xml
- *
- * to associate the external file with the logical name (so that in this case
- * the logical name 'metadata' is associated with $metadata/metadata/xml,
- * using the normal pathname conventions -- see the discussion of $include
- * above).  The 'dbl' portion identifies the type of the data (in this case
- * DBL, which is the only external format supported at the time of writing).
- *
- * The definition is not used until the first time a $getExternal statement is
- * encountered which uses that particular logical name, and it is the value at
- * that particular time which determines the file to be used.  Once a file has
- * been used for the first time, any later attempt to change the association
- * between logical name and file is ignored.
- *
- * You can have as many statements of this form as you need, so there is no
- * problem in picking up information from multiple different files if
- * necessary.  Also, there is nothing to prevent you from assigning two
- * different logical names with the same file, via two different
- * stepExternalDataSource statements.
+ * Here the 'dbl' says the files follow DBL protocol (and is the only value
+ * currently supported).  'metadata' gives the fileIdentifier which will be
+ * used elsewhere, and the filePath points to the actual file, using one of
+ * formats used by $include statements.
  *
  * If you use the 'IfExists' form and the file does *not* exist, $getExternal
  * statements will return null.
  *
- * Much more information about the way in which configuration files are handled
- * appears in the header comments to the various default files themselves, so
- * I will not go into further detail here.
+ * A file identifier becomes associated with a file only when data from that
+ * file is first used, and at this point that association is set in stone --
+ * even if you change the stepExternalDataSource value subsequently, the
+ * original file will continue to be used.
+ *
+ * Note that all of these statements are subject to the normal '$' processing
+ * to expand out references to other parameters etc.  I'd recommend using this
+ * very sparingly though -- it can make debugging very difficult.
+ *
+ *
+ *
+ * ## Legacy issues
+ *
+ * The config data has undergone multiple iterations.  As a result you may well
+ * encounter legacy data which does not follow the rules above.  It is now
+ * rather difficult to legislate for all of these different possibilities, but
+ * a few notes:
+ *
+ * - Earlier modules used the text file step.conf in place of the more recent
+ *   step.xlsx.  Both have much the same effect; the different is that step.xlsx
+ *   is better documented, but is limited in what it can achieve directly.
+ *
+ * - step.xlsx itself now exists in more than one form.  The most recent version
+ *   contains a setting 'stepExternalMetadataFormat' near the top.  This version
+ *   automatically arranges for commonRoot.conf to be included at an appropriate
+ *   point.  Earlier versions used stepExternalDataFormat (without the 'Meta' in
+ *   the name), and it appeared rather later in the file.  Thse versions did not
+ *   necessarily autoload commonRoot.conf.
+ *
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -706,8 +903,8 @@ object ConfigData: ObjectInterface
     else // mayBePublic
     {
       targetAudience = "public"
-       if (null != optionFromCommandLine && "public" != optionFromCommandLine)
-         throw StepExceptionWithStackTraceAbandonRun("Folder name implies this is a public build, but targetAudience on the command line says otherwise.")
+      if (null != optionFromCommandLine && "public" != optionFromCommandLine)
+        throw StepExceptionWithStackTraceAbandonRun("Folder name implies this is a public build, but targetAudience on the command line says otherwise.")
     }
 
 
@@ -812,7 +1009,9 @@ object ConfigData: ObjectInterface
     legacyHandler(configTextFilePath)
 
     if (null != configSpreadsheetFilePath && File(configSpreadsheetFilePath).exists()) // Use spreadsheet if available, in preference to step.conf.
+    {
       load(configSpreadsheetFilePath, false)
+    }
     else
        load(configTextFilePath!!, false)
 
@@ -969,30 +1168,73 @@ object ConfigData: ObjectInterface
   /* Need this as a separate function because $include's involve recursive
      calls. */
 
-  private val m_AvoidDuplicateLoads: MutableSet<String> = mutableSetOf()
+  private val m_LoadedConfigFiles: MutableSet<String> = mutableSetOf()
 
   private fun load (configFilePath: String, okIfNotExists: Boolean)
   {
     /**************************************************************************/
     //Dbg.d("Loading config file: $configFilePath")
+    //Dbg.dCont(configFilePath, "DBL.conf")
 
 
 
     /**************************************************************************/
     val expandedFilePath = FileLocations.getInputPath(configFilePath)!!
-    if (expandedFilePath in m_AvoidDuplicateLoads)
+    if (expandedFilePath in m_LoadedConfigFiles)
       return
 
-    m_AvoidDuplicateLoads.add(expandedFilePath)
+    m_LoadedConfigFiles.add(expandedFilePath)
+    Logger.info("Loaded config from ${(m_LoadedConfigFiles.size).toString().padStart(2, ' ')}) $expandedFilePath.")
+
 
 
 
     /**************************************************************************/
-    val lines = if (expandedFilePath.endsWith(".xlsx"))
+    val takingDataFromSpreadsheet = expandedFilePath.endsWith(".xlsx")
+    val lines = if (takingDataFromSpreadsheet)
       ConfigDataExcelReader.process()!!
     else
       ConfigArchiver.getDataFrom(expandedFilePath, okIfNotExists) ?: return
 
+
+
+    /**************************************************************************/
+    /* Slightly fiddly bit, because I'm having to try to cope with a number
+       of different legacy issues here ...
+
+       Originally, data came from a text file -- step.conf.  I still need to
+       make allowance for the possibility that we have modules using this;
+       and for this, no special processing is needed.
+
+       Latterly we've moved to using step.xlsx instead.  I'd like this to be
+       organised such that we can automatically include commonRoot.conf at the
+       beginning.  However, commonRoot.conf itself loads DBL.conf, and does so
+       only if it already knows the value for stepExternalMetadataFormat.
+       Otherwise, at the time commonRoot.conf is loaded, DBL.conf is ignored.
+
+       I have legacy data which does not cater for this.  But I also now have
+       files which cater for it, by including a definition for
+       stepExternalMetadataFormat.  (The old files did not do so -- if they
+       made reference to the format at all, they used the now-deprecated name
+       stepExternalDataFormat.)
+
+       Old files will have been set up in an environment where the user
+       explicitly arranged for commonRoot.conf to be loaded, so we don't want
+       to do that here on old format files.  But for new format files -- ones
+       which contain a definition for stepExternalMetadataFormat -- we do
+       want to load commonRoot.conf.
+     */
+
+    val stepExternalMetadataFormatLine = lines.find { "stepExternalMetadataFormat" in it }
+    if (null != stepExternalMetadataFormatLine)
+    {
+      processConfigLine(stepExternalMetadataFormatLine, expandedFilePath)
+      load(FileLocations.getCommonRootFilePath(), false)
+    }
+
+
+
+    /**************************************************************************/
     for (x in lines)
     {
       //Dbg.d(x.contains("include", ignoreCase = true) && x.contains("choose", ignoreCase = true))
@@ -1011,40 +1253,6 @@ object ConfigData: ObjectInterface
 
   /****************************************************************************/
   /**
-   * I make provision for parameters to be stored in an environment variable
-   * named StepTextConverterParameters.  The format is:
-   *
-   *   setting;setting;setting; ...
-   *
-   * where individual settings look as they would in a config file -- key=val.
-   * If you need a semicolon within a setting, escape it using \;.  If you need
-   * a backslash, escape it as \\.
-   *
-   * Clearly you're not going to want to store too many settings this way, but
-   * there may be things -- such as the location of osis2mod -- which is more
-   * easily handled like this, rather than storing it in config files.
-   *
-   * @param environmentVariable Content of the environment variable.
-   */
-
-  fun loadFromEnvironmentVariable (environmentVariable: String)
-  {
-    ConfigFilesStack.push("StepTextConverterParameters environment variable")
-
-    var parmList = environmentVariable ?: return
-    parmList = parmList.replace("\\\\", "\u0001").replace("\\;", "\u0002")
-    val settings = parmList.split(";").map { it.trim().replace("\u0001", "\\").replace("\u0002", ";") }
-    settings.forEach {
-      if (!processConfigLine(it, ""))
-        throw StepExceptionWithStackTraceAbandonRun("Couldn't parse setting from environment variable: $it")
-    }
-
-    ConfigFilesStack.pop()
-  }
-
-
-  /****************************************************************************/
-  /**
    * Called when all defaults and metadata have been handled.
    *
    * The method also checks that mandatory parameters have been supplied, and
@@ -1056,7 +1264,7 @@ object ConfigData: ObjectInterface
    * pick up the details which indicate how that information can be obtained.
    */
 
-  private fun loadDone()
+  private fun loadDone ()
   {
     /**************************************************************************/
     canonicaliseConfiguration()
@@ -1095,6 +1303,24 @@ object ConfigData: ObjectInterface
 
 
   /****************************************************************************/
+  /**
+   * This makes it possible to generate pseudo config lines internally and then
+   * process them.
+   *
+   * @param configLine Line to be processing.
+   * @param origin Origin of data for debug purposes.
+   */
+
+  fun loadFromInternalSetting (configLine: String, origin: String)
+  {
+    ConfigFilesStack.push(origin)
+    if (!processConfigLine(configLine, ""))
+      throw StepExceptionWithStackTraceAbandonRun("Couldn't parse setting : $configLine")
+    ConfigFilesStack.pop()
+  }
+
+
+  /****************************************************************************/
   /* Parses a line so as to determine the key and value, and stores them.  Note
      that we store this as raw data -- we don't expand out parameter references
      at this point.  That occurs the first time a parameter is read
@@ -1118,6 +1344,7 @@ object ConfigData: ObjectInterface
 
   private fun loadParameterSetting (line: String)
   {
+    //Dbg.d(line)
     val force = line.contains("#=")
     val parts = line.split(Regex(if (force) "\\#\\=" else "\\="), 2)
     if (parts[1].trim().isNotEmpty()) // Jun 2025 -- see comment above.
@@ -1348,6 +1575,7 @@ object ConfigData: ObjectInterface
 
   operator fun get (key: String): String?
   {
+    //Dbg.d(key, "swordTextRepositoryOrganisationFullName")
     return getInternal(key, true)
   }
 
@@ -1484,7 +1712,8 @@ object ConfigData: ObjectInterface
   @Synchronized fun put (key: String, theValue: String, force: Boolean)
   {
     /************************************************************************/
-    //Dbg.dCont(key, "stepTargetAudience")
+    //Dbg.dCont(key, "stepBibleNameEnglish")
+    //Dbg.dCont(key, "swordTextRepositoryOrganisationFullName")
 
 
 
@@ -1505,27 +1734,30 @@ object ConfigData: ObjectInterface
 
     /************************************************************************/
     /* If this is a 'force' setting and we already have a force setting, we
-       retain the existing one. */
+       retain the existing one.  Otherwise we will definitely want to process
+       this current call. */
 
-    if (force && key in m_Metadata && m_Metadata[key]!!.m_Force)
+    if (force)
     {
-      ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), "Skipped because forced value already in effect")
-      return
+      if (key in m_Metadata && m_Metadata[key]!!.m_Force)
+      {
+        ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), "Skipped because forced value already in effect")
+        return
+      }
     }
 
 
 
     /************************************************************************/
-    /* If we're forcing, then it's always ok to write to the store because
-       force overrides any existing non-force value.  If we're _not_ forcing,
-       then it's ok to write only if an entry does not already exist, or if
-       any existing entry was not forced.  In other words, in general,
-       later wins. */
+    /* It's not a force setting.  We want to action this present call only
+       if either a) we don't already have a setting at all; or b) the
+       existing setting is not a force setting. */
 
-    if (!force)
+    else
     {
       val tmp = m_Metadata[key]  // If we're not forcing, it's ok to store the new data if either there's no existing entry, or the existing one is not marked force.
-      if (null != tmp && tmp.m_Force)
+      val processThisCall = null == tmp || !tmp.m_Force
+      if (!processThisCall)
       {
         ConfigDataSupport.reportSet(key, theValue, ConfigFilesStack.getSummary(), "Skipped because forced value already in effect")
         return
@@ -1671,6 +1903,7 @@ object ConfigData: ObjectInterface
   @Synchronized fun getInternal (key: String, nullsOk: Boolean): String?
   {
     /**************************************************************************/
+    //Dbg.dCont(key, "calcAbout")
     ConfigDataSupport.validateParameter(key, "get")
 
 
@@ -1704,7 +1937,10 @@ object ConfigData: ObjectInterface
     /* If we already have a value, we can return that. */
 
     if (existingValue.m_Resolved)
+    {
+      Dbg.dCont(existingValue.m_Value ?: "XXX", "Biblica® মুক্তভাবে বাংলা সমকালীন সংস্করণের™")
       return existingValue.m_Value
+    }
 
 
 
@@ -1718,6 +1954,7 @@ object ConfigData: ObjectInterface
       throw StepExceptionWithStackTraceAbandonRun("ConfigData.get for $key: value was recorded as $res and no value has been supplied.")
 
     m_Metadata[key] = ParameterSetting(res, m_Force = true, m_Resolved = true)
+    //Dbg.dCont(res ?: "XXX", "Biblica® মুক্তভাবে বাংলা সমকালীন সংস্করণের™")
     return res
   }
 
@@ -1996,8 +2233,6 @@ object ConfigData: ObjectInterface
 
     @Synchronized fun getBookDescriptors (): List<VernacularBookDescriptor>
     {
-      if (m_BookDescriptors.isNotEmpty()) return m_BookDescriptors
-
       if (m_BookDescriptors.isNotEmpty()) return m_BookDescriptors
 
       m_BookDescriptors = BibleBookNamesUsx.getBookDescriptors().toMutableList()
@@ -2339,7 +2574,7 @@ object ConfigData: ObjectInterface
        set to null if it is the same as the English. */
 
     var vernacularAbbreviation = xAbbrevVernacular
-    if (null != vernacularAbbreviation && abbrevEnglish.equals(vernacularAbbreviation, ignoreCase = true))
+    if (abbrevEnglish.equals(vernacularAbbreviation, ignoreCase = true))
       vernacularAbbreviation = ""
 
 
@@ -2512,7 +2747,7 @@ object ConfigData: ObjectInterface
 
     for (key in listOf("stepBibleNameEnglishAsSupplied", "stepBibleNameVernacularAsSupplied"))
     {
-      val x: String? = get(key);
+      val x: String? = get(key)
       val match = if (null == x) null else yyyyRegex.find(x)
       if (null != match)
         return match.value
@@ -2731,8 +2966,10 @@ object ConfigData: ObjectInterface
 
     "calcCountriesWhereLanguageUsed" to
      {
-        val languageCode = get("calcLanguageCode3Char")!!
-        if (languageCode.lowercase() in "grc.hbo.ara.arb.chi.cmn.deu.eng.fra.fre.ger.nld.por.spa.")
+        val languageCode = get("calcLanguageCode3Char")!!.lowercase()
+        val C_CodesForVeryWidelyUsedLanguages = ".grc.hbo.ara.arb.chi.cmn.deu.eng.fra.fre.ger.nld.por.spa."
+        val C_CodesForSingleUseLanguages = ".alb.sqi.arm.hye.aze.bul.cze.ces.est.fin.geo.kat.hun.ice.isl.jpn.kaz.kir.lav.lit.mon.pol.rum.ron.slo.slk.tgk.tha.tuk.uzb.vie."
+        if (languageCode in C_CodesForVeryWidelyUsedLanguages || languageCode in C_CodesForSingleUseLanguages)
           null
         else
           "${IsoLanguageAndCountryCodes.getCountriesWhereUsed(languageCode)}."
@@ -2948,13 +3185,11 @@ object ConfigArchiver
   fun getDataFrom (pseudoFilePath: String, okIfNotExists: Boolean): List<String>?
   {
     /**************************************************************************/
-    /* Pseudo file path may, for instance, start @find/.  Or it may be a full
-       path.  Or, if we are taking input from a previous zip, it doesn't much
-       matter what it is, because we pretty much ignore the path. */
+    /* Pseudo file path may start @jarResources or @find or it may be a full
+       path. */
 
-    val takingInputFromPreviousZip = ConfigData.getAsBoolean("stepConfigFromZip", "no")
     val fileName = File(pseudoFilePath).name
-    val filePath = if (takingInputFromPreviousZip) null else FileLocations.getInputPath(pseudoFilePath)
+    val filePath = FileLocations.getInputPath(pseudoFilePath)
 
 
 

@@ -58,10 +58,12 @@ class MainProcessor
         println()
         print(majorWarnings)
         Logger.specialMessage(majorWarnings)
+        try { val s = "BibleChooser text: " + ConfigData["calcBibleChooserTextAssembly"]!!; println("\n\n$s"); Logger.specialMessage(s) } catch (_: Exception) {}
         Logger.announceAll(false)
       }
 
       Dbg.endOfRun()
+
 
       returnCode = 0
     }

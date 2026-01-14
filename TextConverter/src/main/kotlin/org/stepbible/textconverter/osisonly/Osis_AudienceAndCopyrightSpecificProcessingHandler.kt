@@ -180,8 +180,6 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
       "runtime" ->
       {
-        ConfigData.delete("stepVersificationScheme") // Run-time reversification doesn't need to be given a versification scheme.
-
         if ("public" == targetAudience)
           throw StepExceptionWithStackTraceAbandonRun("Applying run-time versification, so you can't create a public module.")
       }
@@ -347,8 +345,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
     ConfigData.deleteAndPut("calcReversificationType", "runtime", force = true)
     ConfigData.deleteAndPut("stepTargetAudience", "step", false)
     ConfigData.deleteAndPut("calcSoftwareVersionRequired", 2.toString(), force=true)
-    ConfigData.deleteAndPut("stepVersificationScheme", ConfigData["calcModuleName"]!!, true) // Force to our own name for the versification scheme.
-    ConfigData.delete("stepVersificationScheme")
+    ConfigData.deleteAndPut("stepVersificationScheme", ConfigData["calcModuleName"]!!.lowercase(), true) // Force to our own name for the versification scheme.
     m_ReversificationHandler = PA_ReversificationHandler
   }
   

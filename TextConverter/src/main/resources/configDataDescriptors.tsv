@@ -57,6 +57,7 @@ stepUseVernacularFormats
 
 #! Access to external information
 stepExternalDataFormat
+stepExternalMetadataFormat
 stepExternalMetadataFileName
 stepExternalLicenceFileName
 stepStandardOwnerOrganisation
@@ -164,7 +165,7 @@ stepManualOsis2mod
 
 #! Command line.  (On the command line, all of these have names devoid of 'step'.  'step' is added when the parameters are stored in the config data structure internally.
 stepCheckInputsAgainstPreviousModule
-stepConfigFromZip
+stepConfigLimitations
 stepEvaluateSchemesOnly
 stepHistory
 stepReleaseNumber

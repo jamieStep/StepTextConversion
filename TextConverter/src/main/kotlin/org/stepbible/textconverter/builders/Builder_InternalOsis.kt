@@ -319,6 +319,16 @@ object Builder_InternalOsis: Builder(), ObjectInterface
 
 
     /**************************************************************************/
+    /* Jan 2025: We have introduced a requirement to support variant textual
+       information for selected Hebrew and Greek texts.  This is represented
+       using proprietary tags in the OSIS -- tags which need to be converted
+       to pukka OSIS formatting tags. */
+
+    Builder_InitialOsisConvertProprietaryTags.process(InternalOsisDataCollection);
+
+
+
+    /**************************************************************************/
     /* It is useful at this juncture to remove from the text any footnotes etc.
        Most of the subsequent processing can safely ignore them, and by removing
        them we can avoid the overhead of running over them repeatedly while
@@ -395,6 +405,7 @@ object Builder_InternalOsis: Builder(), ObjectInterface
     Rpt.report(level = 0, "Checking alignment with scheme if necessary, and filling in any missing verses.")
     Osis_BasicAlignerToScheme.process(InternalOsisDataCollection); x()
     //Dbg.d(InternalOsisDataCollection.convertToDoc())
+
 
 
     /**************************************************************************/

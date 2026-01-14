@@ -46,13 +46,13 @@ object Builder_Master: Builder(), ObjectInterface
     return listOf(
       /*************************************************************************/
       CommandLineProcessor.CommandLineOption("rootFolder", 1, "Root folder of Bible text structure (defaults to current working directory).", null, System.getProperty("user.dir"), false),
-      CommandLineProcessor.CommandLineOption("configFolderPaths", 1, "List of folders to be searched for configuration data, comma-separated.", null, null, false),
       CommandLineProcessor.CommandLineOption("targetAudience", 1, "If it is possible to build both STEP-only and public version, selects the one required.", listOf("Public", "Step"), null, false, forceLc = true),
 
 
 
       /***********************************************************************/
-      CommandLineProcessor.CommandLineOption("configFromZip", 0, "Take config from previous zip file rather than current data.", null, "no", false),
+      CommandLineProcessor.CommandLineOption("configFolderPaths", 1, "List of folders to be searched for configuration data, comma-separated.", null, null, false),
+      CommandLineProcessor.CommandLineOption("configLimitations", 1, "Any limitations as to where config information may be taken from.", listOf("OtherMetadataOnly", "NotOtherMetadata", "Anywhere"), "anywhere", false),
 
 
 
@@ -281,21 +281,45 @@ object Builder_Master: Builder(), ObjectInterface
 
 
     /**************************************************************************/
-    /* Extract settings from the STEP environment variable.  One wrinkle ...
-       stepConfigFolderPaths may be set either */
+    /* Deal with anything which has to be loaded before we can process the
+       config data. */
 
-    val environmentVariable = System.getenv("StepTextConverterParameters")
+    CommandLineProcessor.processCommandLineOptionsEarly()
+
+
+
+    /**************************************************************************/
+    /* Extract settings from the STEP environment variable.  One wrinkle: if
+       any of these are defined both on the command line and in the environment
+       variable, we use the command-line setting.
+
+       The format is:
+
+         setting;setting;setting; ...
+
+       where individual settings look as they would in a config file -- key=val.
+       If you need a semicolon within a setting, escape it using \;.  If you
+       need a backslash, escape it as \\.
+
+       Clearly you're not going to want to store too many settings this way, but
+       there may be things -- such as the location of osis2mod -- which is more
+       easily handled like this, rather than storing it in config files. */
+
+    var environmentVariable = System.getenv("StepTextConverterParameters")
     if (null != environmentVariable)
     {
-      ConfigData.loadFromEnvironmentVariable(environmentVariable)
-      val keys = environmentVariable.split(";").map { it.split("=")[0].trim() }
-      for (configDataKey in keys)
+      environmentVariable = environmentVariable.replace("\\\\", "\u0001").replace("\\;", "\u0002")
+
+      val chunks = environmentVariable.split(";").map { it.trim() }
+      for (chunk in chunks)
       {
-        var commandLineKey = configDataKey.replace("step", "")
-        commandLineKey = commandLineKey[0].lowercase() + commandLineKey.substring(1)
-        val commandLineSetting = CommandLineProcessor.getOptionValue(commandLineKey)
-        if (null != commandLineSetting)
-            ConfigData.put(configDataKey, commandLineSetting, true)
+        val stepKey = chunk.split("#?=".toRegex())[0].trim()
+        var equivalentCommandLineKey = stepKey.replace("step", "")
+        equivalentCommandLineKey = equivalentCommandLineKey[0].lowercase() + equivalentCommandLineKey.substring(1)
+
+        val commandLineSetting = CommandLineProcessor.getOptionValue(equivalentCommandLineKey)
+        if (null == commandLineSetting)
+          ConfigData.loadFromInternalSetting(chunk, "StepTextConverterParameters environment variable")
       }
     }
 
@@ -343,7 +367,7 @@ object Builder_Master: Builder(), ObjectInterface
 
 
 
-    /**************************************************************************/
+   /**************************************************************************/
     Logger.announceAllAndTerminateImmediatelyIfErrors()
   }
 }

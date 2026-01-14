@@ -159,6 +159,6 @@ tasks.dokkaHtml {
 
 tasks.withType<DokkaTask>().configureEach {
     pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
-        customStyleSheets = listOf(buildDir.resolve("jamieDokkaStyles.css"))
+        //customStyleSheets = listOf(buildDir.resolve("jamieDokkaStyles.css"))
     }
 }
