@@ -548,7 +548,7 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
 
   override fun isCollapsibleParaNode (node: Node): Boolean
   {
-    if (!node.hasChildNodes()) return false
+    if (!node.hasChildNodes()) return false // If there are no child nodes, there's no advantage in collapsing things.
     val nodeName = Dom.getNodeName(node)
     return nodeName == "p" || nodeName == "lb" // Should never get lb, because lb is required to be empty, but I've seen at least one text where it is not.
   }

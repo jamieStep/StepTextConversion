@@ -104,5 +104,8 @@ private class Osis_BasicTweakerPerBook
      processing and don't actually seem to be relevant to whether things work
      or not, so it's convenient to ditch them. */
 
-  private fun process_lg (rootNode: Node) = rootNode.findNodesByName("lg").forEach { Dom.promoteChildren(it); Dom.deleteNode(it) }
+  private fun process_lg (rootNode: Node)
+  {
+    //$$$rootNode.findNodesByName("lg").forEach { Dom.promoteChildren(it); Dom.deleteNode(it) } Commented out 27-Feb-2026 because newlines required in the LSB text were being suppressed in the absence of lg.  Not sure if that gives any kind of problem with other texts.
+  }
 }

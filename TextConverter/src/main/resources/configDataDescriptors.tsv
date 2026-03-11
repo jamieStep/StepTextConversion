@@ -76,7 +76,7 @@ calcSwordDataPath
 calcSwordOptions
 calcTextSource
 stepTextModifiedDate
-calcTypeOfDocument
+swordTypeOfDocument
 swordTextIdSuppliedBySourceRepositoryOrOwnerOrganisation
 swordModDrv
 
@@ -141,13 +141,14 @@ calcAddedFeaturesForCopyrightPage
 calcAmendmentsAppliedForCopyrightPage
 calcDateForBibleChooser
 calcDeletedBooks
+stepIsOkToAddFootnotes
 calcIsOkToAddCrossReferences
-calcIsOkToAddFootnotes
 calcIsOkToAddIntroductions
 calcJarVersion
 calcOriginData
 calcOsis2modReturnCode
 calcSupplierUpdateReason
+calcSwordTextCategory
 calcUpIssued
 constWeird
 

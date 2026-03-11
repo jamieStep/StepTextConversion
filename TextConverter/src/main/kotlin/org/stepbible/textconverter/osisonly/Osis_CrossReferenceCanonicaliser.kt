@@ -127,7 +127,7 @@ private class Osis_CrossReferenceCheckerForBook (val m_DataCollection: X_DataCol
         res.add(node)
       else
       {
-        IssueAndInformationRecorder.crossReferenceNonExistentTarget(node["osisRef"]!!, getOsisIdAsRefKey(node), forceError = false)
+        IssueAndInformationRecorder.crossReferenceNonExistentTarget(node["osisRef"]!!, getOsisRefAsRefKey(node), forceError = false)
         node["type"] = "explanation" // Convert to plain footnote.
       }
     }
@@ -200,10 +200,33 @@ private class Osis_CrossReferenceCheckerForBook (val m_DataCollection: X_DataCol
 
 
   /****************************************************************************/
+  /* Note that I check that the targets exist if processing a Bible
+    (swordModDrv = zText) but not if processing a commentary.
+
+    This doesn't entirely make sense ...
+
+    When I wrote this code, I had never processed a commentary.  But as far as
+    Bibles were concerned, I assumed that cross-references referred to the text
+    itself, and that therefore there was no reason to have a reference to an OT
+    verse, for instance, if the text was NT only.
+
+    Latterly I have processed my first commentary, and have discovered that in
+    fact the cross-references don't point into the text itself (which would
+    result in a reference to somewhere else in the commentary): rather, it
+    points to a Bible.
+
+    Of course pointing to a Bible is much more useful than pointing elsewhere
+    within the commentary.  But the fact that this works implies that cross-
+    references _don't_ point elsewhere in the actual text: presumably they
+    are pointing to some other standard Bible.  This being so, there is
+    probably little point checking for dangling cross-references, because I
+    don't know what text I would check against. */
+
   private fun process (theRefs: List<Node>)
   {
     var refs = validateRefs(theRefs)
-    refs = checkTargetsExist(refs)
+    if ("zText" == ConfigData["swordModDrv"])
+      refs = checkTargetsExist(refs)
     compareLocAndContent(refs)
   }
 
@@ -261,11 +284,11 @@ private class Osis_CrossReferenceCheckerForBook (val m_DataCollection: X_DataCol
         if (1 == rc.getElementCount())
           res.add(removeSubverseReferences(node, rc))
         else
-          IssueAndInformationRecorder.crossReferenceInvalidReference(node["osisRef"]!!, getOsisIdAsRefKey(node), forceError = true)
+          IssueAndInformationRecorder.crossReferenceInvalidReference(node["osisRef"]!!, getOsisRefAsRefKey(node), forceError = true)
       }
       catch (_: Exception)
       {
-        IssueAndInformationRecorder.crossReferenceInvalidReference(node["osisRef"]!!, getOsisIdAsRefKey(node), forceError = true)
+        IssueAndInformationRecorder.crossReferenceInvalidReference(node["osisRef"]!!, getOsisRefAsRefKey(node), forceError = true)
       }
     }
 
@@ -275,7 +298,8 @@ private class Osis_CrossReferenceCheckerForBook (val m_DataCollection: X_DataCol
 
 
   /****************************************************************************/
-  private fun getOsisIdAsRefKey (node: Node): RefKey = RefCollection.rdOsis(node["osisID"]!!.split("!")[0]).getFirstAsRefKey()
+  private fun getOsisIdAsRefKey  (node: Node): RefKey = RefCollection.rdOsis(node["osisID" ]!!.split("!")[0]).getFirstAsRefKey()
+  private fun getOsisRefAsRefKey (node: Node): RefKey = RefCollection.rdOsis(node["osisRef"]!!.split("!")[0]).getFirstAsRefKey()
 
 
   /****************************************************************************/

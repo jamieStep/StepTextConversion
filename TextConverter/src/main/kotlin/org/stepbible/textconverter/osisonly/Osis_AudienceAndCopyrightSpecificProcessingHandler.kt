@@ -218,7 +218,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
    /**************************************************************************/
    /* Report what we're doing. */
 
-   val okToGenerateFootnotes = ConfigData.getAsBoolean("calcIsOkToAddFootnotes")
+   val okToGenerateFootnotes = ConfigData.getAsBoolean("stepIsOkToAddFootnotes")
    val calcSoftwareVersionRequired = ConfigData["calcSoftwareVersionRequired"]
    val versificationScheme = ConfigData["stepVersificationScheme"]
    Logger.info("Treating this as a ${if (isCopyrightText) "copyright" else "non-copyright"} text.")
@@ -273,7 +273,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
      Suppressing the footnotes doesn't get rid of those changes -- it merely
      prevents us from explaining why they were made. */
 
-  private fun setCopyrightLimitations () = ConfigData.deleteAndPut("calcIsOkToAddFootnotes", "no", force = true)
+  private fun setCopyrightLimitations () = ConfigData.deleteAndPut("stepIsOkToAddFootnotes", "no", force = true)
 
 
   /****************************************************************************/
@@ -293,7 +293,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
   private fun setFreedomsForNonCopyrightTexts ()
   {
-    ConfigData.deleteAndPut("calcIsOkToAddFootnotes", "yes", force = true)
+    if (null == ConfigData["stepIsOkToAddFootnotes"]) ConfigData.deleteAndPut("stepIsOkToAddFootnotes", "yes", force = true)
     val x = ConfigData.get("stepReversificationFootnoteLevel", "basic"); ConfigData.deleteAndPut("stepReversificationFootnoteLevel", x, force = true)
   }
 
@@ -382,7 +382,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
     /**************************************************************************/
     val osis2modEncryptionKey = MiscellaneousUtils.generateRandomString(64)
-    ConfigData.put("NOT_USED_calcOsis2modEncryptionKey", osis2modEncryptionKey, true)
+    //ConfigData.put("NOT_USED_calcOsis2modEncryptionKey", osis2modEncryptionKey, true)
     val obfuscationKey = "p0#8j..8jm@72k}28\$0-,j[\$lkoiqa#]" // Fixed for all time.
     val stepEncryptionKey = MiscellaneousUtils.generateStepEncryptionKey(osis2modEncryptionKey, obfuscationKey)
 

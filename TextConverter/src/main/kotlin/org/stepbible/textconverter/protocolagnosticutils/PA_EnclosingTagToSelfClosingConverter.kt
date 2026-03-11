@@ -40,6 +40,7 @@ object PA_EnclosingTagToSelfClosingConverter: PA(), ObjectInterface
 
   fun process (dataCollection: X_DataCollection)
   {
+    return
     extractCommonInformation(dataCollection)
     Rpt.reportWithContinuation(level = 1, "Converting enclosing tags to self-closing form where possible ...") {
       with (ParallelRunning(true)) {

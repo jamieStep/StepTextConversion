@@ -8,6 +8,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.Bibl
 import org.stepbible.textconverter.protocolagnosticutils.PA_MissingVerseHandler
 import org.stepbible.textconverter.applicationspecificutils.X_DataCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleStructureOsis2ModScheme
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
@@ -46,15 +47,28 @@ object Osis_BasicAlignerToScheme: ObjectInterface
   /* Checks for some basic things which may be adrift (like the text
      containing subverses or lacking verses).  Depending upon the circumstances,
      some of these we may be able to remedy; others we may simply have to
-     report, and abandon further processing. */
+     report, and abandon further processing.
+
+     The ordering matters here.  Originally I was intending to validate not
+     only the input, but also my revisions to the input (most noticeably,
+     whether I had successfully filled in any holes in the versification).
+
+     This, of course, required that I had indeed filled in such holes.  The
+     problem, however, is that if I fill in the holes, then the error reporting
+     works as though these holes had never existed in the first place, and
+     the result is messages which can be misleading.
+
+     I have therefore reordered things here so as to carry out the checks first,
+     and simply have to work on the assumption that the rest of the processing
+     is ok. */
 
   fun process (dataCollection: X_DataCollection)
   {
-    Rpt.report(1, "Performing structural validation and correction (no separate per-book reporting for this step).")
-    structuralValidationAndCorrection1(dataCollection)
-
     Rpt.report(1,"Checking for missing verses (no separate per-book reporting for this step).")
     validationForOrderingAndHoles1(dataCollection)
+
+    Rpt.report(1, "Performing structural validation and correction (no separate per-book reporting for this step).")
+    structuralValidationAndCorrection1(dataCollection)
   }
 
 
@@ -175,7 +189,7 @@ object Osis_BasicAlignerToScheme: ObjectInterface
     val outOfOrderVerses = dataCollection.getBibleStructure().getOutOfOrderVerses() // I think this will cover chapters too.
     if (outOfOrderVerses.isNotEmpty())
     {
-      // Dbg.outputDom(dataCollection.getRootNode(24)!!.ownerDocument  )
+      //Dbg.outputDom(dataCollection.getRootNode(3)!!.ownerDocument  )
       val reporter: (String) -> Unit = if (ConfigData.getAsBoolean("stepValidationReportOutOfOrderAsError", "y")) Logger::error else Logger::warning
       reporter("Locations where verses are out of order: " + outOfOrderVerses.joinToString(", "){ Ref.rd(it).toString() })
     }
@@ -216,11 +230,15 @@ object Osis_BasicAlignerToScheme: ObjectInterface
        Note that missing verses at the _ends_ of chapters are not a problem
        (and it may not always even be apparent if there _are_ such verses,
        because you don't always know what the last verse should be).  I don't
-       bother detecting or reporting these, therefore. */
+       bother detecting or reporting these, therefore.
 
+       NO LONGER APPLICABLE -- see head-of-routine comments to 'process'. */
+
+/*
     val missingEmbeddedVerses = dataCollection.getBibleStructure().getMissingEmbeddedVersesForText()
     if (missingEmbeddedVerses.isNotEmpty())
       Logger.warning("Locations where embedded verses are missing: " + missingEmbeddedVerses.joinToString(", "){ Ref.rd(it).toString() })
+*/
 
 
 

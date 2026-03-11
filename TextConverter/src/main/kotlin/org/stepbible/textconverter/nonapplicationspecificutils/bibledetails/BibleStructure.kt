@@ -643,14 +643,14 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
 
 
-  open fun otBooksAreInOrder () = null == MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllBookNumbersOt())
-  open fun ntBooksAreInOrder () = null == MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllBookNumbersNt())
-  open fun dcBooksAreInOrder () = null == MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllBookNumbersDc())
+  open fun otBooksAreInOrder () = null == MiscellaneousUtils.checkInAscendingOrder(getAllBookNumbersOt())
+  open fun ntBooksAreInOrder () = null == MiscellaneousUtils.checkInAscendingOrder(getAllBookNumbersNt())
+  open fun dcBooksAreInOrder () = null == MiscellaneousUtils.checkInAscendingOrder(getAllBookNumbersDc())
 
   fun standardBooksAreInOrder (): Boolean
   {
     val standardBooks = getAllBookNumbersOt() + getAllBookNumbersNt()
-    return null == MiscellaneousUtils.checkInStrictlyAscendingOrder(standardBooks)
+    return null == MiscellaneousUtils.checkInAscendingOrder(standardBooks)
   }
 
 
@@ -665,9 +665,9 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   fun getOutOfOrderVerses () : List<RefKey>
   {
-    val ot = getAllBookNumbersOt().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
-    val nt = getAllBookNumbersNt().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
-    val dc = getAllBookNumbersDc().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
+    val ot = getAllBookNumbersOt().mapNotNull { MiscellaneousUtils.checkInAscendingOrder(getAllRefKeysForBook(it)) }
+    val nt = getAllBookNumbersNt().mapNotNull { MiscellaneousUtils.checkInAscendingOrder(getAllRefKeysForBook(it)) }
+    val dc = getAllBookNumbersDc().mapNotNull { MiscellaneousUtils.checkInAscendingOrder(getAllRefKeysForBook(it)) }
     return (ot.toSet() union nt.toSet() union dc.toSet()).toList().sorted()
   }
 
@@ -675,13 +675,13 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
 
   fun versesAreInOrder () : Boolean
   {
-    var v = getAllBookNumbersOt().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
+    var v = getAllBookNumbersOt().mapNotNull { MiscellaneousUtils.checkInAscendingOrder(getAllRefKeysForBook(it)) }
     if (v.isNotEmpty()) return false
 
-    v = getAllBookNumbersNt().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
+    v = getAllBookNumbersNt().mapNotNull { MiscellaneousUtils.checkInAscendingOrder(getAllRefKeysForBook(it)) }
     if (v.isNotEmpty()) return false
 
-    v = getAllBookNumbersDc().mapNotNull { MiscellaneousUtils.checkInStrictlyAscendingOrder(getAllRefKeysForBook(it)) }
+    v = getAllBookNumbersDc().mapNotNull { MiscellaneousUtils.checkInAscendingOrder(getAllRefKeysForBook(it)) }
     if (v.isNotEmpty()) return false
 
     return true
@@ -1113,7 +1113,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /****************************************************************************/
   protected open fun commonChaptersAreInOrder (elts: IntArray): Boolean
   {
-    return null == MiscellaneousUtils.checkInStrictlyAscendingOrder(getBookDescriptor(elts)!!.m_Content.m_ContentMap.keys.toList())
+    return null == MiscellaneousUtils.checkInAscendingOrder(getBookDescriptor(elts)!!.m_Content.m_ContentMap.keys.toList())
   }
 
 
@@ -1293,7 +1293,7 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   /****************************************************************************/
   protected open fun commonVersesAreInOrder (elts: IntArray): Boolean
   {
-    return null == MiscellaneousUtils.checkInStrictlyAscendingOrder(getChapterDescriptor(elts)!!.m_Content.m_ContentMap.keys.toList())
+    return null == MiscellaneousUtils.checkInAscendingOrder(getChapterDescriptor(elts)!!.m_Content.m_ContentMap.keys.toList())
   }
 
 
@@ -1397,7 +1397,10 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
   protected open fun addFromRootNode (rootNode: Node, wantCanonicalTextSize: Boolean)
   {
     /**************************************************************************/
-    Dbg.dCont(Dom.toString(rootNode), "ROM 1:6")
+    //Dbg.dCont(Dom.toString(rootNode), "ROM 1:6")
+
+
+
     /**************************************************************************/
     var canonicalTitleCanonicalTextSize = 0
     val inCanonicalTitle = false

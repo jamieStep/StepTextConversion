@@ -58,8 +58,10 @@ import java.io.InputStream
  * whatever form it is supplied (vernacular if that uses Roman characters,
  * otherwise English).  For historical reasons, some texts have an additional
  * suffix -- eg gerHFA_th.  And the whole may be terminated with _public to
- * indicate that this data is to be converted to a publicly available module.
- * Without _public, the processing generates a STEP-only module.
+ * indicate that this data is to be converted to a publicly available module,
+ * _step to indicate that it is to be converted to a module for use only within
+ * STEP, and _publicStep to indicate that it can be used to generate either.
+ * Without any suffix, STEP-only is assumed.
  *
  * Module names are derived mainly from this root folder name.  They comprise
  * the language code with first character upper-cased (except where the
@@ -76,7 +78,8 @@ import java.io.InputStream
  * out to other files.  Where we have the opportunity to pick up metadata from
  * files supplied to us (presently only with DBL texts) the metadata folder
  * may contain other files (with DBL that would be metadata.xml and
- * licence.xml).
+ * licence.xml).  LEGACY: step.conf was previously used in place of step.xlsx,
+ * and that should still work.
  *
  * The _Output folder contains all of the data generated and used for output
  * purposes.
@@ -191,7 +194,10 @@ object FileLocations: ObjectInterface
      way).
 
      The @find/ may be followed either by a file name (@find/myFile.txt) or by
-     a relative path (@find/FolderA/FolderB/myFile.txt)
+     a relative path (@find/FolderA/FolderB/myFile.txt).  New modules should
+     use a file name only.  I continue to accept a path hierarchy for
+     backward compatibility, but even if a hierarchy is supplied, only the
+     file name from it is used.
 
      The processing works as follows:
 
@@ -424,7 +430,14 @@ object FileLocations: ObjectInterface
 
   fun getSwordTemplateConfigFilePath () = "@jarResources/swordTemplateConfigFile.conf"
 
-  fun getSwordTextFolderPath () = Paths.get(Paths.get(getInternalSwordFolderPath(), "modules").toString(), "texts", "ztext", getModuleName()).toString()
+  fun getSwordTextFolderPath (): String
+  {
+    val substructure = ConfigData["calcSwordDataPath"]!! // Allows for the fact that this may be a Bible or a commentary, and they do in a different folder structure.
+    val res = Paths.get(getInternalSwordFolderPath(), substructure.replace("./", ""))
+    return res.toString()
+    //Paths.get(Paths.get(getInternalSwordFolderPath(), "modules").toString(), "texts", "ztext", getModuleName()).toString()
+  }
+
   fun getSwordZipFilePath () = Paths.get(getOutputFolderPath(), "${getModuleName()}.zip").toString()
 
 

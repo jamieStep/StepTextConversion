@@ -353,21 +353,6 @@ object Builder_Master: Builder(), ObjectInterface
     Logger.setLogFile(FileLocations.getConverterLogFilePath())
     ConfigData.load()
     CommandLineProcessor.copyCommandLineOptionsToConfigData()
-
-
-
-    /**************************************************************************/
-    /* I'd rather not do this here, because it seems a bit specialist for this
-       context.  But it needs to be done early, because other things need to
-       know whether they can generate footnotes or not. */
-
-    val isCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText", "yes") // Default to text being copyright -- that's safer.
-    if (null == ConfigData["calcIsOkToAddFootnotes"]) // Unless we've specifically been told we can generate footnotes, derive the setting from the copyright setting.
-      ConfigData.put("calcIsOkToAddFootnotes", if (isCopyrightText) "no" else "yes", force = true)
-
-
-
-   /**************************************************************************/
     Logger.announceAllAndTerminateImmediatelyIfErrors()
   }
 }

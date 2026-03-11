@@ -69,17 +69,23 @@ object MiscellaneousUtils: ObjectInterface
 
   /***************************************************************************/
   /**
-   * Checks whether a list of items is arranged in strictly increasing order.
+   * Checks whether a list of items is arranged in increasing order.  Note
+   * that this is essentially looking to make sure we don't have
+   *
+   *   ... m ... n ...
+   *
+   * where n is less than m.  It doesn't report duplicates, on the assumption
+   * we will look separately for those.
    *
    * @param data
    * @return The first element such that the item before it is in the wrong
    *   place, or null if all in order.
    */
 
-  fun <T: Comparable<T>> checkInStrictlyAscendingOrder (data: List<T>): T?
+  fun <T: Comparable<T>> checkInAscendingOrder (data: List<T>): T?
   {
     for (i in 1 ..< data.size)
-      if (data[i] <= data[i - 1]) return data[i]
+      if (data[i] < data[i - 1]) return data[i]
     return null
   }
 

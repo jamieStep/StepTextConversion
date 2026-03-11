@@ -200,7 +200,7 @@ private class Osis_FinalInternalOsisTidierGeneralHandlerPerBook (val m_FileProto
        //Dbg.d(rootNode.ownerDocument)
     handleVersesWithinSpanTypeTags(rootNode)
        //Dbg.d(rootNode.ownerDocument)
-       handleWhitespaceEtcAtChapterEnds(rootNode)
+    handleWhitespaceEtcAtChapterEnds(rootNode)
   }
 
 
@@ -588,15 +588,38 @@ private class Osis_FinalInternalOsisTidierGeneralHandlerPerBook (val m_FileProto
 
 
     /**************************************************************************/
-    /* Verse sid followed by 'l' or lb doesn't look good, because it leaves the
-       verse number marooned on a line of its own. */
+    /* Not too sure about this, but ... verse sid followed by 'l' or lb or
+       empty 'p' doesn't look good, because it leaves the verse number marooned
+       on a line of its own.  For efficiency's sake, I probably ought to deal
+       with all of these in one loop, but for clarity I'll split them out.
 
-    Dom.findNodesByAttributeName(rootNode, "verse", "sID").forEach {
-      val sibling = it.nextSibling
-      if (null != sibling && ( ("l" == Dom.getNodeName(sibling) && "level" in sibling) || "lb" == Dom.getNodeName(sibling)))
+       lb and empty p are, I think, relatively uncontroversial -- all I have to
+       do is move them to before the verse. */
+
+    val verses = Dom.findNodesByAttributeName(rootNode, "verse", "sID")
+
+    verses.forEach { verse ->
+      val sibling = verse.nextSibling ?: return@forEach
+      if ("lb" == Dom.getNodeName(sibling) ||
+          ("p" == Dom.getNodeName(sibling) && !sibling.hasChildNodes()) )
       {
         Dom.deleteNode(sibling)
-        Dom.insertNodeBefore(it, sibling)
+        Dom.insertNodeBefore(verse, sibling)
+      }
+    }
+
+
+
+    /**************************************************************************/
+    /* 'l' is slightly more controversial / risky I suspect.  Here I need to
+        move the verse into the 'l', I believe. */
+
+    verses.forEach { verse ->
+      val sibling = verse.nextSibling
+      if (null != sibling && "l" == Dom.getNodeName(sibling))
+      {
+        Dom.deleteNode(verse)
+        Dom.insertAsFirstChild(sibling, verse)
       }
     }
   }
@@ -617,8 +640,12 @@ private class Osis_FinalInternalOsisTidierGeneralHandlerPerBook (val m_FileProto
     }
 
     rootNode.findNodesByName("chapter").forEach { chapter ->
-      while (null != chapter.lastChild && shouldBeDeleted(chapter.lastChild))
+      while (true)
+      {
+        val lastChild = chapter.lastChild ?: break
+        if (!shouldBeDeleted(lastChild)) break;
         Dom.deleteNode(chapter.lastChild)
+      }
     }
   }
 }

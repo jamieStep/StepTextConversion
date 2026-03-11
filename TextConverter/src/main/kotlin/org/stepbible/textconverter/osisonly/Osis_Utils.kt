@@ -109,7 +109,7 @@ var header =
     var yearOfText = ConfigData["stepTextModifiedDate"]!!
     if (yearOfText.contains("-")) yearOfText = yearOfText.split("-")[2]
 
-    var publicationType = if ("bible" == (ConfigData["calcTypeOfDocument"] ?: "bible").lowercase()) "zText" else "zCom"
+    var publicationType = if ("bible" == (ConfigData["swordTypeOfDocument"] ?: "bible").lowercase()) "zText" else "zCom"
     publicationType = if (publicationType.equals("zText", ignoreCase = true)) "Bible" else "Commentary"
 
     val vals: MutableMap<String, String?> = HashMap()

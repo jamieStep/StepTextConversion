@@ -1,7 +1,6 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
-import java.io.File
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import java.io.FileInputStream
 
@@ -31,15 +30,16 @@ object ConfigDataExcelReader: ObjectInterface
    * @return A collection of lines, or null.
    */
 
-  fun process (): List<String>?
+  fun process (): Pair<String, List<String>>
   {
     /***************************************************************************/
-    val filePath = FileLocations.getConfigSpreadsheetFilePath() ?: return null
+    val filePath = FileLocations.getConfigSpreadsheetFilePath()!!
 
 
 
     /***************************************************************************/
-    val res: MutableList<String> = mutableListOf()
+    val lines: MutableList<String> = mutableListOf()
+    var templateVersion = "1.0"
     val fis = FileInputStream(filePath)
     val workbook = XSSFWorkbook(fis)
     val sheet = workbook.getSheetAt(0)
@@ -52,6 +52,16 @@ object ConfigDataExcelReader: ObjectInterface
     /***************************************************************************/
     for (row in sheet)
     {
+      if (row.physicalNumberOfCells > 0)
+      {
+        val x = row.getCell(0)?.toString()?.trim() ?: continue
+        if (x.startsWith("Template version"))
+        {
+          templateVersion = x.replaceFirst("Templated version ", "").trim()
+          continue
+        }
+      }
+
       if (row.physicalNumberOfCells < C_ParameterName_Col + 1)
         continue
 
@@ -59,13 +69,13 @@ object ConfigDataExcelReader: ObjectInterface
       if (parameterName.isNotEmpty())
       {
         val value = row.getCell(C_Value_Col).toString().trim()
-        if (value.isNotEmpty()) res.add(parameterName + value)
+        if (value.isNotEmpty()) lines.add(parameterName + value)
       }
     }
 
     workbook.close()
     fis.close()
 
-    return res
+    return Pair(templateVersion, lines)
   }
 }

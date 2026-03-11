@@ -94,6 +94,16 @@ class MainProcessor
 
 
     /**************************************************************************/
+    catch (t: Throwable)
+    {
+      t.cause?.printStackTrace()
+      returnCode = 111
+      exitProcess(returnCode)
+    }
+
+
+
+    /**************************************************************************/
     /* If logging to a file, sort so that errors come out before warnings,
        etc. */
 

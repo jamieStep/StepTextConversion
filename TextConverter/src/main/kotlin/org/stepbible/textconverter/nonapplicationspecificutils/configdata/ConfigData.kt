@@ -184,7 +184,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  *
  * ## Third party config
  *
- * At present the discussion here is applicable only where you are working with,
+ * At present the discussion here is applicable only where you are working with
  * data taken from DBL, which supplies the files metadata.xml and license.xml
  * for each text -- and even then, is applicable only if you choose to store
  * these files in the Metadata folder, and if you set up the config data to
@@ -426,14 +426,16 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  *
  * #### General text manipulation:
  *
- * - $choose($choose(x, y, ...): Returns the first non-null argument, or null if
+ * - $choose(x, y, ...): Returns the first non-null argument, or null if
  *   all are null.
  *
  * - $delimited(bra, content, ket): Returns null if 'content is null, otherwise
  *   the concatenation bra + content + key.
  *
- * - $eq($a, $b): Returns Yes or No, according as the two arguments are or are
- *   not equal.
+ * - $eq(a, b, [c, [d]]): If only a and b are supplied, returns Yes or No
+ *   according as the two are or are not equal.  If $c is supplied, returns
+ *   $c if the two are equal.  If they are not equal, returns $d, or null if
+ *   $d is absent.
  *
  * - $getExternal: See discussion of third party config below.
  *
@@ -1017,7 +1019,7 @@ object ConfigData: ObjectInterface
 
     loadDone()
 
-    //m_Metadata.forEach { Dbg.d(it.key + ": " + it.value )}
+    //Dbg.d(get("stepIsOkToAddFootnotes"))
   }
 
 
@@ -1191,10 +1193,17 @@ object ConfigData: ObjectInterface
 
     /**************************************************************************/
     val takingDataFromSpreadsheet = expandedFilePath.endsWith(".xlsx")
-    val lines = if (takingDataFromSpreadsheet)
-      ConfigDataExcelReader.process()!!
+    val lines: List<String>
+    var templateVersion = "1.0" // Assume we're dealing with version 1.0 of the .xlsx template.
+
+    if (takingDataFromSpreadsheet)
+    {
+      val (theTemplateVersion, theLines) = ConfigDataExcelReader.process()
+      templateVersion = theTemplateVersion
+      lines = theLines
+    }
     else
-      ConfigArchiver.getDataFrom(expandedFilePath, okIfNotExists) ?: return
+      lines = ConfigArchiver.getDataFrom(expandedFilePath, okIfNotExists) ?: return
 
 
 
@@ -1225,10 +1234,17 @@ object ConfigData: ObjectInterface
        want to load commonRoot.conf.
      */
 
-    val stepExternalMetadataFormatLine = lines.find { "stepExternalMetadataFormat" in it }
-    if (null != stepExternalMetadataFormatLine)
+    if ("1.0" != templateVersion) // This will hold only if a) we are dealing with step.xlsx, and b) it's a more recent version which requires us to load commonRoot.conf.
     {
-      processConfigLine(stepExternalMetadataFormatLine, expandedFilePath)
+      val stepExternalMetadataFormatLine = lines.find { it.matches("stepExternalMetadataFormat\\s*#?=.*".toRegex()) } // Need to see if we are assigning to stepExternalMetadataFormatLine.
+      if (null != stepExternalMetadataFormatLine)
+        processConfigLine(stepExternalMetadataFormatLine, expandedFilePath)
+
+
+      val stepStandardOwnerOrganisationLine = lines.find { it.matches("stepStandardOwnerOrganisation\\s*#?=.*".toRegex()) } // Need to see if we are assigning to stepExternalMetadataFormatLine.
+      if (null != stepStandardOwnerOrganisationLine)
+        processConfigLine(stepStandardOwnerOrganisationLine, expandedFilePath)
+
       load(FileLocations.getCommonRootFilePath(), false)
     }
 
@@ -1274,7 +1290,7 @@ object ConfigData: ObjectInterface
     /**************************************************************************/
     /* See we have if externally-supplied metadata or licence information. */
 
-    val externalDataFormat = get("stepExternalDataFormat", "").uppercase()
+    val externalDataFormat = get("stepExternalMetadataFormat", "").uppercase()
     when (externalDataFormat)
     {
       "DBL" ->
@@ -1297,7 +1313,7 @@ object ConfigData: ObjectInterface
 
 
     /**************************************************************************/
-    processAsSuppliedAndCanonical()
+    processRelatedSettings()
     generateTagTranslationDetails() // Convert any saved tag translation details to usable form.
   }
 
@@ -1349,22 +1365,6 @@ object ConfigData: ObjectInterface
     val parts = line.split(Regex(if (force) "\\#\\=" else "\\="), 2)
     if (parts[1].trim().isNotEmpty()) // Jun 2025 -- see comment above.
       put(parts[0].trim(), parts[1].trim(), force)
-  }
-
-
-  /****************************************************************************/
-  /* Some parameters -- notably Bible names and abbreviations -- come in pairs,
-     'AsSupplied' and 'Canonical'.  If both are provided, then we use both.
-     If only the AsSupplied version is supplied, we take that as serving also
-     as the Canonical. */
-
-  private fun processAsSuppliedAndCanonical ()
-  {
-    m_Metadata.keys.filter { it.matches(".*stepBible(Name|Abbrev).*AsSupplied$".toRegex()) } .forEach {
-      val canonicalKey = it.replace("AsSupplied", "CanonicalForBibleChooser")
-      if (canonicalKey !in m_Metadata)
-        put(canonicalKey, getInternal(it, false)!!, true)
-    }
   }
 
 
@@ -1497,6 +1497,33 @@ object ConfigData: ObjectInterface
     val x = line.substring(line.indexOf("=") + 1)
     val (pattern, replacement) = x.split("=>")
     collection.add(Pair(tidyVal(pattern).toRegex(), tidyVal(replacement)))
+  }
+
+
+  /****************************************************************************/
+  /* Some parameters are often derived from others, but in ways which can't be
+     legislated for directly in the config data itself. */
+
+  private fun processRelatedSettings ()
+  {
+    /**************************************************************************/
+    /* Some parameters -- notably Bible names and abbreviations -- come in
+       pairs, 'AsSupplied' and 'Canonical'.  If both are provided, then we use
+       both.  If only the AsSupplied version is supplied, we take that as
+       serving also as the Canonical. */
+
+    m_Metadata.keys.filter { it.matches(".*stepBible(Name|Abbrev).*AsSupplied$".toRegex()) } .forEach {
+      val canonicalKey = it.replace("AsSupplied", "CanonicalForBibleChooser")
+      if (canonicalKey !in m_Metadata)
+        put(canonicalKey, getInternal(it, false)!!, true)
+    }
+
+
+
+    /**************************************************************************/
+    val isCopyrightText = getAsBoolean("stepIsCopyrightText", "yes") // Default to text being copyright -- that's safer.
+    if (null == ConfigData["stepIsOkToAddFootnotes"]) // Unless we've specifically been told we can generate footnotes, derive the setting from the copyright setting.
+      put("stepIsOkToAddFootnotes", if (isCopyrightText) "no" else "yes", force = true)
   }
 
 
@@ -2031,11 +2058,21 @@ object ConfigData: ObjectInterface
         }
 
 
-        "eq" -> // $eq($a, $b) Yes or No, according as the two arguments are or are not equal.
+        "eq" -> // $eq($a, $b, $c, $d) When $c and $d are absent, Yes or No, according as the two arguments are or are not equal.  Otherwise $c or $d (null if no $d).
         {
           val arg1 = argFuncs[0]()
           val arg2 = argFuncs[1]()
-          return if (arg1.equals(arg2, ignoreCase = true)) "Yes" else "No"
+          val arg3 = if (argFuncs.size > 2) argFuncs[2]() else null
+          val arg4 = if (argFuncs.size > 3) argFuncs[3]() else null
+          val match = if (arg1.equals(arg2, ignoreCase = true)) "Yes" else "No"
+
+          return if (null == arg3)
+              match
+            else when(match)
+            {
+              "Yes" -> arg3
+              else  -> arg4
+            }
         }
 
 
@@ -2079,7 +2116,7 @@ object ConfigData: ObjectInterface
 
         "todate" -> // $toDate(outputFormat, inputFormat, text) Converts text (which is assumed to represent a date in format inputFormat to a date in format outputFormat.
         {
-         val outputFormat = argFuncs[0]()!!
+          val outputFormat = argFuncs[0]()!!
           val inputFormat  = argFuncs[1]()!!
           val text         = argFuncs[2]()!!
           val dt = LocalDate.parse(text.split("T")[0], DateTimeFormatter.ofPattern(inputFormat))
@@ -2519,7 +2556,7 @@ object ConfigData: ObjectInterface
 
      General format is:
 
-       canonicalEnglishName (canonicalnglishAbbrev) / canonicalVernacularName (canonicalVernacularAbbrev)
+       canonicalEnglishName (canonicalEnglishAbbrev) / canonicalVernacularName (canonicalVernacularAbbrev)
 
      where the canonical name is the name as supplied, but with mentions of
      'New Testament' etc reduced to standard format.
@@ -2531,10 +2568,19 @@ object ConfigData: ObjectInterface
   private fun calculatedParameter_BibleNameForBibleChooser (): String
   {
     /**************************************************************************/
-    val englishTitle = get("stepBibleNameEnglishCanonicalForBibleChooser")!!
-    val abbrevEnglish = get("stepAbbreviationEnglishCanonicalForBibleChooser") ?: get("stepAbbreviationEnglishAsSupplied")!!
-    val xVernacularTitle = getInternal("stepBibleNameVernacularCanonicalForBibleChooser", true)
-    val xAbbrevVernacular = getInternal("stepAbbreviationVernacularCanonicalForBibleChooser", true) ?: get("stepAbbreviationVernacularAsSupplied")!!
+    val englishTitle = getInternal("stepBibleNameEnglishCanonicalForBibleChooser", true) ?: get("stepAbbreviationEnglishAsSupplied")!!
+
+    val abbrevEnglish = getInternal("stepAbbreviationEnglishCanonicalForBibleChooser", true) ?: get("stepAbbreviationEnglishAsSupplied")!!
+
+    val xVernacularTitle =
+      getInternal("stepBibleNameVernacularCanonicalForBibleChooser", true) ?:
+        getInternal("stepBibleNameVernacularAsSupplied", true)
+
+    val xAbbrevVernacular =
+      getInternal("stepAbbreviationVernacularCanonicalForBibleChooser", true) ?:
+        getInternal("stepAbbreviationVernacularAsSupplied", true) ?:
+          getInternal("stepAbbreviationEnglishCanonicalForBibleChooser", true) ?:
+            get("stepAbbreviationEnglishAsSupplied")!!
 
 
 
@@ -2556,7 +2602,9 @@ object ConfigData: ObjectInterface
        reasonable stab at it. */
 
     var vernacularTitle = xVernacularTitle
-    if (null != vernacularTitle)
+    if (null == vernacularTitle)
+      vernacularTitle = ""
+    else
     {
       val englishModified = StepStringUtils.removePunctuationAndSpaces(englishTitle)
       val vernacularModified = StepStringUtils.removePunctuationAndSpaces(vernacularTitle)
@@ -2583,7 +2631,7 @@ object ConfigData: ObjectInterface
     var res = "$englishTitleCanonicalised ($abbrevEnglish)"
     var vernacularBit = "$vernacularTitle ($vernacularAbbreviation)"
     if (vernacularBit.contains("()")) vernacularBit = vernacularBit.replace(" ()", "")
-    if (vernacularBit.isNotEmpty()) res += " / $vernacularBit"
+    if (vernacularBit.trim().isNotEmpty()) res += " / $vernacularBit"
 
     return res
   }
@@ -3081,7 +3129,12 @@ object ConfigData: ObjectInterface
 
     "stepTextModifiedDate" to { SimpleDateFormat("dd-MMM-yyyy").format(Date()) },
 
-    "calcSwordDataPath" to { Paths.get("./modules/texts/ztext/", get("calcModuleName")).toString().replace("\\", "/") + "/" }, // Sword config file.
+    "calcSwordTextCategory" to { if ("zText" == get("swordModDrv", "zText")) "Biblical Texts" else "Commentaries" },
+
+    "calcSwordDataPath" to {
+      val firstPart = if ("zText" == get("swordModDrv", "zText")) "./modules/texts/ztext/" else "./modules/comments/zcom/"
+      Paths.get(firstPart, get("calcModuleName")).toString().replace("\\", "/") + "/"
+    }, // Sword config file.
 
     "calcInputFileDigests" to { Digest.makeFileDigests() },
 

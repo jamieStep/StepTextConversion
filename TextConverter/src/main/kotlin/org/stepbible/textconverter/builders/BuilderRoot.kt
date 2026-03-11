@@ -47,11 +47,15 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
  * All of the builders with names starting 'Builder_InitialOsisRepresentationFrom...'
  * take one of the various forms of input we can accept and convert it to an
  * initial form of OSIS, which will later be subject to further modification.
- * That is the entire remit of Builder_InitialOsisRepresentationFromOsis.  The
- * others, in addition to creating an initial OSIS representation, also store
- * that representation in the InputOsis folder, under the name DONT_USE_ME.xml.
+ * This OSIS needs to be as faithful as possible a representation of the input
+ * data -- ie as few modifications as possible should be applied.  The resulting
+ * OSIS should be stored in the InputOsis folder, under the name DONT_USE_ME.xml.
  * The file is renamed to something more meaningful later in the processing when
  * we know things have worked.
+ *
+ * (Builder_InitialOsisRepresentationFromOsis merely creates a copy of its input.
+ * The other Builder_InitialOsisRepresentationFrom* classes actually *do*
+ * something to convert their inputs to OSIS.
  *
  * Which of these we need to run depends upon what kinds of input are available,
  * and whether we have been told to use OSIS in preference to anything else.
@@ -59,24 +63,19 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
  * out what to do and then calls the appropriate one of the
  * Builder_InitialOsisRepresentationFrom... objects to do the work.
  *
- * The remit of all the Builder_InitialOsisRepresentationFrom... is similar.
- * The all need to convert there inputs into as faithful as possible an OSIS
- * representation (by which I mean that the OSIS needs to be a direct
- * representation of the input, with as little done to it as possible).  This
- * they should store
+ * [Builder_InternalOsis] sets aside a copy of the OSIS for possible use for
+ * things like tagging.  (This I refer to as 'external OSIS'.)
  *
- * The one exception is Builder_InitialOsisRepresentationFromOsis.  This, as the
- * name suggests, takes OSIS as its input -- either because that is the starting
- * data supplied to us by third parties, or because we've taken the OSIS created
- * in a previous run and applied changes to it (perhaps tagging), and now want
- * to use that OSIS itself as input.  It still needs to create a DOM with
- * minimal changes to the input, but it does not store any data over the top of
- * the input file.
- *
- * [Builder_InternalOsis] converts the OSIS created by these objects to the form
- * needed to create a module (and while doing so also sets aside a file
- * containing what I have called elsewhere 'external OSIS', which is a form of
- * OSIS suitable for the future application of things like tagging.
+ * It then makes additional ad hoc modifications to the OSIS to avoid any
+ * known rendering problems in STEPBible.  This version of OSIS I refer to
+ * as 'internal OSIS'.  These changes tend to be ad hoc in nature, which is
+ * why I separate the external and internal OSIS.  If you are doing things
+ * like applying tagging, you probably want a version of the OSIS which is
+ * relatively stable, and which isn't going to be changed merely because we
+ * discover some issue with the rendering which we need to work around.  In
+ * theory the internal OSIS is of no lasting value, and probably ought to be
+ * deleted to avoid confusion.  At present, though, I am retaining it for
+ * debugging purposes.
  *
  * [Builder_Module] converts the output of Builder_InternalOsis to a module.
  *

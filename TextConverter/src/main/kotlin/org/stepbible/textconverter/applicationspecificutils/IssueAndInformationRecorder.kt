@@ -136,7 +136,7 @@ object IssueAndInformationRecorder: ObjectInterface
     report("Cross-reference: Invalid vernacular text '$badRef' at ${Ref.rd(location)}.", forceError, "LogWarning,Report", location, m_CrossReferencesInvalidVernacularReference, reassurance)
 
   fun crossReferenceNonExistentTarget (badRef: String, location: RefKey, forceError: Boolean = false, reassurance: String? = null) =
-    report("Cross-reference: Invalid reference '$badRef' at ${Ref.rd(location)}.", forceError, "LogWarning,Report", location, m_CrossReferencesNonExistentTargets, reassurance)
+    report("Cross-reference: Non-existent target '$badRef' at ${Ref.rd(location)}.", forceError, "LogWarning,Report", location, m_CrossReferencesNonExistentTargets, reassurance)
 
   fun reversificationIssue (text: String) =
     report(text, false, "LogWarning", 0, m_ReversificationIssues, "Issue has been ignored.")
