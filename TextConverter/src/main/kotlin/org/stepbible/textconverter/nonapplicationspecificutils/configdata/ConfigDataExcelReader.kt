@@ -1,6 +1,7 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import java.io.FileInputStream
 
@@ -54,7 +55,7 @@ object ConfigDataExcelReader: ObjectInterface
     {
       if (row.physicalNumberOfCells > 0)
       {
-        val x = row.getCell(0)?.toString()?.trim() ?: continue
+        val x = row.getCell(0)?.toString()?.trim() ?: ""
         if (x.startsWith("Template version"))
         {
           templateVersion = x.replaceFirst("Templated version ", "").trim()

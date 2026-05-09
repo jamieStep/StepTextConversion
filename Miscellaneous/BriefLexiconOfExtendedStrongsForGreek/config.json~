@@ -1,0 +1,241 @@
+//------------------------------------------------------------------------------
+//
+// Configuration file BriefLexiconOfExtendedStrongsForGreek
+// ===========================================================
+//
+// STEPBible-only version, allowing for the possibility that we may opt to
+// tag things in our proprietary version.
+//
+// For use with the program GeneralTagger.
+//
+// This is in extended JSON format -- anything after double-slash is ignored,
+// giving the opportunity for me to add comments.
+//
+// The file here contains only those fields which are actually needed for the
+// processing of this particular form of input.  Fields not mentioned here
+// retain the values which appear in the definition of Config in generalTagger.
+//
+// See the definition of Config for much more information, including details of
+// other fields which might be relevant when processing other kinds of files.
+//
+// The raw input in this case is -- at least for the purposes of the processing
+// here -- a plain text file.
+//
+//------------------------------------------------------------------------------
+
+{
+    //--------------------------------------------------------------------------
+    // File to be processed, and where the output should go.
+
+    "inputFilePath":  "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/refs/heads/master/Lexicons/TBESG%20-%20Translators%20Brief%20lexicon%20of%20Extended%20Strongs%20for%20Greek%20-%20STEPBible.org%20CC%20BY.txt",
+    "outputFilePath": "C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/Miscellaneous/BriefLexiconOfExtendedStrongsForGreek/briefLexiconOfExtendedStrongsForGreek.json",
+
+
+
+    //--------------------------------------------------------------------------
+    // Stuff specific to the particular file we are processing.
+    //
+    // dataType is used to make it possible to select a processor class to
+    //   handle this type of data.  It can be omitted if you do not need to
+    //   create a processing class.
+    //
+    // regexChanges is a list of regexes and the value to which any match
+    //   should be converted.
+    
+    //"dataType": "mhm",
+    
+    //"regexChanges": [
+    //	["<b>", "<hi type='bold'>"],
+    //	["</b>", "</hi>"],
+    //],	
+
+
+
+    //--------------------------------------------------------------------------
+    // Output fragments.
+    //--------------------------------------------------------------------------
+
+"prefix":
+//******************************************************************************
+//
+// This file contains a Translators Brief lexicon of Extended Strongs for Greek.
+//
+// Once you have stripped off these head-of-file comments, this file is in JSON
+// format.
+//
+// The file is based upon https://raw.githubusercontent.com/STEPBible/STEPBible-Data/refs/heads/master/Lexicons/TBESG%20-%20Translators%20Brief%20lexicon%20of%20Extended%20Strongs%20for%20Greek%20-%20STEPBible.org%20CC%20BY.txt,
+// to which you should refer for a detailed explanation of the content.
+//    
+// Each record is keyed upon a dStrong value, and contains the following
+// fields:
+//
+// - eStrong.  See below.
+//
+// - uStrong.  See below.
+//
+// - Greek: Unicode lexical form.  Based on LSJ but conforming to BADG when
+//     the difference may be confusing.
+//
+// - Transliteration: Transliteration of the Greek into Roman characters.
+//
+// - Morph: See below.
+//
+// - Gloss: Meaning in as few words as possible (by Tyndale Scholars).
+//
+// - Meaning: Extended meaning.  Marked with the source from which the
+//   meaning was taken:
+//
+//   . (AS): Abbott Smith, from https://github.com/translatable-exegetical-tools/Abbott-Smith,
+//     with corrections and adapted by Tyndale Scholars.
+//
+//   . (ML): Middle Liddell, from Perseus.  Used where there is no entry in AS.
+//
+//
+//
+// Strongs numbers
+// ===============
+//
+// Strongs numbers here come in three flavours -- eStrong (extended Strongs),
+// dStrong (STEPBible's disambiguated Strongs), and uStrong (STEPBible's
+// unified Strongs).  A lexicon or tagging system will normally use only one set,
+// depending on its purpose, though it may be useful to keep both dStrong & uStrong.
+//
+// Each system has its own advantages and disadvantages:
+//
+// eStrong is the standard Extended Strongs which conforms with the subdivisions of
+// words in BDB (Brown Driver Brigg's lexicon), largely followed by later lexicons.
+// The work here was carried out by OS (OpenScriptures.org).
+//
+// dStrong has separate numbers when a given name is used for different people or
+// places, and when a word has significantly different sub-meanings. See
+// TinyURL.com/DisambiguatedStrongs.
+//
+// uStrong has a single number covering all of an individual's various names, and
+// a single number for a word that has different forms or spellings or that has a
+// Hebrew and Aramaic version.
+//
+// For example,	Strong used G2264 for all three people in the NT named Herod
+// (the Great, Anitipas and Agrippa I), and a different number for 'Herodian',
+// which describes Herod Anitipas:
+//
+// - eStrong does nott divide up any names in the NT (in contrast to the way things
+//   work in the OT) eStrong was created to map Strongs to the Hebrew lexicon BDB.
+//
+// - dStrong has a unique number for each person: G2264G, G2264H, G2264I.  As in
+//   the OT, letters start at G when there is no "a" or "b" etc in eStrongs
+//   (which never happens in Greek).
+//
+// - uStrong has only one unique number for each individual, so a search for that
+//   number finds all the places where that person is mentioned no matter how their
+//   name is spelled.
+//
+// See further discussion at TinyURL.com/STEP-Disambiguated.
+//
+//
+// eStrongs numbers are as follows:
+//
+// - G0001 - G5624: The Strongs numbers from original set made by Strong for the
+//   text behind the KJV.
+//
+// - G3203 - G3302: Not used for some reason.
+//
+// - G5627 - G5799: Greek morphology codes (not used in this lexicon).
+//
+// - G5800 - G5893: Greek Synonyms - see http://studybible.info/strongs/G5800
+//   (not used in this lexicon).
+//
+// - G6000 - G6090: Extra Strongs Numbers in NASB mainly for variants not known
+//   to Strong.  (They remain the same for the sake of backward compatibility
+//   with NASB.)
+//
+// - G6100 - G9979: Extra Greek from Apostolic Bible Project, mainly for LXX
+//   words not found in NT (including Greek names that do not occur in the Hebrew).
+//
+// - G6091 - G6099, G9980 - G9999: Extra Greek for variants which are not included
+//   in NASB or Apostolic Bible.
+//
+// - G10000 - 19999: Greek equivalent of Strongs Hebrew numbers for names and
+//   transliterated words eg Abagtha (H0005) = G10005. When there is a NT
+//   equivalent, this is the STEPBible lexical tag.
+//
+// - G20000 - G20199: Words where the Full LSJ entry refers to the LXX, but
+//   which are not referred to in the AB tagging because they occur only in
+//   non-Protestant canons or in MSS other than Vaticanus (used by AB).
+//
+//
+//
+//
+// Morphology
+// ==========
+//
+// The 'morph' field gives the simple gramatical value of the main word,
+// represented as Language:Type-Gender-Extra.
+//
+// - Language: A=Aramaic, H=Hebrew, G=Greek and N=Name (this latter
+//   option being not language specific).
+//
+// - Type is A=Adjective, Adv=Adverb, Art=Article, Cond=Conditional,
+//   Conj=Conjunction, Cor=Correlative, DemP=Demonstrative Pn,
+//   ImpP=Impersonal Pn, Intg=Interogative, Intj=Interjection,
+//   N=Noun, Neg=Negative, Part=Particle, Prep=Preposition,
+//   PerP=Personal Pn, PosP=Possessive Pn, RefP=Reflexive Pn,
+//   RelP=Relative Pn, V=Verb.
+//
+// - Gender is F=Female, M=Male, N=Neuter, C=Common, and P or S is
+//    optionally added for Plural or Singular.
+//
+// - 'Extra' for Names is L=Location, P=Person, LG/PG=Gentilic, T=Title
+//   (ie any other capitalised nouns such as titles, months, gods, planets,
+//   etc).
+//
+// 
+//
+// Licensing information
+// =====================
+//
+// Scholarly dates have been adapted from www.TheBiblicalTimeline.org (with
+// permission).
+//
+// This file has been produced by the STEPBible project, and is made available
+// under the CC BY 4.0 licence at https://stepbible.github.io/STEPBible-Data/.
+//
+// You do not need permission to use the data, but we would love to hear about
+// anything you do with it.  We would also be grateful if you could inform us of
+// any errors you discover.  Please email us at Feedback @ StepBible.org.
+//
+//******************************************************************************
+
+",
+
+"suffix": "",
+
+
+
+    //--------------------------------------------------------------------------
+    // Want to convert TSV format to JSON format.
+    //--------------------------------------------------------------------------
+    
+    "tsvToJson": true,
+
+
+    
+    //--------------------------------------------------------------------------
+    // Pattern match to let you recognise the header row, the first data row and
+    // the last data row.
+    //--------------------------------------------------------------------------
+    
+    "tsvHeaderRegex": "^eStrong\\tdStrong.*",
+    "tsvDataRowLowRegex": "^G0001\\tG0001G.*",
+    "tsvDataRowHighRegex": "^G21502\\tG21502\\s+=.*",
+
+
+
+    //--------------------------------------------------------------------------
+    // Field descriptors.
+    //--------------------------------------------------------------------------
+
+    "tsvFieldDefinitions": [
+	{ "origName": "dStrong", "useAsKey": true, "retainInData": true },
+	{ "origName": "Abbott-Smith lexicon (AS), with gaps occationally filled from edited versions of  Middle LSJ", "revisedName": "Meaning" }
+    ]
+}

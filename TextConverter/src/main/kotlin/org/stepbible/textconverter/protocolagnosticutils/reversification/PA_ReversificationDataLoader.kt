@@ -781,28 +781,28 @@ object PA_ReversificationDataLoader: PA()
 
       if (null != equivalenceInformation)
       {
-        when (equivalenceInformation!!.first())
+        when (equivalenceInformation.first())
         {
           '+' ->
            {
               m_EquivalenceInformationFormatString = TranslatableFixedText.lookupText(Language.Vernacular, "V_reversification_ancientVersionsEquivalencePlus")
-              equivalenceInformation = equivalenceInformation!!.substring(1)
+              equivalenceInformation = equivalenceInformation.substring(1)
            }
 
            '=' ->
             {
               m_EquivalenceInformationFormatString = TranslatableFixedText.lookupText(Language.Vernacular, "V_reversification_ancientVersionsEquivalenceEquals")
-              equivalenceInformation = equivalenceInformation!!.substring(1)
+              equivalenceInformation = equivalenceInformation.substring(1)
             }
 
             else ->
             {
               m_EquivalenceInformationFormatString = TranslatableFixedText.lookupText(Language.Vernacular, "V_reversification_ancientVersionsEquivalenceUndecorated")
-              equivalenceInformation = equivalenceInformation!!.substring(1)
+              equivalenceInformation = equivalenceInformation.substring(1)
            }
         }
 
-        m_EquivalenceInformationReferenceCollection = RefCollection.rdUsx(usxifyFromStepFormat(equivalenceInformation!!))
+        m_EquivalenceInformationReferenceCollection = RefCollection.rdUsx(usxifyFromStepFormat(equivalenceInformation))
       }
     }
   }
@@ -856,7 +856,7 @@ object PA_ReversificationDataLoader: PA()
   private fun setAncientVersions (theText: String?): String
   {
     /**************************************************************************/
-    return theText ?: "" // As noted elsewhere, at least pro tem we have decided not to parse and translate the ancient version information.
+    if (1 == 1) return theText ?: "" // As noted elsewhere, at least pro tem we have decided not to parse and translate the ancient version information.
 
 
 
@@ -876,7 +876,7 @@ object PA_ReversificationDataLoader: PA()
 
 
     /**************************************************************************/
-    var text = theText!!.substring(0, theText.length - 1).substring(1) // Get rid of the enclosing parens.
+    var text = theText.substring(0, theText.length - 1).substring(1) // Get rid of the enclosing parens.
 
 
 

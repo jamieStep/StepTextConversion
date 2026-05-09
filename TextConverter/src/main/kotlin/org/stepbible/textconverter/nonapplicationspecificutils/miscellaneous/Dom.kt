@@ -98,7 +98,7 @@ object Dom: ObjectInterface
 
     fun allFollowingSiblingsSatisfy (child: Node, test: Predicate<Node>, ifNoFollowingSiblings: Boolean = true): Boolean
     {
-      val children = Dom.getChildren(child.parentNode)
+      val children = getChildren(child.parentNode)
 
       for (i in children.indexOf(child) + 1 ..< children.size)
       {
@@ -374,6 +374,85 @@ object Dom: ObjectInterface
     {
         return nodes.map { createNode(doc, it, deep) }
     }
+
+
+
+    /****************************************************************************/
+    /**
+    * Collapses consecutive whitespace under a given node to a single whitespace
+    * node.
+    *
+    * @param node Node whose contents are to be processed.
+    */
+
+    fun collapseWhitespace (dom: Document)
+    {
+      /*************************************************************************/
+      dom.normalizeDocument() // Collapse all adjacent text nodes.
+      getAllNodesBelow(dom)
+        .filter { it.nodeType == Node.TEXT_NODE && it.textContent.trimStart().isEmpty()}
+        .forEach {
+          it.textContent = if (it.textContent.contains("\n") )"\n" else " "
+        }
+
+        return
+
+
+
+      /*************************************************************************/
+      val main = IdentityHashMap<Node, Boolean>()
+      val sub = Collections.newSetFromMap(IdentityHashMap<Node, Boolean>())
+
+
+
+      /*************************************************************************/
+      getAllNodesBelow(dom)
+        .filter { it.nodeType == Node.TEXT_NODE && // Look for consecutive text nodes where the first is empty.
+                  null != it.nextSibling && it.nextSibling.nodeType == Node.TEXT_NODE &&
+                  it.textContent.trimStart().isEmpty() }
+        .forEach {
+          if (it in sub)
+            return@forEach
+
+          main[it] = false
+
+          var next = it.nextSibling
+          while (null != next && Node.TEXT_NODE == next.nodeType && next.textContent.trimStart().isEmpty())
+          {
+            sub.add(next)
+            if (next.textContent.contains("\n")) main[it] = true
+            next = next.nextSibling
+          }
+        }
+
+
+
+      /*************************************************************************/
+      main.keys.forEach { it.textContent = if (main[it]!!) "\n" else " " }
+      sub.forEach { deleteNode(it) }
+    }
+
+      /*
+      var child = node.firstChild
+
+      while (child != null)
+      {
+        val next = child.nextSibling
+
+        if (child.nodeType != Node.TEXT_NODE)
+        {
+            collapseWhitespace(child)
+            child = next
+            continue
+        }
+
+        val text = child.textContent
+        if (text.trim().isEmpty())
+          child.textContent = " "
+
+        child = next
+      }
+    }*/
 
 
     /****************************************************************************/
@@ -1467,9 +1546,10 @@ object Dom: ObjectInterface
          have made necessary) is a problem, because according to the
          documentation you do need namespace details there.
 
-         I have decided to retain namespace awareness.  However this means you
-         have to be careful within the implementation of the various find*
-         methods here to use local-name() to pick up the node names.
+         If you don't use namespace awareness, you get a warning message when
+         processing.  If you _do_ use it, you have to be careful within the
+         implementation of the various find* methods here to use local-name()
+         to pick up the node names.
 
          (For some reason, findNodesByName doesn't seem to be affected by this
          issue.) */

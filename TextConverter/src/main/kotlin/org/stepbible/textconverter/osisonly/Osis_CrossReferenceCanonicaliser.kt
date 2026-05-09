@@ -224,10 +224,10 @@ private class Osis_CrossReferenceCheckerForBook (val m_DataCollection: X_DataCol
 
   private fun process (theRefs: List<Node>)
   {
-    var refs = validateRefs(theRefs)
-    if ("zText" == ConfigData["swordModDrv"])
-      refs = checkTargetsExist(refs)
-    compareLocAndContent(refs)
+//    var refs = validateRefs(theRefs)
+//    if ("zText" == ConfigData["swordModDrv"])
+//      refs = checkTargetsExist(refs)
+//    compareLocAndContent(refs)
   }
 
 

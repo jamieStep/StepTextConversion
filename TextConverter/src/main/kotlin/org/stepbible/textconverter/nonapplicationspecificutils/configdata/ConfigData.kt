@@ -865,16 +865,51 @@ object ConfigData: ObjectInterface
       operationalSuffix = suffixes[1]
     }
 
-    operationalSuffix = operationalSuffix.lowercase()
+    operationalSuffix = operationalSuffix.trim().lowercase()
+    if (operationalSuffix.isEmpty()) operationalSuffix = "step" // For safety's sake, assume STEPBible only where no explicit indication is given.
 
 
 
     /**************************************************************************/
-    /* The folder name tells us what we're capable of doing (public / step /
-       online only).  We need to parse this out.
+    /* 2026-03-12: Significant changes ...
 
-       If both STEP and Public are permitted, then we check that we've been
-       given a command-line parameter to say which we are building.
+       Henceforth, it is our intention _always_ to create a STEPBible version
+       of each module.  If we are permitted to make a text publicly available,
+       we will also create a public version.  But we will never create just a
+       public version of a module.
+
+       Or at least, that's the intent.  Because a single run of the converter
+       creates only a single variant of a module, it is, in fact, perfectly
+       possible to create just a public version of a module if we forget also
+       to create a STEPBible version, but the aim is not to get into that
+       position.
+
+       The revised mechanics and module naming is as follows (which I _think_
+       should be backwards compatible with existing folders):
+
+       * The name of the text's root folder will indicate what kind of module(s)
+         can be created.  If it ends with 'public', 'publicStep' or 'stepPublic',
+         (case-insensitive) both flavours are to be created.  If it ends with
+         'step' or has no suffix, only a STEPBible version is permitted.
+
+       * Module names are based upon a combination of the 3-character language
+         code in canonical form (uppercase, lowercase, lowercase) and the
+         abbreviation for the text (vernacular abbreviation if that uses Roman
+         characters, otherwise the English abbreviation).
+
+       * On public modules, the format is <languageCode>_<abbreviation> (note
+         the underscore between the two parts).
+
+       * On STEPBible modules, the basic format is <languageCode><abbreviation>
+         (without the intervening underscore).
+
+       * On STEPBible modules, the language code is omitted if its canonical
+         form would be Eng (English), Grc (koine Greek) or Hbo (ancient
+         Hebrew).  (Note that the language code is _never_ suppressed on
+         public modules.)
+
+       Note that if both STEPBible and Public are permitted, the command line
+       must give an indication of which of the two a given run is to generate.
 
        And whether we're permitted to build both or only one, we set the
        internal representation of this command line parameter to canonical
@@ -884,8 +919,7 @@ object ConfigData: ObjectInterface
        we have not been given a forcible assignment)*/
 
     val mayBePublic = "public" in operationalSuffix
-    var mayBeStep   = "step"   in operationalSuffix
-    if (!mayBeStep && !mayBePublic) mayBeStep = true // If the module name doesn't indicate public or step, assume step.
+    val mayBeStep   = true // Assume we can always generate a STEPBible version.  (This is now redundant, because we _always_ expect to generate this version, but I'll retain this as a variable here in case we change our minds again.)
     val optionFromCommandLine = CommandLineProcessor["targetAudience"]?.lowercase()
 
     val targetAudience: String

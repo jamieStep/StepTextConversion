@@ -171,7 +171,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
     {
       "none" -> // No reversification.
       {
-        if ("step" == targetAudience)
+        if ("step" == targetAudience && !ConfigData.getAsBoolean("stepForciblyPreventReversification"))
           throw StepExceptionWithoutStackTraceAbandonRun("Must apply run-time reversification when the target audience is STEP.")
 
         if ("public" == targetAudience && m_VersificationScheme.isEmpty())
@@ -256,10 +256,10 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
   private fun getReversificationType (targetAudience: String): String
   {
-    return if ("step" == targetAudience) // Always use run-time if we're targetting STEPBible.
-      "runtime"
+    if ("public" == targetAudience)
+      return "none"
     else
-      "none"
+      return (if (ConfigData.getAsBoolean("stepForciblyPreventReversification")) "none" else "runtime")
   }
 
 

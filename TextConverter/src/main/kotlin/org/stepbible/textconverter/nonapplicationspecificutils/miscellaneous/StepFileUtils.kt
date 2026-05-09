@@ -7,6 +7,7 @@ import java.io.File
 import java.io.InputStream
 import java.nio.file.*
 import java.nio.file.attribute.BasicFileAttributes
+import kotlin.io.path.extension
 import kotlin.io.path.notExists
 
 
@@ -156,7 +157,7 @@ object StepFileUtils: ObjectInterface
 
   /****************************************************************************/
   /**
-   * Deletes a folder even if it contains file.
+   * Deletes a folder even if it contains files.
    *
    * @param path Folder path.
    */
@@ -189,7 +190,8 @@ object StepFileUtils: ObjectInterface
       override fun visitFile (filePath: Path, attrs: BasicFileAttributes): FileVisitResult
       {
         val fileName = filePath.fileName.toString()
-        if (attrs.isRegularFile && (fileName.startsWith("#") || fileName.endsWith("~")))
+        val extension = filePath.extension
+        if (attrs.isRegularFile && (fileName.startsWith("#") || fileName.endsWith("~") || "tmp" == extension))
           deleteFile(filePath)
         return FileVisitResult.CONTINUE
       }

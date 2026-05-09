@@ -1,0 +1,348 @@
+//------------------------------------------------------------------------------
+//
+// Configuration file BriefLexiconOfExtendedStrongsForGreek
+// ===========================================================
+//
+// STEPBible-only version, allowing for the possibility that we may opt to
+// tag things in our proprietary version.
+//
+// For use with the program GeneralTagger.
+//
+// This is in extended JSON format -- anything after double-slash is ignored,
+// giving the opportunity for me to add comments.
+//
+// The file here contains only those fields which are actually needed for the
+// processing of this particular form of input.  Fields not mentioned here
+// retain the values which appear in the definition of Config in generalTagger.
+//
+// See the definition of Config for much more information, including details of
+// other fields which might be relevant when processing other kinds of files.
+//
+// The raw input in this case is -- at least for the purposes of the processing
+// here -- a plain text file.
+//
+//------------------------------------------------------------------------------
+
+{
+    //--------------------------------------------------------------------------
+    // File to be processed, and where the output should go.
+
+    "inputFilePath":  "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/refs/heads/master/Lexicons/TBESG%20-%20Translators%20Brief%20lexicon%20of%20Extended%20Strongs%20for%20Greek%20-%20STEPBible.org%20CC%20BY.txt",
+    "outputFilePath": "C:/Users/Jamie/RemotelyBackedUp/Git/StepTextConversion/Miscellaneous/BriefLexiconOfExtendedStrongsForGreek/briefLexiconOfExtendedStrongsForGreek.json",
+
+
+
+    //--------------------------------------------------------------------------
+    // Stuff specific to the particular file we are processing.
+    //
+    // dataType is used to make it possible to select a processor class to
+    //   handle this type of data.  It can be omitted if you do not need to
+    //   create a processing class.
+    //
+    // regexChanges is a list of regexes and the value to which any match
+    //   should be converted.
+    
+    //"dataType": "mhm",
+    
+    "regexChanges": [
+    	["eStrong#>", "<hi type='bold'>"],
+    //	["</b>", "</hi>"],
+    //],	
+
+
+
+    //--------------------------------------------------------------------------
+    // Output fragments.
+    //--------------------------------------------------------------------------
+
+"prefix":
+//******************************************************************************
+//
+// This file contains is one of a related collection of lexicon files, which
+// between them cover Greek and Hebrew in both brief and fuller form.  The
+// file name indicates which of these versions you are currently looking at.
+//
+// The data here is based upon the files
+//
+// - TBESG - Translators Brief lexicon of Extended Strongs for Greek - STEPBible.org CC BY.txt
+// - TBESH - Translators Brief lexicon of Extended Strongs for Hebrew - STEPBible.org CC BY.txt
+// - TFLSJ 0-5624 - Translators Formatted full LSJ Bible lexicon - STEPBible.org CC BY.txt
+// - TFLSJ extra - Translators Formatted full LSJ Bible lexicon - STEPBible.org CC BY.txt
+//
+// at https://stepbible.github.io/STEPBible-Data/.
+//
+// Once you have stripped off these head-of-file comments, this file is in JSON
+// format.
+//
+// 
+//
+// Licensing information
+// =====================
+//
+// This file has been produced by the STEPBible project.  WITH THE POSSIBLE
+// EXCEPTION OF THE MEANING FIELD (see below) it is made available under the
+// CC BY 4.0 licence at https://stepbible.github.io/STEPBible-Data/.
+//
+// You do not need permission to use the data (AGAIN WITH THE POSSIBLE EXCEPTION
+// OF THE MEANING FIELD), but we would love to hear about anything you do with it.
+// We would also be grateful if you could inform us of any errors you discover.
+// Please email us at Feedback @ StepBible.org.
+//
+// You MAY make changes yourself, but you should include a note of changes which
+// is visble to anyone using your revised data.
+//
+// Please do not redistribute this file.  Instead, refer other people to
+// github.com/STEPBible from which they can obtain their own copy.  This
+// makes it easier for us to implement updates and corrections.
+//
+//
+// THE MEANING FIELD: This contains copyright material in _some_, but not all,
+// of the lexicon files, and you may need permission to use it:
+//
+// - BriefLexiconOfExtendedStrongsForGreek: Not copyright.
+//
+// - BriefLexiconOfExtendedStrongsForHebrews: The Meaning field is based on
+//   the Abridged BDB by Online Bible © Larry Pierce of OnlineBible.net
+//   <olbsupport@onlinebible.net>.  Permission should be obtained from
+//   Online Bible before this data is used in any project.
+//
+// $$$
+//	These definitions refer to J. Green's A Concise Lexicon of the Biblical Languages (CLBL) and Harris, Archer, & Waltke's Theological Wordbook of the Old Testament (TWOT),). 
+//	These have been edited to conform with OpenScripture's extended Strongs by Tyndale House Cambridge. Alignment with dStrongs is not yet completed. 
+//
+//
+//
+// Data structure
+// ==============
+//
+// Each record is keyed upon a dStrong value (see below for an explanation of
+// the various alternative Strongs numbers), and contains the following fields:
+//
+// - eStrong.  See below.
+//
+// - uStrong.  See below.
+//
+// - Ancient: Unicode lexical form.  In JSON files containing Greek words, this
+//   is based on LSJ but conforming to BADG when the difference may be confusing.
+//   In JSON files containing Hebrew words, the field is based upon BDB, and is
+//   normalised.
+//
+// - Transliteration: Transliteration of the Greek into Roman characters.
+//
+// - Morph: See below.
+//
+// - Gloss: Meaning in as few words as possible (by Tyndale Scholars).
+//
+// - Meaning: Extended meaning.  In some (but not all) files, the meaning is
+//   marked with the source from which the  meaning was taken as shown below.
+//   (AS and ML are used in brief lexicon data, LSJ in full lexicon data.)
+//
+//   . (AS): Abbott Smith, from https://github.com/translatable-exegetical-tools/Abbott-Smith,
+//     with corrections and adapted by Tyndale Scholars.
+//
+//   . (ML): Middle Liddell, from Perseus.  Used where there is no entry in AS.
+//
+//   . (LSJ) Full LSJ from Perseus, with additional features and corrections by
+//     Tyndale House, Cambridge:
+//
+//     + Most abbreviations have been expanded, usually in accordance with the
+//       introductions to the lexicons but occasionally made clearer.
+//
+//     + Dates have been added to authors by Tyndale House, using standard
+//       reference works.
+//
+//     + Coding is added to hide bibliographic data under a link stating the
+//       earliest date included in that data. (Note, not all devices work well
+//       with tooltips, so consider implementing a clickable option such as
+//       shown at http://jsfiddle.net/xaAN3/.)
+//
+//
+//
+// Strongs numbers
+// ===============
+//
+// Strongs numbers here come in three flavours -- eStrong (extended Strongs),
+// dStrong (STEPBible's disambiguated Strongs), and uStrong (STEPBible's
+// unified Strongs).  A lexicon or tagging system will normally use only one set,
+// depending on its purpose, though it may be useful to keep both dStrong & uStrong.
+//
+// Each system has its own advantages and disadvantages:
+//
+// eStrong is the standard Extended Strongs which conforms with the subdivisions of
+// words in BDB (Brown Driver Brigg's lexicon), largely followed by later lexicons.
+// The work here was carried out by OS (OpenScriptures.org).
+//
+// dStrong has separate numbers when a given name is used for different people or
+// places, and when a word has significantly different sub-meanings. See
+// TinyURL.com/DisambiguatedStrongs.
+//
+// uStrong has a single number covering all of an individual's various names, and
+// a single number for a word that has different forms or spellings or that has a
+// Hebrew and Aramaic version.
+//
+// For example,	Strong used G2264 for all three people in the NT named Herod
+// (the Great, Anitipas and Agrippa I), and a different number for 'Herodian',
+// which describes Herod Anitipas:
+//
+// - eStrong does nott divide up any names in the NT (in contrast to the way things
+//   work in the OT) eStrong was created to map Strongs to the Hebrew lexicon BDB.
+//
+// - dStrong has a unique number for each person: G2264G, G2264H, G2264I.  As in
+//   the OT, letters start at G when there is no "a" or "b" etc in eStrongs
+//   (which never happens in Greek).
+//
+// - uStrong has only one unique number for each individual, so a search for that
+//   number finds all the places where that person is mentioned no matter how their
+//   name is spelled.
+//
+// See further discussion at TinyURL.com/STEP-Disambiguated.
+//
+//
+// eStrongs numbers are as follows:
+//
+// - G0001 - G5624: The Strongs numbers from original set made by Strong for the
+//   text behind the KJV.
+//
+// - G3203 - G3302: Not used for some reason.
+//
+// - G5627 - G5799: Greek morphology codes (not used in this lexicon).
+//
+// - G5800 - G5893: Greek Synonyms - see http://studybible.info/strongs/G5800
+//   (not used in this lexicon).
+//
+// - G6000 - G6090: Extra Strongs Numbers in NASB mainly for variants not known
+//   to Strong.  (They remain the same for the sake of backward compatibility
+//   with NASB.)
+//
+// - G6100 - G9979: Extra Greek from Apostolic Bible Project, mainly for LXX
+//   words not found in NT (including Greek names that do not occur in the Hebrew).
+//
+// - G6091 - G6099, G9980 - G9999: Extra Greek for variants which are not included
+//   in NASB or Apostolic Bible.
+//
+// - G10000 - 19999: Greek equivalent of Strongs Hebrew numbers for names and
+//   transliterated words eg Abagtha (H0005) = G10005. When there is a NT
+//   equivalent, this is the STEPBible lexical tag.
+//
+// - G20000 - G20199: Words where the Full LSJ entry refers to the LXX, but
+//   which are not referred to in the AB tagging because they occur only in
+//   non-Protestant canons or in MSS other than Vaticanus (used by AB).
+//
+//
+//
+//
+// Morphology
+// ==========
+//
+// The 'morph' field gives the simple gramatical value of the main word,
+// represented as Language:Type-Gender-Extra.
+//
+// - Language: A=Aramaic, H=Hebrew, G=Greek and N=Name (this latter
+//   option being not language specific).
+//
+// - Type is A=Adjective, Adv=Adverb, Art=Article, Cond=Conditional,
+//   Conj=Conjunction, Cor=Correlative, DemP=Demonstrative Pn,
+//   ImpP=Impersonal Pn, Intg=Interrogative, Intj=Interjection,
+//   N=Noun, Neg=Negative, Part=Particle, Prep=Preposition,
+//   PerP=Personal Pn, PosP=Possessive Pn, RefP=Reflexive Pn,
+//   RelP=Relative Pn, V=Verb.
+//
+// - Gender is F=Female, M=Male, N=Neuter, C=Common, and P or S is
+//    optionally added for Plural or Singular.
+//
+// - 'Extra' for Names is L=Location, P=Person, LG/PG=Gentilic, T=Title
+//   (ie any other capitalised nouns such as titles, months, gods, planets,
+//   etc).
+//
+//
+// 'Location' is only used for places not named after people -- eg
+// Israel = N:N-M-P (for the person and nation); Jerusalem = N:N--L;
+// Canaanite is N:N-M-LG; Israelitess is N:N-F-PG.
+//
+// Location is a geographical entity such as river, mountain or city
+// (eg 'Dan', but Gentilic is used for Amon, Syria, Judah, or the tribal
+// area of Dan. The idea is that someone from Dan is probably related to
+// Dan unless he is called a Hittite, but someone from Jerusalem or the
+// city of Dan could be from anywhere even though he is named after the
+// city.  So a 'Shulemite' (who is probably from Salem ie Shalem aka
+// Jerusalem) is dark-skinned and perhaps not a native from the area.
+//
+// 'Title' is a miscellaneous category that includes names of gods, musical
+// terms and months and offices such as Pharaoh -- unless referring to an
+// individual eg Pharaoh Necho who is N:N-M-P.
+//
+// When F or M occurs with L or T it refers to the gender of that person,
+// not the location, so Jerusalem = N:N--L, Jerusalemites = N:N-G-L,
+// Jerusalemitess = N:N-F-L.
+//
+// When Gentilics related to a person the STEP_LexicalTag points to the Person
+// eg Danites => Dan.  When Gentilics point to a place, the STEP_LexicalTag
+// points to that place, eg Gileadites => Gilead.  When there is no numbered
+// tag for the person or place, we probably aren't sure what it is, so the
+// STEP_LexicalTag doesn't have anywhere different to point, eg. Girgashites.
+//
+// Some very common Gentilics (eg Levite) have gained a meaning of their
+// own which may be related to a person but much less so - so the STEP_LexicalTag
+// does not redirect to the entry for that person.
+//
+// Odd ones: Jew=N:N-G-P, Jewish=N:A, Jewess+Ammonitess=N:N-G-P-F,
+// Canaanite-trader=N:N-G-P / N:N-G-T, Chaldean-magi=N:N-G-L / N:N-G-T,
+// Nephusim=N:N-G-T, Rephaim=N:N-G-P / N:N-G-T, Shulamite+Shunammite+Carmelitess+Jezreelitess=N:N-F-L.
+//
+//
+//
+// 'Meaning' field
+// ===============
+//
+// The meaning field contains some tags:
+//
+// - <b>...</b> suggests that the enclosed text should be highlighted in some
+//   way.  (The STEPBible project uses boldface here, which is why we have
+//   chosen this particular tag.)
+//
+// - <BR /> indicates a line break.
+//
+// - <ref> ... </ref> marks Bible references.  As an example:
+//
+//     <ref ref='Heb.5.4; 7.11; 9.4'>Heb.5:4, 7:11, 9:4</ref>
+//
+//  The ref attribute gives the target references in 
+//
+// 
+//
+//******************************************************************************
+
+",
+
+"suffix": "",
+
+
+
+    //--------------------------------------------------------------------------
+    // Want to convert TSV format to JSON format.
+    //--------------------------------------------------------------------------
+    
+    "tsvToJson": true,
+
+
+    
+    //--------------------------------------------------------------------------
+    // Pattern match to let you recognise the header row, the first data row and
+    // the last data row.
+    //--------------------------------------------------------------------------
+    
+    "tsvHeaderRegex": "^eStrong\\tdStrong.*",
+    "tsvDataRowLowRegex": "^G0001\\tG0001G.*",
+    "tsvDataRowHighRegex": "^G21502\\tG21502\\s+=.*",
+
+
+
+    //--------------------------------------------------------------------------
+    // Field descriptors.
+    //--------------------------------------------------------------------------
+
+    "tsvFieldDefinitions": [
+	{ "origName": "dStrong", "useAsKey": true, "retainInData": true },
+	{ "origName": "Abbott-Smith lexicon (AS), with gaps occationally filled from edited versions of  Middle LSJ", "revisedName": "Meaning" }
+    ]
+}

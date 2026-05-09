@@ -51,6 +51,7 @@ stepOsis2modFilePath
 stepUseExistingOsis
 stepValidationReportOutOfOrderAsError
 stepVersificationScheme
+stepForciblyPreventReversification
 calcReversificationType
 stepReversificationFootnoteLevel
 stepUseVernacularFormats

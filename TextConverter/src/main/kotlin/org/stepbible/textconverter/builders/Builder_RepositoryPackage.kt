@@ -106,6 +106,14 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
 
 
     /**************************************************************************/
+    /* The processing may create temporary files in the OSIS input folder, so
+       delete them if they are present. */
+
+    StepFileUtils.deleteTemporaryFiles(inputOsis)
+
+
+
+    /**************************************************************************/
     /* In the past I've been in the habit, with DBL files, of taking any
        odds and ends associated with the metadata and storing them under a
        Miscellaneous folder in the Metadata folder.  I don't think we really

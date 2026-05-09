@@ -10,6 +10,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.textspecificpreprocessors.PreprocessorForMhm
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
@@ -301,6 +302,14 @@ object Builder_InternalOsis: Builder(), ObjectInterface
   {
     /***************************************************************************/
     fun x () = Logger.announceAllAndTerminateImmediatelyIfErrors() // A little shorthand.
+
+
+
+    /***************************************************************************/
+    /* I needed to do special preprocessing for the MHM module.  This is
+       probably a convenient place to do similar things in future. */
+
+    PreprocessorForMhm.process()
 
 
 

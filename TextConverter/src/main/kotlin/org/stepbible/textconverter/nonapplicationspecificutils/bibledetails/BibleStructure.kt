@@ -1191,6 +1191,8 @@ open class BibleStructure (fileProtocol: X_FileProtocol?)
     /**************************************************************************/
     if (!m_CollectingCanonicalTextSize)
       throw StepExceptionWithStackTraceAbandonRun("Canonical text size for verse requested, but never asked to accumulate this information.")
+      if ("[2, 25, 33, 0]" == elts.contentToString())
+        Dbg.d(elts.contentToString())
 
 
 
