@@ -34,7 +34,7 @@ import kotlin.collections.ArrayList
 import org.antlr.v4.runtime.*
 import org.antlr.v4.runtime.misc.Interval
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
-
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 
 
 /******************************************************************************/
@@ -43,10 +43,10 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  *
  *
  *
- * ## What to read
+ * ## Don't read more than you have to
  *
- * The handling of config data is appallingly complicated.  (If you can think of
- * a better way to handle all this, I'm definitely interested.)
+ * The handling of config data is appallingly complicated.  (If you can think
+ * of a better way to handle all this, I'm definitely interested.)
  *
  * The volume of documentation reflects this.  You won't want to read all of it
  * unless you absolutely have to.
@@ -77,40 +77,91 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  *
  * ## Where to store config settings
  *
- * - A few config settings are taken from the command line.
+ * To begin with, a brief summary:
  *
- * - A *lot* of default settings are taken from files in the Resources section
- *   of this JAR file.  As the name implies, you can override this, although
- *   hopefully you won't normally need to do so.
+ * - The root of the configuration system is a file called step.xlsx.
+ *   Every text has to have one of these, and it must sit in a folder
+ *   called Metadata which itself resides directly within the root folder
+ *   for the text.  step.xlsx contains settings which typically differ
+ *   for every text -- and settings which you *must* supply beacuse there
+ *   is no way they can be deduced automatically.
+ *
+ * - A *lot* of settings are taken from files in the Resources section
+ *   of this JAR file.  These act as defaults.  In general they represent
+ *   things you are unlikely to want to change, and therefore probably
+ *   prefer not to know about.  However, as discussed below, you have the
+ *   option to override them if you need to.
  *
  * - If you are dealing with data from DBL, you can optionally organise to
  *   take some settings direct from the metadata files they supply.
  *
- * - Some settings are calculated during processing.
+ * - Some settings are calculated during processing.  Some of these you can
+ *   override.  Others are fixed.
  *
- * - But the bulk of the settings you supply yourself in files you create.
+ * - Other settings you can specify for yourself in various places ...
  *
  *
- * There is an 'include' mechanism which lets you reference one config
- * file from another.  The processing works as though the include'd file
- * has been expanded out and the include statement has been replaced
- * by the resulting text.
+ * Settings are taken from the following places (listed in descending order
+ * of precedence -- explained shortly):
  *
- * You can use this mechanism to partition your data into coherent chunks.
- * It also gives you the chance to share data among texts -- you set up one
- * or more common files and then have everything include them.
+ * 1. The command line (command-line settings are converted to config settings,
+ *    so that it is just as though the command-line parameters had been stored
+ *    in a configuration file in the appropriate format).  Note that the command
+ *    line accepts only a very limited list of settings, however – you can’t set
+ *    just *any* configuration parameter at all via the command line.
  *
- * Note that no particular meaning is ascribed to the file structure you
- * choose.  You *can* put settings anywhere you like.
+ * 2. step.xlsx.
  *
- * It is ok for a given parameter to be defined multiple times.  In such
- * cases, the order in which these definitions are encountered determines
- * the actual value assigned to the parameter (see below).  This makes possible
- * the defaulting mechanism I refer to above -- the defaults are stored in the
- * JAR here, but you can override them by providing settings in the files
- * you create.
+ * 3. Text files, as discussed below.
  *
- * All of this is discussed in more detail later.
+ * 4. The StepTextConverterParameters environment variable.
+ *
+ * 5. Configuration files stored in the converter JAR file.  (These typically
+ *    contain backstop values, often for rather obscure settings which you are
+ *    unlikely to want to change.)
+ *
+ *
+ * There is an 'include' mechanism which lets you reference one config file from
+ * another (or from step.xlsx).  The processing works as though sources of data
+ * listed above were expanded out into one large text file (and each include
+ * statement were replaced by the content of the file to which it points).
+ *
+ * One consequence of having such a large number of sources of config
+ * information is that it is quite possible that in the expanded data there will
+ * be more than one setting for a given parameter.  The important thing
+ * currently is that the configuration data is expanded out in the order
+ * discussed above.  We will see shortly how the individual statements are then
+ * processed, and therefore -- where there are multiple settings for the same
+ * parameter -- which one is actually applied.
+ *
+ *
+ * 'include' statements give only a file name, not a full path.  Files are
+ * located as follows (say you are looking for x.conf):
+ *
+ * - The processing first looks for x.conf in the Metadata folder for the
+ *   text (the folder which contains step.xlsx).  If found, this is the
+ *   file which is used.  Otherwise ...
+ *
+ * - The processing moves up a level and looks to see if there is a Metadata
+ *   folder at that level -- a Metadata folder which either itself contains
+ *   x.conf, or which has x.conf within any subfolder structure it may contain.
+ *   If more than one x.conf is found it is an error.  If just one is found,
+ *   that one is used.  Otherwise ...
+ *
+ * - The processing moves up a level and repeats, giving up if it gets as
+ *   far as the converter base folder (the one containing *all* of the
+ *   texts you are working on) and fails to find x.conf there.
+ *
+ * - Note that while it is an error if any *given* Metadata folder is
+ *   encountered which contains more than one x.conf, the processing does
+ *   not look for duplicates all the way up the tree.  If, for instance,
+ *   there is an x.conf co-located with step.xlsx, and another one higher
+ *   up, that's not a problem -- the former is used.
+ *
+ *
+ * Note that no particular meaning is ascribed to which file a given parameter
+ * appears in.  You can partition the configuration information in any way
+ * you choose, thus making it possible to keep related parameters together.
  *
  *
  *
@@ -119,88 +170,70 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  * An Include statement goes on a line of its own in your config files, and
  * there are two forms of Include statement:
  *
- *     $include filePath
- *     $includeIfExists filePath
+ *     $include fileName
+ *     $includeIfExists fileName
  *
  * Each works in the same way, the only difference being that the former
  * aborts the processing if the file does not exist, whereas the latter
  * does not.
  *
- * Include's may be nested to any depth.  The various config files are
- * pre-processed so that all include's are replaced by the content of
- * the included file before processing proper begins.  The effect,
- * therefore, is as though you had just one massive config file.
+ * The general mechanism by which Include's are processed was discussed
+ * in the previous section.
  *
- * The file paths here may be any of the following:
- *
- * - @jarResources/fileName: This selects a file which is built into the
- *   resources section of the present JAR.  (You are unlikely to need to
- *   make much use of this.  Typically you include just one Resources file --
- *   commonRoot.conf, and it automatically loads all the other ones for you.
- *   And if you make use of the most recent approach, described below, you
- *   don't need to include even that one file, because it, too, is
- *   automatically included.)
- *
- * - @find/fileName where filename is just that -- just the name of the file,
- *   devoid of any path information.  See below.
- *
- * - Or you can give an absolute path (but I strongly advise against it other
- *   than perhaps for test purposes, because it will render things
- *   non-portable).
+ * Include's may be nested to any depth.
  *
  *
- * With @find the system runs through the following folders in order:
+ * LEGACY NOTE
+ * -----------
  *
- * 1. The Metadata folder for the text -- Text_abc_DEF_step/Metadata.
+ * Previous version of the software required (or permitted) you to supply
+ * additional path information along, perhaps, with hints as to where the
+ * file should be obtained.
  *
- * 2. The OtherMetadata folder for the text if there is one --
- *    Text_abc_DEF_step/OtherMetadata (discussed below).
- *
- * 3. The root folder for the text -- Text_abc_DEF_step.
- *
- * 4. Any folders specified by the optional parameter stepConfigFolderPaths
- *   in the optional environment variable stepTextConverterParameters.
- *
- * (The examples above all assume that the root folder name ends _step.
- * They are equally applicable to folders ending _public or _publicStep).
- *
- * It looks in each of these places in turn, and then runs over the entire
- * folder hierarchy below it.  As soon as it locates a file with the
- * given name, it takes the first such file and does not look further.
- *
- * OtherMetadata is a folder is a folder stored in repository packages to
- * give a record of the metadata used when building that module.  It will
- * therefore not be available unless you are starting from an existing
- * repository package.
- *
- * Note that if OtherMetadata *is* available, config data will always be
- * taken from there in preference to any other similarly named files you
- * may have lying around, with four exceptions: config.step or config.xlsx
- * and, if you have them, metadata.xml and license.xml are always taken
- * from Metadata.
- *
+ * The processing continues to accept these statements, but simply ignores
+ * all information except the path name.  This should provide backward
+ * compatibility in most cases.
  *
  *
  *
  * ## Third party config
  *
- * At present the discussion here is applicable only where you are working with
- * data taken from DBL, which supplies the files metadata.xml and license.xml
- * for each text -- and even then, is applicable only if you choose to store
- * these files in the Metadata folder, and if you set up the config data to
- * indicate that they are to be used.
+ * Sometimes third parties may supply information in processable form which
+ * might usefully feed into our own config if we had automated processing to
+ * handle it.
  *
- * In the early days I thought this would be useful, because we were processing
- * many DBL texts.  In practice, this is looking rather less useful than I'd
- * imagined.  This is partly because we very often tend to ignore the supplied
- * information and override it with our own settings; and partly because the
- * metadata is not well documented, and therefore tends not to be used in a
- * consistent manner.
+ * For this to be the case, we really need to be picking up large numbers of
+ * texts from a given source, all of which will bring with them metadata
+ * structured in the same way.
+ *
+ * Currently, only DBL is really a candidate for this -- and we do have
+ * automated processing to handle the DBL metadata.xml and license.xml files.
+ *
+ * Unfortunately, this does complicate the overall processing appreciably, and
+ * increasingly it is looking as though it is of limited value.  When I was
+ * confronted with 60 texts to process all at one go (and when I believed I
+ * could trust the results), it seemed like a Very Good Thing.  In the cold
+ * light of day, I'm not so sure:
+ *
+ * - DBL's metadata format seems, so far as I can see, to be undocumented.
+ *   This leaves each text supplier scrabbling to do their own thing, with
+ *   the result that the metadata.xml files are inconsistent.
+ *
+ * - Increasingly we are choosing to override what DBL gives us in any case.
+ *
+ * - I originally thought that the information from license.xml (which feeds
+ *   through only into stylised comments at the start of the Sword config
+ *   file) might be useful for admin purposes.  In particular I felt we
+ *   could apply automated processing to these comments to determine when we
+ *   might need to apply to renew licences.  However, it turns out that DBL
+ *   tracks this issue and informs us itself.
+ *
  *
  * Having said this, the processing to do all of this *is* still present, and
  * will do its stuff unless you prevent it, so you need to know about it.
- * (One simple way of thwarting it, if you want one, is simply not to store
- * the metadata.xml and license.xml files in the Metadata folder.)
+ * One simple way of thwarting it, if you want one, is simply not to store
+ * the metadata.xml and license.xml files in the Metadata folder (which is
+ * where you should store them if you *do* want to apply the processing here).
  *
  * Data from the metadata.xml file plays an active part in the processing and,
  * for instance, participates in the Bible description which appears in
@@ -217,77 +250,73 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  *
  *
  *
- * ## Creating and updating modules
+ * ## Updating modules
  *
- * The approach you adopt to creating and updating modules *may* differ
- * slightly depending upon what you are trying to achieve.  In fact all
- * approaches come down to much the same thing; the main difference is the
- * lengths you wish to go to in order to have just a single copy of shared
- * data.
+ * If you are updating an existing module, you may alreaady have the necessary
+ * data in your overall text folder.  If not (or if you suspect the data may
+ * be out of date) you will need to delete any existing data for that module
+ * from the text structures and unzip the repository package in its place.
  *
+ * Unless the data from the repository package was worked on relatively
+ * recently, you may have to reckon with the textual data or the config
+ * not being compatible with the current version of the converter.  In
+ * particular:
  *
+ * - You will need to ensure that the root folder name for the text
+ *   follows our current naming conventions.
  *
- * ### Updating one or two existing modules
+ * - You will need to ensure that the input data is stored in an
+ *   appropriately named input folder -- InputUsx or whatever.
  *
- * Least complicated is the situation where you have an existing repository
- * package and are happy to work with that and the config data in its
- * OtherMetadata folder.  More particularly, this is a good approach if you
- * are updating only one or two modules and are doing different things to
- * each or -- if updating shared information -- don't mind making separate
- * updates to each.
+ * - You will need to ensure you have a Metadata folder.
  *
- * Here Metadata and OtherMetadata should contain all the config you need.++
- * If you need to alter config data you need change only the files in
- * Metadata and / or OtherMetadata.  (As a reminder, on recent modules,
- * Metadata will contain step.xlsx and optionally metadata.xml and license.xml.)
- * You then make any necessary changes to the actual textual content, and run
- * the converter to create a new repository package.
+ * - The Metadata folder must ideally contain a step.xlsx file giving basic
+ *   configuration information.  Older repository packages will have a step.conf
+ *   instead.  I _think_ things will actually work satisfactorily with that, but
+ *   if you can face trasnferring the data to a step.xlsx file and deleting the
+ *   step.conf, that would be better.
  *
- * ++ Regrettably this statement really applies only where you are working
- * with repository packages which have been built relatively recently.
- * Earlier ones use a variety of different arrangements and will have to be
- * handled on a case-by-case basis.
+ * - You must have a history.conf file and it must be in the latest format.
+ *   With older repository packages, you are likely to find that version history
+ *   information is stored in the step.conf file, and you will need to remove it
+ *   from there, reformat it and store it in history.conf.
  *
- *
- *
- * ### Creating new modules
- *
- * You need to create a Metadata folder under the root folder for the text.
- * Within this you will need a copy of step.xlsx (a template appears in the
- * Resources section of the present JAR file), duly filled in.  If you are
- * working with DBL and may potentially wish to take data from there
- * automatically, you will also need to store DBL's metadata.xml and
- * license.xml files there.
- *
- * You may also need to set up additional config files to hold other data.
- * The earlier discussion about the include mechanism gives details of
- * where you can store them.  If you are likely to have many modules which
- * have common config data, you might wish to factor out this common data
- * and put it in a location where all of the modules can see it.
- *
- * Once you have done all of this, you can use the converter to create a
- * repository package.
+ * - If, in the first step above, you had to change the name of the folder, this
+ *   will in turn mean that when the module is generated, it will have a revised
+ *   name.  You will need to add an Obsoletes statement at the end of the
+ *   step.xlsx or step.conf file to indicate that the new module replaces the old
+ *   name.
  *
  *
  *
- * ### Updating existing modules en masse
+ * ## Working from scratch
  *
- * I am thinking here particularly of the situation where you expect to
- * be updating many modules all of which shared common config data, and
- * it is this common information which needs to be updated.
+ * My recommended approach is as follows:
  *
- * You *can* work here as described in the section 'Updating one or two
- * existing modules' above, provided you don't mind repeating the changes
- * for each module.
+ * - All per-Bible-text folders (the ones named Text...) *must* reside under
+ *   a single root folder which I refer to here as the converter base folder.
  *
- * Alternatively, you can attempt to set up a shared folder structure,
- * and then work with that.
+ * - Within that, if you have different collections of texts, create a
+ *   subfolder for each collection.  (I have one for DBL, for instance,
+ *   and another -- Miscellanous -- to hold anything which doesn't fit into
+ *   any other category.)  You can create further structure below these
+ *   individual folders if you wish, in order to group texts further.  Within
+ *   DBL, I have a separate folder, Biblica, to hold all of the texts which
+ *   originate from Biblica.
  *
- * Bear in mind, if you do this, that if the OtherData folder exists for
- * any module, config information will be taken from there in preference
- * to using the various shared locations you have set up.  If you wish to
- * be certain your shared data is being used in preference, you should
- * probably delete or rename OtherMetadata before you start.
+ * - Decide whether there is any configuration information which things
+ *   might want to share.  If there is, create a Metadata folder at an
+ *   appropriate level in your hierarchy, and put suitable config files
+ *   within that folder (directly or within some folder structure contained
+ *   within the Metadata folder).  We need certain information describing
+ *   Biblica the company, and all Biblica texts need this, so I create a
+ *   Metadata folder within the Biblica folder, and put suitable config
+ *   files there.  We also need information about DBL the organisation
+ *   which will apply to *all* texts originating from DBL -- both Biblica
+ *   texts and others -- so I create a Metadata folder within the DBL
+ *   folder to hold this.  And things like vernacular translations of
+ *   footnote text apply to *all* texts, so I create a Metadata folder
+ *   within the converter base folder and store that there.
  *
  *
  *
@@ -297,7 +326,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  *
  *     #! This is a comment line.  Comments start with '#!'
  *     #! Comments may appear on a line of their own, or may be appended to other statements.
- *     #! All data from #! to the end of the line are stripped off before processing begins.
+ *     #! All text from #! to the end of the line is stripped off before processing begins.
  *     #! Spaces are then removed from the start and end of the line.
  *     #! If the resulting line is blank, it is ignored.
  *
@@ -305,7 +334,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  *     fullName=$firstName $lastName  #! This shows that a setting may refer out to other settings.  In this case 'fullName' is assembled out of firstName and lastName.
  *
  *     $include myConfig.conf         #! Includes another file at this point.
- *     $include $langCode/texts.conf  #! The target of an include statement can also refer out to other settings.
+ *     $include $langCode-texts.conf  #! The target of an include statement can also refer out to other settings.
  *
  *     book#=Romans                   #! An alternative form of assignment, discussed below.
  *     chapterRef#=$book.$chapter     #! This form of assignment can also refer out to other items.
@@ -327,12 +356,13 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  * You may have more than one definition of the same parameter.  Where this is
  * the case, the order in which the processing encounters them matters:
  *
- * - With '=' assignments, the *last* definition is the one to be used.
+ * - With multiple '=' assignments, the *last* definition is the one to be used.
  *
- * - With '#=' assignments, the *first* definition is the one to be used.
+ * - With multiple '#=' assignments, the *first* definition is the one to be
+ *   used.
  *
  * - If you have both forms of assignment, the *first* '#=' assignment will be
- *   used, and all the others will be ignored.
+ *   used, and all the others of either flavour will be ignored.
  *
  *
  * This, for instance, is how the defaulting mechanism works.  In the files in
@@ -340,6 +370,27 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  * means you can then override them, either by using '#=' or simply by placing
  * your definitions later. (I recommend using '#=' anywhere where you are trying
  * to force matters, rather than relying just upon ordering -- it's clearer.)
+ *
+ * Referring back to the precedence ordering mentioned in an earlier section ...
+ *
+ * - Settings taken from the command line use #=, and therefore, since they
+ *   are loaded first, definitely take precedence over anything else.
+ *
+ * - Settings taken from step.xlsx also use #=, so unless already overriden
+ *   by the command line, these will take precedence over anything which
+ *   follows them.  (Not *quite* true, I suppose.  step.xlsx gives you the
+ *   opportuinity to specify your own ad hoc settings in addition to the ones
+ *   built into it, and here the decision as to whether to use = or #= is
+ *   up to you.)
+ *
+ * - It is up to you which settings in textual config files should use = and
+ *   which #=.
+ *
+ * - Ditto for settings in the environment variable.
+ *
+ * - Stuff in the Resources section of the present JAR file uses =, and can
+ *   therefore readily be overridden.
+ *
  *
  * There are some specialist settings -- particularly where data is to be picked
  * up from the DBL metadata file.  These are discussed below.
@@ -379,7 +430,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  * departure, and at present probably hasn't worked its way through properly.
  * (And in addition, there are some places where there is no 'right' answer --
  * if a value is calculated and then used only in the Sword configuration file,
- * does that make is 'sword' or 'calc'?)
+ * does that make it 'sword' or 'calc'?)
  *
  * Occasionally it is possible you may want to define your own intermediate
  * values en route to setting up one of the parameters used by the converter.
@@ -403,7 +454,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  *   are assumed to run from the $-sign through any subsequent word characters
  *   (of which there must be at least one).  If you need a variable name to be
  *   followed immediately by more word characters, you can end the name with
- *   $$.*
+ *   $$
  *
  * - **fn($a, $b, "...", $c)** is replaced by the value returned by 'fn',
  *   passing the given arguments.  This also illustrates that the arguments can
@@ -429,8 +480,8 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
  * - $choose(x, y, ...): Returns the first non-null argument, or null if
  *   all are null.
  *
- * - $delimited(bra, content, ket): Returns null if 'content is null, otherwise
- *   the concatenation bra + content + key.
+ * - $delimited(bra, content, ket): Returns null if 'content' is null, otherwise
+ *   the concatenation bra + content + ket.
  *
  * - $eq(a, b, [c, [d]]): If only a and b are supplied, returns Yes or No
  *   according as the two are or are not equal.  If $c is supplied, returns
@@ -834,7 +885,7 @@ object ConfigData: ObjectInterface
     /**************************************************************************/
     /* Parse the folder name and split out the main elements. */
 
-    val parsedFolderName = "Text_(?<languageCode>...)_(?<abbreviation>[^_]+)(_(?<rest>.*)?)?".toRegex().matchEntire(FileLocations.getRootFolderName())!!
+    val parsedFolderName = "Text_(?<languageCode>...)_(?<abbreviation>[^_]+)(_(?<rest>.*)?)?".toRegex().matchEntire(FileLocations.getTextRootFolderName())!!
     var abbreviatedName = parsedFolderName.groups["abbreviation"]!!.value
     val rest = parsedFolderName.groups["rest"]!!.value
 
@@ -1039,6 +1090,8 @@ object ConfigData: ObjectInterface
     if (m_Initialised) return // Guard against multiple initialisation.
     m_Initialised = true
 
+    Rpt.report(level = 0, "Loading configuration data.")
+
     val configTextFilePath = FileLocations.getConfigTextFilePath()
     val configSpreadsheetFilePath = FileLocations.getConfigSpreadsheetFilePath()
 
@@ -1209,18 +1262,18 @@ object ConfigData: ObjectInterface
   private fun load (configFilePath: String, okIfNotExists: Boolean)
   {
     /**************************************************************************/
-    //Dbg.d("Loading config file: $configFilePath")
     //Dbg.dCont(configFilePath, "DBL.conf")
 
 
 
     /**************************************************************************/
-    val expandedFilePath = FileLocations.getInputPath(configFilePath)!!
+    val expandedFilePath = FileLocations.getConfigFileInputPath(configFilePath)!!
     if (expandedFilePath in m_LoadedConfigFiles)
       return
 
     m_LoadedConfigFiles.add(expandedFilePath)
     Logger.info("Loaded config from ${(m_LoadedConfigFiles.size).toString().padStart(2, ' ')}) $expandedFilePath.")
+    Rpt.report(level = 1, "Loading configuration data from $expandedFilePath.")
 
 
 
@@ -1564,6 +1617,58 @@ object ConfigData: ObjectInterface
 
 
 
+    /****************************************************************************/
+    /****************************************************************************/
+    /**                                                                        **/
+    /**                             Locating files                             **/
+    /**                                                                        **/
+    /****************************************************************************/
+    /****************************************************************************/
+
+    /****************************************************************************/
+    /* Locates a file.  More specifically ...
+
+       We are concerned here only with paths which start @find/ (and we assume
+       that the caller has already determined that the path _does_ start that
+       way).
+
+       The @find/ may be followed either by a file name (@find/myFile.txt) or by
+       a relative path (@find/FolderA/FolderB/myFile.txt).  New modules should
+       use a file name only.  I continue to accept a path hierarchy for
+       backward compatibility, but even if a hierarchy is supplied, only the
+       file name from it is used.
+
+       The processing works as follows:
+
+       - It looks for the _first_ file whose name matches (so if there's more
+         than you'll never know).
+
+       - It ignores any relative path information in the canonicalFilePath
+         parameter (I continue to accept it, though, for the sake of backward
+         compatibility).  It simply looks for the file in the folder and in
+         any hierarchy below it.
+    */
+
+//    private fun locateFile (canonicalFilePath: String): String?
+//    {
+//        /**************************************************************************/
+//        val endOfPath = canonicalFilePath.substring("@find/".length) // Strip off @find/.
+//        val fileName = Paths.get(endOfPath).last().toString()
+//
+//
+//
+//        /**************************************************************************/
+//        for (folderPath in folderPaths)
+//        {
+//            val res = StepFileUtils.findFiles(folderPath, fileName)
+//            if (res.isNotEmpty())
+//                return res[0]
+//        }
+//
+//        return null
+//    }
+
+
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -1680,9 +1785,9 @@ object ConfigData: ObjectInterface
    * @return True or false.
    */
 
-  fun getAsBoolean (key: String): Boolean
+  fun getAsBoolean (key: String, dflt: Boolean = false): Boolean
   {
-    var s = get(key)!!
+    var s = get(key) ?: return dflt
     if (s.isEmpty()) return false
     s = s.substring(0, 1).uppercase()
     return s == "Y" || s == "T"
@@ -2026,9 +2131,9 @@ object ConfigData: ObjectInterface
     /**************************************************************************/
     private fun underlineError (recognizer: Parser, offendingToken: Token, line: Int, charPositionInLine: Int)
     {
-      val input = recognizer.inputStream.toString()
-      val lines = input.lines()
-      val errorLine = lines[line - 1]
+      //val input = recognizer.inputStream.toString()
+      //val lines = input.lines()
+      //val errorLine = lines[line - 1]
       Dbg.d(inputString)
       Dbg.d(" ".repeat(charPositionInLine) + "^")
     }
@@ -3213,8 +3318,10 @@ object ConfigArchiver
   /****************************************************************************/
   /**
    * Returns a list of all of those config files (other than the root files and
-   * built-in ones) used by this run.  I save these as part of the repository
-   * package, so they're available should we need to rebuild things.
+   * built-in ones) used by this run.  I used to save these as part of the
+   * repository package, so they were available should we need to rebuild
+   * things.  I have since concluded that this is not particularly useful,
+   * but have retained the method just in case.
    *
    * @return List of file paths.
    */
@@ -3227,7 +3334,7 @@ object ConfigArchiver
       else if ("step.conf" == fileName || "step.xlsx" == fileName || fileName.contains("jarResources", ignoreCase = true))
         null
       else
-        FileLocations.getInputPath(fileName)
+        FileLocations.getConfigFileInputPath(fileName)
       }
   }
 
@@ -3276,7 +3383,7 @@ object ConfigArchiver
        path. */
 
     val fileName = File(pseudoFilePath).name
-    val filePath = FileLocations.getInputPath(pseudoFilePath)
+    val filePath = FileLocations.getConfigFileInputPath(pseudoFilePath)
 
 
 

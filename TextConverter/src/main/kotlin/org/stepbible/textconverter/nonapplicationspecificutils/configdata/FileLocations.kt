@@ -4,6 +4,8 @@ package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
+import org.stepbible.textconverter.protocolagnosticutils.PA_Utils
 import java.io.File
 import java.io.FileInputStream
 import java.nio.file.Paths
@@ -30,7 +32,7 @@ import java.io.InputStream
  *      |   |
  *      |   + -- Possibly metadata.xml, licence.xml, etc.
  *      |
- *      +-- _Output_xxx (xxx = step, or public, or may have two _Output_ folders.
+ *      +-- _Output_xxx (xxx = step, or public, or may have two _Output_ folders).
  *      |   |
  *      |   + -- InternalOsis
  *      |   |
@@ -133,124 +135,101 @@ object FileLocations: ObjectInterface
    * Returns a file path either to an "ordinary" file, or else to a file
    * within the resources section of the current JAR.  (This functionality is
    * noticeably different from everything else here, but since we're concerned
-   * with file locations, and this processing is location-dependent, it seems
+   * with file locations, and this processing does deal with locations, it seems
    * reasonable to have it here.)
    *
-   * There are a number of possible cases :-
+   * With the latest changes, the fileName argument should indeed be a name,
+   * and not a path.  However, there are potential legacy issues here.  Earlier
+   * implementations accepted full or partial paths here, and also required --
+   * or at least accepted -- a hint at the start of the name (followed by a
+   * slash, as though it were an element of a path) as to where to look.
+   * The nature of the new processing is such that I _should_ be able to
+   * accept an old-format parameter and simply ignore all but the last element
+   * of it.  (Or I think so -- this will break if the earlier config did
+   * anything too wild and wacky, but that's unlikely).
    *
-   * - If filePath starts with '@jarResources/', the file is actually within
-   *   the resources section of this JAR file, and we simply return filePath
-   *   as-is (except for replacing backslash by slash).
+   * The processing is slightly fiddly ...
    *
-   * - With one exception, any other directive is expanded out using standard
-   *   configuration expansion, and then treated as an absolute path.
+   * If the filename starts '@jarResources', this is taken as a firm indication
+   * that the file resides in the resources section of the present JAR file.
+   * Other than forcing the name to canonical form, I return it as is.
    *
-   * - The one exception is that you can start a path '@find', in which case
-   *   I scan the root folder, the metadata folder and the shared config
-   *   folder in that order until I find the file.
+   * Otherwise I ignore all but the filename portion of the parameter.
    *
-   * @param filePath The file path in our own internal format.
+   * Starting at the Metadata folder for the text itself, I look for a file
+   * of the given name within that folder or any substructure it contains.
+   * If precisely one file of that name is found, I return the full path for
+   * that file.  Otherwise, I move up a level and see if there is a Metadata
+   * folder containing -- directly or within any substructure -- a file of the
+   * required name.  Otherwise I repeat this at each higher level below the
+   * converter base folder.
+   *
+   * If no file is found anywhere, the function returns null.  If at any
+   * particular level more than one file of the given name is found, it
+   * throws an exception.
+   *
+   * Note that there is no problem in having a file of the given name at
+   * different levels of the structure.  As soon as the first acceptable
+   * file is found, the method returns without ever looking at higher
+   * levels.
+   *
+   * @param fileName The file name (but see the discussion on legacy issues
+   *   above).
+   *
+   * @param okIfNotExists As the name suggests. If the file does not exist
+   *   and this parameter is false, the method throws an exception.
    *
    * @return Path.
    */
-  
-  fun getInputPath (filePath: String, okIfNotExists: Boolean = false): String?
+
+  fun getConfigFileInputPath (fileName: String, okIfNotExists: Boolean = false): String?
   {
     /**************************************************************************/
-    val canonicalFilePath = filePath.replace("\\", "/")
+    /* Assume that things know what they are doing, and that if they claim
+       something exists in JAR Resources, it does. */
+
+    if (fileName.lowercase().startsWith("@jarresources"))
+      return fileName
 
 
 
     /**************************************************************************/
-    /* In resources section of jar FILE? */
-    
-    if (canonicalFilePath.lowercase().startsWith("@jarresources"))
-      return canonicalFilePath
+    val canonicalFilePath = fileName.replace("\\", "/").split("/").last() // Checks away all but the actual file name, so as to handle legacy data.
 
+
+
+   /****************************************************************************/
+    /* Checks if a given folder contains a Metadata folder which, in turn,
+       contains a file of the given name. */
+
+   fun folderContainsFile (folderPath: String): Pair<String, String?>
+   {
+     val metadataFolder = File(folderPath, "Metadata")
+     if (!metadataFolder.isDirectory) return Pair("continue", null)
+
+     val matches = metadataFolder.walkTopDown()
+       .filter { it.isFile && it.name == canonicalFilePath }
+       .toList()
+
+     return when (matches.size)
+     {
+       0 -> Pair("continue", null)
+       1 -> Pair("ok", matches[0].path.toString())
+       else -> throw StepExceptionWithoutStackTraceAbandonRun("Duplicate copies of $canonicalFilePath exist.")
+     }
+   }
 
 
     /**************************************************************************/
-    /* Just locate it?  We look here through a series of folders, and attempt
-       to locate the file anywhere under any of them.  The first match is
-       returned.  See locateFile for more details. */
+    val res = PA_Utils.walkUpPaths(getTextRootFolderPath(), getConverterTextBaseFolderPath(), ::folderContainsFile)
 
-    if (canonicalFilePath.lowercase().startsWith("@find") || !File(canonicalFilePath).isAbsolute)
-      return locateFile(canonicalFilePath) ?: if (okIfNotExists) null else throw StepExceptionWithStackTraceAbandonRun("Can't locate file $canonicalFilePath.")
-
-
-
-    /**************************************************************************/
-    /* Fully specified path. */
-
-    return Paths.get(canonicalFilePath).normalize().toString().replace("\\", "/")
+    if ("NOT_FOUND" == res.first && !okIfNotExists)
+      throw StepExceptionWithoutStackTraceAbandonRun("File '$fileName' does not exist.")
+    else
+      return (res.second as String?) ?.replace("\\", "/")
   }
 
 
-  /****************************************************************************/
-  /* Locates a file.  More specifically ...
-
-     We are concerned here only with paths which start @find/ (and we assume
-     that the caller has already determined that the path _does_ start that
-     way).
-
-     The @find/ may be followed either by a file name (@find/myFile.txt) or by
-     a relative path (@find/FolderA/FolderB/myFile.txt).  New modules should
-     use a file name only.  I continue to accept a path hierarchy for
-     backward compatibility, but even if a hierarchy is supplied, only the
-     file name from it is used.
-
-     The processing works as follows:
-
-     - It looks for the _first_ file whose name matches (so if there's more
-       than you'll never know).
-
-     - It looks in various folders in a particular order: a) the root folder
-       for the text; b) the metadata folder for the text; c) folders identified
-       by the stepConfigFolderPaths setting in the StepTextConverterParameters
-       environment variable (if any) -- and these it runs through in the order
-       specified there.
-
-     - It ignores any relative path information in the canonicalFilePath
-       parameter (I continue to accept it, though, for the sake of backward
-       compatibility).  It simply looks for the file in the folder and in
-       any hierarchy below it.
-  */
-
-  private fun locateFile (canonicalFilePath: String): String?
-  {
-    /**************************************************************************/
-    fun getPathsFromEnvironmentVariable (): List<String>
-    {
-      val x = ConfigData["stepConfigFolderPaths"] ?: return listOf()
-      return x.split(",").map(String::trim)
-    }
-
-
-
-    /**************************************************************************/
-    val endOfPath = canonicalFilePath.substring("@find/".length) // Strip off @find/.
-    val fileName = Paths.get(endOfPath).last().toString()
-
-
-
-    /**************************************************************************/
-    val folderPaths = when (ConfigData["stepConfigLimitations"]!!)
-    {
-      "othermetadataonly" -> listOf(getMetadataFolderPath(), getOtherMetadataFolderPath())
-      "notothermetadata"  -> listOf(getMetadataFolderPath()) + getPathsFromEnvironmentVariable()
-      else                -> listOf(getMetadataFolderPath(), getOtherMetadataFolderPath()) + getPathsFromEnvironmentVariable()
-    }
-    for (folderPath in folderPaths)
-    {
-      val res = StepFileUtils.findFiles(folderPath, fileName)
-      if (res.isNotEmpty())
-        return res[0]
-    }
-
-    return null
-  }
-    
-  
   /****************************************************************************/
   /**
    * Returns an input stream either to an "ordinary" file, or else to a file
@@ -270,7 +249,7 @@ object FileLocations: ObjectInterface
   fun getInputStream (filePath: String): Pair<InputStream?, String?>
   {
     /**************************************************************************/
-    val expandedFilePath = getInputPath(filePath)!!
+    val expandedFilePath = getConfigFileInputPath(filePath)!!
 
 
 
@@ -309,10 +288,14 @@ object FileLocations: ObjectInterface
 
 
   /****************************************************************************/
+  fun getConverterTextBaseFolderPath () = ConfigData["stepTextConverterOverallDataRoot"]!!
+
+
+  /****************************************************************************/
   /* Root folder for text. */
 
-  fun getRootFolderName () = m_RootFolderName
-  fun getRootFolderPath () = m_RootFolderPath
+  fun getTextRootFolderName () = m_RootFolderName
+  fun getTextRootFolderPath () = m_RootFolderPath
 
 
   /****************************************************************************/
@@ -325,7 +308,7 @@ object FileLocations: ObjectInterface
   fun getDebugOutputFilePath () = Paths.get(getOutputFolderPath(), "debugLog.txt").toString()
   fun getTemporaryInvestigationsFolderPath() =
     if (null == ConfigData["stepTemporaryInvestigationsFolderPath"])
-      Paths.get(ConfigData["stepTextConverterOverallDataRoot"]!!, "_DebugOutput_").toString()
+      Paths.get(getConverterTextBaseFolderPath(), "_DebugOutput_").toString()
     else
       ConfigData["stepTemporaryInvestigationsFolderPath"]!!
 
@@ -341,15 +324,12 @@ object FileLocations: ObjectInterface
   fun getMetadataFolderName () = "Metadata"
   fun getMetadataFolderPath () = Paths.get(m_RootFolderPath, getMetadataFolderName()).toString()
 
-  fun getOtherMetadataFolderName () = "OtherMetadata"
-  fun getOtherMetadataFolderPath () = Paths.get(m_RootFolderPath, getOtherMetadataFolderName()).toString()
-
   fun getHistoryFileName () = "history.conf"
   private fun getConfigSpreadsheetFileName () = "step.xlsx"
   private fun getConfigTextFileName () = "step.conf"
-  fun getConfigSpreadsheetFilePath () = getInputPath("@find/" + getConfigSpreadsheetFileName(), true)
-  fun getConfigTextFilePath () = getInputPath("@find/" + getConfigTextFileName(), true)
-  fun getExistingHistoryFilePath () = getInputPath("@find/" + getHistoryFileName(), true) // If looking for an existing history file, search for it.
+  fun getConfigSpreadsheetFilePath () = getConfigFileInputPath("@find/" + getConfigSpreadsheetFileName(), true)
+  fun getConfigTextFilePath () = getConfigFileInputPath("@find/" + getConfigTextFileName(), true)
+  fun getExistingHistoryFilePath () = getConfigFileInputPath("@find/" + getHistoryFileName(), true) // If looking for an existing history file, search for it.
   fun getForcedHistoryFilePath () = Paths.get(getMetadataFolderPath(), getHistoryFileName()).toString() // If creating the history file, this is where it goes.
 
 
@@ -357,10 +337,10 @@ object FileLocations: ObjectInterface
   /****************************************************************************/
   /* Input folders. */
 
-  fun getInputImpFolderPath  () = Paths.get(getRootFolderPath(), "InputImp" ).toString()
-  fun getInputOsisFolderPath () = Paths.get(getRootFolderPath(), "InputOsis").toString()
-  fun getInputUsxFolderPath  () = Paths.get(getRootFolderPath(), "InputUsx" ).toString()
-  fun getInputVlFolderPath   () = Paths.get(getRootFolderPath(), "InputVl"  ).toString()
+  fun getInputImpFolderPath  () = Paths.get(getTextRootFolderPath(), "InputImp" ).toString()
+  fun getInputOsisFolderPath () = Paths.get(getTextRootFolderPath(), "InputOsis").toString()
+  fun getInputUsxFolderPath  () = Paths.get(getTextRootFolderPath(), "InputUsx" ).toString()
+  fun getInputVlFolderPath   () = Paths.get(getTextRootFolderPath(), "InputVl"  ).toString()
 
   fun getInputOsisFilePath (): String? // Can be called anything at all, but we cannot have more than one.
   {
@@ -413,7 +393,7 @@ object FileLocations: ObjectInterface
   fun getInternalOsisFolderPath  () = Paths.get(getOutputFolderPath(), "InternalOsis").toString()
   fun getInternalOsisFilePath    () = Paths.get(getInternalOsisFolderPath(), "internalOsis.${getFileExtensionForOsis()}").toString()
 
-  fun getOutputFolderPath      () = Paths.get(getRootFolderPath(), "_Output_" + ConfigData["stepTargetAudience"]!!).toString()
+  fun getOutputFolderPath      () = Paths.get(getTextRootFolderPath(), "_Output_" + ConfigData["stepTargetAudience"]!!).toString()
 
 
 
@@ -444,11 +424,11 @@ object FileLocations: ObjectInterface
   /****************************************************************************/
   /* Used when evaluating alternative schemes. */
 
-  fun getVersificationFilePath () = Paths.get(getRootFolderPath(), "stepRawTextVersification.txt").toString()
+  fun getVersificationFilePath () = Paths.get(getTextRootFolderPath(), "stepRawTextVersification.txt").toString()
 
 
   /****************************************************************************/
-  fun getIssuesFilePath () = locateFile("@find/issues.json") ?: Paths.get(getMetadataFolderPath(), "issues.json").toString() // File recording any problems with the text.
+  fun getIssuesFilePath () = /* $$$ locateFile("@find/issues.json") ?: */ Paths.get(getMetadataFolderPath(), "issues.json").toString() // File recording any problems with the text.
   private fun getTextFeaturesRootFolderPath () = Paths.get(getInternalSwordFolderPath(), "textFeatures").toString()
   private fun getTextFeaturesFolderPath () = makeTextFeaturesFolderPath()
   fun getRunFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "runFeatures.json").toString()
@@ -464,7 +444,7 @@ object FileLocations: ObjectInterface
   fun getCountryCodeInfoFilePath () = "@jarResources/countryNamesToShortenedForm.tsv"
   fun getIsoLanguageCodesFilePath () = "@jarResources/isoLanguageCodes.tsv"
   fun getOsis2modVersificationDetailsFilePath () = "@jarResources/osis2modVersification.txt"
-  fun getVernacularTextDatabaseFilePath () = locateFile("@find/vernacularTranslationsDb.txt")!!
+  fun getVernacularTextDatabaseFilePath () = getConfigFileInputPath("vernacularTranslationsDb.txt")!!
 
 
 

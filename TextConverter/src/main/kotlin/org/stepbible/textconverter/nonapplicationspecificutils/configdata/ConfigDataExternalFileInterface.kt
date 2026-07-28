@@ -1,7 +1,6 @@
 /****************************************************************************/
 package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.forceToSingleLine
 import org.w3c.dom.Document
@@ -93,7 +92,7 @@ open class ConfigDataExternalFileInterfaceXml: ConfigDataExternalFileInterfaceBa
       var x = ConfigData[key] ?: continue
       val selector = key.replace("stepExternal", "").replace("FileName", "").lowercase()
       if (!x.startsWith("@find")) x = "@find/$x"
-      m_Files[selector] = Dom.getDocument(FileLocations.getInputPath(x)!!)
+      m_Files[selector] = Dom.getDocument(FileLocations.getConfigFileInputPath(x)!!)
     }
   }
 

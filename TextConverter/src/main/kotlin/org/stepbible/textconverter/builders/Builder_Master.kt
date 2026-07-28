@@ -51,12 +51,6 @@ object Builder_Master: Builder(), ObjectInterface
 
 
       /***********************************************************************/
-      CommandLineProcessor.CommandLineOption("configFolderPaths", 1, "List of folders to be searched for configuration data, comma-separated.", null, null, false),
-      CommandLineProcessor.CommandLineOption("configLimitations", 1, "Any limitations as to where config information may be taken from.", listOf("OtherMetadataOnly", "NotOtherMetadata", "Anywhere"), "anywhere", false),
-
-
-
-      /***********************************************************************/
       CommandLineProcessor.CommandLineOption("history", 1, "The text to be used for the history record, or the special values FromMetadata or AsPrevious.", null, null, true),
       CommandLineProcessor.CommandLineOption("releaseNumber", 1, "An explicit version number (eg 1.0, 2.1); or + for a dot release, leaving the processing to work out the actual value; or ++ for a whole number release; or = to keep previous number.  The supplied value is overridden and treated as = if historyText is AsPrevious", null, null, true),
 

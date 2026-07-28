@@ -10,6 +10,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.osisonly.Osis_AudienceAndCopyrightSpecificProcessingHandler
 import java.io.File
+import java.io.FileInputStream
 import java.nio.file.Paths
 
 
@@ -102,7 +103,7 @@ object Builder_Module: Builder(), ObjectInterface
     var info = 0
     var warnings = 0
 
-    FileLocations.getInputStream(file.toString()).first!!.bufferedReader().readLines().forEach {
+    FileInputStream(file.toString()).bufferedReader().readLines().forEach {
       if (it.startsWith("You are running osis2mod"))
         ConfigData["calcOsis2modVersion"] = Regex("Rev: (\\S+)").find(it)!!.groups[1]!!.value
 

@@ -1,7 +1,6 @@
 package org.stepbible.textconverter.builders
 
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
-import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigArchiver
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
@@ -12,8 +11,6 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.Zip
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import java.io.File
 import java.nio.file.Paths
-import kotlin.io.path.Path
-import kotlin.io.path.name
 
 
 /******************************************************************************/
@@ -89,7 +86,7 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
     /**************************************************************************/
     Builder_Module.process()
     Rpt.report(level = 0, banner())
-    StepFileUtils.deleteTemporaryFiles(FileLocations.getRootFolderPath())
+    StepFileUtils.deleteTemporaryFiles(FileLocations.getTextRootFolderPath())
 
 
 
@@ -163,12 +160,12 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
         add(ZipSupport.folderFromDisk("InputOsis", inputOsis))
         add(ZipSupport.folderFromDisk(FileLocations.getMetadataFolderName(), FileLocations.getMetadataFolderPath()))
 
-        val configFilesUsedByThisRun = ConfigArchiver.getConfigFilesUsedByThisRun()
-        add(ZipSupport.generatedFolder(FileLocations.getOtherMetadataFolderName()) {
-          configFilesUsedByThisRun.forEach { add(ZipSupport.fileFromDisk(it))}
-          add(ZipSupport.generatedFile(Path(FileLocations.getVernacularTextDatabaseFilePath()).name)
-            { ConfigArchiver.getTranslationTextUsedByThisRun().joinToString("\n") })
-        })
+//        val configFilesUsedByThisRun = ConfigArchiver.getConfigFilesUsedByThisRun()
+//        add(ZipSupport.generatedFolder(FileLocations.getOtherMetadataFolderName()) {
+//          configFilesUsedByThisRun.forEach { add(ZipSupport.fileFromDisk(it))}
+//          add(ZipSupport.generatedFile(Path(FileLocations.getVernacularTextDatabaseFilePath()).name)
+//            { ConfigArchiver.getTranslationTextUsedByThisRun().joinToString("\n") })
+//        })
       })
 
       add(ZipSupport.fileFromDisk(FileLocations.getSwordZipFilePath()))

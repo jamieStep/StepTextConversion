@@ -248,7 +248,7 @@ object VersionAndHistoryHandler: ObjectInterface
       "++" ->
       {
         val x = previousVersion.split(".")
-        "" + (x[0].toInt() + 1) + "." + x[1]
+        "" + (x[0].toInt() + 1) + ".0"
       }
 
       else ->

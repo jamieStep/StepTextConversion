@@ -313,7 +313,7 @@ object Dom: ObjectInterface
 
   /****************************************************************************/
   /**
-  * Clones an enture DOM.
+  * Clones an entire DOM.
   *
   * @param doc DOM to be cloned.
   * @return Cloned doc.
@@ -1229,7 +1229,6 @@ object Dom: ObjectInterface
     fun getAllNodesBelow (startNode: Node): List<Node>
     {
         val res: MutableList<Node> = ArrayList()
-        //if ("#document" != getNodeName(startNode)) res.add(startNode)
         getAllNodesBelow(res, startNode)
         return res
     }
@@ -2024,15 +2023,15 @@ object Dom: ObjectInterface
 
     /****************************************************************************/
     /**
-     * Inserts a list of nodes prior to another node and as siblings of it.
-     *
-     * @param target Node before which new nodes are to be inserted.
-     * @param newNodes List of new nodes.
-     */
+    * Inserts a list of nodes prior to another node and as siblings of it.
+    *
+    * @param target Node before which new nodes are to be inserted.
+    * @param newNodes List of nodes.
+    */
 
-    fun insertNodesBefore(target: Node, newNodes: List<Node>)
+    fun insertNodesBefore (target: Node, newNodes: List<Node>)
     {
-        for (i in newNodes.indices) insertNodeBefore(target, newNodes[i])
+      for (i in newNodes.indices) insertNodeBefore(target, newNodes[i])
     }
 
 

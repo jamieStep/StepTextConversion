@@ -1,0 +1,19 @@
+################################################################################
+#
+# A configuration file for the local server used in conjunction with
+# the AdditionalLookups tool for Bible websites.  This file is optional.
+# If supplied, it provides mappings between the abbreviations for
+# program names etc used by the AdditionalLookups tool and the actual
+# paths for the executable.
+#
+# Lines starting with '#' are ignored, as are blank lines.
+#
+# You can store this file anywhere, under any name, if you are prepared
+# to supply the path details on the command line used to invoke the server.
+#
+# Otherwise, co-locate it with the server and call the file
+# additionalBibleLookupsConfig.txt.
+#
+################################################################################
+
+$GoogleEarth=C:/Program Files/Google/Google Earth Pro/client/googleearth.exe

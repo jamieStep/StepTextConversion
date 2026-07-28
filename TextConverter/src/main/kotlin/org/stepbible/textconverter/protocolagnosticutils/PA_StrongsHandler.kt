@@ -6,6 +6,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.applicationspecificutils.*
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import org.w3c.dom.Node
 import java.util.*
 
@@ -205,7 +206,16 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
 
       return if (strongIsValidish(prefix, strong))
       {
-        strong = prefix + "0".repeat(4 - strong.length) + strong // If too short, prepend leading zeroes.
+        try
+        {
+          strong = prefix + "0".repeat(4 - strong.length) + strong
+        }
+        catch (e:Exception)
+        {
+          throw StepExceptionWithoutStackTraceAbandonRun("Invalid Strongs reference: $attr.")
+        }
+
+        // If too short, prepend leading zeroes.
         strong += suffix
         strong = getCorrection(strong)
         "strong:$strong"

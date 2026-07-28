@@ -14,19 +14,21 @@ import org.jetbrains.dokka.base.DokkaBaseConfiguration
    - In the bar at the extreme right of the IDEA screen, select Gradle (the
      icon is an elephant, I think).
 
-   - Under Build, select JAR.
+   - Under Build, double click JAR.
+
+   - The JAR appears under build/libs.
 */
 
 
 /******************************************************************************/
 // DON'T FORGET TO CHANGE ME !!!
 
-version = "7.0.1"
+version = "7.0.2"
 
 
 /******************************************************************************/
 plugins {
-    kotlin("jvm") version "2.0.20"
+    kotlin("jvm") version "2.1.10"
     id("org.jetbrains.dokka") version "1.9.20"
     kotlin("plugin.serialization") version "1.9.0"
     id("antlr") // antlr.

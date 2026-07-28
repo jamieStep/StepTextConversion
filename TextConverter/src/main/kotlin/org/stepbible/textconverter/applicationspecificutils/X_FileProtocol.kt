@@ -3,6 +3,7 @@ package org.stepbible.textconverter.applicationspecificutils
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
@@ -11,6 +12,7 @@ import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefKey
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceShouldHaveBeenOverridden
+import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithoutStackTraceAbandonRun
 import org.stepbible.textconverter.protocolagnosticutils.PA_MissingVerseHandler
 import org.w3c.dom.Document
 import org.w3c.dom.Node
@@ -310,7 +312,15 @@ open class X_FileProtocol
 
   fun isInherentlyNonCanonicalTag (node: Node): Boolean
   {
-    return 'N' == (m_TagDetails[getExtendedNodeName(node)]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity)
+    //Dbg.d("<chapter osisID='Exod.40' sID='Exod.40'>", Dom.toString(node))
+    try
+    {
+      return 'N' == (m_TagDetails[getExtendedNodeName(node)]?.canonicity ?: m_TagDetails[Dom.getNodeName(node)]!!.canonicity)
+    }
+    catch (e: Exception)
+    {
+      throw StepExceptionWithoutStackTraceAbandonRun("isInherentlyNonCanonicalTag failed: ${Dom.toString(node)}.")
+    }
   }
 
 

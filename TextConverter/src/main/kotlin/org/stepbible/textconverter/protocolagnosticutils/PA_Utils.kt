@@ -7,6 +7,9 @@ import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.*
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
 import org.w3c.dom.Node
+import java.io.File
+import java.nio.file.Path
+import kotlin.io.path.Path
 
 object PA_Utils: ObjectInterface
 {
@@ -183,4 +186,47 @@ object PA_Utils: ObjectInterface
         } // for
       } // forEach
   } // fun
+
+
+  /****************************************************************************/
+  /**
+   * Walks upward from [start] to [end] (inclusive of both), calling [action]
+   * at each path. Stops early if [action] returns false.
+   *
+   * Both start and end must be folder paths.
+   *
+   * The method walks up the folder structure from the bottom to the top.
+   * As it hits each new folder, it calls the 'action' function with that
+   * path.  The action function returns a pair comprising a string which
+   * determines what happens next, and something of type Any which it wishes
+   * to return to the calling environment.  If the string is 'ok' or 'abort',
+   * the method here returns immediately with the value returned by the
+   * action function.  Otherwise the method continues up the tree.  If
+   * the tree is exhausted, the method returns Pair("NOT_FOUND", null.
+   *
+   * @param start The deepest path (must be at or below [end])
+   * @param end The topmost path to stop at.
+   * @param action Called to examine each path.  See discussion above.
+   */
+
+  fun walkUpPaths (start: String, end: String, action: (String) -> Pair<String, Any?>): Pair<String, Any?>
+  {
+    val normalizedEnd = Path(end).toAbsolutePath().normalize()
+    var current: Path? = Path(start).toAbsolutePath().normalize()
+
+    while (current != null)
+    {
+      val res = action(current.toString())
+      when (res.first.lowercase())
+      {
+         "ok", "abort" -> return res
+      }
+
+      if (current == normalizedEnd) break
+
+      current = current.parent
+    }
+
+    return Pair("NOT_FOUND", null)
+  }
 } // PA_Utils

@@ -255,10 +255,7 @@ object CommandLineProcessor: ObjectInterface
 
     fun processCommandLineOptionsEarly ()
     {
-      listOf("configLimitations").forEach { parm ->
-       val value = getOptionValue(parm)!!
-       ConfigData.put(generateConfigDataName(parm), value.lowercase(), true)
-       }
+       // Nothing to do here at present.
      }
 
 

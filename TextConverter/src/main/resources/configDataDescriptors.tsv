@@ -167,7 +167,6 @@ stepManualOsis2mod
 
 #! Command line.  (On the command line, all of these have names devoid of 'step'.  'step' is added when the parameters are stored in the config data structure internally.
 stepCheckInputsAgainstPreviousModule
-stepConfigLimitations
 stepEvaluateSchemesOnly
 stepHistory
 stepReleaseNumber
@@ -177,7 +176,6 @@ stepVersion
 stepTargetAudience
 
 #! Environment variable: things which, if supplied at all, would normally be placed in the stepTextConverterParameters environment variable.  Other things _can_ go here too; and some of the things listed here _could_ go elsewhere.
-stepConfigFolderPaths
 stepTemporaryInvestigationsFolderPath
 stepTextConverterOverallDataRoot
 

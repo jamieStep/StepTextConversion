@@ -48,7 +48,6 @@ class MainProcessor
     try
     {
       ConfigData.commandLineWas(args)
-
       Builder_Master.process(args)
       Logger.summariseResults()
 
