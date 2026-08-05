@@ -8,6 +8,7 @@ import org.reflections.scanners.Scanners
 import org.reflections.util.ClasspathHelper
 import org.reflections.util.ConfigurationBuilder
 import org.stepbible.textconverter.MainProcessor
+import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepStringUtils.quotifyIfContainsSpaces
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefBase
@@ -332,7 +333,7 @@ object MiscellaneousUtils: ObjectInterface
   fun initialiseAllObjectsBasedOnObjectInterfaceInheritance ()
   {
     val packageName = getPackageName(MainProcessor::class)
-    val objects = getSubtypes(ObjectInterface::class.java, packageName)
+    val objects = getSubtypes(ObjectInterface::class.java, packageName).filter { it.kotlin.objectInstance != null }
     objects.forEach {
       it.getField("INSTANCE").get(null)
     }

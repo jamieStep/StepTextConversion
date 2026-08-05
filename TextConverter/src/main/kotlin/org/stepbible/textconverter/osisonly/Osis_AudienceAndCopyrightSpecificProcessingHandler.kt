@@ -138,28 +138,14 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
 
 
     /**************************************************************************/
-    val isCopyrightText: Boolean
-    when (if (null == ConfigData["stepIsCopyrightText"]) null else ConfigData.getAsBoolean("stepIsCopyrightText"))
-    {
-      true ->
-      {
-        if ("public" == targetAudience)
-          throw StepExceptionWithoutStackTraceAbandonRun("Target audience cannot be Public if the text is marked as being copyright.")
-        isCopyrightText = true
-      }
-      
-      false ->
-        isCopyrightText = false // If the text isn't copyright, there's no need to check if we're doing a public or STEP build: either is possible.
-        
-      null ->
-      {
-        if ("public" == targetAudience)
-          throw StepExceptionWithoutStackTraceAbandonRun("If target audience is Public you must overtly set stepIsCopyrightText to confirm this is not a copyright text.")
-        isCopyrightText = false // Assume we have a non-copyright text if we're creating a public module.
-      }  
-    }
+    if (null == ConfigData["stepIsCopyrightText"])
+      throw StepExceptionWithoutStackTraceAbandonRun("You must set stepIsCopyrightText.")
 
-    ConfigData.deleteAndPut("stepIsCopyrightText", if (isCopyrightText) "yes" else "no", force = true) // Public texts can't be copyright, and vice-versa.
+    val isCopyrightText = ConfigData.getAsBoolean("stepIsCopyrightText")
+
+    if (isCopyrightText && "public" == targetAudience)
+      throw StepExceptionWithoutStackTraceAbandonRun("Target audience cannot be Public if the text is marked as being copyright.")
+
 
 
 
@@ -219,14 +205,14 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
    /* Report what we're doing. */
 
    val okToGenerateFootnotes = ConfigData.getAsBoolean("stepIsOkToAddFootnotes")
-   val calcSoftwareVersionRequired = ConfigData["calcSoftwareVersionRequired"]
+   val stepSoftwareVersionRequired = ConfigData["stepSoftwareVersionRequired"]
    val versificationScheme = ConfigData["stepVersificationScheme"]
    Logger.info("Treating this as a ${if (isCopyrightText) "copyright" else "non-copyright"} text.")
    Logger.info("Generation of our own footnotes is${if (!okToGenerateFootnotes) " NOT" else ""} permitted.")
    Logger.info("Versification scheme is ${versificationScheme ?: "STEP-internal"}.")
    Logger.info("ReversificationType is $reversificationType.")
    Logger.info("Target audience is $targetAudience.")
-   Logger.info("Version of STEP runtime software required is $calcSoftwareVersionRequired.")
+   Logger.info("Version of STEP runtime software required is $stepSoftwareVersionRequired.")
   }
 
 
@@ -321,7 +307,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
    private fun setNoReversificationActionRequired ()
    {
      ConfigData.deleteAndPut("calcReversificationType", "none", force = true)
-     ConfigData.deleteAndPut("calcSoftwareVersionRequired", 1.toString(), force=true)
+     ConfigData.deleteAndPut("stepSoftwareVersionRequired", 1.toString(), force=true)
      m_ReversificationHandler = null
    }
 
@@ -344,7 +330,7 @@ object Osis_AudienceAndCopyrightSpecificProcessingHandler: ObjectInterface
   {
     ConfigData.deleteAndPut("calcReversificationType", "runtime", force = true)
     ConfigData.deleteAndPut("stepTargetAudience", "step", false)
-    ConfigData.deleteAndPut("calcSoftwareVersionRequired", 2.toString(), force=true)
+    ConfigData.deleteAndPut("stepSoftwareVersionRequired", 2.toString(), force=true)
     ConfigData.deleteAndPut("stepVersificationScheme", ConfigData["calcModuleName"]!!.lowercase(), true) // Force to our own name for the versification scheme.
     m_ReversificationHandler = PA_ReversificationHandler
   }

@@ -313,8 +313,21 @@ import java.util.*
        habit of enclosing _all_ footnotes in note:f, whereas really cross-
        references should be in note:x. */
 
-    if ("Biblica".equals(ConfigData["stepStandardOwnerOrganisation"], ignoreCase = true))
-      canonicaliseNotesCorrectNoteStyles(rootNode)
+    val ourNameForTextSupplier = ConfigData["stepOurInternalIdentifierForTextOwner"]
+    if (null != ourNameForTextSupplier)
+    {
+      try
+      {
+        val method = this::class.java.getMethod("correctNotes_$ourNameForTextSupplier", Node::class.java)
+        method.invoke(this, rootNode) as String
+      }
+      catch (e: NoSuchMethodException)
+      {
+        null
+      }
+
+      correctNotes_Biblica(rootNode)
+    }
 
 
 
@@ -573,7 +586,13 @@ import java.util.*
   /****************************************************************************/
 
   /****************************************************************************/
-  /* This code shouldn't exist.  It's here only because Biblica don't tend to
+  /*
+     DON'T DELETE!!! * DON'T DELETE!!! * DON'T DELETE!!! * DON'T DELETE!!!
+
+     This function is called by assembling its name from a string.  It _is_
+     therefore used, even though IDEA gives the impression it is not.
+
+     This code shouldn't exist.  It's here only because Biblica don't tend to
      use note:x even for cross-references.  Sadly to make sense of all this
      I'm going to have to go into some detail.
 
@@ -615,14 +634,19 @@ import java.util.*
      different behaviours in STEP.  References within note:x are displayed
      rather like tool-tips when you hover the mouse over them, and then clicking
      on the verse reference within the tool-tip brings up a pop-up window
-     containing the target text. */
+     containing the target text.
 
-  private fun canonicaliseNotesCorrectNoteStyles (rootNode: Node)
+     DON'T DELETE!!! * DON'T DELETE!!! * DON'T DELETE!!! * DON'T DELETE!!!
+
+     This function is called by assembling its name from a string.  It _is_
+     therefore used, even though IDEA gives the impression it is not.
+  */
+
+  private fun correctNotes_Biblica (rootNode: Node)
   {
     val C_NoOfCanonicalWordsWhichMeansThisIsANoteF = 6
     rootNode.findNodesByAttributeValue("note", "style", "f").forEach { noteNode -> // We look only at note:f.
-      if (null != noteNode.findNodeByName("ref", false)) /* &&
-          null == Dom.findNodeByAttributeValue(noteNode, "char", "style", "fqa"))*/ // Nothing to do unless the note tag contains the right flavours of node, and does not contain the wrong ones.
+      if (null != noteNode.findNodeByName("ref", false)) // Nothing to do unless the note tag contains the right flavours of node, and does not contain the wrong ones.
       {
         val charNodes = noteNode.findNodesByName("char", false)
         val canonicalText = charNodes.joinToString(" ") { Dom.getCanonicalTextContentToAnyDepth(it) }

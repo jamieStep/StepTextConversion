@@ -3,6 +3,7 @@ package org.stepbible.textconverter
 
 import org.stepbible.textconverter.applicationspecificutils.ThrowAwayCode
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNames
+import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 
 
@@ -30,7 +31,6 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 
 fun main (args: Array<String>)
 {
-  BibleBookNames.init()
-  //Dbg.setBooksToBeProcessed("Ezr")
+  Dbg.setBooksToBeProcessed("Ezr")
   MainProcessor().process(args)
 }

@@ -249,18 +249,6 @@ object CommandLineProcessor: ObjectInterface
 
     /****************************************************************************/
     /**
-    * Processes options which have to be read early because, for instance, they
-    * control the config processing.
-    */
-
-    fun processCommandLineOptionsEarly ()
-    {
-       // Nothing to do here at present.
-     }
-
-
-    /****************************************************************************/
-    /**
     * Does what it says on the tin.
     */
 

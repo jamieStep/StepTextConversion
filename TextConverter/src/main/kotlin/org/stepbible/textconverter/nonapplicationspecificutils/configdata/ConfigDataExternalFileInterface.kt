@@ -91,7 +91,6 @@ open class ConfigDataExternalFileInterfaceXml: ConfigDataExternalFileInterfaceBa
     {
       var x = ConfigData[key] ?: continue
       val selector = key.replace("stepExternal", "").replace("FileName", "").lowercase()
-      if (!x.startsWith("@find")) x = "@find/$x"
       m_Files[selector] = Dom.getDocument(FileLocations.getConfigFileInputPath(x)!!)
     }
   }
@@ -104,13 +103,24 @@ open class ConfigDataExternalFileInterfaceXml: ConfigDataExternalFileInterfaceBa
 
   override fun getValue (selector: String, vararg parms: String): String?
   {
-    /************************************************************************/
-    /* Check if we're getting an attribute. */
+    for (p in parms)
+    {
+      val res = getValue(selector, p)
+      if (null != res)
+        return res
+    }
 
+    return null
+  }
+
+
+  /****************************************************************************/
+  private fun getValue (selector: String, parm: String): String?
+  {
     var attribute: String? = null
-    var xpath = parms[0]
+    var xpath = parm
 
-    if ("/@" in xpath)
+    if ("/@" in xpath) // Getting an attribute?
     {
       val x = xpath.split("/@")
       xpath = x[0]
@@ -137,7 +147,7 @@ open class ConfigDataExternalFileInterfaceXml: ConfigDataExternalFileInterfaceBa
     return if (null == attribute)
       forceToSingleLine(Dom.getNodeContentAsString(node, false))!!
     else
-      return Dom.getAttribute(node, attribute)
+      Dom.getAttribute(node, attribute)
   }
 
 
@@ -165,7 +175,14 @@ open class ConfigDataExternalFileInterfaceXml: ConfigDataExternalFileInterfaceBa
 /******************************************************************************/
 /******************************************************************************/
 
-object ConfigDataExternalFileInterfaceDbl: ConfigDataExternalFileInterfaceXml(), ObjectInterface
+/******************************************************************************/
+/*
+  DON'T DELETE!!! * DON'T DELETE!!! * DON'T DELETE!!! * DON'T DELETE!!!
+
+  This class is loaded using its string name.  It is therefore required, even
+  though IDEA gives the impression it is not used. */
+
+class ConfigDataExternalFileInterfaceDBL: ConfigDataExternalFileInterfaceXml(), ObjectInterface
 {
   override fun initialise()
   {

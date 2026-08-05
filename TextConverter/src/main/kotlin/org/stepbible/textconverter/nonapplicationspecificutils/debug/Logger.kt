@@ -22,8 +22,7 @@ import kotlin.io.path.Path
 
 
 /*******************************************************************************/
-object Logger: ObjectInterface
-{
+object Logger: ObjectInterface {
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -38,82 +37,85 @@ object Logger: ObjectInterface
    * 
    * @return Number of errors.
    */
-  
-  fun getNumberOfErrors () = m_Errors!!.size
-  
-  
+
+  fun getNumberOfErrors() = m_Errors!!.size
+
+
   /****************************************************************************/
   /**
    * Returns a count of the number of information messages.
    * 
    * @return Number of information messages.
    */
-  
-  fun getNumberOfInformations () = m_Info!!.size
-  
-  
+
+  fun getNumberOfInformations() = m_Info!!.size
+
+
   /****************************************************************************/
   /**
    * Returns a count of the number of warnings.
    * 
    * @return Number of warnings.
    */
-  
-  fun getNumberOfWarnings () = m_Warnings!!.size
-  
-  
+
+  fun getNumberOfWarnings() = m_Warnings!!.size
+
+
   /****************************************************************************/
   /**
    * Sets the file path for logging.  If the parameter is null, output goes
-   * to System.out.
-   * 
-   * @param logFilePath Full pathname for log file.
+   * to System.out.  (With the rest of the code as it stands at the time of
+   * writing, it never *will* be null.)
    */
-  
-  @Synchronized fun setLogFile (logFilePath: String)
-  {
-    m_Outputter = FileLogger
+
+  @Synchronized
+  private fun setLogFile(): LoggerBase {
+    val logFilePath = FileLocations.getConverterLogFilePath()
     FileLogger.setLogFilePath(logFilePath)
+    return FileLogger
   }
-  
-  
+
+
   /****************************************************************************/
   /**
    * Announces any accumulated errors, warnings or info messages.
    * 
    * @param throwException If true, throws an exception if any errors have been recorded.
    */
-  
-  @Synchronized fun announceAll (throwException: Boolean)
-  {
+
+  @Synchronized
+  fun announceAll(throwException: Boolean) {
     val n = m_Errors!!.size
-    announce(m_Errors!!,   "Error"      ); if (FileLogger === m_Outputter) m_Errors!!.clear() // Don't want to report things more than once.
-    announce(m_Warnings!!, "Warning"    ); if (FileLogger === m_Outputter) m_Warnings!!.clear()
-    announce(m_Info!!,     "Information"); if (FileLogger === m_Outputter) m_Info!!.clear()
+    announce(
+      m_Errors!!,
+      "Error"
+    ); if (FileLogger === m_Outputter) m_Errors!!.clear() // Don't want to report things more than once.
+    announce(m_Warnings!!, "Warning"); if (FileLogger === m_Outputter) m_Warnings!!.clear()
+    announce(m_Info!!, "Information"); if (FileLogger === m_Outputter) m_Info!!.clear()
 
     announceSpecial(); if (FileLogger === m_Outputter) m_SpecialMessages.clear()
 
     if (throwException && 0 != n)
       throw StepExceptionWithoutStackTraceBase("Abandoning processing -- errors detected.  See converterLog.txt.")
   }
-  
-  
+
+
   /****************************************************************************/
   /**
    * Announces any accumulated errors, warnings or info messages and then
    * terminates the run.  I assume we want to do this only if we have had
    * some errors.
    */
-  
-  @Synchronized fun announceAllAndTerminateImmediatelyIfErrors ()
-  {
+
+  @Synchronized
+  fun announceAllAndTerminateImmediatelyIfErrors() {
     if (0 == m_ErrorCount) return
     System.err.println("\nFatal errors.  Terminating immediately.  See converterLog.txt and previous program output.")
     announceAll(false)
     throw StepExceptionSilentAbandonRunBecauseErrorsRecordedInLog()
   }
 
-  
+
   /****************************************************************************/
   /**
    * Writes a log file containing details of any errors etc, but leaves the
@@ -124,8 +126,8 @@ object Logger: ObjectInterface
    * nothing.
    */
 
-  @Synchronized fun announceAllForRepositoryPackage ()
-  {
+  @Synchronized
+  fun announceAllForRepositoryPackage() {
     StringLogger.close()
   }
 
@@ -137,11 +139,11 @@ object Logger: ObjectInterface
    * @param text Text to report.
    */
 
-  @Synchronized fun error (text: String)
-  {
+  @Synchronized
+  fun error(text: String) {
     error(-1, text)
   }
-  
+
 
   /****************************************************************************/
   /**
@@ -152,12 +154,12 @@ object Logger: ObjectInterface
    * @param text Text to report.
    */
 
-  @Synchronized fun error (refKey: Long, text: String)
-  {
+  @Synchronized
+  fun error(refKey: Long, text: String) {
     ++m_ErrorCount
     addMessage(m_Errors, refKey, text)
   }
-  
+
 
   /****************************************************************************/
   /**
@@ -166,11 +168,11 @@ object Logger: ObjectInterface
    * @param text  Text to report.
    */
 
-  @Synchronized fun info (text: String)
-  {
+  @Synchronized
+  fun info(text: String) {
     info(0, text)
   }
-  
+
 
   /****************************************************************************/
   /**
@@ -181,23 +183,23 @@ object Logger: ObjectInterface
    * @param text Text to report.
    */
 
-  @Synchronized fun info (refKey: Long, text: String)
-  {
+  @Synchronized
+  fun info(refKey: Long, text: String) {
     if (!text.contains("SUCCESS")) ++m_InfoCount
     addMessage(m_Info, refKey, text)
   }
-  
+
 
   /****************************************************************************/
   /**
-  * Records details of a 'special' message.  Special messages come out at the
-  * end of the log output.
-  *
-  * @param text
-  */
+   * Records details of a 'special' message.  Special messages come out at the
+   * end of the log output.
+   *
+   * @param text
+   */
 
-  @Synchronized fun specialMessage (text: String)
-  {
+  @Synchronized
+  fun specialMessage(text: String) {
     m_SpecialMessages.add(text.replace("\n\n", "\n"))
   }
 
@@ -206,21 +208,21 @@ object Logger: ObjectInterface
   /**
    * Summarises the present messages to the Dbg stream.
    */
-  
-  @Synchronized fun summariseResults ()
-  {
+
+  @Synchronized
+  fun summariseResults() {
     val logFilePath = if (ScreenLogger === m_Outputter) "" else "  For details, see ${FileLogger.getLogFilePath()}."
     val s = when {
-        m_ErrorCount   > 0 -> "Errors have been reported.$logFilePath"
-        m_WarningCount > 0 -> "Warnings have been reported.$logFilePath"
-        m_InfoCount    > 0 -> "Information messages have been reported.$logFilePath"
-        else               -> "No processing messages have been issued."
+      m_ErrorCount > 0 -> "Errors have been reported.$logFilePath"
+      m_WarningCount > 0 -> "Warnings have been reported.$logFilePath"
+      m_InfoCount > 0 -> "Information messages have been reported.$logFilePath"
+      else -> "No processing messages have been issued."
     }
-    
+
     Rpt.report(level = 1, s)
   }
-  
-  
+
+
   /****************************************************************************/
   /**
    * Records a warning.
@@ -228,12 +230,12 @@ object Logger: ObjectInterface
    * @param text Text of message.
    */
 
-  @Synchronized fun warning (text: String)
-  {
+  @Synchronized
+  fun warning(text: String) {
     warning(0, text)
   }
 
-  
+
   /****************************************************************************/
   /**
    * Records a warning.
@@ -243,17 +245,13 @@ object Logger: ObjectInterface
    * @param text Text to report.
    */
 
-  @Synchronized fun warning (refKey: Long, text: String)
-  {
-    //Dbg.dCont(text, "Verse mismatch")
+  @Synchronized
+  fun warning(refKey: Long, text: String) {
     ++m_WarningCount
     addMessage(m_Warnings, refKey, text)
   }
-  
 
-  
 
-  
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -263,21 +261,20 @@ object Logger: ObjectInterface
   /****************************************************************************/
 
   /****************************************************************************/
-  private fun addMessage (messageContainer: MutableMap<RefKey, MutableList<String>>?, refKey: Long, text: String)
-  {
+  private fun addMessage(messageContainer: MutableMap<RefKey, MutableList<String>>?, refKey: Long, text: String) {
     if (null == messageContainer) return
     var me: MutableList<String>? = messageContainer[refKey]
-    if (null == me) { me = mutableListOf(); messageContainer[refKey] = me }
+    if (null == me) {
+      me = mutableListOf(); messageContainer[refKey] = me
+    }
     me.add(text)
   }
-  
-  
+
+
   /****************************************************************************/
-  private fun announce (messageContainer: Map<RefKey, MutableList<String>>, msgType: String)
-  {
+  private fun announce(messageContainer: Map<RefKey, MutableList<String>>, msgType: String) {
     /**************************************************************************/
-    fun generateOutput (refKey: RefKey, texts: List<String>)
-    {
+    fun generateOutput(refKey: RefKey, texts: List<String>) {
       var refPart = ""; if (refKey > 0L) refPart = Ref.rd(refKey).toString() + ": "
       val prefix = "$msgType: $refPart"
       texts.forEach {
@@ -291,13 +288,12 @@ object Logger: ObjectInterface
 
     val sortedMessages: SortedMap<RefKey, List<String>> = TreeMap()
     messageContainer.keys.forEach { sortedMessages[it] = messageContainer[it]!!.distinct() }
-    sortedMessages.keys.forEach { generateOutput(it, sortedMessages[it]!!)}
+    sortedMessages.keys.forEach { generateOutput(it, sortedMessages[it]!!) }
   }
-  
-  
+
+
   /****************************************************************************/
-  private fun announceSpecial ()
-  {
+  private fun announceSpecial() {
     m_SpecialMessages.forEach { output(it) }
     output("\n")
   }
@@ -306,24 +302,24 @@ object Logger: ObjectInterface
   /****************************************************************************/
   /* Sends output to the current outputter. */
 
-  private fun output (text: String)
-  {
+  private fun output(text: String) {
     m_Outputter.output(text)
   }
 
 
-
   /********************************************************************************************************************/
-  private var m_Errors  : MutableMap<RefKey, MutableList<String>>? = mutableMapOf()
-  private var m_Info    : MutableMap<RefKey, MutableList<String>>? = mutableMapOf()
+  private var m_Errors: MutableMap<RefKey, MutableList<String>>? = mutableMapOf()
+  private var m_Info: MutableMap<RefKey, MutableList<String>>? = mutableMapOf()
   private var m_Warnings: MutableMap<RefKey, MutableList<String>>? = mutableMapOf()
   private val m_SpecialMessages: MutableList<String> = mutableListOf()
-  
-  private var m_ErrorCount   = 0
-  private var m_InfoCount    = 0
+
+  private var m_ErrorCount = 0
+  private var m_InfoCount = 0
   private var m_WarningCount = 0
 
-  private var m_Outputter: LoggerBase = ScreenLogger
+  private val m_Outputter: LoggerBase by lazy {
+    setLogFile()
+  }
 }
 
 
@@ -336,6 +332,39 @@ abstract class LoggerBase
   open fun close () {}
   abstract fun output (text: String)
   open fun setLogFilePath (logFilePath: String) {}
+
+
+  /****************************************************************************/
+  protected fun sortLines (lines: MutableList<String>)
+  {
+    val errors: MutableList<String> = ArrayList()
+    val informations: MutableList<String> = ArrayList()
+    val warnings: MutableList<String> = ArrayList()
+    val others: MutableList<String> = ArrayList()
+
+    fun partition (line: String) {
+      if (line.startsWith("Info"))
+        informations.add(line)
+      else if (line.startsWith("Warn"))
+        warnings.add(line)
+      else if (line.startsWith("Error"))
+        errors.add(line)
+      else if (line.trim().isNotEmpty())
+        others.add("$line<nl>")
+    }
+
+    lines.forEach(::partition)
+
+
+
+    /**************************************************************************/
+    lines.clear()
+    lines.addAll(others) // Make sure the file prefix is retained at the top of the file.  (I'm not actually expecting 'others' to contain more than just this one line.)
+    lines.addAll(errors)
+    lines.addAll(warnings)
+    lines.addAll(informations)
+    lines.add("")
+  }
 }
 
 
@@ -358,7 +387,7 @@ object FileLogger: LoggerBase(), ObjectInterface
 
   @Synchronized override fun close ()
   {
-    sortLines()
+    sortLines(m_Lines)
     StepFileUtils.createFolderStructure(Path(m_LogFilePath!!).parent.toString())
     File(m_LogFilePath!!).writeText(m_Lines.joinToString(separator = "\n"){ it.replace("<nl>", "\n") })
   }
@@ -394,39 +423,6 @@ object FileLogger: LoggerBase(), ObjectInterface
   */
 
   @Synchronized override fun setLogFilePath (logFilePath: String) { m_LogFilePath = logFilePath }
-
-
-  /****************************************************************************/
-  private fun sortLines ()
-  {
-    val errors: MutableList<String> = ArrayList()
-    val informations: MutableList<String> = ArrayList()
-    val warnings: MutableList<String> = ArrayList()
-    val others: MutableList<String> = ArrayList()
-
-    fun partition (line: String) {
-      if (line.startsWith("Info"))
-        informations.add(line)
-      else if (line.startsWith("Warn"))
-        warnings.add(line)
-      else if (line.startsWith("Error"))
-        errors.add(line)
-      else if (line.trim().isNotEmpty())
-        others.add("$line<nl>")
-    }
-
-    m_Lines.forEach(::partition)
-
-
-
-    /**************************************************************************/
-    m_Lines.clear()
-    m_Lines.addAll(others) // Make sure the file prefix is retained at the top of the file.  (I'm not actually expecting 'others' to contain more than just this one line.
-    m_Lines.addAll(errors)
-    m_Lines.addAll(warnings)
-    m_Lines.addAll(informations)
-    m_Lines.add("")
-  }
 
 
   /****************************************************************************/
@@ -467,37 +463,5 @@ object StringLogger: LoggerBase(), ObjectInterface
     StepFileUtils.createFolderStructure(Path(logFilePath).parent.toString())
     sortLines(lines)
     File(logFilePath).writeText(lines.joinToString(separator = "\n"){ it.replace("<nl>", "\n") })
-  }
-
-  /****************************************************************************/
-  private fun sortLines (lines: MutableList<String>)
-  {
-    val errors: MutableList<String> = ArrayList()
-    val informations: MutableList<String> = ArrayList()
-    val warnings: MutableList<String> = ArrayList()
-    val others: MutableList<String> = ArrayList()
-
-    fun partition (line: String) {
-      if (line.startsWith("Info"))
-        informations.add(line)
-      else if (line.startsWith("Warn"))
-        warnings.add(line)
-      else if (line.startsWith("Error"))
-        errors.add(line)
-      else if (line.trim().isNotEmpty())
-        others.add("$line<nl>")
-    }
-
-    lines.forEach(::partition)
-
-
-
-    /**************************************************************************/
-    lines.clear()
-    lines.addAll(others) // Make sure the file prefix is retained at the top of the file.  (I'm not actually expecting 'others' to contain more than just this one line.
-    lines.addAll(errors)
-    lines.addAll(warnings)
-    lines.addAll(informations)
-    lines.add("")
   }
 }

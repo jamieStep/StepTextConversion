@@ -117,7 +117,7 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
        need this, and if I leave it there it will end up in the repository
        package where it will take up space and confuse things. */
 
-    StepFileUtils.deleteFolder(Paths.get(FileLocations.getMetadataFolderPath(), "Miscellaneous").toString())
+    StepFileUtils.deleteFolder(Paths.get(FileLocations.getTextMetadataFolderPath(), "Miscellaneous").toString())
 
 
 
@@ -158,7 +158,7 @@ object Builder_RepositoryPackage: Builder(), ObjectInterface
         if (null != inputUsx) add(ZipSupport.folderFromDisk("InputUsx", inputUsx))
         if (null != inputVl)  add(ZipSupport.folderFromDisk("InputVl", inputVl))
         add(ZipSupport.folderFromDisk("InputOsis", inputOsis))
-        add(ZipSupport.folderFromDisk(FileLocations.getMetadataFolderName(), FileLocations.getMetadataFolderPath()))
+        add(ZipSupport.folderFromDisk(FileLocations.getTextMetadataFolderName(), FileLocations.getTextMetadataFolderPath()))
 
 //        val configFilesUsedByThisRun = ConfigArchiver.getConfigFilesUsedByThisRun()
 //        add(ZipSupport.generatedFolder(FileLocations.getOtherMetadataFolderName()) {

@@ -157,7 +157,7 @@ object VersionAndHistoryHandler: ObjectInterface
     data.add("#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     data.add("")
 
-    data                            .forEach { writer.appendLine(it.toString()) }
+    data                            .forEach { writer.appendLine(it) }
     m_HistoryLinesForThisAudience   .forEach { writer.appendLine(it.toString()) }
     m_HistoryLinesNotForThisAudience.forEach { writer.appendLine(it.toString()) }
     writer.close()

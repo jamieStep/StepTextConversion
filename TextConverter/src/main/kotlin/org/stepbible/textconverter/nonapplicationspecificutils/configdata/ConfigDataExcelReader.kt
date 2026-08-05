@@ -1,5 +1,6 @@
 package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 
+import org.apache.poi.ss.usermodel.DataFormatter
 import org.apache.poi.xssf.usermodel.XSSFWorkbook
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
@@ -31,9 +32,10 @@ object ConfigDataExcelReader: ObjectInterface
    * @return A collection of lines, or null.
    */
 
-  fun process (): Pair<String, List<String>>
+  fun process (): Pair<Float, List<String>>
   {
     /***************************************************************************/
+    val formatter = DataFormatter()
     val filePath = FileLocations.getConfigSpreadsheetFilePath()!!
 
 
@@ -58,7 +60,7 @@ object ConfigDataExcelReader: ObjectInterface
         val x = row.getCell(0)?.toString()?.trim() ?: ""
         if (x.startsWith("Template version"))
         {
-          templateVersion = x.replaceFirst("Templated version ", "").trim()
+          templateVersion = x.replaceFirst("Template version ", "").trim()
           continue
         }
       }
@@ -69,7 +71,7 @@ object ConfigDataExcelReader: ObjectInterface
       val parameterName = row.getCell(C_ParameterName_Col).toString().trim()
       if (parameterName.isNotEmpty())
       {
-        val value = row.getCell(C_Value_Col).toString().trim()
+        val value = formatter.formatCellValue(row.getCell(C_Value_Col)).trim()
         if (value.isNotEmpty()) lines.add(parameterName + value)
       }
     }
@@ -77,6 +79,6 @@ object ConfigDataExcelReader: ObjectInterface
     workbook.close()
     fis.close()
 
-    return Pair(templateVersion, lines)
+    return Pair(templateVersion.toFloat(), lines)
   }
 }

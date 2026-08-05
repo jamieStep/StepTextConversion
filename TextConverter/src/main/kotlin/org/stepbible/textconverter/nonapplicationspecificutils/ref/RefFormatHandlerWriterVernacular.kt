@@ -215,6 +215,9 @@ object RefFormatHandlerWriterVernacular: RefFormatHandlerWriterBase(), ObjectInt
      null, bcvs is assumed.  b may be replaced by one of b-, b= or b+.  And
      any one of the characters may be in upper case ...
 
+     ('e' is the more recent equivalent for 'a' -- 'e' for 'explicit'.  Treat
+     any references to 'a' here as convering both.)
+
      The easy option is 'a' (for 'as-is').  In this case, we simply write out
      the supplied reference based upon elements which were overtly supplied at
      the time it was read (as opposed to elements which may have been
@@ -233,7 +236,7 @@ object RefFormatHandlerWriterVernacular: RefFormatHandlerWriterBase(), ObjectInt
      saying that you are happy to have the book and verse if appropriate, that
      you _must_ have the chapter, and that you don't want the subverse.
 
-     Incidentally, b-, b= and c+ respectively force the output to give the
+     Incidentally, b-, b= and b+ respectively force the output to give the
      abbreviated, sort or long form of the book name if available.  (If no
      details of the requested type of name were provided, the processing
      will do its best with what's available.)  'b' on its own means to use
@@ -385,16 +388,21 @@ object RefFormatHandlerWriterVernacular: RefFormatHandlerWriterBase(), ObjectInt
      bcvs.  The first part of the resulting string is used to format the first
      element of the thing being output, and the second for everything else.
 
-     There is one further wrinkle: if the format string contains 'a', it is
+     There is one further wrinkle: if the format string contains 'e', it is
      taken as implying that the output should contain whatever elements
      were explicitly fed into the input (as opposed to any which were defaulted
      from context).
+
+     And the same thing happens with 'a' -- originally that was the purpose of
+     'a', and I've contined supporting it for the sake of backward compatibility,
+     although 'e' (for 'explicit') now seems slightly more obvious.
   */
 
   private fun makeFormatString (requested: String?, ref: Ref): List<String>
   {
-    var x = if (requested.isNullOrEmpty()) "bcvs" else if (requested.contains("a")) requested.replace("a", ref.getExplicitElementSelectors()) else requested
-    var myFormat = x ?: "bcvs"
+    var myFormat = if (requested.isNullOrEmpty()) "bcvs" else requested
+    if (myFormat.contains("a")) myFormat = myFormat.replace("a", ref.getExplicitElementSelectors())
+    if (myFormat.contains("e")) myFormat = myFormat.replace("e", ref.getExplicitElementSelectors())
     if (!myFormat.contains("-")) myFormat += "-bcvs"
     return myFormat.split("-")
   }

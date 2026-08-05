@@ -2,16 +2,13 @@ package org.stepbible.textconverter.builders
 
 import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
-import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigDataSupport
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.FileLocations
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.RefCollection
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
-import java.io.File
-import java.nio.file.Paths
+
 
 /******************************************************************************/
 /**
@@ -157,31 +154,12 @@ object Builder_Master: Builder(), ObjectInterface
   /****************************************************************************/
   private fun doIt (args: Array<String>)
   {
-    val argsWithEnvironmentVariablesExpanded = args.map { expandEnvironmentVariable(it) } .toTypedArray()
     getCommandLineOptions()
-    if (!CommandLineProcessor.parse(argsWithEnvironmentVariablesExpanded)) return
-
-
-
-    /**************************************************************************/
-    handleConfigurationData()
+    if (!CommandLineProcessor.parse(args)) return
+    ConfigData.load()
     checkIfRunIsForSelectedBooksOnly()
     runProcess()
   }
-
-
-    /**************************************************************************/
-    /* Expands %...% on the assumption that these represent references to
-       environment variables. */
-
-    private fun expandEnvironmentVariable (s: String): String
-    {
-      val regex = Regex("%([^%]+)%")
-      return regex.replace(s) { matchResult ->
-          val varName = matchResult.groupValues[1]
-        System.getenv(varName) ?: matchResult.value
-      }
-    }
 
 
   /****************************************************************************/
@@ -202,6 +180,7 @@ object Builder_Master: Builder(), ObjectInterface
     deleteLogFilesEtc()
     StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
     StepFileUtils.createFolderStructure(FileLocations.getOutputFolderPath())
+    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
 
     Builder_RepositoryPackage.process()
   }
@@ -258,95 +237,4 @@ object Builder_Master: Builder(), ObjectInterface
   private fun getBuilders () = MiscellaneousUtils.getSubtypes(Builder::class.java).map { it.kotlin.objectInstance!! as Builder }
   private fun getSpecialBuilders () = MiscellaneousUtils.getSubtypes(SpecialBuilder::class.java).map { it.kotlin.objectInstance!! as SpecialBuilder }
   private fun getAllBuilders () = getBuilders() union getSpecialBuilders()
-
-
-  /****************************************************************************/
-  /* Reads the command line parameters, and then based upon that sets up all of
-     the configuration data. */
-
-  private fun handleConfigurationData ()
-  {
-    /**************************************************************************/
-    /* If we are being asked to investigate what happens to the config data, we
-       need to know that before we actually start doing anything with it. */
-
-    ConfigDataSupport.initialise()
-
-
-
-    /**************************************************************************/
-    /* Deal with anything which has to be loaded before we can process the
-       config data. */
-
-    CommandLineProcessor.processCommandLineOptionsEarly()
-
-
-
-    /**************************************************************************/
-    /* Extract settings from the STEP environment variable.  One wrinkle: if
-       any of these are defined both on the command line and in the environment
-       variable, we use the command-line setting.
-
-       The format is:
-
-         setting;setting;setting; ...
-
-       where individual settings look as they would in a config file -- key=val.
-       If you need a semicolon within a setting, escape it using \;.  If you
-       need a backslash, escape it as \\.
-
-       Clearly you're not going to want to store too many settings this way, but
-       there may be things -- such as the location of osis2mod -- which is more
-       easily handled like this, rather than storing it in config files. */
-
-    var environmentVariable = System.getenv("StepTextConverterParameters")
-    if (null != environmentVariable)
-    {
-      environmentVariable = environmentVariable.replace("\\\\", "\u0001").replace("\\;", "\u0002")
-
-      val chunks = environmentVariable.split(";").map { it.trim() }
-      for (chunk in chunks)
-      {
-        val stepKey = chunk.split("#?=".toRegex())[0].trim()
-        var equivalentCommandLineKey = stepKey.replace("step", "")
-        equivalentCommandLineKey = equivalentCommandLineKey[0].lowercase() + equivalentCommandLineKey.substring(1)
-
-        val commandLineSetting = CommandLineProcessor.getOptionValue(equivalentCommandLineKey)
-        if (null == commandLineSetting)
-          ConfigData.loadFromInternalSetting(chunk, "StepTextConverterParameters environment variable")
-      }
-    }
-
-
-
-    /**************************************************************************/
-    /* Use this to enable us to read the configuration files, and then also
-       copy the command line parameters to the configuration data store.
-
-       rootFolder is taken as-is if it specifies an absolute path.  Otherwise,
-       we check to see if it makes sense if taken relative to the current
-       working directory.  And if that fails, we assume there is an
-       environment variable stepTextConverterOverallDataRoot, and it is taken relative
-       to that. */
-
-    val rootFolderPathFromCommandLine = CommandLineProcessor.getOptionValue("rootFolder")!!
-    val rootFolderPath =
-      if (Paths.get(rootFolderPathFromCommandLine).isAbsolute)
-        rootFolderPathFromCommandLine
-      else
-      {
-        val x = Paths.get(System.getProperty("user.dir"), rootFolderPathFromCommandLine)
-        if (File(x.toString()).exists())
-          x.toString()
-        else
-          Paths.get(ConfigData["stepTextConverterOverallDataRoot"]!!, rootFolderPathFromCommandLine).toString()
-      }
-
-    FileLocations.initialise(rootFolderPath)
-    ConfigData.extractDataFromRootFolderName()
-    Logger.setLogFile(FileLocations.getConverterLogFilePath())
-    ConfigData.load()
-    CommandLineProcessor.copyCommandLineOptionsToConfigData()
-    Logger.announceAllAndTerminateImmediatelyIfErrors()
-  }
 }

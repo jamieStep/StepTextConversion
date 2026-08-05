@@ -1,6 +1,8 @@
 /******************************************************************************/
 package org.stepbible.textconverter.nonapplicationspecificutils.configdata
 
+import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.CommandLineProcessor
+import org.stepbible.textconverter.nonapplicationspecificutils.commandlineprocessor.get
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.ObjectInterface
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.StepFileUtils
 import org.stepbible.textconverter.nonapplicationspecificutils.stepexception.StepExceptionWithStackTraceAbandonRun
@@ -28,7 +30,7 @@ import java.io.InputStream
  *      |
  *      +-- Metadata
  *      |   |
- *      |   + -- step.xlsx
+ *      |   + -- step*.xlsx
  *      |   |
  *      |   + -- Possibly metadata.xml, licence.xml, etc.
  *      |
@@ -76,11 +78,11 @@ import java.io.InputStream
  * or OSIS was generated previously (under which circumstances it is possible
  * to start processing direct from this OSIS if that is preferred).
  *
- * The Metadata folder must have a step.xlsx file, which may or may not refer
+ * The Metadata folder must have a step*.xlsx file, which may or may not refer
  * out to other files.  Where we have the opportunity to pick up metadata from
  * files supplied to us (presently only with DBL texts) the metadata folder
  * may contain other files (with DBL that would be metadata.xml and
- * licence.xml).  LEGACY: step.conf was previously used in place of step.xlsx,
+ * licence.xml).  LEGACY: step.conf was previously used in place of step*.xlsx,
  * and that should still work.
  *
  * The _Output folder contains all of the data generated and used for output
@@ -156,17 +158,23 @@ object FileLocations: ObjectInterface
    *
    * Otherwise I ignore all but the filename portion of the parameter.
    *
-   * Starting at the Metadata folder for the text itself, I look for a file
-   * of the given name within that folder or any substructure it contains.
-   * If precisely one file of that name is found, I return the full path for
-   * that file.  Otherwise, I move up a level and see if there is a Metadata
-   * folder containing -- directly or within any substructure -- a file of the
-   * required name.  Otherwise I repeat this at each higher level below the
-   * converter base folder.
+   * There are now two options.
    *
-   * If no file is found anywhere, the function returns null.  If at any
-   * particular level more than one file of the given name is found, it
-   * throws an exception.
+   * The earlier version (which I have retained here in case we need
+   * to revive it) looked first in the Metadata folder for the text itself
+   * (and any structure below it).  If it failed to find the file it was
+   * looking for, it would then move up a level and look in any Metadata
+   * folder there ... and would continue until either it found what it was
+   * looking for, or until it had reached the build area folder and had
+   * nowhere else to go.
+   *
+   * The latest thinking is that this is overly complicated.  Instead, the
+   * processing looks first in the text's own Metadata folder, and then in
+   * the shared configuration folder (in both cases including any folder
+   * structure below the folder in question).
+   *
+   * Which of the two forms of processing is used is determined by
+   * C_WalkTree.
    *
    * Note that there is no problem in having a file of the given name at
    * different levels of the structure.  As soon as the first acceptable
@@ -174,7 +182,7 @@ object FileLocations: ObjectInterface
    * levels.
    *
    * @param fileName The file name (but see the discussion on legacy issues
-   *   above).
+   *   above).  May be either a file name (not a full path) or a regex.
    *
    * @param okIfNotExists As the name suggests. If the file does not exist
    *   and this parameter is false, the method throws an exception.
@@ -182,33 +190,56 @@ object FileLocations: ObjectInterface
    * @return Path.
    */
 
-  fun getConfigFileInputPath (fileName: String, okIfNotExists: Boolean = false): String?
+  fun getConfigFileInputPath (fileName: Any, okIfNotExists: Boolean = false): String?
   {
+    /**************************************************************************/
+    /* Determines which of the two forms of processing we use -- see head-of-
+       routine comments. */
+
+    val C_WalkTree = false
+
+
+
     /**************************************************************************/
     /* Assume that things know what they are doing, and that if they claim
        something exists in JAR Resources, it does. */
 
-    if (fileName.lowercase().startsWith("@jarresources"))
+    if (fileName is String && fileName.lowercase().startsWith("@jarresources"))
       return fileName
 
 
 
     /**************************************************************************/
-    val canonicalFilePath = fileName.replace("\\", "/").split("/").last() // Checks away all but the actual file name, so as to handle legacy data.
+    val canonicalFilePath =
+      if (fileName is String)
+        fileName.replace("\\", "/").split("/").last() // Checks away all but the actual file name, so as to handle legacy data.
+     else
+       fileName
 
 
 
-   /****************************************************************************/
+    /****************************************************************************/
+    val nameMatches: (candidate: String) -> Boolean =
+      when (canonicalFilePath)
+      {
+        is String -> { candidate -> candidate == canonicalFilePath }
+        is Regex  -> { candidate -> candidate.matches(canonicalFilePath) }
+        else      -> { _ -> false }
+      }
+
+
+
+    /****************************************************************************/
     /* Checks if a given folder contains a Metadata folder which, in turn,
        contains a file of the given name. */
 
    fun folderContainsFile (folderPath: String): Pair<String, String?>
    {
-     val metadataFolder = File(folderPath, "Metadata")
+     val metadataFolder = if (folderPath.endsWith("Metadata")) File(folderPath) else File(folderPath, "Metadata")
      if (!metadataFolder.isDirectory) return Pair("continue", null)
 
      val matches = metadataFolder.walkTopDown()
-       .filter { it.isFile && it.name == canonicalFilePath }
+       .filter { it.isFile && nameMatches(it.name) }
        .toList()
 
      return when (matches.size)
@@ -221,12 +252,49 @@ object FileLocations: ObjectInterface
 
 
     /**************************************************************************/
-    val res = PA_Utils.walkUpPaths(getTextRootFolderPath(), getConverterTextBaseFolderPath(), ::folderContainsFile)
+    /* I use my tree walker here regardless of which form of processing has
+       been selected.  If we want to walk the full tree, that's obviously the
+       correct thing to do.  If we don't, I simply set the start and end
+       folders to be the same thing.
 
-    if ("NOT_FOUND" == res.first && !okIfNotExists)
-      throw StepExceptionWithoutStackTraceAbandonRun("File '$fileName' does not exist.")
+       This first portion below looks in the entire folder structure if C_WalkTree is
+       true, or else in the text's Metadata folder if it is false. */
+
+    var startFolder: String
+    var endFolder: String
+
+    if (C_WalkTree)
+    {
+      startFolder = getTextRootFolderPath()
+      endFolder = if (C_WalkTree) getConverterBuildAreaFolderPath() else startFolder
+    }
     else
-      return (res.second as String?) ?.replace("\\", "/")
+    {
+      startFolder = getTextMetadataFolderPath()
+      endFolder = startFolder
+    }
+
+    var res = PA_Utils.walkUpPaths(startFolder, endFolder, ::folderContainsFile)
+
+
+
+    /**************************************************************************/
+    /* If that failed to find anything, we look in the shared configuration
+       folder. */
+
+    if ("NOT_FOUND" == res.first)
+    {
+        val sharedConfigDataFolder = getConverterSharedConfigurationDataRoot()
+        res = PA_Utils.walkUpPaths(sharedConfigDataFolder, sharedConfigDataFolder, ::folderContainsFile)
+    }
+
+
+
+    /**************************************************************************/
+    if ("NOT_FOUND" == res.first)
+       return if (okIfNotExists) null else throw StepExceptionWithoutStackTraceAbandonRun("File '$fileName' does not exist.")
+    else
+      return (res.second!! as String).replace("\\", "/")
   }
 
 
@@ -238,23 +306,22 @@ object FileLocations: ObjectInterface
    * with file locations, and this processing is location-dependent, it seems
    * reasonable to have it here.)
    * 
-   * @param filePath If this starts with @jarResources/, it
-   *   is assumed to give the name of a file within the resources section of
-   *   the current JAR.  Otherwise it is taken to be a full path name.
+   * @param theFileName Name of file (not path).
    *
    * @return Stream plus full path to file, except where the data is coming
    *   from the JAR, in which case the path is null.
    */
   
-  fun getInputStream (filePath: String): Pair<InputStream?, String?>
+  fun getInputStream (theFileName: String): Pair<InputStream?, String?>
   {
     /**************************************************************************/
-    val expandedFilePath = getConfigFileInputPath(filePath)!!
+    val expandedFilePath = getConfigFileInputPath(theFileName)!!
 
 
 
     /**************************************************************************/
-    /* In resources section of JAR file? */
+    /* In resources section of JAR file?  (Not used at time of writing, but
+       I've retained this just in case. */
     
     if (expandedFilePath.lowercase().startsWith("@jarresources"))
     {
@@ -288,7 +355,8 @@ object FileLocations: ObjectInterface
 
 
   /****************************************************************************/
-  fun getConverterTextBaseFolderPath () = ConfigData["stepTextConverterOverallDataRoot"]!!
+  fun getConverterBuildAreaFolderPath () = ConfigData["stepTextConverterOverallDataRoot"]!!
+  fun getConverterSharedConfigurationDataRoot () = ConfigData["stepTextConverterSharedConfigurationDataRoot"]!! // May be absent, in which case the build assumes there is no shared data.
 
 
   /****************************************************************************/
@@ -296,6 +364,12 @@ object FileLocations: ObjectInterface
 
   fun getTextRootFolderName () = m_RootFolderName
   fun getTextRootFolderPath () = m_RootFolderPath
+
+
+  /****************************************************************************/
+  fun getPrefixForExternalDataInterface () = "externalDataInterface_"
+  fun getPrefixForRepositoryOrganisationFiles () = "textRepositoryOrganisation_"
+  fun getPrefixForTextOwnerFiles () = "textOwner_"
 
 
   /****************************************************************************/
@@ -308,7 +382,7 @@ object FileLocations: ObjectInterface
   fun getDebugOutputFilePath () = Paths.get(getOutputFolderPath(), "debugLog.txt").toString()
   fun getTemporaryInvestigationsFolderPath() =
     if (null == ConfigData["stepTemporaryInvestigationsFolderPath"])
-      Paths.get(getConverterTextBaseFolderPath(), "_DebugOutput_").toString()
+      Paths.get(getConverterBuildAreaFolderPath(), "_DebugOutput_").toString()
     else
       ConfigData["stepTemporaryInvestigationsFolderPath"]!!
 
@@ -316,21 +390,24 @@ object FileLocations: ObjectInterface
   /****************************************************************************/
   /* Metadata. */
 
-  fun getCommonRootFilePath () = "@jarResources/commonRoot.conf"
+  fun getCommonRootFileName () = "commonRoot.conf"
 
-  fun getBookNamesFilePath () = "@jarResources/bookNames.tsv"
-  fun getConfigDescriptorsFilePath () = "@jarResources/configDataDescriptors.tsv"
+  fun getBookNamesFileName () = "bookNames.tsv"
+  fun getConfigDescriptorsFileName () = "configDataDescriptors.tsv"
 
-  fun getMetadataFolderName () = "Metadata"
-  fun getMetadataFolderPath () = Paths.get(m_RootFolderPath, getMetadataFolderName()).toString()
+  fun getTextMetadataFolderName () = "Metadata"
+  fun getTextMetadataFolderPath () = Paths.get(m_RootFolderPath, getTextMetadataFolderName()).toString()
 
   fun getHistoryFileName () = "history.conf"
-  private fun getConfigSpreadsheetFileName () = "step.xlsx"
+  private fun getConfigSpreadsheetFileName () = "step.*\\.xlsx".toRegex()
   private fun getConfigTextFileName () = "step.conf"
-  fun getConfigSpreadsheetFilePath () = getConfigFileInputPath("@find/" + getConfigSpreadsheetFileName(), true)
-  fun getConfigTextFilePath () = getConfigFileInputPath("@find/" + getConfigTextFileName(), true)
-  fun getExistingHistoryFilePath () = getConfigFileInputPath("@find/" + getHistoryFileName(), true) // If looking for an existing history file, search for it.
-  fun getForcedHistoryFilePath () = Paths.get(getMetadataFolderPath(), getHistoryFileName()).toString() // If creating the history file, this is where it goes.
+  fun getConfigSpreadsheetFilePath () = getConfigFileInputPath(getConfigSpreadsheetFileName(), true)
+  fun getConfigTextFilePath () = getConfigFileInputPath(getConfigTextFileName(), true)
+  fun getExistingHistoryFilePath () = getConfigFileInputPath(getHistoryFileName(), true) // If looking for an existing history file, search for it.
+  fun getForcedHistoryFilePath () = Paths.get(getTextMetadataFolderPath(), getHistoryFileName()).toString() // If creating the history file, this is where it goes.
+
+  fun getSharedCommonFolderPath () = Paths.get(getConverterSharedConfigurationDataRoot(), "Metadata", "_Common_").toString()
+  fun getSharedCommonAutoloadFolderPath () = Paths.get(getConverterSharedConfigurationDataRoot(), "Metadata", "_Common_", "Autoload").toString()
 
 
 
@@ -408,7 +485,7 @@ object FileLocations: ObjectInterface
   fun getSwordConfigFilePath (): String { return Paths.get(getSwordConfigFolderPath(), "${getModuleName().lowercase()}.conf").toString() }
   fun getSwordConfigFolderPath (): String = Paths.get(getInternalSwordFolderPath(), "mods.d").toString()
 
-  fun getSwordTemplateConfigFilePath () = "@jarResources/swordTemplateConfigFile.conf"
+  fun getSwordTemplateConfigFilePath () = "swordTemplateConfigFile.conf"
 
   fun getSwordTextFolderPath (): String
   {
@@ -428,7 +505,7 @@ object FileLocations: ObjectInterface
 
 
   /****************************************************************************/
-  fun getIssuesFilePath () = /* $$$ locateFile("@find/issues.json") ?: */ Paths.get(getMetadataFolderPath(), "issues.json").toString() // File recording any problems with the text.
+  fun getIssuesFilePath () = Paths.get(getTextMetadataFolderPath(), "issues.json").toString() // File recording any problems with the text.
   private fun getTextFeaturesRootFolderPath () = Paths.get(getInternalSwordFolderPath(), "textFeatures").toString()
   private fun getTextFeaturesFolderPath () = makeTextFeaturesFolderPath()
   fun getRunFeaturesFilePath () = Paths.get(getTextFeaturesFolderPath(), "runFeatures.json").toString()
@@ -441,9 +518,9 @@ object FileLocations: ObjectInterface
   /****************************************************************************/
   /* Miscellaneous. */
 
-  fun getCountryCodeInfoFilePath () = "@jarResources/countryNamesToShortenedForm.tsv"
-  fun getIsoLanguageCodesFilePath () = "@jarResources/isoLanguageCodes.tsv"
-  fun getOsis2modVersificationDetailsFilePath () = "@jarResources/osis2modVersification.txt"
+  fun getCountryCodeInfoFileName () = "countryNamesToShortenedForm.tsv"
+  fun getIsoLanguageCodesFileName () = "isoLanguageCodes.tsv"
+  fun getOsis2modVersificationDetailsFilePath () = "osis2modVersification.txt"
   fun getVernacularTextDatabaseFilePath () = getConfigFileInputPath("vernacularTranslationsDb.txt")!!
 
 
@@ -470,24 +547,27 @@ object FileLocations: ObjectInterface
      anyway -- I may require that a proper step.conf is set up, in which case
      this special-case processing will not be needed. */
 
-  fun getStrongsCorrectionsFilePath () = "@jarResources/strongsCorrections.txt"
+  fun getStrongsCorrectionsFilePath () = "strongsCorrections.txt"
 
 
   /****************************************************************************/
   /**
    * Initialises details of file- and folder- names.
-   * 
-   * @param rootFolderPath Full path to root folder.
    */
   
-  fun initialise (rootFolderPath: String)  
+  fun setRootFolderDetails ()
   {
     /**************************************************************************/
     /* rootFolderPath is supplied from the command line, and on Windows there's
        no guarantee it follows the upper- / lower-case layout of the actual
        folder name.  It's the latter which we want. */
+
+    val rootFolderPath = CommandLineProcessor["rootFolder"]!!
+    var f = File(rootFolderPath)
+    if (!f.isAbsolute)
+      f = File(Paths.get(ConfigData["stepTextConverterOverallDataRoot"]!!, rootFolderPath).toString())
     
-    m_RootFolderPath = (File(rootFolderPath)).canonicalPath
+    m_RootFolderPath = f.canonicalPath
     m_RootFolderName = File(m_RootFolderPath).name
   }
 

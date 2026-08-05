@@ -120,5 +120,5 @@ object Permissions: ObjectInterface
   /****************************************************************************/
 
   /****************************************************************************/
-  private val m_IsOkToGenerateFootnotes = ConfigData.getAsBoolean("stepIsOkToAddFootnotes", "no")
+  private val m_IsOkToGenerateFootnotes by lazy { ConfigData.getAsBoolean("stepIsOkToAddFootnotes", "no") }
 }

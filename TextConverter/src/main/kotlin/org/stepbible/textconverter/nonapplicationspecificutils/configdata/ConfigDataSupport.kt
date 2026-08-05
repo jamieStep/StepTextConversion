@@ -27,18 +27,9 @@ object ConfigDataSupport: ObjectInterface
   /****************************************************************************/
   /* Handlers. */
 
-  var reportSet: (key: String, value: String?, location: String, additionalInfo: String?) -> Unit = ::reportSetNull
-
-
-  /****************************************************************************/
-  /**
-  * Initialises based upon command-line setting.
-  */
-
-  fun initialise ()
-  {
-    val dbgSettingLc = ConfigData["stepDbgConfigData"]?.lowercase() ?: return
-    reportSet = if ("reportset" in dbgSettingLc) ::reportSet else ::reportSetNull
+  val reportSet: (key: String, value: String?, location: String, additionalInfo: String?) -> Unit by lazy {
+    val dbgSettingLc = ConfigData["stepDbgConfigData"]?.lowercase() ?: "???"
+    if ("reportset" in dbgSettingLc) ::reportSet else ::reportSetNull
   }
 
 
@@ -56,6 +47,38 @@ object ConfigDataSupport: ObjectInterface
 
   fun validateParameter (parameterName: String, action: String, abort: Boolean = true): Boolean
   {
+    /**************************************************************************/
+    /* We can be confident that certain parameters will always be ok.  In
+       particular, stepTextConverterSharedConfigurationDataRoot is ok, but
+       validating it 'properly' puts things into a loop. */
+
+    if ("stepTextConverterSharedConfigurationDataRoot" == parameterName)
+      return true
+
+
+
+    /**************************************************************************/
+    fun initialiseValidationData ()
+    {
+      FileLocations.getInputStream(FileLocations.getConfigDescriptorsFileName()).first!!.bufferedReader().use { it.readText() } .lines() .forEach {
+        val line = it.trim()
+        if (line.isNotEmpty() && !line.startsWith("#!"))
+          m_KnownParameters.add(line)
+      }
+    }
+
+
+
+    /**************************************************************************/
+    if (!m_InitialisedValidationData)
+    {
+      initialiseValidationData()
+      m_InitialisedValidationData = true
+    }
+
+
+
+    /**************************************************************************/
     var res = false
 
     if (parameterName in m_KnownParameters)
@@ -100,14 +123,10 @@ object ConfigDataSupport: ObjectInterface
 
 
   /****************************************************************************/
+  private var m_InitialisedValidationData = false
+
+
+  /****************************************************************************/
   private val m_KnownParameters: MutableSet<String> = mutableSetOf()
   private var m_KnownStartingStrings = listOf("const", "History_", "V_", "stepNonOsisXsltStyleSheet_", "_")
-
-  init {
-    FileLocations.getInputStream(FileLocations.getConfigDescriptorsFilePath()).first!!.bufferedReader().use { it.readText() } .lines() .forEach {
-      val line = it.trim()
-      if (line.isNotEmpty() && !line.startsWith("#!"))
-        m_KnownParameters.add(line)
-    }
-  }
 }

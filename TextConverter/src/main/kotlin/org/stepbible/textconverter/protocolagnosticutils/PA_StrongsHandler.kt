@@ -210,7 +210,7 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
         {
           strong = prefix + "0".repeat(4 - strong.length) + strong
         }
-        catch (e:Exception)
+        catch (_: Exception)
         {
           throw StepExceptionWithoutStackTraceAbandonRun("Invalid Strongs reference: $attr.")
         }
@@ -226,24 +226,6 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
 
 
 
-//    /**************************************************************************/
-//    val rawElts = node[m_FileProtocol.attrName_strong()]!!.replace("(?i)STRONG:".toRegex(), "").split(C_MultiStrongSeparator)
-//    val strongsElts = rawElts.map(::rejigStrongs).filter { "0000" !in it } // 0000 is used in at least one text as a dummy entry and is to be ignored.
-//
-//    if (strongsElts.isEmpty()) // The only element(s) were 0000.
-//    {
-//      node -= m_FileProtocol.attrName_strong() // Remove the Strong's attribute.
-//      if (!node.hasAttributes()) // And if that leaves no attributes at all, remove the node, but retain its children.
-//      {
-//        Dom.promoteChildren(node)
-//        Dom.deleteNode(node)
-//      }
-//    }
-//    else // Replace the Strong's attribute with the tidied up elements.
-//      node[m_FileProtocol.attrName_strong()] = strongsElts.joinToString(" ")
-//  }
-//
-//
     /**************************************************************************/
     val strongsElts = node[m_FileProtocol.attrName_strong()]!!.trim().replace("(?i)STRONG:".toRegex(), "").split(C_MultiStrongSeparator)
     node[m_FileProtocol.attrName_strong()] = strongsElts.joinToString(" "){ rejigStrongs(it) }
@@ -283,8 +265,9 @@ private class PA_StrongsHandlerPerBook (val m_FileProtocol: X_FileProtocol)
   {
     var ok = prefix in "GH" && strong.length <= 4
     val strongAsInt = strong.toIntOrNull() ?: -1
-    ok = strongAsInt > 0
-    if (!ok && 0 != strongAsInt) Logger.warning("Invalid Strong: $prefix$strong.") // Don't issue a warning for 0000, because some texts use that where there is no Strong's number for a word.
+    ok = ok && strongAsInt > 0
+    if (!ok && 0 != strongAsInt)
+      Logger.warning("Invalid Strong: $prefix$strong.") // Don't issue a warning for 0000, because some texts use that where there is no Strong's number for a word.
     return ok
   }
 

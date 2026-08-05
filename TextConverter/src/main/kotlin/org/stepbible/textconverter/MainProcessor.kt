@@ -95,7 +95,7 @@ class MainProcessor
     /**************************************************************************/
     catch (t: Throwable)
     {
-      t.cause?.printStackTrace()
+      t.printStackTrace()
       returnCode = 111
       exitProcess(returnCode)
     }

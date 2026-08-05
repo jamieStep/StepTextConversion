@@ -312,46 +312,62 @@ object Dbg: ObjectInterface
   {
     return m_DebugRunningOnPartialCollectionOfBooksOnly
   }
-  
-  
+
+
   /****************************************************************************/
   /**
-   * Sets the list of books to be processed.  Give either an array of UBS
-   * abbreviations, or null if all books are to be processed.
+   * Sets the list of books to be processed.  This method merely stores the
+   * data for later use by the version of the method which takes no arguments.
+   * This makes it possible to set this information very early (in the main
+   * program), but defer using it until Dbg has been set up.  It's slightly
+   * easier this way, because it's easy to find the main program.
    * 
    * @param usxAbbrevs Comma-separated list of abbreviations.
    * @param test One of <, <=, =, !=, >=, >.  If = or !=, abbrevs can contain a
    *             list; otherwise it should be only a single book and the test is
    *             based on a comparison with that book.
    */
-  
-  fun setBooksToBeProcessed (usxAbbrevs: String?, test: String = "=")
+
+  fun setBooksToBeProcessed (usxAbbrevs: String, test: String = "=")
+  {
+    m_LimitToBooks = usxAbbrevs
+    m_SelectBooksByOperator = test
+  }
+
+
+  /****************************************************************************/
+  /**
+   * Sets the list of books to be processed.  Give either an array of UBS
+   * abbreviations, or null if all books are to be processed.
+   */
+
+  fun setBooksToBeProcessed ()
   {
     /**************************************************************************/
-    if (usxAbbrevs.isNullOrEmpty())
+    if (m_LimitToBooks.isNullOrEmpty())
       return
     
     
     
     /**************************************************************************/
-    val booksRequested = usxAbbrevs.uppercase().split("\\W+".toRegex()).toSet()
+    val booksRequested = m_LimitToBooks!!.uppercase().split("\\W+".toRegex()).toSet()
     m_DebugRunningOnPartialCollectionOfBooksOnly = true
-    val setting = "!=" == test
+    val setting = "!=" == m_SelectBooksByOperator
     BibleBookNames.DbgWantToProcessBook.indices.forEach { BibleBookNames.dbgSetProcessBook(it, setting) }
 
 
 
     /**************************************************************************/
-    when (test)
+    when (m_SelectBooksByOperator)
     {
       "<" -> {
-        val bookNo = getBookNo(usxAbbrevs)
+        val bookNo = getBookNo(m_LimitToBooks!!)
         for (i in 0..< bookNo) BibleBookNames.dbgSetProcessBook(i, true)
       }
 
 
       "<=" -> {
-        val bookNo = getBookNo(usxAbbrevs)
+        val bookNo = getBookNo(m_LimitToBooks!!)
         for (i in 0.. bookNo) BibleBookNames.dbgSetProcessBook(i, true)
       }
 
@@ -372,14 +388,14 @@ object Dbg: ObjectInterface
 
       ">" ->
       {
-        val bookNo = getBookNo(usxAbbrevs)
+        val bookNo = getBookNo(m_LimitToBooks!!)
         for (i in bookNo + 1 ..< BibleBookNames.getNumberOfBooksSupported()) BibleBookNames.dbgSetProcessBook(i, true)
       }
       
       
       ">=" ->
       {
-        val bookNo = getBookNo(usxAbbrevs)
+        val bookNo = getBookNo(m_LimitToBooks!!)
         for (i in bookNo ..< BibleBookNames.getNumberOfBooksSupported()) BibleBookNames.dbgSetProcessBook(i, true)
       }
     }
@@ -598,8 +614,11 @@ object Dbg: ObjectInterface
 
 
   /****************************************************************************/
-  private var m_AddDebugAttributesToNodes              = ConfigData.getAsBoolean("stepDbgAddDebugAttributesToNodes", "No")
-  private var m_DbgDisplayReversificationRowsOutputter = getOutputter(ConfigData.get("stepDbgDisplayReversificationRows", "None"))
+  private var m_LimitToBooks: String? = null
+  private var m_SelectBooksByOperator: String? = null
+
+  private val m_AddDebugAttributesToNodes: Boolean by lazy { ConfigData.getAsBoolean("stepDbgAddDebugAttributesToNodes", "No") }
+  private val m_DbgDisplayReversificationRowsOutputter by lazy { getOutputter(ConfigData.get("stepDbgDisplayReversificationRows", "None")) }
   private var m_DebugRunningOnPartialCollectionOfBooksOnly = false
   private val m_FileOutput:   MutableList<Pair<String, String>> = mutableListOf() // Deferred output.
   private var m_ReportProgressPrefix = ""

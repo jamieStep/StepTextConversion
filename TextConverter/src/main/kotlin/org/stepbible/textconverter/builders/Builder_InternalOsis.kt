@@ -251,15 +251,6 @@ object Builder_InternalOsis: Builder(), ObjectInterface
   override fun doIt ()
   {
     /***************************************************************************/
-    /* Create a home for what we're about to generate. */
-
-    StepFileUtils.deleteFileOrFolder(FileLocations.getOutputFolderPath())
-    //StepFileUtils.deleteFolder(FileLocations.getInternalOsisFolderPath())
-    StepFileUtils.createFolderStructure(FileLocations.getInternalOsisFolderPath())
-
-
-
-    /***************************************************************************/
     /* Certain parameters need to be driven by things like what target audience
        we have in mind (public or STEP-only).  Best to work these out as early
        as possible. */
@@ -309,7 +300,7 @@ object Builder_InternalOsis: Builder(), ObjectInterface
     /* I needed to do special preprocessing for the MHM module.  This is
        probably a convenient place to do similar things in future. */
 
-    PreprocessorForMhm.process()
+//    PreprocessorForMhm.process()
 
 
 

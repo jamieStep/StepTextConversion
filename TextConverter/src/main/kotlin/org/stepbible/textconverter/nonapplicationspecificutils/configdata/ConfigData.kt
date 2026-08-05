@@ -33,6 +33,8 @@ import kotlin.collections.ArrayList
 
 import org.antlr.v4.runtime.*
 import org.antlr.v4.runtime.misc.Interval
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNames
+import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.VersificationSchemesSupportedByOsis2mod
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Logger
 import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 
@@ -41,579 +43,12 @@ import org.stepbible.textconverter.nonapplicationspecificutils.debug.Rpt
 /**
  * Reads, stores and makes available configuration data.
  *
- *
- *
- * ## Don't read more than you have to
- *
- * The handling of config data is appallingly complicated.  (If you can think
- * of a better way to handle all this, I'm definitely interested.)
- *
- * The volume of documentation reflects this.  You won't want to read all of it
- * unless you absolutely have to.
- *
- * If you're a newbie, then my apologies, but it's going to have to be the whole
- * lot.  Better get a coffee.  Or perhaps something stronger.  And a sleeping bag.
- *
- * But if you've worked with config before, you may be able to get away with less
- * -- at least until you discover you can't.  Skip straight to 'Creating and
- * updating modules'.
- *
- *
- *
- * ## Overview
- *
- * - Config data provides information which feeds through into the finished
- *   module, and also controls the conversion process.
- *
- * - Config is complex and extensive.  There are hundreds of config parameters.
- *   Fortunately, though, most texts require you to specify only a handful --
- *   I provide sensible defaults for all of the others.
- *
- * - What you need to know falls into two categories -- you need to know how
- *   to specify config settings, and you need to know where to store them.
- *   We'll deal with the latter first.
- *
- *
- *
- * ## Where to store config settings
- *
- * To begin with, a brief summary:
- *
- * - The root of the configuration system is a file called step.xlsx.
- *   Every text has to have one of these, and it must sit in a folder
- *   called Metadata which itself resides directly within the root folder
- *   for the text.  step.xlsx contains settings which typically differ
- *   for every text -- and settings which you *must* supply beacuse there
- *   is no way they can be deduced automatically.
- *
- * - A *lot* of settings are taken from files in the Resources section
- *   of this JAR file.  These act as defaults.  In general they represent
- *   things you are unlikely to want to change, and therefore probably
- *   prefer not to know about.  However, as discussed below, you have the
- *   option to override them if you need to.
- *
- * - If you are dealing with data from DBL, you can optionally organise to
- *   take some settings direct from the metadata files they supply.
- *
- * - Some settings are calculated during processing.  Some of these you can
- *   override.  Others are fixed.
- *
- * - Other settings you can specify for yourself in various places ...
- *
- *
- * Settings are taken from the following places (listed in descending order
- * of precedence -- explained shortly):
- *
- * 1. The command line (command-line settings are converted to config settings,
- *    so that it is just as though the command-line parameters had been stored
- *    in a configuration file in the appropriate format).  Note that the command
- *    line accepts only a very limited list of settings, however – you can’t set
- *    just *any* configuration parameter at all via the command line.
- *
- * 2. step.xlsx.
- *
- * 3. Text files, as discussed below.
- *
- * 4. The StepTextConverterParameters environment variable.
- *
- * 5. Configuration files stored in the converter JAR file.  (These typically
- *    contain backstop values, often for rather obscure settings which you are
- *    unlikely to want to change.)
- *
- *
- * There is an 'include' mechanism which lets you reference one config file from
- * another (or from step.xlsx).  The processing works as though sources of data
- * listed above were expanded out into one large text file (and each include
- * statement were replaced by the content of the file to which it points).
- *
- * One consequence of having such a large number of sources of config
- * information is that it is quite possible that in the expanded data there will
- * be more than one setting for a given parameter.  The important thing
- * currently is that the configuration data is expanded out in the order
- * discussed above.  We will see shortly how the individual statements are then
- * processed, and therefore -- where there are multiple settings for the same
- * parameter -- which one is actually applied.
- *
- *
- * 'include' statements give only a file name, not a full path.  Files are
- * located as follows (say you are looking for x.conf):
- *
- * - The processing first looks for x.conf in the Metadata folder for the
- *   text (the folder which contains step.xlsx).  If found, this is the
- *   file which is used.  Otherwise ...
- *
- * - The processing moves up a level and looks to see if there is a Metadata
- *   folder at that level -- a Metadata folder which either itself contains
- *   x.conf, or which has x.conf within any subfolder structure it may contain.
- *   If more than one x.conf is found it is an error.  If just one is found,
- *   that one is used.  Otherwise ...
- *
- * - The processing moves up a level and repeats, giving up if it gets as
- *   far as the converter base folder (the one containing *all* of the
- *   texts you are working on) and fails to find x.conf there.
- *
- * - Note that while it is an error if any *given* Metadata folder is
- *   encountered which contains more than one x.conf, the processing does
- *   not look for duplicates all the way up the tree.  If, for instance,
- *   there is an x.conf co-located with step.xlsx, and another one higher
- *   up, that's not a problem -- the former is used.
- *
- *
- * Note that no particular meaning is ascribed to which file a given parameter
- * appears in.  You can partition the configuration information in any way
- * you choose, thus making it possible to keep related parameters together.
- *
- *
- *
- * ## The Include mechanism
- *
- * An Include statement goes on a line of its own in your config files, and
- * there are two forms of Include statement:
- *
- *     $include fileName
- *     $includeIfExists fileName
- *
- * Each works in the same way, the only difference being that the former
- * aborts the processing if the file does not exist, whereas the latter
- * does not.
- *
- * The general mechanism by which Include's are processed was discussed
- * in the previous section.
- *
- * Include's may be nested to any depth.
- *
- *
- * LEGACY NOTE
- * -----------
- *
- * Previous version of the software required (or permitted) you to supply
- * additional path information along, perhaps, with hints as to where the
- * file should be obtained.
- *
- * The processing continues to accept these statements, but simply ignores
- * all information except the path name.  This should provide backward
- * compatibility in most cases.
- *
- *
- *
- * ## Third party config
- *
- * Sometimes third parties may supply information in processable form which
- * might usefully feed into our own config if we had automated processing to
- * handle it.
- *
- * For this to be the case, we really need to be picking up large numbers of
- * texts from a given source, all of which will bring with them metadata
- * structured in the same way.
- *
- * Currently, only DBL is really a candidate for this -- and we do have
- * automated processing to handle the DBL metadata.xml and license.xml files.
- *
- * Unfortunately, this does complicate the overall processing appreciably, and
- * increasingly it is looking as though it is of limited value.  When I was
- * confronted with 60 texts to process all at one go (and when I believed I
- * could trust the results), it seemed like a Very Good Thing.  In the cold
- * light of day, I'm not so sure:
- *
- * - DBL's metadata format seems, so far as I can see, to be undocumented.
- *   This leaves each text supplier scrabbling to do their own thing, with
- *   the result that the metadata.xml files are inconsistent.
- *
- * - Increasingly we are choosing to override what DBL gives us in any case.
- *
- * - I originally thought that the information from license.xml (which feeds
- *   through only into stylised comments at the start of the Sword config
- *   file) might be useful for admin purposes.  In particular I felt we
- *   could apply automated processing to these comments to determine when we
- *   might need to apply to renew licences.  However, it turns out that DBL
- *   tracks this issue and informs us itself.
- *
- *
- * Having said this, the processing to do all of this *is* still present, and
- * will do its stuff unless you prevent it, so you need to know about it.
- * One simple way of thwarting it, if you want one, is simply not to store
- * the metadata.xml and license.xml files in the Metadata folder (which is
- * where you should store them if you *do* want to apply the processing here).
- *
- * Data from the metadata.xml file plays an active part in the processing and,
- * for instance, participates in the Bible description which appears in
- * STEPBible's Bible chooser.
- *
- * Data from license.xml is essentially passive -- I merely copy things like
- * expiry date into a comment at the top of the Sword config file so that it
- * is available for admin purposes if required.
- *
- * **IMPORTANT**: You are unlikely to want to modify the content of these files.
- * If the information we would otherwise take from them is not appropriate, it
- * is normally better to supply your own settings and organise for those
- * settings to take precedence.  How you do this is discussed later.
- *
- *
- *
- * ## Updating modules
- *
- * If you are updating an existing module, you may alreaady have the necessary
- * data in your overall text folder.  If not (or if you suspect the data may
- * be out of date) you will need to delete any existing data for that module
- * from the text structures and unzip the repository package in its place.
- *
- * Unless the data from the repository package was worked on relatively
- * recently, you may have to reckon with the textual data or the config
- * not being compatible with the current version of the converter.  In
- * particular:
- *
- * - You will need to ensure that the root folder name for the text
- *   follows our current naming conventions.
- *
- * - You will need to ensure that the input data is stored in an
- *   appropriately named input folder -- InputUsx or whatever.
- *
- * - You will need to ensure you have a Metadata folder.
- *
- * - The Metadata folder must ideally contain a step.xlsx file giving basic
- *   configuration information.  Older repository packages will have a step.conf
- *   instead.  I _think_ things will actually work satisfactorily with that, but
- *   if you can face trasnferring the data to a step.xlsx file and deleting the
- *   step.conf, that would be better.
- *
- * - You must have a history.conf file and it must be in the latest format.
- *   With older repository packages, you are likely to find that version history
- *   information is stored in the step.conf file, and you will need to remove it
- *   from there, reformat it and store it in history.conf.
- *
- * - If, in the first step above, you had to change the name of the folder, this
- *   will in turn mean that when the module is generated, it will have a revised
- *   name.  You will need to add an Obsoletes statement at the end of the
- *   step.xlsx or step.conf file to indicate that the new module replaces the old
- *   name.
- *
- *
- *
- * ## Working from scratch
- *
- * My recommended approach is as follows:
- *
- * - All per-Bible-text folders (the ones named Text...) *must* reside under
- *   a single root folder which I refer to here as the converter base folder.
- *
- * - Within that, if you have different collections of texts, create a
- *   subfolder for each collection.  (I have one for DBL, for instance,
- *   and another -- Miscellanous -- to hold anything which doesn't fit into
- *   any other category.)  You can create further structure below these
- *   individual folders if you wish, in order to group texts further.  Within
- *   DBL, I have a separate folder, Biblica, to hold all of the texts which
- *   originate from Biblica.
- *
- * - Decide whether there is any configuration information which things
- *   might want to share.  If there is, create a Metadata folder at an
- *   appropriate level in your hierarchy, and put suitable config files
- *   within that folder (directly or within some folder structure contained
- *   within the Metadata folder).  We need certain information describing
- *   Biblica the company, and all Biblica texts need this, so I create a
- *   Metadata folder within the Biblica folder, and put suitable config
- *   files there.  We also need information about DBL the organisation
- *   which will apply to *all* texts originating from DBL -- both Biblica
- *   texts and others -- so I create a Metadata folder within the DBL
- *   folder to hold this.  And things like vernacular translations of
- *   footnote text apply to *all* texts, so I create a Metadata folder
- *   within the converter base folder and store that there.
- *
- *
- *
- * ## Syntax -- overview
- *
- * It may be easiest if I start by supplying a sample config fragment:
- *
- *     #! This is a comment line.  Comments start with '#!'
- *     #! Comments may appear on a line of their own, or may be appended to other statements.
- *     #! All text from #! to the end of the line is stripped off before processing begins.
- *     #! Spaces are then removed from the start and end of the line.
- *     #! If the resulting line is blank, it is ignored.
- *
- *     name=John                      #! This associates the value 'John' with the parameter 'name'.  If the processing asks for a value for 'name' this is what it will get.
- *     fullName=$firstName $lastName  #! This shows that a setting may refer out to other settings.  In this case 'fullName' is assembled out of firstName and lastName.
- *
- *     $include myConfig.conf         #! Includes another file at this point.
- *     $include $langCode-texts.conf  #! The target of an include statement can also refer out to other settings.
- *
- *     book#=Romans                   #! An alternative form of assignment, discussed below.
- *     chapterRef#=$book.$chapter     #! This form of assignment can also refer out to other items.
- *
- *
- *
- *     #! You can spit long values over several lines to improve readability by appending a backslash to each line but the last.
- *     #! Spaces prior to a backslash are retained.  Spaces at the front of continuation lines are ignored.
- *     #! You can't have both a backslash and a comment on the same line -- the backslash will simply be treated as part of the comment.
- *
- *     longValue=This value \
- *               is split over \
- *               several lines.
- *
- *
- * All of these lines can appear in any order, and there can be as many of each
- * flavour as you like.
- *
- * You may have more than one definition of the same parameter.  Where this is
- * the case, the order in which the processing encounters them matters:
- *
- * - With multiple '=' assignments, the *last* definition is the one to be used.
- *
- * - With multiple '#=' assignments, the *first* definition is the one to be
- *   used.
- *
- * - If you have both forms of assignment, the *first* '#=' assignment will be
- *   used, and all the others of either flavour will be ignored.
- *
- *
- * This, for instance, is how the defaulting mechanism works.  In the files in
- * the Resources section of the JAR, all of the assignments I make use '='. This
- * means you can then override them, either by using '#=' or simply by placing
- * your definitions later. (I recommend using '#=' anywhere where you are trying
- * to force matters, rather than relying just upon ordering -- it's clearer.)
- *
- * Referring back to the precedence ordering mentioned in an earlier section ...
- *
- * - Settings taken from the command line use #=, and therefore, since they
- *   are loaded first, definitely take precedence over anything else.
- *
- * - Settings taken from step.xlsx also use #=, so unless already overriden
- *   by the command line, these will take precedence over anything which
- *   follows them.  (Not *quite* true, I suppose.  step.xlsx gives you the
- *   opportuinity to specify your own ad hoc settings in addition to the ones
- *   built into it, and here the decision as to whether to use = or #= is
- *   up to you.)
- *
- * - It is up to you which settings in textual config files should use = and
- *   which #=.
- *
- * - Ditto for settings in the environment variable.
- *
- * - Stuff in the Resources section of the present JAR file uses =, and can
- *   therefore readily be overridden.
- *
- *
- * There are some specialist settings -- particularly where data is to be picked
- * up from the DBL metadata file.  These are discussed below.
- *
- * Note also that there are a number of ways in which values can be assembled
- * out of other values -- the examples above were for illustration only.  Again
- * these are discussed below.
- *
- * At the time the data is *read* the definitions are stored exactly as they
- * appear above.  Thus, for example, against 'fullName' the value
- * '$firstName $lastName' will be stored.  Only when the processing first
- * *accesses* the parameter will the calculation be carried out.  So if
- * firstName has the value 'John' at the time fullName is accessed, and
- * lastName the value 'Smith', fullName will have the value 'John Smith'.
- *
- * Once a value has been assigned to a parameter in this manner, it does
- * not subsequently change, even if the underlying values change.  If
- * we access fullName as above, and get John Smith, and then access it
- * again, then even if $lastName has changed to Jones in the interim, the
- * value we see will still be 'John Smith'.
- *
- *
- *
- * ## Naming conventions
- *
- * These are a bit of a mess at present.
- *
- * In the main, all 'official' STEP parameters have names which start 'step'.
- *
- * Parameters named on the command line lack this 'step' prefix, but when
- * they are stored internally the prefix is added, so that the command-line
- * parameter targetAudience becomes stepTargetAudience.
- *
- * Latterly I have taken to using a 'sword' prefix for parameters which are
- * written out to the Sword configuration file.  And In some cases where
- * values are calculated, I use 'calc'.  However, this is a relatively recent
- * departure, and at present probably hasn't worked its way through properly.
- * (And in addition, there are some places where there is no 'right' answer --
- * if a value is calculated and then used only in the Sword configuration file,
- * does that make it 'sword' or 'calc'?)
- *
- * Occasionally it is possible you may want to define your own intermediate
- * values en route to setting up one of the parameters used by the converter.
- * If you do, use '_' as a prefix to avoid any potential clashes.
- *
- * Note that names are case-sensitive.
- *
- *
- *
- * ## Parameter definition language
- *
- * The samples above included things like
- *
- *     fullName=$firstName $lastName
- *
- * and I commented that this makes it possible to define one parameter in terms
- * of others.  Going way over the top, there is, in fact, something approaching
- * a fully-fledged language for this:
- *
- * - **$myVar** is replaced by the value associated with myVar.  Variable names
- *   are assumed to run from the $-sign through any subsequent word characters
- *   (of which there must be at least one).  If you need a variable name to be
- *   followed immediately by more word characters, you can end the name with
- *   $$
- *
- * - **fn($a, $b, "...", $c)** is replaced by the value returned by 'fn',
- *   passing the given arguments.  This also illustrates that the arguments can
- *   themselves be reference to parameters or fixed strings.  The available
- *   functions are discussed below.
- *
- * Printer's double quotes are replaced by straight quotes during processing.
- *
- * I make the simplifying assumption that $-signs will never be included as
- * plain text -- ie that they will always indicate function invocation or
- * parameter references.
- *
- *
- * The available functions are as follows.  I make the assumption that the
- * names are, in general, self-explanatory, and therefore document only
- * functions where this may not be the case.  Unless otherwiste stated
- * arguments may be either quoted text strings ("Hi there") or parameter
- * references ($a, $b, etc), in any order.
- *
- *
- * #### General text manipulation:
- *
- * - $choose(x, y, ...): Returns the first non-null argument, or null if
- *   all are null.
- *
- * - $delimited(bra, content, ket): Returns null if 'content' is null, otherwise
- *   the concatenation bra + content + ket.
- *
- * - $eq(a, b, [c, [d]]): If only a and b are supplied, returns Yes or No
- *   according as the two are or are not equal.  If $c is supplied, returns
- *   $c if the two are equal.  If they are not equal, returns $d, or null if
- *   $d is absent.
- *
- * - $getExternal: See discussion of third party config below.
- *
- * - $indirect(x, y, ...): Concatenates all of the argument to give what it
- *   takes as a new parameter name and the returns the value associated with
- *   that parameter.  Legacy only, I think -- I don't think anything now uses
- *   this.
- *
- * - $join(sep, x, y, ...): Returns a string concatenates x, y etc, separating
- *   them by sep.  Null arguments are ignored.
- *
- * - $toDate(outputFormat, inputFormat, text): Takes a text string representing
- *   a date in format inputFormat, and converts it to an outputFormat
- *   representation.  Formats are as supported by DateTimeFormatter.
- *
- *
- * #### Items which feed into the Bible chooser text:
- *
- * - $calcBibleNameForBibleChooser()
- * - $calcCountriesWhereLanguageUsed()
- * - $calcDateForBibleChooser()
- * - $calcLanguageDetailsForBibleChooser()
- * - $calcScriptureCoverageForBibleChooserForBibleChooser()
- *
- *
- * #### Items which end up on the copyright / description block:
- *
- * - $calcAddedFeaturesForCopyrightPage(): Records changes we may have made ourselves.
- * - $calcAmendmentsAppliedForCopyrightPage()
- *
- *
- * #### General items which end up in the Sword configuration file
- *
- * - $calcExtendedLanguageCode()
- * - $calcInputFileDigests()
- * - $calcJarVersion()
- * - $calcLanguageNameInEnglish()
- * - $calcModuleCreationDate()
- * - $calcSwordDataPath()
- * - $calcSwordOptions()
- * - $calcTextSource()
- * - $stepTextModifiedDate()
- * - $swordTextDirection()
- *
- *
- *
- * ## Special definition statements
- *
- * There are a few special cases:
- *
- * - You may create *multiple* lines each starting with the key
- *   vernacularBookDetails. These supply details of book names.  They are
- *   presently used internally only, so I won't go into detail here.
- *
- * - You may create *multiple* lines each starting with the key
- *   stepUsxToOsisTagTranslation. These are concerned with the (rather large
- *   number of) straightforward mappings from USX to OSIS tags.  More details
- *   are given in usxToOsisTagConversionsEtc.conf in the Resources section of
- *   the JAR.
- *
- * - You may create *multiple* lines starting copyAsIs=.  The right-hand side of
- *   these is passed straight through to the Sword config file.  For example:
- *
- *      copyAsIs=Obsoletes=TsnLEF
- *
- *   results in 'Obsoletes=TsnLEF' being inserted into the Sword config file.
- *
- *
- * ## Getting data from external file formats
- *
- * At present, the only external format we support is DBL (metadata.xml and
- * license.xml) -- and as mentioned previously, the benefits of doing even this
- * are looking increasingly illusory.
- *
- * There is a special form of assignment statement to access this data:
- *
- *     myVal=$getExternal(fileIdentifier, ...)
- *
- * '$getExternal' indicates that we are to look for the data in an external
- * file (ie something not in STEP config file format).
- *
- * 'fileIdentifier' indicates which file is to be accessed.  You need to
- * use a name of your own choosing.  Perhaps when dealing with metadata and
- * licence files, the values 'metadata' and 'licence' are appropriate, although
- * the actual names do not matter.  You need to associate the names with the
- * actual files -- perhaps something like
- *
- *     stepExternalDataSource=dbl:metadata:filePath or
- *     stepExternalDataSourceIfExists=dbl:metadata:filePath
- *
- * Here the 'dbl' says the files follow DBL protocol (and is the only value
- * currently supported).  'metadata' gives the fileIdentifier which will be
- * used elsewhere, and the filePath points to the actual file, using one of
- * formats used by $include statements.
- *
- * If you use the 'IfExists' form and the file does *not* exist, $getExternal
- * statements will return null.
- *
- * A file identifier becomes associated with a file only when data from that
- * file is first used, and at this point that association is set in stone --
- * even if you change the stepExternalDataSource value subsequently, the
- * original file will continue to be used.
- *
- * Note that all of these statements are subject to the normal '$' processing
- * to expand out references to other parameters etc.  I'd recommend using this
- * very sparingly though -- it can make debugging very difficult.
- *
- *
- *
- * ## Legacy issues
- *
- * The config data has undergone multiple iterations.  As a result you may well
- * encounter legacy data which does not follow the rules above.  It is now
- * rather difficult to legislate for all of these different possibilities, but
- * a few notes:
- *
- * - Earlier modules used the text file step.conf in place of the more recent
- *   step.xlsx.  Both have much the same effect; the different is that step.xlsx
- *   is better documented, but is limited in what it can achieve directly.
- *
- * - step.xlsx itself now exists in more than one form.  The most recent version
- *   contains a setting 'stepExternalMetadataFormat' near the top.  This version
- *   automatically arranges for commonRoot.conf to be included at an appropriate
- *   point.  Earlier versions used stepExternalDataFormat (without the 'Meta' in
- *   the name), and it appeared rather later in the file.  Thse versions did not
- *   necessarily autoload commonRoot.conf.
- *
+ * Probably both you and I will come to hate me for this, but configuration
+ * data is very complicated, and given that users need to know how to handle
+ * it, and that I don't want to duplicate loads of data in two different
+ * formats, I've removed all the head-of-class documentation from here and
+ * put it into the user guide -- a Word doc which you can find in this JAR
+ * file.
  *
  * @author ARA "Jamie" Jamieson
  */
@@ -887,7 +322,7 @@ object ConfigData: ObjectInterface
 
     val parsedFolderName = "Text_(?<languageCode>...)_(?<abbreviation>[^_]+)(_(?<rest>.*)?)?".toRegex().matchEntire(FileLocations.getTextRootFolderName())!!
     var abbreviatedName = parsedFolderName.groups["abbreviation"]!!.value
-    val rest = parsedFolderName.groups["rest"]!!.value
+    val rest = parsedFolderName.groups["rest"]?.value ?: ""
 
 
 
@@ -1087,26 +522,47 @@ object ConfigData: ObjectInterface
 
   fun load ()
   {
+    /**************************************************************************/
     if (m_Initialised) return // Guard against multiple initialisation.
     m_Initialised = true
 
+
+
+
+    /**************************************************************************/
+    /* There are various miscellaneous items which have to be initialised
+       early on.  The order below is crucial. */
+
+    loadSettingsFromEnvironmentVariable()
+    CommandLineProcessor.copyCommandLineOptionsToConfigData()
+    FileLocations.setRootFolderDetails()
+    extractDataFromRootFolderName()
     Rpt.report(level = 0, "Loading configuration data.")
+
+
+
+    /**************************************************************************/
+    /* Pick up initial config from either step.conf or step.xlsx, whichever is
+       available. */
 
     val configTextFilePath = FileLocations.getConfigTextFilePath()
     val configSpreadsheetFilePath = FileLocations.getConfigSpreadsheetFilePath()
 
-    legacyHandler(configTextFilePath)
+    //legacyHandler(configTextFilePath)
 
-    if (null != configSpreadsheetFilePath && File(configSpreadsheetFilePath).exists()) // Use spreadsheet if available, in preference to step.conf.
-    {
-      load(configSpreadsheetFilePath, false)
-    }
-    else
-       load(configTextFilePath!!, false)
+    if (null != configTextFilePath && null != configSpreadsheetFilePath && File(configTextFilePath).exists() && File(configSpreadsheetFilePath).exists())
+      throw StepExceptionWithoutStackTraceAbandonRun("You must have a step*.xlsx file in the Metadata folder, but you must not have a step.conf file as well.")
+    else if (null == configSpreadsheetFilePath || !File(configSpreadsheetFilePath).exists())
+      throw StepExceptionWithoutStackTraceAbandonRun("You must have a step*.xlsx file in the Metadata folder.")
 
+    load(configSpreadsheetFilePath, false)
+
+
+
+    /**************************************************************************/
+    processAutoLoads(FileLocations.getTextMetadataFolderName()) // Any .conf files co-located with step*.xlsx.
+    processAutoLoads(FileLocations.getSharedCommonAutoloadFolderPath()) // Anything in the _Common_ folder in the shared configuration area.
     loadDone()
-
-    //Dbg.d(get("stepIsOkToAddFootnotes"))
   }
 
 
@@ -1267,73 +723,29 @@ object ConfigData: ObjectInterface
 
 
     /**************************************************************************/
-    val expandedFilePath = FileLocations.getConfigFileInputPath(configFilePath)!!
+    val expandedFilePath = FileLocations.getConfigFileInputPath(configFilePath, okIfNotExists) ?: return
     if (expandedFilePath in m_LoadedConfigFiles)
       return
 
     m_LoadedConfigFiles.add(expandedFilePath)
-    Logger.info("Loaded config from ${(m_LoadedConfigFiles.size).toString().padStart(2, ' ')}) $expandedFilePath.")
     Rpt.report(level = 1, "Loading configuration data from $expandedFilePath.")
-
 
 
 
     /**************************************************************************/
     val takingDataFromSpreadsheet = expandedFilePath.endsWith(".xlsx")
     val lines: List<String>
-    var templateVersion = "1.0" // Assume we're dealing with version 1.0 of the .xlsx template.
 
     if (takingDataFromSpreadsheet)
     {
-      val (theTemplateVersion, theLines) = ConfigDataExcelReader.process()
-      templateVersion = theTemplateVersion
+      val requiredStepXlsxTemplateVersion = 3.0
+      val (actualStepXlsxTemplateVersion, theLines) = ConfigDataExcelReader.process()
+      if (actualStepXlsxTemplateVersion < requiredStepXlsxTemplateVersion)
+        throw StepExceptionWithoutStackTraceAbandonRun("I'm sorry about this, but this step.xlsx file is based on an old version of the template.  You'll need to take a copy of the current version of the template (which you can find in the JAR file), and transfer the data to that.")
       lines = theLines
     }
     else
       lines = ConfigArchiver.getDataFrom(expandedFilePath, okIfNotExists) ?: return
-
-
-
-    /**************************************************************************/
-    /* Slightly fiddly bit, because I'm having to try to cope with a number
-       of different legacy issues here ...
-
-       Originally, data came from a text file -- step.conf.  I still need to
-       make allowance for the possibility that we have modules using this;
-       and for this, no special processing is needed.
-
-       Latterly we've moved to using step.xlsx instead.  I'd like this to be
-       organised such that we can automatically include commonRoot.conf at the
-       beginning.  However, commonRoot.conf itself loads DBL.conf, and does so
-       only if it already knows the value for stepExternalMetadataFormat.
-       Otherwise, at the time commonRoot.conf is loaded, DBL.conf is ignored.
-
-       I have legacy data which does not cater for this.  But I also now have
-       files which cater for it, by including a definition for
-       stepExternalMetadataFormat.  (The old files did not do so -- if they
-       made reference to the format at all, they used the now-deprecated name
-       stepExternalDataFormat.)
-
-       Old files will have been set up in an environment where the user
-       explicitly arranged for commonRoot.conf to be loaded, so we don't want
-       to do that here on old format files.  But for new format files -- ones
-       which contain a definition for stepExternalMetadataFormat -- we do
-       want to load commonRoot.conf.
-     */
-
-    if ("1.0" != templateVersion) // This will hold only if a) we are dealing with step.xlsx, and b) it's a more recent version which requires us to load commonRoot.conf.
-    {
-      val stepExternalMetadataFormatLine = lines.find { it.matches("stepExternalMetadataFormat\\s*#?=.*".toRegex()) } // Need to see if we are assigning to stepExternalMetadataFormatLine.
-      if (null != stepExternalMetadataFormatLine)
-        processConfigLine(stepExternalMetadataFormatLine, expandedFilePath)
-
-
-      val stepStandardOwnerOrganisationLine = lines.find { it.matches("stepStandardOwnerOrganisation\\s*#?=.*".toRegex()) } // Need to see if we are assigning to stepExternalMetadataFormatLine.
-      if (null != stepStandardOwnerOrganisationLine)
-        processConfigLine(stepStandardOwnerOrganisationLine, expandedFilePath)
-
-      load(FileLocations.getCommonRootFilePath(), false)
-    }
 
 
 
@@ -1377,22 +789,44 @@ object ConfigData: ObjectInterface
     /**************************************************************************/
     /* See we have if externally-supplied metadata or licence information. */
 
-    val externalDataFormat = get("stepExternalMetadataFormat", "").uppercase()
-    when (externalDataFormat)
+    val externalMetadataFormat = get("calcSelectedExternalMetadataFormat")
+    if (null != externalMetadataFormat)
     {
-      "DBL" ->
+      var x = get("calcSelectedExternalLicenceFileName")
+      val licenceFileExists = if (null == x) false else null != FileLocations.getConfigFileInputPath(x, okIfNotExists = true)
+
+      x = get("calcSelectedExternalMetadataFileName")
+      val metadataFileExists = if (null == x) false else null != FileLocations.getConfigFileInputPath(x, okIfNotExists = true)
+
+      if (licenceFileExists || metadataFileExists)
       {
-        load("@jarResources/PerTextRepositoryOrganisation/$externalDataFormat.conf", false)
-        ConfigDataExternalFileInterfaceDbl.initialise()
-        m_ExternalDataHandler = ConfigDataExternalFileInterfaceDbl
+        load(FileLocations.getPrefixForExternalDataInterface() + externalMetadataFormat + ".conf", true)
+        val externalInterface = MiscellaneousUtils.createInstanceByClassName("org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigDataExternalFileInterface$externalMetadataFormat") as ConfigDataExternalFileInterfaceXml
+        externalInterface.initialise()
+        m_ExternalDataHandler = externalInterface
       }
     }
 
 
 
     /**************************************************************************/
+    /* See if we have standard files describing the text owner or (if there is
+       one) the repository organisation. */
+
+    val ourIdentifierForTextOwner = get("stepOurInternalIdentifierForTextOwner")
+    val ourIdentifierForRepositoryOrganisation = get("stepOurInternalIdentifierForRepositoryOrganisation")
+
+    if (null != ourIdentifierForTextOwner)
+      load(FileLocations.getPrefixForTextOwnerFiles() + ourIdentifierForTextOwner + ".conf", true)
+
+    if (null != ourIdentifierForRepositoryOrganisation)
+        load(FileLocations.getPrefixForRepositoryOrganisationFiles() + ourIdentifierForRepositoryOrganisation + ".conf", true)
+
+
+
+    /**************************************************************************/
     /* Earlier legacy processing will have ensured that any history
-       information is now in history.txt, and we need to ensure we load those
+       information is now in history.conf, and we need to ensure we load those
        details too. */
 
     load(FileLocations.getExistingHistoryFilePath()!!, false)
@@ -1400,9 +834,83 @@ object ConfigData: ObjectInterface
 
 
     /**************************************************************************/
+    m_LoadedConfigFiles.forEach {
+      Logger.info("Loaded config from ${(m_LoadedConfigFiles.size).toString().padStart(2, ' ')}) $it.")
+    }
+
+
+
+    /**************************************************************************/
     processRelatedSettings()
     generateTagTranslationDetails() // Convert any saved tag translation details to usable form.
+    BibleBookNames.init()
+    Dbg.setBooksToBeProcessed()
   }
+
+
+  /**************************************************************************/
+  /* We need to read the environment variable early because some settings are
+     needed before anything else at all will run.
+
+     Strictly, we need only those specific settings, but I don't think there's
+     any harm in loading the lot -- the ones which matter I set as force,
+     and the ones which don't as set as not forced.
+
+     The format is:
+
+       setting;setting;setting; ...
+
+     where individual settings look as they would in a config file -- key=val.
+     If you need a semicolon within a setting, escape it using \;.  If you
+     need a backslash, escape it as \\.
+
+     Clearly you're not going to want to store too many settings this way, but
+     there may be things -- such as the location of osis2mod -- which is more
+     easily handled like this, rather than storing it in config files. */
+
+  private fun loadSettingsFromEnvironmentVariable ()
+  {
+    /**************************************************************************/
+    /* Parse the environment variable into its elements. */
+
+    var environmentVariable = System.getenv("StepTextConverterParameters") ?: throw StepExceptionWithoutStackTraceAbandonRun("Environment variable StepTextConverterParameters not defined.")
+    environmentVariable = environmentVariable.replace("\\\\", "\u0001").replace("\\;", "\u0002")
+
+    val chunks = environmentVariable.split(";").map { it.trim() }
+    val chunksMap: Map<String, String> = chunks.associate { elt ->
+      val (key, value) = elt.split("#?=".toRegex(), limit = 2)
+      key.trim() to value.trim().replace("\u0001", "\\").replace("\u0002", ";")
+    }
+
+
+
+    /**************************************************************************/
+    /* Handle the vital settings -- the ones which are needed early.  Note that
+       we can't use put() to store these because that function also validates
+       its input, and it needs the settings which these supply for the
+       purpose. */
+
+    val C_EarlyLoad = listOf("stepTextConverterOverallDataRoot", "stepTextConverterSharedConfigurationDataRoot", "stepTemporaryInvestigationsFolderPath", "stepOsis2modFilePath")
+
+    for (key in C_EarlyLoad)
+      m_Metadata[key] = ParameterSetting(chunksMap[key]!!, m_Force = true, m_Resolved = true) // Can't use put(...) because that requires a certain amount of config already to have been loaded.  So I have to do the essentials of what put() does.
+
+
+
+    /**************************************************************************/
+    /* Check if the environment variable contains only the things we are
+       content to have there. */
+
+    var allSettingsOk = true
+    chunksMap.keys.forEach { key ->
+      if (key !in C_EarlyLoad)
+        allSettingsOk = false
+    }
+
+    if (!allSettingsOk)
+      throw StepExceptionWithoutStackTraceAbandonRun("The StepTextConverterParameters environment variable is limited to the following path variables: ${C_EarlyLoad.joinToString(", ")}.")
+  }
+
 
 
   /****************************************************************************/
@@ -1456,12 +964,29 @@ object ConfigData: ObjectInterface
 
 
   /****************************************************************************/
+  private fun processAutoLoads (folderPath: String)
+  {
+    val folderPath = File(folderPath)
+    folderPath.walkTopDown()
+      .filter { it.isFile && it.extension == "conf"}
+      .sortedBy { it.name }
+      .forEach { load(it.toString(), false) }
+  }
+
+
+  /****************************************************************************/
   /* This caters for that subset of configuration lines which can reasonably
      turn up both in config files and in the converter's environment
      variable. */
 
   private fun processConfigLine (xDirective: String, callerFilePath: String): Boolean
   {
+    /**************************************************************************/
+    if (xDirective.startsWith("abort!!!", ignoreCase = true))
+      throw StepExceptionWithoutStackTraceAbandonRun("$callerFilePath is marked 'ABORT' -- ${xDirective.replace("abort!!!", "", ignoreCase = true).trim()}\nRemove the ABORT line once you have addressed any issues.")
+
+
+
     /**************************************************************************/
     /* Jun 2025: We are now taking inputs generated from a spreadsheet.  In
        order to allow the user to include ad hoc configuration statements in
@@ -1495,8 +1020,6 @@ object ConfigData: ObjectInterface
       var newFilePath = directive.replace("${'$'}includeIfExists", "")
       newFilePath = newFilePath.replace("${'$'}include", "").trim()
       newFilePath = expandConfigData(newFilePath)!!
-      if (!newFilePath.startsWith("@") && !File(newFilePath).isAbsolute)
-        newFilePath = "@find/$newFilePath" // Paths.get(File(callerFilePath).parent, newFilePath).toString()
       load(newFilePath, directive.contains("exist", ignoreCase = true))
       return true
     }
@@ -1617,58 +1140,6 @@ object ConfigData: ObjectInterface
 
 
 
-    /****************************************************************************/
-    /****************************************************************************/
-    /**                                                                        **/
-    /**                             Locating files                             **/
-    /**                                                                        **/
-    /****************************************************************************/
-    /****************************************************************************/
-
-    /****************************************************************************/
-    /* Locates a file.  More specifically ...
-
-       We are concerned here only with paths which start @find/ (and we assume
-       that the caller has already determined that the path _does_ start that
-       way).
-
-       The @find/ may be followed either by a file name (@find/myFile.txt) or by
-       a relative path (@find/FolderA/FolderB/myFile.txt).  New modules should
-       use a file name only.  I continue to accept a path hierarchy for
-       backward compatibility, but even if a hierarchy is supplied, only the
-       file name from it is used.
-
-       The processing works as follows:
-
-       - It looks for the _first_ file whose name matches (so if there's more
-         than you'll never know).
-
-       - It ignores any relative path information in the canonicalFilePath
-         parameter (I continue to accept it, though, for the sake of backward
-         compatibility).  It simply looks for the file in the folder and in
-         any hierarchy below it.
-    */
-
-//    private fun locateFile (canonicalFilePath: String): String?
-//    {
-//        /**************************************************************************/
-//        val endOfPath = canonicalFilePath.substring("@find/".length) // Strip off @find/.
-//        val fileName = Paths.get(endOfPath).last().toString()
-//
-//
-//
-//        /**************************************************************************/
-//        for (folderPath in folderPaths)
-//        {
-//            val res = StepFileUtils.findFiles(folderPath, fileName)
-//            if (res.isNotEmpty())
-//                return res[0]
-//        }
-//
-//        return null
-//    }
-
-
   /****************************************************************************/
   /****************************************************************************/
   /**                                                                        **/
@@ -1741,7 +1212,6 @@ object ConfigData: ObjectInterface
 
   operator fun get (key: String): String?
   {
-    //Dbg.d(key, "swordTextRepositoryOrganisationFullName")
     return getInternal(key, true)
   }
 
@@ -1760,18 +1230,6 @@ object ConfigData: ObjectInterface
   {
     return getInternal(key, true) ?: dflt
   }
-
-
-  /****************************************************************************/
-  /**
-   * The configuration data may include lines which are simply to be copied
-   * as-is to the Sword configuration file.  This returns that list.
-   *
-   * @return As-is lines.
-   */
-
-   @Synchronized fun getCopyAsIsLines (): List<String> = m_CopyAsIsLines
-
 
 
   /****************************************************************************/
@@ -1811,6 +1269,18 @@ object ConfigData: ObjectInterface
     val s = (get(key) ?: dflt).substring(0, 1).uppercase()
     return s == "Y" || s == "T"
   }
+
+
+  /****************************************************************************/
+  /**
+   * The configuration data may include lines which are simply to be copied
+   * as-is to the Sword configuration file.  This returns that list.
+   *
+   * @return As-is lines.
+   */
+
+  @Synchronized fun getCopyAsIsLines (): List<String> = m_CopyAsIsLines
+
 
 
   /****************************************************************************/
@@ -1878,8 +1348,7 @@ object ConfigData: ObjectInterface
   @Synchronized fun put (key: String, theValue: String, force: Boolean)
   {
     /************************************************************************/
-    //Dbg.dCont(key, "stepBibleNameEnglish")
-    //Dbg.dCont(key, "swordTextRepositoryOrganisationFullName")
+//    Dbg.d(key, "stepTextModifiedDate")
 
 
 
@@ -2038,8 +1507,6 @@ object ConfigData: ObjectInterface
     if (theData.trim().startsWith("#")) // No point in attempting to parse comments.
       return theData
 
-    //Dbg.dCont(theData, "PerOwnerOrganisation/\$choose(\$stepStandardOwnerOrganisation")
-
     val inputStream = CharStreams.fromString(theData)
     val lexer = configDataParserLexer(inputStream)
     val tokens = CommonTokenStream(lexer)
@@ -2069,7 +1536,7 @@ object ConfigData: ObjectInterface
   @Synchronized fun getInternal (key: String, nullsOk: Boolean): String?
   {
     /**************************************************************************/
-    //Dbg.dCont(key, "calcAbout")
+//    Dbg.d("swordTextOwnerOrganisationFullName", key)
     ConfigDataSupport.validateParameter(key, "get")
 
 
@@ -2104,7 +1571,7 @@ object ConfigData: ObjectInterface
 
     if (existingValue.m_Resolved)
     {
-      Dbg.dCont(existingValue.m_Value ?: "XXX", "Biblica® মুক্তভাবে বাংলা সমকালীন সংস্করণের™")
+//      Dbg.dCont(existingValue.m_Value ?: "XXX", "Biblica® মুক্তভাবে বাংলা সমকালীন সংস্করণের™")
       return existingValue.m_Value
     }
 
@@ -2693,7 +2160,7 @@ object ConfigData: ObjectInterface
   /****************************************************************************/
   /* Bible name used in Bible chooser.
 
-     General format is:
+     General format was:
 
        canonicalEnglishName (canonicalEnglishAbbrev) / canonicalVernacularName (canonicalVernacularAbbrev)
 
@@ -2702,24 +2169,28 @@ object ConfigData: ObjectInterface
 
      The English portion is always present.  The vernacular portion is omitted
      on English Bibles, and in cases where the English and vernacular forms are
-     very similar. */
+     very similar.
+
+
+     The general format now is:
+
+       canonicalEnglishName / canonicalVernacularName
+
+     I have now removed the abbreviations which appeared previously because it
+     appears that something else -- something outside of my control -- is adding
+     the abbreviation itself.
+
+     I have retained the bulk of the code (along with a few bits which I have
+     commented out) just in case we need to revert to the old format.
+     */
 
   private fun calculatedParameter_BibleNameForBibleChooser (): String
   {
     /**************************************************************************/
-    val englishTitle = getInternal("stepBibleNameEnglishCanonicalForBibleChooser", true) ?: get("stepAbbreviationEnglishAsSupplied")!!
-
-    val abbrevEnglish = getInternal("stepAbbreviationEnglishCanonicalForBibleChooser", true) ?: get("stepAbbreviationEnglishAsSupplied")!!
-
-    val xVernacularTitle =
-      getInternal("stepBibleNameVernacularCanonicalForBibleChooser", true) ?:
-        getInternal("stepBibleNameVernacularAsSupplied", true)
-
-    val xAbbrevVernacular =
-      getInternal("stepAbbreviationVernacularCanonicalForBibleChooser", true) ?:
-        getInternal("stepAbbreviationVernacularAsSupplied", true) ?:
-          getInternal("stepAbbreviationEnglishCanonicalForBibleChooser", true) ?:
-            get("stepAbbreviationEnglishAsSupplied")!!
+    val englishTitle = getInternal("calcSelectedBibleNameEnglishForBibleChooser", nullsOk = false)!!
+    val abbrevEnglish = getInternal("calcSelectedAbbreviationEnglishForBibleChooser", nullsOk = false)!!
+    var vernacularTitle = getInternal("calcSelectedBibleNameVernacularForBibleChooser", nullsOk = true) ?: ""
+    var vernacularAbbreviation = getInternal("calcSelectedAbbreviationVernacularForBibleChooser", nullsOk = true) ?: ""
 
 
 
@@ -2740,10 +2211,7 @@ object ConfigData: ObjectInterface
        isn't _guaranteed_ to avoid having very similar names, but it's a
        reasonable stab at it. */
 
-    var vernacularTitle = xVernacularTitle
-    if (null == vernacularTitle)
-      vernacularTitle = ""
-    else
+    if (vernacularTitle.isNotEmpty())
     {
       val englishModified = StepStringUtils.removePunctuationAndSpaces(englishTitle)
       val vernacularModified = StepStringUtils.removePunctuationAndSpaces(vernacularTitle)
@@ -2758,19 +2226,22 @@ object ConfigData: ObjectInterface
 
     /**************************************************************************/
     /* The English abbreviation is what it is.  The vernacular abbreviation is
-       set to null if it is the same as the English. */
+       set to an empty string if it is the same as the English. */
 
-    var vernacularAbbreviation = xAbbrevVernacular
     if (abbrevEnglish.equals(vernacularAbbreviation, ignoreCase = true))
       vernacularAbbreviation = ""
 
 
 
     /**************************************************************************/
-    var res = "$englishTitleCanonicalised ($abbrevEnglish)"
-    var vernacularBit = "$vernacularTitle ($vernacularAbbreviation)"
-    if (vernacularBit.contains("()")) vernacularBit = vernacularBit.replace(" ()", "")
-    if (vernacularBit.trim().isNotEmpty()) res += " / $vernacularBit"
+    var res = englishTitleCanonicalised
+    if (vernacularTitle.isNotEmpty() && vernacularTitle.lowercase() != englishTitleCanonicalised.lowercase())
+      res = "$res / $vernacularTitle"
+
+//    var res = if (abbrevEnglish.lowercase() in englishTitleCanonicalised.lowercase()) englishTitleCanonicalised else "$englishTitleCanonicalised ($abbrevEnglish)"
+//    var vernacularBit = (if (vernacularAbbreviation.lowercase() in vernacularTitle.lowercase()) vernacularTitle else "$vernacularTitle ($vernacularAbbreviation)").trim()
+//    if (vernacularBit.contains("()")) vernacularBit = vernacularBit.replace(" ()", "")
+//    if (vernacularBit.isNotEmpty()) res += " / $vernacularBit"
 
     return res
   }
@@ -2890,10 +2361,7 @@ object ConfigData: ObjectInterface
   /****************************************************************************/
   private fun calculatedParameter_calcTextSource (): String
   {
-    var textSource = ""
-    if (textSource.isEmpty()) textSource = ConfigData["swordTextRepositoryOrganisationAbbreviatedName"] ?: ""
-    if (textSource.isEmpty()) textSource = ConfigData["swordTextRepositoryOrganisationFullName"] ?: ""
-    if (textSource.isEmpty()) textSource = "Unknown"
+    var textSource = ConfigData["calcSelectedTextRepositoryOrganisationAbbreviatedName"] ?: "Unknown"
 
     var ownerOrganisation = get("swordTextOwnerOrganisationFullName")!!
     if (ownerOrganisation.isNotEmpty()) ownerOrganisation = "&nbsp;&nbsp;Owning organisation: $ownerOrganisation"
@@ -2932,13 +2400,18 @@ object ConfigData: ObjectInterface
     /**************************************************************************/
     val yyyyRegex = Regex("(?<!\\d)\\d{4}(?!\\d)")
 
-    for (key in listOf("stepBibleNameEnglishAsSupplied", "stepBibleNameVernacularAsSupplied"))
-    {
-      val x: String? = get(key)
-      val match = if (null == x) null else yyyyRegex.find(x)
-      if (null != match)
-        return match.value
-    }
+
+
+    /**************************************************************************/
+    /* If there is something in the Bible name which looks like a date, assume
+       that is, indeed, already what we need, and so there is no need to return
+       a value. */
+
+    val bibleName = get("calcBibleNameForBibleChooser")!!
+    val match = yyyyRegex.find(bibleName)
+    if (null != match)
+      return null // match.value
+
 
 
     /**************************************************************************/
@@ -3138,6 +2611,17 @@ object ConfigData: ObjectInterface
   /****************************************************************************/
 
   /****************************************************************************/
+  private fun getCombinedEnglishAndVernacular (key: String): String
+  {
+    val english    = TranslatableFixedText.stringFormatWithLookupEnglish(key)
+    val vernacular = TranslatableFixedText.stringFormatWithLookup       (key)
+    var res = english
+    if (vernacular != english) res += " / $vernacular"
+    return res
+  }
+
+
+  /****************************************************************************/
   /* Various methods which calculate config data on demand.  These are
      used where the value is associated with a parameter name (the name being
      the one which appears as the key in each entry below).  There is a separate
@@ -3185,18 +2669,14 @@ object ConfigData: ObjectInterface
     /*----------------------------------------------------------------------*/
     "calcAddedFeaturesForCopyrightPage" to
     {
-      if (getAsBoolean("stepIsCopyrightText"))
+      if (getAsBoolean("stepIsCopyrightText") && false) // $$$ 01-Aug-2020.
         ""
       else
       {
         val addedValue: MutableList<String> = mutableListOf()
-        if (getAsBoolean("stepAddedValueMorphology", "No")) addedValue.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Morphology"))
-        if (getAsBoolean("stepAddedValueStrongs", "No")) addedValue.add(TranslatableFixedText.stringFormatWithLookup("V_addedValue_Strongs"))
-        val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_FootnotesMayHaveBeenAdded")
-        val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_FootnotesMayHaveBeenAdded")
-        var s = english
-        if (vernacular != english) s += " / $vernacular"
-        addedValue.add(s)
+        if (getAsBoolean("stepAddedValueMorphology", "No")) addedValue.add(getCombinedEnglishAndVernacular("V_addedValue_Morphology"))
+        if (getAsBoolean("stepAddedValueStrongs", "No")) addedValue.add(getCombinedEnglishAndVernacular("V_addedValue_Strongs"))
+        if (getAsBoolean("calcAddedFootnotes")) addedValue.add(getCombinedEnglishAndVernacular("V_modification_FootnotesMayHaveBeenAdded"))
 
         if (addedValue.isEmpty())
           ""
@@ -3210,17 +2690,35 @@ object ConfigData: ObjectInterface
     /*----------------------------------------------------------------------*/
     "calcAmendmentsAppliedForCopyrightPage" to
     {
-      if (getAsBoolean("stepIsCopyrightText"))
+      if (getAsBoolean("stepIsCopyrightText") && false) // $$$ 02-Aug-2026.
         ""
       else
       {
         /**********************************************************************/
         val amendments: MutableList<String> = mutableListOf()
-        val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
-        val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
-        var s = english
-        if (vernacular != english) s += " / $vernacular"
-        amendments.add(s)
+
+
+
+        /**********************************************************************/
+        /* If we're using a Crosswire versification scheme, osis2mod may have
+           restructured the text to force it into the right shape.  We don't
+           have control over what, if anything, it does, so best to assume
+           that it may indeed have changed.
+
+           Note that if we are using a non-Crosswire scheme, it will be
+           because we are putting it through our own version of osis2mod,
+           which doesn't require us to change the structure, so for that,
+           there's nothing to report. */
+
+        val versificationScheme = get("stepVersificationScheme")!!
+        if (versificationScheme.lowercase() in VersificationSchemesSupportedByOsis2mod.getSchemes().map { it.lowercase() })
+        {
+          val english    = TranslatableFixedText.stringFormatWithLookupEnglish("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+          val vernacular = TranslatableFixedText.stringFormatWithLookup       ("V_modification_VerseStructureMayHaveBeenModified", ConfigData["stepVersificationScheme"]!!)
+          var s = english
+          if (vernacular != english) s += " / $vernacular"
+          amendments.add(s)
+        }
 
 
 
@@ -3233,7 +2731,10 @@ object ConfigData: ObjectInterface
 
         /************************************************************************/
         amendments += Issues.getCopyrightPageStatementsFromIssuesList()
-        amendments.joinToString("<br>- ", prefix = "- ", postfix = "<br>")
+        if (amendments.isEmpty())
+          null
+        else
+          amendments.joinToString("<br>- ", prefix = "- ", postfix = "<br>")
       }
     },
 
@@ -3260,11 +2761,6 @@ object ConfigData: ObjectInterface
     "calcModuleCreationDate" to { SimpleDateFormat("yyyy-MM-dd'T'HH:mm").format(Date()) },
 
     "calcJarVersion" to { MiscellaneousUtils.getJarVersion() },
-
-     // Fiddly.  The code here will be invoked only if we have no other means of obtaining the text direction
-     // (which we will do if we can successfully obtain the details from DBL metadata or if we have overtly
-     // been supplied with it).  The value here will be LTR or RTL, which is what most things use.  Unfortunately
-     // Sword requires LtoR or RtoL, so we have a separate swordTextDirection parameter.
 
     "stepTextModifiedDate" to { SimpleDateFormat("dd-MMM-yyyy").format(Date()) },
 
@@ -3371,7 +2867,7 @@ object ConfigArchiver
    * than one file with a given name.  Throws an exception if the file cannot
    * be found
    *
-   * @param pseudoFilePath Input file path, including specials like @find.
+   * @param pseudoFilePath Input file path.
    *
    * @return Lines from file, or null if the file has already been loaded.
    */
@@ -3379,8 +2875,7 @@ object ConfigArchiver
   fun getDataFrom (pseudoFilePath: String, okIfNotExists: Boolean): List<String>?
   {
     /**************************************************************************/
-    /* Pseudo file path may start @jarResources or @find or it may be a full
-       path. */
+    /* Pseudo file path may start @jarResources or it may be a full path. */
 
     val fileName = File(pseudoFilePath).name
     val filePath = FileLocations.getConfigFileInputPath(pseudoFilePath)

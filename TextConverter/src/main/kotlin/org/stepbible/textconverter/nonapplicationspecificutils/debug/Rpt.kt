@@ -142,13 +142,23 @@ object Rpt: ObjectInterface
   {
     Dbg.d(text.isBlank())
     val prefix = when (level)
-      {
-        -1    -> "\n"
-        0    ->  "\n\n"
-        else -> "\n" + "                    ".substring(0, 2 * (level - 1)) + "- "
-      }
+    {
+      -1    -> "\n"
+      0    ->  "\n\n"
+      else -> "\n" + "                    ".substring(0, 2 * (level - 1)) + "- "
+    }
 
     print(prefix + text)
+
+//    Dbg.d(text.isBlank())
+//    val prefix = when (level)
+//    {
+//      -1    -> ""
+//      0    ->  "\n"
+//      else -> "                    ".substring(0, 2 * (level - 1)) + "- "
+//    }
+//
+//    println(prefix + text)
   }
 
 

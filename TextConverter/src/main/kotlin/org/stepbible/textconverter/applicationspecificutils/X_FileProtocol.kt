@@ -3,7 +3,6 @@ package org.stepbible.textconverter.applicationspecificutils
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesOsis
 import org.stepbible.textconverter.nonapplicationspecificutils.bibledetails.BibleBookNamesUsx
 import org.stepbible.textconverter.nonapplicationspecificutils.configdata.ConfigData
-import org.stepbible.textconverter.nonapplicationspecificutils.debug.Dbg
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.get
 import org.stepbible.textconverter.nonapplicationspecificutils.miscellaneous.*
 import org.stepbible.textconverter.nonapplicationspecificutils.ref.Ref
@@ -319,7 +318,7 @@ open class X_FileProtocol
     }
     catch (e: Exception)
     {
-      throw StepExceptionWithoutStackTraceAbandonRun("isInherentlyNonCanonicalTag failed: ${Dom.toString(node)}.")
+      throw StepExceptionWithoutStackTraceAbandonRun("isInherentlyNonCanonicalTag failed -- uknown node: ${Dom.toString(node)}.")
     }
   }
 
@@ -705,7 +704,6 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
   }
 
 
-
   /****************************************************************************/
   /**
   * Makes a do-nothing formatting node.  May seem bizarre, but there are some
@@ -734,6 +732,7 @@ object Osis_FileProtocol: X_FileProtocol(), ObjectInterface
   override fun makeFootnoteNode (footnoteAction: Permissions.FootnoteAction, doc: Document, refKeyForIdOfFootnote: RefKey, text: String, caller: String?): Node?
   {
     if (!Permissions.okToProcess(footnoteAction)) return null
+    ConfigData.put("calcAddedFootnotes", "Yes", force = true)
     val theCaller = caller ?: m_ExplanationFootnoteCalloutGenerator.get()
     val id = Ref.rd(refKeyForIdOfFootnote).toStringOsis()
     val footnoteNode = Dom.createNode(doc, "<note type='explanation' osisID='$id!${Globals.getUniqueExternal()}' n='$theCaller'/>")

@@ -81,7 +81,7 @@ object BookOrdering: ObjectInterface
 
   fun initialiseFromMetadata (): Boolean
   {
-    val doneIt = when ((ConfigData["stepExternalDataFormat"] ?: "").lowercase())
+    val doneIt = when ((ConfigData["stepExternalMetadataFormat"] ?: "").lowercase())
     {
       "dbl" -> initialiseFromMetadataDbl()
       else -> false
@@ -158,7 +158,7 @@ object BookOrdering: ObjectInterface
 
   private fun initialiseFromMetadataDbl (): Boolean
   {
-     val doc = Dom.getDocument(Paths.get(FileLocations.getMetadataFolderPath(), "metadata.xml").toString())
+     val doc = Dom.getDocument(Paths.get(FileLocations.getTextMetadataFolderPath(), "metadata.xml").toString())
      val contentNodes = doc.findNodeByName("publication")?.findNodeByName("structure", false)?.findNodesByName("content") ?: return false
      m_Ordering = contentNodes.map { BibleBookNamesUsx.abbreviatedNameToNumber(it["role"]!!) }
      return true
